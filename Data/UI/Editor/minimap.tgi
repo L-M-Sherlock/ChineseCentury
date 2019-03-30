@@ -1,0 +1,16 @@
+
+;; ---------------------------- Minimap ----------------------------
+[EditorMiniMap Inherit=MiniMapWidget]
+{
+	visible = true
+	dynamic_position = true
+	tooltip = "#minimap_tooltip"
+
+	[View Template=NoVE]
+	{
+		L = 11
+		T = 521
+		R = 254
+		B = 764
+	}
+}

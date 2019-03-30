@@ -1,0 +1,59 @@
+[Thing Template=AAGEROrganizationArtillery]
+{	
+	IDS = regiment_ger_halftrack_artillery
+	name = "#regiment_ger_halftrack_artillery_name"
+	editor_name = "#regiment_ger_halftrack_artillery_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 150
+		
+		[Upkeep]
+		ammo = 10
+		oil = 15
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = org_mechanized
+
+		[Property]
+		property_ids = artillery_company
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/GER/GERHalftrackArtillery/GERHalftrackArtillery
+		icon = /UI/Game/RegimentButtons/IconHalftrackArtillery.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ger_vehicle_deployed
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ger_artillery_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ger_artillery_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ger_artillery_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_heavy
+		
+		[Slot]	;; front
+		element_IDS = ger_halftrack
+	
+		[Slot]	;; support
+		element_IDS = ger_halftrack_artillery
+		
+		[Slot]	;; captain
+		element_IDS = ger_car_armored_co
+	}
+	
+	[ExperienceComponent template=AAMechanizedExperienceComponent]
+}

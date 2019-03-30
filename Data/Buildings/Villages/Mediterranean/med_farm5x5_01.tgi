@@ -1,0 +1,49 @@
+[Thing Inherit=AABuildingGroundPlane]
+{
+	name = "#med_farm5x5_01_mediterranean_farm_02_ground_name"
+	texture = MediterraneanFarm02/MediterraneanFarm02Ground.DDS	
+	IDS = mediterranean_farm_02_ground
+	attached_scale = 0
+	texture_size = 6.0
+}
+
+[Thing Template=AAFarmMediterranean]
+{
+	IDS = med_farm5x5_01
+	name = "#mediterranean_farm02_name"
+	editor_name = "#mediterranean_farm02_editor_name"
+	
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 5
+
+	[View]
+	{
+		resource_prefix = MediterraneanFarm02/MediterraneanFarm02
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_02
+		}
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_03
+			attached = true
+		}
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = mediterranean_farm_02_ground
+		}
+	}
+}

@@ -1,0 +1,89 @@
+[SVars]
+{
+	;; easy vars (overridden from SVars.tgi)
+	int		DefaultKingdomsIndependent = 0
+	flag		UnitSupplyEnabled  = true
+
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; GAME-SPECIFIC	
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	;; easy vars
+	string	MapDefaultBiome = temperate_grassland
+	
+	;; for engagement
+	fixed	PrimarySampleTime = 5
+	fixed	RetreatingTime = 10
+	fixed	RoutingTime = 10
+	fixed	ReformTime = 10
+	fixed	StalemateTime = 10
+	fixed	RegroupTime = 10
+	bool	KillTargetIsHighestPriority = true
+
+	;; for morale
+	fixed	MoraleEngagementLoss = 0.5
+	fixed	MoraleEngagementLossFactorMax = 3.0
+	fixed	MoraleDeathFactor = 0.25
+	fixed	MoraleRetreatPenalty = 0
+	fixed	MoraleSlayerBase = 0.5
+	fixed	MoraleSlayerFactorMin = 0.5
+	fixed	MoraleSlayerFactorMax = 3.0
+	fixed	MoraleBreakerBase = 3.0
+	fixed	MoraleBreakerFactorMin = 0.5
+	fixed	MoraleBreakerFactorMax = 2.0
+	fixed	MoraleReplenish = 2.0
+	fixed	MoraleSupplyBonus = 1.0
+
+	;; engagement
+	bool	EngagementShowReverseRZOD = true	;; if set, reverse engage targets will reveal RZOD
+	;; drp082404 - was 5 but heavy tank recharge is 6
+	fixed	UnderSiegeRecentlyDamagedSeconds = 7
+
+	
+	;; world rules - NOTE: these defaults are overridden by "world_rules.tgi"
+	bool	AllowSellUnderSiege			= false
+	
+	;; economy a.k.a. unit limit
+	int		EconomyLimitedResourceMax 	= 24
+
+	;; when the sun's diffuse RGB sum (R+G+B) is less than this threshold
+	;; it is considered nighttime. any VFX that are nightonly will only
+	;; play when the sun is below this threshold
+	fixed	SunNightThreshold = 1.6
+
+	;; Max number of kingdoms for A&A
+	int	KingdomsMax = 18
+
+	;; colors in RGB (0-1 for each channel)
+	point3	SunDiffuse = 1.0, 1.0, 1.0
+	point3	SunAmbient = 1.0, 1.0, 1.0
+	point3	SunSpecular = 0.0, 0.0, 0.0
+
+    ;; for supply
+	SupplyProvideUnderSiege = true
+
+	;; to sort objectives.
+	bool SortObjectives = true
+
+	;; to make regions a bit bigger than in K2
+;;	StaticMapMaxRectangleWidth = 20
+;;	StaticMapMaxRectangleWidthExp = .26
+	
+	;; SAI
+	DisableSAIWhenGameLost = false
+	
+	;; groups
+	fixed		GroupZoneRangeMin = 18	;; minimum range of group zone
+	fixed		GroupSpeedMinimum = 1.0	;; speed below which an actor will not drop it's speed when slowing down to allow another to catch up
+	fixed		GroupSupplyZoneBuffer = 5 ;; when coordinating arrival outside a supply zone, coordinate this far outside
+	fixed		GroupDefendVFXScale = 0.3
+
+
+	;; the health amount at which cities begin providing economic benefits after being DISABLED.
+	fixed	BodyRestoreDisabledHealthRatio = 0.51	;; health ratio at which non-destructable return from disabled state
+
+	
+	;; For the CAI, when movign to a target we stop when we are within the ZOC.  In order to have
+	;;	us move closer in A&A we multiply ZOC radius by this value.
+	fixed CAITargetInRangeZOCMultiplier = 0.6
+} ; end [Vars]

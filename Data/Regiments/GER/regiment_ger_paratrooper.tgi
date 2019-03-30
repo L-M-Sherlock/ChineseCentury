@@ -1,0 +1,85 @@
+[Template AAGERRegimentParatrooper Template=AAGEROrganizationParatrooper]
+{
+	name = "#regiment_ger_paratrooper_name"
+	editor_name = "#regiment_ger_paratrooper_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 120
+		
+		[Upkeep]
+		ammo = 10
+	}	
+	
+	[View]
+	{
+		resource_prefix = /Units/GER/GERParatrooper/GERParatrooper
+		icon = /UI/Game/RegimentButtons/IconParatrooper.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ger_paratrooper_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ger_paratrooper_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ger_paratrooper_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{
+		layout_ids = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = ger_paratrooper
+		
+		[Slot]	;; rear guard 1
+		element_IDS = ger_paratrooper
+
+		[Slot]	;; rear guard 2
+		element_IDS = ger_paratrooper
+		
+		[Slot]	;; rear guard 3
+		element_IDS = ger_paratrooper
+	
+		[Slot]	;; support
+		element_IDS = ger_paratrooper
+		
+		[Slot]	;; captain
+		element_IDS = ger_paratrooper_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = paratrooper1_company
+	}
+}
+
+[Thing Template=AAGERRegimentParatrooper]
+{
+	IDS = regiment_ger_paratrooper
+
+	transport_actor = ger_transport_air
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 120
+	}
+
+	[Placement]
+	placement_group_ids = null
+}
+
+[Thing Template=AAGERRegimentParatrooper]
+{
+	IDS = regiment_ger_paratrooper_ground
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 60
+	}
+}

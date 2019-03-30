@@ -1,0 +1,434 @@
+/**************************************************************************
+
+AVars.tgi
+Copyright ?2002-2003 TimeGate Studios V.1.0.5.0
+
+DESCRIPTION: Game-independent TGRTSE AVars.
+
+REVISION HISTORY:
+drp091202 - created
+drp012903 - moved game-specific AVars out
+
+**************************************************************************/
+
+[Vars]
+{
+		;; fast vars	
+		
+	;; Banners
+	float	BannerFadeDurationMS = 1000
+	float	BannerRaiseHeight = 2
+	float	BannerRaiseSpeed = 0.5
+	float	BannerNoMovementThresholdDeg = 30
+
+	int TerrainBlockSize = 8
+	float TerrainSpecular = 15%
+	float TerrainDiffuse = 1
+	float TerrainAmbient = 0.15
+	float SunDimmerMultiplierWhenPaused = 0.8
+	float WaterOpaqueDepth = 1.5
+	int	VGridCellSize = 4
+	float CameraNearPlane = 1
+	float CameraFarPlane = 512
+	int CursorDragThreshold = 10
+	float TimingSmoothingConstant = 0.9
+	point3 ReplacementColorDefault = 1,1,1
+	float InterfacePositioningWidth = 1024
+	float InterfacePositioningHeight = 768
+
+	;; Renderer
+	point3	RendererDefaultOrientation = 0,-1,0
+	string	RendererDefaultFont = Courier
+	;;			number of megs at which we are not considered a low memory video card
+	int		RendererLowMemoryCutoff = 33
+	
+	;; App init (the rest of thsese strings are in the strings table)
+	string app_status_initializing = Initializing
+	string app_status_init_data = Loading Data
+	
+	float DecalSlopeScaleBias = 0.0
+	float DecalDepthBias = -0.00001
+	
+	float TrackSlopeScaleBias = 0.0
+	float TrackDepthBias = -0.00001		;; nVidia doesn't work with a much larger bonus
+
+	;; radius at which "attached_scale = 2" has no effect 
+	;; smm050103 - changed to 1.3 since now using minimum selection box dimension as scale factor
+	float VFXReferenceSize = 1.3
+
+	float VFXProjectedTextureSizeDefault = 1
+	float VFXProjectedTextureSizeMin = 0.1
+
+	float MinimapPeriodUpdateSupply = 1		;; How many seconds between supply updates?
+	float MinimapPeriodUpdateFog = 1		;; How many seconds between fog updates?
+	float MinimapPeriodUpdateObjects = 1	;; How many seconds between object updates?
+
+	;;;;;; HARD-CODED VARS: you cannot change these here and must change them in the source code.	
+
+	;; These zoom values are what is used when the game is not in a dev-mode.
+	;;float CameraZoomGameplayMin = 0.7	
+	;;float CameraZoomGameplayMax = 1.21	
+	;;float CameraZoomGameplayDefault = 0.8	
+
+	;; float CameraPitchMin = 15		; hard-coded 15
+	;; float CameraPitch = 35			; hard-coded 35 (bounds 10-80)
+	;; float CameraYaw = -45
+	;; float CameraPitch = 40
+	;; float CameraHeight = 100
+	;; float CameraFOV = 15
+	
+	;;;;;; Camera 
+	
+	;; drp102903 - changed zoom min from 0.65 to 0.5 (fro dev)
+	float CameraZoomMin = 0.1		; hard-coded 0.75 (e3 0.65)
+	float CameraZoomMax = 1.50		; hard-coded 1.5  (e3 1.45)
+	float CameraZoomDefault = 1.00
+
+	;;;;;; easy vars
+
+	;; misc. view vars
+	float VGridMinHeightToTestIfNearObjectIsOnScreen = 3.0
+
+	;; user interface
+	string InterfaceSharedTemplates = ui/shared.lst
+	string InterfaceGameTemplates = ui/game.lst
+	string InterfaceEditorTemplates = ui/editor.lst
+	string InterfaceMenuTemplates = ui/menus.lst
+
+	float	LetterboxHeightRatio = 0.22222		;; how tall to make the black bars in letterbox mode
+	
+	;; editor
+	float EditorCameraLayerDefaultHeight = 5
+
+	;; fonts/text
+	int TextMarkupCharacterStart = 60 ; '<'
+	int TextMarkupCharacterEnd = 62 ; '>'
+	;; these are for internally remapping the markup codes so
+	;; the characters used as markup codes can actually be displayed
+	int TextMarkupCharacterStartRemap = 17
+	int TextMarkupCharacterEndRemap = 18  
+	int TextQuoteRemap = 19
+	int TextBackslashRemap = 20
+	int TextAmpersandRemap = 21
+	
+	string TextFontIDSDefault = small
+	string TextFontIDSToolTipName = small_bold
+
+	int TextDefaultUndisplayableCharacter = 149 ;; this is our pretty custom glyph that indicates the requested glyph is not in the current font.
+	int TextFallbackDefaultUndisplayableCharacter = 35 	;; '#' this is a guaranteed-to exist glyph 
+														;; used in case our custom one isn't in the font.
+	int TextDefaultSpacingStandinCharacter = 116 ;; 't'
+	int TextEscapeCharacterStart = 38 ;; '&', used like "&Gold." to map to a specific Unicode index defined below.
+	int TextEscapeCharacterEnd = 46 ;; '.'
+		
+	;; this is a key that contains a list of executables that need game-like processing
+	;; of the mousewheel.
+	string LogitechKey = Software\Logitech\MouseWare\CurrentVersion\GamingCompatibility
+
+	;; how much to increase the terrain heightmap when first click
+	float PaintHeightmapStep = 25.0
+
+	;; Terrain Grid Line Colors
+	point3 TerrainGridColorBlock = 0,0,1
+	point3 TerrainGridColorTile = 1,1,1
+	
+	;; Region Line Color
+	point3 RegionLineColorMountain = 1,0,0
+	point3 RegionLineColorWater = 0,1,0
+	point3 RegionLineColorLand = 1,1,1
+
+	;; Dynamic Shadows
+	;; percentage of sun-light color to use for shadow color
+	float DynamicShadowSunModulate = 0.5
+
+	;; Hit Effect Animation
+	float HitEffectDuration = 0.25		;; in seconds
+	float HitEffectAngle = 0.78539		;; in radians
+
+	;; Alpha Transitions Debugging
+	;; ---------------------------
+	;; specify the prefix path for the texture names
+	;; i.e. for textures/AlphaTransitions/Layer0.tga,
+	;; prefix would be "textures/AlphaTransitions/Layer"
+	;;
+	;; + must have enough textures for MAX number of layers (9)
+	;; + assumes textures have tga extension
+	;; + number textures without leading zeros
+
+	string TextureAlphaTransitionLayerPrefix = textures/AlphaTransitions/Layer
+	string TextureAlphaTransitionLayerExtension = tga
+
+	;; What directory are the redistributable files in?
+	string MilesRedistDir = mss
+	
+	;; How much scaling is applied to RWorldText, must be greater than 0, smaller makes the text larger
+	float TextWorldScaleFactor = 23
+	
+	;; Must be greater than 0, smaller makes the text larger
+	float TextBaselineScaleFactor = 30
+	
+	;; What is the maximum allowed turn for a vehicle's wheels? (Aesthetic value only)
+	float UnitWheelTurnMaxRadians = 1.57
+	
+	;; We apply this value to the computed turn circle. This is for the artists to tweak to make 
+	;; it look better. (Although it is currently correct according to "the real world.")
+	float UnitWheelTurnScalar = 1.3
+
+	;; Number of Players in Multiplayer
+	int MultiplayerMinNumPlayers = 2
+	int MultiplayerMaxNumPlayers = 12
+	int MultiplayerTeamConfigurationVisibleHistory = 20 ;; Used on the staging menu
+	int MultiplayerTeamConfigurationUserPrefHistory = 1 ;; We'll keep a larger history in the prefs
+	
+	;; player profile UI settings
+	PlayerProfileRankWidth = 100
+
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; Game-Spy Stuff
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; Game-specific settings moved to AVars_Locale.tgi for each product
+	int	GameSpyPeerMaxUpdates		= 30
+	int GameSpySBLANConcurrentUpdates	= 30
+
+	int	GameSpyServerRefreshTimeMin	= 10
+	int	GameSpyServerRefreshTimeMax	= 60
+	int	GameSpyServerRefreshTimeDelta	= 10
+
+	int	GameSpyMaxEmailLength		= 50
+	int	GameSpyMaxNicknameLength 	= 30
+	int	GameSpyMaxPasswordLength	= 30
+
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; ServerBrowser Colors - specify as RGBA string
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	string	ServerBrowserServerColorStaging			= 1,1,1,1
+	string	ServerBrowserServerColorPlaying 		= 0.6,0.6,0.6,1
+	string	ServerBrowserServerColorIncompatible 	= 1,0.2,0.2,1
+	int		ServerBrowserLowPingCutoff				= 200			;; maximum ping for low ping color (in milliseconds)
+	string	ServerBrowserLowPingColor				= 0,1,0,1
+	int		ServerBrowserMediumPingCutoff			= 500
+	string	ServerBrowserMediumPingColor			= 1,1,0,1
+	string	ServerBrowserHighPingColor				= 1,0,0,1
+	string	ServerBrowserClosedPingColor			= 0.5,0.5,0.5,1
+	
+	string PingIconRedGlyphInfo = ch_pingiconred
+	string PingIconYellowGlyphInfo = ch_pingiconyellow
+	string PingIconGreenGlyphInfo = ch_pingicongreen
+	
+	string StagingPingIconRedGlyphInfo = ch_stagingpingredicon
+	string StagingPingIconYellowGlyphInfo = ch_stagingpingyellowicon
+	string StagingPingIconGreenGlyphInfo = ch_stagingpinggreenicon
+	
+	
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; Networking
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	string DefaultNetworkConnectionType = Broadband			;; Modem
+	int		LaunchCountdownTime = 5									;; The interval the game will countdown from before launching
+	int		NetworkNumPortsToTry = 10			;; Number of consecutive ports to attempt to bind() to
+	
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; Minimum Game Resolution
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; NOTE: the game will include this variable.
+	;; for instance, setting a min res to 800 will show all the resolutions that the video card/monitor
+	;; can support from 800 up.  This number is capped in code between 640 and 1600.
+	int MinimumGameResolutionX = 800
+	flag Requires43Resolutions = false
+	
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; Lobby
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	int	LobbyDefaultRoomID = 1
+
+	int	AFKTimeMin		= 30
+	int	AFKTimeMax		= 180
+	int	AFKTimeDelta	= 30
+
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; GAME-SPECIFIC: resource and thing IDSes
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	;; VFX for the VWorld
+	string VFXHealthBar = health_bar_vfx
+	string VFXMoraleBar = morale_bar_vfx
+	string VFXSupplyStockpileBar = supply_stockpile_bar_vfx
+	string VFXAttackEfficiencyBar = attack_efficiency_bar_vfx
+	string VFXMoveCommand = move_vfx 
+	string VFXSelectFacing = facing_arrow_vfx
+	string VFXDamageNumbers = floater_text
+	string VFXHealNumbers = heal_floater_text
+	string VFXGhosting = ghost_vfx
+	string VFXIllegalPlacement = illegal_placement_vfx
+	string VFXCircleBrush = circle_brush_vfx 
+	string VFXSquareBrush = square_brush_vfx
+	string VFXProjectedBoxTexture = projected_box_texture_vfx
+	string VFXProjectedCircleTexture = projected_circle_texture_vfx
+	string VFXLocationMarkerEditor = location_marker_editor
+	string VFXRecruitMarkerRallyPoint = recruit_marker_rally_point
+	string VFXText = text_vfx
+	string VFXTextUnscaled = text_vfx_unscaled
+
+	;; Editor
+	string		EditorDefaultActorType = ORGANIZATION
+	string		EditorDefaultActorGroup = __ERROR_UNDEFINED__
+
+	;; these are used in map generation to allow the user to select certain
+	;; sizes of map.
+	int			MapMinimumSize = 192
+	int			MapMaximumSize = 704
+	int			MapStepSize = 64
+	;;int			KingdomsMax = 11	;; pcb062904 - now an svar
+	
+	;; special textures
+
+	string TextureEnvironmentMap = EnvironmentMap.tga
+	string TextureCircle = textures/special/PlainCircle.tga
+	string TextureSquare = textures/special/PlainSquare.tga
+	string TextureHollowCircle = textures/special/HollowCircle.tga
+	string TextureHollowSquare = textures/special/HollowSquare.tga
+	string TextureAlphaTransitionsTemplate = textures/AlphaTransitions.tga
+	string DefaultAudioResource = audio/Default/SoundDefault.wav
+	string DefaultAudioStreamingResource = audio/Default/StreamDefault.wav
+	string AudioMusicSilent = music_silent
+	float AudioDropTimeout = 5.0
+	float AudioFadeVolume = 50%
+	float AudioFadeTime = 1.0
+	float AudioRecoverFromFadeTime = 2
+	string StencilShaderFilename = shaders/extrude.vso
+	string HWSkinningShader = shaders/skin.vso
+	string HWSkinningNoLightShader = shaders/skinnl.vso
+
+	;; UI components enabling/disabling
+	flag	UIUseSidePanel = true
+	flag	UIUseEconomicImpact = true
+	flag	UIUseRecruitItemFloater = true
+	flag	UIUsePauseButton = true
+	flag	UIUseSupplyStockpile = false
+	flag	UIShouldResetGroupDisplayOffset = false
+	flag	UIShouldUseStateLabel  = false
+	flag	UIGroupDisplayUseNameLabel  = false
+	flag	UIOptionsDialogShowFilterSiegeToggle = false
+	
+	float	UIWaypointNumberZOffset = 1
+	flag	UIShouldDisplayRMCHerosInMapPreview = true
+	
+	flag	UIChooseCampaignUseBink = false
+
+	;;Editor Layer Components enabling/disabling
+	flag	EditorShowCustomizeButton = true
+
+	;; zone textures
+	string ViewZoneFriendlySupplyTexture = textures/special/ZoneBorder.tga
+	string ViewZoneSettlementTexture = textures/special/ZoneBorder.tga
+
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; SPECIAL FILES
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	;; Preferences Files
+	string UserPreferencesFilename = User/Preferences.rup
+	string UserUVarsFilename = User/UVars.tgi
+
+	;; campaign save directory
+	string CampaignSaveDirectory = CampaignSave
+	string CampaignStateExtension = rcs
+	string CampaignSavedMissionExtension = RCG
+
+	;; paths
+	string	PathMaps = Maps/
+	string  PathSavedGames = Save/
+	string	PathFilms = Films/
+	string	PathRMCS = RandomMap/
+	string	PathDynamicCampaignSavedGames = DynamicCampaignSave/
+	string  LastFilmName = LastFilm.RFM
+	int FilmRotationQueueSize = 99999
+	
+	;; videos
+	string	DefaultVideoResource = Video/blank.bik	
+	;; string	IntroVideo1 = Videos/project_01.bik
+	;; string	IntroVideo2 = /Video/test.bik
+	;; string	IntroVideo3 = /Video/test.bik
+	string	FullscreenVideoWidgetIDS = FullscreenVideoWidget
+
+	;; editor
+	string TestMapTemporaryFilePrefix = Maps/_test_map
+	
+	;; Observer stuff
+	string ObserverGameMusic = menu_background_music
+
+
+	;; Terrain map-edge things
+	;; First, the skirt. What texture do we use?
+	flag TerrainSkirt = false
+	string TerrainSkirtTexture = Special/SkirtTexture.tga
+	
+	flag TerrainFence = false
+	string TerrainFenceVFX = map_edge_fence
+	
+	flag TerrainPlane = false
+	string TerrainPlaneEdgeTexture = Special/SkirtTexture.tga
+	string TerrainPlaneCornerTexture = Special/SkirtTexture.tga
+	float TerrainPlaneLengthMultiplier = 4
+	
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; NIF loading settings
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; TODO: These two warnings should be true before we ship the game
+	bool PreprocessedDataMissingWarning = true
+	bool PreprocessedDataWrongVersionWarning = false
+	
+	;; RendererHBPPSuffix is the suffix that is attached to the model if the model is skinned
+	;; and should be used with the hardware shader.
+	string RendererHBPPSuffix = -h
+	
+	;; How many bones per partition should exist in the HBPP models (used only if we must repartition)
+	int RendererHBPPCount = 27
+
+	;; If RendererHBPPExtraSafety is true, there will be an extra check to ensure that models that
+	;; 'claim' to be high bones per partition actually are. This is a little slower, so its an AVar
+	;; that we can turn off
+	bool RendererHBPPExtraSafety = true
+	
+	;; If RendererHBPPFallbackCreate is true, we will attempt to create a "better" model if the model is
+	;; skinned and a HighBonesPerPartition model does not exist on disk. This incurs a performance penalty
+	;; and so should not be done for the actual release
+	bool RendererHBPPFallbackCreate = true
+	 
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; GAME-SPECIFIC: 
+	;; - should be filled in by "avars_XX.tgi" where XX is the project code
+	;; - these are dummy values
+	;; - other values go into "AVars_locale.tgi"
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	;; string ApplicationIDS = RTSE
+	string MicrosoftDirectXURL = http://www.microsoft.com/directx/
+	
+	;; string RegistryBase: should probably be "Software\Company\SKU"
+
+	;; GameSpy
+	;; string	GameSpyGameName				;; supplied by GameSpy
+	;; string	GameSpySBName				;; supplied by GameSpy
+	;; int		GameSpyNameSpace			;; 1 for GameSpy Arcade
+	;; string	GameSpyNamespaceExtension	;; -gs for GameSpy Arcade
+	;; int GameSpyQueryPort
+ 	;; int HostPortDefault
+
+	;; string Version: major.minor.patch.internal
+	;; - major release: incremented at release time
+	;; - minor release: incremented for major changes to the product
+	;; - patch level: incremented for each patch
+	;; - internal: (optional) used for internal or beta versions
+
+	;; UI settings
+	flag	UIKickPanelsParentIsPlayerPanelInCSD = false
+	float	UIFlashToggleSeconds = .5
+	int		UIFlashTogglesWhenTargeted = 16
+	
+	float	UIVObjFlashToggleSeconds = .25
+	int		UIVObjFlashTogglesWhenTargeted = 8
+	
+	;; Options Settings
+	flag OptionsDialogShowVFXNamesToggle = true
+} ; end [Vars]

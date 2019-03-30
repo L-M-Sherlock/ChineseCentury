@@ -1,0 +1,22 @@
+;; IMPORTANT: the first one should be position
+[Bone template=Bone]
+{
+	IDS = position
+	bone_name = Scene Root
+	;;contains_equipment = false
+}
+
+[Bone template=Bone]
+{
+	IDS = base
+	bone_name = base
+	;;contains_equipment = false
+}
+
+[Bone template=Bone]
+{
+	IDS = selection_box
+	bone_name = SelectionBox
+	;;contains_equipment = false
+}
+

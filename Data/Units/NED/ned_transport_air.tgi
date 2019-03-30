@@ -1,0 +1,14 @@
+[Thing Template=AAUnitnedAirplaneBomber]
+{
+	;;IDS = ned_air_transport
+	IDS = ned_transport_air
+	name = "#ned_transport_air_name"
+	editor_name = "#ned_transport_air_editor_name"
+
+	[View]
+	resource_prefix = nedTransportAir/nedTransportAir
+	
+	[BodyComponent]
+	health = 500
+	defense = 0
+}

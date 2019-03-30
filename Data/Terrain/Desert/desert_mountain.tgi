@@ -1,0 +1,45 @@
+[Terrain template=MountainTerrain]
+{
+	IDS = desert_mountain
+	name = "#desert_mountain_name"
+	
+	base_priority = 7000
+	terrain_group = desert
+
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.00
+	
+/********************	MOUNTAIN PARAMETERS		********************/
+
+	fixed noise_min 	= 0.25
+	fixed noise_max 	= 0.65
+	fixed paint_slope 	= 0.45
+	fixed max_slope 	= 0.85
+	fixed paint_max_step 	= 12.5
+	
+/********************	MOUNTAIN VARIATIONS		********************/
+
+	[Variation]
+	IDS = desert_mountain01
+	name = "#desert_mountain_01_name"
+	texture = DesertMountain/DesertMountain01.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.486, 0.377, 0.259
+
+	[Variation]
+	IDS = desert_mountain02
+	name = "#desert_mountain_02_name"
+	texture = DesertMountain/DesertMountain02.tga
+	texture_width = 4
+	texture_height = 4
+	terrain_color = 0.476, 0.367, 0.269
+
+	[Variation]
+	IDS = desert_mountain03
+	name = "#desert_mountain_03_name"
+	texture = DesertMountain/DesertMountain03.tga
+	texture_width = 4
+	texture_height = 4
+	terrain_color = 0.496, 0.387, 0.249
+}

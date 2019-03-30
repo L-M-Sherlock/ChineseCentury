@@ -1,0 +1,102 @@
+[Thing Template=AAUnitCPCKneel]
+{
+	IDS = cpc_infantry_at
+	name = "#cpc_infantry_at_name"
+	editor_name = "#cpc_infantry_at_editor_name"
+
+	hide_if_missing_properties = false
+	
+	[BodyComponent]
+	{
+		health = 150
+		defense = 1
+	}
+	
+	[CharacterComponent Template=AAInfantryRPGCharacterComponent]
+
+	[ElementComponent]
+	{
+		required_properties = tech_nosupply
+		required_structures = cpc_motor_pool
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 8
+	}
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+                [Property]
+		property_IDS = property_infantry_unit
+		
+	}
+	
+	[PerformerComponent]
+	{
+		check_damage_resistance = true
+
+		[Ability template=AAAttackLocal]
+		{
+			spawn_bone_ids = cannon_ae_01
+			
+			[AbilityDefinition Template=AAInfantryRPG]
+			{				
+				name = "#cpc_infantry_at_AbilityDefinition_name"
+				recharge_time = 5
+				range = 10
+				
+				[Effect Template=APDamageEffect]
+				amount = 60
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_rocket
+
+				[Effect Template=EnchantmentEffect]
+				{
+                                        targets = Vehicle
+					[EnchantmentProperty Template=EnchantmentProperty]
+					{
+					IDS = at_stun_cpc1
+					name = "#gbr_infantry_at_AbilityDefinition_Effect_EnchantmentProperty_name"
+					duration = 1
+					enchantment_type = ench_type_generic
+					icon = /properties/PropertyIcons/IconPropertyMovement.png
+			
+						[Modifier Template=FlagModifier]
+						modifier_flag = PARALYZE			
+		
+						[WhenAdded template=FXC_CreateVFX]
+						VFX_IDS = smoke_tint
+					}
+				}
+			}
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = CPCInfantryAT/CPCInfantryAT
+		
+		[WhenCreated Template=FXC_Equipment]
+		action = HIDE
+		location = lhand
+		equipment_type_ids = rpgload
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+	}
+}

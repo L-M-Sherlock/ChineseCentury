@@ -1,0 +1,42 @@
+/**************************************************************************
+
+template_area.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+REVISION HISTORY:
+bat040403 - created
+
+USAGE:
+ 
+
+**************************************************************************/
+
+[Template Area Inherit=Object]
+{
+	
+	category = AREA
+
+	[Flags]
+	{
+		blocking = false
+		targetable = false
+		ethereal = true
+		invisible = true
+	}
+
+	[Size]
+	{
+		height = 2
+	}
+
+	[View]
+	{
+		unique = false
+
+		shadow_texture	= NULL
+		skin		= NULL
+		icon		= NULL
+
+		resource_prefix = null
+	}
+}

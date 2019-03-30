@@ -1,0 +1,59 @@
+[Thing Template=AAGBROrganizationArtillery]
+{	
+	IDS = regiment_GBR_tank_Tankkiller
+	name = "#regiment_GBR_tank_Tankkiller_name"
+	editor_name = "#regiment_GBR_tank_Tankkiller_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 175
+		
+		[Upkeep]
+		ammo = 20
+		oil = 20
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = org_tank
+
+		[Property]
+		property_ids = artillery_company
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/GBR/GBRTankSPA/GBRTankSPA
+		icon = /UI/Game/RegimentButtons/IconTankArtillery.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_tank_deployed
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_artillery_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_artillery_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_artillery_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = gbr_tank_heavy
+	
+		[Slot]	;; support
+		element_IDS = gbr_tank_destroyer
+		
+		[Slot]	;; captain
+		element_IDS = gbr_tank_co
+	}
+	
+	[ExperienceComponent template=AAArmorExperienceComponent]
+}

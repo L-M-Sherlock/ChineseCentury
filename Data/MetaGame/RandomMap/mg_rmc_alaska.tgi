@@ -1,0 +1,187 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_alaska
+	name = "#mg_rmc_alaska_name"
+	description = "#mg_rmc_alaska_description"
+	biome = arctic_tundra
+
+	sun = SUN_DEFAULT,SUN_DUSK,SUN_MORNING,SUN_NIGHT
+	weather = NONE,NONE,SNOW_LIGHT,SNOW_HEAVY
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 512
+	height = 512
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;  Western Canada
+	starting_pos = 300,300
+	
+	[Kingdom Template = KingdomDefender]
+	;;  Alaska
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	Aleutian Islands
+	starting_pos = 160,20
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	Hawaii
+	starting_pos = 300,20
+	type = water
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	Eastern Siberia
+	starting_pos = 20,20
+	
+/********************    TERRAIN    ********************/
+
+	[TerrainBlob Template=ArcTundraTerrainBlob]
+
+	[TerrainBlob Template=ArcDirtTerrainBlob]
+
+	[TerrainStreak Template=ArcSnowTerrainStreak]
+
+	[TerrainBlob Template=ArcSnowTerrainBlob]
+
+	[TerrainBlob Template=ArcDirtTerrainBlob02]
+
+	[TerrainBlob Template=ArcSnowTerrainBlob02]
+
+	[TerrainStreak Template=ArcForestTerrainStreak]
+
+	[TerrainBlob Template=ArcForestTerrainBlob]
+
+	[TerrainBlob Template=ArcTundraTerrainBlob02]
+
+/********************    BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=ArcMountainTerrainBlob]
+
+	[TerrainBlob Template=ArcMountainTerrainBlob02]
+	
+	[TerrainBlob Template=ArcMountainTerrainBlob03]
+	
+	[TerrainBlob Template=ArcMountainTerrainBlob04]
+	
+	[TerrainBlob Template=ArcMountainTerrainBlob05]
+	
+/*************************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = arctic_ocean
+	dir_bias = -1,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = arctic_ocean
+	dir_bias = -1,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = arctic_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = WEST
+	terrain_ids = arctic_ocean
+	dir_bias = -1,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = WEST
+	terrain_ids = arctic_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = WEST
+	terrain_ids = arctic_ocean
+	dir_bias = -1,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = arctic_ocean
+	dir_bias = 0,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = arctic_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = arctic_ocean
+	dir_bias = 0,+1
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = arctic_ocean
+	dir_bias = 0,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = arctic_ocean
+	dir_bias = -1,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = arctic_ocean
+	dir_bias = -1,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = arctic_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = arctic_ocean
+	dir_bias = -1,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = arctic_ocean
+	dir_bias = -1,-1
+	
+/********************    TERRAIN NOISE   ********************/
+
+	[TerrainNoise Template=ArcNoisePhase01]
+	
+	[TerrainNoise Template=ArcNoisePhase02]
+	
+	[TerrainNoise Template=ArcNoisePhase03]
+	
+	[TerrainNoise Template=ArcNoisePhase04]
+	
+	[TerrainNoise Template=ArcNoisePhase05]
+	
+	[TerrainNoise Template=ArcNoisePhase06]
+
+/*************************    ACTOR GROUPS    **************************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_alaska
+		name = "Villages"
+
+		[Object]
+		object_ids = random_village_alaska
+		weight = 1
+	}
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_3
+		name = "#mg_rmc_alaska_bunkers_coastline_3_name"
+		search_relative_kingdom_ids = kingdom_attacker_3
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 128		
+		proximity_desired = 448
+	}
+}

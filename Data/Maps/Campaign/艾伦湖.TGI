@@ -1,0 +1,16 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = """""
+
+	kingdom_1 = " 1"
+	kingdom_0 = " 0"
+	team_1 = " 1"
+	independent_5 = " 5"
+	map_description = ""
+	team_0 = " 0"
+	independent_4 = " 4"
+	map_name = """""
+	kingdom_3 = " 3"
+	kingdom_2 = " 2"
+}

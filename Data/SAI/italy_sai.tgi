@@ -1,0 +1,50 @@
+[Ego template = MechanizedLowIncomeEgo]
+{
+	IDS										= ita_low_income_ego
+	name									= "#italy_sai_ger_low_income_ego_unit_limit_max_needed_name"
+} ;; LowIncomeEgo
+
+[Ego template = MechanizedMainGameEgo]
+{
+	IDS										= ita_main_game_ego
+	name									= "#italy_sai_ita_main_game_ego_unit_limit_max_needed_name"
+} ;; MainGameEgo
+
+[Ego template = MechanizedEndGameEgo]
+{
+	IDS										= ita_end_game_ego
+	name									= "#italy_sai_ita_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= ita_sai
+	name									= "#italy_sai_ita_sai_name_2"
+	description								= "#italy_sai_ita_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+	public									= false
+
+	initial_ego								= ita_low_income_ego
+
+	[Ego]
+	IDS										= ita_main_game_ego
+
+	[Ego]
+	IDS										= ita_end_game_ego
+
+	[Nation]
+	IDS										= nation_ita
+	
+	[Faction]
+	ids										= badoglio
+	
+	[Faction]
+	ids										= balbo
+	
+	[Faction]
+	ids										= gariboldi
+	
+	[Faction]
+	ids										= graziani
+	
+} ;; ita SAI

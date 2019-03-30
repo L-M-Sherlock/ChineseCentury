@@ -1,0 +1,60 @@
+[Thing Template=AAitaOrganizationArtillery]
+{	
+	IDS = regiment_ita_tank_artillery
+	name = "#regiment_ita_tank_artillery_name"
+	editor_name = "#regiment_ita_tank_artillery_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 275
+		
+		[Upkeep]
+		ammo = 30
+		oil = 25
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = org_tank
+
+		[Property]
+		property_ids = artillery_company
+	}	
+
+	[View]
+	{
+		resource_prefix = /Units/ita/itaTankSPA/itaTankSPA
+		icon = /UI/Game/RegimentButtons/IconTankArtillery.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ita_tank_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ita_artillery_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ita_artillery_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ita_artillery_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		operational_range = 100
+		
+		[Slot]	;; front
+		element_IDS = ita_tank_light
+	
+		[Slot]	;; support
+		element_IDS = ita_tank_spa
+		
+		[Slot]	;; captain
+		element_IDS = ita_tank_spa_F
+	}
+	
+	[ExperienceComponent template=AAArmorExperienceComponent]
+}

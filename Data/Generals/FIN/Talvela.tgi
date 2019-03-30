@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = talvela_portrait
+	name = "#talvela_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Talvela/TalvelaPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = fin_talvela_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = talvela
+	name = "#talvela_name"
+	description = "#talvela_description"
+	staging_name = "#talvela_staging_name"
+	icon_texture_ids = talvela/talvelaPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/FIN/talvela.bik
+	portrait_ids = talvela_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpInfantryAdvance]
+	
+	[Ability Template=AASpecialOpCourage]
+	
+	[Ability Template=AASpecialOpResupply]
+		
+	[Ability Template=AASpecialOpCorpsFIN]
+}

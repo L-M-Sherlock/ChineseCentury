@@ -1,0 +1,57 @@
+[Terrain template=MountainTerrain]
+{
+	IDS = savannah_mountaintrans
+	name = "#savannah_mountaintrans_name"
+
+	base_priority = 60000
+	terrain_group = dirt	
+	terrain_color = 0.510, 0.322, 0.180
+	
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.00
+
+/********************	MOUNTAIN PARAMETERS		********************/
+
+	noise_min 	= 0.25
+	noise_max 	= 0.75
+	paint_slope = 0.45
+	max_slope 	= 0.85
+	paint_max_step 	= 12.5
+	
+/********************	MOUNTAIN VARIATIONS		********************/
+
+	[Variation]
+	IDS = savannah_mountainbeachtrans01
+	name = "#savannah_mountaintrans_savannah_mountainbeachtrans01_name"
+	texture = SavannahMountainTrans/SavannahMountainBeachTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = savannah_mountaindirttrans01
+	name = "#savannah_mountaintrans_savannah_mountaindirttrans01_name"
+	texture = SavannahMountainTrans/SavannahMountainDirtTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = savannah_mountainforesttrans01
+	name = "#savannah_mountaintrans_savannah_mountainforesttrans01_name"
+	texture = SavannahMountainTrans/SavannahMountainForestTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = savannah_mountaingrasslandtrans01
+	name = "#savannah_mountaintrans_savannah_mountaingrasslandtrans01_name"
+	texture = SavannahMountainTrans/SavannahMountainGrasslandTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = savannah_mountainscrubtrans01
+	name = "#savannah_mountaintrans_savannah_mountainscrubtrans01_name"
+	texture = SavannahMountainTrans/SavannahMountainScrubTrans01.tga
+	texture_width = 8
+	texture_height = 8
+}

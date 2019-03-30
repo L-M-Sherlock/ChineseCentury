@@ -1,0 +1,32 @@
+[Terrain template=Terrain]
+{
+	IDS = arctic_snowtrans
+	name = "#arctic_snowtrans_name"
+	
+	base_priority = 800
+	terrain_group = snow
+	terrain_color = 0.906, 0.929, 0.961
+	
+	doodad_frequency = 0.001
+	primary_doodad_frequency = 0.10
+
+	[Property]
+	property_IDS = terrain_snow_infantry
+	
+	[Property]
+	property_IDS = terrain_snow_vehicles
+
+	[Variation]
+	IDS = arctic_snowgrassdrytrans01
+	name = "#arctic_snowtrans_arctic_snowgrassdrytrans01_name"
+	texture = ArcticSnowTrans/ArcticSnowGrassDryTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = arctic_snowpackicetrans01
+	name = "#arctic_snowtrans_arctic_snowpackicetrans01_name"
+	texture = ArcticSnowTrans/ArcticSnowPackIceTrans01.tga
+	texture_width = 8
+	texture_height = 8
+}

@@ -1,0 +1,141 @@
+/*************************************************************************
+							Panels
+*************************************************************************/
+
+[Template SharedNoArtPanelWidget Template=PanelWidget]
+{
+	[View Template=SharedPanelGroupVE]
+}
+
+[Template SharedPanelWidget Template=PanelWidget]
+{
+	[View Template=GroupVE]
+	{
+		/* cwp040804 - children are no longer defined in template, but must be added explicitly.
+		[Child Template=DecalVETiled]
+		{
+			corners_texture = /UI/%s/Default/Panel/TileCorners.tga
+			left_border_texture = /UI/%s/Default/Panel/TileLeft.tga
+			right_border_texture = /UI/%s/Default/Panel/TileRight.tga
+			top_border_texture = /UI/%s/Default/Panel/TileTop.tga
+			bottom_border_texture = /UI/%s/Default/Panel/TileBottom.tga
+			center_texture = /UI/%s/Default/Panel/TileCenter.tga
+		}
+		*/
+	}
+}
+
+[Template SharedMediumPanelWidget Template = PanelWidget]
+{
+	[View Template = GroupVE]
+	{
+		/* cwp040804 - children are no longer defined in template, must be added explicitly.
+		[Child Template = DecalVETiled]
+		{
+			corners_texture = /UI/%s/Default/Listbox/TileCorners.tga
+			left_border_texture = /UI/%s/Default/Listbox/TileLeft.tga
+			right_border_texture = /UI/%s/Default/Listbox/TileRight.tga
+			top_border_texture = /UI/%s/Default/Listbox/TileTop.tga
+			bottom_border_texture = /UI/%s/Default/Listbox/TileBottom.tga
+			center_texture = /UI/%s/Default/Listbox/TileCenter.tga
+		}
+		*/
+	}
+}
+
+[Template SharedSmallPanelWidget Template = PanelWidget]
+{
+	[View Template = GroupVE]
+	{
+		/* cwp 040804 - children are no longer defined in template, must be added explicitly.
+		[Child Template = DecalVETiled]
+		{
+			corners_texture = /UI/%s/Default/Panel/SmallTileCorners.tga
+			left_border_texture = /UI/%s/Default/Panel/SmallTileLeft.tga
+			right_border_texture = /UI/%s/Default/Panel/SmallTileRight.tga
+			top_border_texture = /UI/%s/Default/Panel/SmallTileTop.tga
+			bottom_border_texture = /UI/%s/Default/Panel/SmallTileBottom.tga
+			center_texture = /UI/%s/Default/Panel/SmallTileCenter.tga
+		}
+		*/
+	}
+}
+
+/* cwp041204 - no longer used.
+[Template SharedLargePanelGroupVE Template = GroupVE]
+{
+	[Child Template=DecalVETiled]
+	{
+		corners_texture = /UI/%s/Default/Panel/TileCorners.tga
+		left_border_texture = /UI/%s/Default/Panel/TileLeft.tga
+		right_border_texture = /UI/%s/Default/Panel/TileRight.tga
+		top_border_texture = /UI/%s/Default/Panel/TileTop.tga
+		bottom_border_texture = /UI/%s/Default/Panel/TileBottom.tga
+		center_texture = /UI/%s/Default/Panel/TileCenter.tga
+	}
+}
+
+[Template SharedMediumPanelGroupVE Template = GroupVE]
+{
+	[Child Template = DecalVETiled]
+	{
+		corners_texture = /UI/%s/Default/Listbox/TileCorners.tga
+		left_border_texture = /UI/%s/Default/Listbox/TileLeft.tga
+		right_border_texture = /UI/%s/Default/Listbox/TileRight.tga
+		top_border_texture = /UI/%s/Default/Listbox/TileTop.tga
+		bottom_border_texture = /UI/%s/Default/Listbox/TileBottom.tga
+		center_texture = /UI/%s/Default/Listbox/TileCenter.tga
+	}	
+}
+
+[Template SharedSmallPanelGroupVE Template = GroupVE]
+{
+	[Child Template = DecalVETiled]
+	{
+		corners_texture = /UI/%s/Default/Panel/SmallTileCorners.tga
+		left_border_texture = /UI/%s/Default/Panel/SmallTileLeft.tga
+		right_border_texture = /UI/%s/Default/Panel/SmallTileRight.tga
+		top_border_texture = /UI/%s/Default/Panel/SmallTileTop.tga
+		bottom_border_texture = /UI/%s/Default/Panel/SmallTileBottom.tga
+		center_texture = /UI/%s/Default/Panel/SmallTileCenter.tga
+	}
+}
+*/
+
+[Template SharedSelectablePanelGroupVE Template=GroupVE]
+{
+	[Child Template=DecalVETiledHorizontal]
+	when = ENABLED + UNFOCUSED + UNSELECTED
+	ends_texture = /UI/%s/Default/PushButton/PushButtonUnfocusedUnselectedTileEnds.png
+	center_texture = /UI/%s/Default/PushButton/PushButtonUnfocusedUnselectedTileCenter.png
+	
+	[Child Template=DecalVETiledHorizontal]
+	when = ENABLED + FOCUSED + UNPRESSED
+	ends_texture = /UI/%s/Default/PushButton/PushButtonFocusedTileEnds.png
+	center_texture = /UI/%s/Default/PushButton/PushButtonFocusedTileCenter.png
+	
+	[Child Template=DecalVETiledHorizontal]
+	when = ENABLED + PRESSED
+	ends_texture = /UI/%s/Default/PushButton/PushButtonPressedTileEnds.png
+	center_texture = /UI/%s/Default/PushButton/PushButtonPressedTileCenter.png
+		
+	[Child Template=DecalVETiledHorizontal]
+	when = ENABLED + SELECTED
+	ends_texture = /UI/%s/Default/PushButton/PushButtonPressedTileEnds.png
+	center_texture = /UI/%s/Default/PushButton/PushButtonPressedTileCenter.png
+	
+	[Child Template=DecalVETiledHorizontal]
+	when = DISABLED
+	ends_texture = /UI/%s/Default/PushButton/PushButtonDisabledTileEnds.png
+	center_texture = /UI/%s/Default/PushButton/PushButtonDisabledTileCenter.png
+}
+
+[Template SharedSelectablePanelWidget Inherit=PanelWidget]
+{
+	;; sets sound to play upon pressing/depressing the button
+	string	set_sound = push_button
+	string	unset_sound = NULL	
+	
+	[View Template=GroupVE]
+
+}

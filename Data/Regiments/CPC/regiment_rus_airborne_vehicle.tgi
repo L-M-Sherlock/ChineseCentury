@@ -1,0 +1,83 @@
+[Template AARUSRegimentAirborneVehicle Template=AARUSOrganizationMobile]
+{
+	name = "#regiment_cpc_airborne_vehicle_name"
+	editor_name = "#regiment_cpc_airborne_vehicle_editor_name"
+
+	[EconomyComponent]
+	{
+		[Upkeep]
+		ammo = 20
+		oil = 20
+	}		
+	
+	[View]
+	{
+		resource_prefix = /Units/RUS/RUSCarArmoredCO/RUSCarArmoredCO
+		icon = /UI/Game/RegimentButtons/IconHalftrack.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_Phalftrack_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_Phalftrack_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_Phalftrack_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{
+		layout_ids = regiment_mechanized
+		
+		[Slot]	;; front
+		element_IDS = rus_airborne_vehicle
+		
+		[Slot]	;; rear guard 1
+		element_IDS = cpc_Antitank_gun
+
+		[Slot]	;; rear guard 2
+		element_IDS = cpc_Antitank_gun
+	
+		[Slot]	;; rear guard 3
+		element_IDS = cpc_Antitank_gun
+	
+		[Slot]	;; flank
+		element_IDS = rus_airborne_vehicle
+		
+		[Slot]	;; captain
+		element_IDS = rus_airborne_vehicle
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = mechanized_company
+	}
+}
+
+[Thing Template=AARUSRegimentAirborneVehicle]
+{
+	IDS = regiment_rus_airborne_vehicle
+
+	transport_actor = cpc_transport_air
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 350
+	}
+
+	[Placement]
+	placement_group_ids = null
+}
+
+[Thing Template=AARUSRegimentAirborneVehicle]
+{
+	IDS = regiment_rus_airborne_vehicle_ground
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 250
+	}
+}

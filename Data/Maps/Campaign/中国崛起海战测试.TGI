@@ -1,0 +1,17 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "-----"
+
+	kingdom_1 = "cpc"
+	kingdom_0 = "chn"
+	kingdom_8 = "jpn"
+	kingdom_7 = "usa"
+	map_description = ""
+	kingdom_6 = "rus"
+	kingdom_5 = "ned"
+	kingdom_4 = "ger"
+	map_name = "-----"
+	kingdom_3 = "gbr"
+	kingdom_2 = "fin"
+}

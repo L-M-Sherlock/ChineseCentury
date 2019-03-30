@@ -1,0 +1,48 @@
+[Ego template = ArmorLowIncomeEgo]
+{
+	IDS										= mikawa_low_income_ego
+	name									= "#Japan_Mikawa_SAI_mikawa_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorLowLowEgo]
+{
+	IDS										= mikawa_low_low_ego
+	name									= "#Japan_Mikawa_SAI_mikawa_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorMainGameEgo]
+{
+	IDS										= mikawa_main_game_ego
+	name									= "#Japan_Mikawa_SAI_mikawa_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = ArmorEndGameEgo]
+{
+	IDS										= mikawa_end_game_ego
+	name									= "#Japan_Mikawa_SAI_mikawa_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= mikawa_sai
+	name									= "#Japan_Mikawa_SAI_mikawa_sai_name"
+	description								= "#Japan_Mikawa_SAI_mikawa_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= mikawa_low_income_ego
+
+	[Ego]
+	IDS										= mikawa_low_low_ego
+
+	[Ego]
+	IDS										= mikawa_main_game_ego
+
+	[Ego]
+	IDS										= mikawa_end_game_ego
+
+	[Nation]
+	IDS										= nation_jpn
+	
+	[Faction]
+	ids										= mikawa
+} ;; jpn SAI

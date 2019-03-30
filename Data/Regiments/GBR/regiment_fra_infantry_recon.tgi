@@ -1,0 +1,69 @@
+[Thing Template=AAGBROrganizationInfantry]
+{
+	IDS = regiment_fra_infantry_recon
+	name = "#regiment_fra_infantry_recon_name"
+	editor_name = "#regiment_fra_infantry_recon_editor_name"
+
+	[DetectionComponent]
+	{
+		detection_range = 27
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 25
+		
+		[Upkeep]
+		ammo = 5
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = recon1	
+		
+		[Property]
+		property_IDS = trailblazing		
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/GBR/GBRInfantry/GBRInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantryRecon.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_recon_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_recon_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_recon_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+                recruit_time = 10
+		recruit_full = true
+			
+		[Slot]	;; front
+		element_IDS = fra_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = null
+
+		[Slot]	;; rear guard 2
+		element_IDS = null
+		
+		[Slot]	;; rear guard 3
+		element_IDS = fra_infantry
+	
+		[Slot]	;; flank
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = fra_infantry_co
+	}
+}

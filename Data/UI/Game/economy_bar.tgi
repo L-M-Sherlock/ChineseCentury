@@ -1,0 +1,26 @@
+[EconomyBar Template=EconomyBarWidget]
+{
+	hidden_offset = 0,25
+	slide_time = .25
+
+	[View Template = EconomyImpactBarChildGroupVE]
+	{
+		L = 320
+		T = 520
+		R = +459
+		B = +25
+	}	
+}
+
+[EconomicImpact Inherit=EconomyBarWidget]
+{
+	slide_economy_bar = true
+
+	[View Template = EconomyImpactBarChildGroupVE]
+	{
+		L = 320
+		T = 545
+		R = +459
+		B = +25
+	}
+}

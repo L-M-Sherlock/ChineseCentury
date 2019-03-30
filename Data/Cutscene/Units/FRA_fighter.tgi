@@ -1,0 +1,73 @@
+[Thing Template=AAUnitGBRAirplaneFighter]
+{
+	IDS = FRA_fighter
+	name = "#FRA_fighter_name"
+	editor_name = "#FRA_fighter_editor_name"
+
+	[BodyComponent]
+	{
+		health = 300
+		defense = 5
+	}
+	
+	[View]
+	resource_prefix = FRAFighter/GBRFighter
+
+	[PerformerComponent]
+	{
+		[Ability Template=AAAttackLocal]
+		{
+			idle_animation = idle 
+						
+			[AbilityDefinition Template=AAAirplaneAttackMG]
+			{
+				name = "#gbr_fighter_AbilityDefinition_name"
+				mana_cost = 1
+				recharge_time = 1
+
+				area = 2
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 5
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 75
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = gbr_mg_heavy
+			}
+		}
+
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAAttackAntiAirMG]
+			{
+				name = "#gbr_fighter_AbilityDefinition_name"
+				recharge_time = 2
+				range = 20
+								
+				[Effect Template=PierceDamageEffect]
+				amount = 30
+				
+				[WhenDo Template=FXC_PlaySFX]
+				audio_ids = jpn_aa
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+			}
+		}
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = mg
+		
+		[Property]
+		property_IDS = combat_unit
+
+		[Property]
+		property_IDS = fighter
+	}
+		
+}

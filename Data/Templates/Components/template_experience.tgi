@@ -1,0 +1,10 @@
+;; ExperienceComponent: allows the actor to gain experience and levels (which give properties)
+[template ExperienceComponent]
+{
+	;; allows the specification of a particular value that mimics CV for the actor
+	fixed	fake_cv_value = -1
+
+	;; first level listed is automatically assigned to the actor
+	[list ExperienceLevel template=ExperienceLevel]
+}
+

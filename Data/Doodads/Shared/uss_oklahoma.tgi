@@ -1,0 +1,16 @@
+[Thing Template=AASharedDoodad]
+{
+	IDS = uss_oklahoma
+	name = "#uss_oklahoma_name"
+
+	[Flags]
+	water_based = true
+
+	[View]
+	{
+		resource_prefix = PearlHarborBattleships/USSOklahoma
+		shadow_type = NONE
+		shadow_texture = null
+		aspects_as_variations = false
+	}
+}

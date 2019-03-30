@@ -1,0 +1,323 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_greatbritain
+	name = "#mg_rmc_greatbritain_name"
+	description = "#mg_rmc_greatbritain_description"
+	biome = temperate_forest
+
+	sun = SUN_DEFAULT,SUN_DEFAULT,SUN_DEFAULT,SUN_DUSK,SUN_MORNING,SUN_NIGHT
+	weather = NONE,NONE,RAIN_LIGHT,RAIN_HEAVY
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 448
+	height = 448
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	Eastern Canada
+	starting_pos = 160,20
+	type = water
+	
+	[Kingdom Template = KingdomDefender]
+	;;	Great Britain
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	Scandanavia
+	starting_pos = 300,300
+	type = water
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	French Coast
+	starting_pos = 300,160
+	type = water
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	Gibraltar
+	starting_pos = 300,20
+	type = water
+	
+	[Kingdom Template = KingdomAttacker5]
+	;;	Spain
+	starting_pos = 305,15
+	type = water
+
+/********************    TERRAIN    ********************/
+
+	[TerrainBlob Template=TempGrassTerrainBlob]
+	
+	[TerrainStreak Template=TempGrassDryTerrainStreak]
+
+	[TerrainBlob Template=TempDirtDarkTerrainBlob]
+	
+	[TerrainBlob Template=TempGrassDryTerrainBlob]
+	
+	[TerrainBlob Template=TempDirtDarkTerrainBlob02]
+	
+	[TerrainBlob Template=TempGrassDryTerrainBlob02]
+	
+	[TerrainStreak Template=TempForestConiferousTerrainStreak]
+
+	[TerrainBlob Template=TempForestConiferousTerrainBlob]
+	
+	[TerrainBlob Template=TempGrassTerrainBlob02]
+
+/********************    BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=TempMountainTerrainBlob]
+
+	[TerrainBlob Template=TempMountainTerrainBlob02]
+	
+	[TerrainBlob Template=TempMountainTerrainBlob03]
+	
+	[TerrainBlob Template=TempMountainTerrainBlob04]
+	
+	[TerrainBlob Template=TempMountainTerrainBlob05]
+	
+/********************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = temperate_ocean
+	dir_bias = -1,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = temperate_ocean
+	dir_bias = 0,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = temperate_ocean
+	dir_bias = -1,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = temperate_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = temperate_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = temperate_ocean
+	dir_bias = +1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = temperate_ocean
+	dir_bias = -1,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = temperate_ocean
+	dir_bias = 0,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = temperate_ocean
+	dir_bias = -1,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = temperate_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = temperate_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = temperate_ocean
+	dir_bias = +1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = temperate_ocean
+	dir_bias = -1,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = temperate_ocean
+	dir_bias = 0,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = temperate_ocean
+	dir_bias = -1,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = temperate_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = temperate_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = temperate_ocean
+	dir_bias = +1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = temperate_ocean
+	
+/********************    TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=TempNoisePhase01]
+	
+	[TerrainNoise Template=TempNoisePhase02]
+	
+	[TerrainNoise Template=TempNoisePhase03]
+	
+	[TerrainNoise Template=TempNoisePhase04]
+
+	[TerrainNoise Template=TempNoisePhase05]
+
+	[TerrainNoise Template=TempNoisePhase06]
+
+/*************************    ACTOR GROUPS    **************************/
+
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_greatbritain
+		name = "#mg_rmc_gibraltar_village_greatbritain_name"
+
+		[Object]
+		object_ids = random_village_greatbritain
+		weight = 1
+	}
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_1
+		name = "#mg_rmc_greatbritain_bunkers_coastline_1_name"
+		search_relative_kingdom_ids = kingdom_attacker_1
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_2
+		name = "#mg_rmc_greatbritain_bunkers_coastline_2_name"
+		search_relative_kingdom_ids = kingdom_attacker_2
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_3
+		name = "#mg_rmc_greatbritain_bunkers_coastline_3_name"
+		search_relative_kingdom_ids = kingdom_attacker_3
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_4
+		name = "#mg_rmc_greatbritain_bunkers_coastline_4_name"
+		search_relative_kingdom_ids = kingdom_attacker_4
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_5
+		name = "#mg_rmc_greatbritain_bunkers_coastline_5_name"
+		search_relative_kingdom_ids = kingdom_attacker_5
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+}

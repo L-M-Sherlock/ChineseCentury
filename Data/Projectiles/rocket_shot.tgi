@@ -1,0 +1,83 @@
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = rocket_explosion
+	name = "#rocket_shot_rocket_explosion_name"
+	model = Rocketshot/RocketExplosion.NIF
+}
+
+[VFX Template=AAVFXModelPermanent]
+{
+	IDS = rocket_smoke_loop
+	name = "#rocket_shot_rocket_smoke_loop_name"
+	model = Rocketshot/RocketSmokeLoop.nif
+}
+
+[Thing Template=Projectile]
+{
+	ids = rocket_projectile
+	name = "#rocket_shot_rocket_projectile_name"
+
+	[View]
+	{
+		resource_prefix = RocketShot/RocketProjectile
+		
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop
+			attached = true
+		}
+
+		[WhenDestroyed Template=FXC_CreateVFX]
+		{
+			vfx_ids = tank_shot_explosion
+			at = TARGET_HIT_POSITION
+			attached = false
+		}
+		
+		[WhenDestroyed template=FXC_PlaySFX]
+		{
+			audio_ids = explosion_rocket
+		}	
+	}
+
+	[ProjectileComponent]
+	{
+		projectile_speed = 20
+		projectile_type = ANTIGRAV
+	}
+}
+
+[Thing Template=Projectile]
+{
+	ids = vehicle_rocket_projectile
+	name = "#rocket_shot_vehicle_rocket_projectile_name"
+
+	[View]
+	{
+		resource_prefix = RocketShot/RocketProjectile
+			
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop
+			attached = true
+		}
+		
+		[WhenDestroyed Template=FXC_CreateVFX]
+		{
+			vfx_ids = tank_shot_explosion
+			at = SELF
+			attached = false
+		}
+		
+		[WhenDestroyed template=FXC_PlaySFX]
+		{
+			audio_ids = explosion_rocket
+		}		
+	}
+
+	[ProjectileComponent]
+	{
+		projectile_speed = 19
+		projectile_type = LOB
+	}
+}

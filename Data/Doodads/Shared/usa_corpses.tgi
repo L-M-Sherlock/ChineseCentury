@@ -1,0 +1,87 @@
+
+/*	USA INFANTRY CORPSE		*/
+
+[Thing Template=AASharedDoodad]
+{
+	IDS = usa_infantry_corpse
+	name = "#usa_corpses_usa_infantry_corpse_name"
+	
+	[Flags]
+	revealed = false
+	
+	[View]
+	{
+		resource_prefix = Corpses/USAInfantryCorpse
+		shadow_type = NONE
+		
+		[Aspect Template=Aspect]
+		IDS = usa_infantry_corpse01
+		model = %s01.nif
+		ground_size = 1.0,1.0
+		
+		[Aspect Template=Aspect]
+		IDS = usa_infantry_corpse02
+		model = %s02.nif
+		ground_size = 1.0,1.0
+		
+		[Aspect Template=Aspect]
+		IDS = usa_infantry_corpse03
+		model = %s04.nif
+		ground_size = 1.0,1.0
+		
+		[Aspect Template=Aspect]
+		IDS = usa_infantry_corpse04
+		model = %s05.nif
+		ground_size = 1.0,1.0
+	}
+}
+
+/*	USA DROWNED INFANTRY CORPSE		*/
+
+[Thing Template=AASharedDoodad]
+{
+	IDS = usa_infantry_corpse_drowned
+	name = "#usa_corpses_usa_infantry_corpse_drowned_name"
+	
+	[Flags]
+	water_based = true
+	revealed = false	
+	
+	[View]
+	{
+		resource_prefix = Corpses/USAInfantryCorpse
+		shadow_type = NONE
+		
+		[Aspect Template=Aspect]
+		IDS = usa_infantry_corpse_drowned01
+		model = %s03.nif
+		ground_size = 1.0,1.0
+	}
+}
+
+/*	USA WATER TRANSPORT CORPSE		*/
+
+[Thing Template=AASharedDoodad]
+{
+	IDS = usa_water_transport_corpse
+	name = "#usa_corpses_usa_water_transport_corpse_name"
+	
+	[Flags]
+	water_based = true
+	revealed = false
+	
+	[Size]
+	scale_min = 1.00
+	scale_max = 1.00
+
+	[View]
+	{
+		resource_prefix = Corpses/USAWaterTransportCorpse
+		shadow_type = NONE
+		
+		[Aspect Template=Aspect]
+		IDS = usa_water_transport_corpse01
+		model = %s01.nif
+		ground_size = 1.0,1.0
+	}
+}

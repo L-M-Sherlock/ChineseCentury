@@ -1,0 +1,108 @@
+
+[Thing Template=AAVillageBuilding]
+{
+	IDS = factory_asian1
+	name = "#factory_asian1_name"
+	editor_name = "#factory_asian1_editor_name"
+	
+	[Placement]
+	placement_group_IDS = group_resource
+	placement_category = building
+
+        [BodyComponent]
+	captureable = true
+
+	[PropertiesComponent]
+	{
+		[Property]
+		{
+			property_ids = money
+		}
+
+	}
+
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 12
+
+	[View]
+	{
+		resource_prefix = FactoryAsian/AmmoFactory
+		icon = /UI/Game/BuildingButtons/IconDepotAmmo.png
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_bunker_dirt
+			terrain_group_filter = dirt
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_bunker_desert
+			terrain_group_filter = desert
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_bunker_snow
+			terrain_group_filter = snow
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true	
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+		
+		
+
+		[AspectNormal]
+                ground_size = 3,3
+		visual_radius_estimate = 9
+        }
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 100
+		
+		[Production]
+		ammo = 60
+	}
+
+	[ConstructionComponent]
+	{
+		construction_node_name_prefix = Stage
+		finished_node_name = Final
+	}
+
+	[WhenEnter Template=FXC_CreateVFX]
+	{
+		actor_state = construction
+		VFX_IDS = construction_raise_vfx
+		location = BASE
+	}
+
+	[WhenEnter Template=FXC_CreateVFX]
+	{
+		actor_state = construction
+		VFX_IDS = bunker_construction
+	}
+
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		actor_state = construction
+		VFX_IDS = bunker_deconstruction
+	}
+	
+	[WhenEnter Template=FXC_CreateVFX]
+	{
+		vfx_ids = building_pack
+		actor_state = active_construction
+		location = position
+	}
+}

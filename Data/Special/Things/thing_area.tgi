@@ -1,0 +1,32 @@
+
+[Thing Inherit=Area]
+{
+	IDS = box_area
+	name = "#thing_area_box_area_name"
+	
+	[View]
+	{
+		[AspectNormal]
+		model = ThingAreaMarker/ThingAreaMarker.nif
+		skin = NULL
+	
+		[WhenCreated Template=FXC_CreateVFX]
+		VFX_IDS = projected_box_texture_vfx
+	}
+}
+
+[Thing Inherit=Area]
+{
+	IDS = circle_area
+	name = "#thing_area_circle_area_name"
+	
+	[View]
+	{
+		[AspectNormal]
+		model = ThingAreaMarker/ThingAreaMarker.nif
+		skin = NULL
+
+		[WhenCreated Template=FXC_CreateVFX]
+		VFX_IDS = projected_circle_texture_vfx
+	}
+}

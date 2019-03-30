@@ -1,0 +1,60 @@
+[Thing Template=AAJPNOrganizationMobile]
+{
+	IDS = regiment_jpn_infantry_mechanized
+	name = "#regiment_jpn_infantry_mechanized_name"
+	editor_name = "#regiment_jpn_infantry_mechanized_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 125
+		
+		[Upkeep]
+		ammo = 10
+		oil = 10
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/JPN/JPNInfantry/JPNInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantryMechanized.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = jpn_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = jpn_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = jpn_infantry_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_mechanized
+		
+		[Slot]	;; front
+		element_IDS = jpn_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = jpn_infantry
+
+		[Slot]	;; rear guard 2
+		element_IDS = jpn_tank_light
+		
+		[Slot]	;; rear guard 3
+		element_IDS = jpn_infantry_mg
+	
+		[Slot]	;; flank
+		element_IDS = jpn_halftrack
+		
+		[Slot]	;; captain
+		element_IDS = jpn_car_armored_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = mechanized1_company
+	}
+}

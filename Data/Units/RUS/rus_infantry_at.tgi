@@ -1,0 +1,104 @@
+[Thing Template=AAUnitRUSKneel]
+{
+	IDS = rus_infantry_at
+	name = "#rus_infantry_at_name"
+	editor_name = "#rus_infantry_at_editor_name"
+	
+	[BodyComponent]
+	{
+		health = 150
+		defense = 1
+	}
+	
+	[CharacterComponent Template=AAInfantryRPGCharacterComponent]
+
+	[ElementComponent]
+	{
+		required_structures = rus_motor_pool
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 2.5
+	}
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = at_infantry			
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		check_damage_resistance = true
+
+		[Ability template=AAAttackLocal]
+		{
+			spawn_bone_ids = cannon_ae_01
+			
+			[AbilityDefinition Template=AAInfantryRPG]
+			{				
+				name = "#rus_infantry_at_AbilityDefinition_name"
+				recharge_time = 6
+				range = 12
+				
+				[Effect Template=APDamageEffect]
+				amount = 50
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_rocket
+
+				[Effect Template=EnchantmentEffect]
+				{
+                                        targets = Vehicle
+					[EnchantmentProperty Template=EnchantmentProperty]
+					{
+					IDS = at_stun_rus1
+					name = "#gbr_infantry_at_AbilityDefinition_Effect_EnchantmentProperty_name"
+					duration = 1
+					enchantment_type = ench_type_generic
+					icon = /properties/PropertyIcons/IconPropertyMovement.png
+			
+						[Modifier Template=FlagModifier]
+						modifier_flag = PARALYZE			
+		
+						[WhenAdded template=FXC_CreateVFX]
+						VFX_IDS = smoke_tint
+					}
+				}
+			}
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = RUSInfantryAT/RUSInfantryAT
+		
+		[WhenCreated Template=FXC_Equipment]
+		action = HIDE
+		location = lhand
+		equipment_type_ids = rpgload
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+	}
+}

@@ -1,0 +1,58 @@
+[Ego template = InfantryLowIncomeEgo]
+{
+	IDS										= chn_low_income_ego
+	name									= "#china_sai_chn_low_income_ego_unit_limit_max_needed_name"
+} ;; LowIncomeEgo
+
+[Ego template = InfantryMainGameEgo]
+{
+	IDS										= chn_main_game_ego
+	name									= "#china_sai_chn_main_game_ego_unit_limit_max_needed_name"
+} ;; MainGameEgo
+
+[Ego template = InfantryEndGameEgo]
+{
+	IDS										= chn_end_game_ego
+	name									= "#china_sai_chn_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+[Ego template = InfantryWarGameEgo]
+{
+	IDS										= chn_war_game_ego
+	name									= "#china_sai_chn_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= chn_sai
+	name									= "#china_sai_chn_sai_name_2"
+	description								= "#china_sai_chn_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+	public									= false
+
+	initial_ego								= chn_low_income_ego
+
+	[Ego]
+	IDS										= chn_main_game_ego
+
+	[Ego]
+	IDS										= chn_end_game_ego
+
+	[Ego]
+	IDS										= chn_war_game_ego
+
+	[Nation]
+	IDS										= nation_chn
+	
+	[Faction]
+	ids										= lizongren
+	
+	[Faction]
+	ids										= xueyue
+	
+	[Faction]
+	ids										= zhanglingfu
+	
+	[Faction]
+	ids										= zhangzizhong
+	
+} ;; fin SAI

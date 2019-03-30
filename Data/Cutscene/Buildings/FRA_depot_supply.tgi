@@ -1,0 +1,108 @@
+[Thing Template=AAGBRBuildingPackableDepot]
+{
+	IDS = FRA_depot_supply
+	name = "#FRA_depot_supply_name"
+	editor_name = "#FRA_depot_supply_editor_name"
+
+	[BodyComponent]
+	health = 750
+	defense = 5
+
+	[ConstructionComponent]
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 45
+		
+		[Production]
+		ammo = 5
+		oil = 5
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = supplydepot	
+
+		[Property]
+		property_IDS = economic_building
+	}	
+		
+	[ResearchComponent]
+	
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 8
+	}
+
+	[Stance Template=StanceUpgrade]
+	{
+		property_ids = building_upgrade
+	}
+		
+	[View]
+	{
+		resource_prefix = FRADepotSupply/GBRDepotSupply
+		icon = /UI/Game/BuildingButtons/IconDepotSupply.png
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_depot_dirt
+			terrain_group_filter = dirt
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_depot_desert
+			terrain_group_filter = desert
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_depot_snow
+			terrain_group_filter = snow
+		}
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		{
+			audio_ids = depot_supply_select
+		}
+		
+		;----- Lights -----
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_02
+			location = spotlight_ae_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_03
+			location = spotlight_ae_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_02_bright
+			location = spotlight_ae_03
+			attached = true
+		}
+	}
+
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_packing
+		audio_ids = pack_7s_sfx
+	}
+	
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_unpacking
+		audio_ids = unpack_7s_sfx
+	}
+}

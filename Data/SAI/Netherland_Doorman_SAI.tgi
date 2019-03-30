@@ -1,0 +1,45 @@
+[Ego template = artilleryLowIncomeEgo]
+{
+	IDS										= doorman_low_income_ego
+	name									= "#Neatherland_Doorman_SAI_doorman_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = artilleryLowLowEgo]
+{
+	IDS										= doorman_low_low_ego
+	name									= "#Neatherland_Doorman_SAI_doorman_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = artilleryMainGameEgo]
+{
+	IDS										= doorman_main_game_ego
+	name									= "#Neatherland_Doorman_SAI_doorman_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = artilleryEndGameEgo]
+{
+	IDS										= doorman_end_game_ego
+	name									= "#Neatherland_Doorman_SAI_doorman_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= doorman_sai
+	name									= "#Neatherland_Doorman_SAI_doorman_sai_name"
+	description								= "#Neatherland_Doorman_SAI_doorman_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= doorman_low_income_ego
+
+	[Ego]
+	IDS										= doorman_main_game_ego
+
+	[Ego]
+	IDS										= doorman_end_game_ego
+
+	[Nation]
+	IDS										= nation_ned
+	
+	[Faction]
+	ids										= doorman
+} ;; von_manstein SAI

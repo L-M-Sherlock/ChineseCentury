@@ -1,0 +1,56 @@
+[Thing Template=AATemperateDynamicDoodad]
+{
+	IDS = temperate_hedges
+	name = "#temperate_hedge_temperate_hedges_name"
+	
+	[Component Inherit=BreakableDynamicDoodadComponent]
+	{
+		update_time = 1
+		break_impulse = 100
+		toppled = false
+		regrow = false
+		trampled_aspect_ids = temperate_dynamic_hedge_crushed
+
+		[Action Template=FXC_CreateVFX]
+		VFX_IDS = dynamic_doodad_crush
+		
+		[Action Template=FXC_PlaySFX]
+		audio_ids = dynamic_hedge_crush
+	}
+
+	[Flags]
+	random_orientation = false	
+	
+	[Size]
+	scale_min = 1
+	scale_max = 1	
+
+	[View]
+	{
+		aspects_as_variations = false
+		resource_prefix = TemperateDynamicHedge/TemperateDynamicHedge
+		shadow_type = TEXTURE
+		shadow_texture = /effects/shadows/TemperateDynamicHedgeShadow.dds
+
+		[AspectNormal]
+		{
+			[TextureRename]
+			substring_from = Hedges01
+			substring_to = DynamicHedge
+		}
+
+		[TextureSearchPath]
+		path = /Doodads/Temperate/TemperateTrees
+		
+		[Aspect]
+		{
+			ids = temperate_dynamic_hedge_crushed
+			model = TemperateDynamicHedge/TemperateDynamicHedgeCrushed.nif
+			ground_size = 0.5,1.0
+			
+			[TextureRename]
+			substring_from = Hedges03
+			substring_to = DynamicHedge
+		}
+	}
+}

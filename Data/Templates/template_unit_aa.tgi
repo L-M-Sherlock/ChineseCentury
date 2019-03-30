@@ -1,0 +1,5109 @@
+/**************************************************************************
+
+template_unit_AA.tgi
+Copyright ?2003 TimeGate Studios
+
+DESCRIPTION:  templates for AA units.
+
+REVISION HISTORY:
+ick040303 - created
+ick060903 - added new subtemplates for dividing up the A&A units
+
+USAGE:
+
+	[Thing Template=AAUnit]
+	This node goes at the root level and defines a unit that can be 
+	instantiated in the game.
+
+**************************************************************************/
+
+[Template AAUnit Template=Unit]
+{
+	[ElementComponent]
+	morale_value = 5
+	resupply_rate = 0.1
+	
+	[DetectionComponent]
+	detection_range = 18.0
+	remote_detection_range = 10.0
+	
+	[BodyComponent]
+	defense_icon = /Properties/AbilityIcons/IconAbilityDefense.png
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		
+		[Upkeep]
+		
+		[Production]
+	}
+	
+	[View]
+	shadow_texture = /effects/shadows/UnitShadow.dds
+}
+
+[Template AAAmbientUnit Template=AAUnit]
+{
+	[BodyComponent]
+	health = 300
+	defense = 1
+	
+	[Flags]
+	{
+		ownable = false
+		targetable = false
+		invulnerable = true
+		radar = false
+	}
+
+	[ElementComponent]
+	morale_value = 0
+
+	[MoverComponent]
+	turn_radius = 0.5
+	turn_type = WHILE_MOVING
+	speed_max = 1
+	
+	[Placement]
+	placement_group_IDS = group_ambient
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+	}
+
+	[Size]
+	{
+		blocking_shape = CIRCLE
+		blocking_radius = 0.5
+		
+		soft_shape = CIRCLE
+		soft_radius = 0.75
+	}
+}
+
+[Template AAUnitVehicle Template=AAUnit]
+{
+	places_tracks = true
+
+	[Flags]
+	conform_to_terrain = true
+
+	[ElementComponent]
+	morale_value = 20
+	group_priority = 3
+
+	[BodyComponent]
+	{
+		rot_time = 10
+		sink_time = 5
+		
+	 	[WhenHealth Template=FXC_CreateVFX]
+	  	{
+			vfx_ids = smoke_tank
+			location = damage_point60
+			health = 0.4
+			health_trigger_type = ABSOLUTE_BELOW
+	  	}
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = vehicle
+	}
+	
+	[Stance Template=StanceDeath]
+	
+	
+	[View]
+	{
+		shadow_type = STENCIL
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+		
+		[Aspect Template=AAAspectDeath]
+		
+		[Swivel]
+		{
+			swivel_node_ids = base
+			swivel_inertia = .25
+			spring_constant = .5
+			swivel_mass = 500
+			movement_inertia = true
+		}
+		
+                [WhenCreated template=FXC_CreateVFX]
+                {
+                	VFX_IDS = headlight_01
+                	attached = true
+                	location = headlight_ae_01
+                }
+
+                [WhenCreated template=FXC_CreateVFX]
+                {
+                	VFX_IDS = headlight_01
+                	attached = true
+                	location = headlight_ae_02
+                }
+
+                [WhenCreated template=FXC_CreateVFX]
+                {
+                	VFX_IDS = taillight_01
+                	attached = true
+                	location = taillight_ae_01
+                }
+
+                [WhenCreated template=FXC_CreateVFX]
+                {
+                	VFX_IDS = taillight_01
+                	attached = true
+                	location = taillight_ae_02
+                }
+
+                [WhenCreated template=FXC_CreateVFX]
+                {
+                	VFX_IDS = headlight_projection
+                	attached = true
+                	location = headlight_projection_01
+                }
+
+                [WhenCreated template=FXC_CreateVFX]
+                {
+                	VFX_IDS = headlight_projection
+                	attached = true
+                	location = headlight_projection_02
+                }
+	}
+}
+
+;; ------------------------------- INFANTRY ---
+
+[Template AAUnitBiped Template=AAUnit]
+{
+	places_tracks = true
+	
+	[BodyComponent]
+	{
+		rot_time = 5
+		sink_time = 3
+	}
+	
+	[ElementComponent]
+	resupply_rate = 0.3
+	group_priority = 3
+
+	denizen_type = denizen_type_infantry
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksBipedRight]
+		
+		[TrackInfo Template=AATracksBipedLeft]
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = infantry
+	}
+	
+	[Size]
+	{
+		height = 2
+		
+		blocking_shape = CIRCLE
+		blocking_radius = 0.35
+		
+		soft_shape = CIRCLE
+		soft_radius = 0.5
+	}
+
+	[View]
+	{
+		[AspectNormal]
+		ground_size = 0.3,0.3
+
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_infantry
+		at = SOURCE_GROUND
+	}
+
+}
+
+[Template AABipedProne Template=AAUnitBiped]
+{
+	[Stance template = StanceKneel]
+	
+	[Stance template = StanceProne]
+
+	[View]
+	{
+
+		[Aspect template = AspectKneel]
+		
+		[Aspect template = AspectProne]
+	}
+}
+
+[Template AABipedKneel Template=AAUnitBiped]
+{
+	[Stance template = StanceKneel]
+
+	[View]
+	{
+
+		[Aspect template = AspectKneel]
+		
+	}
+	
+}
+
+;; ---------------------------------- SPA's ----
+
+[Template AAUnitVehicleSPA Template=AAUnitVehicle]
+{
+	[ElementComponent]
+	morale_value = 25
+	group_priority = 3
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = artillery
+	}
+
+	[View]
+	{		
+		[Swivel]
+		{
+			swivel_node_ids = base
+			swivel_inertia = .25
+			spring_constant = .95
+			swivel_mass = 8000
+			wind_sway = false
+			recoil = true
+			impact_sway = true
+			movement_inertia = false
+		}
+	}
+
+
+	[MoverComponent]
+	{
+		collision_impulse = 8000
+		acceleration = 1
+		turn_radius = 0.9
+		turn_type = in_place
+
+		[WhenStartMoving Template=FXC_PlaySFX]
+		audio_ids = tank_start
+		
+		[WhenStopMoving Template=FXC_PlaySFX]
+		audio_ids = tank_stop
+
+		[WhenStartMoving template=FXC_CreateVFX]
+		vfx_ids = move_effect_tank_medium
+		location = base
+	}
+	
+	[BodyComponent]
+	{
+		[WhenHealth template=FXC_CreateVFX]
+		{
+			vfx_ids = medium_tank_debris
+			location = explosion_point_death01
+			health = 0
+			health_trigger_type = ABSOLUTE_BELOW
+		}
+	}
+	
+	[PerformerComponent]
+	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 37
+		}
+	}
+
+	[Size]
+	{
+
+		;; drp011504 - changed radius from 1.4 to 0.5
+		blocking_shape = CIRCLE
+		blocking_radius = 0.8
+					
+		soft_shape = RECT
+		rect_width = 1.6
+		rect_height = 3.0
+	}
+}
+
+;; ---------------------------------- TANKS ----
+
+[Template AAUnitVehicleTank Template=AAUnitVehicle]
+{
+	[ElementComponent]
+	morale_value = 30
+	group_priority = 5
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = tank
+	}
+	
+	[View]
+	{		
+		[Swivel]
+		{
+			swivel_node_ids = base
+			swivel_inertia = .25
+			spring_constant = .95
+			swivel_mass = 8000
+			wind_sway = false
+			recoil = true
+			impact_sway = true
+			movement_inertia = false
+		}
+	}
+
+
+	[MoverComponent]
+	{
+		collision_impulse = 8000
+		acceleration = 1
+
+		[WhenStartMoving Template=FXC_PlaySFX]
+		audio_ids = tank_start
+		
+		[WhenStopMoving Template=FXC_PlaySFX]
+		audio_ids = tank_stop
+	}
+}
+
+
+[template AAUnitVehicleTinyTank template=AAUnitVehicleTank]
+{
+	[MoverComponent]
+	{
+		collision_impulse = 0
+		turn_radius = 0.65
+		turn_type = in_place
+
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = move_effect_tank_tiny
+			location = base		
+		}
+	}
+	
+	[BodyComponent]
+	{
+		[WhenHealth template=FXC_CreateVFX]
+		{
+			vfx_ids = light_tank_debris
+			location = explosion_point_death01
+			health = 0
+			health_trigger_type = ABSOLUTE_BELOW
+		}
+	}
+	
+	[PerformerComponent]
+
+	[Size]
+	{
+		blocking_shape = CIRCLE
+		blocking_radius = 0.5
+					
+		soft_shape = RECT
+		rect_width = 1.0
+		rect_height = 1.5
+	}
+}
+
+
+[Template AAUnitVehicleLightTank template=AAUnitVehicleTank]
+{
+	[MoverComponent]
+	{
+		turn_radius = 0.7
+		turn_type = in_place
+
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = move_effect_tank_light
+			location = base		
+		}
+	}
+	
+	[BodyComponent]
+	{
+		[WhenHealth template=FXC_CreateVFX]
+		{
+			vfx_ids = light_tank_debris
+			location = explosion_point_death01
+			health = 0
+			health_trigger_type = ABSOLUTE_BELOW
+		}
+	}
+	
+	[PerformerComponent]
+	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 50
+		}
+	}
+
+	[Size]
+	{
+		blocking_shape = CIRCLE
+		blocking_radius = 0.7
+					
+		soft_shape = RECT
+		rect_width = 1.5
+		rect_height = 2.5
+	}
+}
+
+[Template AAUnitVehicleMediumTank template=AAUnitVehicleTank]
+{
+	[MoverComponent]
+	{
+		turn_radius = 0.9
+		turn_type = in_place
+
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = move_effect_tank_medium
+			location = base		
+		}
+	}
+	
+	[BodyComponent]
+	{
+		[WhenHealth template=FXC_CreateVFX]
+		{
+			vfx_ids = medium_tank_debris
+			location = explosion_point_death01
+			health = 0
+			health_trigger_type = ABSOLUTE_BELOW
+		}
+	}
+	
+	[PerformerComponent]
+	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 37
+		}
+	}
+
+	[Size]
+	{
+
+		;; drp011504 - changed radius from 1.4 to 0.5
+		blocking_shape = CIRCLE
+		blocking_radius = 0.8
+					
+		soft_shape = RECT
+		rect_width = 1.6
+		rect_height = 3.0
+	}
+
+}
+
+
+[template AAUnitVehicleHeavyTank template=AAUnitVehicleTank]
+{
+	[MoverComponent]
+	{
+		turn_radius = 1.15
+		turn_type = in_place
+
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = move_effect_tank_heavy
+			location = base		
+		}
+	}
+	
+	[BodyComponent]
+	{
+		[WhenHealth template=FXC_CreateVFX]
+		{
+			vfx_ids = heavy_tank_debris
+			location = explosion_point_death01
+			health = 0
+			health_trigger_type = ABSOLUTE_BELOW
+		}
+	}
+	
+	[PerformerComponent]
+	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 26
+		}
+	}
+
+	[Size]
+	{
+		blocking_shape = CIRCLE
+		blocking_radius = 0.9
+					
+		soft_shape = RECT
+		rect_width = 2.0
+		rect_height = 3.5
+	}
+}
+
+
+;; ----------------------------- JEEPS / ARMORED CARS ----
+
+[template AAUnitVehicleJeep template=AAUnitVehicle]
+{
+
+	[MoverComponent]
+	{
+		collision_impulse = 2000	
+		turn_radius = 1.25
+		turn_type = while_moving
+
+		tire_circumference = 1.7
+		
+		[Tire]
+		{
+			tire_ids = front_right_wheel
+			type = Front
+		}
+
+		[Tire]
+		{
+			tire_ids = front_left_wheel
+			type = Front
+		}
+
+		[Tire]
+		{
+			tire_ids = rear_wheel
+			type = Rear
+		}
+
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = move_effect_tank_light
+			location = base		
+		}
+
+		[WhenStartMoving Template=FXC_PlaySFX]
+		audio_ids = jeep_start
+		
+		[WhenStopMoving Template=FXC_PlaySFX]
+		audio_ids = jeep_stop
+	}
+	
+	[BodyComponent]
+	{
+		[WhenHealth template=FXC_CreateVFX]
+		{
+			vfx_ids = light_tank_debris
+			location = explosion_point_death01
+			health = 0
+			health_trigger_type = ABSOLUTE_BELOW
+		}
+	}
+	
+	[Size]
+	{
+		blocking_shape = CIRCLE
+		blocking_radius = 0.7
+					
+		soft_shape = RECT
+		rect_width = 1.5
+		rect_height = 2.5
+	}
+
+	[View]
+	{
+		[Swivel]
+		{
+			swivel_node_ids = chassis
+			swivel_inertia = .6
+			spring_constant = .50
+			swivel_mass = 2000
+			wind_sway = false
+			recoil = true
+			impact_sway = true
+			movement_inertia = true
+		}
+	}
+}
+
+;; ---------------------------------- HALFTRACKS ----
+
+[template AAUnitVehicleHalftrack template=AAUnitVehicle]
+{
+	[ElementComponent]
+	resupply_rate = 0.15
+	
+	[MoverComponent]
+	{
+		
+		collision_impulse = 5000
+		turn_radius = 2
+		turn_type = while_moving
+		
+		tire_circumference = 1.5
+		
+		[Tire]
+		{
+			tire_ids = front_right_wheel
+			type = Front
+		}
+
+		[Tire]
+		{
+			tire_ids = front_left_wheel
+			type = Front
+		}
+
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = move_effect_tank_medium
+			location = base		
+		}
+
+		[WhenStartMoving Template=FXC_PlaySFX]
+		audio_ids = truck_start
+		
+		[WhenStopMoving Template=FXC_PlaySFX]
+		audio_ids = truck_stop
+	}
+	
+	[BodyComponent]
+	{
+		[WhenHealth template=FXC_CreateVFX]
+		{
+			vfx_ids = medium_tank_debris
+			location = explosion_point_death01
+			health = 0
+			health_trigger_type = ABSOLUTE_BELOW
+		}
+	}
+	
+	[PropertiesComponent]
+	
+	[View]
+	{
+		[Swivel]
+		{
+			swivel_node_ids = chassis
+			swivel_inertia = .20
+			spring_constant = .75
+			swivel_mass = 4000
+			wind_sway = false
+			recoil = false
+			impact_sway = true
+			movement_inertia = false
+		}
+	}
+
+	[Size]
+	{
+		blocking_shape = CIRCLE
+		blocking_radius = 0.6
+					
+		soft_shape = RECT
+		rect_width = 1.4
+		rect_height = 3.0
+	}
+}
+
+
+;; ---------------------------------- HQ TRUCK ----
+
+[template AAUnitVehicleHQHalftrack Template=AAUnitVehicleHalftrack]
+{
+	[EconomyComponent]
+	{
+		[Upkeep]
+		unit_limit_consumed = 0
+	}
+	
+	[MoverComponent]
+	{
+		collision_impulse = 5000
+	}
+
+	[Size]
+	{
+		blocking_shape = CIRCLE
+		blocking_radius = 0.6
+					
+		soft_shape = RECT
+		rect_width = 1.4
+		rect_height = 3.0
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = economic_truck
+	}
+}
+
+[template AAUnitVehicleTruck Template=AAUnitVehicle]
+{
+	[Size]
+	{
+		blocking_shape = CIRCLE
+		blocking_radius = 0.65
+					
+		soft_shape = RECT
+		rect_width = 1.5
+		rect_height = 3.0
+	}
+
+	[BodyComponent]
+	{
+		[WhenHealth template=FXC_CreateVFX]
+		{
+			vfx_ids = medium_tank_debris
+			location = explosion_point_death01
+			health = 0
+			health_trigger_type = ABSOLUTE_BELOW
+		}
+	}
+	
+	[MoverComponent]
+	{
+		collision_impulse = 5000
+		turn_radius = 3
+		turn_type = while_moving
+
+		tire_circumference = 1.7
+		
+		[Tire]
+		{
+			tire_ids = front_right_wheel
+			type = Front
+		}
+
+		[Tire]
+		{
+			tire_ids = front_left_wheel
+			type = Front
+		}
+
+		[Tire]
+		{
+			tire_ids = rear_wheel
+			type = Rear
+		}
+		
+		[Tire]
+		{
+			tire_ids = rear_wheel2
+			type = Rear
+		}
+
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = move_effect_tank_light
+			location = base		
+		}
+
+		[WhenStartMoving Template=FXC_PlaySFX]
+		audio_ids = truck_start
+		
+		[WhenStopMoving Template=FXC_PlaySFX]
+		audio_ids = truck_stop
+	}
+
+	[View]
+	{
+		[Swivel]
+		{
+			swivel_node_ids = chassis
+			swivel_inertia = .6
+			spring_constant = .50
+			swivel_mass = 2000
+			wind_sway = false
+			recoil = true
+			impact_sway = true
+			movement_inertia = true
+		}
+	}
+}
+
+[template AAUnitVehicleHQTruck Template=AAUnitVehicle]
+{
+	category = TRUCK
+	
+	[Size]
+	{
+		blocking_shape = CIRCLE
+		blocking_radius = 0.65
+					
+		soft_shape = RECT
+		rect_width = 1.5
+		rect_height = 3.0
+	}
+
+	[View]
+	{
+		[Swivel]
+		{
+			swivel_node_ids = chassis
+			swivel_inertia = .6
+			spring_constant = .50
+			swivel_mass = 2000
+			wind_sway = false
+			recoil = true
+			impact_sway = true
+			movement_inertia = true
+		}
+	}
+	
+	[BodyComponent]
+	{
+		[WhenHealth template=FXC_CreateVFX]
+		{
+			vfx_ids = medium_tank_debris
+			location = explosion_point_death01
+			health = 0
+			health_trigger_type = ABSOLUTE_BELOW
+		}
+	}
+	
+	[EconomyComponent]
+	{
+		[Upkeep]
+		building_limit_consumed = 1
+	}
+
+	[ElementComponent]
+	group_priority = 0
+	morale_value = 99
+
+	[MoverComponent]
+	{
+		collision_impulse = 5000
+		turn_radius = 3
+		turn_type = while_moving
+
+		tire_circumference = 1.7
+		
+		[Tire]
+		tire_ids = front_right_wheel
+		type = Front
+
+		[Tire]
+		tire_ids = front_left_wheel
+		type = Front
+
+		[Tire]
+		tire_ids = rear_wheel
+		type = Rear
+		
+		[Tire]
+		tire_ids = rear_wheel2
+		type = Rear
+
+		[WhenStartMoving template=FXC_CreateVFX]
+		vfx_ids = move_effect_tank_light
+		location = base		
+
+		[WhenStartMoving Template=FXC_PlaySFX]
+		audio_ids = truck_start
+		
+		[WhenStopMoving Template=FXC_PlaySFX]
+		audio_ids = truck_stop
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = economic_truck
+	}
+}
+
+[Template AATrailer Inherit=Actor]
+{
+	category = TRAILER
+	
+	[BodyComponent]
+	{
+		health = 100
+		defense = 1
+	}
+
+	[Flags]
+	{
+		targetable = false
+		;; a0m052104 - trailers should not set the conform to terrain flag
+		;; a0m072904 - I changed my mind.  They should have this flag set
+		conform_to_terrain = true
+	}
+
+	[Size]
+	{
+		height = 2
+		blocking_shape = CIRCLE
+		blocking_radius = 0.65
+					
+		soft_shape = RECT
+		rect_width = 1.5
+		rect_height = 2.5
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 2
+		tire_circumference = 1.7
+
+		[Tire]
+		{
+			tire_ids = rear_wheel
+			type = Rear
+		}
+
+		[TrackInfo Template=AATracksJeepBackRight]
+		
+		[TrackInfo Template=AATracksJeepBackLeft]
+
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = move_effect_tank_light
+			location = base		
+		}
+	}
+
+	[View]
+	{
+		shadow_type = STENCIL
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+		
+		[WhenCreated template=FXC_CreateVFX]
+        {
+        	VFX_IDS = taillight_01
+        	location = taillight_ae_01
+        }
+
+        [WhenCreated template=FXC_CreateVFX]
+        {
+        	VFX_IDS = taillight_01
+        	location = taillight_ae_02
+        }
+	}
+}
+
+[Template AATrailerTwoTires Inherit=AATrailer]
+{
+	[MoverComponent]
+	{
+		[Tire]
+		{
+			tire_ids = rear_wheel2
+			type = Rear
+		}
+	}
+}
+
+
+;; ---------------------------------- AIRPLANES ----
+
+[Template AAUnitAirplane Template=AAUnit]
+{
+	[BodyComponent]
+	{
+		rot_time = 0
+		sink_time = 1
+		
+		[WhenHealth Template=FXC_CreateVFX]
+	  	{
+			VFX_IDS = airplane_engine_smoke
+			location = damage_point20
+			health = 0.8
+			health_trigger_type = ABSOLUTE_BELOW
+	  	}
+		
+	 	[WhenHealth Template=FXC_CreateVFX]
+	 	{
+	 		VFX_IDS = airplane_engine_fire
+			location = damage_point40
+			health = 0.6
+			health_trigger_type = ABSOLUTE_BELOW
+	  	}
+		
+		[WhenHealth template=FXC_CreateVFX]
+		{
+			vfx_ids = plane_disable
+			location = explosion_point_death01
+			health = 0
+			health_trigger_type = ABSOLUTE_BELOW
+		}		
+	}
+
+	[EconomyComponent]
+	{
+		[Upkeep]
+		unit_limit_consumed = 0
+	}
+
+	[ElementComponent]
+	{
+		resupply_rate = 0.1	
+	}
+	
+	[Flags]
+	{
+		blocking = false
+		flying = true
+		ethereal = true
+	}
+
+	[Placement]
+	placement_group_IDS = null
+	placement_category = none
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = aircraft
+	}
+
+	[View]
+	{
+		shadow_type = STENCIL
+	}
+
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		vfx_ids = plane_death
+		actor_state = falling
+	}
+}
+
+[Template AAUnitAirAA Template=AAUnit]
+{
+	[BodyComponent]
+	{
+		rot_time = 0
+		sink_time = 1
+		
+		[WhenHealth Template=FXC_CreateVFX]
+	  	{
+			VFX_IDS = airplane_engine_smoke
+			location = damage_point20
+			health = 0.8
+			health_trigger_type = ABSOLUTE_BELOW
+	  	}
+		
+	 	[WhenHealth Template=FXC_CreateVFX]
+	 	{
+	 		VFX_IDS = airplane_engine_fire
+			location = damage_point40
+			health = 0.6
+			health_trigger_type = ABSOLUTE_BELOW
+	  	}		
+	}
+
+	[EconomyComponent]
+	{
+		[Upkeep]
+		unit_limit_consumed = 1
+	}
+
+	[ElementComponent]
+	{
+		resupply_rate = 0.05	
+	}
+	
+	[Flags]
+	{
+		blocking = false
+		flying = false
+		ethereal = false
+	}
+
+	[Placement]
+	placement_group_IDS = null
+	placement_category = none
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = air
+	}
+
+	[View]
+	{
+		shadow_type = STENCIL
+	}
+
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		vfx_ids = plane_death
+		actor_state = falling
+	}
+}
+
+[Template AAUnitAirplaneBomber Template=AAUnitAirplane]
+{
+	[AircraftComponent]
+	{
+		taxi_scale = 0.4
+		taxi_height = 1.0
+		taxi_speed = 3
+		operational_height = 17
+		bank_factor = 14.0
+	}
+		
+	[BodyComponent]
+	{ 
+		health = 300
+		defense = 0
+		
+		[OnDeathAbility Template=AAAttackLocal]
+		{
+			[AbilityDefinition Template=AAAttack]
+			{
+				name = "#template_unit_aa_BodyComponent_OnDeathAbility_AbilityDefinition_name"
+				area = 5
+				recharge_time = 10
+				targets = +ACTOR -ORGANIZATION -AIR -MINE
+									
+				[Effect Template=BlastDamageEffect]
+				amount = 150
+
+				[Flags]
+				spell = true
+			}
+		}
+			
+	}
+
+	[ElementComponent]
+	denizen_type = denizen_type_bomber	
+	
+	[MoverComponent]
+	{
+		speed_max = 7
+		turn_radius = 18
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		vfx_ids = bomber_contrail
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = blinking_light01
+			location = wing1	
+		}
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = blinking_light01
+			location = wing6	
+		}
+	}	
+
+	[PerformerComponent]
+	mana_max = 60
+	mana_regeneration = 0 
+
+	[TransportComponent]
+	deployment_delay = 0.4
+}
+
+[Template AAUnitAirplaneFighter Template=AAUnitAirplane]
+{	
+	[AircraftComponent]
+	{
+		taxi_scale = 0.4
+		taxi_height = 1.0
+		taxi_speed = 3
+		operational_height = 15
+		bank_factor = 5.0
+	}
+
+	[BodyComponent]
+	{
+		health = 100
+		defense = 0
+		
+		[OnDeathAbility Template=AAAttackLocal]
+		{
+			[AbilityDefinition Template=AAAttack]
+			{
+				name = "#template_unit_aa_BodyComponent_OnDeathAbility_AbilityDefinition_name_2"
+				area = 5
+				recharge_time = 10
+				targets = +ACTOR -ORGANIZATION -AIR -MINE
+									
+				[Effect Template=BlastDamageEffect]
+				amount = 80
+
+				[Flags]
+				spell = true
+			}
+		}
+	}
+
+	[ElementComponent]
+	denizen_type = denizen_type_fighter
+	
+	[MoverComponent]
+	{
+		speed_max = 11
+		turn_radius = 8
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		vfx_ids = fighter_contrail
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = blinking_light01
+			location = wing1	
+		}
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = blinking_light01
+			location = wing6	
+		}
+	}
+
+	[PerformerComponent]
+	mana_max = 20
+}
+
+[Template AAUnitAir Template=AAUnitAirAA]
+{	
+	[AircraftComponent]
+	{
+		taxi_scale = 0.4
+		taxi_height = 1.0
+		taxi_speed = 3
+		operational_height = 15
+		bank_factor = 5.0
+	}
+
+	[BodyComponent]
+	{
+		health = 100
+		defense = 0
+		
+		[OnDeathAbility Template=AAAttackLocal]
+		{
+			[AbilityDefinition Template=AAAttack]
+			{
+				name = "#template_unit_aa_BodyComponent_OnDeathAbility_AbilityDefinition_name_2"
+				area = 5
+				recharge_time = 10
+				targets = +ACTOR -ORGANIZATION -AIR -MINE
+									
+				[Effect Template=BlastDamageEffect]
+				amount = 80
+
+				[Flags]
+				spell = true
+			}
+		}
+	}
+
+	[ElementComponent]
+	denizen_type = denizen_type_fighter
+	
+	[MoverComponent]
+	{
+		speed_max = 11
+		turn_radius = 8
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		vfx_ids = fighter_contrail
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = blinking_light01
+			location = wing1	
+		}
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = blinking_light01
+			location = wing6	
+		}
+	}
+
+	[PerformerComponent]
+	mana_max = 20
+}
+
+;;------------------------------------ SEA UNITS -----
+[Template AAUnitSea Template=AAUnit]
+{	
+	[BodyComponent]
+	{
+		rot_time = 5
+		sink_time = 3
+
+	 	[WhenHealth Template=FXC_CreateVFX]
+	  	{
+			VFX_IDS = rising_flame
+			location = damage_point20
+	
+			health = 0.8
+			health_trigger_type = ABSOLUTE_BELOW
+	  	}
+
+	 	[WhenHealth Template=FXC_CreateVFX]
+	  	{
+			VFX_IDS = rising_flame
+			location = damage_point40
+	
+			health = 0.6
+			health_trigger_type = ABSOLUTE_BELOW
+	  	}
+
+		[WhenHealth template=FXC_CreateVFX]
+		{
+			vfx_ids = water_explosion_1
+			location = explosion_point_death01
+			health = 0
+			health_trigger_type = ABSOLUTE_BELOW
+		}
+	}
+	
+	[ElementComponent]
+	
+	[Flags]
+	water_based = true
+
+	[MoverComponent]
+	{
+		speed_max = 3
+		acceleration = 3
+		turn_radius = 2
+		turn_type = WHILE_MOVING
+
+
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = seacraft
+	}
+	
+	[Size]
+	{
+		height = 2
+
+		blocking_shape = CIRCLE
+		blocking_radius = 0.5
+
+		soft_shape = CIRCLE
+		soft_radius = 0.5
+	}
+
+	[View]
+	{
+		shadow_type = STENCIL
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+	}
+}
+
+[Template AAUnitSeaTransport Template=AAUnitSea]
+{
+	[MoverComponent]
+	{
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = move_effect_wtransport_01
+			location = base
+		}
+
+		[WhenStartMoving template=FXC_PlaySFX]
+		audio_ids = small_boat_start
+	}
+	
+	[Stance Template=StanceDeath]
+
+	[TransportComponent]
+	{
+		deployment_delay = 0.5
+	}
+	
+	[View]
+	{		
+		[Aspect Template=AAAspectDeath]
+	}
+}
+
+[Template AAUnitSeaMajor Template=AAUnitSea]
+{
+
+	[Placement]
+	placement_category = BUILDING
+	
+	[BodyComponent]
+	{	
+		unit_shortfall_damage_rate = 0.05
+		
+	 	[WhenHealth Template=FXC_CreateVFX]
+	  	{
+			VFX_IDS = rising_flame
+			location = damage_point60
+	
+			health = 0.4
+			health_trigger_type = ABSOLUTE_BELOW
+	  	}
+	}
+
+	;; construction component required by structure component
+	[ConstructionComponent]
+	{
+		construction_node_name_prefix = Stage
+		finished_node_name = Final
+		can_sell = false
+		can_raze = false
+	}
+
+	;; Denizen component needed for transport actor of above recruitable regiment
+	[DenizenComponent]
+
+	[MoverComponent]
+	{
+		speed_max = 3
+		acceleration = 0.75
+		turn_radius = 6
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = move_effect_ship_01
+			location = base		
+		}
+
+		[WhenStopMoving template=FXC_PlaySFX]
+		audio_ids = large_boat_stop	
+	}
+	
+	[RecruitComponent]
+
+	[Size]
+	{
+		height = 2
+
+		blocking_shape = CIRCLE
+		blocking_radius = 9
+
+		soft_shape = CIRCLE
+		soft_radius = 9.1
+	}
+	
+	;; structure component required by recruit component for queue
+	[StructureComponent]
+
+	;; both stances need to be defined at the same time
+	;; to make sure that death overrides Disabled.
+	
+	[Stance Template=StanceDeath]
+	
+	[View]
+	{
+		[Aspect Template=AAAspectDeath]
+	}
+}
+
+;;----------------- HiRes/CUTSCENE ACTORS ---------------- ;;
+
+[Template AAUnitHiRes Template=AAUnit]
+{
+	[BodyComponent]
+        {
+	        defense = 0
+	        health = 1000
+	
+	 	[WhenHealth Template=FXC_CreateVFX]
+	  	{
+			VFX_IDS = rising_flame
+			location = damage_point60
+	
+			health = 0.4
+			health_trigger_type = ABSOLUTE_BELOW
+	  	}
+        }
+
+	[MoverComponent]
+        {
+	        speed_max = 0
+
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = move_effect_ship_01
+			location = base		
+		}
+
+		[WhenStopMoving template=FXC_PlaySFX]
+		audio_ids = large_boat_stop	
+        }
+	
+	[Placement]
+	placement_group_IDS = group_cutscene
+
+}
+
+;;------------------------------------------ GREAT BRITAIN -----
+
+[Template AAUnitGBRBiped Template=AAUnitBiped]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}
+}
+
+[Template AAUnitGBRKneel Template=AABipedKneel]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}
+}
+
+[Template AAUnitGBRProne Template=AABipedProne]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}
+}
+
+[Template AAUnitGBRVehicleSPA Template=AAUnitVehicleSPA]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{	
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_gbr_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}	
+	
+}
+
+[Template AAUnitGBRVehicleLightTank Template=AAUnitVehicleLightTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksLightTankRight]
+		
+		[TrackInfo Template=AATracksLightTankLeft]
+	}
+
+	[View]
+	{		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_gbr_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}
+}
+
+[Template AAUnitGBRVehicleMediumTank Template=AAUnitVehicleMediumTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{	
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_gbr_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}	
+	
+}
+
+[Template AAUnitGBRVehicleHeavyTank Template=AAUnitVehicleHeavyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHeavyTankRight]
+		
+		[TrackInfo Template=AATracksHeavyTankLeft]
+	}
+
+	[View]
+	{		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_gbr_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}	
+}
+
+[Template AAUnitGBRVehicleJeep Template=AAUnitVehicleJeep]
+{
+
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksJeepBackRight]
+		
+		[TrackInfo Template=AATracksJeepBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_gbr_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}
+}
+
+[Template AAUnitGBRVehicleHalftrack Template=AAUnitVehicleHalftrack]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHalftrackBackRight]
+		
+		[TrackInfo Template=AATracksHalftrackBackLeft]
+	}
+
+	[View]
+	{		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_gbr_halftrack
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}
+}
+
+[Template AAUnitGBRVehicleHQTruck Template=AAUnitVehicleHQTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+	
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_gbr_truck
+		at = SOURCE_GROUND
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_engineer_select
+		
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_engineer_attack
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}
+}
+
+[Template AAUnitGBRAirplaneFighter Template=AAUnitAirplaneFighter]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_gbr_fighter
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_gbr_fighter
+	actor_state = falling
+}
+
+[Template AAUnitGBRAirplaneBomber Template=AAUnitAirplaneBomber]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_bomber_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_gbr_bomber
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_gbr_bomber
+	actor_state = falling
+}
+
+[Template AAUnitGBRSeaMajor Template=AAUnitSeaMajor]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_gbr_ship
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}
+}
+
+[Template AAUnitGBRSeaTransport Template=AAUnitSeaTransport]
+{
+	[Placement]
+	placement_group_IDS = group_nation_gbr
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_gbr_ship
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_gbr
+	}
+}
+;;------------------------------------------ GERMANY-----
+
+
+[Template AAUnitGERBiped Template=AAUnitBiped]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+
+[Template AAUnitGERKneel Template=AABipedKneel]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+
+[Template AAUnitGERProne Template=AABipedProne]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+
+[Template AAUnitGERVehicleSPA Template=AAUnitVehicleSPA]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTank3Right]
+		
+		[TrackInfo Template=AATracksMediumTank3Left]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ger_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+
+[Template AAUnitGERVehicleTinyTank Template=AAUnitVehicleTinyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksTinyTankLeft]
+		
+		[TrackInfo Template=AATracksTinyTankRight]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ger_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+
+[Template AAUnitGERVehicleLightTank Template=AAUnitVehicleLightTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTank2Right]
+		
+		[TrackInfo Template=AATracksMediumTank2Left]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ger_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+
+
+[Template AAUnitGERVehicleMediumTank Template=AAUnitVehicleMediumTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTank3Right]
+		
+		[TrackInfo Template=AATracksMediumTank3Left]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ger_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+
+[Template AAUnitGERVehicleHeavyTank Template=AAUnitVehicleHeavyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHeavyTankRight]
+		
+		[TrackInfo Template=AATracksHeavyTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ger_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+
+[Template AAUnitGERVehicleJeep Template=AAUnitVehicleJeep]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksJeep3BackRight]
+		
+		[TrackInfo Template=AATracksJeep3BackLeft]	
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ger_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+
+[Template AAUnitGERVehicleHalftrack Template=AAUnitVehicleHalftrack]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+	
+	[MoverComponent]
+	{
+		
+		[TrackInfo Template=AATracksHalftrack2BackRight]
+		
+		[TrackInfo Template=AATracksHalftrack2BackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ger_halftrack
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+
+[Template AAUnitGERAirplaneFighter Template=AAUnitAirplaneFighter]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ger_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ger_fighter
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_ger_fighter
+	actor_state = falling
+}
+
+[Template AAUnitGERAirplaneBomber Template=AAUnitAirplaneBomber]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ger_bomber_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ger_bomber
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_ger_bomber
+	actor_state = falling
+}
+
+[Template AAUnitGERVehicleHQTruck Template=AAUnitVehicleHQTruck]
+{	
+	[Placement]
+	placement_group_IDS = group_nation_ger
+	
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ger_truck
+		at = SOURCE_GROUND
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ger_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ger_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ger_engineer_attack
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+
+[Template AAUnitGERSeaMajor Template=AAUnitSeaMajor]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ger_ship
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+
+[Template AAUnitGERSeaTransport Template=AAUnitSeaTransport]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ger
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ger_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ger
+	}
+}
+;;------------------------------------------ JAPAN -----
+
+[Template AAUnitJPNBiped Template=AAUnitBiped]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+}
+
+[Template AAUnitJPNKneel Template=AABipedKneel]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+}
+
+[Template AAUnitJPNProne Template=AABipedProne]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+
+	[ElementComponent]
+	morale_value = 8
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+}
+
+[Template AAUnitJPNVehicleSPA Template=AAUnitVehicleSPA]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_jpn_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+}
+
+[Template AAUnitJPNVehicleLightTank Template=AAUnitVehicleLightTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksLightTankRight]
+		
+		[TrackInfo Template=AATracksLightTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_jpn_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+}
+
+[Template AAUnitJPNVehicleMediumTank Template=AAUnitVehicleMediumTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_jpn_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+}
+
+[Template AAUnitJPNVehicleHeavyTank Template=AAUnitVehicleHeavyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHeavyTankRight]
+		
+		[TrackInfo Template=AATracksHeavyTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_jpn_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+}
+
+[Template AAUnitJPNVehicleJeep Template=AAUnitVehicleJeep]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+	
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksJeepBackRight]
+		
+		[TrackInfo Template=AATracksJeepBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_jpn_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+}
+
+[Template AAUnitJPNVehicleHalftrack Template=AAUnitVehicleHalftrack]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksHalftrackBackRight]
+		
+		[TrackInfo Template=AATracksHalftrackBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_jpn_halftrack
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+}
+
+[Template AAUnitJPNVehicleHQTruck Template=AAUnitVehicleHQTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_jpn_truck
+		at = SOURCE_GROUND
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = jpn_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = jpn_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = jpn_engineer_attack
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+}
+
+[Template AAUnitJPNAirplaneFighter Template=AAUnitAirplaneFighter]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = jpn_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_jpn_fighter
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_jpn_fighter
+	actor_state = falling
+}
+
+[Template AAUnitJPNAirplaneBomber Template=AAUnitAirplaneBomber]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = jpn_bomber_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_jpn_bomber
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_jpn_bomber
+	actor_state = falling
+}
+
+[Template AAUnitJPNSeaMajor Template=AAUnitSeaMajor]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_jpn_ship
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+}
+
+[Template AAUnitJPNSeaTransport Template=AAUnitSeaTransport]
+{
+	[Placement]
+	placement_group_IDS = group_nation_jpn
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_jpn_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_jpn
+	}
+}
+;;------------------------------------------ RUSSIA -----
+
+[Template AAUnitRUSBiped Template=AAUnitBiped]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+
+[Template AAUnitRUSKneel Template=AABipedKneel]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+
+[Template AAUnitRUSProne Template=AABipedProne]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+
+[Template AAUnitRUSVehicleSPA Template=AAUnitVehicleSPA]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_rus_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+
+[Template AAUnitRUSVehicleLightTank Template=AAUnitVehicleLightTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksLightTankRight]
+		
+		[TrackInfo Template=AATracksLightTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_rus_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+
+[Template AAUnitRUSVehicleMediumTank Template=AAUnitVehicleMediumTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_rus_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+
+[Template AAUnitRUSVehicleHeavyTank Template=AAUnitVehicleHeavyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHeavyTankRight]
+		
+		[TrackInfo Template=AATracksHeavyTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_rus_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+
+[Template AAUnitRUSVehicleJeep Template=AAUnitVehicleJeep]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+	
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksJeepBackRight]
+		
+		[TrackInfo Template=AATracksJeepBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_rus_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+
+[Template AAUnitRUSVehicleHalftrack Template=AAUnitVehicleHalftrack]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHalftrackBackRight]
+		
+		[TrackInfo Template=AATracksHalftrackBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_rus_halftrack
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+
+[Template AAUnitRUSVehicleHQTruck Template=AAUnitVehicleHQTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_rus_car
+		at = SOURCE_GROUND
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = rus_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = rus_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = rus_engineer_attack
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+
+[Template AAUnitRUSVehicleRocketTruck Template=AAUnitVehicleTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_rus_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+
+[Template AAUnitRUSAirplaneFighter Template=AAUnitAirplaneFighter]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = rus_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_rus_fighter
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_rus_fighter
+	actor_state = falling
+}
+
+[Template AAUnitRUSAirplaneBomber Template=AAUnitAirplaneBomber]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = rus_bomber_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_rus_bomber
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_rus_bomber
+	actor_state = falling
+}
+
+[Template AAUnitRUSSeaMajor Template=AAUnitSeaMajor]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_rus_ship
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+
+[Template AAUnitRUSSeaTransport Template=AAUnitSeaTransport]
+{
+	[Placement]
+	placement_group_IDS = group_nation_rus
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_rus_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_rus
+	}
+}
+;;------------------------------------------ USA -----
+
+
+[Template AAUnitUSABiped Template=AAUnitBiped]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+}
+
+[Template AAUnitUSAKneel Template=AABipedKneel]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+}
+
+[Template AAUnitUSAProne Template=AABipedProne]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+}
+
+[Template AAUnitUSAVehicleSPA Template=AAUnitVehicleSPA]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_usa_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+}
+
+[Template AAUnitUSAVehicleLightTank Template=AAUnitVehicleLightTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksLightTankRight]
+		
+		[TrackInfo Template=AATracksLightTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_usa_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+}
+
+[Template AAUnitUSAVehicleMediumTank Template=AAUnitVehicleMediumTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_usa_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+}
+
+[Template AAUnitUSAVehicleHeavyTank Template=AAUnitVehicleHeavyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHeavyTankRight]
+		
+		[TrackInfo Template=AATracksHeavyTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_usa_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+}
+
+[Template AAUnitUSAVehicleJeep Template=AAUnitVehicleJeep]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksJeepBackRight]
+		
+		[TrackInfo Template=AATracksJeepBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_usa_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+}
+
+[Template AAUnitUSAVehicleHalftrack Template=AAUnitVehicleHalftrack]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksHalftrackBackRight]
+		
+		[TrackInfo Template=AATracksHalftrackBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_usa_halftrack
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+}
+
+[Template AAUnitUSAVehicleHQTruck Template=AAUnitVehicleHQTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+	
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_usa_truck
+		at = SOURCE_GROUND
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = usa_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = usa_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = usa_engineer_attack
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+}
+
+[Template AAUnitUSAAirplaneFighter Template=AAUnitAirplaneFighter]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = usa_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_usa_fighter
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_usa_fighter
+	actor_state = falling
+}
+
+[Template AAUnitUSAAirplaneBomber Template=AAUnitAirplaneBomber]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+	
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = usa_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_usa_bomber
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_usa_bomber
+	actor_state = falling
+}
+
+[Template AAUnitUSASeaMajor Template=AAUnitSeaMajor]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_usa_ship
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+}
+
+[Template AAUnitUSASeaTransport Template=AAUnitSeaTransport]
+{
+	[Placement]
+	placement_group_IDS = group_nation_usa
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_usa_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_usa
+	}
+}
+
+;;------------------------------------------ FIN -----
+
+
+[Template AAUnitfinBiped Template=AAUnitBiped]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinKneel Template=AABipedKneel]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinProne Template=AABipedProne]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinVehicleSPA Template=AAUnitVehicleSPA]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinVehicleLightTank Template=AAUnitVehicleLightTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksLightTankRight]
+		
+		[TrackInfo Template=AATracksLightTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinVehicleMediumTank Template=AAUnitVehicleMediumTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinVehicleHeavyTank Template=AAUnitVehicleHeavyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHeavyTankRight]
+		
+		[TrackInfo Template=AATracksHeavyTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinVehicleJeep Template=AAUnitVehicleJeep]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksJeepBackRight]
+		
+		[TrackInfo Template=AATracksJeepBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinVehicleHalftrack Template=AAUnitVehicleHalftrack]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksHalftrackBackRight]
+		
+		[TrackInfo Template=AATracksHalftrackBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_halftrack
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinVehicleHQTruck Template=AAUnitVehicleHQTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+	
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_truck
+		at = SOURCE_GROUND
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = fin_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = fin_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = fin_engineer_attack
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinAirplaneFighter Template=AAUnitAirplaneFighter]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = fin_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_fighter
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_fin_fighter
+	actor_state = falling
+}
+
+[Template AAUnitfinAirplaneBomber Template=AAUnitAirplaneBomber]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+	
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = fin_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_bomber
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_fin_bomber
+	actor_state = falling
+}
+
+[Template AAUnitfinSeaMajor Template=AAUnitSeaMajor]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_ship
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinSeaTransport Template=AAUnitSeaTransport]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinVehicleTinyTank Template=AAUnitVehicleTinyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksTinyTankLeft]
+		
+		[TrackInfo Template=AATracksTinyTankRight]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+[Template AAUnitfinVehicleRocketTruck Template=AAUnitVehicleTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_fin
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_fin_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_fin
+	}
+}
+
+;;------------------------------------------ NED -----
+
+
+[Template AAUnitnedBiped Template=AAUnitBiped]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedKneel Template=AABipedKneel]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedProne Template=AABipedProne]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedVehicleSPA Template=AAUnitVehicleSPA]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedVehicleLightTank Template=AAUnitVehicleLightTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksLightTankRight]
+		
+		[TrackInfo Template=AATracksLightTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedVehicleMediumTank Template=AAUnitVehicleMediumTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedVehicleHeavyTank Template=AAUnitVehicleHeavyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHeavyTankRight]
+		
+		[TrackInfo Template=AATracksHeavyTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedVehicleJeep Template=AAUnitVehicleJeep]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksJeepBackRight]
+		
+		[TrackInfo Template=AATracksJeepBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedVehicleHalftrack Template=AAUnitVehicleHalftrack]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksHalftrackBackRight]
+		
+		[TrackInfo Template=AATracksHalftrackBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_halftrack
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedVehicleHQTruck Template=AAUnitVehicleHQTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+	
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_truck
+		at = SOURCE_GROUND
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ned_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ned_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ned_engineer_attack
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedAirplaneFighter Template=AAUnitAirplaneFighter]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ned_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_fighter
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_ned_fighter
+	actor_state = falling
+}
+
+[Template AAUnitnedAirplaneBomber Template=AAUnitAirplaneBomber]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+	
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ned_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_bomber
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_ned_bomber
+	actor_state = falling
+}
+
+[Template AAUnitnedSeaMajor Template=AAUnitSeaMajor]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_ship
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedSeaTransport Template=AAUnitSeaTransport]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedVehicleTinyTank Template=AAUnitVehicleTinyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksTinyTankLeft]
+		
+		[TrackInfo Template=AATracksTinyTankRight]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+[Template AAUnitnedVehicleRocketTruck Template=AAUnitVehicleTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ned
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ned_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ned
+	}
+}
+
+;;------------------------------------------ CHN -----
+
+
+[Template AAUnitchnBiped Template=AAUnitBiped]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+	
+	[ElementComponent]
+	resupply_rate = 0.5
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnKneel Template=AABipedKneel]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnProne Template=AABipedProne]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnVehicleSPA Template=AAUnitVehicleSPA]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnVehicleLightTank Template=AAUnitVehicleLightTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksLightTankRight]
+		
+		[TrackInfo Template=AATracksLightTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnVehicleMediumTank Template=AAUnitVehicleMediumTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnVehicleHeavyTank Template=AAUnitVehicleHeavyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHeavyTankRight]
+		
+		[TrackInfo Template=AATracksHeavyTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnVehicleJeep Template=AAUnitVehicleJeep]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksJeepBackRight]
+		
+		[TrackInfo Template=AATracksJeepBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnVehicleHalftrack Template=AAUnitVehicleHalftrack]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksHalftrackBackRight]
+		
+		[TrackInfo Template=AATracksHalftrackBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_halftrack
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnVehicleHQTruck Template=AAUnitVehicleHQTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+	
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_truck
+		at = SOURCE_GROUND
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = chn_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = chn_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = chn_engineer_attack
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnAirplaneFighter Template=AAUnitAirplaneFighter]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = chn_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_fighter
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_chn_fighter
+	actor_state = falling
+}
+
+[Template AAUnitchnAirplaneBomber Template=AAUnitAirplaneBomber]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+	
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = chn_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_bomber
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_chn_bomber
+	actor_state = falling
+}
+
+[Template AAUnitchnSeaMajor Template=AAUnitSeaMajor]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_ship
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnSeaTransport Template=AAUnitSeaTransport]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnVehicleTinyTank Template=AAUnitVehicleTinyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksTinyTankLeft]
+		
+		[TrackInfo Template=AATracksTinyTankRight]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+[Template AAUnitchnVehicleRocketTruck Template=AAUnitVehicleTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_chn
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_chn_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_chn
+	}
+}
+
+;;------------------------------------------ CPC -----
+
+[Template AAUnitCPCBiped Template=AAUnitBiped]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+
+	[ElementComponent]
+	resupply_rate = 0.4
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+[Template AAUnitCPCKneel Template=AABipedKneel]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+
+	[ElementComponent]
+	resupply_rate = 0.4
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+[Template AAUnitCPCProne Template=AABipedProne]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+
+	[ElementComponent]
+	resupply_rate = 0.4
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+[Template AAUnitCPCVehicleSPA Template=AAUnitVehicleSPA]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+[Template AAUnitCPCVehicleLightTank Template=AAUnitVehicleLightTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksLightTankRight]
+		
+		[TrackInfo Template=AATracksLightTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+[Template AAUnitCPCVehicleMediumTank Template=AAUnitVehicleMediumTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+[Template AAUnitCPCVehicleHeavyTank Template=AAUnitVehicleHeavyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+
+	[ElementComponent]
+	morale_value = 30
+	resupply_rate = 0.1
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHeavyTankRight]
+		
+		[TrackInfo Template=AATracksHeavyTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+[Template AAUnitCPCVehicleJeep Template=AAUnitVehicleJeep]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+	
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksJeepBackRight]
+		
+		[TrackInfo Template=AATracksJeepBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+[Template AAUnitCPCVehicleHalftrack Template=AAUnitVehicleHalftrack]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHalftrackBackRight]
+		
+		[TrackInfo Template=AATracksHalftrackBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_halftrack
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+[Template AAUnitCPCVehicleHQTruck Template=AAUnitVehicleHQTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_car
+		at = SOURCE_GROUND
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_engineer_attack
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+[Template AAUnitCPCVehicleRocketTruck Template=AAUnitVehicleTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+[Template AAUnitCPCAirplaneFighter Template=AAUnitAirplaneFighter]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = cpc_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_fighter
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_cpc_fighter
+	actor_state = falling
+}
+
+[Template AAUnitCPCAir Template=AAUnitAir]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = cpc_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_fighter
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_cpc_fighter
+	actor_state = falling
+}
+
+[Template AAUnitCPCAirplaneBomber Template=AAUnitAirplaneBomber]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = cpc_bomber_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_bomber
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_cpc_bomber
+	actor_state = falling
+    [MoverComponent]
+	{
+		speed_max = 9
+		turn_radius = 15
+	}	
+
+}
+
+[Template AAUnitCPCSeaMajor Template=AAUnitSeaMajor]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_ship
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+[Template AAUnitCPCSeaTransport Template=AAUnitSeaTransport]
+{
+	[Placement]
+	placement_group_IDS = group_nation_cpc
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_cpc_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_cpc
+	}
+}
+
+;;------------------------------------------ ITA -----
+
+
+[Template AAUnitITABiped Template=AAUnitBiped]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaKneel Template=AABipedKneel]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaProne Template=AABipedProne]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaVehicleSPA Template=AAUnitVehicleSPA]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaVehicleLightTank Template=AAUnitVehicleLightTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksLightTankRight]
+		
+		[TrackInfo Template=AATracksLightTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaVehicleMediumTank Template=AAUnitVehicleMediumTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksMediumTankRight]
+		
+		[TrackInfo Template=AATracksMediumTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaVehicleHeavyTank Template=AAUnitVehicleHeavyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksHeavyTankRight]
+		
+		[TrackInfo Template=AATracksHeavyTankLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaVehicleJeep Template=AAUnitVehicleJeep]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksJeepBackRight]
+		
+		[TrackInfo Template=AATracksJeepBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaVehicleHalftrack Template=AAUnitVehicleHalftrack]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksHalftrackBackRight]
+		
+		[TrackInfo Template=AATracksHalftrackBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_halftrack
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaVehicleHQTruck Template=AAUnitVehicleHQTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+	
+	[MoverComponent]
+	{		
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_truck
+		at = SOURCE_GROUND
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ita_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ita_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ita_engineer_attack
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaAirplaneFighter Template=AAUnitAirplaneFighter]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ita_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_fighter
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_ita_fighter
+	actor_state = falling
+}
+
+[Template AAUnititaAirplaneBomber Template=AAUnitAirplaneBomber]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+	
+	[View]
+	{
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ita_fighter_deployed
+		
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_bomber
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+
+
+	[WhenLeave Template=FXC_PlaySFX]
+	audio_ids = crash_ita_bomber
+	actor_state = falling
+}
+
+[Template AAUnititaSeaMajor Template=AAUnitSeaMajor]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_ship
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaSeaTransport Template=AAUnitSeaTransport]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaVehicleTinyTank Template=AAUnitVehicleTinyTank]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+	
+	[MoverComponent]
+	{
+		[TrackInfo Template=AATracksTinyTankLeft]
+		
+		[TrackInfo Template=AATracksTinyTankRight]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_tank
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}
+
+[Template AAUnititaVehicleRocketTruck Template=AAUnitVehicleTruck]
+{
+	[Placement]
+	placement_group_IDS = group_nation_ita
+
+	[MoverComponent]
+	{	
+		[TrackInfo Template=AATracksTruckBackRight]
+				
+		[TrackInfo Template=AATracksTruckBackLeft]
+	}
+
+	[View]
+	{
+		[WhenDestroyed Template=FXC_PlaySFX]
+		audio_ids = death_ita_car
+		at = SOURCE_GROUND
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = nation_ita
+	}
+}

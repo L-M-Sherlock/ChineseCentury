@@ -1,0 +1,25 @@
+
+[ActorCommand Template=ActorCommand]
+{
+	;; general info
+	IDS = bombard
+	name = "#actor_commands_bombard_name"
+	tooltip = "#actor_commands_bombard_tooltip"
+	icon = /UI/%s/Game/ActionButtons/IconBombard.png
+	cursor_ids = bombard
+	cursor_invalid_ids = bombard_invalid
+	command_vfx_ids_actor = waypoint_bombard_actor
+	command_vfx_ids_location = waypoint_bombard_location
+	aggressive_command = true
+
+	apply_group_offset = false
+
+	;; hot command info
+	can_hot_command_actor = false
+	can_hot_command_location = false
+
+	high_importance = true
+	preferred_position = 9
+}
+
+

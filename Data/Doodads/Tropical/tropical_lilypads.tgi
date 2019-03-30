@@ -1,0 +1,47 @@
+[Thing Template=AATropicalDoodad]
+{
+	IDS = tropical_lilypads
+	name = "#tropical_lilypads_name"
+	
+	[Flags]
+	ethereal = true	
+	water_based = true
+	
+	[Placement]
+	{
+		[Biome]
+		IDS = tropical_savannah
+		weight = -1.00		
+
+		[Biome]
+		{
+			ids = tropical_forest
+			weight = 0.00
+			
+			[Terrain]
+			IDS = tropical_river
+			weight = 0.01
+
+			[Terrain]
+			IDS = tropical_riverfordable
+			weight = 0.01
+		}
+	}
+
+	[View]
+	{
+		resource_prefix = TropicalLilyPads/TropicalLilypads
+		shadow_texture = null
+		
+		[TextureSearchPath]
+		path = /Doodads/Tropical/TropicalBambooReeds		
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_lilypads01
+		model = %s01.nif
+
+		[Aspect Template=Aspect]
+		IDS = tropical_lilypads02
+		model = %s02.nif
+	}
+}

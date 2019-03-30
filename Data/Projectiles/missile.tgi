@@ -1,0 +1,1173 @@
+[VFX Template=AAVFXModelPermanent]
+{
+	IDS = rocket_smoke_loop1
+	name = "#rocket_shot_rocket_smoke_loop_name"
+	model = Rocketshot/RocketSmokeLoop.nif
+}
+
+[Thing Template=Projectile]
+{
+	ids = missile
+	name = "#rocket_shot_vehicle_rocket_projectile_name"
+
+	[View]
+	{
+		resource_prefix = RocketShot/RocketProjectile1
+			
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.001
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.002
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.003
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.004
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.005
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.006
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.007
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.008
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.009
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.010
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.011
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.012
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.013
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.014
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.015
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.016
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.017
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.018
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.019
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.020
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.021
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.022
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.023
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.024
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.025
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.026
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.027
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.028
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.029
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.030
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.031
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.032
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.033
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.034
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.035
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.036
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.037
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.038
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.039
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.040
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.041
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.042
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.043
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.044
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.045
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.046
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.047
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.048
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.049
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.050
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.051
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.052
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.053
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.054
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.055
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.056
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.057
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.058
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.059
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.060
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.061
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.062
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.063
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.064
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.065
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.066
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.067
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.068
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.069
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.070
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.071
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.072
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.073
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.074
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.075
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.076
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.077
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.078
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.079
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.080
+		}
+
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.081
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.082
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.083
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.084
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.085
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.086
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.087
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.088
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.089
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.090
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.091
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.092
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.093
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.094
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.095
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.096
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.097
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.098
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.099
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.100
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.101
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.102
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.103
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.104
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.105
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.106
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.107
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.108
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.109
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.110
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.111
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.112
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.113
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.114
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.115
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.116
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.117
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.118
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.119
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.120
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.121
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.122
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.123
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.124
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.125
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.126
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.127
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.128
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.129
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.130
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.131
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.132
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.133
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.134
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.135
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.136
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.137
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.138
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.139
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.140
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.141
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.142
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.143
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.144
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.145
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.146
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.147
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.148
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.149
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.150
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.151
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.152
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.153
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.154
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.155
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.156
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.157
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.158
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.159
+		}
+
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = rocket_smoke_loop1
+			attached = true
+			delay = 0.160
+		}
+		[WhenCreated template=FXC_PlaySFX]
+		{
+			audio_ids = v_weapons_sfx
+		}
+		
+		[WhenDestroyed Template=FXC_CreateVFX]
+		{
+			VFX_IDS = atomic_shockwave
+			at = SELF
+			attached = false
+		}
+	
+		[WhenDestroyed Template=FXC_CreateVFX]
+		{
+			VFX_IDS = atomic_scorch
+			at = SELF
+			attached = false
+		}
+
+		[WhenDestroyed Template=FXC_PlaySFX]
+		{
+			audio_ids = atomic_bomb_sfx
+		}
+	}
+
+	[ProjectileComponent]
+	{
+		projectile_speed = 19
+		projectile_type = LOB
+	}
+}

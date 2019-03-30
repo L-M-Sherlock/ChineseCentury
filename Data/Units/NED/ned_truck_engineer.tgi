@@ -1,0 +1,65 @@
+[Thing Template=AAUnitnedVehicleHQTruck]
+{
+	IDS = ned_truck_engineer
+	name = "#ned_truck_engineer_name"
+	editor_name = "#ned_truck_engineer_editor_name"
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 100
+
+		[Production]
+		oil = 5
+		ammo = 5
+
+		[Upkeep]
+		building_limit_consumed = 0
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = ned_brigade_engineer
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+		acceleration = 2
+		trailer_actor = ned_trailer_engineer
+
+		[TrailerHitch]
+		{
+			node_ids = hitch
+			node_offset = 0, -1.7, .5
+		}
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = engineer_brigade
+	}	
+		
+	[View]
+	{
+		resource_prefix = nedTruck/nedTruck
+		icon = /UI/Game/BuildingButtons/IconBrigadeEngineer.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ned_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = brigade_engineer_select
+	}
+}

@@ -1,0 +1,54 @@
+[Terrain template=Terrain]
+{
+	IDS = arctic_tundratrans
+	name = "#arctic_tundratrans_name"
+	
+	base_priority = 100
+	terrain_group = snow	
+	terrain_color = 0.694, 0.745, 0.694
+
+	doodad_frequency = 0.001
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = arctic_tundradirttrans01
+	name = "#arctic_tundratrans_arctic_tundradirttrans01_name"
+	texture = ArcticTundraTrans/ArcticTundraDirtTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = arctic_tundraforesttrans01
+	name = "#arctic_tundratrans_arctic_tundraforesttrans01_name"
+	texture = ArcticTundraTrans/ArcticTundraForestTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = arctic_tundragrassdrytrans01
+	name = "#arctic_tundratrans_arctic_tundragrassdrytrans01_name"
+	texture = ArcticTundraTrans/ArcticTundraGrassDryTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = arctic_tundrapackicetrans01
+	name = "#arctic_tundratrans_arctic_tundrapackicetrans01_name"
+	texture = ArcticTundraTrans/ArcticTundraPackIceTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = arctic_tundrashoretrans01
+	name = "#arctic_tundratrans_arctic_tundrashoretrans01_name"
+	texture = ArcticTundraTrans/ArcticTundraShoreTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = arctic_tundrasnowtrans01
+	name = "#arctic_tundratrans_arctic_tundrasnowtrans01_name"
+	texture = ArcticTundraTrans/ArcticTundraSnowTrans01.tga
+	texture_width = 8
+	texture_height = 8
+}

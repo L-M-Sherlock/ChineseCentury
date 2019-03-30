@@ -1,0 +1,48 @@
+[Ego template = ArmorLowIncomeEgo]
+{
+	IDS										= zhukov_low_income_ego
+	name									= "#Russia_Zhukov_SAI_zhukov_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorLowLowEgo]
+{
+	IDS										= zhukov_low_low_ego
+	name									= "#Russia_Zhukov_SAI_zhukov_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorMainGameEgo]
+{
+	IDS										= zhukov_main_game_ego
+	name									= "#Russia_Zhukov_SAI_zhukov_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = ArmorEndGameEgo]
+{
+	IDS										= zhukov_end_game_ego
+	name									= "#Russia_Zhukov_SAI_zhukov_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= zhukov_sai
+	name									= "#Russia_Zhukov_SAI_zhukov_sai_name"
+	description								= "#Russia_Zhukov_SAI_zhukov_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= zhukov_low_income_ego
+
+	[Ego]
+	IDS										= zhukov_low_low_ego
+
+	[Ego]
+	IDS										= zhukov_main_game_ego
+
+	[Ego]
+	IDS										= zhukov_end_game_ego
+
+	[Nation]
+	IDS										= nation_rus
+	
+	[Faction]
+	ids										= zhukov
+} ;; jpn SAI

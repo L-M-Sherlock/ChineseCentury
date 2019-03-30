@@ -1,0 +1,55 @@
+[Thing Template=AAGEROrganizationArmor]
+{	
+	IDS = regiment_GER_tank_SuperTiger
+	name = "#regiment_GER_tank_SuperTiger_name"
+	editor_name = "#regiment_GER_tank_SuperTiger_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 275
+		
+		[Upkeep]
+		ammo = 25
+		oil = 25
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/GER/GERTankKingTiger/GERTankKingTiger
+		icon = /UI/Game/RegimentButtons/IconGERKingTiger.png
+		banner_icon = /Organizations/Banners/Icons/IconArmorHeavy.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ger_tank_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ger_tank_king_tiger_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ger_tank_king_tiger_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ger_tank_king_tiger_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = ger_tank_king_tiger
+	
+		[Slot]	;; support
+		element_IDS = ger_tank_king_tiger
+		
+		[Slot]	;; captain
+		element_IDS = ger_tank_E100
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = tank_company
+	}
+}

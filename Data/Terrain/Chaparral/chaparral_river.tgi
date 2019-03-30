@@ -1,0 +1,30 @@
+[Terrain template=WaterTerrain]
+{
+	IDS = chaparral_river
+	name = "#chaparral_water_river_name"
+	
+	base_priority = 13000
+	terrain_group = water
+	terrain_color = 0.267, 0.435, 0.455
+
+	doodad_frequency = 0.001
+	primary_doodad_frequency = 0.10
+
+/********************	WATER PARAMETERS		********************/
+
+	paint_slope = 0.1
+	max_slope = 0.9
+	paint_max_step = 2.0
+	max_depth = 3.5
+	anim_textures_path_prefix= ChaparralWater/WaterFrames%04d.dds
+	anim_fps = 10
+
+/********************	WATER VARIATIONS		********************/
+
+	[Variation]
+	IDS = chaparral_river01
+	name = "#chaparral_river_01_name"
+	texture = ChaparralWater/ChaparralWater01.tga
+	texture_width = 8
+	texture_height = 8
+}

@@ -1,0 +1,61 @@
+[Thing Template=AARUSOrganizationInfantry]
+{
+	IDS = regiment_rus_infantry_sniper
+	editor_name = "#regiment_rus_infantry_sniper_editor_name"
+	name = "#regiment_rus_infantry_sniper_name"
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 55
+		
+		[Upkeep]
+		ammo = 10
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/RUS/RUSInfantry/RUSInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantrySniper.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = rus_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = rus_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = rus_infantry_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = rus_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = rus_infantry
+
+		[Slot]	;; rear guard 2
+		element_IDS = rus_infantry
+		
+		[Slot]	;; rear guard 3
+		element_IDS = rus_infantry
+	
+		[Slot]	;; flank
+		element_IDS = rus_infantry_sniper
+		
+		[Slot]	;; captain
+		element_IDS = rus_infantry_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = infantry1_company
+	}
+}
+
+

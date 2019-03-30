@@ -1,0 +1,112 @@
+/**************************************************************************
+
+template_formation.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: defines attributes for formations that organization layout's use.
+			Every organization layout has one or more formations available to it.
+			Note the actual arrangement of the formation is defined in the layout's
+			[Formation] node.
+
+REVISION HISTORY:
+drp091702 - created
+
+FIELDS:
+	
+	organized = when true dictates that elements try to maintain formation.  When this
+		is false, the organization will degrade into a mob.
+
+USAGE:
+
+	[Formation template=Formation]
+	This node goes at the root level and defines a formation that an organization's layout
+	can use.  It is referred by the "formation_IDS" of the [Formation] nodes in the [Layout] node.
+	
+	[Position template=FormationPosition]
+	A list of these nodes go in the [Formation] node of the [Layout] node.  It defines the actual
+	positions the layout's slots use when they are in that formation.
+
+EXAMPLE:
+
+[Formation template=Formation]
+{
+	IDS = company_skirmish
+	name = "Skirmish"
+	organized = true
+	aggressive = true
+	icon = FormationIcons/skirmish.dds
+}
+
+**************************************************************************/
+
+[template FormationPosition]
+{
+	string	property_IDS
+	point2	offset		;; position offset.  "0,1" is forward
+}
+	
+[template Formation]
+{
+	string		IDS
+	localized	name
+	flag		organized	;; elements try to maintain formation
+	flag		herding = false	;; only has an effect if organized is false. Enforces herding bevior on units
+	flag		aggressive
+	string		icon
+
+	;; (optional) group formation associated with this formation
+	string		group_formation_ids = NULL
+	
+	;; define a property for this formation 
+	[optional Property template=ModifierProperty]
+}
+
+/* TODO: example with property
+
+[Formation template=Formation]
+{
+	ids = combat
+	localized = "Combat"
+	organized = true
+	icon = FormationIcons/combat.dds
+	
+	[Property template=ModifierProperty]
+	{
+		name = "Combat Formation"
+		
+		[Modifier template=MultiplyModifier]
+		attribute = MAX_SPEED
+		ratio = 0.5
+		
+		[Modifier template=MultiplyModifier]
+		attribute = ZONE_OF_CONTROL
+		ratio = 0.9
+		
+		[Modifier template=MultiplyModifier]
+		attribute = ATTACK_EFFICIENCY
+		ratio = 1.25
+	}
+}
+
+
+;; ORGANIZATION STATE EXAMPLE
+;; - should the OrganizationLayoutData or OrganizationComponent specify the states it uses?
+[State template=State]
+{
+	ids = retreat
+	localized = “Retreat”
+	;; icon for the UI instead of text?
+
+	;; formation points to either a formation IDS, or BROKEN, or DESIRED
+	formation = BROKEN
+	
+	[Property template=ModifierProperty]
+	{
+		name = “Retreating”	;; what shows up in the info panel
+
+		[Modifier template=AddModifier]
+		attribute = DEFENSE
+		amount = -2
+}
+
+*/

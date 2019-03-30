@@ -1,0 +1,8 @@
+[Banner Template=AABanner]
+{
+	ids = chn_banner
+	name = "chn_banner"
+	
+	model = Shared/Banner.nif
+	resource_prefix = CHN/CHN
+}

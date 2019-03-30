@@ -1,0 +1,70 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = fear
+	name = "#fear_name"
+	description = "#fear_description"
+	targets = +ENEMY -ORGANIZATION -BUILDING
+	recharge_time = 240
+	range = 10
+	area = 15
+	max_targets = 24
+
+	icon = /UI/%s/Game/SpecialOps/IconFear.png
+	
+	[Effect Template=EnchantmentEffect]
+	{
+		[EnchantmentProperty]
+		{
+			IDS = property_fear
+			name = "#fear_Effect_EnchantmentProperty_name"
+			enchantment_type = ench_type_fear
+			duration = 20
+			icon = /Properties/PropertyIcons/IconPropertyDefense.png
+			
+			[Modifier Template=MultiplyModifier]
+			attribute = RECHARGE_TIME
+			amount = -0.3
+				
+			[WhenAdded Template=FXC_CreateVFX]
+			{
+				VFX_IDS = fear_cloud_large
+				location = position
+				target_flags = -infantry
+			}
+			
+			[WhenAdded Template=FXC_CreateVFX]
+			{
+				VFX_IDS = fear_cloud_small
+				location = position
+				target_flags = +infantry
+			}
+			
+			[WhenAdded Template=FXC_CreateVFX]
+			{
+				VFX_IDS = rout_flag
+				location = position
+			}
+			
+			[WhenAdded Template=FXC_CreateVFX]
+			{
+				VFX_IDS = fear_glow
+			}
+
+			[WhenAdded Template=FXC_PlaySFX]
+			audio_ids = fear_sfx
+			at = TARGET_GROUND
+		}
+	}
+	
+	[Effect Template=MoraleLossEffect]
+	{
+		amount = 3
+	}
+	
+	[WhenDo Template=FXC_CreateVFX]
+	vfx_ids = AreaEffect_vfx
+	at = TARGET_GROUND
+}

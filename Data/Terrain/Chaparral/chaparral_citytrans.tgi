@@ -1,0 +1,53 @@
+[Terrain template=Terrain]
+{
+	IDS = chaparral_citytrans
+	name = "#chaparral_citytrans_name"
+	
+	base_priority = 25
+	terrain_group = dirt
+	terrain_color = 0.471, 0.573, 0.286
+
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.00
+	
+	[Property]
+	property_IDS = terrain_city_infantry
+	
+	[Property]
+	property_IDS = terrain_city_vehicles
+
+	[Variation]
+	IDS = chaparral_citydirttrans01
+	name = "#chaparral_citytrans_chaparral_citydirttrans01_name"
+	texture = ChaparralCityTrans/ChaparralCityDirtTrans01.tga
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = chaparral_cityforesttrans01
+	name = "#chaparral_citytrans_chaparral_cityforesttrans01_name"
+	texture = ChaparralCityTrans/ChaparralCityForestTrans01.tga
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = chaparral_citygrassdrytrans01
+	name = "#chaparral_citytrans_chaparral_citygrassdrytrans01_name"
+	texture = ChaparralCityTrans/ChaparralCityGrassDryTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = chaparral_citygrasstrans01
+	name = "#chaparral_citytrans_chaparral_citygrasstrans01_name"
+	texture = ChaparralCityTrans/ChaparralCityGrassTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = chaparral_citymountaintrans01
+	name = "#chaparral_citytrans_chaparral_citymountaintrans01_name"
+	texture = ChaparralCityTrans/ChaparralCityMountainTrans01.tga
+	texture_width = 8
+	texture_height = 8
+}

@@ -1,0 +1,122 @@
+;;---------------------------------------------- JPNCarArmoredCO Portrait --------
+[Thing Template=Portrait]
+{
+	ids = jpn_car_armored_co1_portrait
+	name = "#jpn_car_armored_co1_portrait_name"
+
+	[View]
+	{
+		resource_prefix = JPNCarArmoredCo/JPNCarArmoredCOPortrait
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+
+		[AspectNormal]
+		{
+			[Animation Template=ObjectAnimationIdle]
+			{
+				ids = idle
+			}
+
+			[Animation Template=ObjectAnimationFidget]
+			{
+				ids = fidget1
+			}
+			
+			[Animation Template=ObjectAnimationFidget]
+			{
+				ids = fidget2
+			}
+			[Animation Template=ObjectAnimationFidget]
+			{
+				ids = talk1
+			}
+
+		}
+	}
+}
+
+
+;;---------------------------------------------- RUSTankCO Unit --------
+
+
+
+[Thing Template=AAUnitJPNVehicleJeep]
+{
+	IDS = jpn_car_armored_co1
+	name = "#jpn_car_armored_co1_Thing_name"
+	editor_name = "#jpn_car_armored_co1_Thing_editor_name"
+
+	[BodyComponent]
+	{
+		health = 250
+		defense = 5
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 4.5
+		acceleration = 8
+
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_01
+			location = exhaust_point_01	
+		}
+	}
+
+	[ElementComponent]
+	{
+		morale_value = 4
+	}
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = captain
+		
+		[Property]
+		property_IDS = combat_unit
+
+		[Property]
+		property_IDS = front
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{	
+				
+			[AbilityDefinition Template=AAVehicleMG]
+			{
+				name = "#jpn_motuo_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 2
+				range = 15
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 16
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ger_mg_heavy			
+	                        [WhenDo template=FXC_CreateVFX]
+	                     {
+		                  VFX_IDS = mg_heavy_shot
+		                  at = SELF
+		                  location = cannon_ae_01
+		                  attached = false
+	                      }
+			}
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = JPNCarArmoredCo2/GERCarArmoredCO
+		portrait_ids = jpn_car_armored_co_portrait
+
+	}
+}

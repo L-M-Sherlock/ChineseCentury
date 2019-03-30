@@ -1,0 +1,35 @@
+[VFX Template=VFXObjectName]
+{
+	IDS = city_name_vfx
+	name = "#text_effects_city_name_vfx_name"
+	color = 1, 1, 1
+	text = "#text_effects_city_name_vfx_text"
+	font_IDS = large_outline
+	permanent = true
+	rise_to_height = 10
+	
+	show_in_cutscene = false
+}
+
+[VFX template=VFXObjectName]
+{
+	IDS = territory_name_vfx
+	name = "#text_effects_territory_name_vfx_name"
+	permanent = true
+	color = 1,1,1
+	text = ""
+	font_IDS = metagame
+	rise_to_height = 4
+}
+
+[VFX template=VFXObjectName]
+{
+	IDS = territory_alias_vfx
+	name = "#text_effects_territory_alias_vfx_name"
+	permanent = true
+	color = 1,1,1
+	text = ""
+	format = "#text_effects_territory_alias_vfx_format|s"
+	font_IDS = metagame
+	rise_to_height = 4
+}

@@ -1,0 +1,123 @@
+
+[NameList]
+{
+	IDS = namelist_eastafrica
+	name = "#namelist_eastafrica_name"
+
+	[Name] ;; 01
+	name = "#namelist_eastafrica_Name_name"
+	
+	[Name] ;; 02
+	name = "#namelist_eastafrica_Name_name_2"
+	
+	[Name] ;; 03
+	name = "#namelist_eastafrica_Name_name_3"
+	
+	[Name] ;; 04
+	name = "#namelist_eastafrica_Name_name_4"
+	
+	[Name] ;; 05
+	name = "#namelist_eastafrica_Name_name_5"
+	
+	[Name] ;; 06
+	name = "#namelist_eastafrica_Name_name_6"
+	
+	[Name] ;; 07
+	name = "#namelist_eastafrica_Name_name_7"
+	
+	[Name] ;; 08
+	name = "#namelist_eastafrica_Name_name_8"
+	
+	[Name] ;; 09
+	name = "#namelist_eastafrica_Name_name_9"
+	
+	[Name] ;; 10
+	name = "#namelist_eastafrica_Name_name_10"
+	
+	[Name] ;; 11
+	name = "#namelist_eastafrica_Name_name_11"
+	
+	[Name] ;; 12
+	name = "#namelist_eastafrica_Name_name_12"
+	
+	[Name] ;; 13
+	name = "#namelist_eastafrica_Name_name_13"
+	
+	[Name] ;; 14
+	name = "#namelist_eastafrica_Name_name_14"
+	
+	[Name] ;; 15
+	name = "#namelist_eastafrica_Name_name_15"
+	
+	[Name] ;; 16
+	name = "#namelist_eastafrica_Name_name_16"
+	
+	[Name] ;; 17
+	name = "#namelist_eastafrica_Name_name_17"
+	
+	[Name] ;; 18
+	name = "#namelist_eastafrica_Name_name_18"
+	
+	[Name] ;; 19
+	name = "#namelist_eastafrica_Name_name_19"
+	
+	[Name] ;; 20
+	name = "#namelist_eastafrica_Name_name_20"
+	
+	[Name] ;; 21
+	name = "#namelist_eastafrica_Name_name_21"
+	
+	[Name] ;; 22
+	name = "#namelist_eastafrica_Name_name_22"
+	
+	[Name] ;; 23
+	name = "#namelist_eastafrica_Name_name_23"
+	
+	[Name] ;; 24
+	name = "#namelist_eastafrica_Name_name_24"
+	
+	[Name] ;; 25
+	name = "#namelist_eastafrica_Name_name_25"
+	
+	[Name] ;; 26
+	name = "#namelist_eastafrica_Name_name_26"
+	
+	[Name] ;; 27
+	name = "#namelist_eastafrica_Name_name_27"
+	
+	[Name] ;; 28
+	name = "#namelist_eastafrica_Name_name_28"
+	
+	[Name] ;; 29
+	name = "#namelist_eastafrica_Name_name_29"
+	
+	[Name] ;; 30
+	name = "#namelist_eastafrica_Name_name_30"
+	
+	[Name] ;; 31
+	name = "#namelist_eastafrica_Name_name_31"
+	
+	[Name] ;; 32
+	name = "#namelist_eastafrica_Name_name_32"
+	
+	[Name] ;; 33
+	name = "#namelist_eastafrica_Name_name_33"
+	
+	[Name] ;; 34
+	name = "#namelist_eastafrica_Name_name_34"
+	
+	[Name] ;; 35
+	name = "#namelist_eastafrica_Name_name_35"
+	
+	[Name] ;; 36
+	name = "#namelist_eastafrica_Name_name_36"
+	
+	[Name] ;; 37
+	name = "#namelist_eastafrica_Name_name_37"
+	
+	[Name] ;; 38
+	name = "#namelist_eastafrica_Name_name_38"
+	
+	[Name] ;; 39
+	name = "#namelist_eastafrica_Name_name_39"
+}

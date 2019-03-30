@@ -1,0 +1,11 @@
+;; properties.tgi
+;; DESC: hard-coded properties
+
+[Property template=SharedProperty]
+{
+	ids = mobile
+	name = "#properties_name"
+	icon = null
+	
+	pass_down_members = false	
+}

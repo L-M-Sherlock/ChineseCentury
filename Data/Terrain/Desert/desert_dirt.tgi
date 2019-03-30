@@ -1,0 +1,41 @@
+
+[Terrain template=WaterTerrain]
+{
+	IDS = desert_dirt
+	name = "#desert_dirt_name"
+	
+	land = true
+	water = false
+		
+	terrain_group = desert
+	base_priority = 35000
+	
+	doodad_frequency = 0.01
+	primary_doodad_frequency = 0.10
+
+/* 	WATER PARAMETERS	*/
+
+	paint_slope = 0.25
+	max_slope = 0.65
+	paint_max_step = 0.45
+	max_depth = 0.8
+	anim_textures_path_prefix = DesertWater/DirtFrames%04d.dds
+	anim_fps = 7
+	color = 0,0,0
+		
+	[Variation]
+	IDS = desert_dirt01
+	name = "#desert_dirt_01_name"
+	texture = DesertDirt/DesertDirt01.tga
+	texture_width = 16
+	texture_height = 16
+	terrain_color =  0.800, 0.647, 0.412
+	
+	[Variation]
+	IDS = desert_dirt02
+	name = "#desert_dirt_02_name"
+	texture = DesertDirt/DesertDirt02.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color =  0.820, 0.627, 0.432
+}

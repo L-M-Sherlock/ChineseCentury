@@ -1,0 +1,85 @@
+[VFX Template=AAVFXModelPermanent]
+{
+	IDS = flame_projectile_fire
+	name = "#flamethrower_flame_projectile_fire_name"
+	model = FlameThrower/FlameProjectileLoop.NIF
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = flame_hit_effect
+	name = "#flamethrower_flame_hit_effect_name"
+	model = FlameThrower/FlameProjectileHit.nif
+}
+
+[Thing Template=Projectile]
+{
+	ids = flame_projectile
+	name = "#flamethrower_flame_projectile_name"
+
+	[View]
+	{
+		resource_prefix = FlameThrower/FlameProjectile
+/*
+		[WhenDestroyed template=FXC_PlaySFX]
+		{
+			audio_ids = explosion_cannon_medium
+			at = SOURCE_GROUND
+		}
+			
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = flame_trail
+			attached = true
+		}
+*/
+		
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = flame_projectile_fire
+			attached = true
+		}
+	}
+
+	[ProjectileComponent]
+	{
+		projectile_speed = 12
+		projectile_type = antigrav
+	}
+}
+
+[Thing Template=Projectile]
+{
+	ids = flame_vehicle_projectile
+	name = "#flamethrower_flame_vehicle_projectile_name"
+
+	[View]
+	{
+		resource_prefix = FlameThrower/FlameProjectile
+/*
+		[WhenDestroyed template=FXC_PlaySFX]
+		{
+			audio_ids = explosion_cannon_medium
+			at = SOURCE_GROUND
+		}
+			
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = flame_trail
+			attached = true
+		}
+*/
+		
+		[WhenCreated template=FXC_CreateVFX]
+		{
+			vfx_ids = flame_projectile_fire
+			attached = true
+		}
+	}
+
+	[ProjectileComponent]
+	{
+		projectile_speed = 15
+		projectile_type = antigrav
+	}
+}

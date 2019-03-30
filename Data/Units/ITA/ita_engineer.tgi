@@ -1,0 +1,101 @@
+[Thing Template=AAUnitRUSProne]
+{
+	IDS = ita_engineer
+	name = "#ita_engineer_name"
+	editor_name = "#ita_engineer_editor_name"
+	
+	[View]
+	{
+		resource_prefix = itaEngineer/itaEngineer
+		
+		[WhenCreated Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = hammer
+		}
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[BodyComponent]
+	health = 200
+	defense = 1
+	
+	[BuilderComponent]
+	{
+		[BuildActor]
+		actor_ids = ita_bunker
+		
+		[BuildActor]
+		actor_ids = ita_bunker_aa
+		
+		[BuildActor]
+		actor_ids = ita_bunker_artillery
+	}
+	
+	[CharacterComponent Template=AAEngineerCharacterComponent]
+
+	[ElementComponent]
+	required_structures = ita_brigade_engineer
+
+	[MoverComponent]
+	speed_max = 3
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = engineer			
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[Abilitydefinition Template=AAInfantryRifle]
+			{				
+				name = "#rus_engineer_Abilitydefinition_name"
+				recharge_time = 3
+				range = 10
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+			
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_rifle
+			
+			}
+		}
+		
+		[Ability Template=AARepairLocal]
+		{			
+			animation1 = build1
+			
+			[Abilitydefinition Template=AARepairAction]
+			{
+				[Effect Template=RepairEffect]
+				amount = 5
+			}
+		}
+		
+		[Ability Template=AAConstructLocal]
+		{
+			animation1 = build1
+			
+			[Abilitydefinition Template=AAConstructAction]
+			{
+				[Effect Template=RepairEffect]
+				amount = 5
+			}
+		}
+	}
+}

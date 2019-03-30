@@ -1,0 +1,59 @@
+[Thing Template=AAGBROrganizationArtillery]
+{	
+	IDS = regiment_GBR_tank_Airbornetankgun
+	name = "#regiment_GBR_tank_Airbornetankgun_name"
+	editor_name = "#regiment_GBR_tank_Airbornetankgun_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 225
+		
+		[Upkeep]
+		ammo = 25
+		oil = 25
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = org_tank
+
+		[Property]
+		property_ids = artillery_company
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/GBR/GBRTankSPA/GBRTankSPA
+		icon = /UI/Game/RegimentButtons/IconGBRTankFlame.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_tank_deployed
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_artillery_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_artillery_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_artillery_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = gbr_tank_flame
+	
+		[Slot]	;; support
+		element_IDS = gbr_tank_flame
+		
+		[Slot]	;; captain
+		element_IDS = gbr_tank_CO
+	}
+	
+	[ExperienceComponent template=AAArmorExperienceComponent]
+}

@@ -1,0 +1,68 @@
+[Thing Template=AAUnitUSAVehicleHQTruck]
+{
+	IDS = usa_truck_artillery
+	name = "#usa_truck_artillery_name"
+	editor_name = "#usa_truck_artillery_editor_name"
+	
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 150
+
+		[Production]
+		ammo = 10
+
+		[Upkeep]
+		building_limit_consumed = 0
+	}
+	
+	[ElementComponent]
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = usa_brigade_artillery
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+
+		;; ids of the trailer actor
+		trailer_actor = usa_trailer_artillery
+
+		[TrailerHitch]
+		{		
+			;; node name and node offset of the truck's hitch
+			node_ids = hitch
+			node_offset = 0, -2.2, 0.5
+		}
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = artillery_brigade	
+	}	
+	
+	[View]
+	{
+		resource_prefix = USATruck/USATruck
+		icon = /UI/Game/BuildingButtons/IconBrigadeArtillery.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = usa_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = brigade_artillery_select
+	}
+}

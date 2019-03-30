@@ -1,0 +1,49 @@
+[Thing Inherit=VFXProjectedTextureLit]
+{
+	name = "#jpn_tank02_JPNDestroyed02Ground_name"
+	texture = TanksDead/JPNDestroyed02Ground.dds	
+	IDS = JPNDestroyed02Ground
+	attached_scale = 0
+	texture_size = 6
+}
+
+[Thing Template=AASharedDoodad]
+{
+	IDS = jpn_destroyed02
+	name = "#jpn_tank02_jpn_destroyed02_name"
+
+	[Flags]
+	random_orientation = false	
+	blocking = true
+
+	[Size]
+	{
+		scale_min = 1
+		scale_max = 1
+		
+		blocking_shape = CIRCLE
+		blocking_radius = 2
+		
+		soft_shape = CIRCLE
+		soft_radius = 2.1
+	}
+	
+	[View]
+	{
+		resource_prefix = TanksDead/JPNDestroyed02
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		shadow_type = STENCIL
+		aspects_as_variations=false
+
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = JPNDestroyed02Ground
+		
+		[TextureSearchPath]
+		path = /Units/JPN/JPNTankMedium
+
+		[WhenCreated template=FXC_CreateVFX]
+		vfx_ids = tank_death_fire
+		location = damage_point40
+		attached = true
+	}
+}

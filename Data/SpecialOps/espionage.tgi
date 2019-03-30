@@ -1,0 +1,32 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = espionage
+	name = "#espionage_name"
+	description = "#espionage_description"
+	targets = +ENEMY +BUILDING
+	recharge_time = 300
+
+	icon = /UI/%s/Game/SpecialOps/IconEspionage.png
+
+	[Effect Template=DescribeEconomyEffect]
+	
+	[Effect Template=StealResourcesEffect]
+	{
+		[ResourcesAmount]
+		money = 50
+	}
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = espionage_glasses
+		at = TARGET_GROUND
+		attached = false
+	}
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = espionage_sfx
+	at = TARGET_GROUND
+}

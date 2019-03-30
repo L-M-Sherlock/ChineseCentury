@@ -1,0 +1,136 @@
+[Thing Template=AAUnitCHNProne]
+{
+	IDS = chn_paratrooper_MP
+	name = "#chn_paratrooper_MP_name"
+	editor_name = "#chn_paratrooper_MP_editor_name"
+
+	hide_if_missing_properties = false
+	
+	[Stance template = StanceFalling]
+	
+	[View]
+	{
+		resource_prefix = CHNParatrooperMP/CHNParatrooper
+		
+		[Aspect Template=AspectFalling]
+
+		[TextureSearchPath]
+		{
+			path = /effects/parachute/CHN
+		}
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+	
+	[BodyComponent]
+	health = 270
+	defense = 3
+	
+	[ElementComponent]
+	{
+        required_properties = tech_paratrooper_MP
+		morale_value = 10
+	}
+		
+	[CharacterComponent Template=AAInfantrySMGCharacterComponent]
+	
+	[MoverComponent]
+	speed_max = 4.5
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{	
+			[AbilityDefinition Template=AAInfantrySMG]
+			{
+				name = "#chn_infantry_AbilityDefinition_name"
+				recharge_time = 3
+				range = 15
+			
+				[Effect Template=PierceDamageEffect]
+				amount = 15
+
+                [Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = infantry
+				amount = 10
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = chn_mg_light
+			}
+		}
+
+		[Ability Template=AAGunLocal]
+		{
+            [AbilityDefinition Template=AAInfantryRocket]
+			{				
+				name = "#usa_infantry_assault_AbilityDefinition_name"
+				icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
+
+				recharge_time = 15
+                area = 1.5
+				range = 12
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 30
+
+                [Effect Template=AddDamageEffect]
+				damage_type_IDS = explosive
+				targets = infantry
+				amount = 20
+
+                [Effect Template=AddDamageEffect]
+				damage_type_IDS = explosive
+				targets = vehicle
+				amount = 10
+
+				[Effect Template=MoraleLossEffect]
+				amount = .25
+	
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = usa_rocket
+				
+			}
+		}
+
+		[Ability Template=AAGrenadeLocal]
+		{		
+			[AbilityDefinition Template=AAThrownGrenade]
+			{
+				name = "#ger_infantry_AbilityDefinition_name_2"
+				projectile_ids = grenade02
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 30
+
+				[Effect Template=MoraleLossEffect]
+				amount = .2
+			}
+		}
+	}
+
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		vfx_ids = parachute_close_chn
+		actor_state = falling
+		location = neck
+	}
+}

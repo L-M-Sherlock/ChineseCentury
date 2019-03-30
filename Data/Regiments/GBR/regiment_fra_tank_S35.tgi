@@ -1,0 +1,54 @@
+[Thing Template=AAGBROrganizationArmor]
+{	
+	IDS = regiment_fra_tank_S35
+	name = "S35"
+	editor_name = "S35"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 105
+		
+		[Upkeep]
+		ammo = 15
+		oil = 20
+	}
+
+	[View]
+	{
+		resource_prefix = /Organizations/Banners/Icons/IconArmorLight.png
+		icon = /UI/Game/RegimentButtons/Germany-S35_captured.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_vehicle_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_halftrack_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_halftrack_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_halftrack_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = FRA_tank_S35
+	
+		[Slot]	;; support
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = fra_tank_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = mechanized_company
+	}
+}

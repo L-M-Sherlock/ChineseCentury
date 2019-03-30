@@ -1,0 +1,77 @@
+[Template AAJPNRegimentEngineer Template=AAJPNOrganizationEngineer]
+{
+	name = "#regiment_jpn_engineer_AAJPNRegimentEngineer_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 75
+		
+		[Upkeep]
+		ammo = 5
+		oil = 5
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/JPN/JPNEngineer/JPNEngineer
+		icon = /UI/Game/RegimentButtons/IconEngineer.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = jpn_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = jpn_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = jpn_engineer_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = jpn_engineer
+		
+		[Slot]	;; rear guard 1
+		element_IDS = jpn_engineer
+
+		[Slot]	;; rear guard 2
+		element_IDS = jpn_engineer
+		
+		[Slot]	;; rear guard 3
+		element_IDS = jpn_engineer
+	
+		[Slot]	;; flank
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = jpn_infantry_co
+	}
+}
+
+[Thing Template=AAJPNRegimentEngineer]
+{
+	IDS = regiment_jpn_engineer
+	editor_name = "#regiment_jpn_engineer_editor_name"
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = engineer
+	}
+}
+
+/*
+[Thing Template=AAJPNRegimentEngineer]
+{
+	IDS = regiment_jpn_engineer_amphibious
+	editor_name = "JPN Engineer Regiment - Water Recruit"
+	
+	transport_actor = jpn_transport_water
+
+	[Placement]
+	placement_group_ids = null
+}
+*/

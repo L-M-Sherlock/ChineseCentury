@@ -1,0 +1,23 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Battle of Stalingrad"
+
+	kingdom_1 = "Russia"
+	name_2844 = "Salsk"
+	kingdom_0 = "Germany"
+	name_2852 = "Elista"
+	objective_4 = "4.  Capture and hold Tsymlyanskaya."
+	name_2780 = "Kolach"
+	map_description = "With the Middle East now part of the ever-expanding German empire, the German offensive in Russia now has a chance to link up with German forces advancing through the Middle East.  Rommel's Afrika Korps is advancing North.  Capture Stalingrad and send forces to meet Rommel."
+	objective_3 = "1.  Capture and hold Kolach."
+	objective_2 = "2.  Capture, hold, and prevent the Russians from recapturing Rostov."
+	independent_2 = "Civilian"
+	name_2788 = "Tsymlyanskaya"
+	map_name = "Battle of Stalingrad"
+	objective_1 = "5.  Exit three medium tank regiments off the south map corner."
+	objective_0 = "3.  Capture and hold Stalingrad."
+	name_2826 = "Stalingrad"
+	name_2816 = "Rostov"
+	name_2836 = "Serafimovich"
+}

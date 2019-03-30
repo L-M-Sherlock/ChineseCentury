@@ -1,0 +1,151 @@
+/**************************************************************************
+
+template_organization_layout.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: a layout that an organization can use.  This defines all the slots
+			available to an organization, and what property is required for an
+			actor to belong to a slot.  Note the "ElementComponent" is always required.
+
+REVISION HISTORY:
+drp091702 - created
+
+SLOTS:
+
+	[Slot template=LayoutSlot]	
+	
+	[Slot template=PrimarySlot]
+		This slot is the primary slot for the layout.  Every layout should have
+		exactly zero or one primary slots.  The primary slot means:
+			- primary element dictates position of the organization	
+			- organization cannot be controlled without a primary element
+			- additional morale penalties
+			- primary element may behave differently
+	
+USAGE:
+
+	[OrganizationLayout Template=OrganizationLayout]
+	This node goes at the root level and defines a layout that organization's can use. It is referred
+	to by the "layout_IDS" field of the [OrganizationComponent].
+	
+EXAMPLE:
+
+	[OrganizationLayout template=OrganizationLayout] 
+	{
+		IDS = company_standard
+		name = "Company 7 Unit Layout"
+		
+		[Slot template=PrimarySlot]
+		property_IDS = captain
+		
+		[Slot template=LayoutSlot]
+		property_IDS = front
+		locked = true
+		number = 4
+
+		[Slot template=LayoutSlot]
+		property_IDS = support
+		required = false
+
+		[Slot template=LayoutSlot]
+		property_IDS = support
+		required = false
+
+		[Formation]
+		{
+			formation_IDS = company_skirmish
+			
+			[Position template=FormationPosition]
+			property_IDS = captain
+			offset = 0,0
+			
+			[Position template=FormationPosition]
+			property_IDS = front
+			offset = -1.5,-3
+
+			[Position template=FormationPosition]
+			property_IDS = front
+			offset = +1.5,-3
+
+			[Position template=FormationPosition]
+			property_IDS = front
+			offset = -1.5,+3
+
+			[Position template=FormationPosition]
+			property_IDS = front
+			offset = +1.5,+3
+			
+			[Position template=FormationPosition]
+			property_IDS = support
+			offset = +4.5,0
+
+			[Position template=FormationPosition]
+			property_IDS = support
+			offset = -4.5,0
+		}
+	}
+	
+**************************************************************************/
+	
+[template LayoutSlot]
+{
+	localized name
+	
+	;; the property required for an actor element to be in this slot
+	string property_IDS
+
+	;; every layout should have zero or one primary slots.  The primary slot means:
+	;; - additional morale penalties
+	;; - behaves differently
+	;; - defines the center of the organization
+	flag primary = false
+	
+	;; required = defines if a slot is required to be full or not
+	flag required = true
+	
+	;; locked = defines if the default element specified in the OrganizationComponent can be changed at instantiation time
+	flag locked = false
+	
+	;; number = number of times elements with this property_IDS (or number of times this
+	;; slot is repeated). If more than 1, when instantiating the Organization this means
+	;; that the element_IDS will be duplicated that many times.  If more than 1, you still need 
+	;; to have the appropriate number of [Position] nodes in the [Formation] descriptions.  
+	int	number = 1
+
+	;; morale_line = determines if morale is lost by organization when unit dies
+	flag	morale_line = true
+}
+
+[template PrimarySlot inherit=LayoutSlot]
+{
+	primary = true
+}
+
+[template LayoutFormation]
+{
+	string formation_IDS 
+
+	[list Position template=FormationPosition]
+}
+
+[template OrganizationLayout]
+{
+	string		IDS
+	localized	name
+	string		default_formation_ids = NULL	;; first formation if not specified
+	string		combat_formation_IDS = NULL		;; first formation if not specified
+	string		retreat_formation_IDS = NULL	;; last organized formation if not specified
+
+	;; property used when organization is in a broken formation
+	;; modifiers associated with this property need to be defined on a per-game basis
+	[BrokenProperty Template=ModifierProperty]
+	{
+
+	}
+	
+	[list Slot template=LayoutSlot]	
+	
+	;; a list of formations available to this layout
+	[list Formation template=LayoutFormation]
+}
+

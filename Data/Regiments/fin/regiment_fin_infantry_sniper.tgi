@@ -1,0 +1,68 @@
+[Thing Template=AAFINOrganizationInfantry]
+{
+	IDS = regiment_fin_infantry_sniper
+	name = "#regiment_fin_infantry_sniper_name"
+	editor_name = "#regiment_fin_infantry_sniper_editor_name"
+	
+	[DetectionComponent]
+	{
+		detection_range = 27
+	}
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 48
+		
+		[Upkeep]
+		ammo = 5
+	}	
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = recon	
+		
+		[Property]
+		property_IDS = trailblazing		
+	}
+	
+	[View]
+	{
+		resource_prefix = /Units/FIN/FINInfantry/FINInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantrySniper.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = fin_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = fin_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = fin_infantry_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		recruit_full = true
+		
+		[Slot]	;; front
+		element_IDS = fin_infantry_sniper
+		
+		[Slot]	;; rear guard 1
+		element_IDS = null
+
+		[Slot]	;; rear guard 2
+		element_IDS = null
+		
+		[Slot]	;; rear guard 3
+		element_IDS = FIN_infantry_sniper
+	
+		[Slot]	;; flank
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = FIN_infantry_co
+	}
+}

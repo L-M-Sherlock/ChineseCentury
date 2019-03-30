@@ -1,0 +1,20 @@
+;; ---------------------------- Developer Mode Label ----------------------------
+
+[DeveloperModeLabel Template=LabelWidget]
+{
+	visible = false
+
+	[View Template=NoVE]
+
+	[Label]
+	{
+		L = 50
+		T = 50
+		R = +150
+		B = +20
+
+		text = "#dev_mode_label_Label_text"
+		font = small
+		justify = LEFT
+	}
+}

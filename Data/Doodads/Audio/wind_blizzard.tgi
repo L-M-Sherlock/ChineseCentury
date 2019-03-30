@@ -1,0 +1,19 @@
+[Thing Template=AASharedAudioDoodad]
+{
+	IDS = wind_blizzard
+	name = "#wind_blizzard_name"
+
+	[View]
+	{					
+		[AspectNormal template=Aspect]
+		{
+			IDS = audio
+			
+			[Animation template=AnimationRandomAudio]
+			{
+				[PlaySFX]
+				sfx_ids = am_wind_blizzard
+			}
+		}
+	}
+}

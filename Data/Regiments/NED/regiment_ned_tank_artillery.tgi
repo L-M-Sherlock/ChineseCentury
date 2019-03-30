@@ -1,0 +1,60 @@
+[Thing Template=AAnedOrganizationArtillery]
+{	
+	IDS = regiment_ned_tank_artillery
+	name = "#regiment_ned_tank_artillery_name"
+	editor_name = "#regiment_ned_tank_artillery_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 175
+		
+		[Upkeep]
+		ammo = 25
+		oil = 15
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = org_tank
+
+		[Property]
+		property_ids = artillery_company
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/ned/nedTankSPA/nedTankSPA
+		icon = /UI/Game/RegimentButtons/IconTankArtillery.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ned_tank_deployed
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ned_artillery_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ned_artillery_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ned_artillery_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		operational_range = 40
+		
+		[Slot]	;; front
+		element_IDS = ned_tank_light
+	
+		[Slot]	;; support
+		element_IDS = ned_tank_spa
+		
+		[Slot]	;; captain
+		element_IDS = ned_tank_co
+	}
+	
+	[ExperienceComponent template=AAArmorExperienceComponent]
+}

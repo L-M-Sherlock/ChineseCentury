@@ -1,0 +1,25 @@
+[Terrain template=Terrain]
+{
+	IDS = temperate_forestdeciduous
+	name = "#temperate_forestdeciduous_name"
+	
+	base_priority = 5000
+	terrain_group = dirt
+
+	doodad_frequency = 0.25
+	primary_doodad_frequency = 0.90
+	
+	[Property]
+	property_IDS = terrain_forest_infantry
+	
+	[Property]
+	property_IDS = terrain_forest_vehicles
+
+	[Variation]
+	IDS = temperate_forestdeciduous01
+	name = "#temperate_forestdeciduous_01_name"
+	texture = TemperateForestDeciduous/TemperateForestDeciduous01.tga
+	texture_width = 16
+	texture_height = 16
+	terrain_color = 0.259, 0.384, 0.169
+}

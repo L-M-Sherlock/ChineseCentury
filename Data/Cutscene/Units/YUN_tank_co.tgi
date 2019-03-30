@@ -1,0 +1,123 @@
+;;---------------------------------------------- CPCTankCO Portrait --------
+[Thing Template=Portrait]
+{
+	ids = YUN_tank_co_portrait
+	name = "#YUN_tank_co_portrait_name"
+
+	[View]
+	{
+		resource_prefix = YUNTankCo/cpcTankCOPortrait
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+
+		[AspectNormal]
+		{
+			[Animation Template=ObjectAnimationIdle]
+			{
+				ids = idle
+			}
+
+			[Animation Template=ObjectAnimationFidget]
+			{
+				ids = fidget1
+			}
+			
+			[Animation Template=ObjectAnimationFidget]
+			{
+				ids = fidget2
+			}
+			[Animation Template=ObjectAnimationFidget]
+			{
+				ids = talk1
+			}
+
+		}
+	}
+}
+
+
+;;---------------------------------------------- CPCTankCO Unit --------
+
+
+[Template CPCTankCO Template=AAUnitCPCVehicleMediumTank]
+{
+	name = "#YUN_tank_co_Thing_name"
+	
+	[BodyComponent]
+	{
+		health = 440
+		defense = 5
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3.5
+		turn_radians_per_sec = 2
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_01
+			location = exhaust_point_01	
+	  	}
+	}
+	
+	[ElementComponent]
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = captain
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		check_damage_resistance = true
+
+		[Ability template=AATurretAttackLocal]
+		{
+			
+			[AbilityDefinition Template=AAMediumTankGun]
+			{				
+				name = "#cpc_tank_co_AbilityDefinition_name"
+				recharge_time = 6
+				range = 18
+				area = 1
+
+				[Effect Template=APDamageEffect]
+				amount = 65
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+			
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_cannon_medium
+			
+			}
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = YUNTankCO/RUSA20
+
+		portrait_ids = cpc_tank_co_portrait	
+	
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = CPCTankCO/CPCTankCORecoil1.kf
+		}
+	}
+}
+
+[Thing Template=CPCTankCO]
+{
+	IDS = YUN_tank_co
+	editor_name = "#YUN_tank_co_Thing_editor_name"
+}

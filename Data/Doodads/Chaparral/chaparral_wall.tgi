@@ -1,0 +1,51 @@
+
+[Thing Template=AAChaparralDoodad]
+{
+	IDS = chaparral_wall
+	name = "#chaparral_wall_name"
+	
+	[Flags]
+	{
+		random_orientation = false
+		blocking = false
+	}
+
+	[Placement]
+	{
+		[Biome]
+		ids = chaparral
+		weight = 0
+	}
+	
+	[Size]
+	{
+		height = 3
+		scale_min = 1
+		scale_max = 1
+	}
+	
+	[View]
+	{
+		resource_prefix = ChaparralWall/ChaparralWall
+		shadow_type = STENCIL
+		shadow_texture = /effects/shadows/UnitShadow.dds
+
+		[Aspect Template=Aspect]
+		{
+			ids = chaparral_wall01
+			model = %s01.nif
+		}
+		[Aspect Template=Aspect]
+		{
+			ids = chaparral_wall02
+			model = %s02.nif
+		}
+		[Aspect Template=Aspect]
+		{
+			ids = chaparral_wall03
+			model = %s03.nif
+		}
+		
+	}
+}
+

@@ -1,0 +1,71 @@
+[Terrain template=MountainTerrain]
+{
+	IDS = arctic_mountaintrans
+	name = "#arctic_mountaintrans_name"
+	
+	base_priority = 50000
+	terrain_group = snow
+	terrain_color = 0.318, 0.318, 0.318
+
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.00
+
+/********************	MOUNTAIN PARAMETERS		********************/
+
+	noise_min 		= 0.25
+	noise_max 		= 0.55
+	paint_slope 	= 0.10
+	max_slope 		= 0.55
+	paint_max_step 	= 10.0
+	
+/********************	MOUNTAIN VARIATIONS		********************/
+
+	[Variation]
+	IDS = arctic_mountaindirttrans01
+	name = "#arctic_mountaintrans_arctic_mountaindirttrans01_name"
+	texture = ArcticMountainTrans/ArcticMountainDirtTrans01.tga
+	texture_width = 4
+	texture_height = 4
+
+	[Variation]
+	IDS = arctic_mountainforesttrans01
+	name = "#arctic_mountaintrans_arctic_mountainforesttrans01_name"
+	texture = ArcticMountainTrans/ArcticMountainForestTrans01.tga
+	texture_width = 4
+	texture_height = 4
+
+	[Variation]
+	IDS = arctic_mountaingrassdrytrans01
+	name = "#arctic_mountaintrans_arctic_mountaingrassdrytrans01_name"
+	texture = ArcticMountainTrans/ArcticMountainGrassDryTrans01.tga
+	texture_width = 4
+	texture_height = 4
+
+	[Variation]
+	IDS = arctic_mountainpackicetrans01
+	name = "#arctic_mountaintrans_arctic_mountainpackicetrans01_name"
+	texture = ArcticMountainTrans/ArcticMountainPackIceTrans01.tga
+	texture_width = 4
+	texture_height = 4
+
+	[Variation]
+	IDS = arctic_mountainshoretrans01
+	name = "#arctic_mountaintrans_arctic_mountainshoretrans01_name"
+	texture = ArcticMountainTrans/ArcticMountainShoreTrans01.tga
+	texture_width = 4
+	texture_height = 4
+
+	[Variation]
+	IDS = arctic_mountainsnowtrans01
+	name = "#arctic_mountaintrans_arctic_mountainsnowtrans01_name"
+	texture = ArcticMountainTrans/ArcticMountainSnowTrans01.tga
+	texture_width = 4
+	texture_height = 4
+
+	[Variation]
+	IDS = arctic_mountaintundratrans01
+	name = "#arctic_mountaintrans_arctic_mountaintundratrans01_name"
+	texture = ArcticMountainTrans/ArcticMountainTundraTrans01.tga
+	texture_width = 4
+	texture_height = 4
+}

@@ -1,0 +1,82 @@
+[Template AAnedRegimentParatrooperHeavy Template=AAnedOrganizationParatrooper]
+{
+	name = "#regiment_ned_paratrooper_heavy_AAnedRegimentParatrooperHeavy_name"
+	editor_name = "#regiment_ned_paratrooper_heavy_AAnedRegimentParatrooperHeavy_editor_name"
+	
+	[EconomyComponent]
+	{
+		[Upkeep]
+		ammo = 15
+	}	
+
+	[View]
+	{
+		resource_prefix = /Units/ned/nedParatrooper/nedParatrooper
+		icon = /UI/Game/RegimentButtons/IconHeavyParatrooper.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ned_paratrooper_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ned_paratrooper_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ned_paratrooper_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{
+		layout_ids = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = ned_paratrooper
+		
+		[Slot]	;; rear guard 1
+		element_IDS = ned_paratrooper
+
+		[Slot]	;; rear guard 2
+		element_IDS = ned_paratrooper
+		
+		[Slot]	;; rear guard 3
+		element_IDS = ned_paratrooper_mortar
+	
+		[Slot]	;; support
+		element_IDS = ned_paratrooper_mg
+		
+		[Slot]	;; captain
+		element_IDS = ned_paratrooper_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = paratrooper_company
+	}
+}
+
+[Thing Template=AAnedRegimentParatrooperHeavy]
+{
+	IDS = regiment_ned_paratrooper_heavy
+
+	transport_actor = ned_transport_air
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 160
+	}
+
+	[Placement]
+	placement_group_ids = null
+}
+
+[Thing Template=AAnedRegimentParatrooperHeavy]
+{
+	IDS = regiment_ned_paratrooper_heavy_ground
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 80
+	}
+}
