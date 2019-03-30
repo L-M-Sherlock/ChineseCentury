@@ -1,0 +1,52 @@
+/**************************************
+BURNING EFFECTS
+**************************************/
+
+[VFX Template=AAVFXModelPermanent]
+{
+	IDS = armored_car_debris
+	name = "#death_debris_armored_car_debris_name"
+	model = DeathDebris/ArmoredCarDebris.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}	
+}
+
+[VFX Template=AAVFXModelPermanent]
+{
+	IDS = heavy_tank_debris
+	name = "#death_debris_heavy_tank_debris_name"
+	model = DeathDebris/HeavyTankDebris.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}	
+}
+
+[VFX Template=AAVFXModelPermanent]
+{
+	IDS = light_tank_debris
+	name = "#death_debris_light_tank_debris_name"
+	model = DeathDebris/LightTankDebris.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}	
+}
+
+[VFX Template=AAVFXModelPermanent]
+{
+	IDS = medium_tank_debris
+	name = "#death_debris_medium_tank_debris_name"
+	model = DeathDebris/MediumTankDebris.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}	
+}
+

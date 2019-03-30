@@ -1,0 +1,18 @@
+[Thing Template=AASharedDoodad]
+{
+	IDS = docks
+	name = "#docks_name"
+
+	[Flags]
+	random_orientation = false
+	water_based = true
+	
+	[Size]
+	scale_min = 1.0
+	scale_max = 1.0
+	
+	[View]
+	aspects_as_variations = false
+	resource_prefix = Dock/Dock01
+	shadow_type = none
+}

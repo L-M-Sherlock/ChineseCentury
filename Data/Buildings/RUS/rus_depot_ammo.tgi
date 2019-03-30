@@ -1,0 +1,116 @@
+[Thing Template=AARUSBuildingPackableDepot]
+{
+	IDS = rus_depot_ammo
+	name = "#rus_depot_ammo_Thing_name"
+	editor_name = "#rus_depot_ammo_Thing_editor_name"
+
+	[BodyComponent]
+	health = 750
+	defense = 5
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 100
+		
+		[Upkeep]
+		building_limit_consumed = 1
+		
+		[Production]
+		ammo = 50
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = ammo	
+
+		[Property]
+		property_IDS = economic_building
+	}
+
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 8
+	}
+
+	[View]
+	{	
+		resource_prefix = RUSDepotAmmo/RUSDepotAmmo
+		icon = /UI/Game/BuildingButtons/IconDepotAmmo.png
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_depot_dirt
+			terrain_group_filter = dirt
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_depot_desert
+			terrain_group_filter = desert
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_depot_snow
+			terrain_group_filter = snow
+		}
+	
+		[WhenSelected Template=FXC_PlaySFX]
+		{
+			audio_ids = depot_ammo_select
+		}
+		
+		;;----- Spot Lights ----------------------
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_02
+			location = spotlight_ae_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_03
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_04
+			attached = true
+		}		
+	}
+
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_unpacking
+		audio_ids = unpack_7s_sfx
+	}
+
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_packing
+		audio_ids = pack_7s_sfx
+	}
+
+}

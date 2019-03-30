@@ -1,0 +1,66 @@
+[Thing Inherit=VFXProjectedTextureLit]
+{
+	name = "#pearl_harbor_oil_tank03_oil_tank_03_ground_name"
+	texture = PearlHarborOilTanks/OilTank03Ground.dds	
+	IDS = oil_tank_03_ground
+	attached_scale = 0
+	texture_size = 10
+	decal_type = scorch
+}
+
+[Thing Template=AAResource]
+{
+	IDS = oil_tank_03
+	name = "#pearl_harbor_oil_tank03_oil_tank_03_name"
+	editor_name = "#pearl_harbor_oil_tank03_oil_tank_03_editor_name"
+
+	[BodyComponent]
+	{
+		health = 700
+		defense = 12
+	}
+	
+	[Flags]
+	invulnerable = true
+	axis_locked = false
+	
+	[Placement]
+	placement_group_IDS = group_campaign
+	
+	[CityComponent]
+	{
+		zone_radius = 10
+				
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = barbed_wire
+			offset = -6, -6
+			orientation = 0, -1
+		}
+	}
+	
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 6
+	}
+
+	[View]
+	{
+		resource_prefix = PearlHarborOilTanks/OilTank03
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		shadow_type = STENCIL
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = oil_tank_03_ground
+		}		
+	}
+	
+	[EconomyComponent]
+	{
+		[Production]
+		oil = 50		
+	}
+}

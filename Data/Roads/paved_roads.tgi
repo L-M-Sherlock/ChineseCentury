@@ -1,0 +1,44 @@
+[Thing Template=Road]
+{
+	IDS = paved_road_straight
+	name = "#paved_roads_paved_road_straight_name"
+	
+	[View]
+	resource_prefix = PavedRoad/PavedRoadStraight
+}
+
+[Thing Template=Road]
+{
+	IDS = paved_road_curve
+	name = "#paved_roads_paved_road_curve_name"
+	
+	[View]
+	resource_prefix = PavedRoad/PavedRoadCurve01
+}
+
+[Thing Template=Road]
+{
+	IDS = paved_road_bend01
+	name = "#paved_roads_paved_road_bend01_name"
+	
+	[View]
+	resource_prefix = PavedRoad/PavedRoadBend01
+}
+
+[Thing Template=Road]
+{
+	IDS = paved_road_bend02
+	name = "#paved_roads_paved_road_bend02_name"
+	
+	[View]
+	resource_prefix = PavedRoad/PavedRoadBend02
+}
+
+[Thing Template=Road]
+{
+	IDS = paved_road_end
+	name = "#paved_roads_paved_road_end_name"
+	
+	[View]
+	resource_prefix = PavedRoad/PavedRoadEnd
+}

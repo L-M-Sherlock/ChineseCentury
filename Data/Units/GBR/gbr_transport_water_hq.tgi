@@ -1,0 +1,93 @@
+[Thing Template=AAUnitGBRSeaTransport]
+{
+	IDS = gbr_transport_water_hq
+	name = "#gbr_transport_water_hq_name"
+	editor_name = "#gbr_transport_water_hq_editor_name"
+
+	[BodyComponent]
+	{
+		rot_time = 13
+		sink_time = 5
+
+		health = 50
+		defense = 3
+		
+		[WhenHealth Template=FXC_CreateVFX]
+	  	{
+			vfx_ids = gbr_truck_death
+			location = hitch
+			health = 0.0
+			health_trigger_type = ABSOLUTE_BELOW
+	  	}
+	}
+	
+	[DenizenComponent]
+	{
+		[DeploymentInfo]
+		{
+			creation_offset = 0, 2.5
+			deployment_offset = 0, 8
+		}
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 3
+		turn_radius = 0.7
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = corpshq
+	}	
+
+	[View]
+	{
+		resource_prefix = GBRTransportWater/GBRTransportWater
+
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Unload
+			length = 3
+			kf = GBRTransportWater/GBRTransportWaterUnloadTruck.kf
+		}
+	}
+
+	[WhenEnter Template=FXC_PlayObjectAnimation]
+	{
+		actor_state = unloading
+		object_animation_IDS = Unload
+	}
+	
+	[WhenEnter Template=FXC_CreateVFX]
+	{
+		actor_state = structure_normal
+		vfx_ids = gbr_truck_solid
+		at = SELF
+		location = hitch
+		attached = true
+	}
+	
+	[WhenEnter Template=FXC_StopVFX]
+	{
+		actor_state = dead
+		vfx_ids = gbr_truck_solid
+	}
+	
+	[WhenEnter Template=FXC_StopVFX]
+	{
+		actor_state = unloading
+		vfx_ids = gbr_truck_solid
+	}
+	
+	[WhenEnter Template=FXC_CreateVFX]
+	{
+		actor_state = unloading
+		vfx_ids = gbr_truck_fade
+		at = SELF
+		location = hitch
+		attached = true
+	}
+}

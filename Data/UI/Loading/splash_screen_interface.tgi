@@ -1,0 +1,28 @@
+[Loading Inherit=Interface]
+{
+	[View Template=GroupVE]
+	{
+		validate_decal_children = false
+		
+		[Child Template=DecalVE]
+		{
+			L = 0%
+			R = 50%
+
+			texture = /UI/%s/Loading/Textures/SplashScreenLeft.tga
+			stretch = false
+		}
+
+		[Child Template=DecalVE]
+		{
+			L = 50%
+			R = 100%
+
+			texture = /UI/%s/Loading/Textures/SplashScreenRight.tga
+			stretch = false
+		}
+	}
+
+	point2	position_status = 465,680
+	point2	position_build_stamp = 5,750
+}

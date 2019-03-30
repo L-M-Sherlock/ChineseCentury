@@ -1,0 +1,218 @@
+;; --------------------------- Editor Layer - Actors ------------------------
+
+[EditorLayerActors Inherit=EditorPanel]
+{
+
+	[View Template=GroupVE]
+	{
+		[Child Template=GameListboxEditorArtworkGroupVE]
+		{
+			L = 38
+			T = 44
+			R = +146
+			B = +144			
+		}
+	}
+
+	[LayerCloseButton]
+	{
+		[View Template = EditorLayerCloseButtonVE]
+	}
+
+	[PreviewWindow Template=EditorPreviewWindow]
+
+	[ActorKingdomDropDown Inherit=EditorSilverDropDownWidget]
+	{
+		[View]
+		{
+			L = 13
+			T = 187
+			R = +194
+			B = +35
+
+			[Child Template=SharedSmallCenteredLabelVE]
+			T = 142
+			L = 6
+			B = +30
+			text = "#layer_actors_Child_text"
+
+		}
+		
+		
+		[ListBox]
+		sorted = false
+		
+	}
+	
+	[ActorGroupDropDown Inherit=EditorSilverDropDownWidget]
+	{
+		[View]
+		{
+			L = 13
+			T = 219
+			R = +194
+			B = +35
+		}
+
+		[ListBox]
+		num_visible_items = 15
+
+	}
+	
+	[Unit Template=ToggleButtonWidget]
+	{
+		ToolTip = "#layer_actors_Unit_ToolTip"
+	
+		[View Template=GroupVE]
+		{
+			L = 46
+			T = 256
+			R = +32
+			B = +32
+
+			[Child Template=DecalVE]
+			when = UNSELECTED + ENABLED
+			texture = /UI/%s/Editor/Buttons/UnitUnSelected.tga
+
+			[Child Template=DecalVE]
+			when = SELECTED + ENABLED
+			texture = /UI/%s/Editor/Buttons/UnitSelected.tga
+
+			[Child Template=DecalVE]
+			when = DISABLED
+			texture = /UI/%s/Editor/Buttons/UnitDisabled.tga
+		}
+	}
+	
+	[Organization Template=ToggleButtonWidget]
+	{
+		ToolTip = "#layer_actors_Organization_ToolTip"
+	
+		[View Template=GroupVE]
+		{
+			L = 82
+			T = 256
+			R = +32
+			B = +32
+
+			[Child Template=DecalVE]
+			when = UNSELECTED + ENABLED
+			texture = /UI/%s/Editor/Buttons/OrganizationUnselected.tga
+
+			[Child Template=DecalVE]
+			when = SELECTED + ENABLED
+			texture = /UI/%s/Editor/Buttons/OrganizationSelected.tga
+
+			[Child Template=DecalVE]
+			when = DISABLED
+			texture = /UI/%s/Editor/Buttons/OrganizationDisabled.tga
+		}
+	}
+	
+	[Building Template=ToggleButtonWidget]
+	{
+		ToolTip = "#layer_actors_Building_ToolTip"
+	
+		[View Template=GroupVE]
+		{
+			L = 119
+			T = 256
+			R = +32
+			B = +32
+
+			[Child Template=DecalVE]
+			when = UNSELECTED + ENABLED
+			texture = /UI/%s/Editor/Buttons/BuildingUnselected.tga
+
+			[Child Template=DecalVE]
+			when = SELECTED + ENABLED
+			texture = /UI/%s/Editor/Buttons/BuildingSelected.tga
+
+			[Child Template=DecalVE]
+			when = DISABLED
+			texture = /UI/%s/Editor/Buttons/BuildingDisabled.tga
+		}
+	}
+
+	;; TODO: needs art
+	[Truck Template=ToggleButtonWidget]
+	{
+		ToolTip = "#layer_actors_Truck_ToolTip"
+	
+		[View Template=GroupVE]
+		{
+			L = 156
+			T = 256
+			R = +32
+			B = +32
+
+			[Child Template=DecalVE]
+			when = UNSELECTED + ENABLED
+			texture = /UI/%s/Editor/Buttons/TruckUnSelected.tga
+
+			[Child Template=DecalVE]
+			when = SELECTED + ENABLED
+			texture = /UI/%s/Editor/Buttons/TruckSelected.tga
+
+			[Child Template=DecalVE]
+			when = DISABLED
+			texture = /UI/%s/Editor/Buttons/TruckDisabled.tga
+		}
+	}
+	
+
+	[Special Template=ToggleButtonWidget]
+	{
+		ToolTip = "#layer_actors_Special_ToolTip"
+	
+		[View Template=GroupVE]
+		{
+			L = 193
+			T = 256
+			R = +32
+			B = +32
+
+			[Child Template=DecalVE]
+			when = UNSELECTED
+			texture = /UI/%s/Editor/Buttons/SpecialUnselected.tga
+
+			[Child Template=DecalVE]
+			when = SELECTED
+			texture = /UI/%s/Editor/Buttons/SpecialSelected.tga
+		}
+	}
+
+	[ActorListbox Template=EditorSharedListBoxWidget]
+	{
+		num_visible_items = 21
+		vertical_item_offset = 10
+
+		[View Template=GameListboxEditorArtworkGroupVE]
+		{
+			L = 13
+			T = 289
+			R = +196
+			B = +429
+		}
+	}
+
+	[ActorCustomizeOrganizationButton Template=EditorMenuButton]
+	{
+		ToolTip = "#layer_actors_ActorCustomizeOrganizationButton_ToolTip"
+		
+		[View]
+		{
+			L = 32
+			T = 699
+			R = +158
+			B = +35
+
+		}
+		
+		[Client]
+		{
+			[View]
+			text = "#layer_actors_ActorCustomizeOrganizationButton_Client_View_text"
+		}
+	}
+}

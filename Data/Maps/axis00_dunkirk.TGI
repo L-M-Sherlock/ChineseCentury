@@ -1,0 +1,14 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Capture of Dunkirk"
+
+	name_4002 = "Dunkirk"
+	objective_5 = "Capture Dunkirk."
+	kingdom_1 = "Britain"
+	independent_3 = "Civilian"
+	kingdom_0 = "Germany"
+	map_name = "Capture of Dunkirk"
+	name_4028 = "Bergues"
+	map_description = "Following the breathtakingly swift defeat of the French, the British Expeditionary Force has found itself stranded on the beaches of Dunkirk.  Over 300,000 soldiers are trapped without adequate support or room to maneuver.  Destroy them, and ensure that Britain lacks the manpower to threaten the growing German empire."
+}

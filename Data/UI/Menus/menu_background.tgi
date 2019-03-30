@@ -1,0 +1,63 @@
+
+[MenuBackground Inherit=PanelWidget]
+{
+	bool use_bink = True
+	
+	[View Template=GroupVE]
+
+	[IntroCinematic Template = CinematicWidget]
+	{
+		repeating_video = true
+		
+		[VideoResource]
+		video_resource = /Video/MainMenu/Germany.bik
+		
+		[VideoResource]
+		video_resource = /Video/MainMenu/World.bik
+		
+		[VideoResource]
+		video_resource = /Video/Campaign/WorldWar2Start.bik
+		
+		[VideoResource]
+		video_resource = /Video/Campaign/AlliesIntro.bik
+		
+		[VideoResource]
+		video_resource = /Video/Campaign/AxisIntro.bik
+	}
+}
+
+[MenuBackgroundLogo Template = DecalWidget]
+{
+	[View Template = NoVE]
+	{
+		L = 19
+		T = 718
+		R = +103
+		B = +48
+	}
+	
+	[Decal Template = DecalVE]
+	{
+		alpha_blending = true
+		texture = /UI/%s/Default/Menus/MainMenu/MainMenuAtariLogo.tga
+	}
+}
+
+[MiniMenuBackground Template = CinematicWidget]
+{
+	repeating_video = true
+	
+	[View]
+	{
+		L = 852
+		T = 86
+		R = +90
+		B = +90
+	}
+	
+	[VideoResource]
+	video_resource = /Video/MainMenu/AAGlobeBig.bik
+}
+
+
+

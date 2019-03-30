@@ -1,0 +1,169 @@
+;; ------------ Airfields ------------------ ;;
+[Thing Template=AABuildingGroundPlane]
+{
+	IDS = ground_airfield_dirt
+	name = "#ground_planes_ground_airfield_dirt_name"
+    texture = /Shared/SharedTextures/AirfieldGroundTemperate.dds
+    texture_size = 14
+}
+
+[Thing Template=AABuildingGroundPlane]
+{
+	IDS = ground_airfield_snow
+	name = "#ground_planes_ground_airfield_snow_name"
+    texture = /Shared/SharedTextures/AirfieldGroundArctic.dds
+    texture_size = 14
+}
+
+[Thing Template=AABuildingGroundPlane]
+{
+	IDS = ground_airfield_desert
+	name = "#ground_planes_ground_airfield_desert_name"
+    texture = /Shared/SharedTextures/AirfieldGroundDesert.dds
+    texture_size = 14
+}
+
+;; ------------ Corps HQs ------------------ ;;
+
+[Thing Template=AABuildingGroundPlane]
+{
+	IDS = ground_corps_dirt
+	name = "#ground_planes_ground_corps_dirt_name"
+    texture = /Shared/SharedTextures/CorpsGroundTemperate.dds
+    texture_size = 14
+}
+
+[Thing Template=AABuildingGroundPlane]
+{
+	IDS = ground_corps_snow
+	name = "#ground_planes_ground_corps_snow_name"
+    texture = /Shared/SharedTextures/CorpsGroundArctic.dds
+    texture_size = 14
+}
+
+[Thing Template=AABuildingGroundPlane]
+{
+	IDS = ground_corps_desert
+	name = "#ground_planes_ground_corps_desert_name"
+    texture = /Shared/SharedTextures/CorpsGroundDesert.dds
+    texture_size = 14
+}
+
+;; ------------ Division HQs ------------------ ;;
+
+[Thing Template=AABuildingGroundPlane]
+{
+	IDS = ground_hq_infantry_dirt
+	name = "#ground_planes_ground_hq_infantry_dirt_name"
+    texture = /Shared/SharedTextures/HQInfantryGroundTemperate.dds
+    texture_size = 14
+}
+
+[Thing Template=AABuildingGroundPlane]
+{
+	IDS = ground_hq_infantry_snow
+	name = "#ground_planes_ground_hq_infantry_snow_name"
+    texture = /Shared/SharedTextures/HQInfantryGroundArctic.dds
+    texture_size = 14
+}
+
+[Thing Template=AABuildingGroundPlane]
+{
+	IDS = ground_hq_infantry_desert
+	name = "#ground_planes_ground_hq_infantry_desert_name"
+    texture = /Shared/SharedTextures/HQInfantryGroundDesert.dds
+    texture_size = 14
+}
+
+[Thing Template=AABuildingGroundPlane]
+{
+	IDS = ground_hq_vehicle_dirt
+	name = "#ground_planes_ground_hq_vehicle_dirt_name"
+    texture = /Shared/SharedTextures/HQVehicleGroundTemperate.dds
+    texture_size = 14
+}
+
+[Thing Template=AABuildingGroundPlane]
+{
+	IDS = ground_hq_vehicle_snow
+	name = "#ground_planes_ground_hq_vehicle_snow_name"
+    texture = /Shared/SharedTextures/HQVehicleGroundArctic.dds
+    texture_size = 14
+}
+
+[Thing Template=AABuildingGroundPlane]
+{
+	IDS = ground_hq_vehicle_desert
+	name = "#ground_planes_ground_hq_vehicle_desert_name"
+    texture = /Shared/SharedTextures/HQVehicleGroundDesert.dds
+    texture_size = 14
+}
+
+;; ------------ Bunker ------------------ ;;
+
+[Thing Template=AADepotGroundPlaneDirt]
+{
+	name = "#ground_planes_ground_bunker_dirt_name"
+	IDS = ground_bunker_dirt
+    texture_size = 5
+}
+
+[Thing Template=AADepotGroundPlaneSnow]
+{
+	name = "#ground_planes_ground_bunker_snow_name"
+	IDS = ground_bunker_snow
+    texture_size = 5
+}
+
+[Thing Template=AADepotGroundPlaneDesert]
+{
+	name = "#ground_planes_ground_bunker_desert_name"
+	IDS = ground_bunker_desert
+    texture_size = 5
+}
+
+;; ------------ Depots ------------------ ;;
+
+[Thing Template=AADepotGroundPlaneDirt]
+{
+	IDS = ground_depot_dirt
+    name = "#ground_planes_ground_depot_dirt_name"
+    texture_size = 9
+}
+
+[Thing Template=AADepotGroundPlaneSnow]
+{
+	IDS = ground_depot_snow
+    name = "#ground_planes_ground_depot_snow_name"
+    texture_size = 9
+}
+
+[Thing Template=AADepotGroundPlaneDesert]
+{
+	IDS = ground_depot_desert
+    name = "#ground_planes_ground_depot_desert_name"
+    texture_size = 9
+}
+
+;; ------------ Brigades ------------------ ;;
+
+[Thing Template=AADepotGroundPlaneDirt]
+{
+	IDS = ground_brigade_dirt
+    name = "#ground_planes_ground_brigade_dirt_name"
+    texture_size = 12
+}
+
+[Thing Template=AADepotGroundPlaneSnow]
+{
+	IDS = ground_brigade_snow
+    name = "#ground_planes_ground_brigade_snow_name"
+    texture_size = 12
+}
+
+[Thing Template=AADepotGroundPlaneDesert]
+{
+	IDS = ground_brigade_desert
+    name = "#ground_planes_ground_brigade_desert_name"
+    texture_size = 12
+}

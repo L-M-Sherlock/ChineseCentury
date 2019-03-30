@@ -1,0 +1,48 @@
+[Ego template = ArmorLowIncomeEgo]
+{
+	IDS										= montgomery_low_income_ego
+	name									= "#Great_Britain_Montgomery_SAI_montgomery_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorLowLowEgo]
+{
+	IDS										= montgomery_low_low_ego
+	name									= "#Great_Britain_Montgomery_SAI_montgomery_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorMainGameEgo]
+{
+	IDS										= montgomery_main_game_ego
+	name									= "#Great_Britain_Montgomery_SAI_montgomery_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = ArmorEndGameEgo]
+{
+	IDS										= montgomery_end_game_ego
+	name									= "#Great_Britain_Montgomery_SAI_montgomery_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= montgomery_sai
+	name									= "#Great_Britain_Montgomery_SAI_montgomery_sai_name"
+	description								= "#Great_Britain_Montgomery_SAI_montgomery_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= montgomery_low_income_ego
+
+	[Ego]
+	IDS										= montgomery_low_low_ego
+
+	[Ego]
+	IDS										= montgomery_main_game_ego
+
+	[Ego]
+	IDS										= montgomery_end_game_ego
+
+	[Nation]
+	IDS										= nation_gbr
+	
+	[Faction]
+	ids										= montgomery
+} ;; gbr SAI

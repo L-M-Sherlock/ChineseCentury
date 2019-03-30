@@ -1,0 +1,21 @@
+
+[Template SharedReadyStatusGroupVE Template=GroupVE]
+{
+	L = 0
+	T = 0
+	R = +20
+	B = +20
+
+	[Child Template=DecalVE]
+	when = SELECTED
+	texture = /UI/Default/ToggleButton/Selected.tga
+
+	[Child Template=DecalVE]
+	when = UNSELECTED
+	texture = /UI/Default/ToggleButton/Unselected.tga
+}
+
+[Template SharedReadyStatusWidget Template=ToggleButtonWidget]
+{
+	[View Template=SharedReadyStatusGroupVE]
+}

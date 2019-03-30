@@ -1,0 +1,265 @@
+/**************************************************************************
+
+template_property.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: shared properties that actors may have.  
+
+REVISION HISTORY:
+drp090402 - created
+
+USAGE:
+
+	[Property Template=SharedProperty]
+	This node goes at the root level to describe a property that actors may have.
+
+	[IntrinsicProperty Template=IntrinsicProperty]
+	This node goes in an actor's [PropertiesComponent] to to define modifiers that only
+	that actor type has.
+	
+	[Property Template=PropertyReference]
+	This node goes in an actor's [PropertiesComponent] to define shared properties the actor uses.
+
+	[SupportProperty Template=SupportProperty]
+	This node goes in an actor's [ElementComponent] to to define modifiers that only
+	are shared with other actor's in the same organization when this actor is in a support position.
+
+	[Property Template=FilteredProperty]
+	This node can be used so only certain actors are affected by the property.
+
+	[EnchantmentProperty Template=EnchantmentProperty]
+	This node goes in an [Effect template=EnchantmentEffect] node, normally used by abilities.
+	It describes modifiers the target of the ability gets (temporarily).
+
+**************************************************************************/
+
+[Template Property]
+{
+} ; end [Template Property]
+
+;; enabled_target_flags = comma-delimited set of target flags that this property enables in the actor
+
+[Template ModifierProperty inherit=Property]
+{
+	string		enabled_target_flags = null
+	localized	name
+	localized	description = ""
+
+	;; property icon
+	;; - NULL means none (will not show up on UI)
+	;; TODO: should be required in the template, not set to IconPropertyGeneric.tga
+	string		icon = /Properties/PropertyIcons/IconPropertyGeneric.tga
+
+	;; (optional) property icon used on action buttons (only really makes sense for properties
+	;; that can be researched)
+	string		action_button_icon = NULL
+
+	;; allows the property to directly add/subtract to/from the combat value of a unit
+	;; (added/subtracted after all other CV calculations)
+	fixed		performer_cv_bias = 0
+
+	;; comma-delimited list of IDS values of properties that must be present for this
+	;; property to be passed down/up
+	string		required_properties = NULL
+
+	;; if true, property is passed down to recruited actors and denizens whenever appropriate
+	flag		pass_down_recruit = false
+	flag		pass_down_denizen = false
+
+	;; if true, if property is given to organization, it will be passed down the the elements, if
+	;; property is givem to settlement, it will be passed down to structures
+	flag		pass_down_members = true
+
+	;; set to true if property definies a role
+	bool		is_role_property = false
+	
+	string		role_glyph = null
+	
+	[list Modifier Template=Modifier]
+	
+	[list WhenAdded Template=FXC]
+	[list WhenRemoved Template=FXC]
+	[list WhenResearched Template=FXC]
+	
+} ; end [Template ModifierProperty]
+
+[Template SupportProperty Inherit=ModifierProperty]
+{
+	string	IDS
+	flag	is_technology = false
+}
+
+[Template IntrinsicProperty Inherit=ModifierProperty]
+
+[Template SharedProperty Inherit=ModifierProperty]
+{
+	string	IDS
+	flag	is_technology = false
+}
+
+;; enchantment_type = hard-coded value: POISON, DISEASED, MAGICAL
+
+[Template EnchantmentProperty Inherit=SharedProperty]
+{
+	fixed	duration
+	string	enchantment_type
+}
+
+[Template FilteredProperty Inherit=ModifierProperty]
+{
+	;; only applied to actors with the given property
+	string	required_property_IDS
+}
+
+[Template RoleProperty Inherit=SharedProperty]
+{
+	icon = null
+	is_role_property = true
+}
+
+[Template PropertyReference]
+{
+	string	property_IDS
+}
+
+
+/*******************************************************************
+
+EXAMPLES:
+
+[Property template=SharedProperty]
+{
+	IDS = caster
+	name = "Caster"
+
+	enabled_target_flags = manauser
+}
+
+[TargetType template=TargetType]
+{
+	IDS = manauser
+	name = "Mana User"
+}
+
+[Thing template=Unit]
+{
+	ids=warmage
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = caster
+
+		[IntrinsicProperty]
+		{		
+			name = "Warmage Intrinsic"
+			...
+		}
+	}
+
+	[ElementComponent]
+	{
+		[SupportProperty]
+	}
+}
+
+[Property template=SharedProperty]
+{
+	ids = cheap_materials
+	name = "Cheap Production Cost"
+	
+	[Modifer Template=ModifyCostModifier]
+	{
+		required_property_IDS = structure
+		amount = 0.50
+	}
+}
+
+[Thing template=Structure]
+{
+	ids=wizard_tower
+
+	[StructureComponent]
+	{
+		[Property template=SupportProperty]
+		{
+			name = "Wizard Tower Technology"
+			[Modifier template=Blah]
+		}
+
+		[PropertyReference template=PropertyReference]
+		{
+			property_IDS = cheap_materials
+		}
+		
+		[PropertyReference]
+		property_IDS = tough_militia
+	}
+}
+
+LOGIC TO APPLY TECHNOLOGY:
+- when a structure is added to a settlement (i.e. completed or the StructureComponent
+  created) then all support properties are applied to all of the settlement and the structures
+  within the settlement.
+
+EXAMPLE FOR TECHS FOR COMMISSIONED COMPANIES AND MILITIA:
+
+[SupportProperty template=FilteredProperty]
+{
+	IDS = silk_robes
+	name = "Silk Robes"
+		
+	required_property = caster
+
+	[Modifier template=AddModifier]
+	{
+		attribute = defense
+		amount = 2
+	}
+}
+
+[Property template=sharedProperty]
+{
+	IDs = tough_militia
+	name = "Tough Militia"
+
+	actor_property = militia_organization
+
+	[Modifier template=blah]
+	;; defense +2
+}
+
+RECURSIVE IDEA:
+- structure gives property to the settlement, which gives to all its structures
+- before an actor creates another actor (e.g. commissioned company, militia, workers, structure)
+  it runs through all of its properties and checks if any of them has a "ModifyCostModifier".
+- whenever the actor creates another actor (other than structures) it runs through all of its 
+  properties and checks if any of them has a "GivePropertyModifier".
+- it then gives that property to the created actor, provided it matches the property
+  specified within "required_property_ids".
+- if the actor is an organization, they will take the property if any actor
+  in their layout has the matched property
+
+;; the settlement and all structures have this property.
+[Property]
+{
+	;; define the property the settlement and structures get
+	name = “Has Tough Militia”
+	[Modifier template=GivePropertyModifier]
+	{
+		;; this is the property given to commissioned companies and militia
+		[Property Template=FilteredProperty]
+		{
+			required_property_ids = militia
+
+			;; define the property the militia get
+			name = “Tough Militia”
+			[Modifier template=ModifierDV]
+			{
+				delta = +2
+			}
+		}
+	}
+}
+
+*******************************************************************/

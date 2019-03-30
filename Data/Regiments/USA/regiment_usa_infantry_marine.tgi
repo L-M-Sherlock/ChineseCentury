@@ -1,0 +1,61 @@
+[Thing Template=AAUSAOrganizationInfantry]
+{
+	IDS = regiment_usa_infantry_marine
+	name = "#regiment_usa_infantry_marine_name"
+	editor_name = "#regiment_usa_infantry_marine_editor_name"
+	
+	transport_actor = usa_transport_water
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 52
+		
+		[Upkeep]
+		ammo = 15
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/USA/USAInfantryMarine/USAInfantryMarine
+		icon = /UI/Game/RegimentButtons/IconUSAInfantryMarine.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = usa_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = usa_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = usa_infantry_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = usa_infantry_marine
+		
+		[Slot]	;; rear guard 1
+		element_IDS = usa_infantry_marine
+
+		[Slot]	;; rear guard 2
+		element_IDS = usa_infantry_marine
+		
+		[Slot]	;; rear guard 3
+		element_IDS = usa_infantry_mg
+	
+		[Slot]	;; flank
+		element_IDS = usa_infantry_marine
+		
+		[Slot]	;; captain
+		element_IDS = usa_infantry_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = infantry1_company
+	}
+}

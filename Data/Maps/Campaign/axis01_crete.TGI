@@ -1,0 +1,21 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "axis01_crete"
+
+	kingdom_1 = ""
+	kingdom_0 = ""
+	name_9613 = ""
+	name_2591 = ""
+	name_9620 = ""
+	objective_3 = "4.      ."
+	independent_4 = ""
+	name_10453 = ""
+	map_description = ",             .              .                  .                    .            ,                ."
+	restriction_group_0005 = "Units"
+	objective_2 = "3.         .  "
+	name_10451 = ""
+	map_name = "axis01_crete"
+	objective_1 = "2.            ."
+	objective_0 = "1.           ."
+}

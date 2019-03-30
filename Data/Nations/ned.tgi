@@ -1,0 +1,105 @@
+[Nation template=Nation]
+{
+	ids = nation_ned
+	name = "#ned_name"
+	game_music = ned_ambient
+	placement_group_IDS = group_nation_ned
+
+	string loading_texture_left = NED/SplashScreenLeft.png
+	string loading_texture_right = NED/SplashScreenRight.png
+	
+	;; srp060104 - Added WAD to depot list.
+    depot_name = Skins/NED.rwd,Skins/NED/
+	;; depot_name = Skins/NED/
+	
+	factions = doorman, overakker, vanoyen, voorst
+	resource_prefix = ned/ned
+	stats_icon = ned/ned.tga
+	
+	flag_icon = /UI/%s/Default/Staging/FlagNED.png
+
+	[Placeholder]
+	placeholder_IDS = placeholder_corpsunpacked
+	thing_ids = ned_corps
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_airfield
+	thing_IDS = ned_airfield
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_bunker
+	thing_IDS = ned_bunker
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_bunker_antiaircraft
+	thing_IDS = ned_bunker_aa
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_bunker_artillery
+	thing_IDS = ned_bunker_artillery
+
+	[Placeholder]
+	placeholder_IDS = placeholder_depot_supply
+	thing_IDS = ned_truck_supply
+
+	[Badge]
+	badge_texture = ned/NEDBadge01.png
+	
+	[Badge]
+	badge_texture = ned/NEDBadge02.png
+	
+	[Badge]
+	badge_texture = ned/NEDBadge03.png
+	
+	[Badge]
+	badge_texture = ned/NEDBadge04.png
+	
+	[Badge]
+	badge_texture = ned/NEDBadge05.png
+
+	[Badge]
+	badge_texture = ned/NEDBadge06.png
+	
+	[Badge]
+	badge_texture = ned/NEDBadge07.png
+
+	[Badge]
+	badge_texture = ned/NEDBadge08.png
+
+	[Badge]
+	badge_texture = ned/NEDBadge09.png
+	
+	[Badge]
+	badge_texture = ned/NEDBadge10.png
+	
+	[Badge]
+	badge_texture = ned/NEDBadge11.png
+
+	[Badge]
+	badge_texture = ned/NEDBadge12.png
+
+	[Badge]
+	badge_texture = ned/NEDBadge13.png
+
+	[Badge]
+	badge_texture = ned/NEDBadge14.png
+
+	[Badge]
+	badge_texture = ned/NEDBadge15.png
+
+	[Badge]
+	badge_texture = ned/NEDBadge16.png
+
+	[Badge]
+	badge_texture = ned/NEDBadge17.png
+
+	[Badge]
+	badge_texture = ned/NEDBadge18.png
+
+	[Badge]
+	badge_texture = ned/NEDBadge19.png
+
+	[Badge]
+	badge_texture = ned/NEDBadge20.png
+	
+}

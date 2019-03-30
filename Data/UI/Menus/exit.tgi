@@ -1,0 +1,23 @@
+
+;; ---------------------------- Exit Interface ----------------------------
+[ExitInterface Inherit=Interface]
+{
+	[View Template=NoVE]
+
+	[ScreenImage Inherit=DecalWidget]
+	{
+		[View Template=NoVE]
+
+		[Decal Template=DecalVE]
+		texture = NULL		;; set by code
+
+		[Image]
+		texture = UI/TEST/exit_screens/screen1.tga
+
+		[Image]
+		texture = UI/TEST/exit_screens/screen2.tga
+
+		[Image]
+		texture = UI/TEST/exit_screens/screen3.tga
+	}
+}

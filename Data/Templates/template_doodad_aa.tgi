@@ -1,0 +1,401 @@
+/**************************************************************************
+
+template_doodad_aa.tgi
+Copyright © 2002-2004 TimeGate Studios
+
+DESCRIPTION:  templates for AA doodads.
+
+REVISION HISTORY:
+drp120302 - created
+
+USAGE:
+
+	[Thing Template=AADoodad]
+	This node goes at the root level and defines a doodad that can be 
+	instantiated in the game.
+	
+**************************************************************************/
+
+[template AADoodad template=Object]
+{
+	[Flags]
+	random_orientation = true
+	blocking = false
+
+	[Size]
+	height = 2
+	scale_min = .90
+	scale_max = 1.20
+
+	[View]
+	aspects_as_variations = true
+}
+
+[template AADynamicDoodad template=DynamicDoodad]
+{
+	[Flags]
+	random_orientation = true
+	blocking = false
+
+	[Size]
+	height = 2
+	scale_min = .90
+	scale_max = 1.20
+
+	[View]
+	aspects_as_variations = true
+}
+
+[Template AADoodadAudio Template=AADynamicDoodad]
+{
+	[Component Template=DisturbableDynamicDoodadComponent]
+	{
+		update_time = 5
+		affect_radius = 4
+		recharge_time_min = 30
+		recharge_time_max = 60
+	
+		[Action Template=FXC_PlayObjectAnimation]
+		object_animation_IDS = speaker
+	}
+	
+	[Flags]
+	random_orientation = false
+	ethereal = true
+	invisible = true
+	
+	[View]
+	aspects_as_variations = false
+	resource_prefix = Speaker/Speaker
+}
+
+;; brw090504 - This is not a doodad, but an actor to be used for doodads
+;;   that are placed by hand, and loop continually.
+
+[Template AADoodadAudioPermanent Template=Actor]
+{
+	category = UNIT
+	
+	[Flags]
+	ownable = false
+	targetable = false
+	blocking = false
+	ethereal = true
+	invisible = true
+	invulnerable = true
+	radar = false
+	
+	[Placement]
+	placement_group_ids = group_ambient
+
+	[View]
+	resource_prefix = Speaker/Speaker
+
+}
+
+;; -----------------------------------------------------------------------------------------
+
+[template AAArcticDoodad Template=AADoodad]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = boreal_forest
+		weight = 0.0
+
+		[Biome]
+		IDS = arctic_tundra
+		weight = 0.0
+	}
+}
+
+
+
+[template AAArcticDynamicDoodad Template=AADynamicDoodad]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = boreal_forest
+		weight = 0.0
+		
+		[Biome]
+		IDS = arctic_tundra
+		weight = 0.0
+	}
+}
+
+[template AAArcticAudioDoodad Template=AADoodadAudio]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = boreal_forest
+		weight = 0.0
+
+		[Biome]
+		IDS = arctic_tundra
+		weight = 0.0
+	}
+}
+
+[template AAChaparralDoodad Template=AADoodad]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = chaparral
+		weight = 0.0
+	}
+	
+}
+
+[template AAChaparralDynamicDoodad Template=AADynamicDoodad]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = chaparral
+		weight = 0.0
+	}
+	
+}
+
+[template AAChaparralAudioDoodad Template=AADoodadAudio]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = chaparral
+		weight = 0.0
+	}
+}
+
+[template AADesertDoodad Template=AADoodad]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = desert
+		weight = 0.0
+	}
+}
+
+[template AADesertDynamicDoodad Template=AADynamicDoodad]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = desert
+		weight = 0.0
+	}
+}
+
+[template AADesertAudioDoodad Template=AADoodadAudio]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = desert
+		weight = 0.0
+	}
+}
+
+[template AATemperateDoodad Template=AADoodad]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = temperate_grassland
+		weight = 0.0
+
+		[Biome]
+		IDS = temperate_forest
+		weight = 0.0
+	}
+}
+
+[template AATemperateDynamicDoodad Template=AADynamicDoodad]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = temperate_grassland
+		weight = 0.0
+
+		[Biome]
+		IDS = temperate_forest
+		weight = 0.0
+	}
+}
+
+[template AATemperateAudioDoodad Template=AADoodadAudio]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = temperate_grassland
+		weight = 0.0
+
+		[Biome]
+		IDS = temperate_forest
+		weight = 0.0
+	}
+}
+
+[template AATropicalDoodad Template=AADoodad]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = tropical_savannah
+		weight = 0.0
+		
+		[Biome]
+		IDS = tropical_forest
+		weight = 0.0
+	}
+}
+
+[template AATropicalDynamicDoodad Template=AADynamicDoodad]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = tropical_savannah
+		weight = 0.0
+		
+		[Biome]
+		IDS = tropical_forest
+		weight = 0.0
+	}
+}
+
+[template AATropicalAudioDoodad Template=AADoodadAudio]
+{
+	[Placement]
+	{
+		[Biome]
+		IDS = tropical_savannah
+		weight = 0.0
+		
+		[Biome]
+		IDS = tropical_forest
+		weight = 0.0
+	}
+}
+
+[Template AASharedDoodad Template=AADoodad]
+{
+	[Placement]
+	{		
+		[Biome]
+		IDS = boreal_forest
+		weight = 0.0
+		
+		[Biome]
+		IDS = arctic_tundra
+		weight = 0.0
+		
+		[Biome]
+		IDS = chaparral
+		weight = 0.0
+
+		[Biome]
+		IDS = desert
+		weight = 0.0
+		
+		[Biome]
+		IDS = temperate_grassland
+		weight = 0.0
+		
+		[Biome]
+		IDS = temperate_forest
+		weight = 0.0
+		
+		[Biome]
+		IDS = tropical_forest
+		weight = 0.0
+		
+		[Biome]
+		IDS = tropical_savannah
+		weight = 0.0
+	}
+}
+
+[Template AASharedDynamicDoodad Template=AADynamicDoodad]
+{
+	[Placement]
+	{		
+		[Biome]
+		IDS = boreal_forest
+		weight = 0.0
+		
+		[Biome]
+		IDS = arctic_tundra
+		weight = 0.0
+		
+		[Biome]
+		IDS = chaparral
+		weight = 0.0
+
+		[Biome]
+		IDS = desert
+		weight = 0.0
+		
+		[Biome]
+		IDS = temperate_grassland
+		weight = 0.0
+		
+		[Biome]
+		IDS = temperate_forest
+		weight = 0.0
+		
+		[Biome]
+		IDS = tropical_forest
+		weight = 0.0
+		
+		[Biome]
+		IDS = tropical_savannah
+		weight = 0.0
+	}
+}
+
+
+[Template AASharedAudioDoodad Template=AADoodadAudio]
+{
+	[Placement]
+	{		
+		[Biome]
+		IDS = boreal_forest
+		weight = 0.0
+		
+		[Biome]
+		IDS = arctic_tundra
+		weight = 0.0
+		
+		[Biome]
+		IDS = chaparral
+		weight = 0.0
+
+		[Biome]
+		IDS = desert
+		weight = 0.0
+		
+		[Biome]
+		IDS = temperate_grassland
+		weight = 0.0
+		
+		[Biome]
+		IDS = temperate_forest
+		weight = 0.0
+		
+		[Biome]
+		IDS = tropical_forest
+		weight = 0.0
+		
+		[Biome]
+		IDS = tropical_savannah
+		weight = 0.0
+	}
+}

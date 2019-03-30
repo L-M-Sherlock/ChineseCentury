@@ -1,0 +1,107 @@
+[Thing Template=AABuilding]
+{
+	IDS = normandy_beach_bunker_artillery02
+	name = "#normandy_beach_bunker_artillery02_name"
+	editor_name = "#normandy_beach_bunker_artillery02_editor_name"
+
+	[BodyComponent]
+	{
+		captureable = true
+		health = 700
+		defense = 12
+	}
+	
+	[ConstructionComponent]
+	{
+		construction_node_name_prefix = Stage
+		finished_node_name = Final
+		can_sell = false
+		can_raze = false
+	}
+	
+	[DefenderComponent]
+	{
+		control_range = 25
+			
+		[Ability Template=AATurretAttackLocal]
+		{
+			turret_ids = Turret
+						
+			[AbilityDefinition Template=AABunkerAttackArtilleryDefender]
+			{
+				name = "#normandy_beach_bunker_artillery02_DefenderComponent_AbilityDefinition_name"
+				range = 25
+				recharge_time = 15
+				targets = +enemy, -air, -mine, -building
+
+				[Effect Template=BlastDamageEffect]
+				amount = 100
+
+				[WhenDo Inherit=AAFXCTankShot01]
+
+			}
+		}	
+	}
+	
+	[DetectionComponent]
+	{
+		detection_range = 25
+	}
+
+	[EconomyComponent]
+
+	[Flags]
+	{
+		axis_locked = false
+	}	
+	
+	[Placement]
+	{
+		placement_group_IDS = group_campaign
+	}
+
+	[PropertiesComponent]
+	
+	[Size]
+	{
+		height = 2
+		blocking_shape = SQUARE
+		square_size = 10
+		fixed scale_min = 1.25
+		fixed scale_max = 1.25
+	}
+
+	[View]
+	{
+		resource_prefix = NormandyBeachBunkerArtillery02/NormandyBeachBunkerArtillery02
+	}
+
+	[PerformerComponent]
+	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 15
+			yaw_rotation_range_degrees = 70
+			yaw_start_degrees = 0
+			offset = 0.716,-0.964
+			
+		}
+		
+		[Ability Template=AATurretAttackLocal]
+		{
+			turret_ids = Turret
+						
+			[AbilityDefinition Template=AABunkerAttackArtilleryBombard]
+			{
+				name = "#normandy_beach_bunker_artillery02_AbilityDefinition_name"
+				range = 50
+				recharge_time = 16
+
+				[Effect Template=BlastDamageEffect]
+				amount = 100
+
+				[WhenDo Inherit=AAFXCTankShot01]
+			}	
+	}
+}

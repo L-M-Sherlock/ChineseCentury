@@ -1,0 +1,19 @@
+[Thing Inherit=AATrailerTwoTires]
+{
+	IDS = usa_trailer_armor
+	name = "#usa_trailer_armor_name"
+	editor_name = "#usa_trailer_armor_editor_name"
+
+	[MoverComponent]
+	{
+		[TrailerHitch]		
+		;; node name and node offset of the truck's hitch
+		node_ids = hitch
+		node_offset = 0, 1.5, .8
+	}
+	
+	[View]
+	{
+		resource_prefix = USATrailerArmor/USATrailerArmor
+	}
+}

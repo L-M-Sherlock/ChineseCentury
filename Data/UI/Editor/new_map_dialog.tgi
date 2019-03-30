@@ -1,0 +1,152 @@
+
+;; --------------------------- New Map Dialog ---------------------------
+
+[NewMapDialog Inherit=PanelWidget]
+{
+	[View Template=GroupVE]
+	{
+		L = 342
+		T = 101
+		R = +338
+		B = +518
+
+		[Child Template=EditorBackgroundPanelGroupVE]
+
+		;;  Map Size Label
+		[Child Template=SharedSmallLeftLabelVE]
+		{
+			L = 54
+			T = 44
+			text = "#new_map_dialog_Child_text_2"
+		}
+		
+		;;  Biome Label
+		[Child Template=SharedSmallLeftLabelVE]
+		{
+			L = 54
+			T = 107
+			text = "#new_map_dialog_Child_text_3"
+		}
+		
+		;;  Weather Label
+		[Child Template=SharedSmallLeftLabelVE]
+		{
+			L = 54
+			T = 170
+			text = "#new_map_dialog_Child_text_4"
+		}
+	
+		;;  Sides Label
+		[Child Template=SharedSmallLeftLabelVE]
+		{
+			L = 54
+			T = 231
+			text = "#new_map_dialog_Child_text_5"
+		}
+	}
+	
+	[NewMapDialogClose Template=EditorMenuButton]
+	{
+		[Client]
+		{
+			[View]
+			text = "#new_map_dialog_NewMapDialogClose_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 54
+			T = 385
+			R = +226
+			B = +35
+		}
+	}
+	
+	[NewMapDialogGenerateMap Template=EditorMenuButton]
+	{
+		[Client]
+		{
+			[View]
+			text = "#new_map_dialog_NewMapDialogGenerateMap_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 54
+			T = 342
+			R = +226
+			B = +35
+		}
+	}
+		
+	[NewMapDialogMapSize Template=EditorSilverDropDownWidget]
+	{
+		[View]
+		{
+			L = 50
+			T = 60
+			R = +232
+			
+		}
+		[Listbox]
+		{
+			sorted = false
+		}
+	}
+		
+	[NewMapDialogBiomeDropdown Template=EditorSilverDropDownWidget]
+	{
+		[View]
+		{
+			L = 50
+			T = 122
+			R = +232
+			
+		}
+	}
+	
+	[NewMapDialogWeatherDropdown Template=EditorSilverDropDownWidget]
+	{
+		[View]
+		{
+			L = 50
+			T = 185
+			R = +232
+			
+		}
+	}
+	
+	[NewMapKingdomDropdown Template=EditorSilverDropDownWidget]
+	{	
+		[View]
+		{
+			L = 50
+			T = 248
+			R = +232
+		}
+		[Listbox]
+		{
+			sorted = false
+		}
+	}
+	
+	;;  Place doodads checkbox
+	[NewMapAutoDoodifyToggle Template = ToggleButtonWidget]
+	{
+		[View Template = GroupVE]
+		{
+			L = 54
+			T = 296
+			R = +150
+			B = +23
+			
+			[Child Template = SharedToggleButtonGroupVE]
+			L = 0
+			
+			[Child Template = SharedSmallLeftLabelVE]
+			L = 35
+			T = 2
+			text = "#new_map_dialog_Child_text_6"
+		}
+	}
+}

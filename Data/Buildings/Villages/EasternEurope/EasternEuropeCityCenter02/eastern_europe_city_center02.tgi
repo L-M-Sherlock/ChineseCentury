@@ -1,0 +1,108 @@
+[Template EasternEuropeCity02 Template=AACityCenterEasternEurope]
+{
+	name = "#eastern_europe_city_center02_EasternEuropeCity02_name"
+	
+	[CityComponent]
+	{
+		zone_radius = 0
+				
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = -5.41, -5.47
+			orientation = 0, 1
+			
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = -5.41, 5.79
+			orientation = 0, 1
+			
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 5.94, -5.47
+			orientation = 0, 1
+			
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 5.94, 5.79
+			orientation = 0, 1
+		}
+	}
+
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 12
+
+	[View]
+	{
+		resource_prefix = EasternEuropeCityCenter02/EasternEuropeCityCenter02
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_IDS = city_name_vfx
+			location = base
+		}
+	}
+}
+
+;; ----------- RANDOM MAP -------- ;;
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = eastern_europe_city_center02
+	editor_name = "#eastern_europe_city_center02_Thing_editor_name"
+
+	[CityComponent]
+	{
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = temperate_trees
+			offset = -6, -6
+			orientation = 0, 1
+		}
+	}
+	
+	[RandomActor]
+	random_actor_ids = random_city_eastern_europe
+	fixed weight = 0.8
+}
+
+;; ------------ CAMPAIGN --------------- ;;
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = eastern_europe_city_center02_large
+	editor_name = "#eastern_europe_city_center02_large_editor_name"
+
+	;; brw071604 - uncomment after use in campaign
+	;;[Placement]
+	;;placement_group_ids = null
+
+	[EconomyComponent Template=EconomyComponentCityLarge]
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutEasternEuropeCampaignLarge01]
+	}
+}
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = eastern_europe_city_center02_small
+	editor_name = "#eastern_europe_city_center02_small_editor_name"
+
+	;; brw071604 - uncomment after use in campaign
+	;;[Placement]
+	;;placement_group_ids = null
+
+	[EconomyComponent Template=EconomyComponentCitySmall]
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutEasternEuropeCampaignSmall01]
+
+		[Layout Template=LayoutEasternEuropeCampaignSmall02]
+	}
+}

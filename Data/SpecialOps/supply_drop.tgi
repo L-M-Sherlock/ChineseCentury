@@ -1,0 +1,73 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[Template AAAbilityDefSupplyDrop Template=AASpecialOp]
+{
+	IDS = supply_drop
+	name = "#supply_drop_name"
+	description = "#supply_drop_description"
+	targets = NULL
+	recharge_time = 600
+	range = 0
+	area = 0
+
+	icon = /UI/%s/Game/SpecialOps/IconSupplyDrop.png
+
+	[Flags]
+	target_location = true
+
+	[Effect Template=SummonEffect]
+	hide_from_tooltip = true
+	object_ids = smoke_grenade
+}
+
+;; ---------------------- Special Op Supply Drop -------------------- ;;
+
+[AbilityDefinition Template=AAAbilityDefSupplyDrop]
+{
+	IDS = gbr_supply_drop
+	
+	[Effect Template=SummonEffect]
+	object_ids = gbr_provisions
+}
+
+[AbilityDefinition Template=AAAbilityDefSupplyDrop]
+{
+	IDS = ger_supply_drop
+	
+	[Effect Template=SummonEffect]
+	object_ids = ger_provisions
+}
+
+[AbilityDefinition Template=AAAbilityDefSupplyDrop]
+{
+	IDS = jpn_supply_drop
+	
+	[Effect Template=SummonEffect]
+	object_ids = jpn_provisions
+}
+
+[AbilityDefinition Template=AAAbilityDefSupplyDrop]
+{
+	IDS = rus_supply_drop
+	
+	[Effect Template=SummonEffect]
+	object_ids = rus_provisions
+}
+
+[AbilityDefinition Template=AAAbilityDefSupplyDrop]
+{
+	IDS = usa_supply_drop
+	
+	[Effect Template=SummonEffect]
+	object_ids = usa_provisions
+}
+
+[AbilityDefinition Template=AAAbilityDefSupplyDrop]
+{
+	IDS = rus_supply_drop_tutorial
+	recharge_time = 15
+	
+	[Effect Template=SummonEffect]
+	object_ids = rus_provisions
+}

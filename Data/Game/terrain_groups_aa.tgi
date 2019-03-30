@@ -1,0 +1,43 @@
+/* TerrainGroup setup
+
+ick - 061003 - Elaborated on drp's initial setup
+
+
+
+
+[TerrainGroup template=TerrainGroup]
+{
+	ids = grass
+	name = "#terrain_groups_aa_grass_name"
+}
+*/
+
+[TerrainGroup template=TerrainGroup]
+{
+	ids = dirt
+	name = "#terrain_groups_aa_dirt_name"
+}
+
+[TerrainGroup template=TerrainGroup]
+{
+	ids = snow
+	name = "#terrain_groups_aa_snow_name"
+}
+/*
+[TerrainGroup template=TerrainGroup]
+{
+	ids = sand
+	name = "#terrain_groups_aa_sand_name"
+}
+*/
+[TerrainGroup template=TerrainGroup]
+{
+	ids = water
+	name = "#terrain_groups_aa_water_name"
+}
+
+[TerrainGroup template=TerrainGroup]
+{
+	ids = desert
+	name = "#terrain_groups_aa_desert_name"
+}

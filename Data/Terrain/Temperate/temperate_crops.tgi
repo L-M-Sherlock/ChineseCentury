@@ -1,0 +1,27 @@
+[Terrain template=Terrain]
+{
+	IDS = temperate_crops
+	name = "#temperate_crops_name"
+	
+	base_priority = 13000
+	terrain_group = dirt
+	
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.00
+	
+	[Variation]
+	IDS = temperate_crops01
+	name = "#temperate_crops_01_name"
+	texture = TemperateCrops/TemperateCrops01.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.302, 0.455, 0.133
+
+	[Variation]
+	IDS = temperate_crops02
+	name = "#temperate_crops_02_name"
+	texture = TemperateCrops/TemperateCrops02.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.312, 0.445, 0.143
+}

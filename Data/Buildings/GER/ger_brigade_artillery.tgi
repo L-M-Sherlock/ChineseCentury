@@ -1,0 +1,234 @@
+[Thing Template=AAGERBuildingPackable]
+{
+	IDS = ger_brigade_artillery
+	name = "#ger_brigade_artillery_Thing_name"
+	editor_name = "#ger_brigade_artillery_Thing_editor_name"
+
+	[BodyComponent]
+	health = 750
+	defense = 5
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 150
+		
+		[Production]
+		ammo = 50
+		
+		[Upkeep]
+		building_limit_consumed = 0
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = artillery_brigade
+
+		[Property]
+		property_IDS = economic_building
+
+		[Property]
+		property_IDS = ammo
+	}	
+		
+	[ResearchComponent]
+	{
+		
+		[ResearchItem]
+		{
+			property_IDS = tech_gyrostabilized_cannons
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 150
+			}
+		}	
+		
+		[ResearchItem]
+		{
+			property_IDS = tech_improved_fire_control
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 125
+			}
+		}	
+
+		[ResearchItem]
+		{
+			property_IDS = tech_improved_mortars
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 100
+			}
+		}
+			
+		[ResearchItem]
+		{
+			property_IDS = tech_tank_production
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 150
+			}
+		}		
+	}
+
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 8
+	}
+	
+	[View]
+	{
+		resource_prefix = GERBrigadeArtillery/GERBrigadeArtillery
+		icon = /UI/Game/BuildingButtons/IconBrigadeArtillery.png
+		
+		[TextureSearchPath]
+		path = /Buildings/GER/GERBunkerArtillery
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_brigade_dirt
+			terrain_group_filter = dirt
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_brigade_desert
+			terrain_group_filter = desert
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_brigade_snow
+			terrain_group_filter = snow
+		}
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		{
+			audio_ids = brigade_artillery_select
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_03
+			location = spotlight_ae_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_02_bright
+			location = spotlight_ae_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = door_large
+			location = door_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = door_large
+			location = door_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin_dim
+			location = window_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_03
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_04
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin_dim
+			location = window_05
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin_dim
+			location = window_06
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_07
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_08
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_09
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin_dim
+			location = window_10
+			attached = true
+		}
+	}
+
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_packing
+		audio_ids = pack_7s_sfx
+	}
+	
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_unpacking
+		audio_ids = unpack_7s_sfx
+	}
+}

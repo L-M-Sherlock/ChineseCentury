@@ -1,0 +1,13 @@
+[Thing Template=AAUnitFINAirplaneBomber]
+{
+	IDS = fin_transport_air
+	name = "#fin_transport_air_name"
+	editor_name = "#fin_transport_air_editor_name"
+
+	[View]
+	resource_prefix = FINTransportAir/FINTransportAir
+
+	[BodyComponent]
+	health = 500
+	defense = 0
+}

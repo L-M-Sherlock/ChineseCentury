@@ -1,0 +1,17 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "(3v3) Firefight"
+
+	kingdom_1 = "Side 1"
+	kingdom_0 = "Side 0"
+	independent_6 = "Native-Hostile"
+	team_1 = "Team 1"
+	map_description = "Three vs three elimination map."
+	team_0 = "Team 0"
+	kingdom_5 = "Side 5"
+	kingdom_4 = "Side 4"
+	map_name = "(3v3) Firefight"
+	kingdom_3 = "Side 3"
+	kingdom_2 = "Side 2"
+}

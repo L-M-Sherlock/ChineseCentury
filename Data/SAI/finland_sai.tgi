@@ -1,0 +1,50 @@
+[Ego template = MechanizedLowIncomeEgo]
+{
+	IDS										= fin_low_income_ego
+	name									= "#finland_sai_fin_low_income_ego_unit_limit_max_needed_name"
+} ;; LowIncomeEgo
+
+[Ego template = MechanizedMainGameEgo]
+{
+	IDS										= fin_main_game_ego
+	name									= "#finland_sai_fin_main_game_ego_unit_limit_max_needed_name"
+} ;; MainGameEgo
+
+[Ego template = MechanizedEndGameEgo]
+{
+	IDS										= fin_end_game_ego
+	name									= "#finland_sai_fin_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= fin_sai
+	name									= "#finland_sai_fin_sai_name_2"
+	description								= "#finland_sai_fin_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+	public									= false
+
+	initial_ego								= fin_low_income_ego
+
+	[Ego]
+	IDS										= fin_main_game_ego
+
+	[Ego]
+	IDS										= fin_end_game_ego
+
+	[Nation]
+	IDS										= nation_fin
+	
+	[Faction]
+	ids										= hannuksela
+	
+	[Faction]
+	ids										= mannerheim
+	
+	[Faction]
+	ids										= pajari
+	
+	[Faction]
+	ids										= talvela
+	
+} ;; fin SAI

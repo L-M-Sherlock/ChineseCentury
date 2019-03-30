@@ -1,0 +1,45 @@
+[Ego template = artilleryLowIncomeEgo]
+{
+	IDS										= voorst_low_income_ego
+	name									= "#Neatherland_Voorst_SAI_voorst_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = artilleryLowLowEgo]
+{
+	IDS										= voorst_low_low_ego
+	name									= "#Neatherland_Voorst_SAI_voorst_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = artilleryMainGameEgo]
+{
+	IDS										= voorst_main_game_ego
+	name									= "#Neatherland_Voorst_SAI_voorst_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = artilleryEndGameEgo]
+{
+	IDS										= voorst_end_game_ego
+	name									= "#Neatherland_Voorst_SAI_voorst_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= voorst_sai
+	name									= "#Neatherland_Voorst_SAI_voorst_sai_name"
+	description								= "#Neatherland_Voorst_SAI_voorst_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= voorst_low_income_ego
+
+	[Ego]
+	IDS										= voorst_main_game_ego
+
+	[Ego]
+	IDS										= voorst_end_game_ego
+
+	[Nation]
+	IDS										= nation_ned
+	
+	[Faction]
+	ids										= voorst
+} ;; von_manstein SAI

@@ -1,0 +1,54 @@
+[Thing Template=AAJPNOrganizationArmor]
+{	
+	IDS = regiment_jpn_tankette
+	name = "#regiment_jpn_tankette_name"
+	editor_name = "#regiment_jpn_tankette_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 50
+		
+		[Upkeep]
+		ammo = 10
+		oil = 10
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/JPN/JPNTankette/JPNTankette
+		icon = /UI/Game/RegimentButtons/IconJPNTankette.png
+		
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = jpn_vehicle_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = jpn_tankette_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = jpn_tankette_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = jpn_tankette_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_heavy
+		
+		[Slot]	;; front
+		element_IDS = jpn_tankette
+	
+		[Slot]	;; support
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = jpn_tank_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = tank_company
+	}
+}

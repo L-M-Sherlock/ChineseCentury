@@ -1,0 +1,1153 @@
+;; --------------------------- Kingdom Editing Dialog ---------------------------
+
+[KingdomEditingDialog Inherit=EditorPanel]
+{
+	[View]
+	{
+		L = 0
+		T = 109
+		R = +1023
+		B = +554
+		
+		;;  "Sides and Teams" Label
+		[Child Template=SharedSmallLeftLabelVE]
+		{
+			L = 41
+			T = 28
+			text = "#kingdom_editing_Child_text_2"
+		}
+	}
+	
+	[KingdomAndTeamPanel Inherit = SharedPanelWidget]
+	{
+		[View]
+		{
+			L = 30
+			T = 54
+			R = +226
+			B = +308
+		}
+		
+		[KingdomAndTeamListbox Inherit=EditorScreenSharedListBoxWidgetNoDecals]
+		{
+			num_visible_items = 20
+			
+			sorted = false
+
+			[View Template=GameListboxEditorArtworkGroupVE]
+		}
+	}	
+	
+	[MajorKingdomPushButton Template=EditorMenuButton]
+	{
+		ToolTip = "#kingdom_editing_MajorKingdomPushButton_ToolTip"
+	
+		[Client]
+		{
+			[View]
+			text = "#kingdom_editing_MajorKingdomPushButton_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 27
+			T = 372
+			R = +227
+			B = +35
+		}
+	}
+	
+	[IndependentKingdomPushButton Template=EditorMenuButton]
+	{
+		ToolTip = "#kingdom_editing_IndependentKingdomPushButton_ToolTip"
+	
+		[Client]
+		{
+			[View]
+			text = "#kingdom_editing_IndependentKingdomPushButton_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 27
+			T = 409
+			R = +227
+			B = +35
+		}
+	}
+
+	[TeamPushButton Template=EditorMenuButton]
+	{
+		ToolTip = "#kingdom_editing_TeamPushButton_ToolTip"
+	
+		[Client]
+		{
+			[View]
+			text = "#kingdom_editing_TeamPushButton_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 27
+			T = 446
+			R = +227
+			B = +35
+		}
+	}
+	
+	[DeleteSelectedItemPushButton Template=EditorMenuButton]
+	{
+		ToolTip = "#kingdom_editing_DeleteSelectedItemPushButton_ToolTip"
+	
+		[Client]
+		{
+			[View]
+			text = "#kingdom_editing_DeleteSelectedItemPushButton_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 27
+			T = 483
+			R = +227
+			B = +35
+		}
+	}
+
+;; items on this panel are only visible when a kingdom is selected.
+	[SelKingdom Inherit=PanelWidget]
+	{
+		[View Template=GroupVE]
+		{
+			L = 220
+			T = 20
+			B = 30b
+
+			;;  "Side Relations" label
+			[Child Template=SharedSmallLeftLabelVE]
+			{
+				T = 8
+				L = 555
+				text = "#kingdom_editing_Child_text_3"
+				font = small
+			}
+		}
+
+		[AllyIcon Template=DecalWidget]
+		{
+			ToolTip = "#kingdom_editing_SelKingdom_AllyIcon_ToolTip"
+		
+			[View Template=NoVE]
+			L = 704
+			T = 10
+			R = +16
+			B = +16
+						
+			[Decal Template=DecalVE]
+			texture = /Fonts/Small/%s/Ally.png
+		}
+
+		[EnemyIcon Template=DecalWidget]
+		{
+			ToolTip = "#kingdom_editing_SelKingdom_EnemyIcon_ToolTip"
+		
+			[View Template=NoVE]
+			L = 726
+			T = 10
+			R = +16
+			B = +16
+
+			[Decal Template=DecalVE]
+			texture = /Fonts/Small/%s/Enemy.png
+
+		}
+
+		[NeutralIcon Template=DecalWidget]
+		{
+			ToolTip = "#kingdom_editing_SelKingdom_NeutralIcon_ToolTip"
+		
+			[View Template=NoVE]
+			L = 749
+			T = 10
+			R = +16
+			B = +16
+
+			[Decal Template=DecalVE]
+			texture = /Fonts/Small/%s/Neutral.png
+		}
+
+
+		[KingdomNamePanel Inherit=SharedPanelWidget]
+		{
+			[View]
+			{
+				L = 0
+				T = 23
+				R = +500
+				B = +60
+				
+				;; cwp041204 - Children no longer being defined in template
+				;[Child Template = SharedChildLargePanelVE]
+		
+			}
+
+			[KingdomNameEditBox Template = EditorEditBoxWidget]
+			{
+				[View]
+				{
+					L = 45
+					T = 11
+					R = +432
+					B = +33
+				}
+			}
+		}
+	
+		[KingdomDropdownPanel Inherit=SharedPanelWidget]
+		{
+			[View]
+			{
+				L = 0
+				T = 80
+				R = +500
+				B = +260
+				
+				;; cwp041204 - Children no longer being defined in template
+				;[Child Template = SharedChildLargePanelVE]	
+			}
+
+			[TeamPanel Inherit=SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 59
+					T = 0
+					R = +230
+					B = +60
+					
+					;; cwp041204 - Children no longer being defined in template
+					;[Child Template = SharedChildLargePanelVE]
+						
+					[Child Template=SharedSmallLeftLabelVE]
+					{
+						L = 0
+						T = 0
+						text = "#kingdom_editing_Child_text_5"
+					}
+				}
+				
+				[TeamDropdown Template=EditorSilverDropDownWidget]
+				{
+					[View]
+					{
+						L = 0%
+						R = 100%
+						T = 20
+						B = +35
+					}
+				}
+			}
+
+			[ColorPanel Inherit=SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 300
+					T = 0
+					R = +230
+					B = +60
+					
+					;; cwp041204 - Children no longer being defined in template
+					;[Child Template = SharedChildLargePanelVE]
+				
+					[Child Template=SharedSmallLeftLabelVE]
+					{
+						L = 0
+						T = 0
+						text = "#kingdom_editing_Child_text_6"
+					}
+				}
+		
+				[ColorDropdown Template=EditorSilverDropDownWidget]
+				{
+					[View]
+					{
+						L = 0%
+						R = 100%
+						T = 20
+						B = +35
+					}
+				}
+			}
+
+			[OpenOrAIPanel Inherit=SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 59
+					T = 60
+					R = +230
+					B = +60
+					
+					;; cwp041204 - Children no longer being defined in template
+					;[Child Template = SharedChildLargePanelVE]
+			
+					[Child Template=SharedSmallLeftLabelVE]
+					{
+						L = 0
+						T = 0
+						text = "#kingdom_editing_Child_text_7"
+					}
+				}
+
+				[OpenOrAIDropdown Template=EditorSilverDropDownWidget]
+				{
+					[View]
+					{
+						L = 0%
+						R = 100%
+						T = 20
+						B = +35
+					}
+				}
+			}
+
+			[AiSettingPanel Inherit=SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 300
+					T = 60
+					R = +230
+					B = +60
+					
+					;; cwp041204 - Children no longer being defined in template
+					;[Child Template = SharedChildLargePanelVE]
+					
+					[Child Template=SharedSmallLeftLabelVE]
+					{
+						L = 0
+						T = 0
+						text = "#kingdom_editing_Child_text_8"
+					}
+				}
+			
+				[AISettingDropdown Template=EditorSilverDropDownWidget]
+				{
+					[View]
+					{
+						L = 0%
+						R = 100%
+						T = 20
+						B = +35
+					}
+				}
+			}
+
+			[NationPanel Inherit=SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 59
+					T = 120
+					R = +230
+					B = +60
+					
+					;; cwp041204 - Children no longer being defined in template
+					;[Child Template = SharedChildLargePanelVE]
+						
+					[Child Template=SharedSmallLeftLabelVE]
+					{
+						L = 0
+						T = 0
+						text = "#kingdom_editing_Child_text_10"
+					}
+				}
+					
+				[NationDropdown Template=EditorSilverDropDownWidget]
+				{
+					[View]
+					{
+						L = 0%
+						R = 100%
+						T = 20
+						B = +35
+					}
+				}
+			}
+
+			[FactionPanel Inherit=SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 300
+					T = 120
+					R = +230
+					B = +60
+					
+					;; cwp041204 - Children no longer being defined in template
+					;[Child Template = SharedChildLargePanelVE]
+						
+					[Child Template=SharedSmallLeftLabelVE]
+					{
+						L = 0
+						T = 0
+						text = "#kingdom_editing_Child_text_9"
+					}
+				}
+		
+				[FactionDropdown Template=EditorSilverDropDownWidget]
+				{
+					[View]
+					{
+						L = 0%
+						R = 100%
+						T = 20
+						B = +35
+					}
+				}
+			}
+
+			[RestrictionGroupPanel Inherit=SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 300
+					T = 180
+					R = +230
+					B = +60
+					
+					;; cwp041204 - Children no longer being defined in template
+					;[Child Template = SharedChildLargePanelVE]
+						
+					[Child Template=SharedSmallLeftLabelVE]
+					{
+						L = 0
+						T = 0
+						text = "#kingdom_editing_Child_text_11"
+					}
+				}
+					
+				[RestrictionGroupDropdown Template=EditorSilverDropDownWidget]
+				{
+					[View]
+					{
+						L = 0%
+						R = 100%
+						T = 20
+						B = +35
+					}
+				}
+			}
+
+		}
+	
+		[HeroPanel Inherit=PanelWidget]
+		{
+			
+			;; drp062503 - hide in A&A
+			;; NOTE: we could have the code enable it only if there are any
+			;;  "heroes" defined in the data
+			visible = false
+
+
+			[View Template=GroupVE]
+			{
+				L = 0
+				T = 300
+				R = +480
+				B = 490
+		
+				[Child Template=SharedSmallLeftLabelVE]
+				{
+					L = 5
+					T = 0
+					text = "#kingdom_editing_Child_text_12"
+				}
+
+				[Child Template=SharedSmallLeftLabelVE]
+				{
+					L = 270
+					T = 0
+					text = "#kingdom_editing_Child_text_13"
+				}
+			}
+
+			[AvailableHeroesPanel Inherit = SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 5
+					R = +200
+					T = 25
+					B = +200
+					
+					[Child Template = SharedChildSmallPanelVE]
+				}
+					
+				[AvailableHeroesListbox Template=SharedListboxWidgetNoDecals]
+				{
+					num_visible_items = 14
+				}
+			}	
+
+			[CommittedHeroesPanel Inherit = SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 270
+					R = +200
+					T = 25
+					B = +200
+					
+					[Child Template = SharedChildSmallPanelVE]
+				}
+					
+				[CommittedHeroesListbox Template=SharedListboxWidgetNoDecals]
+				{
+					num_visible_items = 14
+				}
+			}	
+	
+			[AddHeroPB Template=EditorPushButtonWidget]
+			{
+				tooltip = "#kingdom_editing_SelKingdom_HeroPanel_AddHeroPB_tooltip"
+				[Client]
+				{
+					[View]
+					text = "#kingdom_editing_SelKingdom_HeroPanel_AddHeroPB_Client_View_text"
+				}
+
+				[View]
+				{
+					L = 210
+					R = 265
+					T = 100
+				}
+			}
+	
+			[RemoveHeroPB Template=EditorPushButtonWidget]
+			{
+				tooltip = "#kingdom_editing_SelKingdom_HeroPanel_RemoveHeroPB_tooltip"
+				[Client]
+				{
+					[View]
+					text = "#kingdom_editing_SelKingdom_HeroPanel_RemoveHeroPB_Client_View_text"
+				}
+
+				[View]
+				{
+					L = 210
+					R = 265
+					T = 140
+				}
+			}
+		}
+
+		[TechnologyPanel Inherit=PanelWidget]
+		{
+			visible = false
+
+			[View Template=GroupVE]
+			{
+				L = 0
+				T = 300
+				R = +480
+				B = 490
+		
+				[Child Template=SharedSmallLeftLabelVE]
+				{
+					L = 5
+					T = 0
+					text = "#kingdom_editing_Child_text_14"
+				}
+
+				[Child Template=SharedSmallLeftLabelVE]
+				{
+					L = 270
+					T = 0
+					text = "#kingdom_editing_Child_text_15"
+				}
+			}
+
+			[AvailableTechnologiesPanel Inherit = SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 5
+					R = +200
+					T = 25
+					B = +200
+					
+					[Child Template = SharedChildSmallPanelVE]
+				}
+					
+				[AvailableTechnologiesListbox Template=SharedListboxWidgetNoDecals]
+				{
+					num_visible_items = 14
+				}
+			}	
+
+			[CommittedTechnologiesPanel Inherit = SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 270
+					R = +200
+					T = 25
+					B = +200
+					
+					[Child Template = SharedChildSmallPanelVE]
+				}
+				
+				[CommittedTechnologiesListbox Template=SharedListboxWidgetNoDecals]
+				{
+					num_visible_items = 14
+				}
+			}
+	
+			[AddTechnologyPB Template=EditorPushButtonWidget]
+			{
+				tooltip = "#kingdom_editing_SelKingdom_TechnologyPanel_AddTechnologyPB_tooltip"
+				[Client]
+				{
+					[View]
+					text = "#kingdom_editing_SelKingdom_TechnologyPanel_AddTechnologyPB_Client_View_text"
+				}
+
+				[View]
+				{
+					L = 210
+					R = 265
+					T = 100
+				}
+			}
+	
+			[RemoveTechnologyPB Template=EditorPushButtonWidget]
+			{
+				tooltip = "#kingdom_editing_SelKingdom_TechnologyPanel_RemoveTechnologyPB_tooltip"
+				[Client]
+				{
+					[View]
+					text = "#kingdom_editing_SelKingdom_TechnologyPanel_RemoveTechnologyPB_Client_View_text"
+				}
+
+				[View]
+				{
+					L = 210
+					R = 265
+					T = 140
+				}
+			}
+		}
+
+		[EconomicPanel Inherit=SharedPanelWidget]
+		{
+			[View]
+			{
+				L = 60
+				T = 300
+				R = +460	
+				B = +150
+				
+				[Child Template=SharedSmallLeftLabelVE]
+				{
+					L = 10
+					T = 90
+					text = "#kingdom_editing_Child_text_16"
+				}
+			}
+			
+			[UseDefaultResourcesToggleButton Inherit = ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 10
+					T = 30
+					R = +200
+					B = +36
+
+					[Child Template=SharedToggleButtonGroupVE]
+
+					[Child Template=SharedSmallLeftLabelVE]
+					{
+						L = 30
+						text = "#kingdom_editing_Child_text_17"
+					}
+				}
+			}
+
+			[Money Inherit=SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 240
+					T = 25
+					R = +300
+					B = +50
+					
+					;; cwp041204 - Children no longer being defined in template
+					;[Child Template = SharedChildLargePanelVE]
+			
+					[Child Template=SharedSmallLeftLabelVE]
+					{
+						L = 0
+						T = 11
+						text = "#kingdom_editing_Child_text_18"
+					}
+				}
+
+				[MoneyEditbox Template = EditorEditBoxWidget]
+				{
+					integer_only = true
+					max_characters = 5
+					[View]
+					{
+						L = 130
+						T = 10
+						R = +108			
+						B = +40
+					}
+				}
+			}
+			
+			[EditorEconomyBar Inherit=SharedPanelWidget]
+			{
+				;; Never slides under any circumstances
+				hidden_offset = 0,0
+				slide_time = 0.0
+							
+				[View]
+				{
+					L = 30
+					T = 110
+					R = +330
+					B = +33
+					
+					[Child Template=DecalVETiledHorizontal]
+					{
+						L = 0
+						T = 0
+						R = 0r
+						B = 0b
+						
+						alpha_blending = true
+						ends_texture = /UI/%s/Editor/EditorEditBox/EditorEditBoxEnds.tga
+						center_texture = /UI/%s/Editor/EditorEditBox/EditorEditBoxCenter.tga
+					}
+					
+				}
+
+				[money Template=EditorEconomyResourceWidget]
+				{
+					resource_IDS = money
+		
+					[View]
+					T = 10
+					L = 10%
+				}
+
+				[Ammo Template=EditorEconomyResourceWidget]
+				{
+					resource_IDS = ammo
+		
+					[View]
+					T = 10
+					L = 25%
+				}
+
+				[Oil Template=EditorEconomyResourceWidget]
+				{
+					resource_IDS = oil
+		
+					[View]
+					T = 10
+					L = 45%
+				}
+				
+				[Unit_Limit_Provided Template=EditorEconomyResourceWidget]
+				{
+					resource_IDS = unit_limit_provided
+		
+					[View]
+					T = 10
+					L = 60%
+				}
+				
+				[Unit_Limit_Consumed Template=EditorEconomyResourceWidget]
+				{
+					resource_IDS = unit_limit_consumed
+		
+					;; NOTE: not visible
+					[View]
+					T = 10
+					L = 100%
+				}
+
+				[Building_Limit_Provided Template=EditorEconomyResourceWidget]
+				{
+					resource_IDS = building_limit_provided
+		
+					[View]
+					T = 10
+					L = 75%
+				}
+				
+				[Building_Limit_Consumed Template=EditorEconomyResourceWidget]
+				{
+					resource_IDS = building_limit_consumed
+		
+					;; NOTE: not visible
+					[View]
+					T = 10
+					L = 100%
+				}
+
+				[FactionExperience Inherit=LabelWidget]
+				{
+					visible = false
+
+					[View Template=NoVE]
+					{
+						L = 0
+						B = 0
+					}
+		
+					[Label Template=LabelVE]
+					{
+						text = ""
+						font = small
+						justify = left
+						color = 0,0,0
+					}
+				}
+			}
+		}
+		
+		
+		
+		[KingdomRelationsPanel Inherit = SharedPanelWidget]
+		{
+			[View]
+			{
+				L = 549
+				T = 34
+				R = +329
+				B = +438
+				
+				[Child Template=GameListboxEditorArtworkGroupVE]
+				{
+					L = 0
+					T = 0
+					R = +230
+					B = 61b
+				}
+			}
+			
+			[KingdomRelationsViewport Template=RelationsViewport]
+			{
+				[View]
+				L = 10
+				T = 10
+				R = +329	;;+240
+				B = 71b
+			}
+		}	
+	}
+
+	;; items on this panel are only visible when a team is selected.
+	[SelTeam Inherit=PanelWidget]
+	{
+		[View Template=GroupVE]
+		{
+			L = 265
+			T = 20
+			R = 8r
+			B = 25b
+		
+			[Child Template=SharedSmallLeftLabelVE]
+			{
+				L = 509
+				T = 8
+				text = "#kingdom_editing_Child_text_20"
+			}
+		}
+
+		[AllyIcon Template=DecalWidget]
+		{
+			ToolTip = "#kingdom_editing_SelTeam_AllyIcon_ToolTip"
+		
+			[View Template=NoVE]
+			L = 659
+			T = 10
+			R = +16
+			B = +16
+			
+			[Decal Template=DecalVE]
+			texture = /Fonts/Small/%s/Ally.png
+		}
+
+		[EnemyIcon Template=DecalWidget]
+		{
+			ToolTip = "#kingdom_editing_SelTeam_EnemyIcon_ToolTip"
+		
+			[View Template=NoVE]
+			L = 681
+			T = 10
+			R = +16
+			B = +16
+
+			[Decal Template=DecalVE]
+			texture = /Fonts/Small/%s/Enemy.png
+		}
+
+		[NeutralIcon Template=DecalWidget]
+		{
+			ToolTip = "#kingdom_editing_SelTeam_NeutralIcon_ToolTip"
+		
+			[View Template=NoVE]
+			L = 704
+			T = 10
+			R = +16
+			B = +16
+
+			[Decal Template=DecalVE]
+			texture = /Fonts/Small/%s/Neutral.png
+		}
+
+		[TeamNamePanel Inherit = SharedPanelWidget]
+		{
+			[View]
+			{
+				L = 0
+				T = 32
+				R = +500
+				B = +60
+			}
+			
+			[TeamNameEditBox Template = EditorEditBoxWidget]
+			{
+				[View]
+				T = 2				
+				R = +432
+				B = +33
+				
+			}
+		}	
+
+		[KingdomPanel Inherit=PanelWidget]
+		{
+			
+			[View Template=GroupVE]
+			{
+				L = 0
+				T = 157
+				R = +502
+				B = +310
+		
+				[Child Template=SharedSmallLeftLabelVE]
+				{
+					L = 17
+					T = 0
+					text = "#kingdom_editing_Child_text_21"
+				}
+
+				[Child Template=SharedSmallLeftLabelVE]
+				{
+					L = 296
+					T = 0
+					text = "#kingdom_editing_Child_text_22"
+				}
+			}
+
+		
+			[AvailableKingdomsPanel Inherit = SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 0
+					T = 22
+					R = +212
+					B = +248
+				}
+					
+				[AvailableKingdomsListbox  Inherit=EditorScreenSharedListBoxWidgetNoDecals]
+				{
+					num_visible_items = 14
+					[View Template=GameListboxEditorArtworkGroupVE]
+				}
+			}	
+
+			[CommittedKingdomsPanel Inherit = SharedPanelWidget]
+			{
+				[View]
+				{
+					L = 282
+					T = 22
+					R = +212
+					B = +248
+				}
+					
+				[CommittedKingdomsListbox  Inherit=EditorScreenSharedListBoxWidgetNoDecals]
+				{
+					num_visible_items = 14
+					[View Template=GameListboxEditorArtworkGroupVE]
+				}
+			}	
+	
+			[AddKingdomPushButton Template=PushButtonWidget]
+			{
+				tooltip = "#kingdom_editing_SelTeam_KingdomPanel_AddKingdomPushButton_tooltip"
+
+				pressed_client_L = 4
+				pressed_client_T = 4
+				pressed_client_R = 2r
+				pressed_client_B = 2b
+
+				[View Template=GroupVE]
+				{
+					L = 212
+					T = 28
+					R = +69
+					B = +26
+					
+					[Child Template=DecalVE]
+					when = ENABLED + UNFOCUSED + UNSELECTED
+					alpha_blending = true
+					texture = /UI/%s/Editor/Buttons/EditorArrowButtonRight.png
+					
+					[Child Template=DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					alpha_blending = true
+					texture = /UI/%s/Editor/Buttons/EditorArrowButtonRightFocused.png
+					
+					[Child Template=DecalVE]
+					when = ENABLED + PRESSED
+					alpha_blending = true
+					texture = /UI/%s/Editor/Buttons/EditorArrowButtonRightPressed.png
+					
+					[Child Template=DecalVE]
+					when = DISABLED
+					alpha_blending = true
+					texture = /UI/%s/Editor/Buttons/EditorArrowButtonRightDisabled.png
+				}
+			}
+	
+			[RemoveKingdomPushButton Template=PushButtonWidget]
+			{
+				tooltip = "#kingdom_editing_SelTeam_KingdomPanel_AddKingdomPushButton_tooltip"
+
+				pressed_client_L = 4
+				pressed_client_T = 4
+				pressed_client_R = 2r
+				pressed_client_B = 2b
+
+				[View Template=GroupVE]
+				{
+					L = 212
+					T = 70
+					R = +69
+					B = +26
+					
+					[Child Template=DecalVE]
+					when = ENABLED + UNFOCUSED + UNSELECTED
+					alpha_blending = true
+					texture = /UI/%s/Editor/Buttons/EditorArrowButtonLeft.png
+					
+					[Child Template=DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					alpha_blending = true
+					texture = /UI/%s/Editor/Buttons/EditorArrowButtonLeftFocused.png
+					
+					[Child Template=DecalVE]
+					when = ENABLED + PRESSED
+					alpha_blending = true
+					texture = /UI/%s/Editor/Buttons/EditorArrowButtonLeftPressed.png
+					
+					[Child Template=DecalVE]
+					when = DISABLED
+					alpha_blending = true
+					texture = /UI/%s/Editor/Buttons/EditorArrowButtonLeftDisabled.png
+				}
+			}
+		}
+
+		[TeamRelationsPanel Inherit = SharedPanelWidget]
+		{
+			[View]
+			{
+				L = 504
+				T = 34
+				R = +329
+				B = +438
+				
+				[Child Template=GameListboxEditorArtworkGroupVE]
+				{
+					L = 0
+					T = 0
+					R = +230
+					B = 61b
+				}
+			}
+				
+			[TeamRelationsViewport2 Template=RelationsViewport]
+			{
+				[View]
+				L = 10
+				T = 10
+				R = +329	;;+240
+				B = 71b
+			}
+		}	
+		
+		[RestrictionGroupPanel Inherit=/*Shared*/PanelWidget]
+		{
+			[View Template = GroupVE]
+			{
+				L = 15
+				T = 87
+				R = +240
+				B = +60
+					
+				[Child Template=SharedSmallLeftLabelVE]
+				{
+					L = 0
+					T = 0
+					text = "#kingdom_editing_Child_text_23"
+				}
+			}
+				
+			[RestrictionGroupDropdown Template=EditorSilverDropDownWidget]
+			{
+				[View]
+				{
+					L = 0
+					R = 190
+					T = 20
+					B = +35
+				}
+			}
+		}
+	}
+	
+	;;  "OK" button
+	[KingdomEditingClosePushButton Template=EditorMenuButton]
+	{
+		ToolTip = "#kingdom_editing_KingdomEditingClosePushButton_ToolTip"
+		
+		[Client]
+		{
+			[View]
+			text = "#kingdom_editing_KingdomEditingClosePushButton_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 885
+			T = 483
+			R = +107
+			B = +35
+
+		}
+	}	
+}

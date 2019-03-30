@@ -1,0 +1,76 @@
+[Thing Template=AASharedAudioDoodad]
+{
+	IDS = seagulls
+	name = "#seagulls_name"
+
+	[Placement]
+	{	
+		[Biome]
+		{
+			ids = tropical_forest
+			weight = 0
+			
+			[Terrain]
+			IDS = tropical_beach
+			weight = 0.0009
+
+			[Terrain]
+			IDS = tropical_shore
+			weight = 0.0009
+		}
+
+		[Biome]
+		{
+			IDS = tropical_savannah
+			weight = 0
+
+			[Terrain]
+			IDS = savannah_beach
+			weight = 0.0009
+		}
+
+		[Biome]
+		{
+			IDS = chaparral
+			weight = 0
+
+			[Terrain]
+			IDS = chaparral_beach
+			weight = 0.0009
+		}
+		
+		[Biome]
+		{
+			IDS = temperate_grassland
+			weight = 0
+		
+			[Terrain]
+			IDS = temperate_shore
+			weight = 0.0009
+		}
+
+		[Biome]
+		{
+			IDS = temperate_forest
+			weight = 0
+		
+			[Terrain]
+			IDS = temperate_shore
+			weight = 0.0009
+		}
+	}
+
+	[View]
+	{			
+		[AspectNormal template=Aspect]
+		{
+			IDS = audio
+			
+			[Animation template=AnimationRandomAudio]
+			{
+				[PlaySFX]
+				sfx_ids = am_seagulls
+			}
+		}
+	}
+}

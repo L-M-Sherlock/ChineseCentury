@@ -1,0 +1,59 @@
+[Ego template = ArmorLowIncomeEgo]
+{
+	IDS										= gbr_low_income_ego
+	name									= "#great_britian_sai_gbr_low_income_ego_unit_limit_max_needed_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorLowLowEgo]
+{
+	IDS										= gbr_low_low_ego
+	name									= "#great_britian_sai_gbr_low_income_ego_unit_limit_max_needed_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorMainGameEgo]
+{
+	IDS										= gbr_main_game_ego
+	name									= "#great_britian_sai_gbr_main_game_ego_unit_limit_max_needed_name"
+} ;; MainGameEgo
+
+[Ego template = ArmorEndGameEgo]
+{
+	IDS										= gbr_end_game_ego
+	name									= "#great_britian_sai_gbr_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= gbr_sai
+	name									= "#great_britian_sai_gbr_sai_name_2"
+	description								= "#great_britian_sai_gbr_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+	public									= false
+
+	initial_ego								= gbr_low_income_ego
+
+	[Ego]
+	IDS										= gbr_low_low_ego
+
+	[Ego]
+	IDS										= gbr_main_game_ego
+
+	[Ego]
+	IDS										= gbr_end_game_ego
+
+	[Nation]
+	IDS										= nation_gbr
+	
+	[Faction]
+	ids										= montgomery
+	
+	[Faction]
+	ids										= mountbatten
+	
+	[Faction]
+	ids										= wavell
+	
+	[Faction]
+	ids										= wingate
+	
+} ;; gbr SAI

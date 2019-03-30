@@ -1,0 +1,1262 @@
+/**************************************************************************
+
+template_ability_AA.tgi
+Copyright ?2002 TimeGate Studios
+
+DESCRIPTION: Shared specific abilities that actors may use.
+
+REVISION HISTORY:
+smm021003 - created
+	
+**************************************************************************/
+/*
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = at_stunfx
+	name = "AT Stun FX"
+	model = /Effects/flakshot/flakshot01.nif
+}
+
+[VFX template=AAVFXModelTemporary]
+{
+	IDS = at_stunloop
+	name = "AT Stun Loop"
+	
+	model = /Effects/BurningEffects/SmokeOil.nif
+}
+*/
+
+;;;;---------------------------------------------GENERIC TEMPLATES ;;
+
+[Template AAAttack Inherit=AbilityDefinition]
+{
+	IDS = null
+	description = null
+	ability_type = attack
+	range = 1
+	recharge_time = 2
+	targets = +enemy, -air, -mine, -water
+	
+	;; TODO: Correct icon needs replacing
+	icon = /Properties/AbilityIcons/IconAbilityDamageGun.png
+	
+} ; end [Template AAAttack]
+
+[Template AAProjectileAttack Inherit=AAAttack]
+{
+	string	projectile_IDS
+	icon = /Properties/AbilityIcons/IconAbilityDamageArmorPierce.png
+} ; end [Template RangedAttack]
+
+[Template AAMeleeAttack Inherit=AAAttack]
+{
+	range = 1.5
+	recharge_time = 1.5
+}
+
+[Template AAAntiAirAttack Inherit=AAAttack]
+{
+	
+	icon = /Properties/AbilityIcons/IconAbilityAntiAircraft.png
+
+	targets = +enemy, +air
+	
+	[Flags]
+	ignore_for_cv = true
+}
+
+[Template AARepair Inherit=AbilityDefinition]
+{
+	IDS = null
+	description = null
+	name = "#template_abilitydefinition_aa__name"
+	ability_type = repair
+
+	icon = /Properties/AbilityIcons/IconAbilityRepair.png
+	
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = hammer
+	
+} ; end [Template AARepair]
+
+
+[Template AARepairAllAction Inherit=AbilityDefinition]
+{
+	IDS = null
+	name = "#template_abilitydefinition_aa__name_2"
+	description = null
+	ability_type = repair
+	range = 1
+	recharge_time = 1.5
+	targets = +constructable +friend
+	icon = /properties/AbilityIcons/IconAbilityRepair.png
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = hammer
+	
+} ; end [Template RepairAllAction]
+
+[Template AARepairAction Inherit=AARepairAllAction]
+{
+	name = "#template_abilitydefinition_aa__name_3"
+	ability_type = repair
+	targets = +constructable -under_construction +friend
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = hammer
+	
+} ; end [Template RepairAction]
+
+[Template AAConstructAction Inherit=AARepairAllAction]
+{
+	name = "#template_abilitydefinition_aa__name_4"
+	ability_type = repair
+	targets = +constructable -cannot_build +under_construction +friend
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = hammer
+	
+} ; end [Template RepairConstructionAction]
+
+[Template AASpecialOp template=AbilityDefinition]
+{
+	IDS = null
+	name = "#template_abilitydefinition_aa__name_5"
+	description = null
+	ability_type = null	;; TODO: define
+	range = 1
+	recharge_time = 30
+	targets = +ACTOR, +ENEMY
+		
+	target_location_vfx = crosshair_decal_vfx
+			
+	icon = null
+
+	[Flags]
+	summon_multiple = true
+	
+} ; end [Template AASpecialOp]
+
+;;--------------------------------------------- Infantry Machine Gun --
+[Template AAInfantrySMG Inherit=AAAttack]
+{
+	range = 8
+	recharge_time = 2
+	
+	icon = /Properties/AbilityIcons/IconAbilityDamageGun.png
+	
+	;;Muzzle flash effect
+  	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = mg_shot
+  		at = SELF
+  		location = gun_ae_01
+  		;attached = false
+  	}
+  
+  	;;explosion on target
+  	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = mg_shot_explosion_hard
+  		target_flags = -infantry
+ 		at = TARGET_HIT_POSITION
+  		attached = false
+  	}
+  	
+  	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = mg_shot_explosion
+  		target_flags = +infantry
+ 		at = TARGET_THING
+ 		location = spine
+  		attached = false
+  	}
+  	
+  	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = mg_shot_explosion_ground01
+  		target_flags = +infantry
+ 		at = TARGET_GROUND
+  		attached = false
+  	}
+  	
+	;;Tracer effect for tommy gun
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = rifle_shot_tracer
+		location = gun_ae_01
+		attached = false
+		frequency = 1
+		delay = 0.1
+	}
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = rifle_shot_tracer
+		location = gun_ae_01
+		attached = false
+		frequency = 1
+		delay = 0.45
+	}
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = rifle_shot_tracer
+		location = gun_ae_01
+		attached = false
+		frequency = 1
+		delay = 0.63
+	}
+} ; end [Template AAInfantrySMG]
+
+[Template AAInfantryMG Inherit=AAAttack]
+{
+	range = 8
+	recharge_time = 2
+	
+	icon = /Properties/AbilityIcons/IconAbilityDamageGun.png
+	
+	;;Muzzle flash effect
+  	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = mg_heavy_shot
+  		at = SELF
+  		location = gun_ae_01
+  		;attached = false
+  	}
+  	
+  	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = mg_shells
+  		at = SELF
+  		location = exhaust_point_01
+  		attached = false
+  	}
+  
+  	;;explosion on target
+  	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = mg_shot_explosion_hard
+  		target_flags = -infantry
+ 		at = TARGET_HIT_POSITION
+  		attached = false
+  	}
+  	
+  	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = mg_shot_explosion
+  		target_flags = +infantry
+ 		at = TARGET_THING
+ 		location = spine
+  		attached = false
+  	}
+  	
+  	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = mg_shot_explosion_ground02
+  		target_flags = +infantry
+ 		at = TARGET_GROUND
+  		attached = false
+  	}
+  	
+	;;Tracer effect for tommy gun
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = rifle_shot_tracer
+		location = gun_ae_01
+		attached = false
+		frequency = 1
+		delay = 0.10
+	}
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = rifle_shot_tracer
+		location = gun_ae_01
+		attached = false
+		frequency = 1
+		delay = 0.40
+	}
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = rifle_shot_tracer
+		location = gun_ae_01
+		attached = false
+		frequency = 1
+		delay = 0.70
+	}
+	
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = rifle_shot_tracer
+		location = gun_ae_01
+		attached = false
+		frequency = 1
+		delay = 1.00
+	}
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = rifle_shot_tracer
+		location = gun_ae_01
+		attached = false
+		frequency = 1
+		delay = 1.30
+	}
+
+
+	
+} ; end [Template AAInfantryMG]
+
+;;--------------------------------------------- Infantry Rifle --
+
+[Template AAInfantryRifle Inherit=AAAttack]
+{
+	range = 10
+	recharge_time = 3
+	icon = /Properties/AbilityIcons/IconAbilityDamageGun.png
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = rifle_shot
+		location = gun_ae_01
+		;attached = false
+	}
+
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = rifle_shot_explosion
+		target_flags = +infantry
+		at = TARGET_THING
+ 		location = spine
+		attached = false
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = rifle_shot_explosion_hard
+		target_flags = -infantry
+		at = TARGET_HIT_POSITION
+		attached = false
+	}
+}
+
+
+;;--------------------------------------------- Infantry Rocket ---
+
+[Template AAInfantryRocket Inherit=AAProjectileAttack]
+{
+	projectile_ids = rocket_projectile
+	range = 8
+	impact_impulse = 12000
+	recharge_time = 5
+	icon = /Properties/AbilityIcons/IconAbilityDamageArmorPierce.png
+	
+	[WhenStart template=FXC_CreateVFX]
+	{
+		VFX_IDS = rpg_shot
+		at = SELF
+		location = cannon_ae_01
+		attached = true
+	}
+} ; end [Template AAInfantryRocket]
+
+[Template AAInfantryRPG Inherit=AAProjectileAttack]
+{
+	projectile_ids = rocket_projectile
+	range = 8
+	impact_impulse = 12000
+	recharge_time = 5
+	icon = /Properties/AbilityIcons/IconAbilityDamageArmorPierce.png
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = rpg_shot
+		at = SELF
+		location = cannon_ae_01
+		attached = true
+	}
+} ; end [Template AAInfantryRocket]
+
+;;---------------------------------------- Vehicle MachineGun --
+
+[Template AAVehicleMG Inherit=AAAttack]
+{
+	range = 12
+	impact_impulse = 2000
+	recharge_time = 3
+	icon = /Properties/AbilityIcons/IconAbilityDamageGun.png
+								
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_heavy_shot
+		at = SELF
+		location = cannon_ae_01
+		;attached = false
+	}
+
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_explosion
+		target_flags = +infantry
+		at = TARGET_HIT_POSITION
+		attached = false
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_explosion_ground01
+		target_flags = +infantry
+		at = TARGET_GROUND
+		attached = false
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_explosion_hard
+		target_flags = -infantry
+		at = TARGET_HIT_POSITION
+		attached = false
+	}
+	
+} ; end [Template AAVehicleMG]
+
+
+;;------------------------------------------ Vehicle Cannons ---
+
+[Template AALightTankGun Inherit=AAProjectileAttack]
+{
+	projectile_ids = light_tank_projectile
+	range = 16
+	;;area = 6
+	impact_impulse = 12000
+	recoil_impulse = 4000
+	recharge_time = 4
+	icon = /Properties/AbilityIcons/IconAbilityDamageArmorPierce.png
+	
+	;; Tanks muzzle shoot effect
+	[WhenStart template=FXC_CreateVFX]
+	{
+		VFX_IDS = tank_shot
+		at = self
+		location = cannon_ae_01
+		attached = false
+	}
+		
+} ; end [Template AALightTankGun]
+
+
+[Template AAMediumTankGun Inherit=AAProjectileAttack]
+{
+	projectile_ids = medium_tank_projectile
+	range = 18
+	;;area = 8
+	impact_impulse = 16000
+	recoil_impulse = 4000
+	recharge_time = 5
+	icon = /Properties/AbilityIcons/IconAbilityDamageArmorPierce.png
+	
+	;; Tanks muzzle shoot effect
+	[WhenStart template=FXC_CreateVFX]
+	{
+		VFX_IDS = tank_shot
+		at = self
+		location = cannon_ae_01
+		attached = false
+	}
+		
+} ; end [Template AAMediumTankGun]
+
+
+[Template AAHeavyTankGun Inherit=AAProjectileAttack]
+{
+	projectile_ids = heavy_tank_projectile
+	range = 20
+	;;area = 8
+	impact_impulse = 20000
+	recoil_impulse = 4000
+	recharge_time = 6
+	icon = /Properties/AbilityIcons/IconAbilityDamageArmorPierce.png
+
+	;; Tanks muzzle shoot effect
+	[WhenStart template=FXC_CreateVFX]
+	{
+		VFX_IDS = tank_shot
+		at = self
+		location = cannon_ae_01
+		attached = false
+	}
+		
+} ; end [Template AAHeavyTankGun]
+
+
+[Template AAAntiTankGun Inherit=AAProjectileAttack]
+{
+	projectile_ids = heavy_tank_projectile
+	range = 20
+	;;area = 8
+	impact_impulse = 12000
+	recoil_impulse = 4000
+	recharge_time = 6
+	icon = /Properties/AbilityIcons/IconAbilityDamageArmorPierce.png
+
+	;; Tanks muzzle shoot effect
+	[WhenStart template=FXC_CreateVFX]
+	{
+		VFX_IDS = tank_shot
+		at = self
+		location = cannon_ae_01
+		attached = false
+	}
+		
+} ; end [Template AAHeavyTankGun]
+
+
+[Template AASPAShot Inherit=AAProjectileAttack]
+{
+	projectile_ids = spa_projectile
+	range = 30
+	recharge_time = 6
+	impact_impulse = 16000
+	recoil_impulse = 4000
+	
+	area = 2
+	attenuation_range_min = 1
+	attenuation_factor_max = 0.5
+	icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
+	
+	[WhenStart template=FXC_CreateVFX]
+	{
+		VFX_IDS = tank_shot
+		at = self
+		location = cannon_ae_01
+		attached = false
+	}
+}
+
+;;------------------------------------- Mortar Shot ---
+
+[Template AAMortarShot Inherit=AAProjectileAttack]
+{
+	projectile_ids = mortar01
+	range = 30
+	recharge_time = 6
+	
+	area = 2
+	attenuation_range_min = 1
+	attenuation_factor_max = 0.5
+	icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mortar_artillery_shot
+		at = self
+		location = cannon_ae_01
+		;attached = false
+	}
+}
+
+
+;;------------------------- THROWN GRENADE -----------------------
+
+[Template AAThrownGrenade Inherit=AAProjectileAttack]
+{
+	projectile_ids = null
+	spawn_bone_ids = rhand
+	range = 9
+	recharge_time = 15
+	icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
+	
+	area = 2
+	attenuation_range_min = 1
+	attenuation_factor_max = 0.5
+
+	[Flags]
+	spell = true
+}
+
+
+;;---------------------------------------------------- Bunker ---
+[Template AABunkerAttack Inherit=AAAttack]
+{
+	firing_arc_degrees = 360
+	
+	[Flags]
+	spell = true
+}
+
+
+[Template AABunkerAttackMG Inherit=AABunkerAttack]
+{
+	range = 16
+	recharge_time = 2
+	icon = /Properties/AbilityIcons/IconAbilityDamageGun.png
+
+	;;Muzzle flash effect
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_heavy_shot
+		at = SELF
+		location = gun_ae_01
+		attached = false
+	}
+	
+	;;Tracer effect for tommy gun
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_tracer
+		attached = false
+		location = gun_ae_01
+		frequency = 1
+		delay = 0.3
+	}
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_tracer
+		attached = false
+		location = gun_ae_01
+		frequency = 1
+		delay = 0.45
+	}
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_tracer
+		attached = false
+		location = gun_ae_01
+		frequency = 1
+		delay = 0.6
+	}
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_tracer
+		attached = false
+		location = gun_ae_01
+		frequency = 1
+		delay = 0.73
+	}
+
+	;;explosion on target
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_explosion
+		target_flags = +infantry
+		at = TARGET_THING
+ 		location = spine
+		attached = false
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_explosion_ground01
+		target_flags = +infantry
+		at = TARGET_GROUND
+		attached = false
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_explosion_hard
+		target_flags = -infantry
+		at = TARGET_HIT_POSITION
+		attached = false
+	}
+}
+
+[Template AABunkerAttackArtilleryBombard Inherit=AABunkerAttack]
+{
+	range = 40
+	recharge_time = 4
+	targets = +enemy, -air, -mine
+	icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
+	
+	area = 3
+	attenuation_range_min = 1
+	attenuation_factor_max = 0.25
+	
+	[Flags]
+	{
+		bombard = true
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = artillery_shot
+		location = cannon_ae_01
+	}
+
+	;;explosion on target
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = temperate_medium_explosion_1
+		at = TARGET_GROUND
+		attached = false
+		terrain_group_filter = dirt
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = desert_medium_explosion_1
+		at = TARGET_GROUND
+		attached = false
+		terrain_group_filter = desert
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = arctic_medium_explosion_1
+		at = TARGET_GROUND
+		attached = false
+		terrain_group_filter = snow
+	}
+}
+
+[Template AABunkerAttackArtilleryDefender Inherit=AABunkerAttack]
+{
+	range = 20
+	recharge_time = 4
+	targets = +enemy, -air, -mine
+	
+	area = 3
+	attenuation_range_min = 1
+	attenuation_factor_max = 0.25
+	icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = artillery_shot
+		location = cannon_ae_01
+	}
+
+	;;explosion on target
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = temperate_medium_explosion_1
+		at = TARGET_GROUND
+		attached = false
+		terrain_group_filter = dirt
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = desert_medium_explosion_1
+		at = TARGET_GROUND
+		attached = false
+		terrain_group_filter = desert
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = arctic_medium_explosion_1
+		at = TARGET_GROUND
+		attached = false
+		terrain_group_filter = snow
+	}
+
+}
+
+[Template AABunkerAttackAntiAirMG Inherit=AABunkerAttack]
+{
+	targets = +enemy, +air
+	range = 28
+	icon = /Properties/AbilityIcons/IconAbilityAntiAircraft.png
+
+	[Flags]
+	ignore_for_cv = true
+	
+	;; TEMPORARY EFFECTS
+	;;Muzzle flash effect
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = aa_shot1
+		at = SELF
+		attached = false
+		delay = 0.1
+		location = cannon_ae_01
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = aa_shot1
+		at = SELF
+		attached = false
+		delay = 0.3
+		location = cannon_ae_02
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = aa_shot1
+		at = SELF
+		attached = false
+		delay = 0.5
+		location = cannon_ae_03
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = aa_shot1
+		at = SELF
+		attached = false
+		delay = 0.7
+		location = cannon_ae_04
+	}
+	
+	;;Tracer effect for tommy gun
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_tracer
+		attached = false
+		frequency = 2
+		delay = 0.1
+		location = cannon_ae_01
+	}
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_tracer
+		attached = false
+		frequency = 2
+		delay = 0.3
+		location = cannon_ae_02
+	}
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_tracer
+		attached = false
+		frequency = 2
+		delay = 0.5
+		location = cannon_ae_03
+	}
+	
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_tracer
+		attached = false
+		frequency = 2
+		delay = 0.7
+		location = cannon_ae_04
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = flak_shot_1
+		at = TARGET_HIT_POSITION
+		attached = false
+		delay = 0.4
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = flak_shot_2
+		at = TARGET_HIT_POSITION
+		attached = false
+		delay = 0.8
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = flak_shot_3
+		at = TARGET_HIT_POSITION
+		attached = false
+		delay = 1.2
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = flak_shot_1
+		at = TARGET_HIT_POSITION
+		attached = false
+		delay = 1.6
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = flak_shot_2
+		at = TARGET_HIT_POSITION
+		attached = false
+		delay = 2.0
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = flak_shot_3
+		at = TARGET_HIT_POSITION
+		attached = false
+		delay = 2.4
+	}
+
+	;;explosion on target
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_explosion
+		target_flags = +infantry
+		at = TARGET_HIT_POSITION
+		attached = false
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_explosion_hard
+		target_flags = -infantry
+		at = TARGET_HIT_POSITION
+		attached = false
+	}
+}
+	
+
+; ---------------------------------------- Airplanes ---
+
+[Template AAAirplaneAttackBomb Inherit=AAProjectileAttack]
+{
+	projectile_ids = bomb
+	max_targets = 20
+	targets = +enemy, -air, -mine
+
+	attenuation_range_min = 1
+	attenuation_factor_max = 0.25
+	icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
+	
+	[Flags]
+	bombard = true	
+}
+
+[Template AAAirplaneAttackMG Inherit=AAAttack]
+{
+	range = 14
+	recharge_time = .02
+	targets = +enemy, -mine
+	icon = /Properties/AbilityIcons/IconAbilityDamageGun.png
+
+	;;Tracer effect for tommy gun
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = aircraft_shot_tracer
+
+		location = gun_ae_01
+		attached = false
+
+		frequency = 1
+		delay = 0.01
+	}
+	
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = aircraft_shot_tracer
+
+		location = gun_ae_01
+		attached = false
+
+		frequency = 1
+		delay = 0.25
+	}
+	
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = aircraft_shot_tracer
+
+		location = gun_ae_01
+		attached = false
+
+		frequency = 1
+		delay = 0.5
+	}
+	
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = aircraft_shot_tracer
+
+		location = gun_ae_02
+		attached = false
+
+		frequency = 1
+		delay = 0.01
+	}
+	
+	
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = aircraft_shot_tracer
+
+		location = gun_ae_02
+		attached = false
+
+		frequency = 1
+		delay = 0.25
+	}
+	
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = aircraft_shot_tracer
+
+		location = gun_ae_02
+		attached = false
+
+		frequency = 1
+		delay = 0.5
+	}	
+						
+	;;Muzzle flash effect
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = aircraft_shot
+		at = SELF
+		location = gun_ae_01
+		delay = 0.01
+		attached = true
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = aircraft_shot
+		at = SELF
+		location = gun_ae_01
+		delay = 0.25
+		attached = true
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = aircraft_shot
+		at = SELF
+		location = gun_ae_01
+		delay = 0.5
+		attached = true
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shells
+		at = SELF
+		location = gun_ae_01
+		attached = true
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = aircraft_shot
+		at = SELF
+		location = gun_ae_02
+		delay = 0.01
+		attached = true
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = aircraft_shot
+		at = SELF
+		location = gun_ae_02
+		delay = 0.25
+		attached = true
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = aircraft_shot
+		at = SELF
+		location = gun_ae_02
+		delay = 0.5
+		attached = true
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shells
+		at = SELF
+		location = gun_ae_02
+		attached = true
+	}
+
+	;;explosion on target
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_explosion
+		target_flags = +infantry
+		at = TARGET_HIT_POSITION
+		attached = false
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_explosion_hard
+		target_flags = -infantry
+		at = TARGET_HIT_POSITION
+		attached = false
+	}
+}
+
+; ---------------------------------------- Anti-Air ---
+
+[Template AAAttackAntiAirMG Inherit=AAAttack]
+{
+	targets = +enemy, +air
+	recharge_time = 3
+
+	range = 15
+	icon = /Properties/AbilityIcons/IconAbilityAntiAircraft.png
+
+	[Flags]
+	ignore_for_cv = true
+
+	;; TEMPORARY EFFECTS
+	;;Muzzle flash effect
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot
+		location = cannon_ae_01
+		at = SELF
+		attached = false
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot
+		location = cannon_ae_02
+		at = SELF
+		attached = false
+		delay = 0.2
+
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot
+		location = cannon_ae_03
+		at = SELF
+		attached = false
+		delay = 0.4
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot
+		location = cannon_ae_04
+		at = SELF
+		attached = false
+		delay = 0.6
+	}
+	
+	;;Tracer effect for tommy gun
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_tracer
+		location = cannon_ae_01
+		at = SELF
+		attached = false
+		frequency = 2
+		delay = 0.1
+	}
+	
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_tracer
+		location = cannon_ae_02
+		at = SELF
+		attached = false
+		frequency = 2
+		delay = 0.3
+	}
+	
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_tracer
+		location = cannon_ae_03
+		at = SELF
+		attached = false
+		frequency = 2
+		delay = 0.5
+	}
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = mg_shot_tracer
+		location = cannon_ae_04
+		at = SELF
+		attached = false
+		frequency = 2
+		delay = 0.7
+	}
+	
+	;;explosion on target
+  	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = mg_shot_explosion_hard
+ 		at = TARGET_HIT_POSITION
+  		attached = false
+  	}
+}
+
+; ---------------------------------------- Battle Ships ---
+[Template AAAttackBattleship Template=AAAttack]
+{
+	range = 20
+	recharge_time = 15
+	targets = +enemy, -air, -mine
+	
+	area = 4
+	attenuation_range_min = 1
+	attenuation_factor_max = 0.25
+	
+	impact_impulse = 10000
+	recoil_impulse = 1000
+	icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
+}
+
+[Template AAAttackBattleshipBombard Template=AAAttackBattleship]
+{
+
+	[Flags]
+	{
+		bombard = true
+	}
+}
+
+[Template AAAttackBattleshipDefend Template=AAAttackBattleship]
+{
+	
+	[Flags]
+	{
+		spell = true
+	}
+}
+
+;;----------- Sabotage ------------------------------------------
+
+[Template AASabotage Inherit=AAAttack]
+{
+	range = 1
+	recharge_time = 20
+	icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
+
+  	;;explosion on target
+  	
+  	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = temperate_medium_explosion_1
+		target_flags = -infantry
+		at = TARGET_GROUND
+		attached = false
+		terrain_group_filter = dirt
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = desert_medium_explosion_1
+		target_flags = -infantry
+		at = TARGET_GROUND
+		attached = false
+		terrain_group_filter = desert
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = arctic_medium_explosion_1
+		target_flags = -infantry
+		at = TARGET_GROUND
+		attached = false
+		terrain_group_filter = snow
+	}
+}

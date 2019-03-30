@@ -1,0 +1,62 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = smoke_barrage
+	name = "#smoke_barrage_name"
+	description = "#smoke_barrage_description"
+	targets = +ENEMY -ORGANIZATION -BUILDING
+	recharge_time = 300
+	area = 15
+	max_targets = 24
+
+	icon = /UI/%s/Game/SpecialOps/IconSmokeBarrage.png
+	
+	[Effect Template=EnchantmentEffect]
+	{
+		[EnchantmentProperty]
+		{
+			IDS = property_smoke_barrage
+			name = "#smoke_barrage_Effect_EnchantmentProperty_name"
+			enchantment_type = ench_type_fear
+			duration = 30
+			icon = /Properties/PropertyIcons/IconPropertyHealth.png
+				
+			[Modifier Template=MultiplyModifier]
+			attribute = RECHARGE_TIME
+			amount = -0.5
+			
+			[Modifier Template=MultiplyModifier]
+			attribute = SPEED_MAX
+			amount = -0.5
+			
+			[WhenAdded Template=FXC_CreateVFX]
+			{
+				VFX_IDS = smoke_cloud
+				location = position
+			}
+			
+			[WhenAdded Template=FXC_CreateVFX]
+			{
+				VFX_IDS = smoke_tint
+			}
+		}
+	}
+
+	[Flags]
+	enchantment = true
+		
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = smoke_squib
+		attached = false
+		at = TARGET_GROUND
+	}
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = smoke_barrage_sfx
+	at = TARGET_GROUND
+	
+
+}	

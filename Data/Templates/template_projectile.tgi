@@ -1,0 +1,56 @@
+/**************************************************************************
+
+template_projectile.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: a dumb actor that can be created as a result of an ability
+			and delivers the effects of the ability to its target.
+
+REVISION HISTORY:
+drp091702 - created
+
+USAGE:
+
+	[Thing Template=Projectile]
+	This node goes at the root level and defines a projectile that can be instantiated in the game.
+	The IDS of this projectile is referred to in the "projectile_IDS" field of an [AbilityDefinition].
+	
+**************************************************************************/
+
+[Template Projectile Inherit=Actor]
+{
+	category = PROJECTILE
+
+	[Flags]
+	{
+		blocking = false
+		flying = true
+		ethereal = true
+		invulnerable = true
+	}
+	
+	[Size]
+	{
+		height = 1		;; height not normally used by projectiles
+	}
+	
+	[View]
+	{
+		shadow_texture = null	;; shadows not normally used by projectiles
+		icon = null				;; icons not normally used by projectiles
+	}
+	
+	[Placement]
+	{
+		placement_group_IDS = null
+	}
+
+	[DetectionComponent]
+	{
+		detection_range = 2
+		remote_detection_range = 2
+	}
+
+	[ProjectileComponent]
+} ; end [Template Projectile]
+

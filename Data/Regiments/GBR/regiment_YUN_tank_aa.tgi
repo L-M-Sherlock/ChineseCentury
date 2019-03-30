@@ -1,0 +1,55 @@
+[Thing Template=AAGBROrganizationArmor]
+{	
+	IDS = regiment_YUN_tank_aa
+	name = "#regiment_YUN_tank_aa_name"
+	editor_name = "#regiment_YUN_tank_aa_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 225
+		
+		[Upkeep]
+		ammo = 20
+		oil = 15
+	}	
+
+	[View]
+	{
+		resource_prefix = /Units/GBR/GBRHalftrackAA/GBRHalftrackAA
+		icon = /UI/Game/RegimentButtons/IconTankAA.png
+		banner_icon = /Organizations/Banners/Icons/IconAntiAircraft.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_tank_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_aa_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_aa_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_aa_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = YUN_tank_light
+	
+		[Slot]	;; support
+		element_IDS = YUN_halftrack_aa
+		
+		[Slot]	;; captain
+		element_IDS = YUN_tank_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = antiaircraft_company
+	}
+}

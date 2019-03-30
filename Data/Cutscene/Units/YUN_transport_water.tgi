@@ -1,0 +1,98 @@
+[Thing Template=AAUnitGBRSeaTransport]
+{
+	;;IDS = YUN_water_transport
+	IDS = YUN_transport_water
+	name = "#YUN_transport_water_name"
+	editor_name = "#YUN_transport_water_editor_name"
+
+	[BodyComponent]
+	{
+		rot_time = 13
+		sink_time = 5
+
+		health = 50
+		defense = 3
+		
+		[WhenHealth Template=FXC_CreateVFX]
+	  	{
+			vfx_ids = gbr_infantry_death
+			location = hitch
+			health = 0.0
+			health_trigger_type = ABSOLUTE_BELOW
+	  	}
+	}
+	
+	[DenizenComponent]
+	{
+		[DeploymentInfo]
+		{
+			creation_offset = 0, 2.5
+			deployment_offset = 0, 8
+		}
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 3
+		turn_radius = 0.7
+	}
+	
+/*
+	[Size]
+	{
+		blocking_shape = CIRCLE
+		blocking_radius = 2
+
+		soft_shape = CIRCLE
+		soft_radius = 2.1
+	}
+*/
+	[View]
+	{
+		resource_prefix = YUNTransportWater/RUSTransportWater
+	
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Unload
+			length = 9
+			kf = YUNTransportWater/GBRTransportWaterUnloadInfantry.kf
+		}
+	}
+
+	[WhenEnter Template=FXC_PlayObjectAnimation]
+	{
+		actor_state = unloading
+		object_animation_IDS = Unload
+	}
+	
+	[WhenEnter Template=FXC_CreateVFX]
+	{
+		actor_state = structure_normal
+		vfx_ids = gbr_infantry_solid
+		at = SELF
+		location = hitch
+		attached = true
+	}
+	
+	[WhenEnter Template=FXC_StopVFX]
+	{
+		actor_state = dead
+		vfx_ids = gbr_infantry_solid
+	}
+	
+	[WhenEnter Template=FXC_StopVFX]
+	{
+		actor_state = unloading
+		vfx_ids = gbr_infantry_solid
+	}
+	
+	[WhenEnter Template=FXC_CreateVFX]
+	{
+		actor_state = unloading
+		vfx_ids = gbr_infantry_fade
+		at = SELF
+		location = hitch
+		attached = true
+	}
+}

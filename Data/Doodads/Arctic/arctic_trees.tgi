@@ -1,0 +1,70 @@
+
+[Thing Template=AAArcticDynamicDoodad]
+;;[Thing Template=AAArcticDoodad]
+{
+	IDS = arctic_trees
+	name = "#arctic_trees_name"
+		
+	[Component Inherit=TreeDynamicDoodadComponent]
+	
+	[Placement]
+	{
+		[Biome]
+		{
+			ids = arctic_tundra
+			weight = 0.00
+			
+			[Terrain]
+			IDS = arctic_dirt
+			weight = 0.05
+			
+			[Terrain]
+			IDS = arctic_forest
+			weight = 1.00
+			primary_doodad = true
+			
+			[Terrain]
+			IDS = arctic_grassdry
+			weight = 0.01
+
+			[Terrain]
+			IDS = arctic_snow
+			weight = 0.01
+		}
+	}
+
+	[View]
+	{
+		resource_prefix = ArcticTrees/ArcticTrees
+		shadow_type = texture
+		shadow_texture = /effects/shadows/TreeDeadShadow.dds
+		align_with_wind = false
+		
+		[TextureSearchPath]
+	    path = /Doodads/Arctic/ArcticTrees
+		
+		[Swivel]
+		{
+			swivel_node_ids = base
+			swivel_inertia = 2.0
+			spring_constant = 0.1
+			swivel_mass = 1000
+			wind_sway = true
+			recoil = false
+			impact_sway = true
+			movement_inertia = false
+			sway_speed = 0.1
+			sway_strength = 0.25
+		}
+
+		[Aspect Template=Aspect]
+		IDS = arctic_trees01
+		model = %s01.nif
+		ground_size = 0.5,1
+		
+		[Aspect Template=Aspect]
+		IDS = arctic_trees02
+		model = %s02.nif
+		ground_size = 0.5,1
+	}
+}

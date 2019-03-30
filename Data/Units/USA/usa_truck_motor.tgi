@@ -1,0 +1,69 @@
+[Thing Template=AAUnitUSAVehicleHQTruck]
+{
+	IDS = usa_truck_motor
+	name = "#usa_truck_motor_name"
+	editor_name = "#usa_truck_motor_editor_name"
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 125
+
+		[Production]
+		oil = 10
+
+		[Upkeep]
+		building_limit_consumed = 0
+	}
+
+	[ElementComponent]
+
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = usa_motor_pool
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+
+
+		;; ids of the trailer actor
+		trailer_actor = usa_trailer_motor
+
+		[TrailerHitch]
+		{		
+			;; node name and node offset of the truck's hitch
+			node_ids = hitch
+			node_offset = 0, -1, .8
+		}
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = motor_pool
+	}
+		
+	[View]
+	{
+		resource_prefix = USATruckBedless/USATruckBedless
+		icon = /UI/Game/BuildingButtons/IconMotorPool.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = usa_truck_deployed
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = motor_pool_select
+	}
+}

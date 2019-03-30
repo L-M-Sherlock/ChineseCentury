@@ -1,0 +1,40 @@
+[Thing Template=AAArcticDynamicDoodad]
+{
+	IDS = arctic_walls
+	name = "#arctic_walls_name"
+
+	[Component Inherit=BreakableDynamicDoodadComponent]
+	{
+		update_time = 1
+		break_impulse = 100
+		toppled = false
+		trampled_aspect_ids = arctic_wall_crushed
+		regrow = false
+		
+		[Action Template=FXC_CreateVFX]
+		vfx_ids = dynamic_doodad_crush
+		
+		[Action Template=FXC_PlaySFX]
+		audio_ids = dynamic_wall_crush
+	}
+
+	[Flags]
+	random_orientation = false	
+	
+	[Size]
+	scale_min = 1.0
+	scale_max = 1.0
+
+	[View]
+	{
+		aspects_as_variations = false
+		resource_prefix = ArcticWalls/ArcticWall01
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		shadow_type = STENCIL
+
+		[Aspect]
+		IDS = arctic_wall_crushed
+		model = ArcticWalls/ArcticWallsCrushed.nif
+		ground_size = 1.5,1.0
+	}
+}

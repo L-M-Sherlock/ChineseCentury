@@ -1,0 +1,95 @@
+[Thing Inherit=VFXProjectedTextureLit]
+{
+	name = "#barbedwire_BarbedWireGround_name"
+	texture = BarbedWire/BarbedWireGround.DDS	
+	IDS = BarbedWireGround
+	attached_scale = 0
+	texture_size = 6.3
+}
+
+[Thing Template=AASharedDynamicDoodad]
+{
+	IDS = barbed_wire
+	name = "#barbedwire_barbed_wire_name"
+	
+	[Flags]
+	random_orientation = false	
+	
+	[Size]
+	scale_min = 1.00
+	scale_max = 1.00
+	
+	[View]
+	{
+		aspects_as_variations = false
+		resource_prefix = BarbedWire/BarbedWire
+		shadow_type = none
+		
+		[Aspect]
+		IDS = barbed_wire_crush
+		model = BarbedWire/BarbedWireCrushed.nif
+		ground_size = 0.5,1.0
+
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = BarbedWireGround
+	}
+	
+	[Component Inherit=BreakableDynamicDoodadComponent]
+	{
+		update_time = 1
+		break_impulse = 30
+		toppled = false
+		regrow = false
+		trampled_aspect_ids = barbed_wire_crush
+
+		[Action Template=FXC_CreateVFX]
+		vfx_ids = dynamic_doodad_crush
+	}
+}
+[Thing Inherit=VFXProjectedTextureLit]
+{
+	name = "#barbedwire_BarbedWireSignGround_name"
+	texture = BarbedWire/BarbedWireSignGround.DDS	
+	IDS = BarbedWireSignGround
+	attached_scale = 0
+	texture_size = 6.3
+}
+[Thing Template=AASharedDynamicDoodad]
+{
+	IDS = barbed_wire_sign
+	name = "#barbedwire_barbed_wire_sign_name"
+	
+	[Flags]
+	random_orientation = false	
+	
+	[Size]
+	scale_min = 1.00
+	scale_max = 1.00
+	
+	[View]
+	{
+		aspects_as_variations = false
+		resource_prefix = BarbedWire/BarbedWireSign
+		shadow_type = none
+		
+		[Aspect]
+		IDS = barbed_wire_sign_crush
+		model = BarbedWire/BarbedWireSignCrushed.nif
+		ground_size = 0.5,1.0
+
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = BarbedWireSignGround
+	}
+	
+	[Component Inherit=BreakableDynamicDoodadComponent]
+	{
+		update_time = 1
+		break_impulse = 100
+		toppled = false
+		regrow = false
+		trampled_aspect_ids = barbed_wire_sign_crush
+
+		[Action Template=FXC_CreateVFX]
+		vfx_ids = dynamic_doodad_crush
+	}
+}

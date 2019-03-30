@@ -1,0 +1,43 @@
+[Terrain template=Terrain]
+{
+	IDS = chaparral_grassdry
+	name = "#chaparral_dry_grass_name"
+	
+	base_priority = 2000
+	terrain_group = dirt
+	
+	doodad_frequency = 0.025
+	primary_doodad_frequency = 0.20
+
+	[Variation]
+	IDS = chaparral_grassdry01
+	name = "#chaparral_dry_grass_chaparral_grassdry01_name"
+	texture = ChaparralGrassDry/ChaparralGrassDry01.tga
+	terrain_color = 0.461, 0.583, 0.276
+	texture_width = 16
+	texture_height = 16
+
+	[Variation]
+	IDS = chaparral_grassdry02
+	name = "#chaparral_dry_grass_chaparral_grassdry02_name"
+	texture = ChaparralGrassDry/ChaparralGrassDry02.tga
+	terrain_color = 0.481, 0.563, 0.296
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = chaparral_grassdry03
+	name = "#chaparral_dry_grass_chaparral_grassdry03_name"
+	texture = ChaparralGrassDry/ChaparralGrassDry03.tga
+	terrain_color = 0.461, 0.583, 0.276
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = chaparral_grassdry04
+	name = "#chaparral_dry_grass_chaparral_grassdry04_name"
+	texture = ChaparralGrassDry/ChaparralGrassDry04.tga
+	terrain_color = 0.461, 0.583, 0.276
+	texture_width = 8
+	texture_height = 8
+}

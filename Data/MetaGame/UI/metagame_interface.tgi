@@ -1,0 +1,47 @@
+
+;; --------------------------- Metagame Interface ---------------------------
+
+;; mad080404 - don't use silent interface for the metagame interface!
+[MetaGame Inherit=Interface]
+{
+	bool	anchored_tooltips = true
+	float	anchored_tooltip_x = 1024
+	float	anchored_tooltip_y = 536
+ 	float	anchored_tooltip_width = 283
+
+	[View Template=NoVE]
+}
+
+[MetaGameKingdomDropDown Inherit=GameDropDownWidget]
+{
+	localized observer_text = "#metagame_interface_MetaGameKingdomDropDown_observer_text"
+
+	[View]
+	{
+		L = 200r
+		T = 0
+		R = 0r
+	}
+
+	[Listbox]
+	{
+		num_visible_items = 6
+	}
+}
+
+[MetaGameTurnStatusLabel Template=LabelWidget]
+{
+	[View Template=NoVE]
+	
+	[Label]
+	{
+		L = 0%
+		T = 10%
+		R = 100%
+		B = 20%
+		
+		text = ""
+		font = small
+		justify = CENTER
+	}
+}

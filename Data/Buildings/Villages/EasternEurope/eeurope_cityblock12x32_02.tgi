@@ -1,0 +1,110 @@
+[Thing Template=AACityEasternEurope]
+{
+	IDS = eeurope_cityblock12x32_02
+	editor_name = "#eastern_europe_city11_editor_name"
+	
+	[Size]
+	blocking_shape = RECT
+	rect_width = 32
+	rect_height = 12
+
+	[View]
+	{
+		resource_prefix = EasternEuropeCity11/EasternEuropeCity11
+		
+		[AspectNormal]
+	    ground_size = 22,6	
+	    visual_radius_estimate = 17
+    
+		[TextureSearchPath]
+		path = /Shared/SharedTextures/Buildings/EasternEurope		
+						
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_03
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_04
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_05
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_06
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_07
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_08
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_09
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_10
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_11
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_12
+		attached = true
+	}
+
+	[CityComponent]
+	{
+		zone_radius = 0
+				
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 15.64, -5.58
+			orientation = 0, 1
+			
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 15.66, 5.66
+			orientation = 0, 1
+			
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = -15.64, -5.64
+			orientation = 0, 1
+			
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = -15.70, 5.69
+			orientation = 0, 1
+		}
+	}
+}

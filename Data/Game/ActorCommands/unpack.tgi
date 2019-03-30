@@ -1,0 +1,18 @@
+[ActorCommand Template=ActorCommand]
+{
+	;; general info
+	IDS = unpack
+	name = "#actor_commands_unpack_name"
+	tooltip = "#actor_commands_unpack_tooltip"
+	icon = /UI/%s/Game/ActionButtons/IconUnpack.png
+	cursor_ids = unpack
+	command_vfx_ids_actor = waypoint_unpack
+	command_vfx_ids_location = waypoint_unpack
+
+	non_group_command = true
+
+	high_importance = false
+	preferred_position = 9
+}
+
+

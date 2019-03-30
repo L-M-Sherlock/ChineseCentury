@@ -1,0 +1,275 @@
+[Template AAUSABuildingPackableAirfield Template=AAUSABuildingPackable]
+{
+	;IDS = usa_airfield
+	;name = "Airfield"
+	;editor_name = "USA Airfield"
+
+	[BodyComponent]
+	health = 1000
+	defense = 5
+
+	[Flags]
+	axis_locked = false
+
+	[DenizenComponent]
+	{
+		guard_range = 60
+		guard_operational_range = 75
+
+		[DenizenGroup]
+		{
+			actor_ids = usa_bomber
+			size = 1,1
+			behavior = AIR_OFFENSIVE
+			
+			[FormationPositions]
+			offset = -9,+15,-2
+			
+			[FormationPositions]
+			offset = +9,+15,-2
+		}
+
+		[DenizenGroup]
+		{
+			actor_ids = usa_fighter
+			size = 1,1
+			behavior = AIR_DEFENSIVE + AIR_RECON
+		}
+
+		[DenizenGroup]
+		{
+			actor_ids = usa_fighter
+			size = 1,2
+			behavior = AIR_ESCORT
+			
+			[FormationPositions]
+			offset = -9,+15,-2
+			
+			[FormationPositions]
+			offset = +9,+15,-2
+		}
+
+		[Inventory]
+		actor_ids = usa_bomber
+		count = 2
+
+		[Inventory]
+		actor_ids = usa_fighter
+		count = 12
+
+		[Runway]
+		{
+			hangar_offset = 2.5, 1, -.75
+			hangar_orientation = 0, 1
+			hangar_length = 2.45
+			offset = 0, 5.1, -.75
+			orientation = -1 ,0
+			length = 4.8
+			delay = 1
+		}
+		
+		[AirAttackCost]
+		money = 100
+	
+		[AirReconCost]
+		money = 25
+	}
+
+	[DetectionComponent]
+	{
+		detection_range = 200
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 400
+
+		[Upkeep]
+		ammo = 15
+		oil = 15
+		building_limit_consumed = 0
+	}
+
+	[MobileDeploymentComponent]
+	{
+		packing_length = 8
+		unpacking_length = 8
+		pack_health_min = 1
+	}
+
+ 	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = airhq
+
+		[Property]
+		property_IDS = airfield
+
+		[Property]
+		property_ids = economic_building
+	}
+/*
+	[RecruitComponent]
+	{	
+		[RecruitActor]
+		actor_ids = regiment_usa_paratrooper
+	}
+*/
+	[ResearchComponent]
+	{
+		
+		[ResearchItem]
+		{
+			property_IDS = tech_self_sealing_fuel_tanks
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 100
+			}
+		}
+		
+		[ResearchItem]
+		{
+			property_IDS = tech_increased_payload
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 125
+			}
+		}
+		
+		[ResearchItem]
+		{
+			property_IDS = tech_superchargers
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 75
+			}
+		}
+		
+		[ResearchItem]
+		{
+			property_IDS = tech_napalm
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 150
+			}
+		}		
+	}
+
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 12
+	}
+
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconAirfield.tga
+		resource_prefix = USAAirfield/USAAirfield
+		icon = /UI/Game/BuildingButtons/IconAirfield.png
+		
+		[TextureSearchPath]
+		path = /Units/USA/USAFighter
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_airfield_dirt
+			terrain_group_filter = dirt
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_airfield_snow
+			terrain_group_filter = snow
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_airfield_desert
+			terrain_group_filter = desert
+		}
+	
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = airfield_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = air_attack
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = air_attack
+		
+		;;------ Spot Lights --------------------
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_02
+			location = spotlight_ae_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = blinking_light01
+			location = spotlight_ae_02
+			attached = true
+		}	
+	}
+
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_packing
+		audio_ids = pack_7s_sfx
+	}
+	
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_unpacking
+		audio_ids = unpack_7s_sfx
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	{
+		actor_state = structure_unpacking
+		audio_ids = airfield_complete
+	}
+}
+
+
+
+[Thing Template=AAUSABuildingPackableAirfield]
+{
+	IDS = usa_airfield
+	name = "#usa_airfield_Thing_name"
+	editor_name = "#usa_airfield_Thing_editor_name"
+
+	hide_if_missing_properties = false
+	
+	[EconomyComponent]
+
+}
+/*
+;; brw090704 - Removed these, not needed for the Dynamic Campaign
+[Thing Template=AAUSABuildingPackableAirfield]
+{
+	IDS = usa_airfield_dynamic
+	name = "#usa_airfield_dynamic_name"
+	editor_name = "#usa_airfield_dynamic_editor_name"
+
+	[EconomyComponent]
+	
+	[Placement]
+	placement_group_ids = null
+}
+*/

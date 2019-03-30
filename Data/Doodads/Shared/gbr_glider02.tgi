@@ -1,0 +1,35 @@
+[Thing Inherit=VFXProjectedTextureLit]
+{
+	name = "#gbr_glider02_GBRGlider02Ground_name"
+	texture = GBRGlider/GBRGlider02Ground.DDS	
+	IDS = GBRGlider02Ground
+	attached_scale = 0
+	texture_size = 10
+}
+
+[Thing Template=AASharedDoodad]
+{
+	IDS = gbr_glider02
+	name = "#gbr_glider02_Thing_name"
+
+	[Flags]
+	random_orientation = false	
+
+	[Size]
+	scale_min = 1.0
+	scale_max = 1.0
+	
+	[View]
+	{
+		resource_prefix = GBRGlider/GBRGlider
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		shadow_type = STENCIL
+
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = GBRGlider02Ground
+		
+		[Aspect Template=Aspect]
+		IDS = gbr_glider02
+		model = %s02.nif
+	}
+}

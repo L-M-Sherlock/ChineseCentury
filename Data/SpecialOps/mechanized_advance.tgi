@@ -1,0 +1,65 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = mechanized_advance
+	name = "#mechanized_advance_name"
+	description = "#mechanized_advance_description"
+	targets = +FRIEND +VEHICLE -TANK
+	ability_type = NULL
+	recharge_time = 360
+	area = 20
+	range = 10
+	max_targets = 24
+	target_location_vfx = friendly_target_decal_vfx
+
+	icon = /UI/%s/Game/SpecialOps/IconMechanizedAdvance.png
+	
+	[Effect Template=EnchantmentEffect]
+	{
+		[EnchantmentProperty]
+		{
+			IDS = property_mechanized_advance
+			name = "#mechanized_advance_Effect_EnchantmentProperty_name"
+			enchantment_type = ench_type_generic
+			duration = 120				
+			required_properties = vehicle
+			icon = /Properties/PropertyIcons/IconPropertyCombat.png
+	
+			[Modifier Template=AbilityEffectModifier]
+			{
+				ability_type = attack
+										
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = armor_piercing
+				amount = +10
+			}
+			
+			[Modifier Template=AddModifier]
+			attribute = DV
+			amount = +5
+			
+			[Modifier Template=MultiplyModifier]
+			attribute = SPEED_MAX
+			amount = 0.20
+			
+			[Modifier Template=EnchantmentImmunityModifier]
+			enchantment_type = ench_type_fear
+			
+			[WhenAdded Template=FXC_CreateVFX]
+			VFX_IDS = speed_decal
+		}
+	}
+
+	[Flags]
+	enchantment = true
+	
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = mechanized_advance_sfx
+	at = TARGET_GROUND
+			
+	[WhenDo Template=FXC_CreateVFX]
+	VFX_IDS = mechanized_advnace_eagle
+	at = TARGET_GROUND
+}

@@ -1,0 +1,997 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;------------------------ COMBAT SOUNDS ---------------- ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;---------------------------- GENERIC --------------------;;
+
+[Audio Template=AudioAttack]
+{
+	IDS = dynamite
+	name = "#sounds_combat_aa_dynamite_name"
+
+	files = Sounds/General/Attack/Dynamite.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = hammer
+	name = "#sounds_combat_aa_hammer_name"
+	simultaneous_limit = 1
+
+	files = Sounds/General/Attack/Hammer01.wav, Sounds/General/Attack/Hammer02.wav, Sounds/General/Attack/Hammer03.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = flamethrower
+	name = "#sounds_combat_aa_flamethrower_name"
+
+	files = Sounds/General/Attack/Flamethrower01.wav, Sounds/General/Attack/Flamethrower02.wav, Sounds/General/Attack/Flamethrower03.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = battleship_cannon
+	name = "#sounds_combat_aa_battleship_cannon_name"
+
+	files = Sounds/General/Attack/BattleshipCannon01.wav, Sounds/General/Attack/BattleshipCannon02.wav, Sounds/General/Attack/BattleshipCannon03.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = bomb_heavy
+	name = "#sounds_combat_aa_bomb_heavy_name"
+
+	files = Sounds/General/Attack/BombHeavy01.wav, Sounds/General/Attack/BombHeavy02.wav, Sounds/General/Attack/BombHeavy03.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = grenade
+	name = "#sounds_combat_aa_grenade_name"
+
+	files = Sounds/General/Attack/Grenade01.wav, Sounds/General/Attack/Grenade02.wav, Sounds/General/Attack/Grenade03.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_artillery_light
+	name = "#sounds_combat_aa_explosion_artillery_light_name"
+
+	files = Sounds/General/Attack/ExplosionArtilleryLight01.wav, Sounds/General/Attack/ExplosionArtilleryLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_artillery_medium
+	name = "#sounds_combat_aa_explosion_artillery_medium_name"
+
+	files = Sounds/General/Attack/ExplosionArtilleryMedium01.wav, Sounds/General/Attack/ExplosionArtilleryMedium02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_artillery_heavy
+	name = "#sounds_combat_aa_explosion_artillery_heavy_name"
+	
+	volume = 75%
+
+	files = Sounds/General/Attack/ExplosionArtilleryHeavy01.wav, Sounds/General/Attack/ExplosionArtilleryHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_bomb_light
+	name = "#sounds_combat_aa_explosion_bomb_light_name"
+	simultaneous_limit = 1
+
+	files = Sounds/General/Attack/ExplosionBombLight01.wav, Sounds/General/Attack/ExplosionBombLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_bomb_medium
+	name = "#sounds_combat_aa_explosion_bomb_medium_name"
+	simultaneous_limit = 1
+
+	files = Sounds/General/Attack/ExplosionBombMedium01.wav, Sounds/General/Attack/ExplosionBombMedium02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_bomb_heavy
+	name = "#sounds_combat_aa_explosion_bomb_heavy_name"
+	simultaneous_limit = 1
+
+	files = Sounds/General/Attack/ExplosionBombHeavy01.wav, Sounds/General/Attack/ExplosionBombHeavy02.wav, Sounds/General/Attack/ExplosionBombHeavy03.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_cannon_light
+	name = "#sounds_combat_aa_explosion_cannon_light_name"
+
+	files = Sounds/General/Attack/ExplosionCannonLight01.wav, Sounds/General/Attack/ExplosionCannonLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_cannon_medium
+	name = "#sounds_combat_aa_explosion_cannon_medium_name"
+
+	files = Sounds/General/Attack/ExplosionCannonMedium01.wav, Sounds/General/Attack/ExplosionCannonMedium02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_cannon_heavy
+	name = "#sounds_combat_aa_explosion_cannon_heavy_name"
+
+	files = Sounds/General/Attack/ExplosionCannonHeavy01.wav, Sounds/General/Attack/ExplosionCannonHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_cannon_ship
+	name = "#sounds_combat_aa_explosion_cannon_ship_name"
+
+	files = Sounds/General/Attack/ExplosionCannonShip01.wav, Sounds/General/Attack/ExplosionCannonShip02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_grenade
+	name = "#sounds_combat_aa_explosion_grenade_name"
+
+	files = Sounds/General/Attack/ExplosionGrenade01.wav, Sounds/General/Attack/ExplosionGrenade02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_landmine
+	name = "#sounds_combat_aa_explosion_landmine_name"
+
+	files = Sounds/General/Attack/ExplosionLandmine01.wav, Sounds/General/Attack/ExplosionLandmine02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_rocket
+	name = "#sounds_combat_aa_explosion_rocket_name"
+
+	files = Sounds/General/Attack/ExplosionRocket01.wav, Sounds/General/Attack/ExplosionRocket02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = explosion_napalm
+	name = "#sounds_combat_aa_explosion_napalm_name"
+
+	files = Sounds/General/Attack/ExplosionNapalm.wav
+}
+;;---------------------------- GBR ------------------------;;
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = gbr_aa
+	name = "#sounds_combat_aa_gbr_aa_name"
+
+	files = Sounds/GBR/Attack/GBRAA01.wav, Sounds/GBR/Attack/GBRAA02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = gbr_artillery_heavy
+	name = "#sounds_combat_aa_gbr_artillery_heavy_name"
+
+	files = Sounds/GBR/Attack/GBRArtilleryHeavy01.wav, Sounds/GBR/Attack/GBRArtilleryHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = gbr_artillery_light
+	name = "#sounds_combat_aa_gbr_artillery_light_name"
+
+	files = Sounds/GBR/Attack/GBRArtilleryLight01.wav, Sounds/GBR/Attack/GBRArtilleryLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = gbr_cannon_heavy
+	name = "#sounds_combat_aa_gbr_cannon_heavy_name"
+
+	files = Sounds/GBR/Attack/GBRCannonHeavy01.wav, Sounds/GBR/Attack/GBRCannonHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = gbr_cannon_medium
+	name = "#sounds_combat_aa_gbr_cannon_medium_name"
+
+	files = Sounds/GBR/Attack/GBRCannonMedium01.wav, Sounds/GBR/Attack/GBRCannonMedium02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = gbr_cannon_light
+	name = "#sounds_combat_aa_gbr_cannon_light_name"
+
+	files = Sounds/GBR/Attack/GBRCannonLight01.wav, Sounds/GBR/Attack/GBRCannonLight02.wav
+}
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = gbr_mg_heavy
+	name = "#sounds_combat_aa_gbr_mg_heavy_name"
+
+	files = Sounds/GBR/Attack/GBRMGHeavy01a.wav, Sounds/GBR/Attack/GBRMGHeavy01b.wav, Sounds/GBR/Attack/GBRMGHeavy01c.wav, Sounds/GBR/Attack/GBRMGHeavy01d.wav, Sounds/GBR/Attack/GBRMGHeavy01e.wav, Sounds/GBR/Attack/GBRMGHeavy01f.wav, Sounds/GBR/Attack/GBRMGHeavy02a.wav, Sounds/GBR/Attack/GBRMGHeavy02b.wav, Sounds/GBR/Attack/GBRMGHeavy02c.wav, Sounds/GBR/Attack/GBRMGHeavy02d.wav, Sounds/GBR/Attack/GBRMGHeavy02e.wav, Sounds/GBR/Attack/GBRMGHeavy02f.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = gbr_mg_light
+	name = "#sounds_combat_aa_gbr_mg_light_name"
+
+	files = Sounds/GBR/Attack/GBRMGLight01a.wav, Sounds/GBR/Attack/GBRMGLight01b.wav, Sounds/GBR/Attack/GBRMGLight01c.wav, Sounds/GBR/Attack/GBRMGLight01d.wav, Sounds/GBR/Attack/GBRMGLight01e.wav, Sounds/GBR/Attack/GBRMGLight01f.wav, Sounds/GBR/Attack/GBRMGLight02a.wav, Sounds/GBR/Attack/GBRMGLight02b.wav, Sounds/GBR/Attack/GBRMGLight02c.wav, Sounds/GBR/Attack/GBRMGLight02d.wav, Sounds/GBR/Attack/GBRMGLight02e.wav, Sounds/GBR/Attack/GBRMGLight02f.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = gbr_rocket
+	name = "#sounds_combat_aa_gbr_rocket_name"
+
+	files = Sounds/GBR/Attack/GBRRocket01.wav, Sounds/GBR/Attack/GBRRocket02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = gbr_rifle
+	name = "#sounds_combat_aa_gbr_rifle_name"
+
+	files = Sounds/GBR/Attack/GBRRifle01.wav, Sounds/GBR/Attack/GBRRifle02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = gbr_flame_tank
+	name = "#sounds_combat_aa_gbr_flame_tank_name"
+
+	files = Sounds/GBR/Attack/GBRFlameTank01.wav, Sounds/GBR/Attack/GBRFlameTank02.wav
+}
+;;---------------------------- GER ------------------------;;
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = ger_aa
+	name = "#sounds_combat_aa_ger_aa_name"
+
+	files = Sounds/GER/Attack/GERAA01.wav, Sounds/GER/Attack/GERAA02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ger_artillery_heavy
+	name = "#sounds_combat_aa_ger_artillery_heavy_name"
+
+	files = Sounds/GER/Attack/GERArtilleryHeavy01.wav, Sounds/GER/Attack/GERArtilleryHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ger_artillery_light
+	name = "#sounds_combat_aa_ger_artillery_light_name"
+
+	files = Sounds/GER/Attack/GERArtilleryLight01.wav, Sounds/GER/Attack/GERArtilleryLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ger_cannon_heavy
+	name = "#sounds_combat_aa_ger_cannon_heavy_name"
+
+	files = Sounds/GER/Attack/GERCannonHeavy01.wav, Sounds/GER/Attack/GERCannonHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ger_cannon_medium
+	name = "#sounds_combat_aa_ger_cannon_medium_name"
+
+	files = Sounds/GER/Attack/GERCannonMedium01.wav, Sounds/GER/Attack/GERCannonMedium02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ger_cannon_light
+	name = "#sounds_combat_aa_ger_cannon_light_name"
+
+	files = Sounds/GER/Attack/GERCannonLight01.wav, Sounds/GER/Attack/GERCannonLight02.wav
+}
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = ger_mg_heavy
+	name = "#sounds_combat_aa_ger_mg_heavy_name"
+
+	files = Sounds/GER/Attack/GERMGHeavy01a.wav, Sounds/GER/Attack/GERMGHeavy01b.wav, Sounds/GER/Attack/GERMGHeavy01c.wav, Sounds/GER/Attack/GERMGHeavy01d.wav, Sounds/GER/Attack/GERMGHeavy02a.wav, Sounds/GER/Attack/GERMGHeavy02b.wav, Sounds/GER/Attack/GERMGHeavy02c.wav, Sounds/GER/Attack/GERMGHeavy02d.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ger_mg_light
+	name = "#sounds_combat_aa_ger_mg_light_name"
+
+	files = Sounds/GER/Attack/GERMGLight01a.wav, Sounds/GER/Attack/GERMGLight01b.wav, Sounds/GER/Attack/GERMGLight01c.wav, Sounds/GER/Attack/GERMGLight01d.wav, Sounds/GER/Attack/GERMGLight02a.wav, Sounds/GER/Attack/GERMGLight02b.wav, Sounds/GER/Attack/GERMGLight02c.wav, Sounds/GER/Attack/GERMGLight02d.wav,
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ger_rocket
+	name = "#sounds_combat_aa_ger_rocket_name"
+
+	files = Sounds/GER/Attack/GERRocket01.wav, Sounds/GER/Attack/GERRocket02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ger_rifle
+	name = "#sounds_combat_aa_ger_rifle_name"
+
+	files = Sounds/GER/Attack/GERRifle01.wav, Sounds/GER/Attack/GERRifle02.wav
+}
+
+
+
+;;---------------------------- JPN ------------------------;;
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = jpn_aa
+	name = "#sounds_combat_aa_jpn_aa_name"
+
+	files = Sounds/JPN/Attack/JPNAA01.wav, Sounds/JPN/Attack/JPNAA02.wav
+}
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = jpn_artillery_heavy
+	name = "#sounds_combat_aa_jpn_artillery_heavy_name"
+
+	files = Sounds/JPN/Attack/JPNArtilleryHeavy01.wav, Sounds/JPN/Attack/JPNArtilleryHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = jpn_artillery_light
+	name = "#sounds_combat_aa_jpn_artillery_light_name"
+
+	files = Sounds/JPN/Attack/JPNArtilleryLight01.wav, Sounds/JPN/Attack/JPNArtilleryLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = jpn_cannon_heavy
+	name = "#sounds_combat_aa_jpn_cannon_heavy_name"
+
+	files = Sounds/JPN/Attack/JPNCannonHeavy01.wav, Sounds/JPN/Attack/JPNCannonHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = jpn_cannon_medium
+	name = "#sounds_combat_aa_jpn_cannon_medium_name"
+
+	files = Sounds/JPN/Attack/JPNCannonMedium01.wav, Sounds/JPN/Attack/JPNCannonMedium02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = jpn_cannon_light
+	name = "#sounds_combat_aa_jpn_cannon_light_name"
+
+	files = Sounds/JPN/Attack/JPNCannonLight01.wav, Sounds/JPN/Attack/JPNCannonLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = jpn_mg_heavy
+	name = "#sounds_combat_aa_jpn_mg_heavy_name"
+
+	files = Sounds/JPN/Attack/JPNMGHeavy01a.wav, Sounds/JPN/Attack/JPNMGHeavy01b.wav, Sounds/JPN/Attack/JPNMGHeavy01c.wav, Sounds/JPN/Attack/JPNMGHeavy01d.wav, Sounds/JPN/Attack/JPNMGHeavy01e.wav, Sounds/JPN/Attack/JPNMGHeavy02a.wav, Sounds/JPN/Attack/JPNMGHeavy02b.wav, Sounds/JPN/Attack/JPNMGHeavy02c.wav, Sounds/JPN/Attack/JPNMGHeavy02d.wav, Sounds/JPN/Attack/JPNMGHeavy02e.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = jpn_mg_light
+	name = "#sounds_combat_aa_jpn_mg_light_name"
+
+	files = Sounds/JPN/Attack/JPNMGLight01a.wav, Sounds/JPN/Attack/JPNMGLight01b.wav, Sounds/JPN/Attack/JPNMGLight01c.wav, Sounds/JPN/Attack/JPNMGLight01d.wav, Sounds/JPN/Attack/JPNMGLight01e.wav, Sounds/JPN/Attack/JPNMGLight02a.wav, Sounds/JPN/Attack/JPNMGLight02b.wav, Sounds/JPN/Attack/JPNMGLight02c.wav, Sounds/JPN/Attack/JPNMGLight02d.wav, Sounds/JPN/Attack/JPNMGLight02e.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = jpn_rocket
+	name = "#sounds_combat_aa_jpn_rocket_name"
+
+	files = Sounds/JPN/Attack/JPNRocket01.wav, Sounds/JPN/Attack/JPNRocket02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = jpn_rifle
+	name = "#sounds_combat_aa_jpn_rifle_name"
+
+	files = Sounds/JPN/Attack/JPNRifle01.wav, Sounds/JPN/Attack/JPNRifle02.wav
+}
+
+;;---------------------------- RUS ------------------------;;
+
+[Audio Template=AudioAttack]
+{
+	IDS = rus_aa
+	name = "#sounds_combat_aa_rus_aa_name"
+
+	files = Sounds/RUS/Attack/RUSAA01.wav, Sounds/RUS/Attack/RUSAA02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = rus_artillery_heavy
+	name = "#sounds_combat_aa_rus_artillery_heavy_name"
+
+	files = Sounds/RUS/Attack/RUSArtilleryHeavy01.wav, Sounds/RUS/Attack/RUSArtilleryHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = rus_artillery_light
+	name = "#sounds_combat_aa_rus_artillery_light_name"
+
+	files = Sounds/RUS/Attack/RUSArtilleryLight01.wav, Sounds/RUS/Attack/RUSArtilleryLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = rus_cannon_heavy
+	name = "#sounds_combat_aa_rus_cannon_heavy_name"
+
+	files = Sounds/RUS/Attack/RUSCannonHeavy01.wav, Sounds/RUS/Attack/RUSCannonHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = rus_cannon_medium
+	name = "#sounds_combat_aa_rus_cannon_medium_name"
+
+	files = Sounds/RUS/Attack/RUSCannonMedium01.wav, Sounds/RUS/Attack/RUSCannonMedium02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = rus_cannon_light
+	name = "#sounds_combat_aa_rus_cannon_light_name"
+
+	files = Sounds/RUS/Attack/RUSCannonLight01.wav, Sounds/RUS/Attack/RUSCannonLight02.wav
+}
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = rus_mg_heavy
+	name = "#sounds_combat_aa_rus_mg_heavy_name"
+
+	files = Sounds/RUS/Attack/RUSMGHeavy01a.wav, Sounds/RUS/Attack/RUSMGHeavy01b.wav, Sounds/RUS/Attack/RUSMGHeavy01c.wav, Sounds/RUS/Attack/RUSMGHeavy01d.wav, Sounds/RUS/Attack/RUSMGHeavy02a.wav, Sounds/RUS/Attack/RUSMGHeavy02b.wav, Sounds/RUS/Attack/RUSMGHeavy02c.wav, Sounds/RUS/Attack/RUSMGHeavy02d.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = rus_mg_light
+	name = "#sounds_combat_aa_rus_mg_light_name"
+
+	files = Sounds/RUS/Attack/RUSMGLight01a.wav, Sounds/RUS/Attack/RUSMGLight01b.wav, Sounds/RUS/Attack/RUSMGLight01c.wav, Sounds/RUS/Attack/RUSMGLight01d.wav, Sounds/RUS/Attack/RUSMGLight02a.wav, Sounds/RUS/Attack/RUSMGLight02b.wav, Sounds/RUS/Attack/RUSMGLight02c.wav, Sounds/RUS/Attack/RUSMGLight02d.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = rus_rocket
+	name = "#sounds_combat_aa_rus_rocket_name"
+
+	files = Sounds/RUS/Attack/RUSRocket01.wav, Sounds/RUS/Attack/RUSRocket02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = rus_rifle
+	name = "#sounds_combat_aa_rus_rifle_name"
+
+	files = Sounds/RUS/Attack/RUSRifle01.wav, Sounds/RUS/Attack/RUSRifle02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = rus_rocket_truck
+	name = "#sounds_combat_aa_rus_rocket_truck_name"
+
+	files = Sounds/RUS/Attack/RUSRocketTruck01.wav, Sounds/RUS/Attack/RUSRocketTruck02.wav
+}
+
+;;---------------------------- USA ------------------------;;
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = usa_aa
+	name = "#sounds_combat_aa_usa_aa_name"
+
+	files = Sounds/USA/Attack/USAAA01.wav, Sounds/USA/Attack/USAAA02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = usa_artillery_heavy
+	name = "#sounds_combat_aa_usa_artillery_heavy_name"
+
+	files = Sounds/USA/Attack/USAArtilleryHeavy01.wav, Sounds/USA/Attack/USAArtilleryHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = usa_artillery_light
+	name = "#sounds_combat_aa_usa_artillery_light_name"
+
+	files = Sounds/USA/Attack/USAArtilleryLight01.wav, Sounds/USA/Attack/USAArtilleryLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = usa_cannon_heavy
+	name = "#sounds_combat_aa_usa_cannon_heavy_name"
+
+	files = Sounds/USA/Attack/USACannonHeavy01.wav, Sounds/USA/Attack/USACannonHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = usa_cannon_medium
+	name = "#sounds_combat_aa_usa_cannon_medium_name"
+
+	files = Sounds/USA/Attack/USACannonMedium01.wav, Sounds/USA/Attack/USACannonMedium02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = usa_cannon_light
+	name = "#sounds_combat_aa_usa_cannon_light_name"
+
+	files = Sounds/USA/Attack/USACannonLight01.wav, Sounds/USA/Attack/USACannonLight02.wav
+}
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = usa_mg_heavy
+	name = "#sounds_combat_aa_usa_mg_heavy_name"
+
+	files = Sounds/USA/Attack/USAMGHeavy01a.wav, Sounds/USA/Attack/USAMGHeavy01b.wav, Sounds/USA/Attack/USAMGHeavy01c.wav, Sounds/USA/Attack/USAMGHeavy02a.wav, Sounds/USA/Attack/USAMGHeavy02b.wav, Sounds/USA/Attack/USAMGHeavy02c.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = usa_mg_light
+	name = "#sounds_combat_aa_usa_mg_light_name"
+
+	files = Sounds/USA/Attack/USAMGLight01a.wav, Sounds/USA/Attack/USAMGLight01b.wav, Sounds/USA/Attack/USAMGLight01c.wav, Sounds/USA/Attack/USAMGLight02a.wav, Sounds/USA/Attack/USAMGLight02b.wav, Sounds/USA/Attack/USAMGLight02c.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = usa_rocket
+	name = "#sounds_combat_aa_usa_rocket_name"
+
+	files = Sounds/USA/Attack/USARocket01.wav, Sounds/USA/Attack/USARocket02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = usa_rifle
+	name = "#sounds_combat_aa_usa_rifle_name"
+
+	files = Sounds/USA/Attack/USARifle01.wav, Sounds/USA/Attack/USARifle02.wav
+}
+
+;;---------------------------- FIN ------------------------;;
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = fin_aa
+	name = "#sounds_combat_aa_fin_aa_name"
+
+	files = Sounds/fin/Attack/finAA01.wav, Sounds/fin/Attack/finAA02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = fin_artillery_heavy
+	name = "#sounds_combat_aa_fin_artillery_heavy_name"
+
+	files = Sounds/fin/Attack/finArtilleryHeavy01.wav, Sounds/fin/Attack/finArtilleryHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = fin_artillery_light
+	name = "#sounds_combat_aa_fin_artillery_light_name"
+
+	files = Sounds/fin/Attack/finArtilleryLight01.wav, Sounds/fin/Attack/finArtilleryLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = fin_cannon_heavy
+	name = "#sounds_combat_aa_fin_cannon_heavy_name"
+
+	files = Sounds/fin/Attack/finCannonHeavy01.wav, Sounds/fin/Attack/finCannonHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = fin_cannon_medium
+	name = "#sounds_combat_aa_fin_cannon_medium_name"
+
+	files = Sounds/fin/Attack/finCannonMedium01.wav, Sounds/fin/Attack/finCannonMedium02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = fin_cannon_light
+	name = "#sounds_combat_aa_fin_cannon_light_name"
+
+	files = Sounds/fin/Attack/finCannonLight01.wav, Sounds/fin/Attack/finCannonLight02.wav
+}
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = fin_mg_heavy
+	name = "#sounds_combat_aa_fin_mg_heavy_name"
+
+	files = Sounds/fin/Attack/finMGHeavy01a.wav, Sounds/fin/Attack/finMGHeavy01b.wav, Sounds/fin/Attack/finMGHeavy01c.wav, Sounds/fin/Attack/finMGHeavy02a.wav, Sounds/fin/Attack/finMGHeavy02b.wav, Sounds/fin/Attack/finMGHeavy02c.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = fin_mg_light
+	name = "#sounds_combat_aa_fin_mg_light_name"
+
+	files = Sounds/fin/Attack/finMGLight01a.wav, Sounds/fin/Attack/finMGLight01b.wav, Sounds/fin/Attack/finMGLight01c.wav, Sounds/fin/Attack/finMGLight02a.wav, Sounds/fin/Attack/finMGLight02b.wav, Sounds/fin/Attack/finMGLight02c.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = fin_rocket
+	name = "#sounds_combat_aa_fin_rocket_name"
+
+	files = Sounds/fin/Attack/finRocket01.wav, Sounds/fin/Attack/finRocket02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = fin_rifle
+	name = "#sounds_combat_aa_fin_rifle_name"
+
+	files = Sounds/fin/Attack/finRifle01.wav, Sounds/fin/Attack/finRifle02.wav
+}
+[Audio Template=AudioAttack]
+{
+	IDS = fin_rocket_truck
+	name = "#sounds_combat_aa_fin_rocket_truck_name"
+
+	files = Sounds/FIN/Attack/FINRocketTruck01.wav, Sounds/FIN/Attack/FINRocketTruck02.wav
+}
+[Audio Template=AudioAttack]
+{
+	IDS = fin_flame_tank
+	name = "#sounds_combat_aa_fin_flame_tank_name"
+
+	files = Sounds/FIN/Attack/FINFlameTank01.wav, Sounds/FIN/Attack/FINFlameTank02.wav
+}
+
+;;---------------------------- NED ------------------------;;
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = ned_aa
+	name = "#sounds_combat_aa_ned_aa_name"
+
+	files = Sounds/ned/Attack/nedAA01.wav, Sounds/ned/Attack/nedAA02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ned_artillery_heavy
+	name = "#sounds_combat_aa_ned_artillery_heavy_name"
+
+	files = Sounds/ned/Attack/nedArtilleryHeavy01.wav, Sounds/ned/Attack/nedArtilleryHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ned_artillery_light
+	name = "#sounds_combat_aa_ned_artillery_light_name"
+
+	files = Sounds/ned/Attack/nedArtilleryLight01.wav, Sounds/ned/Attack/nedArtilleryLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ned_cannon_heavy
+	name = "#sounds_combat_aa_ned_cannon_heavy_name"
+
+	files = Sounds/ned/Attack/nedCannonHeavy01.wav, Sounds/ned/Attack/nedCannonHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ned_cannon_medium
+	name = "#sounds_combat_aa_ned_cannon_medium_name"
+
+	files = Sounds/ned/Attack/nedCannonMedium01.wav, Sounds/ned/Attack/nedCannonMedium02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ned_cannon_light
+	name = "#sounds_combat_aa_ned_cannon_light_name"
+
+	files = Sounds/ned/Attack/nedCannonLight01.wav, Sounds/ned/Attack/nedCannonLight02.wav
+}
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = ned_mg_heavy
+	name = "#sounds_combat_aa_ned_mg_heavy_name"
+
+	files = Sounds/ned/Attack/nedMGHeavy01a.wav, Sounds/ned/Attack/nedMGHeavy01b.wav, Sounds/ned/Attack/nedMGHeavy01c.wav, Sounds/ned/Attack/nedMGHeavy02a.wav, Sounds/ned/Attack/nedMGHeavy02b.wav, Sounds/ned/Attack/nedMGHeavy02c.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ned_mg_light
+	name = "#sounds_combat_aa_ned_mg_light_name"
+
+	files = Sounds/ned/Attack/nedMGLight01a.wav, Sounds/ned/Attack/nedMGLight01b.wav, Sounds/ned/Attack/nedMGLight01c.wav, Sounds/ned/Attack/nedMGLight02a.wav, Sounds/ned/Attack/nedMGLight02b.wav, Sounds/ned/Attack/nedMGLight02c.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ned_rocket
+	name = "#sounds_combat_aa_ned_rocket_name"
+
+	files = Sounds/ned/Attack/nedRocket01.wav, Sounds/ned/Attack/nedRocket02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ned_rifle
+	name = "#sounds_combat_aa_ned_rifle_name"
+
+	files = Sounds/ned/Attack/nedRifle01.wav, Sounds/ned/Attack/nedRifle02.wav
+}
+[Audio Template=AudioAttack]
+{
+	IDS = ned_rocket_truck
+	name = "#sounds_combat_aa_ned_rocket_truck_name"
+
+	files = Sounds/NED/Attack/NEDRocketTruck01.wav, Sounds/NED/Attack/NEDRocketTruck02.wav
+}
+[Audio Template=AudioAttack]
+{
+	IDS = ned_flame_tank
+	name = "#sounds_combat_aa_ned_flame_tank_name"
+
+	files = Sounds/NED/Attack/NEDFlameTank01.wav, Sounds/NED/Attack/NEDFlameTank02.wav
+}
+
+;;---------------------------- CHN ------------------------;;
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = chn_aa
+	name = "#sounds_combat_aa_chn_aa_name"
+
+	files = Sounds/chn/Attack/chnAA01.wav, Sounds/chn/Attack/chnAA02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = chn_artillery_heavy
+	name = "#sounds_combat_aa_chn_artillery_heavy_name"
+
+	files = Sounds/chn/Attack/chnArtilleryHeavy01.wav, Sounds/chn/Attack/chnArtilleryHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = chn_artillery_light
+	name = "#sounds_combat_aa_chn_artillery_light_name"
+
+	files = Sounds/chn/Attack/chnArtilleryLight01.wav, Sounds/chn/Attack/chnArtilleryLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = chn_cannon_heavy
+	name = "#sounds_combat_aa_chn_cannon_heavy_name"
+
+	files = Sounds/chn/Attack/chnCannonHeavy01.wav, Sounds/chn/Attack/chnCannonHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = chn_cannon_medium
+	name = "#sounds_combat_aa_chn_cannon_medium_name"
+
+	files = Sounds/chn/Attack/chnCannonMedium01.wav, Sounds/chn/Attack/chnCannonMedium02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = chn_cannon_light
+	name = "#sounds_combat_aa_chn_cannon_light_name"
+
+	files = Sounds/chn/Attack/chnCannonLight01.wav, Sounds/chn/Attack/chnCannonLight02.wav
+}
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = chn_mg_heavy
+	name = "#sounds_combat_aa_chn_mg_heavy_name"
+
+	files = Sounds/chn/Attack/chnMGHeavy01a.wav, Sounds/chn/Attack/chnMGHeavy01b.wav, Sounds/chn/Attack/chnMGHeavy01c.wav, Sounds/chn/Attack/chnMGHeavy02a.wav, Sounds/chn/Attack/chnMGHeavy02b.wav, Sounds/chn/Attack/chnMGHeavy02c.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = chn_mg_light
+	name = "#sounds_combat_aa_chn_mg_light_name"
+
+	files = Sounds/chn/Attack/chnMGLight01a.wav, Sounds/chn/Attack/chnMGLight01b.wav, Sounds/chn/Attack/chnMGLight01c.wav, Sounds/chn/Attack/chnMGLight02a.wav, Sounds/chn/Attack/chnMGLight02b.wav, Sounds/chn/Attack/chnMGLight02c.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = chn_rocket
+	name = "#sounds_combat_aa_chn_rocket_name"
+
+	files = Sounds/chn/Attack/chnRocket01.wav, Sounds/chn/Attack/chnRocket02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = chn_rifle
+	name = "#sounds_combat_aa_chn_rifle_name"
+
+	files = Sounds/chn/Attack/chnRifle01.wav, Sounds/chn/Attack/chnRifle02.wav
+}
+[Audio Template=AudioAttack]
+{
+	IDS = chn_rocket_truck
+	name = "#sounds_combat_aa_chn_rocket_truck_name"
+
+	files = Sounds/chn/Attack/chnRocketTruck01.wav, Sounds/chn/Attack/chnRocketTruck02.wav
+}
+[Audio Template=AudioAttack]
+{
+	IDS = chn_flame_tank
+	name = "#sounds_combat_aa_chn_flame_tank_name"
+
+	files = Sounds/chn/Attack/chnFlameTank01.wav, Sounds/chn/Attack/chnFlameTank02.wav
+}
+
+;;---------------------------- ita ------------------------;;
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = ita_aa
+	name = "#sounds_combat_aa_ita_aa_name"
+
+	files = Sounds/ita/Attack/itaAA01.wav, Sounds/ita/Attack/itaAA02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ita_artillery_heavy
+	name = "#sounds_combat_aa_ita_artillery_heavy_name"
+
+	files = Sounds/ita/Attack/itaArtilleryHeavy01.wav, Sounds/ita/Attack/itaArtilleryHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ita_artillery_light
+	name = "#sounds_combat_aa_ita_artillery_light_name"
+
+	files = Sounds/ita/Attack/itaArtilleryLight01.wav, Sounds/ita/Attack/itaArtilleryLight02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ita_cannon_heavy
+	name = "#sounds_combat_aa_ita_cannon_heavy_name"
+
+	files = Sounds/ita/Attack/itaCannonHeavy01.wav, Sounds/ita/Attack/itaCannonHeavy02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ita_cannon_medium
+	name = "#sounds_combat_aa_ita_cannon_medium_name"
+
+	files = Sounds/ita/Attack/itaCannonMedium01.wav, Sounds/ita/Attack/itaCannonMedium02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ita_cannon_light
+	name = "#sounds_combat_aa_ita_cannon_light_name"
+
+	files = Sounds/ita/Attack/itaCannonLight01.wav, Sounds/ita/Attack/itaCannonLight02.wav
+}
+
+
+[Audio Template=AudioAttack]
+{
+	IDS = ita_mg_heavy
+	name = "#sounds_combat_aa_ita_mg_heavy_name"
+
+	files = Sounds/ita/Attack/itaMGHeavy01a.wav, Sounds/ita/Attack/itaMGHeavy01b.wav, Sounds/ita/Attack/itaMGHeavy01c.wav, Sounds/ita/Attack/itaMGHeavy02a.wav, Sounds/ita/Attack/itaMGHeavy02b.wav, Sounds/ita/Attack/itaMGHeavy02c.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ita_mg_light
+	name = "#sounds_combat_aa_ita_mg_light_name"
+
+	files = Sounds/ita/Attack/itaMGLight01a.wav, Sounds/ita/Attack/itaMGLight01b.wav, Sounds/ita/Attack/itaMGLight01c.wav, Sounds/ita/Attack/itaMGLight02a.wav, Sounds/ita/Attack/itaMGLight02b.wav, Sounds/ita/Attack/itaMGLight02c.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ita_rocket
+	name = "#sounds_combat_aa_ita_rocket_name"
+
+	files = Sounds/ita/Attack/itaRocket01.wav, Sounds/ita/Attack/itaRocket02.wav
+}
+
+[Audio Template=AudioAttack]
+{
+	IDS = ita_rifle
+	name = "#sounds_combat_aa_ita_rifle_name"
+
+	files = Sounds/ita/Attack/itaRifle01.wav, Sounds/ita/Attack/itaRifle02.wav
+}
+[Audio Template=AudioAttack]
+{
+	IDS = ita_rocket_truck
+	name = "#sounds_combat_aa_ita_rocket_truck_name"
+
+	files = Sounds/ita/Attack/itaRocketTruck01.wav, Sounds/ita/Attack/itaRocketTruck02.wav
+}
+[Audio Template=AudioAttack]
+{
+	IDS = ita_flame_tank
+	name = "#sounds_combat_aa_ita_flame_tank_name"
+
+	files = Sounds/ita/Attack/itaFlameTank01.wav, Sounds/ita/Attack/itaFlameTank02.wav

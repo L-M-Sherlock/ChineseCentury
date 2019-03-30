@@ -1,0 +1,72 @@
+[Thing Template=AAUnitFINVehicleHQTruck]
+{
+	IDS = fin_truck_airfield
+	name = "#fin_truck_airfield_name"
+	editor_name = "#fin_truck_airfield_editor_name"
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 400
+
+		[Upkeep]
+		ammo = 15
+		oil = 15
+		building_limit_consumed = 0
+	}
+
+	[ElementComponent]
+	{
+		required_structures = fin_brigade_engineer, fin_motor_pool, fin_brigade_artillery
+		required_properties = air_support
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = fin_airfield
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 3
+		acceleration = 2
+		trailer_actor = fin_trailer_airfield
+
+		[TrailerHitch]
+		{
+			node_ids = hitch
+			node_offset = 0, -.9, .8
+		}
+	}
+
+ 	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = airfield
+	}
+
+	[View]
+	{
+		resource_prefix = FINTruckBedless/FINTruckBedless
+		icon = /UI/Game/BuildingButtons/IconAirfield.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = fin_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = airfield_select
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = fin_engineer_select
+	}
+}

@@ -1,0 +1,55 @@
+[Thing Template=AAitaOrganizationinfantry]
+{
+	IDS = regiment_ita_infantry_blackshirts
+	name = "#regiment_ita_infantry_blackshirts_name"
+	editor_name = "#regiment_ita_infantry_blackshirts_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 50
+		
+		[Upkeep]
+		ammo = 15
+	}
+	
+	[View]
+	{
+		resource_prefix = /Units/ita/itaInfantryblackshirts/itaInfantryblackshirts
+		icon = /UI/Game/RegimentButtons/IconInfantryblackshirts.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ita_infantry_artillery_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ita_infantry_artillery_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ita_infantry_artillery_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = ita_infantry_blackshirt
+		
+		[Slot]	;; rear guard 1
+		element_IDS = ita_infantry_mg
+
+		[Slot]	;; rear guard 2
+		element_IDS = ita_infantry_at
+		
+		[Slot]	;; rear guard 3
+		element_IDS = ita_infantry_at	
+
+		[Slot]	;; flank
+		element_IDS = ita_infantry_mortar
+		
+		[Slot]	;; captain
+		element_IDS = ita_infantry_co
+	}
+	
+	[ExperienceComponent template=AAInfantryExperienceComponent]
+}

@@ -1,0 +1,24 @@
+[Thing Template=AACityEasternEurope]
+{
+	IDS = eeurope_villageblock12x20_01
+	editor_name = "#eeurope_villageblock12x20_01_editor_name"
+
+	[Size]
+	blocking_shape = RECT
+	rect_width = 20
+	rect_height = 12
+
+	[View]
+	{
+		resource_prefix = EasternEuropeVillage09/EasternEuropeVillage09
+		
+		[AspectNormal]
+		ground_size = 14,5.5
+		visual_radius_estimate = 12
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures/Buildings/EasternEurope
+	  
+		
+	}
+}

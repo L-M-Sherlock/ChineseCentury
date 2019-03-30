@@ -1,0 +1,66 @@
+[Thing Template=AAUnititaVehicleHQTruck]
+{
+	IDS = ita_truck_oil
+	name = "#ita_truck_oil_name"
+	editor_name = "#ita_truck_oil_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 100
+
+		[Production]
+		oil = 24
+
+		[Upkeep]
+		building_limit_consumed = 1
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = oil
+	}
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = ita_depot_oil
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+
+		;; ids of the trailer actor
+		trailer_actor = ita_trailer_oil
+
+		[TrailerHitch]
+		{		
+			;; node name and node offset of the truck's hitch
+			node_ids = hitch
+			node_offset = 0, -1.7, .5
+		}
+	}
+
+	[View]
+	{
+		resource_prefix = itaTruck/itaTruck
+		icon = /UI/Game/BuildingButtons/IconDepotOil.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ita_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = depot_oil_select
+	}
+}

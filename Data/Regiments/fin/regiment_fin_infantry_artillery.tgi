@@ -1,0 +1,64 @@
+[Thing Template=AAFINOrganizationArtillery]
+{
+	IDS = regiment_fin_infantry_artillery
+	name = "#regiment_fin_infantry_artillery_name"
+	editor_name = "#regiment_fin_infantry_artillery_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 52
+		
+		[Upkeep]
+		ammo = 15
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = org_infantry
+
+		[Property]
+		property_ids = artillery_company
+	}
+	
+	[View]
+	{
+		resource_prefix = /Units/FIN/FINInfantryMortar/FINInfantryMortar
+		icon = /UI/Game/RegimentButtons/IconInfantryArtillery.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = fin_infantry_artillery_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = fin_infantry_artillery_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = fin_infantry_artillery_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = fin_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = fin_infantry
+
+		[Slot]	;; rear guard 2
+		element_IDS = fin_infantry
+		
+		[Slot]	;; rear guard 3
+		element_IDS = fin_infantry_mg
+	
+		[Slot]	;; flank
+		element_IDS = fin_infantry_mortar
+		
+		[Slot]	;; captain
+		element_IDS = fin_infantry_co
+	}
+	
+	[ExperienceComponent template=AAInfantryExperienceComponent]
+}

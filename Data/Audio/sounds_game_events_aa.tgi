@@ -1,0 +1,324 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; FEEDBACK SOUNDS ---------------------------------------------- ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; ===================== GENERAL FEEDBACK ===================== ;;
+
+[Audio Template=AudioFeedback]
+{
+	IDS = error
+	name = "#sounds_ui_error_name_2"
+	
+	files = Sounds/Interface/GameError.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = building_repair_complete_sfx
+	name = "#sounds_game_events_aa_building_repair_complete_sfx_name"
+
+	files = Sounds/Feedback/RepairComplete.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = building_sold_sfx
+	name = "#sounds_game_events_aa_building_sold_sfx_name"
+
+	files = Sounds/Feedback/BuildingSold.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = building_under_siege_sfx
+	name = "#sounds_game_events_aa_building_under_siege_sfx_name"
+
+	files = Sounds/Feedback/UnderSiege.wav
+}
+
+[Audio Template = AudioFeedback]
+{
+	IDS = chat_sfx
+	name = "#sounds_game_events_aa_chat_sfx_name"
+	
+	files = Sounds/Interface/GenericError.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = building_construction_complete_sfx
+	name = "#sounds_game_events_aa_building_construction_complete_sfx_name"
+
+	files = Sounds/Feedback/BuildBunkerComplete.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = actor_lost_sfx
+	name = "#sounds_game_events_aa_actor_lost_sfx_name"
+
+	files = Sounds/Feedback/RegimentDestroyed.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = company_engaged_sfx
+	name = "#sounds_game_events_aa_company_engaged_sfx_name"
+
+	files = Sounds/Feedback/RegimentEngaged.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = company_experience_gained_level_sfx
+	name = "#sounds_game_events_aa_company_experience_gained_level_sfx_name"
+
+	files = Sounds/Feedback/RegimentLevelGained.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = company_recruited_sfx
+	name = "#sounds_game_events_aa_company_recruited_sfx_name"
+
+	files = Sounds/Feedback/RegimentRecruited.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = company_commissioned_sfx
+	name = "#sounds_game_events_aa_company_commissioned_sfx_name"
+
+	files = Sounds/Feedback/RegimentRecruited.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = company_routed_sfx
+	name = "#sounds_game_events_aa_company_routed_sfx_name"
+
+	files = Sounds/Feedback/RegimentRouted.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = lair_reward_sfx
+	name = "#sounds_game_events_aa_lair_reward_sfx_name"
+
+	files = Sounds/Feedback/RewardGained.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = objective_gained
+	name = "#sounds_game_events_aa_objective_gained_name"
+
+	files = Sounds/Feedback/ObjectiveGained.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = objective_completed
+	name = "#sounds_game_events_aa_objective_completed_name"
+
+	files = Sounds/Feedback/ObjectiveCompleted.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = objective_failed
+	name = "#sounds_game_events_aa_objective_failed_name"
+
+	files = Sounds/Feedback/ObjectiveFailed.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = research_complete_sfx
+	name = "#sounds_game_events_aa_research_complete_sfx_name"
+
+	files = Sounds/Feedback/ResearchComplete.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = upkeep_shortage_sfx
+	name = "#sounds_game_events_aa_upkeep_shortage_sfx_name"
+
+	files = Sounds/Feedback/UpkeepShortage.wav
+
+	volume = 50%
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = team_command_sfx
+	name = "#sounds_game_events_aa_team_command_sfx_name"
+
+	files = Sounds/Feedback/TeamCommand.wav
+
+	volume = 100%
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = allies_won
+	name = "#sounds_game_events_aa_allies_won_name"
+	who_flags = ALLIES
+	files = Sounds/Feedback/SideWon.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = allies_lost
+	name = "#sounds_game_events_aa_allies_lost_name"
+	who_flags = ALLIES
+	files = Sounds/Feedback/SideLost.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = enemies_won
+	name = "#sounds_game_events_aa_enemies_won_name"
+	who_flags = ENEMIES
+	files = Sounds/Feedback/SideWon.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = enemies_lost
+	name = "#sounds_game_events_aa_enemies_lost_name"
+	who_flags = ENEMIES
+	files = Sounds/Feedback/SideLost.wav
+}
+;; ===================== BUILDINGS ===================== ;;
+
+[Audio Template=AudioFeedback]
+{
+	IDS = actor_captured_by_enemy_sfx
+	name = "#sounds_game_events_aa_actor_captured_by_enemy_sfx_name"
+
+	files = sounds/Feedback/BuildingLost.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = actor_captured_sfx
+	name = "#sounds_game_events_aa_actor_captured_sfx_name"
+
+	files = sounds/Feedback/BuildingGained.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = bunker_construction_complete
+	name = "#sounds_game_events_aa_bunker_construction_complete_name"
+	
+	who_flags = PLAYER
+
+	files = Sounds/Feedback/BuildBunkerComplete.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = bunker_aa_construction_complete
+	name = "#sounds_game_events_aa_bunker_aa_construction_complete_name"
+	
+	who_flags = PLAYER
+
+	files = Sounds/Feedback/BuildBunkerAAComplete.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = bunker_artillery_construction_complete
+	name = "#sounds_game_events_aa_bunker_artillery_construction_complete_name"
+
+	who_flags = PLAYER
+
+	files = Sounds/Feedback/BuildBunkerArtComplete.wav
+}
+
+[Audio Template=AudioFeedback]
+{
+	IDS = airfield_complete
+	name = "#sounds_game_events_aa_airfield_complete_name"
+
+	who_flags = PLAYER
+
+	files = Sounds/Feedback/BuildAirfieldComplete.wav
+}
+
+
+;; ------------------- UNUSED SFX ------------------ ;;
+
+[Audio Template=AudioAmbient]
+{
+	IDS = hero_experience_gained_level_sfx
+	name = "#sounds_game_events_aa_hero_experience_gained_level_sfx_name"
+
+	files = Default/SoundDefault.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = hero_killed_sfx
+	name = "#sounds_game_events_aa_hero_killed_sfx_name"
+
+	files = Default/SoundDefault.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = technology_gained_sfx
+	name = "#sounds_game_events_aa_technology_gained_sfx_name"
+
+	files = Sounds/Borrowed/Placeholder.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = technology_lost_sfx
+	name = "#sounds_game_events_aa_technology_lost_sfx_name"
+
+	files = Sounds/Borrowed/Placeholder.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = upkeep_repaired_sfx
+	name = "#sounds_game_events_aa_upkeep_repaired_sfx_name"
+
+	files = Default/SoundDefault.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = wall_breached_sfx
+	name = "#sounds_game_events_aa_wall_breached_sfx_name"
+
+	files = Default/SoundDefault.wav
+}
+
+;; ------------------- Metagame ------------------ ;;
+
+[Audio Template=AudioFeedback]
+{
+	IDS = territory_captured
+	name = "#sounds_game_events_aa_territory_captured_name"
+	
+	simultaneous_limit = 1
+	
+	files = Sounds/Feedback/TerritoryCaptured.wav
+}
+
+
+[Audio Template=AudioFeedback]
+{
+	IDS = territory_lost
+	name = "#sounds_game_events_aa_territory_lost_name"
+	
+	simultaneous_limit = 1
+
+	files = Sounds/Feedback/TerritoryLost.wav
+}

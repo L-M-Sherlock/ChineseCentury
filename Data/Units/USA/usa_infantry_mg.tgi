@@ -1,0 +1,79 @@
+[Thing Template=AAUnitUSAKneel]
+{
+	IDS = usa_infantry_mg
+	name = "#usa_infantry_mg_name"
+	editor_name = "#usa_infantry_mg_editor_name"
+	
+	[BodyComponent]
+	{
+		health = 150
+		defense = 1
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 2.5
+	}
+
+	[ElementComponent]
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = front
+						
+		[Property]
+		property_IDS = mg
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[CharacterComponent Template=AAInfantryMGCharacterComponent]
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryMG]
+			{				
+				name = "#usa_infantry_mg_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 2
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 12
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = usa_mg_heavy
+			}
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = USAInfantryMG/USAInfantryMG
+
+		[WhenCreated Template=FXC_Equipment]
+		action = HIDE
+		location = base
+		equipment_type_ids = tripoddown
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+}

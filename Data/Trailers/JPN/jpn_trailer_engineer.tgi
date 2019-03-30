@@ -1,0 +1,19 @@
+[Thing Inherit=AATrailer]
+{
+	IDS = jpn_trailer_engineer
+	name = "#jpn_trailer_engineer_name"
+	editor_name = "#jpn_trailer_engineer_editor_name"
+
+	[MoverComponent]
+	{
+		[TrailerHitch]		
+		;; node name and node offset of the truck's hitch
+		node_ids = hitch
+		node_offset = 0, 1.5, .5
+	}
+	
+	[View]
+	{
+		resource_prefix = JPNTrailerEngineer/JPNTrailerEngineer
+	}
+}

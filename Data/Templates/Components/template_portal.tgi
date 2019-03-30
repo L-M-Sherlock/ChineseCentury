@@ -1,0 +1,15 @@
+;; PortalComponent: an actor with a portal component can be used to teleport other actors
+
+[Template PortalComponent]
+{
+	[optional DeploymentData Template=DeploymentData]
+
+	;; source_thing = the portal
+	;; target_thing = not valid
+	;; target_found = the "teleport from" position
+	[list WhenTeleportedFrom Template=FXC]
+
+	;; source_thing = the portal
+   	;; target_thing = the teleporting actor
+	[list WhenTeleportedTo Template=FXC]
+}

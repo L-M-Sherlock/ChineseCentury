@@ -1,0 +1,79 @@
+[Template AAGBRRegimentInfantryAT Template=AAGBROrganizationInfantry]
+{
+
+	name = "#regiment_gbr_infantry_at_AAGBRRegimentInfantryAT_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 48
+		
+		[Upkeep]
+		ammo = 15
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/GBR/GBRInfantryAT/GBRInfantryAT
+		icon = /UI/Game/RegimentButtons/IconInfantryAT.png
+		banner_icon = /Organizations/Banners/Icons/IconAntiTank.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_infantry_at_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_infantry_at_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_infantry_at_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = gbr_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = gbr_infantry_at
+
+		[Slot]	;; rear guard 2
+		element_IDS = gbr_infantry_at
+		
+		[Slot]	;; rear guard 3
+		element_IDS = gbr_infantry_mg
+	
+		[Slot]	;; flank
+		element_IDS = gbr_infantry_at
+		
+		[Slot]	;; captain
+		element_IDS = gbr_infantry_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = antitank_company
+	}
+}
+
+[Thing Template=AAGBRRegimentInfantryAT]
+{
+	IDS = regiment_gbr_infantry_at
+	editor_name = "#regiment_gbr_infantry_at_editor_name"
+}
+
+/*
+;; brw051904- Removing because with the current build path you can't recruit them.
+[Thing Template=AAGBRRegimentInfantryAT]
+{
+	IDS = regiment_gbr_infantry_at_amphibious
+	editor_name = "GBR AT Infantry Regiment - Water"
+	
+	transport_actor = gbr_transport_water
+
+	[Placement]
+	placement_group_ids = null
+}
+*/

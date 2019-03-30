@@ -1,0 +1,178 @@
+/**************************************
+ARCTIC EXPLOSIONS
+**************************************/
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = arctic_large_explosion_1
+	name = "#explosions_arctic_large_explosion_1_name"
+	model = explosions/arctic/large/arcticlrg_01.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = arctic_medium_explosion_1
+	name = "#explosions_arctic_medium_explosion_1_name"
+	model = explosions/arctic/medium/arcticmed_01.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}	
+}
+
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = arctic_small_explosion_1
+	name = "#explosions_arctic_small_explosion_1_name"
+	model = explosions/arctic/small/arcticsml_01.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+/**************************************
+DESERT EXPLOSIONS
+**************************************/
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = desert_large_explosion_1
+	name = "#explosions_desert_large_explosion_1_name"
+	model = explosions/desert/large/desertlrg_01.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = desert_medium_explosion_1
+	name = "#explosions_desert_medium_explosion_1_name"
+	model = explosions/desert/medium/desertmed_01.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = desert_small_explosion_1
+	name = "#explosions_desert_small_explosion_1_name"
+	model = explosions/desert/small/desertsml_01.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+
+/**************************************
+TEMPERATE EXPLOSIONS
+**************************************/
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = temperate_large_explosion_1
+	name = "#explosions_temperate_large_explosion_1_name"
+	model = explosions/temperate/large/temperatelrg_01.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = temperate_medium_explosion_1
+	name = "#explosions_temperate_medium_explosion_1_name"
+	model = explosions/temperate/medium/TemperateMed_01.NIF
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = temperate_small_explosion_1
+	name = "#explosions_temperate_small_explosion_1_name"
+	model = explosions/temperate/small/temperatesml_01.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+/**************************************
+WATER EXPLOSIONS
+**************************************/
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = water_explosion_1
+	name = "#explosions_water_explosion_1_name"
+	model = explosions/water/large/waterlrg_01.nif
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = water_explosion_2
+	name = "#explosions_water_explosion_2_name"
+	model = explosions/water/large/waterlrg_02.nif
+}
+
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = water_explosion_3
+	name = "#explosions_water_explosion_3_name"
+	model = explosions/water/large/waterlrg_03.nif
+}
+
+/**************************************
+Building Distruction
+**************************************/
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = building_destruction
+	name = "#explosions_building_destruction_name"
+	model = Explosions/BuildingDestruction.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = building_destruction_small
+	name = "#explosions_building_destruction_small_name"
+	model = Explosions/BuildingDestructionSmall.nif
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}

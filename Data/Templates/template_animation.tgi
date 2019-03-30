@@ -1,0 +1,229 @@
+/**************************************************************************
+
+template_animation.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: defines an animation available to the actor.
+
+REVISION HISTORY:
+drp090602 - created
+
+USAGE:
+
+	[Animation template=Animation]
+	This node goes in an actor's [CharacterComponent] and defines an animation the actor can use.
+	Instead of using "Template=Animation" use a more specialized version. 
+	
+	[Animation Template=MoveAnimation]
+	[Animation Template=AbilityAnimation]
+	[Animation Template=IdleAnimation]		
+	[Animation Template=DieAnimation]		
+	[Animation Template=FidgetAnimation]					
+	
+FIELDS:
+
+	walk_distance = required for move animations and defined by the art.  It represents how many
+					meters the character moves in one move cycle.
+					
+	key_ratio = required for ability animations and defined by the art.  It is a value from 0-1 
+				that represents the percentage of the way through the ability animation that the effects
+				occur - meaning game play damage, audio sound effects, projectiles are created, etc.
+	
+**************************************************************************/
+
+[Template Animation]
+{
+	string type
+	string	IDS
+	
+	;; Sequence Resource
+	;; - "Object::View::resource_prefix" goes into the first "%s" and IDS goes into the second "%s"
+	;;   so the default "KF" is "resource_prefix + IDS + .kf"
+	;; - You can override this by pointing directly to a file
+	;;		kf = animations/shared/explode.kf
+	
+	string	kf = %s%s.kf
+	
+	;; for the character component
+	fixed	length = 1				;; desired length in seconds of the animation
+	fixed	key_ratio = 0.5
+	flag	animation_blend = false
+	string	sister_anim_type = null	;; won't blend from sister_anim_type if specified
+	
+	;; assign a weight to this animation that influences the chances of it being picked
+	;; when a random animation is chosen (higher the weight, the higher the chances)
+	fixed	weight = 1
+
+	;; for death-type animations; will only pick this animation to play if the last
+	;; damage recieved by the actor is greater or equal to this threshold
+	fixed	damage_threshold = 0
+	
+	;; for death-type animations; will only pick this animation if the last damage
+	;; recieved by the actor has the same damage-filter as this animation; -1 means
+	;; this animation will match any damage type; 666 means it will match the case
+	;; where there is no damage type (death by bleeding)
+	int damage_filter = -1
+	
+	;; for the mover component	
+	fixed	walk_distance = 1
+	
+	[list WhenStart Template=FXC]
+	[list WhenDo Template=FXC]
+	[list WhenEnd Template=FXC]
+
+	[list WhenDoAtTime Template=FXC]
+	{
+		fixed time
+	}
+}
+
+[Template AspectAnimationSet]
+{
+	;; (required) ids of aspect for which these animations are used
+	string	aspect_ids
+
+	;; list of animation in this animation set
+	[list Animation Template=Animation]
+}
+
+[Template MoveAnimation Template=Animation]
+{
+	type = MOVE
+	animation_blend = true
+	fixed walk_distance
+}
+
+[Template AbilityAnimation Template=Animation]
+{
+	type = ABILITY
+	fixed	key_ratio
+}
+
+[Template IdleAnimation Template=Animation]
+{
+	type = IDLE
+	length = 3
+	animation_blend = true
+}
+
+[Template FidgetAnimation Template=Animation]
+{
+	type = FIDGET
+	length = 3
+}
+
+[Template DieAnimation Template=Animation]
+{
+	type = DIE
+}
+
+[Template HitAnimation template=Animation]
+{
+	type = HIT
+}
+
+[Template SummonAnimation template=Animation]
+{
+	type = SUMMON
+}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ObjectAnimations - for non-actors (in the [View] node)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[Template ObjectAnimation]
+{
+	string	ids
+	;; CONST, RANDOM, IDLE or FIDGET
+	string	type
+
+	;; Sequence Resource
+	;; - "Object::View::resource_prefix" goes into the first "%s" and IDS goes into the second "%s"
+	;;   so the default "KF" is "resource_prefix + IDS + .kf"
+	;; - You can override this by pointing directly to a file
+	string	kf = %s%s.kf
+	
+	float	length = 1			;; desired length in seconds of the animation
+	flag	exclusive = false	;; when set, no other object animations for the aspect can run when this one is (if any are running, they will be stopped, which may reslut in pops)
+
+	;; The min and max interval time time (in milliseconds) between
+	;; consecutive playing of the animation. Only used for RANDOM animations.
+	float	start_min 
+	float	start_max 
+
+	;; specify an optional list of vfxs to create when this animation starts
+	[list CreateVFX]
+	{
+		string vfx_ids
+		string location = base
+	}
+
+	;; specify an optional list of sfxs to play when this animation starts
+	[list PlaySFX]
+	{
+		string sfx_ids
+		flag looping = false
+	}
+}
+
+[template ObjectAnimationConstant inherit=ObjectAnimation]
+{
+	type = CONST
+	start_min = 0
+	start_max = 0
+}
+
+[template ObjectAnimationRandom inherit=ObjectAnimation]
+{
+	type = RANDOM
+	start_min = 5
+	start_max = 10
+}
+
+[template ObjectAnimationIdle inherit=ObjectAnimation]
+{
+	type = IDLE
+	start_min = 0
+	start_max = 0
+	length = 3
+}
+
+[template ObjectAnimationFidget inherit=ObjectAnimation]
+{
+	type = FIDGET
+	start_min = 0
+	start_max = 0
+	length = 3
+}
+
+[template ObjectAnimationOpenGate inherit=ObjectAnimation]
+{
+	type = OPEN_GATE
+	start_min = 0
+	start_max = 0
+	length = 0.25
+}
+
+[template ObjectAnimationCloseGate inherit=ObjectAnimation]
+{
+	type = CLOSE_GATE
+	start_min = 0
+	start_max = 0
+	length = 0.25
+}
+
+[template ObjectAnimationCustomPlay inherit=ObjectAnimation]
+{
+	type = CUSTOMPLAY
+	start_min = 0
+	start_max = 0
+	length = 1
+}
+
+[template ObjectAnimationSelected inherit=ObjectAnimation]
+{
+	type = SELECTED
+	start_min = 0
+	start_max = 0
+	length = 1
+}

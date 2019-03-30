@@ -1,0 +1,69 @@
+[Thing Template=AAUnitGERVehicleHQTruck]
+{
+	IDS = ger_truck_armor
+	name = "#ger_truck_armor_name"
+	editor_name = "#ger_truck_armor_editor_name"
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 350
+
+		[Production]
+		money = 15
+		ammo = 7
+		oil = 10
+		unit_limit_provided = 4
+	}
+
+	[ElementComponent]
+	{
+		required_structures = ger_hq_mechanized	
+		required_properties = armorhqproduction
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = ger_hq_armor
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+		trailer_actor = ger_trailer_armor
+
+		[TrailerHitch]
+		{
+			node_ids = hitch
+			node_offset = 0, -1.1, .8
+		}
+	}
+
+	[Placement]
+	placement_group_ids = null
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = captain
+	
+		[Property]
+		property_IDS = armorhq	
+	}
+	
+	[View]
+	{
+		resource_prefix = GERTruckBedless/GERTruckBedless
+		icon = /UI/Game/BuildingButtons/IconHQArmor.png
+	}
+}

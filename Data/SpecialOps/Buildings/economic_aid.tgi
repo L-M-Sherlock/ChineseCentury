@@ -1,0 +1,108 @@
+[Template AAEconomicAid Inherit=Actor]
+{	
+	name = "#economic_aid_AAEconomicAid_name"
+	fall_drag = 10
+	
+	[BodyComponent]
+	{
+		health = 1500
+		defense = 0
+		defense_icon = /Properties/AbilityIcons/IconAbilityDefense.png
+	}
+	
+	[EconomyComponent]
+	{
+		[Production]
+		ammo = 15
+		oil = 15
+	}
+
+	[DetectionComponent]
+	detection_range = 4
+	remote_detection_range = 4
+
+	[Flags]
+	targetable = true
+	radar = false
+	flatten_terrain = false
+
+	[MoverComponent]
+	{
+		speed_max = 0
+	}
+
+	[Placement]
+	{
+		placement_group_IDS = null
+	}
+
+   	[Size]
+   	{
+   		blocking_shape = CIRCLE
+   		blocking_radius = 0.5
+   	
+   		soft_shape = CIRCLE
+   	}
+   	
+   	[Stance template = StanceFalling]
+
+	[View]
+	{
+		shadow_type = STENCIL
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		resource_prefix = EconomicAid/EconomicAid
+		icon = /UI/Game/SpecialOps/IconEconomicAid.png
+		
+		[Aspect Template=AspectFalling]
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = parachute_drop_sfx
+	}
+
+	;; PARACHUTING EFFECTS ;;
+
+
+	[WhenLeave Template=FXC_CreateVFX]
+	vfx_ids = parachute_close_generic
+	actor_state = falling
+}
+
+;; ----------- NATION SPECIFIC --------------- ;;
+;; only varies by transport actor involved
+[Thing Template=AAEconomicAid]
+{
+	IDS = gbr_economic_aid
+	editor_name = "#economic_aid_gbr_economic_aid_editor_name"
+	transport_actor = gbr_transport_air
+}
+
+[Thing Template=AAEconomicAid]
+{
+	IDS = ger_economic_aid
+	editor_name = "#economic_aid_ger_economic_aid_editor_name"
+	transport_actor = ger_transport_air
+}
+
+[Thing Template=AAEconomicAid]
+{
+	IDS = jpn_economic_aid
+	editor_name = "#economic_aid_jpn_economic_aid_editor_name"
+	transport_actor = jpn_transport_air
+}
+
+[Thing Template=AAEconomicAid]
+{
+	IDS = rus_economic_aid
+	editor_name = "#economic_aid_rus_economic_aid_editor_name"
+	transport_actor = rus_transport_air
+}
+
+[Thing Template=AAEconomicAid]
+{
+	IDS = usa_economic_aid
+	editor_name = "#economic_aid_usa_economic_aid_editor_name"
+	transport_actor = usa_transport_air
+}

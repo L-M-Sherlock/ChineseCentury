@@ -1,0 +1,9 @@
+[template DetectionComponent]
+{
+	;; ZOD - 0 for none
+	fixed	detection_range
+
+	;; RZOD - 0 for none
+	fixed	remote_detection_range
+}
+

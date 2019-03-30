@@ -1,0 +1,375 @@
+
+;; ---------------------------- Choose Campaign Interface ----------------------------
+
+[Template CampaignBarBottomColumn Template = DecalVE]
+{
+	R = +81
+	B = +88
+	
+	texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignBarBottomColumn.png
+}
+
+[ChooseCampaign Inherit=MenuInterface]
+{
+	show_menu_background = true
+
+	[View]
+	{
+		L = 0
+		T = 0
+		R = 100%
+		B = 100%
+		
+		[Child Template = DecalVETiledHorizontal]
+		{
+			L = 317
+			T = 65
+			R = +654
+			B = +7
+			
+			ends_texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignAboveWindowEnds.png
+			center_texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignAboveWindowCenter.png
+		}
+		
+		[Child Template = DecalVETiledHorizontal]
+		{
+			L = 0
+			T = 0
+			R = +427
+			B = +65
+			
+			ends_texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignBarTopTile.png
+			center_texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignBarTopTile.png
+		}
+		
+		[Child Template = DecalVETiledHorizontal]
+		{
+			L = 656
+			T = 0
+			R = 100%
+			B = +65
+			
+			ends_texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignBarTopTile.png
+			center_texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignBarTopTile.png
+		}
+		
+		[Child Template = CampaignBarTopLogoDecal]
+		{
+			L = 427
+			T = 0
+			R = +229
+			B = +65
+		}
+
+		[Child Template = CampaignBarBottomTile]
+		{
+			L = 0
+			T = 680
+			R = 100%
+			B = 100%
+		}
+		
+		[Child Template = DecalVETiledHorizontal]
+		{
+			L = 316
+			T = 618
+			R = +662
+			B = +63
+			
+			ends_texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignBelowWindowEnds.png
+			center_texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignBelowWindowCenter.png
+		}
+		
+		[Child Template = CampaignBarBottomColumn]
+		{
+			L = 0
+			T = 680
+		}
+		
+		[Child Template = CampaignBarBottomColumn]
+		{
+			L = 271
+			T = 680
+		}
+		
+		[Child Template = CampaignBarBottomColumn]
+		{
+			L = 977
+			T = 680
+			
+			texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignBarBottomColumnRight.png
+		}
+		
+		[Child Template = DecalVE]
+		{
+			L = 971
+			T = 64
+			R = +53
+			B = +128
+			
+			texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignRightColumnTop.png
+		}
+		
+		[Child Template = DecalVETiledVertical]
+		{
+			L = 971
+			T = 192
+			R = +53
+			B = +425
+			
+			ends_texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignRightColumnTile.png
+			center_texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignRightColumnTile.png
+		}
+		
+		[Child Template = DecalVE]
+		{
+			L = 971
+			T = 617
+			R = +53
+			B = +64
+			
+			texture = /UI/%s/Default/Menus/SinglePlayerCampaign/SinglePlayerCampaignRightColumnBottom.png
+		}
+				
+		[Child Template = LobbyButtonMenu]
+		{
+			L = 0
+			T = 64
+			R = +317
+			B = +640
+		}
+		
+		[Child Template = LobbyWindow]
+		{
+			L = 316
+			T = 72
+			R = +656
+			B = +546
+		}
+	}
+
+	[CampaignButton Template=SharedToggleButtonWidget]
+	{
+		[View]
+		{
+			R = +257
+			B = +129
+			
+			[Child Template = DecalVE]
+			alpha_blending = true
+			when = UNPRESSED + UNFOCUSED + UNSELECTED
+			texture = /UI/%s/Default/Campaign/CampaignButtonUnselected.tga
+			
+			[Child Template = DecalVE]
+			alpha_blending = true
+			when = UNPRESSED + FOCUSED + UNSELECTED
+			texture = /UI/%s/Default/Campaign/CampaignButtonFocused.tga
+			
+			[Child Template = DecalVE]
+			alpha_blending = true
+			when = SELECTED + FOCUSED
+			texture = /UI/%s/Default/Campaign/CampaignButtonSelectedFocused.tga
+			
+			[Child Template = DecalVE]
+			alpha_blending = true
+			when = SELECTED + UNFOCUSED
+			texture = /UI/%s/Default/Campaign/CampaignButtonSelected.tga
+		}
+	}
+
+	[CampaignButtonDecalLabel Inherit=PanelWidget]
+	{
+		[View Template=NoVE]
+		{
+			L = 33
+			T = 21
+			R = +192
+			B = +34
+		}
+
+		[Decal Template=DecalWidget]
+		{
+			[View Template=NoVE]
+			{
+				L = 32
+				T = 42
+				R = +192
+				B = +34
+			}
+
+			[Decal Template=DecalVE]
+			{
+				alpha_blending = true
+				texture = null
+			}
+		}
+
+		[Label Template=LabelWidget]
+		{
+			[View Template=NoVE]
+			{
+				T = 20
+			}
+	
+			[Label Template= SharedMediumCenteredLabelVE]
+			{
+				text = "#choose_campaign_CampaignButtonDecalLabel_Label_Label_text"
+			}
+		}
+	}
+}
+
+[CampaignButtonsViewport Template=SharedViewportScrollWidget]
+{
+	[View]
+	{
+		L = 28
+		T = 88
+		R = +287
+		B = +387
+	}
+}
+
+[MissionPanel Inherit = SharedPanelWidget]
+{
+	[View]
+	{
+		L = 323
+		T = 82
+		R = +640
+		B = +587
+	}
+
+	[MissionListboxPanel Inherit = SharedPanelWidget]
+	{
+		[View]
+		{
+			L = 6
+			T = 0
+			R = +622
+			B = +520
+		}
+		
+		[MissionListbox Template=MenuListboxWidgetNoDecals]
+		{
+			num_visible_items = 26
+			resize_to_fit = false
+
+			;; should not be sorted alphabetically
+			sorted = false
+		}
+	}	
+	
+	[DifficultyPanel Inherit = SharedPanelWidget]
+	{
+		[View]
+		{
+			L = 0
+			T = 45b
+			R = +652
+			B = +20
+			
+			[Child Template = SharedMediumRightLabelVE]
+			{
+				L = 0
+				T = 2
+				R = +462
+				B = 100%
+				
+				text = "#choose_campaign_Child_text"
+			}
+		}
+		
+		[DifficultyDropdown Template=SharedDropDownWidget]
+		{
+			[View]
+			{
+				L = 481
+				T = 0
+				R = 100%
+				B = 100%
+			}
+			
+			[Listbox]
+			{
+				sorted = false
+			}
+		}
+	}	
+}	
+
+[PlayButton Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#choose_campaign_Client_View_text"
+	}
+
+	[View]
+	{
+		L = 422
+		T = 713
+	}
+}
+
+[ReplayButton Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#choose_campaign_Client_View_text_2"
+	}
+
+	[View]
+	{
+		L = 422
+		T = 713
+	}
+}
+
+[LoadGameButton Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#choose_campaign_Client_View_text_3"
+	}
+
+	[View]
+	{
+		L = 609
+		T = 713
+	}
+}
+
+[ExitButton Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#choose_campaign_Client_View_text_4"
+	}
+
+	[View]
+	{
+		L = 796
+		T = 713
+	}
+}
+
+[ChooseCampaignGlobeBink Template = CinematicWidget]
+{
+	repeating_video = true
+	
+	[View]
+	{
+		L = 496
+		T = 9
+		R = +33
+		B = +33
+	}
+	
+	[VideoResource]
+	video_resource = /Video/MainMenu/AAGlobeSmall.bik
+}

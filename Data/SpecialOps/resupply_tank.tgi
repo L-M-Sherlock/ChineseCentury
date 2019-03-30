@@ -1,0 +1,51 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = resupply_tank
+	name = "#resupply_tank_name"
+	description = "#resupply_tank_description"
+	targets = +FRIEND +ORGANIZATION +ORG_TANK
+	recharge_time = 300
+	area = 15
+	max_targets = 4
+	target_location_vfx = friendly_target_decal_vfx
+	
+	icon = /UI/%s/Game/SpecialOps/IconResupplyTank.png
+	
+	[Effect Template=EnchantmentEffect]
+	{
+		[EnchantmentProperty]
+		{
+			IDS = property_resupply3
+			name = "#resupply_Effect_EnchantmentProperty_name"
+			enchantment_type = ench_type_generic
+			duration = 30
+			icon = /Properties/PropertyIcons/IconPropertyHealth.png
+				
+			[Modifier Template=FlagModifier]
+			modifier_flag = SUPPLIED
+		
+			[Modifier Template=MultiplyModifier]
+			attribute = RESUPPLY_RATE
+			amount = 0.25
+		
+			[WhenAdded Template=FXC_CreateVFX]
+			VFX_IDS = resupply_decal_large
+			attached = true
+			location = position
+		}
+	}
+	
+	[Flags]
+	enchantment = true
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = resupply_sfx
+	at = TARGET_GROUND
+	
+	[WhenDo Template=FXC_CreateVFX]
+	vfx_ids = resupply_cloud
+	at = TARGET_GROUND
+}

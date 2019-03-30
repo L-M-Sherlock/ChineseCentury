@@ -1,0 +1,98 @@
+[Thing Template=AAUnitGBRProne]
+{
+	IDS = gbr_paratrooper_mg
+	name = "#gbr_paratrooper_mg_name"
+	editor_name = "#gbr_paratrooper_mg_editor_name"
+	
+	[Stance template = StanceFalling]
+	
+	[View]
+	{
+		resource_prefix = GBRParatrooperMG/GBRParatrooperMG
+		portrait_ids = gbr_infantry_co_portrait	
+
+		[Aspect Template=AspectFalling]
+		{
+			IDS = falling
+			model = GBRParatrooper/GBRParatrooperFalling.nif
+			disable_animations = true
+		}
+
+		
+		[TextureSearchPath]
+		{
+			path = /effects/parachute/GBR
+		}
+
+		[WhenCreated Template=FXC_Equipment]
+		action = HIDE
+		location = base
+		equipment_type_ids = tripoddown
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+
+	[BodyComponent]
+	health = 150
+	defense = 2
+
+	[CharacterComponent Template=AAInfantryMGCharacterComponent]
+	
+	[ElementComponent]
+	
+	[MoverComponent]
+	speed_max = 3
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+						
+		[Property]
+		property_IDS = mg
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		
+		[Ability Template=AAGunLocal]
+		{				
+			[AbilityDefinition Template=AAInfantryMG]
+			{				
+				name = "#gbr_infantry_mg_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 2
+				range = 12
+								
+				[Effect Template=PierceDamageEffect]
+				amount = 15
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = gbr_mg_heavy
+			}
+		}
+	}
+	
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		vfx_ids = parachute_close_gbr
+		actor_state = falling
+		location = neck
+	}
+}

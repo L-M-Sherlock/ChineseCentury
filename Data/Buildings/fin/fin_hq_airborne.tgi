@@ -1,0 +1,239 @@
+[Thing Template=AAFINBuildingPackableHQ]
+{
+	IDS = fin_hq_airborne
+	name = "#fin_hq_airborne_Thing_name"
+	editor_name = "#fin_hq_airborne_Thing_editor_name"
+
+	[BodyComponent]
+	health = 2000
+	defense = 5
+
+	[DefenderComponent]
+	{
+		control_range = 20
+	
+		[Ability Template=AATurretAttackLocal]
+		{
+			turret_ids = Turret
+			
+			[AbilityDefinition Template=AAInfantryMG]
+			{
+				name = "#FIN_hq_infantry_DefenderComponent_AbilityDefinition_name"
+				area = 2
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 2
+				range = 20
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 22				
+
+				[WhenDo template=FXC_PlaySFX]
+				{
+					audio_ids = fin_mg_light
+				}		
+				
+				[Flags]
+				spell = true
+			}
+		}
+	}
+
+	[DenizenComponent]
+	{
+		[DeploymentInfo]
+		{
+			creation_offset = 2.5, 1.5
+			deployment_offset = 2.5, 6.0
+		}
+	}
+
+	[DetectionComponent Template=HQDetectionComponent]
+
+	[EconomyComponent]
+	{
+		[Cost]	
+		money = 250
+
+		[Production]
+		money = 25
+		ammo = 10
+		oil = 0
+		unit_limit_provided = 3
+	}
+
+	[PerformerComponent]
+	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 60
+			yaw_rotation_range_degrees = 360
+			yaw_start_degrees = 0
+			;offset = -3.801, 3.472
+		}
+	}
+
+	[Placement]
+	placement_group_ids = null
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = captain
+		
+		[Property]
+		property_ids = nation_fin	
+		
+		[Property]
+		property_ids = airhq			
+
+		[Property]
+		property_IDS = economic_building
+		
+		[Property]
+		property_ids = mg		
+	}
+
+	[RecruitComponent]
+	{
+		[RecruitActor]
+		actor_ids = regiment_fin_paratrooper_engineer
+
+		[RecruitActor]
+		actor_ids = regiment_fin_paratrooper
+
+		[RecruitActor]
+		actor_ids = regiment_fin_paratrooper_heavy
+
+		[RecruitActor]
+		actor_ids = regiment_fin_paratrooper_ground
+
+		[RecruitActor]
+		actor_ids = regiment_fin_paratrooper_heavy_ground
+	}
+	
+	[ResearchComponent]
+	
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 10
+	}
+	
+	[SupplyComponent Template=HQSupplyComponent]
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconDivisionHQ.tga
+		resource_prefix = FINHQAirborne/FINHQAirborne
+		icon = /UI/Game/BuildingButtons/IconHQAirborne.png
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = FIN_waving_flag_pole
+			location = building_flag
+		}
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_hq_infantry_dirt
+			terrain_group_filter = dirt
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_hq_infantry_desert
+			terrain_group_filter = desert
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_hq_infantry_snow
+			terrain_group_filter = snow
+		}
+	
+		;----- Lights -----
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_01
+			location = spotlight_ae_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_02
+			location = spotlight_ae_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_03
+			location = spotlight_ae_03
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_03
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_04
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_05
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_06
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = door_small
+			location = door_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = door_large
+			location = door_02
+			attached = true
+		}
+		
+		;window_07-10 are ready to go for skylights once the VFX is done
+	}
+}

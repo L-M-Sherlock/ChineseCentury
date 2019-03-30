@@ -1,0 +1,31 @@
+[Thing Template=Placeholder]
+{
+	IDS = placeholder_depot_supply
+	name = "#placeholder_depot_supply_name"
+
+	[Flags]
+	axis_locked = false
+	tile_locked = false
+
+	[Placement]
+	placement_group_IDS = group_special
+	placement_category = building
+
+	[Size]
+	{
+		blocking_shape = CIRCLE
+		blocking_radius = 0.6
+					
+		soft_shape = RECT
+		rect_width = 1.4
+		rect_height = 3.0
+	}
+
+	[View]
+	{
+		resource_prefix = PlaceholderDepotSupply/PlaceholderDepotSupply
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+	}
+}

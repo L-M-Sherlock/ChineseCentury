@@ -1,0 +1,88 @@
+/**************************************************************************
+
+template_ability_effect_enchantment.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: an ability effect that adds modifiers. 
+
+REVISION HISTORY:
+drp090602 - created
+
+USAGE:
+
+	[Effect Template=EnchantmentEffect]
+	This node goes under an "AbilityDefinition" and represents an effect of
+	the ability that adds a property to the target (and hence modifiers).
+	This node also go under a "AbilityEffectModifier."   See "template_ability_effect.tgi" 
+	for further details, such as the optional "targets" field.
+	
+EXAMPLE:
+	
+;; effect to poison organic targets	
+[Effect Template=EnchantmentEffect]
+{
+	;; optional sub-targets
+	targets = organic
+	
+	;; defining the enchantment property
+	[EnchantmentProperty Template=EnchantmentProperty]
+	{
+		name = "Poison Darts Technology Effect"			
+		duration = 30
+		enchantment_type = POISON
+		
+		[Modifier Template=PeriodicDamageModifier]
+		amount = 5
+		
+		;; the permanent VFX here
+		[WhenAdded template=FXC_CreateVFX]
+		VFX_IDS = poison_enchantment
+		
+	} ; end [EnchantmentProperty] for poison tech effect
+}
+
+**************************************************************************/
+
+
+[Template EnchantmentEffect Inherit=Effect]
+{
+	type = ENCHANTMENT
+	
+	[EnchantmentProperty Template=EnchantmentProperty]
+	
+}; end [Template EnchantmentEffect]
+
+
+/* 
+complex example of bestowing an enchantment effect:
+
+[Poison Template=Technology]
+{
+	name = "Poisoned Darts Technology"
+	
+	;; first modifier adds an effect to melee attacks
+	[Modifier Template=MeleeAttackEffectModifier]
+	{
+		;; it is an enchantment effect
+		[Effect Template=EnchantmentEffect]
+		{
+			;; defining the enchantment property
+			[EnchantmentProperty Template=EnchantmentProperty]
+			{
+				duration = 30
+				name = "Poison Darts Technology Effect"			
+				enchantment_type = POISON
+				
+				[Modifier Template=PeriodicDamageModifier]
+				{
+					amount = 5
+				}				
+				
+			} ; end [EnchantmentProperty] for poison tech effect
+			
+		} ; end [Effect] for poison enchantment 
+		
+	} ; end [Modifier] for melee attack effect
+	
+}
+*/

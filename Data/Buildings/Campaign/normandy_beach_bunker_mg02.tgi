@@ -1,0 +1,221 @@
+[Thing Template=AABuilding]
+{
+	IDS = normandy_beach_bunker_mg02
+	name = "#normandy_beach_bunker_mg02_name"
+	editor_name = "#normandy_beach_bunker_mg02_editor_name"
+
+	[BodyComponent]
+	{
+		captureable = true
+		health = 700
+		defense = 12
+	}
+	
+	[ConstructionComponent]
+	{
+		construction_node_name_prefix = Stage
+		finished_node_name = Final
+		can_sell = false
+		can_raze = false
+	}
+	
+	[DefenderComponent]
+	{
+		control_range = 25
+			
+		[Ability template=AATurretAttackLocal]
+		{
+			turret_ids = Turret
+
+			[AbilityDefinition Template=AAAttack]
+			{
+				name = "#normandy_beach_bunker_mg02_DefenderComponent_AbilityDefinition_name"
+				range = 25
+				recharge_time = 2
+				targets = +enemy, -air, -mine, -building
+				
+				area = 2
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 20
+
+				[Flags]
+				{
+					spell = true
+				}
+
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_heavy_shot
+					at = self
+					location = gun_ae_02
+					attached = true
+				}
+				
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = true
+					location = gun_ae_02
+					frequency = 1
+					delay = 0.01
+				}
+
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					location = gun_ae_02
+					frequency = 1
+					delay = 0.3
+				}
+
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					location = gun_ae_02
+					frequency = 1
+					delay = 0.5
+				}
+				
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_explosion
+			
+					at = TARGET_HIT_POSITION
+					attached = false
+				}
+			}
+		}
+
+		[Ability template=AATurretAttackLocal]
+		{
+			turret_ids = Turret2
+
+			[AbilityDefinition Template=AAAttack]
+			{
+				name = "#normandy_beach_bunker_mg02_DefenderComponent_AbilityDefinition_name_2"
+				targets = +enemy, -air, -mine, -building
+
+				range = 20
+				recharge_time = 2
+				
+				area = 2
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 20
+
+				[Flags]
+				{
+					spell = true
+				}
+
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_heavy_shot
+					at = self
+					location = gun_ae_02
+					attached = true
+				}
+				
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = true
+					location = gun_ae_02
+					frequency = 1
+					delay = 0.01
+				}
+
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					location = gun_ae_02
+					frequency = 1
+					delay = 0.3
+				}
+
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					location = gun_ae_02
+					frequency = 1
+					delay = 0.5
+				}
+				
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_explosion
+			
+					at = TARGET_HIT_POSITION
+					attached = false
+				}
+			}
+		}
+	}
+
+	[DetectionComponent]
+	{
+		detection_range = 25
+	}
+
+	[EconomyComponent]
+	
+	[Flags]
+	{
+		axis_locked = false
+	}	
+	
+	[Placement]
+	{
+		placement_group_IDS = group_campaign
+	}
+	
+	[PropertiesComponent]
+	
+	[Size]
+	{
+		height = 2
+		blocking_shape = SQUARE
+		square_size = 10
+		fixed scale_min = 1.25
+		fixed scale_max = 1.25
+		
+	}
+
+	[View]
+	{
+		resource_prefix = NormandyBeachBunkerMG02/NormandyBeachBunkerMG02
+	}
+
+	[PerformerComponent]
+	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 60
+			yaw_rotation_range_degrees = 120
+			yaw_start_degrees = 30
+			offset = 0.98,-2.327
+		}
+
+		[Turret]
+		{
+			turret_ids = Turret2
+			yaw_rotation_per_sec_degrees = 60
+			yaw_rotation_range_degrees = 120
+			yaw_start_degrees = 330
+			offset = 0.899,-2.327
+		}
+
+	}
+}

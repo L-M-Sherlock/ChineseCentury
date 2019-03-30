@@ -1,0 +1,20 @@
+
+[Thing Template=AATemperateDoodad]
+{
+	IDS = temperate_lake_ripples
+	name = "#temperate_lake_ripples_name"
+	
+	[Flags]
+	water_based = true
+		
+	[View]
+	{
+		resource_prefix = TemperateLakeRipples/TemperateLakeRipples
+		shadow_texture = null
+		
+		[Aspect Template=Aspect]
+		IDS = temperate_lake_ripples01
+		model = %s01.nif
+		skin = NULL
+	}
+}

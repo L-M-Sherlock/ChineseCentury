@@ -1,0 +1,59 @@
+[Thing Template=AAUnitnedVehicleHQTruck]
+{
+	IDS = ned_truck_airfield
+	name = "#ned_truck_airfield_name"
+	editor_name = "#ned_truck_airfield_editor_name"
+
+	[BodyComponent]
+	health = 500
+	defense = 2
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 400
+
+		[Upkeep]
+		ammo = 15
+		oil = 15
+		building_limit_consumed = 0
+	}
+
+	[ElementComponent]
+	required_structures = ned_brigade_engineer, ned_motor_pool, ned_brigade_artillery
+	required_properties = air_support
+	
+	[MobileDeploymentComponent]
+	unpack_to_actor_ids = ned_airfield
+	packed_position_offset = 0,0
+	packed_orientation = 1,0
+
+	[MoverComponent]
+	{
+		speed_max = 3
+		acceleration = 2
+		trailer_actor = ned_trailer_airfield
+
+		[TrailerHitch]
+		node_ids = hitch
+		node_offset = 0, -0.7, .8
+	}
+
+ 	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = airfield
+	}
+
+	[View]
+	{
+		resource_prefix = nedTruckBedless/nedTruckBedless
+		icon = /UI/Game/BuildingButtons/IconAirfield.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ned_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = airfield_select
+	}
+}

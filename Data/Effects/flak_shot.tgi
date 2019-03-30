@@ -1,0 +1,23 @@
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = flak_shot_1	
+	name = "#flak_shot_1_name"
+	model = flakshot/flakshot01.nif
+	
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = flak_shot_2	
+	name = "#flak_shot_2_name"
+	model = flakshot/flakshot02.nif
+	
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = flak_shot_3	
+	name = "#flak_shot_3_name"
+	model = flakshot/flakshot03.nif
+	
+}

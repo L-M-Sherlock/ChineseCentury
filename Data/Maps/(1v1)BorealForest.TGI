@@ -1,0 +1,13 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "(1v1) Boreal Forest"
+
+	objective_1 = "Eliminate the enemy player."
+	restriction_group_0000 = "Resources"
+	kingdom_2 = "Resources"
+	kingdom_1 = "Player 2"
+	kingdom_0 = "Player 1"
+	map_name = "(1v1) Boreal Forest"
+	map_description = "One vs. one elimination map."
+}

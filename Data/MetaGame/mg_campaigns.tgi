@@ -1,0 +1,2924 @@
+;;-----------------------------------------------------------------------------
+;; Basic templates for things nations can purchase
+;;-----------------------------------------------------------------------------
+
+;; Things a kingdom can purchase from the shop
+[Template DynamicCampaignShopTemplate]
+{
+	[list Technology]
+	{
+		string		ids
+		int		cost
+	}
+
+	[list Actor]
+	{
+		string		ids
+		int		cost
+	}
+
+	[list Division]
+	{
+		string		ids
+		int		cost
+	}
+}
+
+[Template DefaultDynamicCampaignShopTemplate Template=DynamicCampaignShopTemplate]
+{
+}
+
+[Template CHNDynamicCampaignShop Template=DefaultDynamicCampaignShopTemplate]
+{	
+	[Division]
+	ids = chn_division_infantry
+	cost = 15
+
+	[Division]
+	ids = chn_division_mobile
+	cost = 50
+
+	[Division]
+	ids = chn_division_armor
+	cost = 60
+	
+	[Division]
+	ids = chn_division_air
+	cost = 120
+	
+	[Actor]
+	ids = mg_chn_army_infantry
+	cost = 20
+
+	[Actor]
+	ids = mg_chn_army_infantry_air
+	cost = 100
+
+	[Actor]
+	ids = mg_chn_army_mobile
+	cost = 50
+
+	[Actor]
+	ids = mg_chn_army_mobile_air
+	cost = 125
+
+	[Actor]
+	ids = mg_chn_army_armor
+	cost = 80
+	
+	[Actor]
+	ids = mg_chn_army_armor_air
+	cost = 150
+	
+	[Technology]
+	ids = tech_ammo_production
+	cost = 50
+		
+	[Technology]
+	ids = tech_construction_battalions
+	cost = 25	
+		
+	[Technology]
+	ids = tech_gyrostabilized_cannons
+	cost = 75
+			
+	[Technology]
+	ids = tech_increased_payload
+	cost = 100	
+	
+	[Technology]
+	ids = tech_improved_fire_control
+	cost = 50	
+	
+	[Technology]
+	ids = tech_improved_light_antitank
+	cost = 50
+	
+	[Technology]
+	ids = tech_long_range_artillery
+	cost = 50
+		
+	[Technology]
+	ids = tech_improved_machineguns
+	cost = 50	
+		
+	[Technology]
+	ids = tech_mechanical_reliability
+	cost = 100	
+	
+	[Technology]
+	ids = tech_self_sealing_fuel_tanks
+	cost = 25
+	
+	[Technology]
+	ids = tech_special_forces
+	cost = 25
+	
+	[Technology]
+	ids = tech_superchargers
+	cost = 25
+	
+	[Technology]
+	ids = tech_improved_fortifications
+	cost = 25	
+
+	[Technology]
+	ids = tech_conscription
+	cost = 50
+
+
+}
+
+[Template USADynamicCampaignShop Template=DefaultDynamicCampaignShopTemplate]
+{	
+	[Division]
+	ids = usa_division_infantry
+	cost = 25
+
+	[Division]
+	ids = usa_division_mobile
+	cost = 40
+
+	[Division]
+	ids = usa_division_armor
+	cost = 50
+	
+	[Division]
+	ids = usa_division_air
+	cost = 100
+	
+	[Actor]
+	ids = mg_usa_army_infantry
+	cost = 25
+
+	[Actor]
+	ids = mg_usa_army_infantry_air
+	cost = 100
+
+	[Actor]
+	ids = mg_usa_army_mobile
+	cost = 40
+
+	[Actor]
+	ids = mg_usa_army_mobile_air
+	cost = 125
+
+	[Actor]
+	ids = mg_usa_army_armor
+	cost = 75
+	
+	[Actor]
+	ids = mg_usa_army_armor_air
+	cost = 150
+		
+	[Technology]
+	ids = tech_infantry_flame
+	cost = 25
+	
+	[Technology]
+	ids = tech_ammo_production
+	cost = 50
+		
+	[Technology]
+	ids = tech_construction_battalions
+	cost = 25	
+		
+	[Technology]
+	ids = tech_garand_semi_auto
+	cost = 25	
+		
+	[Technology]
+	ids = tech_gyrostabilized_cannons
+	cost = 75
+			
+	[Technology]
+	ids = tech_increased_payload
+	cost = 100	
+	
+	[Technology]
+	ids = tech_improved_fire_control
+	cost = 50	
+	
+	[Technology]
+	ids = tech_improved_light_antitank
+	cost = 50
+		
+	[Technology]
+	ids = tech_improved_logistics
+	cost = 25
+			
+	[Technology]
+	ids = tech_napalm
+	cost = 100
+	
+	[Technology]
+	ids = tech_long_range_artillery
+	cost = 50		
+		
+	[Technology]
+	ids = tech_rifle_grenade
+	cost = 50
+		
+	[Technology]
+	ids = tech_improved_machineguns
+	cost = 50	
+		
+	[Technology]
+	ids = tech_mechanical_reliability
+	cost = 50	
+	
+	[Technology]
+	ids = tech_oil_production
+	cost = 75
+			
+	[Technology]
+	ids = tech_proximity_fuses
+	cost = 50
+	
+	[Technology]
+	ids = tech_self_sealing_fuel_tanks
+	cost = 25
+	
+	[Technology]
+	ids = tech_special_forces
+	cost = 25
+
+	[Technology]
+	ids = tech_mechanized_production
+	cost = 50
+		
+	[Technology]
+	ids = tech_advanced_infantry_training
+	cost = 50	
+	
+	[Technology]
+	ids = tech_superchargers
+	cost = 25
+}
+
+[Template JPNDynamicCampaignShop Template=DefaultDynamicCampaignShopTemplate]
+{	
+	[Division]
+	ids = jpn_division_infantry
+	cost = 25
+
+	[Division]
+	ids = jpn_division_mobile
+	cost = 50
+
+	[Division]
+	ids = jpn_division_armor
+	cost = 50
+	
+	[Division]
+	ids = jpn_division_air
+	cost = 100
+		
+	[Actor]
+	ids = mg_jpn_army_infantry
+	cost = 25
+
+	[Actor]
+	ids = mg_jpn_army_infantry_air
+	cost = 90
+
+	[Actor]
+	ids = mg_jpn_army_mobile
+	cost = 50
+
+	[Actor]
+	ids = mg_jpn_army_mobile_air
+	cost = 110
+
+	[Actor]
+	ids = mg_jpn_army_armor
+	cost = 75
+
+	[Actor]
+	ids = mg_jpn_army_armor_air
+	cost = 125
+	
+	[Technology]
+	ids = tech_infantry_banzai
+	cost = 50
+	
+	[Technology]
+	ids = tech_construction_battalions
+	cost = 25
+		
+	[Technology]
+	ids = tech_foraging
+	cost = 25
+
+	[Technology]
+	ids = tech_mechanized_production
+	cost = 50
+	
+	[Technology]
+	ids = tech_oil_production
+	cost = 75
+
+	[Technology]
+	ids = tech_entrenchment
+	cost = 25
+
+	[Technology]
+	ids = tech_self_sealing_fuel_tanks
+	cost = 25
+
+	[Technology]
+	ids = tech_improved_recon
+	cost = 50
+	
+	[Technology]
+	ids = tech_air_superiority
+	cost = 50
+	
+	[Technology]
+	ids = tech_improved_fortifications
+	cost = 25	
+	
+	[Technology]
+	ids = tech_improved_light_antitank
+	cost = 50
+			
+	[Technology]
+	ids = tech_improved_logistics
+	cost = 25
+	
+	[Technology]
+	ids = tech_long_range_artillery
+	cost = 50		
+			
+	[Technology]
+	ids = tech_military_surplus
+	cost = 75
+		
+	[Technology]
+	ids = tech_sniper_rifle
+	cost = 50		
+	
+	[Technology]
+	ids = tech_special_forces
+	cost = 25
+			
+	[Technology]
+	ids = tech_tankette
+	cost = 75	
+				
+	[Technology]
+	ids = tech_plentiful_ammunition
+	cost = 75
+	
+	[Technology]
+	ids = tech_improved_mortars
+	cost = 25	
+		
+	[Technology]
+	ids = tech_diesel_engines
+	cost = 50
+	
+	[Technology]
+	ids = tech_superchargers
+	cost = 25
+}
+
+[Template GBRDynamicCampaignShop Template=DefaultDynamicCampaignShopTemplate]
+{	
+	[Division]
+	ids = gbr_division_infantry
+	cost = 25
+
+	[Division]
+	ids = gbr_division_mobile
+	cost = 50
+
+	[Division]
+	ids = gbr_division_armor
+	cost = 50
+
+	[Division]
+	ids = gbr_division_air
+	cost = 80
+	
+	[Actor]
+	ids = mg_gbr_army_infantry
+	cost = 25
+
+	[Actor]
+	ids = mg_gbr_army_infantry_air
+	cost = 100
+
+	[Actor]
+	ids = mg_gbr_army_mobile
+	cost = 50
+
+	[Actor]
+	ids = mg_gbr_army_mobile_air
+	cost = 125
+
+	[Actor]
+	ids = mg_gbr_army_armor
+	cost = 75
+
+	[Actor]
+	ids = mg_gbr_army_armor_air
+	cost = 150
+	
+	[Technology]
+	ids = tech_tank_flame
+	cost = 100		
+	
+	[Technology]
+	ids = tech_construction_battalions
+	cost = 80
+			
+	[Technology]
+	ids = tech_military_surplus
+	cost = 75
+
+	[Technology]
+	ids = tech_foraging
+	cost = 25
+			
+	[Technology]
+	ids = tech_increased_payload
+	cost = 125	
+	
+	[Technology]
+	ids = tech_improved_fire_control
+	cost = 50	
+	
+	[Technology]
+	ids = tech_air_superiority
+	cost = 50
+			
+	[Technology]
+	ids = tech_improved_logistics
+	cost = 100
+	
+	[Technology]
+	ids = tech_long_range_artillery
+	cost = 50		
+			
+	[Technology]
+	ids = tech_entrenchment
+	cost = 25
+		
+	[Technology]
+	ids = tech_improved_machineguns
+	cost = 50		
+	
+	[Technology]
+	ids = tech_mechanical_reliability
+	cost = 50
+		
+	[Technology]
+	ids = tech_proximity_fuses
+	cost = 50
+	
+	[Technology]
+	ids = tech_self_sealing_fuel_tanks
+	cost = 25
+	
+	[Technology]
+	ids = tech_special_forces
+	cost = 25
+		
+	[Technology]
+	ids = tech_mechanized_production
+	cost = 50
+	
+	[Technology]
+	ids = tech_plentiful_ammunition
+	cost = 75	
+		
+	[Technology]
+	ids = tech_diesel_engines
+	cost = 50
+	
+	[Technology]
+	ids = tech_sas_commandos
+	cost = 50	
+	
+	[Technology]
+	ids = tech_improved_mortars
+	cost = 25
+}
+
+[Template GERDynamicCampaignShop Template=DefaultDynamicCampaignShopTemplate]
+{	
+	[Division]
+	ids = ger_division_infantry
+	cost = 25
+
+	[Division]
+	ids = ger_division_mobile
+	cost = 50
+
+	[Division]
+	ids = ger_division_armor
+	cost = 40
+
+	[Division]
+	ids = ger_division_air
+	cost = 100
+	
+	[Actor]
+	ids = mg_ger_army_infantry
+	cost = 25
+
+	[Actor]
+	ids = mg_ger_army_infantry_air
+	cost = 100
+
+	[Actor]
+	ids = mg_ger_army_mobile
+	cost = 50
+
+	[Actor]
+	ids = mg_ger_army_mobile_air
+	cost = 125
+
+	[Actor]
+	ids = mg_ger_army_armor
+	cost = 70
+
+	[Actor]
+	ids = mg_ger_army_armor_air
+	cost = 140
+		
+	[Technology]
+	ids = tech_ammo_production
+	cost = 50
+	
+	[Technology]
+	ids = tech_construction_battalions
+	cost = 25
+
+	[Technology]
+	ids = tech_air_superiority
+	cost = 50
+	
+	[Technology]
+	ids = tech_improved_recon
+	cost = 50
+				
+	[Technology]
+	ids = tech_oil_production
+	cost = 75
+	
+	[Technology]
+	ids = tech_improved_fire_control
+	cost = 50	
+		
+	[Technology]
+	ids = tech_improved_logistics
+	cost = 25
+	
+	[Technology]
+	ids = tech_improved_mortars
+	cost = 25
+	
+	[Technology]
+	ids = tech_panzerfaust
+	cost = 50	
+		
+	[Technology]
+	ids = tech_gyrostabilized_cannons
+	cost = 75
+			
+	[Technology]
+	ids = tech_marksmanship
+	cost = 25
+		
+	[Technology]
+	ids = tech_improved_machineguns
+	cost = 50	
+		
+	[Technology]
+	ids = tech_tank_production
+	cost = 75
+	
+	[Technology]
+	ids = tech_proximity_fuses
+	cost = 50
+	
+	[Technology]
+	ids = tech_schurzen
+	cost = 100
+		
+	[Technology]
+	ids = tech_self_sealing_fuel_tanks
+	cost = 25
+	
+	[Technology]
+	ids = tech_goliath
+	cost = 75
+		
+	[Technology]
+	ids = tech_tank_king_tiger
+	cost = 150	
+		
+	[Technology]
+	ids = tech_advanced_infantry_training
+	cost = 50
+	
+	[Technology]
+	ids = tech_advanced_armor_training
+	cost = 75
+		
+	[Technology]
+	ids = tech_diesel_engines
+	cost = 50
+	
+	[Technology]
+	ids = tech_superchargers
+	cost = 25
+}
+
+[Template RUSDynamicCampaignShop Template=DefaultDynamicCampaignShopTemplate]
+{	
+	[Division]
+	ids = rus_division_infantry
+	cost = 15
+
+	[Division]
+	ids = rus_division_mobile
+	cost = 50
+
+	[Division]
+	ids = rus_division_armor
+	cost = 50
+
+	[Division]
+	ids = rus_division_air
+	cost = 100
+	
+	[Actor]
+	ids = mg_rus_army_infantry
+	cost = 15
+
+	[Actor]
+	ids = mg_rus_army_infantry_air
+	cost = 95
+
+	[Actor]
+	ids = mg_rus_army_mobile
+	cost = 50
+
+	[Actor]
+	ids = mg_rus_army_mobile_air
+	cost = 125
+
+	[Actor]
+	ids = mg_rus_army_armor
+	cost = 70
+
+	[Actor]
+	ids = mg_rus_army_armor_air
+	cost = 140
+
+	[Technology]
+	ids = tech_conscription
+	cost = 50
+	
+	[Technology]
+	ids = tech_construction_battalions
+	cost = 25
+		
+	[Technology]
+	ids = tech_entrenchment
+	cost = 25
+			
+	[Technology]
+	ids = tech_improved_recon
+	cost = 50	
+	
+	[Technology]
+	ids = tech_sniper_rifle
+	cost = 50
+	
+	[Technology]
+	ids = tech_improved_light_antitank
+	cost = 50
+			
+	[Technology]
+	ids = tech_military_surplus
+	cost = 75
+	
+	[Technology]
+	ids = tech_long_range_artillery
+	cost = 50		
+			
+	[Technology]
+	ids = tech_marksmanship
+	cost = 25
+		
+	[Technology]
+	ids = tech_ammo_production
+	cost = 50
+			
+	[Technology]
+	ids = tech_mechanical_reliability
+	cost = 50
+			
+	[Technology]
+	ids = tech_rocket_truck
+	cost = 75
+			
+	[Technology]
+	ids = tech_self_sealing_fuel_tanks
+	cost = 25
+	
+	[Technology]
+	ids = tech_improved_fortifications
+	cost = 25
+		
+	[Technology]
+	ids = tech_tank_production
+	cost = 75	
+				
+	[Technology]
+	ids = tech_advanced_infantry_training
+	cost = 50
+	
+	[Technology]
+	ids = tech_gyrostabilized_cannons
+	cost = 75	
+		
+	[Technology]
+	ids = tech_diesel_engines
+	cost = 50
+	
+	[Technology]
+	ids = tech_superchargers
+	cost = 25
+}
+
+[Template NEDDynamicCampaignShop Template=DefaultDynamicCampaignShopTemplate]
+{	
+	[Division]
+	ids = ned_division_infantry
+	cost = 20
+
+	[Division]
+	ids = ned_division_mobile
+	cost = 50
+
+	[Division]
+	ids = ned_division_armor
+	cost = 50
+
+	[Division]
+	ids = ned_division_air
+	cost = 100
+	
+	[Actor]
+	ids = mg_ned_army_infantry
+	cost = 25
+
+	[Actor]
+	ids = mg_ned_army_infantry_air
+	cost = 100
+
+	[Actor]
+	ids = mg_ned_army_mobile
+	cost = 50
+
+	[Actor]
+	ids = mg_ned_army_mobile_air
+	cost = 125
+
+	[Actor]
+	ids = mg_ned_army_armor
+	cost = 75
+
+	[Actor]
+	ids = mg_ned_army_armor_air
+	cost = 150
+
+	[Technology]
+	ids = tech_guard_grenadiers
+	cost = 100
+	
+	[Technology]
+	ids = tech_construction_battalions
+	cost = 25
+		
+	[Technology]
+	ids = tech_entrenchment
+	cost = 25
+			
+	[Technology]
+	ids = tech_improved_recon
+	cost = 50	
+	
+	[Technology]
+	ids = tech_improved_machineguns
+	cost = 50
+	
+	[Technology]
+	ids = tech_improved_light_antitank
+	cost = 50
+			
+	[Technology]
+	ids = tech_foraging
+	cost = 25
+	
+	[Technology]
+	ids = tech_long_range_artillery
+	cost = 50		
+			
+	[Technology]
+	ids = tech_marine_commando
+	cost = 25
+		
+	[Technology]
+	ids = tech_oil_production
+	cost = 75
+			
+	[Technology]
+	ids = tech_mechanized_production
+	cost = 50
+			
+	[Technology]
+	ids = tech_special_forces
+	cost = 50
+			
+	[Technology]
+	ids = tech_increased_payload
+	cost = 100
+	
+	[Technology]
+	ids = tech_improved_fortifications
+	cost = 25
+		
+	[Technology]
+	ids = tech_improved_mortars
+	cost = 50	
+				
+	[Technology]
+	ids = tech_advanced_infantry_training
+	cost = 50
+	
+	[Technology]
+	ids = tech_plentiful_ammunition
+	cost = 50	
+		
+	[Technology]
+	ids = tech_diesel_engines
+	cost = 50
+	
+	[Technology]
+	ids = tech_superchargers
+	cost = 25
+
+	[Technology]
+	ids = tech_east_indies
+	cost = 150
+}
+
+[Template FINDynamicCampaignShop Template=DefaultDynamicCampaignShopTemplate]
+{	
+	[Division]
+	ids = fin_division_infantry
+	cost = 20
+
+	[Division]
+	ids = fin_division_mobile
+	cost = 50
+
+	[Division]
+	ids = fin_division_armor
+	cost = 50
+
+	[Division]
+	ids = fin_division_air
+	cost = 100
+	
+	[Actor]
+	ids = mg_fin_army_infantry
+	cost = 20
+
+	[Actor]
+	ids = mg_fin_army_infantry_air
+	cost = 95
+
+	[Actor]
+	ids = mg_fin_army_mobile
+	cost = 50
+
+	[Actor]
+	ids = mg_fin_army_mobile_air
+	cost = 125
+
+	[Actor]
+	ids = mg_fin_army_armor
+	cost = 75
+
+	[Actor]
+	ids = mg_fin_army_armor_air
+	cost = 150
+
+	[Technology]
+	ids = tech_improved_machineguns
+	cost = 50
+	
+	[Technology]
+	ids = tech_construction_battalions
+	cost = 25
+
+	[Technology]
+	ids = tech_air_superiority
+	cost = 50
+		
+	[Technology]
+	ids = tech_proximity_fuses
+	cost = 50
+			
+	[Technology]
+	ids = tech_improved_recon
+	cost = 50	
+	
+	[Technology]
+	ids = tech_sniper_rifle
+	cost = 50
+	
+	[Technology]
+	ids = tech_panzerfaust
+	cost = 50
+			
+	[Technology]
+	ids = tech_ski
+	cost = 50
+	
+	[Technology]
+	ids = tech_long_range_artillery
+	cost = 50		
+			
+	[Technology]
+	ids = tech_marksmanship
+	cost = 25
+		
+	[Technology]
+	ids = tech_ammo_production
+	cost = 50
+			
+	[Technology]
+	ids = tech_mechanical_reliability
+	cost = 50
+			
+	[Technology]
+	ids = tech_improved_fire_control
+	cost = 75
+			
+	[Technology]
+	ids = tech_self_sealing_fuel_tanks
+	cost = 25
+	
+	[Technology]
+	ids = tech_mannerheimline
+	cost = 150
+		
+	[Technology]
+	ids = tech_tank_production
+	cost = 75	
+				
+	[Technology]
+	ids = tech_advanced_infantry_training
+	cost = 50
+	
+	[Technology]
+	ids = tech_gyrostabilized_cannons
+	cost = 75	
+		
+	[Technology]
+	ids = tech_diesel_engines
+	cost = 50
+	
+	[Technology]
+	ids = tech_superchargers
+	cost = 25
+
+	[Technology]
+	ids = tech_improved_mortars
+	cost = 25
+}
+
+[Template CPCDynamicCampaignShop Template=DefaultDynamicCampaignShopTemplate]
+{	
+	[Division]
+	ids = cpc_division_infantry
+	cost = 10
+
+	[Division]
+	ids = cpc_division_mobile
+	cost = 50
+
+	[Division]
+	ids = cpc_division_armor
+	cost = 50
+
+	[Division]
+	ids = cpc_division_air
+	cost = 100
+	
+	[Actor]
+	ids = mg_cpc_army_infantry
+	cost = 15
+
+	[Actor]
+	ids = mg_cpc_army_infantry_air
+	cost = 95
+
+	[Actor]
+	ids = mg_cpc_army_mobile
+	cost = 50
+
+	[Actor]
+	ids = mg_cpc_army_mobile_air
+	cost = 125
+
+	[Actor]
+	ids = mg_cpc_army_armor
+	cost = 75
+
+	[Actor]
+	ids = mg_cpc_army_armor_air
+	cost = 150
+
+	[Technology]
+	ids = tech_conscription
+	cost = 50
+
+	[Technology]
+	ids = tech_marksmanship
+	cost = 25
+
+	[Technology]
+	ids = tech_nosupply
+	cost = 250
+
+	[Technology]
+	ids = tech_construction_battalions
+	cost = 25
+
+	[Technology]
+	ids = tech_nuclear_weapons
+	cost = 500
+		
+	[Technology]
+	ids = tech_proximity_fuses
+	cost = 50
+			
+	[Technology]
+	ids = tech_increased_height
+	cost = 100
+	
+	[Technology]
+	ids = tech_sniper_rifle
+	cost = 50
+	
+	[Technology]
+	ids = tech_rocket_truck
+	cost = 100
+			
+	[Technology]
+	ids = tech_tank_constructs
+	cost = 150
+	
+	[Technology]
+	ids = tech_long_range_artillery
+	cost = 50		
+			
+	[Technology]
+	ids = tech_foraging
+	cost = 25
+		
+	[Technology]
+	ids = tech_ammo_production
+	cost = 50
+			
+	[Technology]
+	ids = tech_diesel_engines
+	cost = 50
+			
+	[Technology]
+	ids = tech_improved_light_antitank
+	cost = 50
+			
+	[Technology]
+	ids = tech_self_sealing_fuel_tanks
+	cost = 25
+				
+	[Technology]
+	ids = tech_advanced_infantry_training
+	cost = 50
+		
+	[Technology]
+	ids = tech_diesel_engines
+	cost = 50
+	
+	[Technology]
+	ids = tech_superchargers
+	cost = 25
+
+	[Technology]
+	ids = tech_improved_mortars
+	cost = 25
+
+	[Technology]
+	ids = tech_special_forces
+	cost = 25
+}
+
+[Template ITADynamicCampaignShop Template=DefaultDynamicCampaignShopTemplate]
+{	
+	[Division]
+	ids = ita_division_infantry
+	cost = 25
+
+	[Division]
+	ids = ita_division_mobile
+	cost = 40
+
+	[Division]
+	ids = ita_division_armor
+	cost = 50
+	
+	[Division]
+	ids = ita_division_air
+	cost = 100
+	
+	[Actor]
+	ids = mg_ita_army_infantry
+	cost = 25
+
+	[Actor]
+	ids = mg_ita_army_infantry_air
+	cost = 100
+
+	[Actor]
+	ids = mg_ita_army_mobile
+	cost = 50
+
+	[Actor]
+	ids = mg_ita_army_mobile_air
+	cost = 125
+
+	[Actor]
+	ids = mg_ita_army_armor
+	cost = 75
+
+	[Actor]
+	ids = mg_ita_army_armor_air
+	cost = 150
+		
+	[Technology]
+	ids = tech_self_sealing_fuel_tanks
+	cost = 25
+
+	[Technology]
+	ids = tech_air_superiority
+	cost = 50
+
+	[Technology]
+	ids = tech_improved_recon
+	cost = 25
+
+	[Technology]
+	ids = tech_superchargers
+	cost = 25
+
+	[Technology]
+	ids = tech_improved_fire_control
+	cost = 75
+
+	[Technology]
+	ids = tech_improved_mortars
+	cost = 25
+
+	[Technology]
+	ids = tech_ammo_production
+	cost = 50
+
+	[Technology]
+	ids = tech_entrenchment
+	cost = 25
+
+	[Technology]
+	ids = tech_proximity_fuses
+	cost = 50
+
+	[Technology]
+	ids = tech_construction_battalions
+	cost = 25
+
+	[Technology]
+	ids = tech_advanced_infantry_training
+	cost = 50
+
+	[Technology]
+	ids = tech_facism
+	cost = 100
+
+	[Technology]
+	ids = tech_improved_machineguns
+	cost = 50
+
+	[Technology]
+	ids = tech_marksmanship
+	cost = 25
+
+	[Technology]
+	ids = tech_military_surplus
+	cost = 75
+
+	[Technology]
+	ids = tech_bersaglieri
+	cost = 50
+
+	[Technology]
+	ids = tech_diesel_engines
+	cost = 50
+
+	[Technology]
+	ids = tech_mechanical_reliability
+	cost = 50
+
+	[Technology]
+	ids = tech_improved_light_antitank
+	cost = 50
+
+	[Technology]
+	ids = tech_heavy_tank
+	cost = 100
+}
+	
+;;-----------------------------------------------------------------------------
+;; Templates for events that can happen in the dynamic campaign
+;;-----------------------------------------------------------------------------
+
+[Template MGEventTemplate]
+{	
+	string 		ids			;; IDS of the event
+	localized	name			;; Name of the event
+
+	;; The round when this event happens.
+	;; If -1, then this event occurs randomly according to round_probability
+	int 		round = -1
+
+	;; The probability this event will happen in a particular round.  
+	;; This should be set to something besides 1.0 if the round is not set.  
+	;; If the round is set, this is the probability the event happens in that round
+	;; (which should probably be 1.0).
+	fixed		round_probability = 1.0
+
+	;; The turn when this event happens.  If not specified and the event should happen
+	;; that round, it will happen at a random turn.
+	string 		kingdom_turn_ids = NULL
+
+	;; Optional message to display when this event occurs.  If not specified 
+	;; no message will be displayed.  If it includes %s, it will display the kingdom
+	;; whose turn it happened on.
+	localized	message = ""
+
+	[List Effect]
+}
+
+[Template MGEventEffectTypeTemplate]
+{
+
+	;; The type of the event effect
+	;; Possible types include:
+	;; ADD_TECH
+	;; REMOVE_TECH
+	;; ADD_ACTOR
+	;; REMOVE_ACTOR
+	;; CHANGE_TERRITORY
+
+	string		type
+
+	;; Optional message to display when this effect occurs.  If not specified
+	;; no message will be displayed.  The parameters will otherwise be inserted in 
+	;; this priority order:
+	;; %s - target kingdom
+	;; %s - actor
+	;; %s - territory
+	;; %s - technology
+	;; %s - source kingdom
+
+	localized	message = ""	
+}
+
+[Template MGEventEffectTypeAddTechnologyTemplate Inherit=MGEventEffectTypeTemplate]
+{
+	string		type = ADD_TECH
+
+	;; The kingdom to add the technology to.  
+	;; If not specified, the target is the same as kingdom_turn_ids in the Event.
+	string		kingdom_target_ids = NULL
+
+	;; The technology to add.  If not specified, random technology
+	string		tech_ids = NULL
+
+	;; The message to display
+	localized	message = "#mg_campaigns_MGEventEffectTypeAddTechnologyTemplate_message|ss"
+}
+
+[Template MGEventEffectTypeRemoveTechnologyTemplate Inherit=MGEventEffectTypeTemplate]
+{
+	string		type = REMOVE_TECH
+
+	;; The kingdom to remove the technology from.  
+	;; If not specified, the target is the same as kingdom_turn_ids in the Event.
+	string		kingdom_target_ids = NULL
+
+	;; The technology to remove.  If not specified, random technology
+	string		tech_ids = NULL
+
+	;; The message to display
+	localized	message = "#mg_campaigns_MGEventEffectTypeRemoveTechnologyTemplate_message|ss"
+}
+
+[Template MGEventEffectTypeAddActorTemplate Inherit=MGEventEffectTypeTemplate]
+{
+	string		type = ADD_ACTOR
+
+	;; The kingdom to add the actor to.
+	;; If not specified, the target is the same as kingdom_turn_ids in the Event.
+	string		kingdom_target_ids = NULL
+
+	;; The territory to place the actor.
+	;; If not specified, places the actor in a random territory.
+	string		territory_ids = NULL
+
+	;; The type of actor to add.  If not specified, random metagame actor.
+	string		actor_ids = NULL
+
+	;; The message to display
+	localized	message = "#mg_campaigns_MGEventEffectTypeAddActorTemplate_message|sss"
+}
+
+[Template MGEventEffectTypeRemoveActorTemplate Inherit=MGEventEffectTypeTemplate]
+{
+	string		type = REMOVE_ACTOR
+
+	;; The kingdom to remove the actor from.
+	;; If not specified, the target is the same as kingdom_turn_ids in the Event.
+	string		kingdom_target_ids = NULL
+
+	;; This just chooses a random actor from the kingdom to remove 
+	;; (Could be removed in any territory)
+
+	;; The message to display
+	localized	message = "#mg_campaigns_MGEventEffectTypeRemoveActorTemplate_message|sss"
+}
+
+[Template MGEventEffectTypeChangeTerritoryTemplate Inherit=MGEventEffectTypeTemplate]
+{
+	string		type = CHANGE_TERRITORY
+
+	;; The kingdom from which to take a territory
+	string		kingdom_source_ids = NULL
+
+	;; The territory that will change ownership
+	string		territory_ids = NULL
+
+	;; The kingdom to which the territory will go.
+	;; If not specified, the target is the same as kingdom_turn_ids in the Event.
+	string		kingdom_target_ids = NULL
+
+	;; Functionality:
+	;; 1)  If the kingdom_source_ids is only specified, it takes a random territory from
+	;;     that kingdom and transfers it to the target.
+	;; 2)  If the territory_ids is only specified, it takes that particular territory from
+	;;     whatever kingdom and transfers it to the target.
+	;; 3)  If both are specified, it only transfers that particular territory if and only if 
+	;;     it is owned by the specified kingdom.
+
+	;; The message to display
+	localized	message = "#mg_campaigns_MGEventEffectTypeChangeTerritoryTemplate_message|sss"
+}
+
+;;-----------------------------------------------------------------------------
+;; Kingdom and team templates
+;;-----------------------------------------------------------------------------
+
+;; specified basic kingdom template information
+[Template DynamicCampaignKingdomTemplate]
+{
+	;; Required Properties
+	string		ids
+	localized	name
+	string		nation_ids
+	string		capital_ids
+	string		color_ids
+	string		sai_ids
+	string		cinematic_win
+	string		nation_selection_screen_background_video
+	string		icon
+
+	;; Default Properties
+	string		mgai_ids = mgai_test
+	int			starting_resources = 250
+	
+	;; Directional economy bonuses for attacking from water or land
+	[StockpileBonus Template=ResourceList]
+	{
+		money = 0
+		oil = 0
+		ammo = 0
+		unit_limit_provided = 10
+		unit_limit_consumed = 1
+		building_limit_consumed = 0
+		building_limit_provided = 0
+	}
+
+	[WaterStockpileBonus Template=ResourceList]
+	{
+		money = 0
+		oil = 0
+		ammo = 0
+		unit_limit_provided = 10
+		unit_limit_consumed = 1
+		building_limit_consumed = 0
+		building_limit_provided = 0
+	}
+
+	;; Objectives
+	[list Objective]
+	{
+		int	capital_captures = 2
+	}
+
+	;; Owned territories
+	[list Territory]
+	{
+		string ids
+		string liberates_to = null
+		
+		[list Actor]
+		{
+			string ids
+		}
+	}
+
+	[Shop Template=DynamicCampaignShopTemplate]
+}
+
+;; Specifies dynamic campaign team information
+[Template DynamicCampaignTeamTemplate]
+{
+	string		ids
+	localized	name	
+
+	[list Kingdom]
+	{
+		string	ids
+	}
+}
+
+;; Specifies information about the dynamic campaign
+[Template DynamicCampaignTemplate]
+{
+	;; General Properties
+	string 		ids 
+	localized 	name
+	string		default_kingdom	
+	localized	description
+	int		initial_month
+	int		initial_year
+
+	;; Destroy behaviors
+	;; - none - never destroy an army (unless there is no retreat available)
+	;; - first - destroy first army into the territory
+	;; - weakest - destroy the weakest army in terms of quickbattle odds
+	;; - strongest - destroy the strongest army in terms of quickbattle odds
+	;; - least_expensive - destroy the least expensive army in terms of total upgrade cost of all divisions in the army
+	;; - most_expensive - destroy the most expensive army in terms of total upgrade cost of all divisions in the army
+	;; - random - destroy 1 random army
+	;; - all - destroy all armies
+	string		attacking_destroy_behavior 	;; What army to destroy when you attack and lose
+	string		defending_destroy_behavior	;; What army to destroy when you get attacked and lose
+
+	;; Map
+	string		map_ids
+	string		map_table_ids
+
+	;; VFX
+	string		territory_friendly_vfx = territory_friendly_tint
+	string		territory_enemy_vfx = territory_enemy_tint
+	string		territory_friendly_arrow_vfx = territory_friendly_arrow
+	string		territory_enemy_arrow_vfx = territory_enemy_arrow
+
+	;; Cinematics (win cinematics specified with kingdom)
+	string		cinematic_intro
+
+	;; For the choose dynamic campaign interface
+	string		choose_background_texture
+	[list ChooseButtonVE]
+	{
+		string	when
+		string	texture
+	}
+
+	[list Kingdom Template=DynamicCampaignKingdomTemplate]
+
+	[list Team Template=DynamicCampaignTeamTemplate]
+
+	[list Event Template=MGEventTemplate]
+}
+
+[Template DefaultDynamicCampaignTemplate Template=DynamicCampaignTemplate]
+{
+	;; Start all of the dynamic campaigns in June 1942
+	initial_month = 6
+	initial_year = 1941
+
+	;; Default destroy behavior
+	attacking_destroy_behavior = weakest
+	defending_destroy_behavior = weakest
+
+	[Team Template=DynamicCampaignTeamTemplate]
+	{
+		ids = axis_team
+		name = "#mg_campaigns_axis_team_name"
+
+		[Kingdom]
+		ids = kingdom_germany
+
+		[Kingdom]
+		ids = kingdom_ita
+
+		[Kingdom]
+		ids = kingdom_finland
+
+		[Kingdom]
+		ids = kingdom_jpn
+	}
+
+
+	[Team Template=DynamicCampaignTeamTemplate]
+	{
+		ids = communism_team
+		name = "#mg_campaigns_axis_team_name"
+
+		[Kingdom]
+		ids = kingdom_cpc
+
+		[Kingdom]
+		ids = kingdom_russia
+	}
+
+	[Team Template=DynamicCampaignTeamTemplate]
+	{
+		ids = allied_team
+		name = "#mg_campaigns_allied_team_name"
+
+		[Kingdom]
+		ids = kingdom_great_britain
+
+		[Kingdom]
+		ids = kingdom_usa
+
+		[Kingdom]
+		ids = kingdom_china
+		
+		[Kingdom]
+		ids = kingdom_ned
+	}
+}
+
+;;-----------------------------------------------------------------------------
+;; All the default information about each kingdom
+;;-----------------------------------------------------------------------------
+
+	[Template JapanKingdomTemplate Template=DynamicCampaignKingdomTemplate]
+	{
+		ids = kingdom_jpn
+		name = "#mg_campaigns_kingdom_jpn_name"
+		nation_ids = nation_jpn
+		capital_ids = Japan
+		color_ids = yellow
+		sai_ids = jpn_sai
+		cinematic_win = /Video/Metagame/JPNVictory.bik
+		nation_selection_screen_background_video =  /Video/MetaGame/JPNIntro.bik
+		icon = UI/%s/KingdomIcons/IconJPN.png
+
+		[Objective]
+		{
+			capital_captures = 6
+		}
+
+		[Territory]
+		{
+			ids = Japan
+			liberates_to = kingdom_jpn
+
+			[Actor]
+  			ids = mg_jpn_capital
+
+			[Actor]
+  			ids = mg_jpn_army_defensive
+  			
+			[Actor]
+  			ids = mg_jpn_army_defensive
+		}
+		
+		[Territory]
+		{
+			ids = Marshallislands
+		}
+		
+		[Territory]
+		{
+			ids = IwoJima
+			
+			[Actor]
+  			ids = mg_jpn_army_defensive	
+  			
+ 			[Actor]
+			ids = mg_jpn_army_infantry
+  			
+ 			[Actor]
+			ids = mg_jpn_army_infantry
+						
+			[Actor]
+			ids = mg_jpn_army_infantry_air
+		}
+		
+		[Territory]
+		{
+			ids = Manchuria
+			liberates_to = kingdom_cpc
+
+			[Actor]
+  			ids = mg_cpc_capital
+			
+			[Actor]
+			ids = mg_jpn_army_infantry
+						
+			[Actor]
+			ids = mg_jpn_army_mobile
+		}
+		
+		[Territory]
+		{
+			ids = EasternChina
+			
+			[Actor]
+  			ids = mg_chn_capital
+
+			[Actor]
+			ids = mg_jpn_army_infantry
+			
+			[Actor]
+			ids = mg_jpn_army_infantry
+			
+			[Actor]
+			ids = mg_jpn_army_infantry
+			
+			[Actor]
+			ids = mg_jpn_army_infantry_air
+					
+			[Actor]
+			ids = mg_jpn_army_infantry_air
+
+		}
+		
+		[Shop Template=JPNDynamicCampaignShop]
+	}
+	
+	[Template GermanyKingdomTemplate Template=DynamicCampaignKingdomTemplate]
+	{
+		ids = kingdom_germany
+		name = "#mg_campaigns_kingdom_germany_name"
+		nation_ids = nation_ger
+		capital_ids = Germany
+		color_ids = bright_red ;dark_gray
+		sai_ids = ger_sai
+		cinematic_win = /Video/Metagame/GERVictory.bik
+		nation_selection_screen_background_video = /Video/MetaGame/GERIntro.bik
+		icon = UI/%s/KingdomIcons/IconGER.png
+
+		[Objective]
+		{
+			capital_captures = 6
+		}
+
+		[Territory]
+		{
+			ids = Germany
+			liberates_to = kingdom_germany
+
+			[Actor]
+  			ids = mg_ger_capital
+
+			[Actor]
+  			ids = mg_ger_army_defensive
+  			
+			[Actor]
+  			ids = mg_ger_army_defensive  
+		}
+		
+		[Territory]
+		{
+			ids = EasternEurope	
+
+			[Actor]
+			ids = mg_ger_army_infantry
+				
+			[Actor]
+			ids = mg_ger_army_mobile
+			
+			[Actor]
+			ids = mg_ger_army_mobile
+			
+			[Actor]
+			ids = mg_ger_army_armor
+			
+			[Actor]
+			ids = mg_ger_army_armor_air
+		}
+		
+		[Territory]
+		{
+			ids = France
+			
+			[Actor]
+			ids = mg_ger_army_mobile
+		}
+		
+		[Territory]
+		{
+			ids = FrenchCoast
+						
+			[Actor]
+			ids = mg_ger_army_infantry
+		}
+		
+		[Territory]
+		{
+			ids = GermanCoast
+			liberates_to = kingdom_ned
+
+			[Actor]
+  			ids = mg_ned_capital
+			
+			[Actor]
+			ids = mg_ger_army_infantry
+		}
+		
+		[Territory]
+		{
+			ids = Libya
+			
+			[Actor]
+			ids = mg_ger_army_infantry			
+						
+			[Actor]
+			ids = mg_ger_army_armor
+		}
+
+		[Shop Template=GERDynamicCampaignShop]	
+	}
+	
+	[Template RussiaKingdomTemplate Template=DynamicCampaignKingdomTemplate]
+	{
+		ids = kingdom_russia
+		name = "#mg_campaigns_kingdom_russia_name"
+		nation_ids = nation_rus
+		capital_ids = Russia
+		color_ids = brownish_maroon
+		sai_ids = rus_sai
+		cinematic_win = /Video/Metagame/RUSVictory.bik
+		nation_selection_screen_background_video = /Video/MetaGame/RUSIntro.bik
+		icon = UI/%s/KingdomIcons/IconRUS.png
+
+		[Objective]
+		{
+			capital_captures = 8
+		}
+
+		[Territory]
+		{
+			ids = Russia
+			liberates_to = kingdom_russia
+
+			[Actor]
+  			ids = mg_rus_capital
+
+			[Actor]
+  			ids = mg_rus_army_defensive
+  			
+  			[Actor]
+  			ids = mg_rus_army_defensive
+
+			[Actor]
+			ids = mg_rus_army_infantry
+			
+			[Actor]
+			ids = mg_rus_army_infantry
+		}
+		
+		[Territory]
+		{
+			ids = Belarus
+			
+			[Actor]
+			ids = mg_rus_army_infantry
+		
+			[Actor]
+			ids = mg_rus_army_armor
+		}
+		
+		[Territory]
+		{
+			ids = Ukraine
+			
+			[Actor]
+			ids = mg_rus_army_infantry
+
+			
+			[Actor]
+			ids = mg_rus_army_armor
+		}
+		
+		[Territory]
+		{
+			ids = Caucasus
+		}
+		
+		[Territory]
+		{
+			ids = UralMountains
+			
+			[Actor]
+			ids = mg_rus_army_infantry
+		}
+		
+		[Territory]
+		{
+			ids = Siberia
+			
+			[Actor]
+			ids = mg_rus_army_infantry			
+		}
+		
+		[Territory]
+		{
+			ids = EasternSiberia
+			
+			[Actor]
+  			ids = mg_rus_army_defensive
+
+		}
+		
+		[Territory]
+		{
+			ids = Kazakhstan
+		}
+		
+		[Shop Template=RUSDynamicCampaignShop]	
+	}
+	
+	[Template GreatBritainKingdomTemplate Template=DynamicCampaignKingdomTemplate]
+	{
+		ids = kingdom_great_britain
+		name = "#mg_campaigns_kingdom_great_britain_name"
+		nation_ids = nation_gbr
+		capital_ids = GreatBritain
+		color_ids = blue
+		sai_ids = gbr_sai
+		cinematic_win = /Video/Metagame/GBRVictory.bik
+		nation_selection_screen_background_video = /Video/MetaGame/GBRIntro.bik
+		icon = UI/%s/KingdomIcons/IconGBR.png
+
+		[Objective]
+		{
+			capital_captures = 6
+		}
+
+		[Territory]
+		{
+			ids = GreatBritain
+			liberates_to = kingdom_great_britain
+
+			[Actor]
+  			ids = mg_gbr_capital
+
+			[Actor]
+  			ids = mg_gbr_army_defensive
+  			
+			[Actor]
+  			ids = mg_gbr_army_defensive  
+  			
+  			[Actor]
+			ids = mg_gbr_army_infantry
+  			
+  			[Actor]
+			ids = mg_gbr_army_mobile
+		}
+		
+		[Territory]
+		{
+			ids = EasternCanada			
+		}
+		
+		[Territory]
+		{
+			ids = Egypt
+	
+  			[Actor]
+  			ids = mg_gbr_army_mobile
+  			
+  			[Actor]
+  			ids = mg_gbr_army_infantry_air
+		}
+		
+		[Territory]
+		{
+			ids = gibraltar
+			
+			[Actor]
+  			ids = mg_gbr_army_defensive  
+		}	
+		[Territory]
+		{
+			ids = WesternCanada1
+		}
+		
+		[Territory]
+		{
+			ids = WesternCanada2
+		}
+		
+		[Territory]
+		{
+			ids = SouthAfrica
+			
+  			[Actor]
+			ids = mg_gbr_army_infantry			
+		}
+		
+		[Territory]
+		{
+			ids = India
+			
+			[Actor]
+  			ids = mg_gbr_army_defensive  
+  			
+  			[Actor]
+			ids = mg_gbr_army_infantry
+		}
+		
+		[Territory]
+		{
+			ids = AustraliaNewZealand
+			
+			[Actor]
+  			ids = mg_gbr_army_defensive 
+  			
+  			[Actor]
+			ids = mg_gbr_army_infantry
+		}
+				
+		[Territory]
+		{
+			ids = SouthEasternAsia
+			
+			[Actor]
+			ids = mg_gbr_army_infantry
+		}
+
+		[Shop Template=GBRDynamicCampaignShop]
+	}
+	
+	[Template UnitedStatesKingdomTemplate Template=DynamicCampaignKingdomTemplate]
+	{
+		ids = kingdom_usa
+		name = "#mg_campaigns_kingdom_usa_name"
+		nation_ids = nation_usa
+		capital_ids = EasternUnitedStates1
+		color_ids = green
+		sai_ids = usa_sai
+		cinematic_win = /Video/MetaGame/USAVictory.bik
+		nation_selection_screen_background_video =/Video/MetaGame/USAIntro.bik
+
+		icon = UI/%s/KingdomIcons/IconUSA.png
+
+		[Objective]
+		{
+			capital_captures = 6
+		}
+		
+		[Territory]
+		{
+			ids = EasternUnitedStates1
+			liberates_to = kingdom_usa
+
+			[Actor]
+  			ids = mg_usa_capital
+
+			[Actor]
+  			ids = mg_usa_army_defensive
+  			
+  			[Actor]
+  			ids = mg_usa_army_defensive
+
+			[Actor]
+  			ids = mg_usa_army_infantry  			
+		}
+		
+		[Territory]
+		{
+			ids = WesternUnitedStates2
+			liberates_to = kingdom_usa
+			
+			[Actor]
+  			ids = mg_usa_army_defensive
+  			
+			[Actor]
+  			ids = mg_usa_army_defensive  
+  			
+			[Actor]
+  			ids = mg_usa_army_infantry						
+		}
+		
+		[Territory]
+		{
+			ids = Hawaii
+			liberates_to = kingdom_usa
+			
+			[Actor]
+  			ids = mg_usa_army_defensive  				
+		}
+				
+		[Territory]
+		{
+			ids = SamoaWater
+		}
+		
+		[Territory]
+		{
+			ids = Samoa
+		}
+		
+		[Territory]
+		{
+			ids = Philippines
+			
+			[Actor]
+  			ids = mg_usa_phillipine_garrison  
+		}
+		
+		[Territory]
+		{
+			ids = Midway
+		}
+		
+		[Territory]
+		{
+			ids = Aleutian Islands
+		}
+		
+		[Territory]
+		{
+			ids = Alaska
+			liberates_to = kingdom_usa
+		}
+		
+		[Shop Template=USADynamicCampaignShop]
+	}
+[Template ChinaKingdomTemplate Template=DynamicCampaignKingdomTemplate]
+	{
+		ids = kingdom_china
+		name = "#mg_campaigns_kingdom_chn_name"
+		nation_ids = nation_chn
+		capital_ids = CentralChina
+		color_ids = lime
+		sai_ids = chn_sai
+		cinematic_win = /Video/Metagame/USAVictory.bik
+		nation_selection_screen_background_video = /Video/MetaGame/CHINA.bik
+		icon = UI/%s/KingdomIcons/IconCHN.png
+
+		[Objective]
+		{
+			capital_captures = 6
+		}
+
+		[Territory]
+		{
+			ids = CentralChina
+			liberates_to = kingdom_china
+
+			[Actor]
+  			ids = mg_chn_capital
+
+			[Actor]
+  			ids = mg_chn_army_defensive
+	
+			[Actor]
+  			ids = mg_chn_army_defensive
+
+			[Actor]
+  			ids = mg_chn_army_infantry
+	
+			[Actor]
+  			ids = mg_chn_army_infantry
+
+			[Actor]
+  			ids = mg_chn_army_infantry
+		}
+
+		[Territory]
+		{
+                        ids = WesternChina
+                        		
+		}
+		
+		[Shop Template=CHNDynamicCampaignShop]
+	}
+
+	[Template CPCKingdomTemplate Template=DynamicCampaignKingdomTemplate]
+	{
+		ids = kingdom_cpc
+		name = "#mg_campaigns_kingdom_cpc_name"
+		nation_ids = nation_cpc
+		capital_ids = Mongolia
+		color_ids = pink
+		sai_ids = cpc_sai
+		cinematic_win = /Video/MainMenu/CPCVictory.bik
+		nation_selection_screen_background_video = /Video/MetaGame/China.bik
+		icon = UI/%s/KingdomIcons/IconCPC.png
+
+		[Objective]
+		{
+			capital_captures = 8
+		}
+
+		[Territory]
+		{
+			ids = Mongolia
+			liberates_to = kingdom_cpc
+
+			[Actor]
+  			ids = mg_chn_army_defensive
+
+			[Actor]
+  			ids = mg_chn_army_defensive
+
+			[Actor]
+  			ids = mg_cpc_army_infantry
+
+			[Actor]
+  			ids = mg_cpc_army_infantry
+	
+			[Actor]
+  			ids = mg_cpc_army_infantry
+		}
+		
+		[Shop Template=CPCDynamicCampaignShop]
+	}
+
+	[Template FinlandKingdomTemplate Template=DynamicCampaignKingdomTemplate]
+	{
+		ids = kingdom_finland
+		name = "#mg_campaigns_kingdom_finland_name"
+		nation_ids = nation_fin
+		capital_ids = Scandanavia
+		color_ids = cyan
+		sai_ids = fin_sai
+		cinematic_win = /Video/Campaign/AxisLondonFalls.bik
+		nation_selection_screen_background_video = /Video/Campaign/AxisMoscowFalls.bik
+		icon = UI/%s/KingdomIcons/IconFIN.png
+
+		[Objective]
+		{
+			capital_captures = 6
+		}
+
+		[Territory]
+		{
+			ids = Scandanavia
+			liberates_to = kingdom_finland
+
+			[Actor]
+  			ids = mg_fin_capital
+
+			[Actor]
+  			ids = mg_fin_army_defensive
+	
+			[Actor]
+  			ids = mg_fin_army_defensive
+
+			[Actor]
+  			ids = mg_fin_army_mobile_air
+                        
+                        [Actor]
+                        ids = mg_fin_army_infantry
+		}
+		
+		[Shop Template=FINDynamicCampaignShop]
+	}
+
+	[Template NEDKingdomTemplate Template=DynamicCampaignKingdomTemplate]
+	{
+		ids = kingdom_ned
+		name = "#mg_campaigns_kingdom_ned_name"
+		nation_ids = nation_ned
+		capital_ids = DutchEastIndies
+		color_ids = orange
+		sai_ids = ned_sai
+		cinematic_win = /Video/Metagame/GBRVictory.bik
+		nation_selection_screen_background_video = /Video/Campaign/AlliesVictory.bik
+		icon = UI/%s/KingdomIcons/IconNED.png
+
+		[Objective]
+		{
+			capital_captures = 6
+		}
+
+		[Territory]
+		{
+			ids = DutchEastIndies
+			liberates_to = kingdom_ned
+
+			[Actor]
+  			ids = mg_ned_army_defensive
+
+			[Actor]
+  			ids = mg_ned_army_infantry_air
+		}
+		
+		[Territory]
+		{
+			ids = NewGuineaSolomonIslands
+		}
+		
+		[Shop Template=NEDDynamicCampaignShop]
+	}
+
+	[Template ITAKingdomTemplate Template=DynamicCampaignKingdomTemplate]
+	{
+		ids = kingdom_ita
+		name = "#mg_campaigns_kingdom_ita_name"
+		nation_ids = nation_ita
+		capital_ids = SouthernEurope
+		color_ids =lime
+		sai_ids = ita_sai
+		cinematic_win = /Video/MetaGame/Italywin.bik
+		nation_selection_screen_background_video = /Video/MetaGame/ItalyIntro.bik
+		icon = UI/%s/KingdomIcons/IconITA.png
+
+		[Objective]
+		{
+			capital_captures = 6
+		}
+
+		[Territory]
+		{
+			ids = SouthernEurope
+			liberates_to = kingdom_ita
+
+			[Actor]
+  			ids = mg_ita_capital
+
+			[Actor]
+  			ids = mg_ita_army_defensive
+  			
+			[Actor]
+  			ids = mg_ita_army_defensive
+
+			[Actor]
+			ids = mg_ita_army_infantry_air
+				
+			[Actor]
+			ids = mg_ita_army_mobile			
+		}
+
+		[Territory]
+		{
+			ids = EastAfrica
+
+			[Actor]
+			ids = mg_ita_army_infantry			
+		}
+
+		[Shop Template=ITADynamicCampaignShop]
+	}
+;;-----------------------------------------------------------------------------
+;; Definitions of all the campaigns
+;;-----------------------------------------------------------------------------
+
+[DynamicCampaign Template=DefaultDynamicCampaignTemplate]
+{
+	;; General
+	ids = usa_dynamic_campaign
+	name = "#mg_campaigns_usa_dynamic_campaign_name"
+	default_kingdom = kingdom_usa
+	cinematic_intro = /Video/Metagame/USAIntro.bik
+	choose_background_texture = DynamicCampaigns/%s/USABackground.png
+	description = "#mg_campaigns_usa_dynamic_campaign_description"
+
+	;; Map
+	map_ids = worldmap
+	map_table_ids = worldmaptable
+
+	[ChooseButtonVE]
+	when = SELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/USACampaignPressed.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/USACampaign.png
+
+	[ChooseButtonVE]
+	when = SELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/USACampaignPressedFocused.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/USACampaignFocused.png
+	
+	[Kingdom Template=UnitedStatesKingdomTemplate]
+	mgai_ids = usa_worldmap_mgai
+	
+	[Kingdom Template=ITAKingdomTemplate]
+	mgai_ids = ita_worldmap_mgai
+	
+	[Kingdom Template=GermanyKingdomTemplate]
+	mgai_ids = ger_worldmap_mgai
+		
+	[Kingdom Template=ChinaKingdomTemplate]
+	mgai_ids = chn_worldmap_mgai
+	
+	[Kingdom Template=CPCKingdomTemplate]
+	mgai_ids = cpc_worldmap_mgai
+
+	[Kingdom Template=FinlandKingdomTemplate]
+	mgai_ids = fin_worldmap_mgai
+
+	[Kingdom Template=RussiaKingdomTemplate]
+	mgai_ids = rus_worldmap_mgai
+
+	[Kingdom Template=JapanKingdomTemplate]
+	mgai_ids = jpn_worldmap_mgai
+
+	[Kingdom Template=GreatBritainKingdomTemplate]
+	mgai_ids = gbr_worldmap_mgai
+
+	[Kingdom Template=NEDKingdomTemplate]
+	mgai_ids = ned_worldmap_mgai
+}
+
+[DynamicCampaign Template=DefaultDynamicCampaignTemplate]
+{
+	;; General
+	ids = great_britain_dynamic_campaign
+	name = "#mg_campaigns_great_britain_dynamic_campaign_name"
+	default_kingdom = kingdom_great_britain
+	cinematic_intro = /Video/Metagame/GBRIntro.bik
+	choose_background_texture = DynamicCampaigns/%s/GBRBackground.png
+	description = "#mg_campaigns_great_britain_dynamic_campaign_description"
+		
+	;; Map
+	map_ids = worldmap
+	map_table_ids = worldmaptable
+
+	[ChooseButtonVE]
+	when = SELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/GBRCampaignPressed.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/GBRCampaign.png
+
+	[ChooseButtonVE]
+	when = SELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/GBRCampaignPressedFocused.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/GBRCampaignFocused.png
+
+	[Kingdom Template=GreatBritainKingdomTemplate]
+	mgai_ids = gbr_worldmap_mgai
+	
+	[Kingdom Template=UnitedStatesKingdomTemplate]
+	mgai_ids = usa_worldmap_mgai
+	
+	[Kingdom Template=ITAKingdomTemplate]
+	mgai_ids = ita_worldmap_mgai
+	
+	[Kingdom Template=GermanyKingdomTemplate]
+	mgai_ids = ger_worldmap_mgai
+		
+	[Kingdom Template=ChinaKingdomTemplate]
+	mgai_ids = chn_worldmap_mgai
+	
+	[Kingdom Template=CPCKingdomTemplate]
+	mgai_ids = cpc_worldmap_mgai
+
+	[Kingdom Template=FinlandKingdomTemplate]
+	mgai_ids = fin_worldmap_mgai
+
+	[Kingdom Template=RussiaKingdomTemplate]
+	mgai_ids = rus_worldmap_mgai
+
+	[Kingdom Template=JapanKingdomTemplate]
+	mgai_ids = jpn_worldmap_mgai
+
+	[Kingdom Template=NEDKingdomTemplate]
+	mgai_ids = ned_worldmap_mgai		
+}
+
+[DynamicCampaign Template=DefaultDynamicCampaignTemplate]
+{
+	;; General
+	ids = russia_dynamic_campaign
+	name = "#mg_campaigns_russia_dynamic_campaign_name"
+	default_kingdom = kingdom_russia
+	cinematic_intro = /Video/Metagame/RUSIntro.bik
+	choose_background_texture = DynamicCampaigns/%s/RUSBackground.png
+	description = "#mg_campaigns_russia_dynamic_campaign_description"
+		
+	;; Map
+	map_ids = worldmap
+	map_table_ids = worldmaptable
+
+	[ChooseButtonVE]
+	when = SELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/RUSCampaignPressed.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/RUSCampaign.png
+
+	[ChooseButtonVE]
+	when = SELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/RUSCampaignPressedFocused.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/RUSCampaignFocused.png
+
+	[Kingdom Template=RussiaKingdomTemplate]
+	mgai_ids = rus_worldmap_mgai
+	
+	[Kingdom Template=ITAKingdomTemplate]
+	mgai_ids = ita_worldmap_mgai
+	
+	[Kingdom Template=GermanyKingdomTemplate]
+	mgai_ids = ger_worldmap_mgai
+		
+	[Kingdom Template=ChinaKingdomTemplate]
+	mgai_ids = chn_worldmap_mgai
+	
+	[Kingdom Template=CPCKingdomTemplate]
+	mgai_ids = cpc_worldmap_mgai
+
+	[Kingdom Template=FinlandKingdomTemplate]
+	mgai_ids = fin_worldmap_mgai
+
+	[Kingdom Template=UnitedStatesKingdomTemplate]
+	mgai_ids = usa_worldmap_mgai
+
+	[Kingdom Template=JapanKingdomTemplate]
+	mgai_ids = jpn_worldmap_mgai
+
+	[Kingdom Template=GreatBritainKingdomTemplate]
+	mgai_ids = gbr_worldmap_mgai
+
+	[Kingdom Template=NEDKingdomTemplate]
+	mgai_ids = ned_worldmap_mgai	
+}
+
+[DynamicCampaign Template=DefaultDynamicCampaignTemplate]
+{
+	;; General
+	ids = germany_dynamic_campaign
+	name = "#mg_campaigns_germany_dynamic_campaign_name"
+	default_kingdom = kingdom_germany
+	cinematic_intro = /Video/Metagame/GERIntro.bik
+	choose_background_texture = DynamicCampaigns/%s/GERBackground.png
+	description = "#mg_campaigns_germany_dynamic_campaign_description"
+		
+	;; Map
+	map_ids = worldmap
+	map_table_ids = worldmaptable
+
+	[ChooseButtonVE]
+	when = SELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/GERCampaignPressed.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/GERCampaign.png
+
+	[ChooseButtonVE]
+	when = SELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/GERCampaignPressedFocused.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/GERCampaignFocused.png
+
+	[Kingdom Template=GermanyKingdomTemplate]
+	mgai_ids = ger_worldmap_mgai
+	
+	[Kingdom Template=ITAKingdomTemplate]
+	mgai_ids = ita_worldmap_mgai
+		
+	[Kingdom Template=ChinaKingdomTemplate]
+	mgai_ids = chn_worldmap_mgai
+	
+	[Kingdom Template=CPCKingdomTemplate]
+	mgai_ids = cpc_worldmap_mgai
+
+	[Kingdom Template=FinlandKingdomTemplate]
+	mgai_ids = fin_worldmap_mgai
+
+	[Kingdom Template=UnitedStatesKingdomTemplate]
+	mgai_ids = usa_worldmap_mgai
+
+	[Kingdom Template=RussiaKingdomTemplate]
+	mgai_ids = rus_worldmap_mgai
+
+	[Kingdom Template=JapanKingdomTemplate]
+	mgai_ids = jpn_worldmap_mgai
+
+	[Kingdom Template=GreatBritainKingdomTemplate]
+	mgai_ids = gbr_worldmap_mgai
+
+	[Kingdom Template=NEDKingdomTemplate]
+	mgai_ids = ned_worldmap_mgai
+}
+	
+[DynamicCampaign Template=DefaultDynamicCampaignTemplate]
+{
+	;; General
+	ids = jpn_dynamic_campaign
+	name = "#mg_campaigns_jpn_dynamic_campaign_name"
+	default_kingdom = kingdom_jpn
+	cinematic_intro = /Video/Metagame/JPNIntro.bik
+	choose_background_texture = DynamicCampaigns/%s/JPNBackground.png
+	description = "#mg_campaigns_jpn_dynamic_campaign_description"
+		
+	;; Map
+	map_ids = worldmap
+	map_table_ids = worldmaptable
+
+	[ChooseButtonVE]
+	when = SELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/JPNCampaignPressed.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/JPNCampaign.png
+
+	[ChooseButtonVE]
+	when = SELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/JPNCampaignPressedFocused.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/JPNCampaignFocused.png
+
+	[Kingdom Template=JapanKingdomTemplate]
+	mgai_ids = jpn_worldmap_mgai
+	
+	[Kingdom Template=ITAKingdomTemplate]
+	mgai_ids = ita_worldmap_mgai
+	
+	[Kingdom Template=GermanyKingdomTemplate]
+	mgai_ids = ger_worldmap_mgai
+		
+	[Kingdom Template=ChinaKingdomTemplate]
+	mgai_ids = chn_worldmap_mgai
+	
+	[Kingdom Template=CPCKingdomTemplate]
+	mgai_ids = cpc_worldmap_mgai
+
+	[Kingdom Template=FinlandKingdomTemplate]
+	mgai_ids = fin_worldmap_mgai
+
+	[Kingdom Template=UnitedStatesKingdomTemplate]
+	mgai_ids = usa_worldmap_mgai
+
+	[Kingdom Template=RussiaKingdomTemplate]
+	mgai_ids = rus_worldmap_mgai
+
+	[Kingdom Template=GreatBritainKingdomTemplate]
+	mgai_ids = gbr_worldmap_mgai
+
+	[Kingdom Template=NEDKingdomTemplate]
+	mgai_ids = ned_worldmap_mgai
+}
+
+[DynamicCampaign Template=DefaultDynamicCampaignTemplate]
+{
+	;; General
+	ids = chn_dynamic_campaign
+	name = "#mg_campaigns_CHN_dynamic_campaign_name"
+	default_kingdom = kingdom_china
+	cinematic_intro = /Video/MainMenu/CHINA.bik
+	choose_background_texture = DynamicCampaigns/CHNBackground.png
+	description = "#mg_campaigns_chn_dynamic_campaign_description"
+		
+	;; Map
+	map_ids = worldmap
+	map_table_ids = worldmaptable
+
+	[ChooseButtonVE]
+	when = SELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/CHNCampaignPressed.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/CHNCampaign.png
+
+	[ChooseButtonVE]
+	when = SELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/CHNCampaignPressedFocused.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/CHNCampaignFocused.png
+
+	[Kingdom Template=ChinaKingdomTemplate]
+	mgai_ids = chn_worldmap_mgai	
+
+	[Kingdom Template=ITAKingdomTemplate]
+	mgai_ids = ita_worldmap_mgai
+	
+	[Kingdom Template=GermanyKingdomTemplate]
+	mgai_ids = ger_worldmap_mgai
+	
+	[Kingdom Template=CPCKingdomTemplate]
+	mgai_ids = cpc_worldmap_mgai
+
+	[Kingdom Template=FinlandKingdomTemplate]
+	mgai_ids = fin_worldmap_mgai
+
+	[Kingdom Template=UnitedStatesKingdomTemplate]
+	mgai_ids = usa_worldmap_mgai
+
+	[Kingdom Template=RussiaKingdomTemplate]
+	mgai_ids = rus_worldmap_mgai
+
+	[Kingdom Template=JapanKingdomTemplate]
+	mgai_ids = jpn_worldmap_mgai
+
+	[Kingdom Template=GreatBritainKingdomTemplate]
+	mgai_ids = gbr_worldmap_mgai
+
+	[Kingdom Template=NEDKingdomTemplate]
+	mgai_ids = ned_worldmap_mgai
+}
+
+[DynamicCampaign Template=DefaultDynamicCampaignTemplate]
+{
+	;; General
+	ids = cpc_dynamic_campaign
+	name = "#mg_campaigns_cpc_dynamic_campaign_name"
+	default_kingdom = kingdom_cpc
+	cinematic_intro = /Video/MainMenu/CHINA.bik
+	choose_background_texture = DynamicCampaigns/CPCBackground.png
+	description = "#mg_campaigns_cpc_dynamic_campaign_description"
+		
+	;; Map
+	map_ids = worldmap
+	map_table_ids = worldmaptable
+
+	[ChooseButtonVE]
+	when = SELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/CPCCampaignPressed.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/CPCCampaign.png
+
+	[ChooseButtonVE]
+	when = SELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/CPCCampaignPressedFocused.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/CPCCampaignFocused.png
+
+	[Kingdom Template=CPCKingdomTemplate]
+	mgai_ids = cpc_worldmap_mgai
+
+	[Kingdom Template=ITAKingdomTemplate]
+	mgai_ids = ita_worldmap_mgai
+	
+	[Kingdom Template=GermanyKingdomTemplate]
+	mgai_ids = ger_worldmap_mgai
+		
+	[Kingdom Template=ChinaKingdomTemplate]
+	mgai_ids = chn_worldmap_mgai
+
+	[Kingdom Template=FinlandKingdomTemplate]
+	mgai_ids = fin_worldmap_mgai
+
+	[Kingdom Template=UnitedStatesKingdomTemplate]
+	mgai_ids = usa_worldmap_mgai
+
+	[Kingdom Template=RussiaKingdomTemplate]
+	mgai_ids = rus_worldmap_mgai
+
+	[Kingdom Template=JapanKingdomTemplate]
+	mgai_ids = jpn_worldmap_mgai
+
+	[Kingdom Template=GreatBritainKingdomTemplate]
+	mgai_ids = gbr_worldmap_mgai
+
+	[Kingdom Template=NEDKingdomTemplate]
+	mgai_ids = ned_worldmap_mgai
+}
+
+[DynamicCampaign Template=DefaultDynamicCampaignTemplate]
+{
+	;; General
+	ids = fin_dynamic_campaign
+	name = "#mg_campaigns_FIN_dynamic_campaign_name"
+	default_kingdom = kingdom_finland
+	cinematic_intro = /Video/Campaign/AlliesIntro.bik
+	choose_background_texture = DynamicCampaigns/FINBackground.png
+	description = "#mg_campaigns_fin_dynamic_campaign_description"
+		
+	;; Map
+	map_ids = worldmap
+	map_table_ids = worldmaptable
+
+	[ChooseButtonVE]
+	when = SELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/FINCampaignPressed.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/FINCampaign.png
+
+	[ChooseButtonVE]
+	when = SELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/FINCampaignPressedFocused.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/FINCampaignFocused.png
+
+	[Kingdom Template=FinlandKingdomTemplate]
+	mgai_ids = fin_worldmap_mgai
+
+	[Kingdom Template=ITAKingdomTemplate]
+	mgai_ids = ita_worldmap_mgai
+	
+	[Kingdom Template=GermanyKingdomTemplate]
+	mgai_ids = ger_worldmap_mgai
+		
+	[Kingdom Template=ChinaKingdomTemplate]
+	mgai_ids = chn_worldmap_mgai
+	
+	[Kingdom Template=CPCKingdomTemplate]
+	mgai_ids = cpc_worldmap_mgai
+
+	[Kingdom Template=UnitedStatesKingdomTemplate]
+	mgai_ids = usa_worldmap_mgai
+
+	[Kingdom Template=RussiaKingdomTemplate]
+	mgai_ids = rus_worldmap_mgai
+
+	[Kingdom Template=JapanKingdomTemplate]
+	mgai_ids = jpn_worldmap_mgai
+
+	[Kingdom Template=GreatBritainKingdomTemplate]
+	mgai_ids = gbr_worldmap_mgai
+
+	[Kingdom Template=NEDKingdomTemplate]
+	mgai_ids = ned_worldmap_mgai
+}
+
+[DynamicCampaign Template=DefaultDynamicCampaignTemplate]
+{
+	;; General
+	ids = ned_dynamic_campaign
+	name = "#mg_campaigns_NED_dynamic_campaign_name"
+	default_kingdom = kingdom_ned
+	cinematic_intro = /Video/Campaign/AlliesBerlin.bik
+	choose_background_texture = DynamicCampaigns/NEDBackground.png
+	description = "#mg_campaigns_ned_dynamic_campaign_description"
+		
+	;; Map
+	map_ids = worldmap
+	map_table_ids = worldmaptable
+
+	[ChooseButtonVE]
+	when = SELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/NEDCampaignPressed.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/NEDCampaign.png
+
+	[ChooseButtonVE]
+	when = SELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/NEDCampaignPressedFocused.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/NEDCampaignFocused.png
+
+	[Kingdom Template=NEDKingdomTemplate]
+	mgai_ids = ned_worldmap_mgai
+
+	[Kingdom Template=ITAKingdomTemplate]
+	mgai_ids = ita_worldmap_mgai
+	
+	[Kingdom Template=GermanyKingdomTemplate]
+	mgai_ids = ger_worldmap_mgai
+		
+	[Kingdom Template=ChinaKingdomTemplate]
+	mgai_ids = chn_worldmap_mgai
+	
+	[Kingdom Template=CPCKingdomTemplate]
+	mgai_ids = cpc_worldmap_mgai
+
+	[Kingdom Template=FinlandKingdomTemplate]
+	mgai_ids = fin_worldmap_mgai
+
+	[Kingdom Template=UnitedStatesKingdomTemplate]
+	mgai_ids = usa_worldmap_mgai
+
+	[Kingdom Template=RussiaKingdomTemplate]
+	mgai_ids = rus_worldmap_mgai
+
+	[Kingdom Template=JapanKingdomTemplate]
+	mgai_ids = jpn_worldmap_mgai
+
+	[Kingdom Template=GreatBritainKingdomTemplate]
+	mgai_ids = gbr_worldmap_mgai
+}
+
+[DynamicCampaign Template=DefaultDynamicCampaignTemplate]
+{
+	;; General
+	ids = ita_dynamic_campaign
+	name = "#mg_campaigns_ITA_dynamic_campaign_name"
+	default_kingdom = kingdom_ita
+	cinematic_intro = /Video/MainMenu/ItalyIntro.bik
+	choose_background_texture = DynamicCampaigns/ITABackground.png
+	description = "#mg_campaigns_ita_dynamic_campaign_description"
+		
+	;; Map
+	map_ids = worldmap
+	map_table_ids = worldmaptable
+
+	[ChooseButtonVE]
+	when = SELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/ITACampaignPressed.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + UNFOCUSED
+	texture = DynamicCampaigns/%s/ITACampaign.png
+
+	[ChooseButtonVE]
+	when = SELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/ITACampaignPressedFocused.png
+
+	[ChooseButtonVE]
+	when = UNSELECTED + FOCUSED
+	texture = DynamicCampaigns/%s/ITACampaignFocused.png
+
+	[Kingdom Template=ITAKingdomTemplate]
+	mgai_ids = ita_worldmap_mgai
+	
+	[Kingdom Template=GermanyKingdomTemplate]
+	mgai_ids = ger_worldmap_mgai
+		
+	[Kingdom Template=ChinaKingdomTemplate]
+	mgai_ids = chn_worldmap_mgai
+	
+	[Kingdom Template=CPCKingdomTemplate]
+	mgai_ids = cpc_worldmap_mgai
+
+	[Kingdom Template=FinlandKingdomTemplate]
+	mgai_ids = fin_worldmap_mgai
+
+	[Kingdom Template=UnitedStatesKingdomTemplate]
+	mgai_ids = usa_worldmap_mgai
+
+	[Kingdom Template=RussiaKingdomTemplate]
+	mgai_ids = rus_worldmap_mgai
+
+	[Kingdom Template=JapanKingdomTemplate]
+	mgai_ids = jpn_worldmap_mgai
+
+	[Kingdom Template=GreatBritainKingdomTemplate]
+	mgai_ids = gbr_worldmap_mgai
+
+	[Kingdom Template=NEDKingdomTemplate]
+	mgai_ids = ned_worldmap_mgai
+}

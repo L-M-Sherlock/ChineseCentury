@@ -1,0 +1,56 @@
+[Thing Template=AAitaOrganizationParatrooper]
+{
+	IDS = regiment_ita_paratrooper_engineer
+	name = "Paratrooper Engineer Regiment"
+	editor_name = "ita Paratrooper Engineer Regiment"
+
+	transport_actor = ita_transport_air
+
+	[Placement]
+	placement_group_ids = null
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 160
+
+		[Upkeep]
+		ammo = 10
+		oil = 5
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/ita/itaParatrooper/itaParatrooper
+		icon = /UI/Game/RegimentButtons/IconEngineer.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ita_paratrooper_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ita_paratrooper_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ita_paratrooper_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{
+		layout_ids = regiment_engineer
+		
+		[Slot]	;; front
+		element_IDS = ita_paratrooper_engineer
+		
+		[Slot]	;; front
+		element_IDS = ita_Paratrooper_engineer
+		
+		[Slot]	;; captain
+		element_IDS = ita_paratrooper_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = paratrooper_company
+	}
+}

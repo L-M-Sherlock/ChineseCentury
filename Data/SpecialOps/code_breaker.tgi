@@ -1,0 +1,23 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = code_breaker
+	name = "#code_breaker_name"
+	description = "#code_breaker_description"
+	targets = +actor, ;+self, +invulnerable
+	recharge_time = 180
+
+	icon = /UI/%s/Game/SpecialOps/IconCodeBreaker.png
+	
+	[Effect Template=SummonEffect]
+	object_ids = code_breaker_tower
+	
+	[Flags]
+	target_location = true
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = code_breaker_sfx
+	at = TARGET_GROUND
+}

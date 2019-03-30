@@ -1,0 +1,43 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = wingate_portrait
+	name = "#wingate_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Wingate/WingatePortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = gbr_wingate_select
+			}
+		}
+	
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = wingate
+	name = "#wingate_name"
+	description = "#wingate_description"
+	staging_name = "#wingate_staging_name"
+	icon_texture_ids = Wingate/WingatePortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/GBR/Wingate.bik
+	portrait_ids = wingate_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpSabotageGBR]
+
+	[Ability Template=AASpecialOpEconomicAidGBR]
+	
+	[Ability Template=AASpecialOpResupply]
+
+	[Ability Template=AASpecialOpCorpsGBR]
+}
