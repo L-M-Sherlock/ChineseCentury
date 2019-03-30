@@ -1,6 +1,0 @@
-
-;; loading.lst - View elements and widgets for the loading interface
-
-
-;; load UI templates
-/Templates/ui_templates.lst

@@ -1,8 +1,0 @@
-[Banner Template=AABanner]
-{
-	ids = cpc_banner
-	name = "cpc_banner"
-	
-	model = Shared/Banner.nif
-	resource_prefix = CPC/CPC
-}

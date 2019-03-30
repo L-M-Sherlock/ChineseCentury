@@ -1,4 +1,0 @@
-;; this file exists only to override RTSE's implementation which
-;; refers to a template that does not exist in A&A, this confuses
-;; the string extractor tool which has no way of knowing this
-;; file is never actually loaded by A&A.

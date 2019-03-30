@@ -1,5 +1,0 @@
-[template PropertiesComponent]
-{
-	;; each of these has a "property_IDS" field to refer to a shared property
-	[list Property Template=PropertyReference]	
-}

@@ -1,6 +1,0 @@
-
-;; ---------------------------- Exit Interface ----------------------------
-[VideoTransitionInterface Inherit=Interface]
-{
-	[View Template=NoVE]
-}

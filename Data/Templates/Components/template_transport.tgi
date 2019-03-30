@@ -1,6 +1,0 @@
-[template TransportComponent]
-{
-	;; delay in seconds between each unit deployed
-	fixed	deployment_delay
-}
-

@@ -1,9 +1,0 @@
-
-[Sun Template=Sun]
-{
-	IDS = sun_morning
-	name = "#sun_morning_name"
-	diffuse = 0.8, 0.8, 1.0
-	ambient = 0.7, 0.7, 0.9
-	specular = 0.1, 0.1, 0.15
-}

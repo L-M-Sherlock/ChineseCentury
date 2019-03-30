@@ -1,7 +1,0 @@
-[Banner Template=AABanner]
-{
-	IDS = ambient_banner
-	name = "#ambient_banner_name"
-	model = ambient/ambientBanner.nif
-	resource_prefix = Ambient/Ambient
-}

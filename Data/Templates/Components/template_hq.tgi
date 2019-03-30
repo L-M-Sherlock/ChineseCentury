@@ -1,6 +1,0 @@
-[Template HQComponent]
-{
-	;; the maximum number of organizations that can be attached to the HQ
-	;; NOTE: the UI can display a maximum of 6 attached organizations
-	int	max_attachments = 0
-}

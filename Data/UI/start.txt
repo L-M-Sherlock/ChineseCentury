@@ -1,8 +1,0 @@
-# DATA/UI/START.TXT - script to initialize the UI.
-
-exechere ui/hotkeys.txt
-
-# ALIASES
-alias GoEditor	"WaitOrders; RequestEditor; WaitState editor"
-alias GoGame	"WaitOrders; RequestGame; WaitState game"
-alias GoTest	"WaitOrders; RequestTest; WaitState test"

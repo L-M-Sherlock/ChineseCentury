@@ -1,8 +1,0 @@
-[Template DeploymentData]
-{
-	;; offset from the root node of the place where units first appear when deployed
-	point2		creation_offset
-
-	;; offset from the root node of the place where units move to when deployed (in a straight line)
-	point2		deployment_offset
-}

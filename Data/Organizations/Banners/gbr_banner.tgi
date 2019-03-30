@@ -1,7 +1,0 @@
-[Banner Template=AABanner]
-{
-	ids = gbr_banner
-	name = "#gbr_banner_name"
-	model = Shared/Banner.nif
-	resource_prefix = GBR/GBR
-}

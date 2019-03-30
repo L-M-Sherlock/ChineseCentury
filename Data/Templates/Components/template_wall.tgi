@@ -1,7 +1,0 @@
-;; use this component if the current actor *is* a wall, not has a wall.
-[template WallComponent]
-{
-	flag	gate = false
-	flag	can_gate_close = true
-}
-

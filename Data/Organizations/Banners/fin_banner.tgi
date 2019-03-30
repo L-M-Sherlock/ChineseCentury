@@ -1,8 +1,0 @@
-[Banner Template=AABanner]
-{
-	ids = fin_banner
-	name = "fin_banner"
-	
-	model = Shared/Banner.nif
-	resource_prefix = FIN/FIN
-}
