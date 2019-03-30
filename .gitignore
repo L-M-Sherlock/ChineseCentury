@@ -17,3 +17,7 @@
 *.CUR
 *.db
 *.pdf
+*.m3d
+*.dat
+*.xml
+*.flt
