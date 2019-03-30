@@ -1,0 +1,61 @@
+[Terrain template=Terrain]
+{
+	IDS = temperate_grasstrans
+	name = "#temperate_grasstrans_name"
+	
+	base_priority = 100
+	terrain_group = dirt
+	terrain_color = 0.451, 0.604, 0.294
+
+	doodad_frequency = 0.025
+	primary_doodad_frequency = 0.20
+
+	[Variation]
+	IDS = temperate_grassdirttrans01
+	name = "#temperate_grasstrans_temperate_grassdirttrans01_name"
+	texture = TemperateGrassTrans/TemperateGrassDirtTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = temperate_grassforestconiferoustrans01
+	name = "#temperate_grasstrans_temperate_grassforestconiferoustrans01_name"
+	texture = TemperateGrassTrans/TemperateGrassForestConiferousTrans01.tga
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = temperate_grassforestdeciduoustrans01
+	name = "#temperate_grasstrans_temperate_grassforestdeciduoustrans01_name"
+	texture = TemperateGrassTrans/TemperateGrassForestDeciduousTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = temperate_grassgrassdrytrans01
+	name = "#temperate_grasstrans_temperate_grassgrassdrytrans01_name"
+	texture = TemperateGrassTrans/TemperateGrassGrassDryTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = temperate_grassgrasslushtrans01
+	name = "#temperate_grasstrans_temperate_grassgrasslushtrans01_name"
+	texture = TemperateGrassTrans/TemperateGrassGrassLushTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = temperate_grassshoretrans01
+	name = "#temperate_grasstrans_temperate_grassshoretrans01_name"
+	texture = TemperateGrassTrans/TemperateGrassShoreTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = temperate_grasscliffwhitetrans01
+	name = "#temperate_grasstrans_temperate_grasscliffwhitetrans01_name"
+	texture = TemperateGrassTrans/TemperateGrassCliffWhiteTrans01.tga
+	texture_width = 8
+	texture_height = 8
+}

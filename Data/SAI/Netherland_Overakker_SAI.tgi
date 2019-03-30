@@ -1,0 +1,45 @@
+[Ego template = artilleryLowIncomeEgo]
+{
+	IDS										= overakker_low_income_ego
+	name									= "#Neatherland_Overakker_SAI_overakker_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = artilleryLowLowEgo]
+{
+	IDS										= overakker_low_low_ego
+	name									= "#Neatherland_Overakker_SAI_overakker_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = artilleryMainGameEgo]
+{
+	IDS										= overakker_main_game_ego
+	name									= "#Neatherland_Overakker_SAI_overakker_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = artilleryEndGameEgo]
+{
+	IDS										= overakker_end_game_ego
+	name									= "#Neatherland_Overakker_SAI_overakker_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= overakker_sai
+	name									= "#Neatherland_Overakker_SAI_overakker_sai_name"
+	description								= "#Neatherland_Overakker_SAI_overakker_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= overakker_low_income_ego
+
+	[Ego]
+	IDS										= overakker_main_game_ego
+
+	[Ego]
+	IDS										= overakker_end_game_ego
+
+	[Nation]
+	IDS										= nation_ned
+	
+	[Faction]
+	ids										= overakker
+} ;; von_manstein SAI

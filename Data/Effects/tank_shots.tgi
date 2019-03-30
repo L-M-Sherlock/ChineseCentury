@@ -1,0 +1,43 @@
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = tank_shot
+	name = "#tank_shots_tank_shot_name"
+	model = TankShot/TankShot.NIF
+	gyroscope = false
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = tank_shot_explosion
+	name = "#tank_shots_tank_shot_explosion_name"
+	model = TankShot/TankShotExplosion.NIF
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = tank_shot_explosion_hard
+	name = "#tank_shots_tank_shot_explosion_hard_name"
+	model = TankShot/TankShotExplosionHard.NIF
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = tank_shot_explosion_building
+	name = "#tank_shots_tank_shot_explosion_building_name"
+	model = TankShot/TankShotExplosionBuilding.NIF
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}

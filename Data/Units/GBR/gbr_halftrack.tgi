@@ -1,0 +1,99 @@
+[Template GBRHalftrack Inherit=AAUnitGBRVehicleHalftrack]
+{
+	[BodyComponent]
+	{
+		health = 250
+		defense = 5
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 4.5
+		turn_radius = 1.5
+		acceleration = 3.5
+	}
+	
+	[PerformerComponent]
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = mg
+		
+		[Property]
+		property_IDS = combat_unit
+		
+		[Property]
+		property_IDS = halftrack_unit
+	}
+        [DenizenComponent]
+	{
+		guard_range = 15
+		guard_operational_range = 30
+
+
+		[Organization]
+		organization_ids = regiment_gbr_infantry_halftrack
+			
+		behavior = MILITIA_OFFENSIVE
+		
+
+		[Inventory]
+		actor_ids = gbr_infantryt
+		count = 3
+
+		[Inventory]
+		actor_ids = gbr_infantry_co
+		count = 1
+
+
+
+	}
+	
+	[View]
+	{
+		resource_prefix = GBRHalftrack/GBRHalftrack
+	}
+}
+
+
+;;----------------------------- UNITS ------------------------ ;;
+
+[Thing Template=GBRHalftrack]
+{
+	IDS = gbr_halftrack
+	name = "#gbr_halftrack_Thing_name"
+	editor_name = "#gbr_halftrack_Thing_editor_name"
+
+	[PerformerComponent]
+	{
+		
+		[Ability Template=AAGunLocal]
+		{
+					
+			[AbilityDefinition Template=AAVehicleMG]
+			{
+				name = "#gbr_halftrack_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 2
+				range = 14
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 14
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = gbr_mg_heavy
+			}
+		}
+	}
+}

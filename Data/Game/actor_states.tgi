@@ -1,0 +1,450 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; actor_states.tgi
+;;
+;; HISTORY
+;; - drp101403 - updated all priorities
+;;
+;; NOTE: 
+;; - states are hard-coded
+;; - TODO: if you need to tweak one of these for a specific project (and not RTSE) then
+;;   the TGIs need to be restructured!
+;;
+;; PRIORITIES: the highest priority active state is what the UI indicates for the actor's status
+;; 
+;; 2 = hidden states (active construction, missing primary)
+;; 4 = passive states (rest, normal)
+;; 6 = semi-permanent states (out of supply, entrenched)
+;; 8 = active states (mind, research, upgrade, recruit)
+;; 10 = temporary states (construction, falling)
+;; 12 = exception states (engaged, exhausted, under siege, regrouping, routing)
+;; 14 = high level commands (packing, unpacking, razing)
+;; 20 = dead
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; MOVING STATE: when moving towards the target
+;; TODO: need mind_rampaging
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_attacking
+	name = "#actor_states_mind_attacking_name"
+
+	priority = 8
+	resupply = true
+	morale_replenish = false
+	formation_required = COMBAT	;;DESIRED
+	behavior_required = AGGRESSIVE	;; bug 2917
+}
+
+;; STANDING STATE: the standing part of the bombard command
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_bombard
+	name = "#actor_states_mind_bombard_name"
+
+	priority = 8
+	resupply = false
+	morale_replenish = false
+	formation_required = COMBAT
+	behavior_required = AGGRESSIVE
+}
+
+;; STANDING STATE: repairing an under construction actor
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_building
+	name = "#actor_states_mind_building_name"
+
+	priority = 8
+	resupply = true
+	morale_replenish = false
+	formation_required = BROKEN
+	behavior_required = PASSIVE
+}
+
+;; MOVING STATE: attacking while moving, not moving while engaged
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_chasing
+	name = "#actor_states_mind_chasing_name"
+
+	priority = 8
+	resupply = false
+	morale_replenish = false
+	formation_required = BROKEN	
+	behavior_required = AGGRESSIVE
+	
+	[Property]
+	property_ids = actor_state_chasing
+}
+
+;; Exhausted broken out of RTSE
+
+;; STANDING STATE: engaged
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_engaged
+	name = "#actor_states_mind_engaged_name"
+
+	priority = 12
+	resupply = false
+	morale_replenish = false
+	formation_required = COMBAT
+	behavior_required = AGGRESSIVE
+
+	[Property]
+	property_ids = actor_state_engaged
+}
+
+;; STANDING STATE: the "resting" part of the Guarding TAI (not the attacking/moving)
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_guarding
+	name = "#actor_states_mind_guarding_name"
+
+	priority = 8
+	entrenchable = true	
+	resupply = true
+	morale_replenish = true
+	formation_required = COMBAT
+	behavior_required = AGGRESSIVE
+
+	[Property]
+	property_ids = actor_state_guarding
+}
+
+;; MOVING STATE: actor is moving to rejoin a building
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_joining
+	name = "#actor_states_mind_joining_name"
+	
+	priority = 8
+	resupply = true
+	morale_replenish = false
+	formation_required = DESIRED
+	behavior_required = PASSIVE
+}
+
+;; MOVING STATE: moving
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_moving
+	name = "#actor_states_mind_moving_name"
+
+	priority = 8
+	resupply = true
+	morale_replenish = false
+	formation_required = DESIRED
+}
+
+;; MOVING STATE: used by elements that have become detached from the organization
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_reattaching
+	name = "#actor_states_mind_reattaching_name"
+
+	priority = 8
+	resupply = false
+	morale_replenish = false
+	formation_required = BROKEN
+}
+
+;; STANDING STATE: rebuilding the primary element
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_regrouping
+	name = "#actor_states_mind_regrouping_name"
+
+	priority = 12
+	resupply = false
+	morale_replenish = false
+	formation_required = BROKEN
+	behavior_required = AGGRESSIVE
+
+	[Property]
+	property_ids = actor_state_regrouping
+}
+
+;; STANDING STATE: returning to desired formation
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_reforming
+	name = "#actor_states_mind_reforming_name"
+
+	priority = 8
+	entrenchable = false
+	resupply = true
+	morale_replenish = true
+	formation_required = DESIRED
+	behavior_required = AGGRESSIVE
+	
+	[Property]
+	property_ids = actor_state_reforming
+}
+
+;; STANDING STATE: repaing a damaged actor
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_repairing
+	name = "#actor_states_mind_repairing_name"
+
+	priority = 8
+	resupply = true
+	morale_replenish = false
+	formation_required = BROKEN
+	behavior_required = PASSIVE
+}
+
+;; STANDING STATE: not moving
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_resting
+	name = "#actor_states_mind_resting_name"
+
+	priority = 4
+	entrenchable = true
+	resupply = true
+	morale_replenish = true
+	formation_required = DESIRED
+	behavior_required = DESIRED	;;AGGRESSIVE -pcb032204
+
+	[Property]
+	property_ids = actor_state_resting
+}
+
+;; MOVING STATE: a broken move out of engagement
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_routing
+	name = "#actor_states_mind_routing_name"
+
+	priority = 12
+	resupply = false
+	morale_replenish = false
+	remove_from_group = true
+	formation_required = BROKEN
+	behavior_required = PASSIVE
+
+	[Property]
+	property_ids = actor_state_routing
+}
+
+;; MOVING STATE: running around the map clearing black fog
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_exploring
+	name = "#actor_states_mind_exploring_name"
+
+	priority = 8
+	resupply = true
+	morale_replenish = false
+	formation_required = DESIRED
+}
+
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_rampaging
+	name = "#actor_states_mind_rampaging_name"
+
+	priority = 8
+	resupply = false
+	morale_replenish = false
+	formation_required = DESIRED
+}
+
+;; STANDING STATE: razing a settlement
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_razing
+	name = "#actor_states_mind_razing_name"
+
+	priority = 8
+	resupply = true
+	morale_replenish = false
+	formation_required = BROKEN
+	behavior_required = AGGRESSIVE
+}
+
+;; PARALLEL STATE: low priority
+;; NOTE: an actor is out of supply only if it needs supply 
+;; - EconomyComponent with supply_required, or OrganizationComponent with supply_used
+[ActorState template=ActorState]
+{
+	IDS = out_of_supply
+	name = "#actor_states_out_of_supply_name"
+	priority = 6
+
+}
+
+;; PARALLEL STATE: high priority
+[ActorState template=ActorState]
+{
+	IDS = construction
+	name = "#actor_states_construction_name"
+	priority = 10
+}
+
+;; PARALLEL STATE
+[ActorState template=ActorState]
+{
+	IDS = dead
+	name = "#actor_states_dead_name"
+	priority = 20
+}
+
+;; PARALLEL STATE
+[ActorState template=ActorState]
+{
+	IDS = falling
+	name = "#actor_states_falling_name"
+	priority = 10
+	type = busy
+}
+
+;; STRUCTURE STATE
+[ActorState template=ActorState]
+{
+	IDS = structure_packing
+	name = "#actor_states_structure_packing_name"
+	priority = 14	
+	type = busy
+}
+
+[ActorState template=ActorState]
+{
+	IDS = structure_unpacking
+	name = "#actor_states_structure_unpacking_name"
+	priority = 14		
+	type = busy
+}
+
+[ActorState template=ActorState]
+{
+	IDS = structure_normal
+	name = "#actor_states_structure_normal_name"
+
+	;; TODO: assign priority
+}
+
+;; STRUCTURE STATE
+[ActorState template=ActorState]
+{
+	IDS = structure_researching
+	name = "#actor_states_structure_researching_name"
+	priority = 8
+	type = queue
+}
+
+;; STRUCTURE STATE
+[ActorState template=ActorState]
+{
+	IDS = structure_upgrading
+	name = "#actor_states_structure_upgrading_name"
+	priority = 8
+	type = busy
+}
+
+;; STRUCTURE STATE
+[ActorState template=ActorState]
+{
+	IDS = structure_recruiting
+	name = "#actor_states_structure_recruiting_name"
+	priority = 8
+	type = queue
+}
+
+;; ACTIVE_CONSTRUCTION
+[ActorState template=ActorState]
+{
+	IDS = active_construction
+	name = "#actor_states_active_construction_name"
+	priority = 2
+}
+
+;; SUMMONING
+[ActorState template=ActorState]
+{
+	IDS = summoning
+	name = "#actor_states_summoning_name"
+	priority = 14
+}
+
+;; UNPACKED
+[ActorState template=ActorState]
+{
+	IDS = unpacked
+	name = "#actor_states_unpacked_name"
+	priority = 2
+}
+
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_unpacking
+	name = "#actor_states_mind_unpacking_name"
+
+	priority = 8
+	resupply = false
+	morale_replenish = false
+	formation_required = DESIRED
+}
+
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_packing
+	name = "#actor_states_mind_packing_name"
+
+	priority = 8
+	resupply = false
+	morale_replenish = false
+	formation_required = DESIRED
+}
+
+[ActorState template=ActorState]
+{
+	IDS = unloading
+	name = "#actor_states_unloading_name"
+
+	priority = 8
+}
+
+[ActorState template=ActorState]
+{
+	IDS = disabled
+	name = "#actor_states_disabled_name"
+
+	priority = 4
+}
+
+;; TARGETED: actor is in this actor state if 
+;; - on a reverse engage list
+;; - not engaged itself
+;; - actor is an organization
+;; RTSE Effects include:
+;; - morale loss (also applies if engaged)
+;; - cannot resupply (also applies if engaged)
+[ActorState template=ActorState]
+{
+	IDS = targeted
+	name = "#actor_states_targeted_name"
+
+	priority = 4
+
+	[Property]
+	property_ids = actor_state_targeted
+}
+
+;; PARALLEL STATE
+[ActorState template=ActorState]
+{
+	IDS = missing_primary
+	name = "#actor_states_missing_primary_name"
+	priority = 2
+}
+
+;; PARALLEL STATE
+[ActorState template=ActorState]
+{
+	IDS = hq_attached
+	name = "#actor_states_hq_attached_name"
+	priority = 2
+}

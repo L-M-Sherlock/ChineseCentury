@@ -1,0 +1,77 @@
+[Ego template = BalancedLowIncomeEgo]
+{
+	IDS										= cpc_low_income_ego
+	name									= "#cpc_sai_cpc_low_income_ego_unit_limit_max_needed_name"
+} ;; LowIncomeEgo
+
+[Ego template = BalancedMainGameEgo]
+{
+	IDS										= cpc_main_game_ego
+	name									= "#cpc_sai_cpc_main_game_ego_unit_limit_max_needed_name"
+} ;; MainGameEgo
+
+[Ego template = BalancedAmmoEndGameEgo]
+{
+	IDS										= cpc_ammo_end_game_ego
+	name									= "#cpc_sai_cpc_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = BalancedOilEndGameEgo]
+{
+	IDS										= cpc_oil_end_game_ego
+	name									= "#cpc_sai_cpc_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = BalancedWarGameEgo]
+{
+	IDS										= cpc_war_game_ego
+	name									= "#cpc_sai_cpc_end_game_ego_unit_limit_max_needed_name"
+} ;; WarGameEgo
+
+[Ego template = BalancedFightGameEgo]
+{
+	IDS										= cpc_fight_game_ego
+	name									= "#cpc_sai_cpc_end_game_ego_unit_limit_max_needed_name"
+} ;; WarGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= cpc_sai
+	name									= "#cpc_sai_cpc_sai_name_2"
+	description								= "#cpc_sai_cpc_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+	public									= false
+
+	initial_ego								= cpc_low_income_ego
+
+	[Ego]
+	IDS										= cpc_main_game_ego
+
+	[Ego]
+	IDS										= cpc_ammo_end_game_ego
+
+	[Ego]
+	IDS										= cpc_oil_end_game_ego
+
+	[Ego]
+	IDS										= cpc_war_game_ego
+
+	[Ego]
+	IDS										= cpc_fight_game_ego
+
+	[Nation]
+	IDS										= nation_cpc
+	
+	[Faction]
+	ids										= linbiao
+	
+	[Faction]
+	ids										= zhude
+	
+	[Faction]
+	ids										= pengdehuai
+	
+	[Faction]
+	ids										= liubocheng
+	
+} ;; fin SAI

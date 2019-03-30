@@ -1,0 +1,524 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_southeasternasia
+	name = "#mg_rmc_southeasternasia_name"
+	description = "#mg_rmc_southeasternasia_description"
+	biome = tropical_forest
+
+	sun = SUN_DEFAULT,SUN_DEFAULT,SUN_DEFAULT,SUN_DEFAULT,SUN_DUSK,SUN_MORNING,SUN_NIGHT
+	weather = NONE,NONE,NONE,NONE,RAIN_LIGHT,RAIN_HEAVY
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 576
+	height = 576
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	India
+	starting_pos = 20,160
+	
+	[Kingdom Template = KingdomDefender]
+	;;	Southeast Asia
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	Western China
+	starting_pos = 20,300
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	Central China
+	starting_pos = 30,310
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	Eastern China
+	starting_pos = 160,300
+	
+	[Kingdom Template = KingdomAttacker5]
+	;;	Dutch East Indies
+	starting_pos = 300,20
+	
+	[Kingdom Template = KingdomAttacker6]
+	;;	Philippines
+	starting_pos = 300,160
+	type = water
+	
+/******************** 	TERRAIN    ********************/
+
+	[TerrainBlob Template=TropGrassTerrainBlob]
+	
+	[TerrainStreak Template=TropGrassDryTerrainStreak]
+
+	[TerrainBlob Template=TropGrassDryTerrainBlob]
+	
+	[TerrainStreak Template=TropDirtTerrainStreak]
+
+	[TerrainBlob Template=TropDirtTerrainBlob]
+	
+	[TerrainStreak Template=TropJungleTerrainStreak]
+
+	[TerrainBlob Template=TropJungleTerrainBlob]
+	
+	[TerrainStreak Template=TropJungleDenseTerrainStreak]
+
+	[TerrainBlob Template=TropJungleDenseTerrainBlob]
+	
+	[TerrainBlob Template=TropDirtTerrainBlob02]
+	
+	[TerrainBlob Template=TropGrassDryTerrainBlob02]
+	
+	[TerrainBlob Template=TropGrassTerrainBlob02]
+
+/******************** 	BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=TropMountainTerrainBlob]
+	
+	[TerrainBlob Template=TropMountainTerrainBlob02]
+	
+	[TerrainBlob Template=TropMountainTerrainBlob03]
+	
+	[TerrainBlob Template=TropMountainTerrainBlob04]
+	
+	[TerrainBlob Template=TropMountainTerrainBlob05]
+	
+	[TerrainBlob Template=TropWaterTerrainBlob]
+
+	[TerrainBlob Template=TropWaterTerrainBlob01]
+
+/********************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.25,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.25,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.25,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.25,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.25,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.5,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.25,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.5,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = +0.25,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = +0.75,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.25,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -0.75,+1
+	
+/******************** 	TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=TropNoisePhase01]
+	
+	[TerrainNoise Template=TropNoisePhase02]
+	
+	[TerrainNoise Template=TropNoisePhase03]
+	
+	[TerrainNoise Template=TropNoisePhase04]
+
+	[TerrainNoise Template=TropNoisePhase05]
+
+	[TerrainNoise Template=TropNoisePhase06]
+
+/*************************    ACTOR GROUPS    **************************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_southeastasia
+		name = "#mg_rmc_southeastasia_village_southeastasia_name_2"
+
+		[Object]
+		object_ids = random_village_southeastasia
+		weight = 1
+	}
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_6
+		name = "#mg_rmc_southeasternasia_bunkers_coastline_6_name"
+		search_relative_kingdom_ids = kingdom_attacker_6
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 160		
+		proximity_desired = 448
+	}
+}

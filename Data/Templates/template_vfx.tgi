@@ -1,0 +1,406 @@
+/**************************************************************************
+
+template_vfx.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: a complex thing - a visual effect that can be instantiated in
+			the world view.  Does not affect the simulation (i.e. art only).
+			These can also be used to modify the appearance of a character
+			or object.
+
+REVISION HISTORY:
+drp090602 - created
+
+USAGE:
+
+	[Thing Template=VFX]
+	This node goes at the root level and defines a VFX that can be instantiated in the game.
+	You should not actually use "Template=VFX" and should instead use a more specialized version.
+	
+	[Thing Template=VFXModelTemporary]
+	[Thing Template=VFXModelPermanent]
+	[Thing Template=VFXProjectedTexture]
+	[Thing Template=VFXWireframeModifier]	
+	[Thing Template=VFXAlphaModifier]
+	[Thing Template=VFXTintModifier]
+	[Thing Template=VFXEmitModifier]			
+	[Thing Template=VFXText]			
+	
+
+EXAMPLES:
+
+	[VFX Template=VFXModelTemporary]	; usually for non-looping nifs
+	{
+		ids = fireball_cast_vfx
+		name = "Fireball Cast VFX"
+		model = Spells/Fireball/FireballCast.NIF
+		duration = 5	; overrides the duration read from the NIF file
+	}
+
+	[VFX Template=VFXModelPermanent]	; usually for looping nifs
+	{
+		ids = specter_head_fire_vfx
+		name = "Specter Head Fire VFX"
+		model = Units/Specter/SpectreHeadFire.NIF
+	}
+
+	[VFX Template=VFXLight]
+	{
+		ids = specter_head_fire_light
+		name = "Specter Head Fire Light"
+
+		ambient = (1,0,0)
+		diffuse = (1,0,0)
+		specular = (1,0,0)
+		constant_attenuation = 1
+		visual_radius = 3
+	}
+
+	[Template VFXAlphaModifier inherit=VFXMaterialModifier]
+	{
+		ids = alpha_vfx_50
+		name = "Alpha VFX 50%"
+		alpha = 0.5
+	}
+
+**************************************************************************/
+
+[Template VFX inherit=Thing]
+{
+	category = VFX
+
+	;; permanent: normally, non-model VFX should be permanent
+	flag	permanent
+	
+	;; critical: If critical, it will always display. If not, it will display based on the 
+	;; slider settings.
+	flag	critical = true
+	
+	;; duration: if non-permanent, specifies seconds.  
+	;;			 "duration = 0" means use duration defined by the model (if there is one)
+	;;			 or calculated by code (if no model).
+	float	duration = 0
+
+	;; attached_scale: if not 0, when attached to an object the VFX will be scaled by the visual 
+	;;  radius of the object.  When not attached, or if it is 0, the VFX is a fixed size.
+	float	attached_scale = 0
+	
+	;; never_discard_temporary: set to 'true' for special (infrequently used) large and long
+	;;  duration VFX so they do not get optimized out if created off-screen. This is useful
+	;;  for special VFX needed by a particular map. Should not be used for common VFX.
+	flag	never_discard_temporary = false
+
+	;; indicates every how many seconds the vfx will flash on or off (if 0, vfx will not flash)
+	float	flash_period = 0
+	
+	;; indicates that this vfx should be rendered just before the UI (ie, no stencil shadows or other
+	;; vfx should show up on top of it.)
+	flag	floating_ui_vfx = false
+
+	;; vfx is ctuscene only (should never be used outside cutscenese and is always considered
+	;; on-screen)
+	flag	cutscene = false
+	
+	;; if true, shows in cutscenes; if false, hides in cutscenes
+	flag	show_in_cutscene = true
+
+	;; vfx is night-time only (it will be hidden if the sun is currently daytime)
+	flag	nightonly = false
+	
+	;; remains the same size no matter the zoom (ie for certain vfxtext, waypoints, etc.)
+	bool	constant_screen_size = false
+
+	;; run in real-time instead of the default (real-time for UI effects, game-time for others)
+	bool	force_real_time = false
+
+} ; end [Template VFX]
+
+[Template VFXModel inherit=VFX]
+{
+	category = VFXMODEL
+	string	model
+	
+	;; alternative paths to load textures from.
+	;; Paths that start with "/" are relative to the Data folder
+	;; Paths that start with "../" are relative to the resource path
+	;; Multiple paths should be seperated by a ","
+	[list TextureSearchPath]
+	{
+		string	path
+	}
+					
+	;; gyroscope = when attaching this VFX, the engine will create a gyroscope node between
+	;;  the VFX and the attach location so the VFX orientation never changes
+	flag gyroscope = true
+	
+} ; end [Template VFXModel]
+
+[Template VFXModelTemporary inherit=VFXModel]
+{
+	permanent = false
+}
+
+[Template VFXModelPermanent inherit=VFXModel]
+{
+	permanent = true
+}
+
+[Template VFXLight inherit=VFX]
+{
+	category = VFXLIGHT
+	permanent = true
+	float intensity = 1
+	point3 ambient
+	point3 diffuse
+	point3 specular
+	float	constant_attenuation
+	float	linear_attenuation = 0
+	float	quadratic_attenuation = 0
+	float	visual_radius
+} ; end [Template VFXLight]
+
+[Template VFXProjectedTexture inherit=VFX]
+{
+	category = VFXPROJECTEDTEXTURE
+	permanent = true	
+	flag	oval_shape = false		;; see VFXProjectedTextureOval
+	
+	;; texture: the resource
+	string	texture
+
+	;; [VFX] attached_scale: for an attached VFX, this is the size of this projected texture
+	;; as a ratio of the attached object's radius.  A value of 0 means always fixed size 
+	;; (use texture_size)
+	attached_scale
+
+	;; an attached vfx uses this to get its boundshape from the owning object.
+	flag attached_shape = false
+	
+	;; texture_size: the width/height in meters of the texture.  Ignored unless detached or texture_scale is 0.
+	float	texture_size
+
+	;; color: Shade of the projected texture. "1,1,1" makes it look just like the texture file.
+	point3	color = 1,1,1	
+	
+	;; respect_lighting: Should this decal be lit by the world? By default, this value is false. But
+	;; it should be enabled for things like building foundations.
+	flag respect_lighting = false
+	
+	;; decal_type: What type of decal is this projected VFX? This is used to ensure that they
+	;; render in the proper order. The order (from lowest to highest) is: 
+	;; scorch, (track), generic, ui, shadow
+	;; 'track' is implicit for the track types, and should not be specified here.
+	string	decal_type = generic
+	
+	;; How long should this decal spend fading in/out. (The first value is how long to fade in,
+	;; the second value is how long to fade out).
+	point2	decal_fade_time = 0, 0
+	
+	;; Whether the projected texture VFX should just choose a random orientation. If false, will
+	;; just orient with the actor
+	flag	random_orientation = false
+	
+	;; Is this decal additive to the terrain underneath it? 
+	flag	additive = false
+	
+	;; How many degrees per second this decal rotates. 0deg per second disables rotation.
+	float	rotate_degrees_per_sec = 0
+}
+
+[Template VFXProjectedTextureLit template=VFXProjectedTexture]
+{
+	;; Enables Lighting for this projected texture
+	respect_lighting = true
+}
+
+;; VFXProjectedTextureOval: 
+;; DESC: this is a projected texture that is resized like an oval to bound the attached object
+[Template VFXProjectedTextureOval inherit=VFXProjectedTexture]
+{
+	oval_shape = true
+	attached_scale = 0
+	texture_size = 2	;; 2m diameter - want a 1m half-width
+}
+
+[Template VFXModifier inherit=VFX]
+{
+	permanent = true
+	category 
+} ; end [Template VFXModifier]
+
+[Template VFXWireframeModifier inherit=VFXModifier]
+{
+	category = VFXWIREFRAMEMODIFIER
+} ; end [Template VFXWireframeModifier]
+
+[Template VFXMaterialModifier inherit=VFXModifier]
+{
+	category = VFXMATERIALMODIFIER
+	string component
+} ; end [Template VFXMaterialModifier]
+
+[Template VFXConstructionModifier inherit=VFXModifier]
+{
+	category = VFXCONSTRUCTIONMODIFIER
+
+} ; end [Template VFXConstructionModifier]
+
+[Template VFXConstructionRaiseModifier inherit=VFXModifier]
+{
+      category = VFXCONSTRUCTIONRAISEMODIFIER
+      
+      ;; shaking effect
+      flag  apply_shaking = false
+      fixed shaking_frequency = 1	;; number of shake periods
+      fixed shaking_strength = 1	;; how far to shake (in meters)
+      fixed shaking_falloff = 1		;; falloff for shake (0 - constant, 1 - linear, 2 - quadratic)
+      
+      ;; swaying effect
+      flag apply_swaying = false
+      fixed swaying_frequency = 1	;; number of complete sway periods
+      fixed swaying_strength = 1	;; not used
+      fixed swaying_maxangle = 45	;; maximum angle (in degrees)
+      fixed swaying_falloff = 1		;; falloff for sway (0 - constant, 1 - linear, 2 - quadratic)
+      
+} ; end [Template VFXConstructionRaiseModifier]
+
+[Template VFXAlphaModifier inherit=VFXMaterialModifier]
+{
+	component = ALPHA
+	float	alpha
+}
+
+[Template VFXTintModifier inherit=VFXMaterialModifier]
+{
+	component = TINT
+
+	point3 color
+	int priority = 0
+
+	;; drp021504 - changed default enhance to 1 and default fade to 0
+
+	;; enhance = fade up
+	float enhance_duration = 1
+
+	;; fade = fade down
+	float fade_duration = 0
+
+	bool lirp = false
+	float tint_max = 1
+	bool repeating = false
+}
+
+[Template VFXEmitModifier inherit=VFXMaterialModifier]
+{
+	component = EMIT
+	point3 color
+	int priority = 0
+}
+
+[Template VFXText inherit=VFX]
+{
+	category = VFXTEXT
+	point3		color
+	localized	text
+	string		font_IDS
+	
+	constant_screen_size = true
+	
+	;; for floating VFX text
+	float		rise_to_height = 0
+}
+
+[Template VFXObjectName inherit=VFXText]
+{
+	category = VFXOBJECTNAME
+	
+	;; how the name appears in the text
+	localized	format = "#template_vfx_VFXObjectName_format|s"
+}
+
+[Template VFXStatusBar inherit=VFXModelPermanent]
+{
+	category = VFXSTATUSBAR
+
+	gyroscope = false
+
+	;; The value displayed by the status bar (right now, health and
+	;; morale are supported).
+	string display_value
+}
+
+[Template VFXTracer Inherit=VFX]
+{
+	category = VFXTRACER
+
+	permanent = false
+
+	point3		color	;; tracer color
+	float		speed	;; speed at which tracer travels (per second)
+	float		length	;; maxium tracer length
+	point3		spread = 0,0,0
+	bool		match_orientation = false	;; does the tracer match the orientation of the originator (planes)
+}
+
+[Template VFXNationBanner Inherit=VFX]
+{
+	category = VFXNATIONBANNER
+	
+	permanent = true
+}
+
+[Template VFXArrow inherit=VFXModelPermanent]
+{
+	category = VFXARROW
+	
+	float		move_duration = 5				;; how fast the arrow moves
+	float		required_update_duration = 0	;; how often an extrusion is REQUIRED
+	
+	arrow_type = SIMPLE				 ;; Available types are EXACT and SIMPLE   
+	
+	point3		arrow_start = 0,0,0
+	float		arc_height = 5                    ;; if SIMPLE	
+	point3		arrow_middle = 5, 5, 5            ;; if EXACT
+	point3		arrow_end   = 10,10,0
+	
+	floating_ui_vfx = true
+	
+	flag		repeating = true
+	
+	[Extrusion template=Extrusion]
+}
+
+[Template VFXLightning inherit=VFX]
+{
+	category = VFXLIGHTNING
+	
+	;; It is an error to have permanent lightning
+	permanent = false
+	
+	;; DO NOT ADJUST THIS FIELD FOR LIGHTNING
+	duration = 2.718 
+	
+	;; NOTE: All Point2 fields in this VFX are used to randomly pick a value in the range.
+	
+	;; For every 1 volt, how wide will the lightning be? 
+	float voltage_to_meters = 0.0025
+	
+	;; How many bolts should this throw (usually should be 1, 3)
+	point2 bolts_to_throw
+	
+	;; This one must be filled out
+	[MainBolt template=LightningBolt]
+	
+	;; These are optional, but at least one must be specified if bolts_to_throw is greater than 1
+	[list OptionalBolt template=LightningBolt]
+}
+
+[Template VFXExtrusion inherit=VFX]
+{
+	category = VFXEXTRUSION
+
+	;; It is an error to have permanent lightning
+	permanent = false
+
+	[Extrusion template=Extrusion]
+}

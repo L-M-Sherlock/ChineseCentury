@@ -1,0 +1,48 @@
+[Ego template = ArmorLowIncomeEgo]
+{
+	IDS										= eisenhower_low_income_ego
+	name									= "#USA_Eisenhower_SAI_eisenhower_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorLowLowEgo]
+{
+	IDS										= eisenhower_low_low_ego
+	name									= "#USA_Eisenhower_SAI_eisenhower_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorMainGameEgo]
+{
+	IDS										= eisenhower_main_game_ego
+	name									= "#USA_Eisenhower_SAI_eisenhower_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = ArmorEndGameEgo]
+{
+	IDS										= eisenhower_end_game_ego
+	name									= "#USA_Eisenhower_SAI_eisenhower_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= eisenhower_sai
+	name									= "#USA_Eisenhower_SAI_eisenhower_sai_name"
+	description								= "#USA_Eisenhower_SAI_eisenhower_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= eisenhower_low_income_ego
+
+	[Ego]
+	IDS										= eisenhower_low_low_ego
+
+	[Ego]
+	IDS										= eisenhower_main_game_ego
+
+	[Ego]
+	IDS										= eisenhower_end_game_ego
+
+	[Nation]
+	IDS										= nation_usa
+	
+	[Faction]
+	ids										= eisenhower
+} ;; jpn SAI

@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = vanoyen_portrait
+	name = "#vanoyen_portrait_name"
+
+	[View]
+	{
+		resource_prefix = vanoyen/vanoyenPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = ned_vanoyen_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = vanoyen
+	name = "#vanoyen_name"
+	description = "#vanoyen_description"
+	staging_name = "#vanoyen_staging_name"
+	icon_texture_ids = vanoyen/vanoyenPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/NED/vanoyen.bik
+	portrait_ids = vanoyen_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpInfantryAdvance]
+	
+	[Ability Template=AASpecialOpKNILConscript]
+	
+	[Ability Template=AASpecialOpResupply]
+		
+	[Ability Template=AASpecialOpCorpsNED]
+}

@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = zhangzizhong_portrait
+	name = "#zhangzizhong_portrait_name"
+
+	[View]
+	{
+		resource_prefix = zhangzizhong/zhangzizhongPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = chn_zhangzizhong_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = zhangzizhong
+	name = "#zhangzizhong_name"
+	description = "#zhangzizhong_description"
+	staging_name = "#zhangzizhong_staging_name"
+	icon_texture_ids = zhangzizhong/zhangzizhongPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/CHN/zhangzizhong.bik
+	portrait_ids = zhangzizhong_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpKangzhanCharge]
+	
+	[Ability Template=AASpecialOpCourage]
+	
+	[Ability Template=AASpecialOpResupply]
+		
+	[Ability Template=AASpecialOpCorpsCHN]
+}

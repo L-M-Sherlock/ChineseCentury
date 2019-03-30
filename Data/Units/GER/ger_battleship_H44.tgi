@@ -1,0 +1,569 @@
+[Template AAGERAttackBattleShipBombard Template=AAAttackBattleshipBombard]
+{
+	range = 140
+	recharge_time = 15
+
+	[Effect Template=BlastDamageEffect]
+	amount = 400
+	
+	[Effect Template=MoraleLossEffect]
+	amount = 1.5
+
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = temperate_large_explosion_1
+		at = TARGET_GROUND
+		attached = false
+	}
+
+	[WhenDo template=FXC_PlaySFX]
+	audio_ids = battleship_cannon
+}
+
+[Template AAGERBattleShipAntiAirMG Inherit=AABunkerAttack]
+{
+	targets = +enemy, +air
+	range = 30
+	icon = /Properties/AbilityIcons/IconAbilityAntiAircraft.png
+
+	[Flags]
+	ignore_for_cv = true
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = flak_shot_1
+		at = TARGET_HIT_POSITION
+		attached = false
+		delay = 0.1
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = flak_shot_2
+		at = TARGET_HIT_POSITION
+		attached = false
+		delay = 0.55
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = flak_shot_3
+		at = TARGET_HIT_POSITION
+		attached = false
+		delay = 0.8
+	}
+}
+
+[Template AAGERBattleship Template=AAUnitGERSeaMajor]
+{
+	name = "#ger_battleship_H44_name"
+	editor_name = "#ger_battleship_H44_editor_name"
+
+	[BodyComponent]
+	{
+		health = 3000
+		defense = 20
+	} 
+	
+	[ElementComponent]
+	{
+		morale_value = 160
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = economic_building
+
+		[Property]
+		property_ids = tech_battleship
+		
+		[Property]
+		property_IDS = combat_unit
+		
+		[Property]
+		property_IDS = captain
+
+		[Property]
+		property_IDS = front
+	}
+
+	[DetectionComponent]	
+	{
+		detection_range = 20
+		remote_detection_range = 20
+	}
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 600
+		
+		[Production]
+		unit_limit_provided = 5
+		
+		[Upkeep]
+		ammo = 7
+		oil = 6
+	}
+
+	[PerformerComponent]
+	{
+		[Ability template=AAAttackLocal]
+		{
+			turret_ids = Turret
+			
+			[AbilityDefinition Template=AAGERAttackBattleShipBombard]
+			{				
+				name = "#ger_battleship_AbilityDefinition_name"
+				
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = artillery_shot ;replace with 2-barrel vfx
+					location = cannon_ae_01
+					attached = true
+				}
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+			}
+		}
+
+		[Ability template=AAAttackLocal]
+		{
+			turret_ids = Turret2
+			
+			[AbilityDefinition Template=AAGERAttackBattleShipBombard]
+			{				
+				name = "#ger_battleship_AbilityDefinition_name_2"
+				
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = artillery_shot ;replace with 2-barrel vfx
+					location = cannon_ae_02
+					attached = true
+				}
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil2
+			}
+		}
+
+		[Ability template=AAAttackLocal]
+		{
+			turret_ids = Turret3
+			
+			[AbilityDefinition Template=AAGERAttackBattleShipBombard]
+			{				
+				name = "#ger_battleship_AbilityDefinition_name_3"
+				
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = artillery_shot ;replace with 2-barrel vfx
+					location = cannon_ae_03
+					attached = true
+				}
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil3
+			}
+		}
+
+		[Ability template=AAAttackLocal]
+		{
+			turret_ids = Turret4
+			
+			[AbilityDefinition Template=AAGERAttackBattleShipBombard]
+			{				
+				name = "#ger_battleship_AbilityDefinition_name_4"
+				
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = artillery_shot ;replace with 2-barrel vfx
+					location = cannon_ae_04
+					attached = true
+				}
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil4
+			}
+		}
+		
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 15
+			yaw_rotation_range_degrees = 270
+			yaw_start_degrees = 0
+			reset_time = 20
+		}
+
+		[Turret]
+		{
+			turret_ids = Turret2
+			yaw_rotation_per_sec_degrees = 15
+			yaw_rotation_range_degrees = 270
+			yaw_start_degrees = 0
+			reset_time = 20
+		}
+
+		[Turret]
+		{
+			turret_ids = Turret3
+			yaw_rotation_per_sec_degrees = 15
+			yaw_rotation_range_degrees = 270
+			yaw_start_degrees = 180
+			reset_time = 20
+		}
+
+		[Turret]
+		{
+			turret_ids = Turret4
+			yaw_rotation_per_sec_degrees = 15
+			yaw_rotation_range_degrees = 270
+			yaw_start_degrees = 180
+			reset_time = 20
+		}
+		
+		[Turret]
+		{
+			turret_ids = Turret5	
+			;offset = 0.0,-0.0
+			reset_time = 10
+			
+			yaw_start_degrees = 0
+			yaw_rotation_range_degrees = 240
+			yaw_rotation_per_sec_degrees = 180
+
+			pitch_start_degrees = 25
+			pitch_rotation_range_start_degrees = -90
+			pitch_rotation_range_end_degrees = 90
+			pitch_rotation_per_sec_degrees = 180
+		}
+
+		[Turret]
+		{	
+			turret_ids = Turret6	
+			;offset = 0.0,-0.0
+			reset_time = 10
+			
+			yaw_start_degrees = 180
+			yaw_rotation_range_degrees = 240
+			yaw_rotation_per_sec_degrees = 180
+
+			pitch_start_degrees = 25
+			pitch_rotation_range_start_degrees = -90
+			pitch_rotation_range_end_degrees = 90
+			pitch_rotation_per_sec_degrees = 180
+		}
+	}
+	
+	[DefenderComponent]
+	{
+		control_range = 30
+		
+		[Ability Template=AAAttackLocal]
+		{		
+			turret_ids = Turret5
+			
+			[AbilityDefinition Template=AAGERBattleShipAntiAirMG]
+			{
+				name = "#ger_battleship_DefenderComponent_AbilityDefinition_name"
+				recharge_time = 2
+				range = 30
+								
+				[Effect Template=PierceDamageEffect]
+				amount = 40
+				
+				;; TEMPORARY EFFECTS
+				;;Muzzle flash effect
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = aa_shot1
+					;at = SELF
+					attached = false
+					delay = 0.05
+					location = gun_ae_01
+				}
+				
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = aa_shot1
+					;at = SELF
+					attached = false
+					delay = 0.25
+					location = gun_ae_02
+				}
+				
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = aa_shot1
+					;at = SELF
+					attached = false
+					delay = 0.5
+					location = gun_ae_03
+				}
+				
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = aa_shot1
+					;at = SELF
+					attached = false
+					delay = 0.75
+					location = gun_ae_04
+				}
+				
+				;;Tracer effect for tommy gun
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					frequency = 2
+					delay = 0.05
+					location = gun_ae_01
+				}
+			
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					frequency = 2
+					delay = 0.25
+					location = gun_ae_02
+				}
+			
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					frequency = 2
+					delay = 0.5
+					location = gun_ae_03
+				}
+				
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					frequency = 2
+					delay = 0.75
+					location = gun_ae_04
+				}
+
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil5
+			}
+		}
+		
+		[Ability Template=AAAttackLocal]
+		{		
+			turret_ids = Turret6
+			
+			[AbilityDefinition Template=AAGERBattleShipAntiAirMG]
+			{
+				name = "#ger_battleship_DefenderComponent_AbilityDefinition_name_2"
+				recharge_time = 2
+				range = 30
+								
+				[Effect Template=PierceDamageEffect]
+				amount = 40
+				
+				;; TEMPORARY EFFECTS
+				;;Muzzle flash effect
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = aa_shot1
+					;at = SELF
+					attached = false
+					delay = 0.05
+					location = gun_ae_05
+				}
+				
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = aa_shot1
+					;at = SELF
+					attached = false
+					delay = 0.25
+					location = gun_ae_06
+				}
+				
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = aa_shot1
+					;at = SELF
+					attached = false
+					delay = 0.5
+					location = gun_ae_07
+				}
+				
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = aa_shot1
+					;at = SELF
+					attached = false
+					delay = 0.75
+					location = gun_ae_08
+				}
+				
+				;;Tracer effect for tommy gun
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					frequency = 2
+					delay = 0.05
+					location = gun_ae_05
+				}
+			
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					frequency = 2
+					delay = 0.25
+					location = gun_ae_06
+				}
+			
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					frequency = 2
+					delay = 0.5
+					location = gun_ae_07
+				}
+				
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					frequency = 2
+					delay = 0.75
+					location = gun_ae_08
+				}
+
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil6
+			}
+		}
+	}
+
+	[Size]
+	{
+		height = 2
+
+		blocking_shape = CIRCLE
+		blocking_radius = 9
+
+		soft_shape = CIRCLE
+		soft_radius = 10.1
+		
+		target_shape = RECT
+		target_rect_width = 4
+		target_rect_height = 16
+	}
+		
+	[View]
+	{
+		resource_prefix = GERBattleship/GERBattleship1
+		minimap_icon = /Minimap/Icons/IconBattleship.tga
+
+		[Swivel]
+		{
+			swivel_node_ids = base
+			swivel_inertia = .25
+			spring_constant = .2
+			swivel_mass = 8000
+			recoil = false
+			impact_sway = true
+		}
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ger_waving_flag
+			location = flag_dummy
+		}
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = battleship_select
+			
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = battleship_move
+			
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = battleship_attack
+	
+
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			{
+				ids = Recoil1
+				length = 1
+				kf = GERBattleship/GERBattleshipRecoil1.kf
+			}
+					
+			[Animation Template=ObjectAnimationCustomPlay]
+			{
+				ids = Recoil2
+				length = 1
+				kf = GERBattleship/GERBattleshipRecoil2.kf
+			}
+						
+			[Animation Template=ObjectAnimationCustomPlay]
+			{
+				ids = Recoil3
+				length = 1
+				kf = GERBattleship/GERBattleshipRecoil3.kf
+			}
+			
+			[Animation Template=ObjectAnimationCustomPlay]
+			{
+				ids = Recoil4
+				length = 1
+				kf = GERBattleship/GERBattleshipRecoil4.kf
+			}
+			
+			[Animation Template=ObjectAnimationCustomPlay]
+			{
+				ids = Recoil5
+				length = 1
+				kf = GERBattleship/GERBattleshipRecoil5.kf
+			}
+			
+			[Animation Template=ObjectAnimationCustomPlay]
+			{
+				ids = Recoil6
+				length = 1
+				kf = GERBattleship/GERBattleshipRecoil6.kf
+			}
+		}
+	}
+}
+
+[Thing Template=AAGERBattleship]
+{
+	IDS = ger_battleship_H44
+
+	[RecruitComponent]
+	{	
+
+	}
+}
+
+[Thing Template=AAGERBattleship]
+{
+	IDS = ger_battleship_dynamic_H44
+	editor_name = "#ger_battleship_dynamic_H44_editor_name"
+
+	[Placement]
+	placement_group_ids = null
+
+	[RecruitComponent]
+	{	
+
+	}
+}
+

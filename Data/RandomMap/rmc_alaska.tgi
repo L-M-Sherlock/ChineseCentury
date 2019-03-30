@@ -1,0 +1,89 @@
+
+[RMC template=AAAllRMC]
+{
+	IDS = rmc_alaska
+	name = "#rmc_alaska_name"
+	description = "#rmc_alaska_description"
+	biome = arctic_tundra
+
+/********************    TERRAIN    ********************/
+
+	[TerrainBlob Template=ArcTundraTerrainBlob]
+
+	[TerrainBlob Template=ArcDirtTerrainBlob]
+
+	[TerrainStreak Template=ArcSnowTerrainStreak]
+
+	[TerrainBlob Template=ArcSnowTerrainBlob]
+
+	[TerrainBlob Template=ArcDirtTerrainBlob02]
+
+	[TerrainBlob Template=ArcSnowTerrainBlob02]
+
+	[TerrainStreak Template=ArcForestTerrainStreak]
+
+	[TerrainBlob Template=ArcForestTerrainBlob]
+
+	[TerrainBlob Template=ArcTundraTerrainBlob02]
+
+/********************    BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=ArcMountainTerrainBlob]
+
+	[TerrainBlob Template=ArcMountainTerrainBlob02]
+	
+	[TerrainBlob Template=ArcMountainTerrainBlob03]
+	
+	[TerrainBlob Template=ArcMountainTerrainBlob04]
+	
+	[TerrainBlob Template=ArcMountainTerrainBlob05]
+	
+	[TerrainBlob Template=ArcOceanTerrainBlob]
+
+/********************    TERRAIN NOISE   ********************/
+
+	[TerrainNoise Template=ArcNoisePhase01]
+	
+	[TerrainNoise Template=ArcNoisePhase02]
+	
+	[TerrainNoise Template=ArcNoisePhase03]
+	
+	[TerrainNoise Template=ArcNoisePhase04]
+	
+	[TerrainNoise Template=ArcNoisePhase05]
+	
+	[TerrainNoise Template=ArcNoisePhase06]
+
+/********************   OTHER ACTOR GROUPS    ********************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_alaska
+		name = "#rmc_alaska_village_alaska_name"
+
+		[Object]
+		object_ids = random_village_alaska
+		weight = 1
+	}	
+
+/********************    KINGDOM ACTOR GROUPS    ********************/
+
+	[ActorGroup Template=StartCorps]
+	{
+		apply_to_all_major_kingdoms = true
+	
+		[GroupRestriction]
+		group_ids = village_alaska
+		proximity_min = 96
+		proximity_desired = 0
+	}
+
+	[ActorGroup Template=MachineGunBunkers]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=AntiAirBatteries]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=ArtilleryBatteries]
+	apply_to_all_major_kingdoms = true
+}

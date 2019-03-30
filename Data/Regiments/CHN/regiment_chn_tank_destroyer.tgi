@@ -1,0 +1,55 @@
+[Thing Template=AACHNOrganizationArmor]
+{	
+	IDS = regiment_chn_tank_destroyer
+	name = "#regiment_chn_tank_destroyer_name"
+	editor_name = "#regiment_chn_tank_destroyer_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 150
+		
+		[Upkeep]
+		ammo = 20
+		oil = 20
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CHN/CHNTankDestroyer/CHNTankDestroyer
+		icon = /UI/Game/RegimentButtons/IconTankAT.png
+		banner_icon = /Organizations/Banners/Icons/IconAntiTank.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = chn_vehicle_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = chn_tank_destroyer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = chn_tank_destroyer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = chn_tank_destroyer_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = chn_tank_destroyer
+	
+		[Slot]	;; support
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = chn_tank_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = antitank_company
+	}
+}

@@ -1,0 +1,86 @@
+
+;; ---------------------------- History Dialog ---------------------------------
+
+[MetaGameHistoryDialog Inherit=MetaGameMenuGamePanelWidget]
+{
+	[View]
+	{
+		L = 217
+		T = 27
+		R = +592
+		B = +519
+		
+		;; cwp041204 - Children no longer being defined in template
+		[Child Template = MetaGameMenuGamePanelGroupVE]
+		
+		[Child Template = DecalVETiled]
+		{
+			alpha_blending = true
+			
+			L = 60
+			T = 35
+			R = +472
+			B = +410
+			
+			corners_texture = /UI/%s/Default/Listbox/ListboxCorners.tga
+			left_border_texture = /UI/%s/Default/Listbox/ListboxLeft.tga
+			right_border_texture = /UI/%s/Default/Listbox/ListboxRight.tga
+			top_border_texture = /UI/%s/Default/Listbox/ListboxTop.tga
+			bottom_border_texture = /UI/%s/Default/Listbox/ListboxBottom.tga
+			center_texture = /UI/%s/Default/Listbox/ListboxCenter.tga
+		}
+	}
+
+	[MetaGameButtonHistoryClose Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#metagame_history_MetaGameButtonHistoryClose_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 204
+			T = 453
+		}
+	}
+
+	[MetaGameMessageLog Inherit=SharedMessageLog]
+	{
+		[View Template=SharedPanelGroupVE]
+		{
+			L = 61
+			T = 44
+			R = +465
+			B = +383
+			
+			/*
+			[Child Template = DecalVETiled]
+			{
+				alpha_blending = true
+				
+				corners_texture = /UI/%s/Default/Listbox/ListboxCorners.tga
+				left_border_texture = /UI/%s/Default/Listbox/ListboxLeft.tga
+				right_border_texture = /UI/%s/Default/Listbox/ListboxRight.tga
+				top_border_texture = /UI/%s/Default/Listbox/ListboxTop.tga
+				bottom_border_texture = /UI/%s/Default/Listbox/ListboxBottom.tga
+				center_texture = /UI/%s/Default/Listbox/ListboxCenter.tga
+			}
+			*/
+		}
+		
+		[ItemPanel]
+		{
+			[MessageWidget]
+			{
+				[MessageWidgetBackground]
+				{
+					visible = false
+				}
+			}
+		}
+
+		[Scrollbar Template=SharedScrollbarWidget]
+	}
+}

@@ -1,0 +1,35 @@
+[Terrain template=Terrain]
+{
+	IDS = savannah_scrub
+	name = "#savannah_scrub_name"
+
+	base_priority = 3000
+	terrain_group = dirt
+	
+	doodad_frequency = 0.025
+	primary_doodad_frequency = 0.20
+
+	[Variation]
+	IDS = savannah_scrub01
+	name = "#savannah_scrub_01_name"
+	texture = SavannahScrub/SavannahScrub01.tga
+	texture_width = 16
+	texture_height = 16
+	terrain_color = 0.788, 0.584, 0.392
+
+	[Variation]
+	IDS = savannah_scrub02
+	name = "#savannah_scrub_02_name"
+	texture = SavannahScrub/SavannahScrub02.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.778, 0.574, 0.402
+
+	[Variation]
+	IDS = savannah_scrub03
+	name = "#savannah_scrub_03_name"
+	texture = SavannahScrub/SavannahScrub03.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.798, 0.574, 0.382
+}

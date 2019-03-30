@@ -1,0 +1,55 @@
+[Thing Template=AAnedOrganizationMobile]
+{	
+	IDS = regiment_ned_halftrack_at
+	name = "#regiment_ned_halftrack_at_name"
+	editor_name = "#regiment_ned_halftrack_at_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 150
+		
+		[Upkeep]
+		ammo = 10
+		oil = 15
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/ned/nedTankDestroyer/nedTankDestroyer
+		icon = /UI/Game/RegimentButtons/IconHalftrackAT.png
+		banner_icon = /Organizations/Banners/Icons/IconAntiTank.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ned_vehicle_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ned_tank_destroyer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ned_tank_destroyer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ned_tank_destroyer_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_heavy
+		
+		[Slot]	;; front
+		element_IDS = ned_halftrack
+	
+		[Slot]	;; support
+		element_IDS = ned_tank_destroyer
+		
+		[Slot]	;; captain
+		element_IDS = ned_car_armored_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = antitank_company
+	}
+}

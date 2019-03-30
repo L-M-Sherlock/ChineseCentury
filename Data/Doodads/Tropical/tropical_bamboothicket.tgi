@@ -1,0 +1,62 @@
+[Thing Template=AATropicalDynamicDoodad]
+{
+	IDS = tropical_bamboothicket
+	name = "#tropical_bamboothicket_name"
+	
+	[Flags]
+	ethereal = true	
+	water_based = true
+	
+	[Component Inherit=DisturbableDynamicDoodadComponent]
+	{
+		update_time = 1
+		recharge_time_min = .5
+		recharge_time_max = .5
+		affect_radius = 1
+		
+		[Action Template=FXC_PlayObjectAnimation]
+		object_animation_IDS = rustle
+	}
+
+	[Placement]
+	{
+		[Biome]
+		IDS = tropical_savannah
+		weight = -1.00		
+
+		[Biome]
+		{
+			ids = tropical_forest
+			weight = 0.00
+			
+			[Terrain]
+			IDS = tropical_river
+			weight = 0.01
+
+			[Terrain]
+			IDS = tropical_riverfordable
+			weight = 0.01
+		}
+	}
+
+	[View]
+	{
+		resource_prefix = TropicalBambooThicket/TropicalBambooThicket
+		shadow_type = NONE
+
+		[TextureSearchPath]
+		path = /Doodads/Tropical/TropicalBambooReeds		
+
+		[Aspect Template=Aspect]
+		{
+			ids = tropical_bamboothicket01
+			model = %s01.nif
+			ground_size = 1.5,1.5			
+		
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = rustle
+			kf = TropicalBamboo/TropicalBamboo01Rustle.kf
+			length = 2.0
+		}
+	}
+}

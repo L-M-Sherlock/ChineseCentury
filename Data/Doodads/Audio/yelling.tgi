@@ -1,0 +1,19 @@
+[Thing Template=AASharedAudioDoodad]
+{
+	IDS = yelling
+	name = "#yelling_name"
+
+	[View]
+	{			
+		[AspectNormal template=Aspect]
+		{
+			IDS = audio
+			
+			[Animation template=AnimationRandomAudio]
+			{
+				[PlaySFX]
+				sfx_ids = am_yelling
+			}
+		}
+	}
+}

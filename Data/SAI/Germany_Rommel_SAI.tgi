@@ -1,0 +1,49 @@
+[Ego template = ArmorLowIncomeEgo]
+{
+	IDS										= rommel_low_income_ego
+	name									= "#Germany_Rommel_SAI_rommel_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorLowLowEgo]
+{
+	IDS										= rommel_low_low_ego
+	name									= "#Germany_Rommel_SAI_rommel_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorMainGameEgo]
+{
+	IDS										= rommel_main_game_ego
+	name									= "#Germany_Rommel_SAI_rommel_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = ArmorEndGameEgo]
+{
+	IDS										= rommel_end_game_ego
+	name									= "#Germany_Rommel_SAI_rommel_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= rommel_sai
+	name									= "#Germany_Rommel_SAI_rommel_sai_name"
+	description								= "#Germany_Rommel_SAI_rommel_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= rommel_low_income_ego
+
+
+	[Ego]
+	IDS										= rommel_low_low_ego
+
+	[Ego]
+	IDS										= rommel_main_game_ego
+
+	[Ego]
+	IDS										= rommel_end_game_ego
+
+	[Nation]
+	IDS										= nation_ger
+	
+	[Faction]
+	ids										= rommel
+} ;; rommel SAI

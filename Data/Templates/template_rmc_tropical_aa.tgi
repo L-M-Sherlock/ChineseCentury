@@ -1,0 +1,489 @@
+
+/**************************************************************************
+
+template_rmc_tropical_aa.tgi
+Copyright © 2004 TimeGate Studios
+
+DESCRIPTION:  Templates for A&A Tropical random maps
+
+REVISION HISTORY:
+ick042204 - created
+
+USAGE:
+
+
+**************************************************************************/
+
+/*	TROPICAL TERRAINS	*/
+
+[Template TropGrassTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,20
+	area_factor = 2
+	show_ui = true
+	override_same = true
+	terrain_ids = tropical_grass
+	blob_size = 32,96
+	consistency = 0.6
+	proximity = 0.6
+	fuzzy_factor = 0.6
+	
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.6
+		blob_size = 1,5
+		consistency = 0.25
+		proximity = 0.35
+		fuzzy_factor = 0.5
+	}
+}
+
+[Template TropGrassTerrainBlob02 Template=RMCTerrainBlob]
+{
+	range = 0,20
+	area_factor = 2
+	show_ui = false
+	terrain_ids = tropical_grass
+	blob_size = 12,24
+	consistency = 0.4
+	proximity = 0.4
+	fuzzy_factor = 0.1
+	
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.6
+		blob_size = 1,5
+		consistency = 0.25
+		proximity = 0.25
+		fuzzy_factor = 0.05
+	}
+}
+
+[Template TropGrassDryTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,15
+	area_factor = 2
+	show_ui = true
+	override_same = true
+	terrain_ids = tropical_grassdry
+	blob_size = 8,32
+	consistency = 0.1
+	proximity = 0.1
+	fuzzy_factor = 0.1
+	
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.6
+		blob_size = 1,5
+		consistency = 0.1
+		proximity = 0.1
+		fuzzy_factor = 0.1
+	}
+}
+
+[Template TropGrassDryTerrainBlob02 Template=RMCTerrainBlob]
+{
+	range = 0,15
+	area_factor = 2
+	show_ui = false
+	terrain_ids = tropical_grassdry
+	blob_size = 8,32
+	consistency = 0.6
+	proximity = 0.6
+	fuzzy_factor = 0.1
+	
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.6
+		blob_size = 1,5
+		consistency = 0.25
+		proximity = 0.25
+		fuzzy_factor = 0.05
+	}
+}
+
+[Template TropGrassDryTerrainStreak Template=RMCTerrainStreak]
+{
+	range = 0,10
+	area_factor = 2
+	show_ui = false
+	terrain_ids = tropical_grassdry
+	streaks_min = 12
+	streaks_max = 24
+	width_range = 6,18
+	length_range = 12,24
+	angle_range = -65,+25
+}
+
+[Template TropDirtTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,10
+	area_factor = 2
+	show_ui = true
+	override_same = true
+	terrain_ids = tropical_dirt
+	blob_size = 24,48
+	consistency = 0.4
+	proximity = 0.4
+	fuzzy_factor = 0.25
+	
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.6
+		blob_size = 1,5
+		consistency = 0.1
+		proximity = 0.1
+		fuzzy_factor = 0.1
+	}
+}
+
+[Template TropDirtTerrainBlob02 Template=RMCTerrainBlob]
+{
+	range = 0,10
+	area_factor = 2
+	show_ui = false
+	terrain_ids = tropical_dirt
+	blob_size = 12,24
+	consistency = 0.6
+	proximity = 0.6
+	fuzzy_factor = 0.1
+	
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.6
+		blob_size = 1,5
+		consistency = 0.25
+		proximity = 0.25
+		fuzzy_factor = 0.05
+	}
+}
+
+[Template TropDirtTerrainStreak Template=RMCTerrainStreak]
+{
+	range = 0,5
+	area_factor = 2
+	show_ui = false
+	terrain_ids = tropical_dirt
+	streaks_min = 8
+	streaks_max = 16
+	width_range = 8,16
+	length_range = 12,24
+	angle_range = -35,+45
+}
+
+[Template TropJungleTerrainStreak Template=RMCTerrainStreak]
+{
+	range = 0,10
+	area_factor = 2
+	show_ui = false
+	terrain_ids = tropical_jungle
+	streaks_min = 8
+	streaks_max = 32
+	width_range = 9,36
+	length_range = 12,48
+	angle_range = -35,+45
+}
+
+[Template TropJungleTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,20
+	area_factor = 2.1
+	show_ui = true
+	override_same = true
+	terrain_ids = tropical_jungle
+	blob_size = 32,64
+	consistency = 0.6
+	proximity = 0.4
+	fuzzy_factor = 0.25
+	
+	[MicroBlobs]
+	{
+		ratio_range = 0.6,0.8
+		blob_size = 2,6
+		consistency = 0.2
+		proximity = 0.2
+		fuzzy_factor = 0.2
+	}
+}
+
+[Template TropJungleDenseTerrainStreak Template=RMCTerrainStreak]
+{
+	range = 0,10
+	area_factor = 2
+	show_ui = false
+	terrain_ids = tropical_jungledense
+	streaks_min = 8
+	streaks_max = 32
+	width_range = 9,36
+	length_range = 12,48
+	angle_range = -35,+45
+}
+
+[Template TropJungleDenseTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,20
+	area_factor = 2.1
+	show_ui = true
+	override_same = true
+	terrain_ids = tropical_jungledense
+	blob_size = 32,64
+	consistency = 0.6
+	proximity = 0.4
+	fuzzy_factor = 0.25
+	
+	[MicroBlobs]
+	{
+		ratio_range = 0.6,0.8
+		blob_size = 2,6
+		consistency = 0.2
+		proximity = 0.2
+		fuzzy_factor = 0.2
+	}
+}
+
+/* 	TEMPERATE BLOCKING TERRAIN	*/
+
+[Template TropMountainTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,15
+	area_factor = 2.0
+	show_ui = true
+	override_same = true
+	terrain_ids = tropical_mountain
+	blob_size = 16,24
+	consistency = 0.5
+	proximity = 0.9
+	fuzzy_factor = 0.9
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 1,3
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+		affect_height = false
+	}
+}
+
+[Template TropMountainTerrainBlob02 Template=RMCTerrainBlob]
+{
+	range = 0,5
+	area_factor = 2.0
+	show_ui = false
+	terrain_ids = tropical_mountain
+	blob_size = 16,32
+	consistency = 0.6
+	proximity = 0.8
+	fuzzy_factor = 0.6
+	dir_bias = 0,0
+	dir_bias_factor	= 2.5
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 1,3
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+		affect_height = false
+	}
+}
+
+[Template TropMountainTerrainBlob03 Template=RMCTerrainBlob]
+{
+	range = 0,10
+	area_factor = 1.5
+	show_ui = false
+	attachto = CENTER
+	attach_range = 0
+	terrain_ids = tropical_mountain
+	blob_size = 16,24
+	consistency = 0.6
+	proximity = 0.6
+	fuzzy_factor = 0.6
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 1,3
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+		affect_height = false
+	}
+}
+
+[Template TropMountainTerrainBlob04 Template=RMCTerrainBlob]
+{
+	range = 0,5
+	area_factor = 2.1
+	show_ui = false
+	terrain_ids = tropical_mountain
+	blob_size = 16,24
+	consistency = 0.5
+	proximity = 0.8
+	fuzzy_factor = 1.0
+	dir_bias = 0,0
+	dir_bias_factor	= 2.5
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 1,3
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+		affect_height = false
+	}
+}
+
+[Template TropMountainTerrainBlob05 Template=RMCTerrainBlob]
+{
+	range = 0,5
+	area_factor = 2.1
+	show_ui = false
+	terrain_ids = tropical_mountain
+	blob_size = 12,24
+	consistency = 0.5
+	proximity = 0.8
+	fuzzy_factor = 1.0
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 1,3
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+		affect_height = false
+	}
+}
+
+[Template TropWaterTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,15
+	area_factor = 1.9
+	show_ui = true
+	attachto = NORTH,NORTHEAST,EAST,SOUTHEAST,SOUTH,SOUTHWEST,WEST,NORTHWEST
+	attach_range = 0
+	override_same = true
+	terrain_ids = tropical_ocean
+	blob_size = 32,64
+	consistency = 0.9
+	proximity = 0.9
+	fuzzy_factor = 0.1
+	dir_bias = 0,0
+	dir_bias_factor	= 5.0
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 6,8
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+	}
+}
+
+[Template TropWaterTerrainBlob01 Template=RMCTerrainBlob]
+{
+	range = 0,5
+	area_factor = 1.9
+	show_ui = false
+	terrain_ids = tropical_ocean
+	blob_size = 32,64
+	consistency = 0.8
+	proximity = 0.8
+	fuzzy_factor = 0.2
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 6,8
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+	}
+}
+
+/* 	TROPICAL TERRAIN NOISE		*/
+
+[Template TropNoisePhase01 Template=NoiseData]
+{	
+	terrain_noise_num_blobs_min		= 25	;; min num blobs
+	terrain_noise_num_blobs_max		= 50	;; max num blobs
+	terrain_noise_blob_size_min		= 64	;; min blob radius (meters)
+	terrain_noise_blob_size_max		= 128	;; max blob radius (meters)
+	terrain_noise_offset_magnitude_min	= 1	;; magnitude of min vertical noise offset (in meters)
+	terrain_noise_offset_magnitude_max	= 1	;; magnitude of max vertical noise offset (in meters)
+	terrain_noise_up_frequency		= 0.5	;; frequency of blobs add positive vertical noise (zero-one)
+	terrain_noise_reference_size		= 256	;; the reference map size which the other params apply to (in meters)
+	terrain_noise_area_factor		= 0.4	;; percent of blobs to actually apply (0-1)
+}
+
+[Template TropNoisePhase02 Template=NoiseData]
+{	
+	terrain_noise_num_blobs_min		= 50	;; min num blobs
+	terrain_noise_num_blobs_max		= 75	;; max num blobs
+	terrain_noise_blob_size_min		= 48	;; min blob radius (meters)
+	terrain_noise_blob_size_max		= 96	;; max blob radius (meters)
+	terrain_noise_offset_magnitude_min	= 2	;; magnitude of min vertical noise offset (in meters)
+	terrain_noise_offset_magnitude_max	= 2	;; magnitude of max vertical noise offset (in meters)
+	terrain_noise_up_frequency		= 0.0	;; frequency of blobs add positive vertical noise (zero-one)
+	terrain_noise_reference_size		= 256	;; the reference map size which the other params apply to (in meters)
+	terrain_noise_area_factor		= 0.5	;; percent of blobs to actually apply (0-1)
+}
+
+[Template TropNoisePhase03 Template=NoiseData]
+{	
+	terrain_noise_num_blobs_min		= 75	;; min num blobs
+	terrain_noise_num_blobs_max		= 100	;; max num blobs
+	terrain_noise_blob_size_min		= 32	;; min blob radius (meters)
+	terrain_noise_blob_size_max		= 64	;; max blob radius (meters)
+	terrain_noise_offset_magnitude_min	= 3	;; magnitude of min vertical noise offset (in meters)
+	terrain_noise_offset_magnitude_max	= 3	;; magnitude of max vertical noise offset (in meters)
+	terrain_noise_up_frequency		= 1.0	;; frequency of blobs add positive vertical noise (zero-one)
+	terrain_noise_reference_size		= 256	;; the reference map size which the other params apply to (in meters)
+	terrain_noise_area_factor		= 0.6	;; percent of blobs to actually apply (0-1)
+}
+
+[Template TropNoisePhase04 Template=NoiseData]
+{	
+	terrain_noise_num_blobs_min		= 150	;; min num blobs
+	terrain_noise_num_blobs_max		= 300	;; max num blobs
+	terrain_noise_blob_size_min		= 8	;; min blob radius (meters)
+	terrain_noise_blob_size_max		= 16	;; max blob radius (meters)
+	terrain_noise_offset_magnitude_min	= 1	;; magnitude of min vertical noise offset (in meters)
+	terrain_noise_offset_magnitude_max	= 2	;; magnitude of max vertical noise offset (in meters)
+	terrain_noise_up_frequency		= 0.5	;; frequency of blobs add positive vertical noise (zero-one)
+	terrain_noise_reference_size		= 256	;; the reference map size which the other params apply to (in meters)
+	terrain_noise_area_factor		= 0.8	;; percent of blobs to actually apply (0-1)
+}
+
+[Template TropNoisePhase05 Template=NoiseData]
+{	
+	terrain_noise_num_blobs_min		= 256	;; min num blobs
+	terrain_noise_num_blobs_max		= 512	;; max num blobs
+	terrain_noise_blob_size_min		= 2	;; min blob radius (meters)
+	terrain_noise_blob_size_max		= 6	;; max blob radius (meters)
+	terrain_noise_offset_magnitude_min	= 1	;; magnitude of min vertical noise offset (in meters)
+	terrain_noise_offset_magnitude_max	= 2	;; magnitude of max vertical noise offset (in meters)
+	terrain_noise_up_frequency		= 0.0	;; frequency of blobs add positive vertical noise (zero-one)
+	terrain_noise_reference_size		= 256	;; the reference map size which the other params apply to (in meters)
+	terrain_noise_area_factor		= 0.6	;; percent of blobs to actually apply (0-1)
+}
+
+[Template TropNoisePhase06 Template=NoiseData]
+{	
+	terrain_noise_num_blobs_min		= 256	;; min num blobs
+	terrain_noise_num_blobs_max		= 512	;; max num blobs
+	terrain_noise_blob_size_min		= 2	;; min blob radius (meters)
+	terrain_noise_blob_size_max		= 6	;; max blob radius (meters)
+	terrain_noise_offset_magnitude_min	= 1	;; magnitude of min vertical noise offset (in meters)
+	terrain_noise_offset_magnitude_max	= 2	;; magnitude of max vertical noise offset (in meters)
+	terrain_noise_up_frequency		= 1.0	;; frequency of blobs add positive vertical noise (zero-one)
+	terrain_noise_reference_size		= 256	;; the reference map size which the other params apply to (in meters)
+	terrain_noise_area_factor		= 0.6	;; percent of blobs to actually apply (0-1)
+}
+

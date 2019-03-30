@@ -1,0 +1,51 @@
+[Thing Inherit=VFXProjectedTextureLit]
+{
+	name = "#st_lo_cathedral_ground_name"
+	texture = StLoCathedral/LoChurchColorGround.dds	
+	IDS = st_lo_cathedral_ground
+	attached_scale = 0
+	texture_size = 1
+	decal_type = scorch	
+}
+
+[Thing Template=AAVillageCenter]
+{
+	IDS = st_lo_cathedral
+	name = "#st_lo_cathedral_Thing_name"
+	editor_name = "#st_lo_cathedral_Thing_editor_name"
+
+	[BodyComponent]
+	health = 700
+	defense = 12
+	
+	[CityComponent]
+	{
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = temperate_trees
+			offset = -6, 6
+			orientation = 0, 1
+		}
+	}
+	
+	[Placement]
+	placement_group_IDS = group_campaign	
+
+	[Flags]
+	blocking = true
+
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 12
+
+	[View]
+	{
+		resource_prefix = StLoCathedral/StLoCathedral
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		shadow_type = STENCIL
+
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = st_lo_cathedral_ground
+	}
+}

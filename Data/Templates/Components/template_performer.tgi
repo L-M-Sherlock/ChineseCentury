@@ -1,0 +1,24 @@
+[template PerformerComponent]
+{
+	fixed	mana_max = 0
+	fixed	mana_regeneration = 0
+
+	;; attack_height = the default height at which projectiles are spawned.  It is ignored
+	;; if the ability specifies a "spawn_position." 1.45 may be sufficient for the typical unit
+	fixed	attack_height = 1.45	
+
+	;; Bonus added to the action's score.
+	fixed	move_bonus = 0
+	fixed	use_bonus = 0
+	fixed	wait_bonus = 0
+
+	;; manual bias to be entered into a unit's CV calculations (added after all other
+	;; CV calculations)
+	fixed	cv_bias = 0
+
+	;; if true, target's damage resistance will be considered when actor uses ability
+	flag	check_damage_resistance = false
+
+	[list Turret Template=Turret]
+	[list Ability Template=Ability]
+}

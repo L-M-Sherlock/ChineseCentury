@@ -1,0 +1,73 @@
+[Thing Template=AAUnitCPCVehicleHQTruck]
+{
+	IDS = cpc_truck_mechanized
+	name = "#cpc_truck_mechanized_name"
+	editor_name = "#cpc_truck_mechanized_editor_name"
+
+	hide_if_missing_properties = false
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 300
+
+		[Production]
+		money = 12
+		ammo = 5
+		oil = 5
+		unit_limit_provided = 4
+	}
+	
+	[ElementComponent]
+	{
+		required_structures = cpc_hq_infantry
+		required_properties = mechhqproduction
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = cpc_hq_mechanized
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+
+		trailer_actor = rus_trailer_mechanized
+
+		[TrailerHitch]
+		{		
+			node_ids = hitch
+			node_offset = 0, -.9, .8
+		}
+	}
+
+	[Placement]
+	placement_group_ids = null
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = captain	
+		
+		[Property]
+		property_ids = mechhq		
+	}
+
+	
+	[View]
+	{
+		resource_prefix = CPCTruckBedless/CPCTruckBedless
+		icon = /UI/Game/BuildingButtons/IconHQMechanized.png
+	}
+}

@@ -1,0 +1,25 @@
+# hotkeys_groups.txt
+
+#game - groups
+map 1 game "SelectGroup group_1"
+map 2 game "SelectGroup group_2"
+map 3 game "SelectGroup group_3"
+map 4 game "SelectGroup group_4"
+map 5 game "SelectGroup group_5"
+map 6 game "SelectGroup group_6"
+map 7 game "SelectGroup group_7"
+map 8 game "SelectGroup group_8"
+map 9 game "SelectGroup group_9"
+map 0 game "SelectGroup group_10"
+
+map ctrl-1 game "SaveGroup group_1"
+map ctrl-2 game "SaveGroup group_2"
+map ctrl-3 game "SaveGroup group_3"
+map ctrl-4 game "SaveGroup group_4"
+map ctrl-5 game "SaveGroup group_5"
+map ctrl-6 game "SaveGroup group_6"
+map ctrl-7 game "SaveGroup group_7"
+map ctrl-8 game "SaveGroup group_8"
+map ctrl-9 game "SaveGroup group_9"
+map ctrl-0 game "SaveGroup group_10"
+

@@ -1,0 +1,60 @@
+/**************************************************************************
+
+template_thing.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: a thing is something that can be instantiated in the world.
+			An object is something physical that can be instantiated in
+			the world.  See "template_actor.tgi" for something more complex.
+ 
+REVISION HISTORY:
+drp090602 - created
+
+USAGE:
+
+	[Thing Template=Thing]
+	This node goes at the root level and defines a thing that can be instantiated in the game.
+	Most often, you will probably want "Template=Object" for terrain features and
+	"Template=Unit", "Template=Projectile", etc for complex actors.
+	
+	[Thing Template=Object]
+	A thing with a physical presence, but only for blocking - cannot interact with the world.
+	
+**************************************************************************/
+
+
+;; category = hard-coded values
+
+[Template Thing]
+{
+	;; identifying information
+	string		IDS
+	localized	name
+	
+	;; hidden field - defined by appropriate template
+	string		category
+
+	[Flags]
+	{
+		flag	flatten_terrain = true		;; only works for "large static objects"
+		flag	axis_locked = false
+		flag	tributable = false
+		flag	blocking = false
+		flag	corpse_blocking = false
+		flag	ethereal = true
+		flag	flying = false
+		flag	invisible = false
+		flag	invulnerable = true
+		flag	radar = false
+		flag	random_orientation = false
+		flag	targetable = false
+		flag	tile_locked = false
+		flag	water_based = false
+		flag	ownable = false
+		flag	conform_to_terrain = false
+		flag	allow_alpha_blend = false
+		flag	revealed = false		;; seen with gray fog world rule
+	} 
+	
+} ; end [Template Thing]
+

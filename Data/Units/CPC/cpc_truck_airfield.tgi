@@ -1,0 +1,70 @@
+[Thing Template=AAUnitCPCVehicleHQTruck]
+{
+	IDS = cpc_truck_airfield
+	name = "#cpc_truck_airfield_name"
+	editor_name = "#cpc_truck_airfield_editor_name"
+
+	hide_if_missing_properties = false
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 400
+
+		[Upkeep]
+		ammo = 15
+		oil = 15
+		building_limit_consumed = 0
+	}
+
+	[ElementComponent]
+	{
+		required_structures = cpc_brigade_engineer, cpc_motor_pool, cpc_brigade_artillery
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = cpc_airfield
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 3
+		acceleration = 2
+		trailer_actor = rus_trailer_airfield
+
+		[TrailerHitch]
+		{
+			node_ids = hitch
+			node_offset = 0, -.9, .8
+		}
+	}
+
+ 	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = airfield
+	}
+
+	[View]
+	{
+		resource_prefix = CPCTruckBedless/CPCTruckBedless
+		icon = /UI/Game/BuildingButtons/IconAirfield.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = rus_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = airfield_select
+	}
+}

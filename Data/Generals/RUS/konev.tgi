@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = konev_portrait
+	name = "#konev_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Konev/KonevPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = rus_konev_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = konev
+	name = "#konev_name"
+	description = "#konev_description"
+	staging_name = "#konev_staging_name"
+	icon_texture_ids = Konev/KonevPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/RUS/Konev.bik
+	portrait_ids = konev_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpCommunistZeal]
+	
+	[Ability Template=AASpecialOpSmokeBarrage]
+	
+	[Ability Template=AASpecialOpMilitaryGearUpRUS]
+	
+	[Ability Template=AASpecialOpCorpsRUS]
+}

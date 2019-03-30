@@ -1,0 +1,55 @@
+[Audio Template=AudioInterfaceSound]
+{
+	IDS = toggle_button
+	name = "#sounds_ui_toggle_button_name_2"
+
+	files = Sounds/Interface/ToggleButton.wav
+}
+
+[Audio Template=AudioInterfaceSound]
+{
+	IDS = menu_button
+	name = "#sounds_ui_menu_button_name_2"
+
+	files = Sounds/Interface/MenuButton.wav
+}
+
+[Audio Template=AudioInterfaceSound]
+{
+	IDS = popup
+	name = "#sounds_ui_popup_name_2"
+
+	files = Sounds/Interface/GenericError.wav
+}
+
+[Audio Template=AudioInterfaceSound]
+{
+	IDS = slider_bar
+	name = "#sounds_ui_slider_bar_name_2"
+
+	files = Sounds/Interface/RadioButton.wav
+}
+
+[Audio Template=AudioInterfaceSound]
+{
+	IDS = tiled_button
+	name = "#sounds_ui_tiled_button_name_2"
+
+	files = Sounds/Interface/TiledButton.wav
+}
+
+[Audio Template=AudioInterfaceSound]
+{
+	IDS = push_button
+	name = "#sounds_ui_push_button_name_2"
+
+	files = Sounds/Interface/PushButton01.wav, Sounds/Interface/PushButton02.wav, Sounds/Interface/PushButton04.wav, Sounds/Interface/PushButton05.wav
+}
+
+[Audio Template=AudioInterfaceSound]
+{
+	IDS = radio_button
+	name = "#sounds_ui_radio_button_name"
+
+	files = Sounds/Interface/RadioButton.wav
+}

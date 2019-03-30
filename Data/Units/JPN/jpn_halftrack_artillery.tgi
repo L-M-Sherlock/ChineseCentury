@@ -1,0 +1,91 @@
+[Template AAJPNHalftrackArtillery Inherit=AAUnitJPNVehicleHalftrack]
+{
+	[BodyComponent]
+	{
+		health = 200
+		defense = 3
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = artillery	
+		
+		[Property]
+		property_IDS = combat_unit
+		
+		[Property]
+		property_IDS = halftrack_unit
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 4.5
+		acceleration = 3.5
+	}
+
+	[PerformerComponent]
+	
+	[View]
+}
+
+;;----------------------------- UNITS ------------------------ ;;
+
+[Thing Template=AAJPNHalftrackArtillery]
+{
+	IDS = jpn_halftrack_artillery
+	name = "#jpn_halftrack_artillery_Thing_name"
+	editor_name = "#jpn_halftrack_artillery_Thing_editor_name"
+
+	[ElementComponent]
+	required_structures = jpn_brigade_artillery
+
+	[PerformerComponent]
+	{		
+		[Ability Template=AAProjectileLocal]
+		{	
+			[AbilityDefinition Template=AASPAShot]
+			{
+				name = "#jpn_halftrack_artillery_AbilityDefinition_name"
+				range = 44
+				area = 3
+				recharge_time = 9
+				max_targets = 8
+					
+				[Effect Template=BlastDamageEffect]
+				amount = 40
+				
+				[Effect Template=MoraleLossEffect]
+				amount = .75
+				
+				[Flags] 
+				bombard = true
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = jpn_artillery_heavy
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+			}
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = JPNHalftrackArtillery/JPNHalftrackArtillery
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = JPNHalftrackArtillery/JPNHalftrackArtilleryRecoil1.kf
+		}
+	}	
+}

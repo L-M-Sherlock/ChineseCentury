@@ -1,0 +1,54 @@
+[Terrain template=Terrain]
+{
+	IDS = tropical_grasstrans
+	name = "#tropical_grasstrans_name"
+	
+	base_priority = 100
+	terrain_group = dirt
+	terrain_color = 0.392, 0.639, 0.122
+	
+	doodad_frequency = 0.025
+	primary_doodad_frequency = 0.20
+
+	[Variation]
+	IDS = tropical_grassbeachtrans01
+	name = "#tropical_grasstrans_tropical_grassbeachtrans01_name"
+	texture = TropicalGrassTrans/TropicalGrassBeachTrans01.tga
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = tropical_grassdirttrans01
+	name = "#tropical_grasstrans_tropical_grassdirttrans01_name"
+	texture = TropicalGrassTrans/TropicalGrassDirtTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = tropical_grassgrassdrytrans01
+	name = "#tropical_grasstrans_tropical_grassgrassdrytrans01_name"
+	texture = TropicalGrassTrans/TropicalGrassGrassDryTrans01.tga
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = tropical_grassjungledensetrans01
+	name = "#tropical_grasstrans_tropical_grassjungledensetrans01_name"
+	texture = TropicalGrassTrans/TropicalGrassJungleDenseTrans01.tga
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = tropical_grassjungletrans01
+	name = "#tropical_grasstrans_tropical_grassjungletrans01_name"
+	texture = TropicalGrassTrans/TropicalGrassJungleTrans01.tga
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = tropical_grassmountaintrans01
+	name = "#tropical_grasstrans_tropical_grassmountaintrans01_name"
+	texture = TropicalGrassTrans/TropicalGrassMountainTrans01.tga
+	texture_width = 8
+	texture_height = 8
+}

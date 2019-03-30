@@ -1,0 +1,51 @@
+/**************************************************************************
+
+template_fx.tgi
+Copyright © 2004 TimeGate Studios
+
+DESCRIPTION: Effects that actors may share.
+
+REVISION HISTORY:
+brw011504 - created
+	
+**************************************************************************/
+
+;;-------------------------- TANK SHOTS FX ------------------------------- ;;
+
+[Template AAFXCTankShot Inherit=FXC_CreateVFX]
+{
+	VFX_IDS = tank_shot
+	at = SELF
+	attached = false
+	critical = false
+}
+
+[Template AAFXCTankShot01 Inherit=AAFXCTankShot]
+{
+	location = cannon_ae_01
+}
+
+[Template AAFXCTankShot02 Inherit=AAFXCTankShot]
+{
+	location = cannon_ae_02
+}
+
+[Template AAFXCTankShot03 Inherit=AAFXCTankShot]
+{
+	location = cannon_ae_03
+}
+
+[Template AAFXCTankShot04 Inherit=AAFXCTankShot]
+{
+	location = cannon_ae_04
+}
+
+;;-------------------------- BATTLESHIP SHOTS FX ------------------------------- ;;
+
+[Template AAFXCUSABattleshipShot Inherit=FXC_CreateVFX]
+{
+	VFX_IDS = usa_battleship_shot
+	at = SELF
+	attached = true
+	critical = false
+}

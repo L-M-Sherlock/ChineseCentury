@@ -1,0 +1,272 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_madagascar
+	name = "#mg_rmc_madagascar_name"
+	description = "#mg_rmc_madagascar_description"
+	biome = tropical_savannah
+
+	sun = SUN_DEFAULT,SUN_DEFAULT,SUN_DEFAULT,SUN_DUSK,SUN_MORNING,SUN_NIGHT
+	weather = NONE,NONE,NONE,NONE,RAIN_LIGHT
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 448
+	height = 448
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	East Africa
+	starting_pos = 20,160
+	type = water
+	
+	[Kingdom Template = KingdomDefender]
+	;;	Madagascar
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	South Africa
+	starting_pos = 20,20
+	type = water
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	Australia
+	starting_pos = 300,300
+	type = water
+	
+/********************    TERRAIN    ********************/
+
+	[TerrainBlob Template=SavDirtTerrainBlob]
+
+	[TerrainBlob Template=SavScrubTerrainBlob]
+
+	[TerrainBlob Template=SavGrasslandTerrainBlob]
+
+	[TerrainBlob Template=SavGrasslandTerrainBlob02]
+
+	[TerrainBlob Template=SavScrubTerrainBlob02]
+
+	[TerrainStreak Template=SavForestTerrainStreak]
+
+	[TerrainBlob Template=SavDirtTerrainBlob02]
+
+	[TerrainBlob Template=SavForestTerrainBlob]
+
+/********************    BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=SavMountainTerrainBlob]
+
+	[TerrainBlob Template=SavMountainTerrainBlob02]
+
+	[TerrainBlob Template=SavMountainTerrainBlob03]
+
+	[TerrainBlob Template=SavMountainTerrainBlob04]
+
+	[TerrainBlob Template=SavMountainTerrainBlob05]
+
+/********************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = WEST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = savannah_ocean
+	dir_bias = -1,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = savannah_ocean
+	dir_bias = -1,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = savannah_ocean
+	dir_bias = -1,+1
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = savannah_ocean
+	dir_bias = -1,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = savannah_ocean
+	dir_bias = -1,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = WEST
+	terrain_ids = savannah_ocean
+	dir_bias = -1,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = WEST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = savannah_ocean
+	dir_bias = -1,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = savannah_ocean
+	dir_bias = -1,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = savannah_ocean
+	dir_bias = -1,+1
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = savannah_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = savannah_ocean
+	dir_bias = -1,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = savannah_ocean
+	dir_bias = -1,+1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = WEST
+	terrain_ids = savannah_ocean
+	dir_bias = -1,+1
+	
+/********************   TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=SavNoisePhase01]
+	
+	[TerrainNoise Template=SavNoisePhase02]
+	
+	[TerrainNoise Template=SavNoisePhase03]
+	
+	[TerrainNoise Template=SavNoisePhase04]
+
+/*************************    ACTOR GROUPS    **************************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_madagascar
+		name = "#mg_rmc_madagascar_village_madagascar_name"
+
+		[Object]
+		object_ids = random_village_madagascar
+		weight = 1
+	}
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_1
+		name = "#mg_rmc_madagascar_bunkers_coastline_1_name"
+		search_relative_kingdom_ids = kingdom_attacker_1
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_2
+		name = "#mg_rmc_madagascar_bunkers_coastline_2_name"
+		search_relative_kingdom_ids = kingdom_attacker_2
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_3
+		name = "#mg_rmc_madagascar_bunkers_coastline_3_name"
+		search_relative_kingdom_ids = kingdom_attacker_3
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+}

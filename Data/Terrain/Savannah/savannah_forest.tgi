@@ -1,0 +1,25 @@
+[Terrain template=Terrain]
+{
+	IDS = savannah_forest
+	name = "#savannah_forest_name"
+
+	base_priority = 4000
+	terrain_group = dirt
+	
+	doodad_frequency = 0.15
+	primary_doodad_frequency = 0.90
+	
+	[Property]
+	property_IDS = terrain_forest_infantry
+	
+	[Property]
+	property_IDS = terrain_forest_vehicles
+	
+	[Variation]
+	IDS = savannah_forest01
+	name = "#savannah_forest_01_name"
+	texture = SavannahForest/SavannahForest01.tga
+	texture_width = 16
+	texture_height = 16
+	terrain_color = 0.584, 0.533, 0.333
+}

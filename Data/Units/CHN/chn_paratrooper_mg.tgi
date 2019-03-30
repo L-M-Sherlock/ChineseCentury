@@ -1,0 +1,103 @@
+[Thing Template=AAUnitCHNProne]
+{
+	IDS = chn_paratrooper_mg
+	name = "#chn_paratrooper_mg_name"
+	editor_name = "#chn_paratrooper_mg_editor_name"
+	
+	[Stance Template=StanceFalling]
+	
+	[View]
+	{
+		resource_prefix = CHNParatrooperMG/CHNParatrooperMG
+
+		[Aspect Template=AspectFalling]
+		{
+			IDS = falling
+			model = CHNParatrooper/CHNParatrooperFalling.nif
+			disable_animations = true
+		}
+
+		[TextureSearchPath]
+		{
+			path = /effects/parachute/CHN
+		}
+
+		[WhenCreated Template=FXC_Equipment]
+		action = HIDE
+		location = base
+		equipment_type_ids = tripoddown
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	
+	[BodyComponent]
+	health = 200
+	defense = 2
+
+	[CharacterComponent Template=AAInfantryMGCharacterComponent]
+
+	[ElementComponent]
+	{
+		required_properties = tech_usa_assistance
+		morale_value = 6
+	}
+	
+	[MoverComponent]
+	speed_max = 2.5
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+						
+		[Property]
+		property_IDS = mg
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryMG]
+			{				
+				name = "#usa_infantry_mg_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 2
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 15
+
+				[Effect Template=MoraleLossEffect]
+				amount = .25
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = chn_mg_heavy
+			}
+		}
+	}
+
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		vfx_ids = parachute_close_chn
+		actor_state = falling
+		location = neck
+	}
+}

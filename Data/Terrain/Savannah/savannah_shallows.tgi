@@ -1,0 +1,42 @@
+[Terrain template=WaterTerrain]
+{
+	IDS = savannah_shallows
+	name = "#savannah_shallows_name"
+	
+	base_priority = 10000
+	terrain_group = water
+	terrain_color = 0.298, 0.435, 0.408
+
+	doodad_frequency = 0.001
+	primary_doodad_frequency = 0.10
+
+/********************	WATER PARAMETERS		********************/
+
+	paint_slope = 0.1
+	max_slope = 0.15
+	paint_max_step = 1.5
+	max_depth = 3.0
+	anim_textures_path_prefix= SavannahWater/WaterFrames%04d.dds
+	anim_fps = 10
+	color = 0.010, 0.900, 0.755
+	
+ 	water_doodad_IDS = waves
+ 	water_doodad_offset_perpendicular = 0.25
+ 	water_doodad_offset_parallel = 2.0
+
+/********************	WATER VARIATIONS		********************/
+
+	[Variation]
+	IDS = savannah_shallows01
+	name = "#savannah_shallows_01_name"
+	texture = SavannahWater/SavannahWater01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = savannah_shallows02
+	name = "#savannah_shallows_02_name"
+	texture = SavannahWater/SavannahWater02.tga
+	texture_width = 8
+	texture_height = 8
+}

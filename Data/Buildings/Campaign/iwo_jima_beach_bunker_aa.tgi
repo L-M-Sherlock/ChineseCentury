@@ -1,0 +1,262 @@
+[Thing Inherit=AABuildingGroundPlane]
+{
+	name = "#iwo_jima_beach_bunker_aa_ground_name"
+	texture = IwoJimaBeachBunkerAA/IwoJimaBeachBunkerAATemperateGround.DDS	
+	IDS = iwo_jima_beach_bunker_aa_ground
+	texture_size = 8
+}
+
+
+[Thing Template=AABuilding]
+{
+	IDS = IwoJimaBeachBunkerAA
+	name = "#iwo_jima_beach_bunker_aa_name"
+	editor_name = "#iwo_jima_beach_bunker_aa_editor_name"
+
+	[BodyComponent]
+	{
+		captureable = true
+		health = 400
+		defense = 6
+	}
+	
+	[ConstructionComponent]
+	{
+		construction_node_name_prefix = Stage
+		finished_node_name = Final
+		can_sell = false
+		can_raze = false
+	}
+	
+	[DefenderComponent]
+	{
+		control_range = 30
+			
+		[Ability template=AATurretAttackLocal]
+		{
+			turret_ids = Turret
+
+			[AbilityDefinition Template=AABunkerAttack]
+			{
+				name = "#iwo_jima_beach_bunker_aa_DefenderComponent_AbilityDefinition_name"
+				
+				icon = /Properties/AbilityIcons/IconAbilityAntiAircraft.png
+
+				range = 30
+				recharge_time = 2
+				targets = +enemy, +air
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 45
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+				[Flags]
+				ignore_for_cv = true
+	
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = aa_shot1
+					at = SELF
+					attached = false
+					delay = 0.1
+					location = cannon_ae_01
+				}
+	
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = aa_shot1
+					at = SELF
+					attached = false
+					delay = 0.3
+					location = cannon_ae_02
+				}
+	
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = aa_shot1
+					at = SELF
+					attached = false
+					delay = 0.5
+					location = cannon_ae_03
+				}
+	
+				;;Tracer effect for tommy gun
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					frequency = 2
+					delay = 0.1
+					location = cannon_ae_01
+				}
+
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					frequency = 2
+					delay = 0.3
+					location = cannon_ae_02
+				}
+
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_tracer
+					attached = false
+					frequency = 2
+					delay = 0.5
+					location = cannon_ae_03
+				}
+	
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = flak_shot_1
+					at = TARGET_HIT_POSITION
+					attached = false
+					delay = 0.4
+				}
+	
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = flak_shot_2
+					at = TARGET_HIT_POSITION
+					attached = false
+					delay = 0.8
+				}
+	
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = flak_shot_3
+					at = TARGET_HIT_POSITION
+					attached = false
+					delay = 1.2
+				}
+	
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = flak_shot_1
+					at = TARGET_HIT_POSITION
+					attached = false
+					delay = 1.6
+				}
+	
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = flak_shot_2
+					at = TARGET_HIT_POSITION
+					attached = false
+					delay = 2.0
+				}
+	
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = flak_shot_3
+					at = TARGET_HIT_POSITION
+					attached = false
+					delay = 2.4
+				}
+
+				;;explosion on target
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_explosion
+					target_flags = +infantry
+					at = TARGET_HIT_POSITION
+					attached = false
+				}
+	
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = mg_shot_explosion_hard
+					target_flags = -infantry
+					at = TARGET_HIT_POSITION
+					attached = false
+				}
+			}
+		}
+	}
+
+	[DetectionComponent]
+	{
+		detection_range = 30
+	}
+
+	[EconomyComponent]
+	
+	[Flags]
+	{
+		axis_locked = false
+	}	
+	
+	[Placement]
+	{
+		placement_group_IDS = group_campaign
+	}
+	
+	[PropertiesComponent]
+	
+	[Size]
+	{
+		height = 2
+		blocking_shape = SQUARE
+		square_size = 6
+		fixed scale_min = 1.0
+		fixed scale_max = 1.0
+		
+	}
+
+	[Stance Template=StanceDeath]
+
+	[View]
+	{	
+		resource_prefix = IwoJimaBeachBunkerAA/IwoJimaBeachBunkerAA
+
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = IwoJimaBeachBunkerAA/IwoJimaBeachBunkerAARecoil1.kf
+		}
+
+		
+		[Aspect Template=AAAspectDeath]
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = iwo_jima_beach_bunker_aa_ground
+			terrain_group_filter = dirt
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = iwo_jima_beach_bunker_aa_ground
+			terrain_group_filter = desert
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = iwo_jima_beach_bunker_aa_ground
+			terrain_group_filter = snow
+		}
+	}
+
+	[PerformerComponent]
+	{
+		[Turret]
+		{
+			turret_ids = Turret
+			offset = 0.98,-2.327
+			
+			yaw_start_degrees = 0
+			yaw_rotation_per_sec_degrees = 180
+			yaw_rotation_range_degrees = 360
+
+			pitch_start_degrees = 45
+			pitch_rotation_range_start_degrees = -90
+			pitch_rotation_range_end_degrees = 90
+			pitch_rotation_per_sec_degrees = 180	
+		}
+	}
+}

@@ -1,0 +1,48 @@
+[Ego template = ArmorLowIncomeEgo]
+{
+	IDS										= mountbatten_low_income_ego
+	name									= "#Great_Britain_Mountbatten_SAI_mountbatten_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorLowLowEgo]
+{
+	IDS										= mountbatten_low_low_ego
+	name									= "#Great_Britain_Mountbatten_SAI_mountbatten_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorMainGameEgo]
+{
+	IDS										= mountbatten_main_game_ego
+	name									= "#Great_Britain_Mountbatten_SAI_mountbatten_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = ArmorEndGameEgo]
+{
+	IDS										= mountbatten_end_game_ego
+	name									= "#Great_Britain_Mountbatten_SAI_mountbatten_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= mountbatten_sai
+	name									= "#Great_Britain_Mountbatten_SAI_mountbatten_sai_name"
+	description								= "#Great_Britain_Mountbatten_SAI_mountbatten_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= mountbatten_low_income_ego
+
+	[Ego]
+	IDS										= mountbatten_low_low_ego
+
+	[Ego]
+	IDS										= mountbatten_main_game_ego
+
+	[Ego]
+	IDS										= mountbatten_end_game_ego
+
+	[Nation]
+	IDS										= nation_gbr
+	
+	[Faction]
+	ids										= mountbatten
+} ;; gbr SAI

@@ -1,0 +1,59 @@
+[Template USAFighter Inherit=AAUnitUSAAirplaneFighter]
+{
+	[View]
+	resource_prefix = USAFighter/USAFighter
+
+	[PerformerComponent]
+	{
+		[Ability Template=AAAttackLocal]
+		{
+			idle_animation = idle  ;; Temporary fix
+						
+			[AbilityDefinition Template=AAAirplaneAttackMG]
+			{
+				name = "#usa_fighter_AbilityDefinition_name"
+				mana_cost = 1
+				recharge_time = 1
+
+                                area = 4
+				attenuation_range_min = 2
+				attenuation_factor_max = 0.5
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 80
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = usa_mg_heavy
+			}
+		}
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = mg
+		
+		[Property]
+		property_IDS = combat_unit
+
+		[Property]
+		property_IDS = fighter
+	}		
+}
+
+[Thing Template=USAFighter]
+{
+	IDS = usa_fighter
+	name = "#usa_fighter_name"
+	editor_name = "#usa_fighter_editor_name"
+}
+
+[Thing Template=USAFighter]
+{
+	IDS = usa_fighter_corsair
+	name = "#usa_fighter_corsair_name"
+	editor_name = "#usa_fighter_corsair_editor_name"
+	
+	[View]
+	resource_prefix = USAFighterTropical/USAFighterTropical
+}

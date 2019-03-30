@@ -1,0 +1,13 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "(1v1) Golden Fields"
+
+	kingdom_1 = "Side 1"
+	name_6 = "Village Town Center"
+	kingdom_0 = "Side 0"
+	map_description = "One vs. one elimination map."
+	map_name = "(1v1) Golden Fields"
+	name_7 = "Village Town Center"
+	kingdom_2 = "Independent"
+}

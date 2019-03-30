@@ -1,0 +1,11 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Narrow road 3"
+
+	independent_0 = "0"
+	kingdom_2 = "2"
+	kingdom_1 = "1"
+	map_name = "<color=0.7,1.0,0.7>Map Pack:Narrow road 3"
+	map_description = "BY:xiaoming"
+}

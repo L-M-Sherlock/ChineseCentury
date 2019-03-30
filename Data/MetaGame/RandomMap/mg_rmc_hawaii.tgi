@@ -1,0 +1,306 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_hawaii
+	name = "#mg_rmc_hawaii_name"
+	description = "#mg_rmc_hawaii_description"
+	biome = tropical_forest
+
+	sun = SUN_DEFAULT,SUN_DEFAULT,SUN_DEFAULT,SUN_DEFAULT,SUN_DUSK,SUN_MORNING,SUN_NIGHT
+	weather = NONE,NONE,NONE,NONE,RAIN_LIGHT,RAIN_HEAVY
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 384
+	height = 384
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	Alaska
+	starting_pos = 20,300
+	type = water
+	
+	[Kingdom Template = KingdomDefender]
+	;;	Hawaii
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	Western Canada
+	starting_pos = 160,300
+	type = water
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	Aleutian Islands
+	starting_pos = 10,290
+	type = water
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	Marshall Islands
+	starting_pos = 20,20
+	type = water
+	
+	[Kingdom Template = KingdomAttacker5]
+	;;	Midway
+	starting_pos = 20,160
+	type = water
+	
+	[Kingdom Template = KingdomAttacker6]
+	;;	Western United States
+	starting_pos = 300,300
+	type = water
+	
+	[Kingdom Template = KingdomAttacker7]
+	;;	Mexico / Samoa
+	starting_pos = 300,90
+	type = water
+	
+/******************** 	TERRAIN    ********************/
+
+	[TerrainBlob Template=TropGrassTerrainBlob]
+	
+	[TerrainStreak Template=TropGrassDryTerrainStreak]
+
+	[TerrainBlob Template=TropGrassDryTerrainBlob]
+	
+	[TerrainStreak Template=TropDirtTerrainStreak]
+
+	[TerrainBlob Template=TropDirtTerrainBlob]
+	
+	[TerrainStreak Template=TropJungleTerrainStreak]
+
+	[TerrainBlob Template=TropJungleTerrainBlob]
+	
+	[TerrainStreak Template=TropJungleDenseTerrainStreak]
+
+	[TerrainBlob Template=TropJungleDenseTerrainBlob]
+	
+	[TerrainBlob Template=TropDirtTerrainBlob02]
+	
+	[TerrainBlob Template=TropGrassDryTerrainBlob02]
+	
+	[TerrainBlob Template=TropGrassTerrainBlob02]
+
+/******************** 	BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=TropMountainTerrainBlob]
+	
+	[TerrainBlob Template=TropMountainTerrainBlob02]
+	
+	[TerrainBlob Template=TropMountainTerrainBlob03]
+	
+	[TerrainBlob Template=TropMountainTerrainBlob04]
+	
+	[TerrainBlob Template=TropMountainTerrainBlob05]
+	
+	[TerrainBlob Template=TropWaterTerrainBlob]
+
+	[TerrainBlob Template=TropWaterTerrainBlob01]
+
+/********************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = NORTH
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.75
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = WEST
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.25
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.75
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.5
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.75
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = WEST
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.25
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.75
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.5
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = tropical_ocean
+	dir_bias = -1,-0.5
+	
+/******************** 	TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=TropNoisePhase01]
+	
+	[TerrainNoise Template=TropNoisePhase02]
+	
+	[TerrainNoise Template=TropNoisePhase03]
+	
+	[TerrainNoise Template=TropNoisePhase04]
+
+	[TerrainNoise Template=TropNoisePhase05]
+
+	[TerrainNoise Template=TropNoisePhase06]
+
+/*************************    ACTOR GROUPS    **************************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_hawaii
+		name = "Villages"
+
+		[Object]
+		object_ids = random_village_hawaii
+		weight = 1
+	}
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_1
+		name = "#mg_rmc_hawaii_bunkers_coastline_1_name"
+		search_relative_kingdom_ids = kingdom_attacker_1
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 64		
+		proximity_desired = 256
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_2
+		name = "#mg_rmc_hawaii_bunkers_coastline_2_name"
+		search_relative_kingdom_ids = kingdom_attacker_2
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 64		
+		proximity_desired = 256
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_3
+		name = "#mg_rmc_hawaii_bunkers_coastline_3_name"
+		search_relative_kingdom_ids = kingdom_attacker_3
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 64		
+		proximity_desired = 256
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_4
+		name = "#mg_rmc_hawaii_bunkers_coastline_4_name"
+		search_relative_kingdom_ids = kingdom_attacker_4
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 64		
+		proximity_desired = 256
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_5
+		name = "#mg_rmc_hawaii_bunkers_coastline_5_name"
+		search_relative_kingdom_ids = kingdom_attacker_5
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 64		
+		proximity_desired = 256
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_6
+		name = "#mg_rmc_hawaii_bunkers_coastline_6_name"
+		search_relative_kingdom_ids = kingdom_attacker_6
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 64		
+		proximity_desired = 256
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_7
+		name = "#mg_rmc_hawaii_bunkers_coastline_7_name"
+		search_relative_kingdom_ids = kingdom_attacker_7
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 64		
+		proximity_desired = 256
+	}
+}

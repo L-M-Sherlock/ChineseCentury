@@ -1,0 +1,61 @@
+
+[Thing Template=AADesertDoodad]
+{
+	IDS = desert_rocks
+	name = "#desert_rocks_name"
+	
+	[Flags]
+	{
+		blocking = false
+	} 
+	
+	[Size]
+	{
+		height = 3
+		scale_min = 0.6
+		scale_max = 0.9
+	}
+
+	[Placement]
+	{
+		[Biome]
+		{
+			ids = desert
+			weight = 0.0
+
+			[Terrain]
+			IDS = desert_dirt
+			weight = 0.01
+
+			[Terrain]
+			IDS = desert_savannah
+			weight = 0.15
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = DesertRocks/DesertRocks
+		shadow_type = TEXTURE
+		shadow_texture = /effects/shadows/unitshadow.dds
+
+		[Aspect Template=Aspect]
+		{
+			ids = desert_rocks_01
+			model = %s01.nif
+		}	
+
+		[Aspect Template=Aspect]
+		{
+			ids = desert_rocks_02
+			model = %s02.nif
+		}
+
+		[Aspect Template=Aspect]
+		{
+			ids = desert_rocks_03
+			model = %s03.nif
+		}	
+	}
+}
+

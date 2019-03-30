@@ -1,0 +1,64 @@
+[Thing Template=AATropicalDoodad]
+{
+	IDS = savannah_bushdry
+	name = "#savannah_bushdry_name"
+	
+	[Placement]
+	{
+		[Biome]
+		{
+			ids = tropical_savannah
+			weight = 0.01
+			
+			[Terrain]
+			IDS = savannah_beach
+			weight = 0.00
+			
+			[Terrain]
+			IDS = savannah_dirt
+			weight = 0.001
+
+			[Terrain]
+			IDS = savannah_dirttrans
+			weight = 0.001
+
+			[Terrain]
+			IDS = savannah_oasis
+			weight = 0.00
+			
+			[Terrain]
+			IDS = savannah_ocean
+			weight = 0.00
+
+			[Terrain]
+			IDS = savannah_river
+			weight = 0.00
+
+			[Terrain]
+			IDS = savannah_shallows
+			weight = 0.00
+		}
+		
+		[Biome]
+		IDS = tropical_forest
+		weight = -1.00		
+	}
+
+	[Size]
+	scale_max = 1.3
+	
+	[View]
+	{
+		resource_prefix = SavannahBushDry/SavannahBushDry
+		shadow_type = TEXTURE
+		shadow_texture = /effects/shadows/ShrubFullShadow.dds
+
+		[TextureSearchPath]
+		path = /Doodads/Savannah/SavannahTreesBare
+		
+		[Aspect Template=Aspect]
+		IDS = savannah_bushdry01
+		model = %s01.nif
+		ground_size = 0.5,0.5
+	}
+}

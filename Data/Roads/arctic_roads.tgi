@@ -1,0 +1,53 @@
+[Thing Template=Road]
+{
+	IDS = arctic_dirt_road_straight
+	name = "#arctic_roads_arctic_dirt_road_straight_name"
+	
+	[View]
+	resource_prefix = ArcticRoad/SnowDirtRoadStraight
+}
+
+[Thing Template=Road]
+{
+	IDS = arctic_dirt_road_straight_end
+	name = "#arctic_roads_arctic_dirt_road_straight_end_name"
+	
+	[View]
+	resource_prefix = ArcticRoad/SnowDirtRoadEnd
+}
+
+[Thing Template=Road]
+{
+	IDS = arctic_dirt_road_curve
+	name = "#arctic_roads_arctic_dirt_road_curve_name"
+	
+	[View]
+	resource_prefix = ArcticRoad/SnowDirtRoadCurve
+}
+
+[Thing Template=Road]
+{
+	IDS = arctic_dirt_road_curve_end
+	name = "#arctic_roads_arctic_dirt_road_curve_end_name"
+	
+	[View]
+	resource_prefix = ArcticRoad/SnowDirtRoadCurveEnd
+}
+
+[Thing Template=Road]
+{
+	IDS = arctic_dirt_road_bend
+	name = "#arctic_roads_arctic_dirt_road_bend_name"
+	
+	[View]
+	resource_prefix = ArcticRoad/SnowDirtRoadBend
+}
+
+[Thing Template=Road]
+{
+	IDS = arctic_dirt_road_bend_end
+	name = "#arctic_roads_arctic_dirt_road_bend_end_name"
+	
+	[View]
+	resource_prefix = ArcticRoad/SnowDirtRoadBendEnd
+}

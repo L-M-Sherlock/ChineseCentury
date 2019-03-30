@@ -1,0 +1,64 @@
+;; Entrenched
+[ActorState template=ActorState]
+{
+	IDS = organization_entrenched
+	name = "#actor_states_organization_entrenched_name"
+	priority = 6
+
+	[Property]
+	property_ids = infantry_entrench
+	
+	[Property]
+	property_ids = vehicle_entrench
+}
+
+;; STANDING STATE: exhausted
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_exhausted
+	name = "#actor_states_mind_exhausted_name"
+
+	priority = 12
+	resupply = true
+	morale_replenish = true
+	remove_from_group = true
+	formation_required = BROKEN
+	behavior_required = AGGRESSIVE
+
+	[Property]
+	property_ids = actor_state_exhausted
+}
+
+;; STRUCTURE STATE
+[ActorState template=ActorState]
+{
+	IDS = structure_razing
+	name = "#actor_states_structure_razing_name"
+	priority = 14	
+	type = busy
+}
+
+;; MOVING STATE: an ordered move out of engagement
+[ActorState template=ActorStateMind]
+{
+	IDS = mind_retreating
+	name = "#actor_states_mind_retreating_name"
+
+	priority = 8
+	resupply = true			;; pcb043004 - bug 2277
+	morale_replenish = false
+	formation_required = RETREAT	;; pcb070704 - A&A no longer uses column
+	behavior_required = PASSIVE
+}
+
+;; Under siege, to be used for contested
+[ActorState template=ActorState]
+{
+	IDS = under_siege
+	name = "#actor_states_under_siege_name"
+	priority = 12
+	
+	[Property]
+	property_ids = actor_state_contested
+	
+}

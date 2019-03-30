@@ -1,0 +1,100 @@
+[Template AACHNRegimentParatrooperMP Template=AACHNOrganizationParatrooper]
+{
+	name = "#regiment_chn_paratrooper_MP_name"
+	editor_name = "#regiment_chn_paratrooper_MP_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 150
+		
+		[Upkeep]
+		ammo = 18
+	}	
+	
+	[View]
+	{
+		resource_prefix = /Units/CHN/CHNParatrooperMP/CHNParatrooper
+		icon = /UI/Game/RegimentButtons/IconInfantryHeavy.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = chn_paratrooper_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = chn_paratrooper_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = chn_paratrooper_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{
+		layout_IDS = regiment_saodang
+
+		[Slot]	;; front
+		element_IDS = chn_paratrooper_MP
+
+		[Slot]	;; front
+		element_IDS = chn_paratrooper_MP
+
+		[Slot]	;; front
+		element_IDS = chn_paratrooper_MP
+
+		[Slot]	;; front
+		element_IDS = chn_paratrooper_MP
+
+		[Slot]	;; front
+		element_IDS = chn_paratrooper_MP
+
+		[Slot]	;; front
+		element_IDS = chn_paratrooper_MP
+
+		[Slot]	;; front
+		element_IDS = chn_paratrooper_MP
+
+		[Slot]	;; front
+		element_IDS = chn_paratrooper_MP
+
+		[Slot]	;; front
+		element_IDS = chn_paratrooper_MP
+
+		[Slot]	;; captain
+		element_IDS = chn_paratrooper_MP_co
+
+                
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = paratrooper_company
+		
+	}
+}
+
+[Thing Template=AACHNRegimentParatrooperMP]
+{
+	IDS = regiment_chn_paratrooper_MP
+
+	transport_actor = chn_transport_air
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 150
+	}
+
+	[Placement]
+	placement_group_ids = null
+}
+
+[Thing Template=AACHNRegimentParatrooperMP]
+{
+	IDS = regiment_chn_paratrooper_MP_ground
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 125
+	}
+}

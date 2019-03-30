@@ -1,0 +1,104 @@
+[Thing Template=AAUnitnedVehicleLightTank]
+{
+	;;IDS = ned_light_tank
+	IDS = ned_tank_light
+	name = "#ned_tank_light_name"
+	editor_name = "#ned_tank_light_editor_name"
+
+	[BodyComponent]
+	{
+		health = 480
+		defense = 7
+	}
+
+	[ElementComponent]
+
+	[MoverComponent]
+	{
+		speed_max = 3.5
+		acceleration = 3
+				
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_01
+			location = exhaust_point_01	
+	  	}
+	  	
+	  	[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_01
+			location = exhaust_point_02	
+	  	}
+	}
+	
+	[PerformerComponent]
+	{
+		check_damage_resistance = true
+
+		[Ability template=AATurretAttackLocal]
+		{
+			
+			[AbilityDefinition Template=AALightTankGun]
+			{				
+				name = "#ned_tank_light_AbilityDefinition_name"
+				recharge_time = 6
+				area = 1
+				range = 18
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+				
+				[Effect Template=APDamageEffect]
+				amount = 50
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ned_cannon_light
+			}
+		}
+		[Ability Template=AATurretAttackLocal]
+		{	
+			[AbilityDefinition Template=AAVehicleMG]
+			{
+				name = "#ned_halftrack_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 2
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 25
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ned_mg_heavy
+			}
+		}
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[View]
+	{
+		resource_prefix = nedTankLight/nedTankLight
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = nedTankLight/nedTankLightRecoil1.kf
+		}
+	}
+}

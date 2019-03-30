@@ -1,0 +1,18 @@
+
+;; ---------------------------- Message Box ----------------------------
+
+[Template AAMessageBoxWidget Inherit=MessageBoxWidget]
+{
+	[MessageBoxButton Inherit=MenuPushButtonWidget]
+
+}
+
+[GameMessageBox Template=MessageBoxWidget]
+{
+	[View Template=GroupVE]
+	{
+		[Child Template = MessageBoxPanelGroupVE]
+	}
+	
+	[MessageBoxButton Inherit=MenuPushButtonWidget]
+}

@@ -1,0 +1,89 @@
+[Template AARUSHalftrackArtillery Inherit=AAUnitRUSVehicleHalftrack]
+{
+	[BodyComponent]
+	{
+		health = 200
+		defense = 5
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = artillery		
+		
+		[Property]
+		property_IDS = combat_unit
+		
+		[Property]
+		property_IDS = halftrack_unit
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 4.5
+	}
+	
+	[PerformerComponent]
+	{		
+		[Ability Template=AAProjectileLocal]
+		{
+			[AbilityDefinition Template=AASPAShot]
+			{
+				name = "#rus_halftrack_artillery_AbilityDefinition_name"
+				range = 44
+				area = 3
+				recharge_time = 9
+				max_targets = 8
+					
+				[Effect Template=BlastDamageEffect]
+				amount = 40
+				
+				[Effect Template=MoraleLossEffect]
+				amount = .75
+				
+				[Flags] 
+				bombard = true
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_artillery_heavy
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+
+			}
+		}
+	}	
+	
+
+	
+	[View]
+	{
+		resource_prefix = RUSHalftrackArtillery/RUSHalftrackArtillery
+
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = RUSHalftrackArtillery/RUSHalftrackArtilleryRecoil1.kf
+		}
+	}
+}
+
+;;----------------------------- UNITS ------------------------ ;;
+
+[Thing Template=AARUSHalftrackArtillery]
+{
+	IDS = rus_halftrack_artillery
+	name = "#rus_halftrack_artillery_Thing_name"
+	editor_name = "#rus_halftrack_artillery_Thing_editor_name"
+
+	[ElementComponent]
+	required_structures = rus_brigade_artillery
+}

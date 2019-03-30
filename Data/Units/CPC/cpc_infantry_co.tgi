@@ -1,0 +1,115 @@
+;;---------------------------------------------- CPCInfantryCO Portrait --------
+[Thing Template=Portrait]
+{
+	ids = cpc_infantry_co_portrait
+	name = "#cpc_infantry_co_portrait_name"
+
+	[View]
+	{
+		resource_prefix = CPCInfantryCo/CPCInfantryCOPortrait
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+
+		[AspectNormal]
+		{
+			[Animation Template=ObjectAnimationIdle]
+			{
+				ids = idle
+			}
+
+			[Animation Template=ObjectAnimationFidget]
+			{
+				ids = fidget1
+			}
+			
+			[Animation Template=ObjectAnimationFidget]
+			{
+				ids = fidget2
+			}
+			[Animation Template=ObjectAnimationFidget]
+			{
+				ids = talk1
+			}
+
+		}
+	}
+}
+
+
+;;---------------------------------------------- CPCInfantryCO Unit --------
+
+
+[Thing Template=AAUnitCPCProne]
+{
+	IDS = cpc_infantry_co
+	name = "#cpc_infantry_co_Thing_name"
+	editor_name = "#cpc_infantry_co_Thing_editor_name"
+	
+	[View]
+	{	resource_prefix = CPCInfantryCO/CPCInfantryCO
+
+		portrait_ids = cpc_infantry_co_portrait	
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+
+	[BodyComponent]
+	health = 5000
+	defense = 100
+
+	[CharacterComponent Template=AAInfantrySMGCharacterComponent]
+	
+	[ElementComponent]
+	morale_value = 50
+	
+	[MoverComponent]
+	speed_max = 8
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = captain
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantrySMG]
+			{				
+				name = "#cpc_infantry_co_AbilityDefinition_name"
+				recharge_time = 1
+				range = 100
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 200
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_mg_light
+			}
+		}
+
+		[Ability Template=AAGrenadeLocal]
+		{
+			[AbilityDefinition Template=AAThrownGrenade]
+			{
+				name = "#cpc_infantry_AbilityDefinition_name_2"
+				projectile_ids = grenade01
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 500
+			}
+		}
+	}
+}

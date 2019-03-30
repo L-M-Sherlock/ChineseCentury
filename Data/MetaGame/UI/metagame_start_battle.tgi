@@ -1,0 +1,296 @@
+
+;; ---------------------------- Purchasing Dialog ---------------------------------
+
+[MetaGameStartBattleDialog Inherit=MetagameMenuGamePanelWidget]
+{
+	[View]
+	{
+		L = 275
+  		T = 135
+  		R = +473
+  		B = +500
+		
+		;; cwp041204 - Children no longer being defined in template
+		[Child Template = MetaGameMenuGamePanelGroupVE]
+
+		[Child Template = SharedSmallCenteredLabelVE]
+		{
+			L = 226
+			T = 100
+			R = 256
+			B = +20
+				
+			text = "#metagame_start_battle_Child_text"
+		}
+	}	
+	
+	;;  Label of what we are fighting for
+	[MetaGameContestedTerritoryLabel Template = LabelWidget]
+	{
+		[View Template = NoVE]
+		{
+			L = 40
+			T = 59
+			R = 40r
+			B = +20
+		}
+		
+		[Label Template = SharedSmallCenteredLabelVE]
+		{
+			text = "#metagame_start_battle_MetaGameContestedTerritoryLabel_Label_text"
+		}
+	}
+
+	[MetaGameAttackerPanel Inherit = PanelWidget]
+	{
+		[View Template=GroupVE]
+		{
+			L = 90
+			T = 100
+			R = +146
+			B = +180
+
+			[Child Template=SharedTooltipChildPanelVE]
+			{
+				L = 10
+				T = 20
+				R = 130
+				B = 176
+			}
+		}
+
+		[AttackerLabel Template = LabelWidget]
+		{
+			[View Template = NoVE]
+			{
+				L = 0
+				T = 0
+				R = 100%
+				B = +20
+			}
+
+			[Label Template = SharedSmallCenteredLabelVE]
+			{
+				text = ""	;; set by code
+			}
+		}
+
+		[AttackerArmyList Inherit=SharedViewportScrollWidget]
+		{
+			[View]
+			{
+				L = 20
+				T = 30
+				R = 120
+				B = 166
+			}
+
+			[Client inherit=PanelWidget]			
+			{
+				;; Note that panels are placed by the code, so all this
+				;; is specifying is the size.
+				[View Template=GroupVE]
+				{
+					L = 0
+					T = 0
+					R = 100%
+					B = +34
+				}	
+
+						
+				[Decal template=DecalWidget]
+				{
+					[View Template=NoVE]
+					{
+						L = 0
+						T = 0
+						R = +34
+						B = +34
+					}
+				
+					[Decal Template=DecalVE]
+					{
+						;; texture will be set based on army icon
+						texture = NULL
+					}
+				}				
+
+				[Column0 template=LabelWidget]
+				{				
+					[View Template=GroupVE]
+					{
+						L = 43
+						T = 8
+						R = +70
+						B = +26
+					}
+			
+					[Label Template=SharedSmallLeftLabelVE]
+					{
+						;; text will be set based on the army name
+						text = ""
+					}
+				}
+			}	
+
+			[Scrollbar Template=SharedScrollbarWidget]
+		}
+	}
+
+	[MetaGameDefenderPanel Inherit = PanelWidget]
+	{
+		[View Template=GroupVE]
+		{
+			L = 247
+			T = 100
+			R = +146
+			B = +180
+
+			[Child Template=SharedTooltipChildPanelVE]
+			{
+				L = 10
+				T = 20
+				R = 130
+				B = 176
+			}
+		}
+
+		[DefenderLabel Template=LabelWidget]
+		{
+			[View Template = NoVE]
+			{
+				L = 0
+				T = 0
+				R = 100%
+				B = +20
+			}
+
+			[Label Template = SharedSmallCenteredLabelVE]
+			{
+				text = ""	;; set by code
+			}
+		}
+
+		[DefenderArmyList Inherit=SharedViewportScrollWidget]
+		{
+			[View]
+			{
+				L = 20
+				T = 30
+				R = 120
+				B = 166
+			}
+
+			[Client inherit=PanelWidget]			
+			{
+				;; Note that panels are placed by the code, so all this
+				;; is specifying is the size.
+				[View Template=GroupVE]
+				{
+					L = 0
+					T = 0
+					R = 100%
+					B = +34
+				}
+						
+				[Decal template=DecalWidget]
+				{
+					[View Template=NoVE]
+					{
+						L = 0
+						T = 0
+						R = +34
+						B = +34
+					}
+				
+					[Decal Template=DecalVE]
+					{
+						;; texture will be set based on army icon
+						texture = NULL
+					}
+				}				
+
+				[Column0 template=LabelWidget]
+				{				
+					[View Template=GroupVE]
+					{
+						L = 43
+						T = 8
+						R = +70
+						B = +26
+					}
+			
+					[Label Template=SharedSmallLeftLabelVE]
+					{
+						;; text will be set based on the army name
+						text = ""
+					}
+				}
+			}	
+
+			[Scrollbar Template=SharedScrollbarWidget]
+		}
+	}
+
+	[MetaGameButtonStartBattlePlay Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#metagame_start_battle_MetaGameButtonStartBattlePlay_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 146
+			T = 300
+		}
+	}
+
+	[MetaGameButtonStartBattleWatch Template=MenuPushButtonWidget]
+	{
+		visible = false
+
+		[Client]
+		{
+			[View]
+			text = "#metagame_start_battle_MetaGameButtonStartBattleWatch_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 146
+			T = 300
+		}
+	}
+
+	[MetaGameButtonStartBattleQuickBattle Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#metagame_start_battle_MetaGameButtonStartBattleQuickBattle_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 146
+			T = 354
+		}
+	}
+
+	[MetaGameButtonStartBattleCancel Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#metagame_start_battle_MetaGameButtonStartBattleCancel_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 146
+			T = 408
+		}
+	}
+}

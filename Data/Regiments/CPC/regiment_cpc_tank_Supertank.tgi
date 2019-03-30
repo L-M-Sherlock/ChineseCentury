@@ -1,0 +1,55 @@
+[Thing Template=AACPCOrganizationArmor]
+{	
+	IDS = regiment_cpc_tank_Supertank
+	name = "#regiment_cpc_tank_Supertank_name"
+	editor_name = "#regiment_cpc_tank_Supertank_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 275
+		
+		[Upkeep]
+		ammo = 35
+		oil = 30
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CPC/CPCTankHeavy/CPCTankHeavy
+		icon = /UI/Game/RegimentButtons/IconSuperRocketTruck.png
+		banner_icon = /Organizations/Banners/Icons/IconArmorArtillery.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = rus_tank_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_tank_heavy_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_tank_heavy_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_tank_heavy_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = cpc_tank_heavy
+	
+		[Slot]	;; support
+		element_IDS = cpc_rocket_truck
+		
+		[Slot]	;; captain
+		element_IDS = cpc_tank_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = tank_company
+	}
+}

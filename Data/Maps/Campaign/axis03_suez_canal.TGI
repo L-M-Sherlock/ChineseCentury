@@ -1,0 +1,31 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "axis03_suez_canal"
+
+	name_9921 = ""
+	name_9944 = ""
+	trigger_37_element_3 = " :         333333."
+	trigger_38_element_2 = " :        333333."
+	independent_4 = "Ambient"
+	restriction_group_0004 = "Restrictions"
+	name_9963 = ""
+	trigger_25_element_9 = " :             ."
+	trigger_26_element_8 = " :           ."
+	kingdom_3 = ""
+	map_name = "axis03_suez_canal"
+	kingdom_2 = ""
+	kingdom_1 = ""
+	kingdom_0 = ""
+	trigger_30_element_2 = " :          333333."
+	objective_5 = "6.            ."
+	objective_4 = "5.            ."
+	objective_3 = "4.              ."
+	trigger_28_element_8 = " :           ."
+	trigger_36_element_3 = " :        333333."
+	objective_2 = "3.                 ."
+	trigger_27_element_8 = " :            ."
+	objective_1 = "2.             ."
+	objective_0 = "1.            ."
+	map_description = ",                .                   .                .                  . "
+}

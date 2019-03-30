@@ -1,0 +1,48 @@
+[Ego template = ArmorLowIncomeEgo]
+{
+	IDS										= kuribayashi_low_income_ego
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorLowLowEgo]
+{
+	IDS										= kuribayashi_low_low_ego
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorMainGameEgo]
+{
+	IDS										= kuribayashi_main_game_ego
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = ArmorEndGameEgo]
+{
+	IDS										= kuribayashi_end_game_ego
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= kuribayashi_sai
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_sai_name"
+	description								= "#Japan_Kuribayashi_SAI_kuribayashi_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= kuribayashi_low_income_ego
+
+	[Ego]
+	IDS										= kuribayashi_low_low_ego
+
+	[Ego]
+	IDS										= kuribayashi_main_game_ego
+
+	[Ego]
+	IDS										= kuribayashi_end_game_ego
+
+	[Nation]
+	IDS										= nation_jpn
+	
+	[Faction]
+	ids										= kuribayashi
+} ;; jpn SAI

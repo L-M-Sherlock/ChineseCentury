@@ -1,0 +1,13 @@
+[template CharacterComponent]
+{
+	;; times to loop idle animation between fidgets
+	float	animation_blend_time = 0.25
+	
+	[list Animation Template=Animation]
+
+	;; animation sets for the actor's various aspects (if any animations
+	;; exist in the default set but are missing from an aspect set, they
+	;; will be copied over)
+	[list AspectAnimationSet Template=AspectAnimationSet]
+}
+

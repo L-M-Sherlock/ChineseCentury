@@ -1,0 +1,8 @@
+[Banner Template=AABanner]
+{
+	ids = jpn_banner
+	name = "#jpn_banner_name"
+	
+	model = Shared/Banner.nif
+	resource_prefix = JPN/JPN
+}

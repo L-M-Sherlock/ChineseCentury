@@ -1,0 +1,129 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_france
+	name = "#mg_rmc_france_name"
+	description = "#mg_rmc_france_description"
+	biome = temperate_grassland
+
+	sun = SUN_DEFAULT,SUN_DEFAULT,SUN_DEFAULT,SUN_DUSK,SUN_MORNING,SUN_NIGHT
+	weather = NONE,NONE,RAIN_LIGHT,RAIN_HEAVY
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 512
+	height = 512
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	German Coast
+	starting_pos = 160,300
+	
+	[Kingdom Template = KingdomDefender]
+	;;	France
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	French Coast
+	starting_pos = 20,160
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	Germany
+	starting_pos = 300,300
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	Southern Europe
+	starting_pos = 300,160
+	
+	[Kingdom Template = KingdomAttacker5]
+	;;	French North Africa
+	starting_pos = 300,20
+	type = water
+	
+	[Kingdom Template = KingdomAttacker6]
+	;;	Spain
+	starting_pos = 160,20
+	
+	[Kingdom Template = KingdomAttacker7]
+	;;	Switzerland
+	starting_pos = 300,230
+	
+/********************    TERRAIN    ********************/
+
+	[TerrainBlob Template=TempGrassTerrainBlob]
+	
+	[TerrainStreak Template=TempGrassDryTerrainStreak]
+
+	[TerrainBlob Template=TempGrassDryTerrainBlob]
+	
+	[TerrainBlob Template=TempDirtTerrainBlob]
+	
+	[TerrainStreak Template=TempForestDeciduousTerrainStreak]
+
+	[TerrainBlob Template=TempForestDeciduousTerrainBlob]
+	
+	[TerrainBlob Template=TempDirtTerrainBlob02]
+	
+	[TerrainBlob Template=TempGrassDryTerrainBlob02]
+
+	[TerrainBlob Template=TempGrassTerrainBlob02]
+
+/********************    BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=TempMountainTerrainBlob]
+
+	[TerrainBlob Template=TempMountainTerrainBlob02]
+	
+	[TerrainBlob Template=TempMountainTerrainBlob03]
+
+/********************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = temperate_ocean
+	dir_bias = 0,+1
+	
+/********************    TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=TempNoisePhase01]
+	
+	[TerrainNoise Template=TempNoisePhase04]
+
+	[TerrainNoise Template=TempNoisePhase05]
+
+	[TerrainNoise Template=TempNoisePhase06]
+
+/*************************    ACTOR GROUPS    **************************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_france
+		name = "#mg_rmc_france_village_france_name"
+
+		[Object]
+		object_ids = random_village_france
+		weight = 1
+	}
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_5
+		name = "#mg_rmc_france_bunkers_coastline_5_name"
+		search_relative_kingdom_ids = kingdom_attacker_5
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 128		
+		proximity_desired = 384
+	}
+}

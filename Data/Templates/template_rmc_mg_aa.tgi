@@ -1,0 +1,227 @@
+/**************************************************************************
+
+template_randommap_aa.tgi
+Copyright © 2004 TimeGate Studios
+
+DESCRIPTION:  Core templates for A&A random map system
+
+REVISION HISTORY:
+ick 02.26.04 - created
+ick 04.22.04 - major revisions
+
+USAGE:
+
+
+**************************************************************************/
+
+[Template AAMGRMC template=RMC]
+{
+	reference_size = 320
+	list_in_staging = false
+	max_percent_water = 0.9
+
+	balanced_kingdoms = false
+
+	[Rules]
+	{
+		game_type = PLAYABLE
+		
+		[Rule]
+		ids = difficultylevel
+		default = EASY
+		show_ui = false
+	}
+
+/*	INDEPENDENT KINGDOMS		*/
+
+	[Kingdom Template=RMCKingdomMinor]
+	{
+		IDS = side_herd
+		name = "#template_rmc_aa_side_herd_name_2"
+
+		[Relation]
+		kingdom_ids = side*
+		relation = NEUTRAL
+	}
+
+	[Kingdom Template=RMCKingdomMinor]
+	{
+		IDS = side_indie
+		name = "#template_rmc_aa_side_indie_name_2"
+		
+		[Relation]
+		kingdom_ids = side*
+		relation = NEUTRAL
+	}	
+
+	[Kingdom Template=RMCKingdomMinor]
+	{
+		IDS = side_enemy
+		name = "#template_rmc_aa_side_enemy_name_2"
+
+		[Relation]
+		kingdom_ids = side*
+		relation = ENEMY
+	}	
+
+/*	TEAMS				*/
+
+	[Team]
+	IDS = team01
+	name = "#template_rmc_aa_team01_name_2"
+
+	[Team]
+	IDS = team02
+	name = "#template_rmc_aa_team02_name_2"
+
+/*	HEROES				*/
+
+	[Heroes]
+	show_ui = false
+}
+
+
+[Template KingdomAttacker1 Template=RMCKingdomMajor]
+{
+	IDS = kingdom_attacker_1
+	name = "#template_rmc_aa_kingdom_attacker_1_name"
+	color = blue
+	team = team02
+	playable = true
+	required = false
+	SAI_default_ids = null
+}
+
+[Template KingdomDefender Template=RMCKingdomMajor]
+{
+	IDS = kingdom_defender
+	name = "#template_rmc_aa_kingdom_defender_name"
+	color = red
+	team = team01
+	playable = true
+	required = false
+	SAI_default_ids = null
+}
+
+[Template KingdomAttacker2 Template=RMCKingdomMajor]
+{
+	IDS = kingdom_attacker_2
+	name = "#template_rmc_aa_kingdom_attacker_2_name"
+	color = green
+	team = team02
+	playable = true
+	required = false
+	SAI_default_ids = null
+}
+
+[Template KingdomAttacker3 Template=RMCKingdomMajor]
+{
+	IDS = kingdom_attacker_3
+	name = "#template_rmc_aa_kingdom_attacker_3_name"
+	color = black
+	team = team02
+	playable = true
+	required = false
+	SAI_default_ids = null
+}
+
+[Template KingdomAttacker4 Template=RMCKingdomMajor]
+{
+	IDS = kingdom_attacker_4
+	name = "#template_rmc_aa_kingdom_attacker_4_name"
+	color = cyan
+	team = team02
+	playable = true
+	required = false
+	SAI_default_ids = null
+}
+
+[Template KingdomAttacker5 Template=RMCKingdomMajor]
+{
+	IDS = kingdom_attacker_5
+	name = "#template_rmc_aa_kingdom_attacker_5_name"
+	color = brown
+	team = team02
+	playable = true
+	required = false
+	SAI_default_ids = null
+}
+
+[Template KingdomAttacker6 Template=RMCKingdomMajor]
+{
+	IDS = kingdom_attacker_6
+	name = "#template_rmc_aa_kingdom_attacker_6_name"
+	color = yellow
+	team = team02
+	playable = true
+	required = false
+	SAI_default_ids = null
+}
+
+[Template KingdomAttacker7 Template=RMCKingdomMajor]
+{
+	IDS = kingdom_attacker_7
+	name = "#template_rmc_aa_kingdom_attacker_7_name"
+	color = pink
+	team = team02
+	playable = true
+	required = false
+	SAI_default_ids = null
+}
+
+[Template HomeBunkers Template=RMCActorGroup]
+{
+	ids = defender_bunkershome
+	name = "#template_rmc_mg_aa_defender_bunkershome_name"
+	kingdom_ids = kingdom_defender
+	show_ui = false
+
+	range = 4,8
+
+	intraproximity_min = 8
+	intraproximity_desired = 16
+
+	search_radius = 64
+	search_relative_kingdom_ids = kingdom_defender
+
+	properties = tech_noupkeep
+
+	[Object]
+	object_ids = placeholder_bunker
+	weight = 0.50
+
+	[Object]
+	object_ids = placeholder_bunker_artillery
+	weight = 0.25
+
+	[Object]
+	object_ids = placeholder_bunker_antiaircraft
+	weight = 1.00
+}
+
+[Template CoastlineBunkers Template=RMCActorGroup]
+{
+	kingdom_ids = kingdom_defender
+	show_ui = false
+
+	range = 8,12
+
+	search_radius = 128
+
+	intraproximity_min = 8
+	intraproximity_desired = 16
+
+	properties = tech_noupkeep
+
+	[Object]
+	object_ids = placeholder_bunker
+	weight = 1.00
+
+	[Object]
+	object_ids = placeholder_bunker_artillery
+	weight = 0.25
+
+	[Object]
+	object_ids = placeholder_bunker_antiaircraft
+	weight = 0.25
+}

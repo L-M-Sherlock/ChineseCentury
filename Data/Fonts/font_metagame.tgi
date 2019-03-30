@@ -1,0 +1,45 @@
+/**************************************************************************
+
+medium.tgi
+Copyright ?2002-2004 TimeGate Studios
+
+DESCRIPTION: Describes the contents of a font.
+
+REVISION HISTORY:
+drp033104 - created
+
+
+**************************************************************************/
+[Font template = Font]
+{
+	ids = metagame
+	name = "#font_metagame_name"
+	size = 9 ;; this is the Windows font size, not the actual pixel height of glyphs.
+
+	[CharacterSet]
+	{
+		ids = base
+		font = /fonts/truetype/A&A.TTF ;Arial
+		bold = true
+		shadow = false
+		shadow_opacity = .4
+	}
+	
+	[CharacterSet]
+	ids = hangul_jamo
+	font = /fonts/truetype/A&A.TTF
+	
+	/* TODO: drp050403 - removed these two charsets because causing problem on Win98 which may be missing MS Serif
+	[CharacterSet]
+	ids = hiragana_katakana
+	font = /fonts/truetype/A&A.TTF
+
+	[CharacterSet]
+	ids = han
+	font = /fonts/truetype/A&A.TTF
+	*/
+
+	[CharacterSet]
+	ids = hangul_johab
+	font = /fonts/truetype/A&A.TTF
+}

@@ -1,0 +1,28 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = panzer_hohle
+	name = "#panzer_holhe_name"
+	description = "#panzer_holhe_description"
+	targets = NULL
+	recharge_time = 300
+	range = 0
+	area = 0
+
+	icon = /UI/%s/Game/SpecialOps/IconPanzerHohle.png
+	
+	[Flags]
+	target_location = true
+	summon_multiple = true
+	primary_island_only = true
+	
+	[Effect Template=SummonEffect]
+	object_ids = regiment_ger_tank_hohle
+	controllable = true
+	
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = tank_summon_sfx
+	at= TARGET_GROUND
+}

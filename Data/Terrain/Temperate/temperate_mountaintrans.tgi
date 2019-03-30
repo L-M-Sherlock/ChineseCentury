@@ -1,0 +1,64 @@
+[Terrain template=MountainTerrain]
+{
+	IDS = temperate_mountaintrans
+	name = "#temperate_mountaintrans_name"
+	
+	base_priority = 70000
+	terrain_group = dirt
+	terrain_color = 0.310, 0.298, 0.282
+
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.00
+
+/********************	MOUNTAIN PARAMETERS		********************/
+
+	noise_min 		= 0.25
+	noise_max 		= 0.55
+	paint_slope 	= 0.10
+	max_slope 		= 0.55
+	paint_max_step 	= 10.0
+	
+/********************	MOUNTAIN VARIATIONS		********************/
+
+	[Variation]
+	IDS = temperate_mountaincitytrans01
+	name = "#temperate_mountaintrans_temperate_mountaincitytrans01_name"
+	texture = TemperateMountainTrans/TemperateMountainCityTrans01.tga
+	texture_width = 4
+	texture_height = 4
+
+	[Variation]
+	IDS = temperate_mountaindirttrans01
+	name = "#temperate_mountaintrans_temperate_mountaindirttrans01_name"
+	texture = TemperateMountainTrans/TemperateMountainDirtTrans01.tga
+	texture_width = 4
+	texture_height = 4
+
+	[Variation]
+	IDS = temperate_mountainforestconiferoustrans01
+	name = "#temperate_mountaintrans_temperate_mountainforestconiferoustrans01_name"
+	texture = TemperateMountainTrans/TemperateMountainForestConiferousTrans01.tga
+	texture_width = 4
+	texture_height = 4
+
+	[Variation]
+	IDS = temperate_mountainforestdeciduoustrans01
+	name = "#temperate_mountaintrans_temperate_mountainforestdeciduoustrans01_name"
+	texture = TemperateMountainTrans/TemperateMountainForestDeciduousTrans01.tga
+	texture_width = 4
+	texture_height = 4
+
+	[Variation]
+	IDS = temperate_mountaingrassdrytrans01
+	name = "#temperate_mountaintrans_temperate_mountaingrassdrytrans01_name"
+	texture = TemperateMountainTrans/TemperateMountainGrassDryTrans01.tga
+	texture_width = 4
+	texture_height = 4
+
+	[Variation]
+	IDS = temperate_mountaingrasstrans01
+	name = "#temperate_mountaintrans_temperate_mountaingrasstrans01_name"
+	texture = TemperateMountainTrans/TemperateMountainGrassTrans01.tga
+	texture_width = 4
+	texture_height = 4
+}

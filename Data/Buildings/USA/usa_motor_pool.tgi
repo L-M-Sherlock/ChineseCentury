@@ -1,0 +1,198 @@
+[Thing Template=AAUSABuildingPackable]
+{
+	IDS = usa_motor_pool
+	name = "#usa_motor_pool_Thing_name"
+	editor_name = "#usa_motor_pool_Thing_editor_name"
+
+	[BodyComponent]
+	health = 750
+	defense = 5
+
+	[EconomyComponent]
+	{
+		[Cost]	
+		money = 125
+
+		[Production]
+		oil = 40
+				
+		[Upkeep]
+		building_limit_consumed = 0
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = motor_pool
+
+		[Property]
+		property_ids = economic_building	
+
+		[Property]
+		property_IDS = oil
+	}
+	
+	[ResearchComponent]
+	{
+		[ResearchItem]
+		{
+			property_IDS = tech_infantry_flame
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 100
+			}
+		}
+		
+		[ResearchItem]
+		{
+			property_IDS = tech_mechanical_reliability
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 100
+			}
+		}	
+
+		[ResearchItem]
+		{
+			property_IDS = tech_mechanized_production
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 100
+			}
+		}
+				
+		[ResearchItem]
+		{
+			property_IDS = tech_improved_light_antitank
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 75
+			}
+		}				
+
+		[ResearchItem]
+		{
+			property_IDS = tech_heavy_tank
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 100
+			}
+		}
+	}
+
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 8
+	}
+
+	[View]
+	{
+		resource_prefix = USAMotorPool/USAMotorPool
+		icon = /UI/Game/BuildingButtons/IconMotorPool.png
+		
+		[TextureSearchPath]
+		path = /Trailers/USA/USATrailerMotor
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_depot_dirt
+			terrain_group_filter = dirt
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_depot_desert
+			terrain_group_filter = desert
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_depot_snow
+			terrain_group_filter = snow
+		}
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		{
+			audio_ids = motor_pool_select
+		}
+		
+		;;------ Spot Lights --------------------
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_02
+			location = spotlight_ae_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_03
+			location = spotlight_ae_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = door_large
+			location = door_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = door_large
+			location = door_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = door_large
+			location = door_03
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_02
+			attached = true
+		}
+	}
+
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_packing
+		audio_ids = pack_7s_sfx
+	}
+	
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_unpacking
+		audio_ids = unpack_7s_sfx
+	}
+}

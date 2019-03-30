@@ -1,0 +1,61 @@
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = purge
+	name = "#purge_name"
+	description = "#purge_description"
+	targets = +FRIEND -ORGANIZATION -BUILDING -VEHICLE
+	recharge_time = 240
+	range = 10
+	area = 20
+	max_targets = 32
+	target_location_vfx = friendly_target_decal_vfx
+
+	icon = /UI/%s/Game/SpecialOps/IconPurge.png
+	
+	[Effect Template=PierceDamageEffect]
+	targets = commanding_officer
+	amount = 800
+	hide_from_tooltip = true
+		
+	[Effect Template=EnchantmentEffect]
+	{
+		[EnchantmentProperty]
+		{
+			IDS = property_purge
+			name = "#purge_Effect_EnchantmentProperty_name"
+			enchantment_type = ench_type_courage
+			duration = 30
+			icon = /Properties/PropertyIcons/IconPropertyDefense.png
+			
+			[Modifier Template=AddModifier]
+			attribute = AV
+			amount = +5
+			
+			[Modifier Template=EnchantmentImmunityModifier]
+			enchantment_type = ench_type_fear
+			
+			[WhenAdded Template=FXC_CreateVFX]
+			VFX_IDS = banzai_charge_glow
+		
+			[WhenAdded Template=FXC_CreateVFX]
+			VFX_IDS = speed_decal_small
+			attached = true
+			location = position
+		}
+	}
+	
+	[Effect Template=MoraleGainEffect]
+	amount = 1
+
+	[Flags]
+	enchantment = true
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = purge_sfx
+	at = TARGET_GROUND
+
+	[WhenDo Template=FXC_CreateVFX]
+	VFX_IDS = communist_purge
+	at = TARGET_GROUND
+}
+

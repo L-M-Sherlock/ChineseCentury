@@ -1,0 +1,52 @@
+[Thing Template=AAnedOrganizationHQ]
+{
+	IDS = regiment_ned_hq_armor_unpacked
+	name = "#regiment_ned_hq_armor_unpacked_name"
+	editor_name = "#regiment_ned_hq_armor_unpacked_editor_name"
+
+	[EconomyComponent]
+
+	[HQComponent]
+	max_attachments = 3
+	
+	[Placement]
+	placement_category = BUILDING
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = money
+	}
+	
+	[View]
+	{
+		resource_prefix = /Units/ned/nedTruck/nedTruck
+		icon = /UI/Game/BuildingButtons/IconHQArmor.png
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		{
+			audio_ids = hq_armor_select
+		}
+	}
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{
+		layout_ids = regiment_hq
+		supply_used = false
+		
+		[Slot]	;; front
+		element_IDS = null
+
+		[Slot]	;; front
+		element_IDS = null
+
+		[Slot]	;; front
+		element_IDS = null
+
+		[Slot]	;; front
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = ned_hq_armor
+	}
+}

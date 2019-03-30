@@ -1,0 +1,79 @@
+
+;; ---------------------------- Prebriefing Interface ----------------------------
+
+[Prebriefing Template=MenuInterface]
+{
+	[View]
+	{
+		T = 30%
+		B = 70%
+
+		L = 30%
+		R = 70%
+		
+		;;cwp040804 - children are not longer defined in template, but be added explicitly.
+		[Child Template=SharedChildLargePanelVE]
+
+		[Child Template=SharedSmallCenteredLabelVE]
+		T = 25
+		B = +50
+		text = "#prebriefing_Child_text"
+	}
+}
+
+[PrebriefingPanel Template=MenuPanelWidget]
+{
+	[View]
+	{
+		T = 30%
+		B = 60%
+		L = 30%
+		R = 70%
+		
+		;;cwp040804 - children are not longer defined in template, but be added explicitly.
+		[Child Template=SharedChildLargePanelVE]
+
+		[Child Template=SharedSmallCenteredLabelVE]
+		T = 30%
+		L = 30%
+		R = 50%
+		B = +50
+		text = "@[IMAGE HERE]"
+
+		[Child Template=SharedSmallLeftLabelVE]
+		T = 30%
+		L = 60%
+		B = +50
+		text = null
+	}
+}
+
+[PrebriefingOK Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#prebriefing_Client_View_text"
+	}
+
+	[View]
+	{
+		T = 85%
+		L = 80%
+	}
+}
+
+[PrebriefingCancel Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#prebriefing_Client_View_text_2"
+	}
+
+	[View]
+	{
+		T = 85%
+		L = 60%
+	}
+}

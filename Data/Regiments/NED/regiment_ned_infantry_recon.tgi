@@ -1,0 +1,69 @@
+[Thing Template=AAnedOrganizationInfantry]
+{
+	IDS = regiment_ned_infantry_recon
+	name = "#regiment_ned_infantry_recon_name"
+	editor_name = "#regiment_ned_infantry_recon_editor_name"
+
+	[DetectionComponent]
+	{
+		detection_range = 33
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 20
+		
+		[Upkeep]
+		ammo = 5
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = recon	
+		
+		[Property]
+		property_IDS = trailblazing		
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/ned/nedInfantry/nedInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantryReconKNIL.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ned_recon_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ned_recon_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ned_recon_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+                recruit_time = 10
+		recruit_full = true
+			
+		[Slot]	;; front
+		element_IDS = ned_infantry_knil
+		
+		[Slot]	;; rear guard 1
+		element_IDS = null
+
+		[Slot]	;; rear guard 2
+		element_IDS = null
+		
+		[Slot]	;; rear guard 3
+		element_IDS = ned_infantry_knil
+	
+		[Slot]	;; flank
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = ned_infantry_co
+	}
+}

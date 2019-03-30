@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = rommel_portrait
+	name = "#rommel_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Rommel/RommelPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = ger_rommel_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = rommel
+	name = "#rommel_name"
+	description = "#rommel_description"
+	staging_name = "#rommel_staging_name"
+	icon_texture_ids = Rommel/RommelPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/GER/Rommel.bik
+	portrait_ids = rommel_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpBlitzkrieg]
+	
+	[Ability Template=AASpecialOpPanzerHohle]
+	
+	[Ability Template=AASpecialOpForcedMarch]
+	
+	[Ability Template=AASpecialOpCorpsGER]
+}

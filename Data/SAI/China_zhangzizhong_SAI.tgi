@@ -1,0 +1,49 @@
+[Ego template = InfantryLowIncomeEgo]
+{
+	IDS										= zhangzizhong_low_income_ego
+	name									= "#China_zhangzizhong_SAI_zhangzizhong_low_income_ego_name"
+} ;; BalancedLowIncomeEgo
+
+[Ego template = InfantryMainGameEgo]
+{
+	IDS										= zhangzizhong_main_game_ego
+	name									= "#China_zhangzizhong_SAI_zhangzizhong_main_game_ego_name"
+} ;; BalancedMainGameEgo
+
+[Ego template = InfantryEndGameEgo]
+{
+	IDS										= zhangzizhong_end_game_ego
+	name									= "#China_zhangzizhong_SAI_zhangzizhong_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = InfantryWarGameEgo]
+{
+	IDS										= zhangzizhong_war_game_ego
+	name									= "#China_zhangzizhong_SAI_zhangzizhong_end_game_ego_name"
+} ;; BalancedWarGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= zhangzizhong_sai
+	name									= "#China_zhangzizhong_SAI_zhangzizhong_sai_name"
+	description								= "#China_zhangzizhong_SAI_zhangzizhong_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= zhangzizhong_low_income_ego
+
+	[Ego]
+	IDS										= zhangzizhong_main_game_ego
+
+	[Ego]
+	IDS										= zhangzizhong_end_game_ego
+
+	[Ego]
+	IDS										= zhangzizhong_war_game_ego
+
+
+	[Nation]
+	IDS										= nation_chn
+	
+	[Faction]
+	ids										= zhangzizhong
+} ;; von_manstein SAI

@@ -1,0 +1,63 @@
+[Template AAUnitRUSInfantry Template=AAUnitRUSProne]
+{
+	name = "#rus_infantry_name"
+
+	[View]
+	{	
+		resource_prefix = RUSInfantry/RUSInfantry
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+	
+	[BodyComponent]
+	health = 150
+	defense = 1
+
+	[CharacterComponent Template=AAInfantryCharacterComponent]
+
+	[MoverComponent]
+	speed_max = 2.5
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				name = "#rus_infantry_AbilityDefinition_name"
+				recharge_time = 2
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_rifle
+			}
+		}
+	}	
+}
+
+[Thing Template=AAUnitRUSInfantry]
+{
+	IDS = rus_infantryt
+	editor_name = "#rus_infantry_editor_name"
+}

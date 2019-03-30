@@ -1,0 +1,25 @@
+[Terrain template=Terrain]
+{
+	IDS = temperate_city
+	name = "#temperate_city_name"
+	
+	base_priority = 12000
+	terrain_group = dirt
+	terrain_color = 0.451, 0.604, 0.294
+	
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.00
+	
+	[Property]
+	property_IDS = terrain_city_infantry
+	
+	[Property]
+	property_IDS = terrain_city_vehicles
+	
+	[Variation]
+	IDS = temperate_city01
+	name = "#temperate_city_01_name"
+	texture = TemperateCity/TemperateCity01.tga
+	texture_width = 8
+	texture_height = 8
+}

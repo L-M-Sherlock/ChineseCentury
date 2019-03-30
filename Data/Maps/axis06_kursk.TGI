@@ -1,0 +1,23 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Battle of Kursk"
+
+	name_12589 = "Belgorod"
+	kingdom_1 = "Russia"
+	kingdom_0 = "Germany"
+	restriction_group_0000 = "Russian Heavy Tanks"
+	name_12597 = "Ponyri"
+	name_6401 = "Kursk Reinforcements"
+	objective_5 = "Build five bunkers east of Kursk.  (2/5 completed.)"
+	objective_4 = "Build five bunkers east of Kursk.  (4/5 completed.)"
+	map_description = "The protracted, bloody siege of Stalingrad has come to an end, and the devastated city is now in German hands.  With the world's two richest oilfields now controlled by Germany, endlessly supplied panzer divisions roll toward Kursk, prepared to smash the last of the Russian armored forces."
+	objective_3 = "Build five bunkers east of Kursk.  (1/5 completed.)"
+	objective_2 = "Build five bunkers east of Kursk.  (3/5 completed.)"
+	independent_2 = "Civilian"
+	name_12581 = "Prochorovka"
+	map_name = "Battle of Kursk"
+	objective_1 = "Prevent the Russian reinforcing corps HQ from getting to Kursk."
+	name_12570 = "Kursk"
+	objective_0 = "Build five bunkers east of Kursk."
+}

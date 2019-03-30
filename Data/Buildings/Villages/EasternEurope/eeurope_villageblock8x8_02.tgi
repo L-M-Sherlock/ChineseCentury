@@ -1,0 +1,28 @@
+[Thing Template=AACityEasternEurope]
+{
+	IDS = eeurope_villageblock8x8_02
+	editor_name = "#eastern_europe_village03_editor_name"
+	
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 8
+
+	[View]
+	{
+		resource_prefix = EasternEuropeVillage03/EasternEuropeVillage03
+		shadow_type = stencil
+		
+		[TextureSearchPath]
+		path = /Shared/SharedTextures/Buildings/EasternEurope
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+	}
+}

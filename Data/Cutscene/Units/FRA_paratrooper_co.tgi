@@ -1,0 +1,82 @@
+[Thing Template=AAUnitGBRProne]
+{
+	IDS = FRA_paratrooper_co
+	name = "#FRA_paratrooper_co_name"
+	editor_name = "#FRA_paratrooper_co_editor_name"
+	
+	[Stance template = StanceFalling]
+	
+	[View]
+	{
+		resource_prefix = FRAParatrooperCO/GBRParatrooperCO
+		portrait_ids = gbr_infantry_co_portrait	
+
+		[Aspect Template=AspectFalling]
+		
+		[TextureSearchPath]
+		{
+			path = /effects/parachute/GBR
+		}
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+
+	[BodyComponent]
+	health = 250
+	defense = 2
+
+	[CharacterComponent Template=AAInfantrySMGCharacterComponent]
+	
+	[ElementComponent]
+	
+	[MoverComponent]
+	speed_max = 3
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = captain
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		
+		[Ability Template=AAGunLocal]
+		{								
+			[AbilityDefinition Template=AAInfantrySMG]
+			{
+				name = "#gbr_paratrooper_co_AbilityDefinition_name"
+				recharge_time = 2
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 12
+			}
+		}
+
+		[Ability Template=AAGrenadeLocal]
+		{		
+			[AbilityDefinition Template=AAThrownGrenade]
+			{
+				name = "#gbr_infantry_AbilityDefinition_name_2"
+				projectile_ids = grenade01
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 25
+			}
+		}
+	}
+	
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		vfx_ids = parachute_close_gbr
+		actor_state = falling
+		location = neck
+	}
+}

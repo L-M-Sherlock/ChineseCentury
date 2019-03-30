@@ -1,0 +1,19 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "renwu1"
+
+	restriction_group_0000 = " 0"
+	side_indie = ""
+	team_3 = " 4"
+	side_enemy = ""
+	side02 = " 2"
+	team_2 = " 3"
+	side01 = " 1"
+	team_1 = " 2"
+	team_0 = " 1"
+	map_description = ""
+	objective_1 = "1"
+	map_name = "renwu1"
+	side_herd = "Herds"
+}

@@ -1,0 +1,33 @@
+[Terrain template=Terrain]
+{
+	IDS = chaparral_forest
+	name = "#chaparral_forest_name"
+	
+	base_priority = 9000
+	terrain_group = dirt
+	
+	doodad_frequency = 0.25
+	primary_doodad_frequency = 0.90
+	
+	[Property]
+	property_IDS = terrain_forest_infantry
+	
+	[Property]
+	property_IDS = terrain_forest_vehicles
+		
+	[Variation]
+	IDS = chaparral_forest01
+	name = "#chaparral_forest_01_name"
+	texture = ChaparralForest/ChaparralForest01.tga
+	terrain_color = 0.290, 0.431, 0.204
+	texture_width = 16
+	texture_height = 16
+	
+	[Variation]
+	IDS = chaparral_forest02
+	name = "#chaparral_forest_02_name"
+	texture = ChaparralForest/ChaparralForest02.tga
+	terrain_color = 0.290, 0.431, 0.204
+	texture_width = 8
+	texture_height = 8
+}

@@ -1,0 +1,19 @@
+[Thing Inherit=AATrailerTwoTires]
+{
+	IDS = fin_trailer_mechanized
+	name = "#fin_trailer_mechanized_name"
+	editor_name = "#fin_trailer_mechanized_editor_name"
+
+		[MoverComponent]
+	{
+		[TrailerHitch]		
+		;; node name and node offset of the truck's hitch
+		node_ids = hitch
+		node_offset = 0, 1.5, .8
+	}
+	
+	[View]
+	{
+		resource_prefix = FINTrailerMechanized/FINTrailerMechanized
+	}
+}

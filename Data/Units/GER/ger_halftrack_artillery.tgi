@@ -1,0 +1,90 @@
+[Template AAUnitGERHalftrackArtillery Inherit=AAUnitGERVehicleHalftrack]
+{
+	[BodyComponent]
+	{
+		health = 200
+		defense = 5
+	}
+
+	[PerformerComponent]
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = artillery		
+		
+		[Property]
+		property_IDS = combat_unit
+		
+		[Property]
+		property_IDS = halftrack_unit
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 4.5
+	}
+	
+	[View]
+	{
+		resource_prefix = GERHalftrackArtillery/GERHalftrackArtillery
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = GERHalftrackArtillery/GERHalftrackArtilleryRecoil1.kf
+		}
+	}
+}
+
+;;----------------------------- UNITS ------------------------ ;;
+
+[Thing Template=AAUnitGERHalftrackArtillery]
+{
+	IDS = ger_halftrack_artillery
+	name = "#ger_halftrack_artillery_Thing_name"
+	editor_name = "#ger_halftrack_artillery_Thing_editor_name"
+
+	[ElementComponent]
+	{
+		required_structures = ger_brigade_artillery	
+	}
+
+	[PerformerComponent]
+	{		
+		[Ability Template=AAProjectileLocal]
+		{
+			[AbilityDefinition Template=AASPAShot]
+			{
+				name = "#ger_halftrack_artillery_AbilityDefinition_name"
+				range = 44
+				recharge_time = 9
+				area = 3
+				max_targets = 8
+	
+				[Effect Template=BlastDamageEffect]
+				amount = 40
+				
+				[Effect Template=MoraleLossEffect]
+				amount = .75
+				
+				[Flags] 
+				bombard = true
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ger_artillery_light
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+			}
+		}
+	}
+}

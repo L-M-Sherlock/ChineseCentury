@@ -1,0 +1,63 @@
+[Template AAFINRegimentInfantry Template=AAFINOrganizationInfantry]
+{
+	name = "#regiment_fin_infantry_ski_name"
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 80
+		
+		[Upkeep]
+		ammo = 15
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/FIN/FINInfantrySki/FINInfantrySki
+		icon = /UI/Game/RegimentButtons/IconFINSki.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = fin_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = fin_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = fin_infantry_attack
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = infantry_company
+	}
+}
+
+[Thing Template=AAFINRegimentInfantry]
+{
+	IDS = regiment_fin_infantry_ski
+	editor_name = "#regiment_fin_infantry_ski_Thing_editor_name"
+
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = fin_infantry_ski
+		
+		[Slot]	;; rear guard 1
+		element_IDS = fin_infantry_ski
+
+		[Slot]	;; rear guard 2
+		element_IDS = fin_infantry_ski
+		
+		[Slot]	;; rear guard 3
+		element_IDS = fin_infantry_ski
+	
+		[Slot]	;; flank
+		element_IDS = fin_infantry_mg
+		
+		[Slot]	;; captain
+		element_IDS = fin_infantry_co
+	}
+}

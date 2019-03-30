@@ -1,0 +1,48 @@
+[Ego template = ArmorLowIncomeEgo]
+{
+	IDS										= nimitz_low_income_ego
+	name									= "#USA_Nimitz_SAI_nimitz_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorLowLowEgo]
+{
+	IDS										= nimitz_low_low_ego
+	name									= "#USA_Nimitz_SAI_nimitz_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = ArmorMainGameEgo]
+{
+	IDS										= nimitz_main_game_ego
+	name									= "#USA_Nimitz_SAI_nimitz_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = ArmorEndGameEgo]
+{
+	IDS										= nimitz_end_game_ego
+	name									= "#USA_Nimitz_SAI_nimitz_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= nimitz_sai
+	name									= "#USA_Nimitz_SAI_nimitz_sai_name"
+	description								= "#USA_Nimitz_SAI_nimitz_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= nimitz_low_income_ego
+
+	[Ego]
+	IDS										= nimitz_low_low_ego
+
+	[Ego]
+	IDS										= nimitz_main_game_ego
+
+	[Ego]
+	IDS										= nimitz_end_game_ego
+
+	[Nation]
+	IDS										= nation_usa
+	
+	[Faction]
+	ids										= nimitz
+} ;; jpn SAI

@@ -1,0 +1,234 @@
+
+;; ---------------------------- Game Menu ---------------------------------
+
+[GameMenuDialog Inherit=SharedNoArtPanelWidget]
+{
+	[View]
+	{
+		L = 322
+		T = 65
+		R = +384
+		B = +514
+		
+		;; cwp041204 - Children no longer being defined in template
+		[Child Template = MenuGamePanelGroupVE]		
+
+		[Child Template = DecalVE]
+		{
+			alpha_blending = true
+			
+			L = 99
+			T = 270
+			R = +182
+			B = +21
+			
+			texture = /UI/%s/Default/PushButton/menubuttonSeparator.tga
+		}	
+	}
+	
+	[RenderThreshold]
+	render_threshold = 20
+	
+	[GamePausedLabel Template = LabelWidget]
+ 	{
+ 		[View Template = NoVE]
+ 		{
+ 			L = 11
+ 			T = 37
+ 			R = +286
+ 			B = +24
+ 		}
+ 		
+ 		[Label Template = SharedSmallCenteredLabelVE]
+ 		{
+ 			;; cwp060804 - text is blank for A&A since it's not in the mockup.
+ 			;;text = "GAME PAUSED"
+ 			text = ""
+ 		}
+ 	}
+
+	[ButtonOptions Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#game_menu_ButtonOptions_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 99
+			T = 61
+		}
+	}
+
+	[ButtonLoad Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#game_menu_ButtonLoad_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 99
+			T = 114
+		}
+	}
+
+	[ButtonSave Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#game_menu_ButtonSave_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 99
+			T = 167
+		}
+	}
+	
+	[ButtonConnectionStatus Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#game_menu_ButtonConnectionStatus_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 99
+			T = 220
+		}
+	}	
+	
+	[ButtonFinished Template=MenuPushButtonWidgetMutable]
+	{
+		[Client]
+		{
+			[Label]
+			text = ""
+		}
+
+		[View]
+		{
+			L = 99
+			T = 298
+		}
+	}
+
+/*
+	[ButtonBuddies Template=GamePushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "Buddies"
+		}
+
+		[View]
+		{
+			L = 30%
+			T = 225
+		}
+	}
+*/
+
+	[ButtonQuit Inherit=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#game_menu_ButtonQuit_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 99
+			T = 351
+		}
+	}
+
+	[ButtonReturnToGame Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#game_menu_ButtonReturnToGame_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 99
+			T = 404
+		}
+	}
+}
+
+
+;; ---------------------------- Resign SubMenu ---------------------------------
+[GameMenuResignDialog Inherit=SharedNoArtPanelWidget]
+{
+	[View]
+	{
+		L = 325
+		T = 186
+		R = +366
+		B = +256
+		
+		;; cwp041204 - Children no longer being defined in template
+		[Child Template = MenuGamePanelGroupVE]				
+	}
+
+
+	[ButtonResign Template=MenuPushButtonWidgetMutable]
+	{
+		[Client]
+		{
+			[Label]
+			text = ""
+		}
+
+		[View]
+		{
+			L = 98
+			T = 56
+		}
+	}
+
+	[ButtonLeaveGame Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#game_menu_ButtonLeaveGame_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 98
+			T = 104
+		}
+	}
+
+	[ButtonCancel Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#game_menu_ButtonCancel_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 98
+			T = 154
+		}
+	}
+}
+

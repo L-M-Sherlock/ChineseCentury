@@ -1,0 +1,54 @@
+[Thing Template=AAJPNOrganizationArmor]
+{	
+	IDS = regiment_jpn_tank_mechanized
+	name = "#regiment_jpn_tank_mechanized_name"
+	editor_name = "#regiment_jpn_tank_mechanized_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 150
+		
+		[Upkeep]
+		ammo = 15
+		oil = 20
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/JPN/JPNTankLight/JPNTankLight
+		icon = /UI/Game/RegimentButtons/IconTankMechanized.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = jpn_tank_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = jpn_halftrack_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = jpn_halftrack_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = jpn_halftrack_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = jpn_tank_light
+	
+		[Slot]	;; support
+		element_IDS = jpn_halftrack
+		
+		[Slot]	;; captain
+		element_IDS = jpn_tank_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = mechanized_company
+	}
+}
