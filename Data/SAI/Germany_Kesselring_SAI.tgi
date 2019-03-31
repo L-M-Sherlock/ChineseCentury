@@ -1,27 +1,32 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= kesselring_low_income_ego
 	name									= "#Germany_Kesselring_SAI_kesselring_low_income_ego_name"
 } ;; BalancedLowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= kesselring_low_low_ego
-	name									= "#Germany_Kesselring_SAI_kesselring_low_income_ego_name"
-} ;; BalancedLowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= kesselring_main_game_ego
 	name									= "#Germany_Kesselring_SAI_kesselring_main_game_ego_name"
 } ;; BalancedMainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= kesselring_end_game_ego
 	name									= "#Germany_Kesselring_SAI_kesselring_end_game_ego_name"
 } ;; BalancedEndGameEgo
 
+[Ego template = TK_AA_4]
+{
+	IDS										= kesselring_end_game_ego_TK
+	name									= "#Germany_Kesselring_SAI_kesselring_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= kesselring_end_game_ego_TK_DS
+	name									= "#Germany_Kesselring_SAI_kesselring_end_game_ego_name"
+} ;; BalancedEndGameEgo
 
 [SAI template = SAI]
 {
@@ -33,14 +38,16 @@
 	initial_ego								= kesselring_low_income_ego
 
 	[Ego]
-	IDS										= kesselring_low_low_ego
-
-	[Ego]
 	IDS										= kesselring_main_game_ego
 
 	[Ego]
 	IDS										= kesselring_end_game_ego
 
+	[Ego]
+	IDS										= kesselring_end_game_ego_TK
+
+	[Ego]
+	IDS										= kesselring_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_ger

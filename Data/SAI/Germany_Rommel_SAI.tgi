@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= rommel_low_income_ego
 	name									= "#Germany_Rommel_SAI_rommel_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= rommel_low_low_ego
-	name									= "#Germany_Rommel_SAI_rommel_low_income_ego_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= rommel_main_game_ego
 	name									= "#Germany_Rommel_SAI_rommel_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= rommel_end_game_ego
+	name									= "#Germany_Rommel_SAI_rommel_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= rommel_end_game_ego_TK
+	name									= "#Germany_Rommel_SAI_rommel_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= rommel_end_game_ego_TK_DS
 	name									= "#Germany_Rommel_SAI_rommel_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -31,15 +37,17 @@
 
 	initial_ego								= rommel_low_income_ego
 
-
-	[Ego]
-	IDS										= rommel_low_low_ego
-
 	[Ego]
 	IDS										= rommel_main_game_ego
 
 	[Ego]
 	IDS										= rommel_end_game_ego
+
+	[Ego]
+	IDS										= rommel_end_game_ego_TK
+
+	[Ego]
+	IDS										= rommel_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_ger

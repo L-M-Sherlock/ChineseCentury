@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= ger_low_income_ego
 	name									= "#germany_sai_ger_low_income_ego_unit_limit_max_needed_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= ger_low_low_ego
-	name									= "#germany_sai_ger_low_income_ego_unit_limit_max_needed_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= ger_main_game_ego
 	name									= "#germany_sai_ger_main_game_ego_unit_limit_max_needed_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= ger_end_game_ego
+	name									= "#germany_sai_ger_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= ger_end_game_ego_TK
+	name									= "#germany_sai_ger_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= ger_end_game_ego_TK_DS
 	name									= "#germany_sai_ger_end_game_ego_unit_limit_max_needed_name"
 } ;; EndGameEgo
 
@@ -33,13 +39,16 @@
 	initial_ego								= ger_low_income_ego
 
 	[Ego]
-	IDS										= ger_low_low_ego
-
-	[Ego]
 	IDS										= ger_main_game_ego
 
 	[Ego]
 	IDS										= ger_end_game_ego
+
+	[Ego]
+	IDS										= ger_end_game_ego_TK
+
+	[Ego]
+	IDS										= ger_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_ger

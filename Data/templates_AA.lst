@@ -18,6 +18,7 @@ templates/template_audio_aa.tgi
 templates/template_aspect_animation_set_aa.tgi
 templates/template_charactercomponent_aa.tgi
 templates/template_sai_aa_research.tgi
+templates/template_sai_aa_TKRE.tgi
 templates/template_sai_aa.tgi
 templates/template_sai_aa_campaign.tgi
 templates/template_sai_aa_balanced.tgi
@@ -27,6 +28,8 @@ templates/template_sai_aa_armor.tgi
 templates/template_sai_aa_artillery.tgi
 templates/template_sai_aa_planes.tgi
 templates/template_sai_aa_mechanized.tgi
+templates/template_sai_aa_TK.tgi
+templates/template_sai_aa_TKGBR.tgi
 templates/template_waterinfo_aa.tgi
 templates/template_rmc_aa.tgi
 templates/template_rmc_mg_aa.tgi

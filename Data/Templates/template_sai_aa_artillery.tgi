@@ -123,24 +123,6 @@
 			}
 		} ;; Exploration
 
-		[Unpacking] ;;wwzz
-		{
-			base_priority							= 500
-			enemy_static_influence_mult			= 3
-			enemy_dynamic_influence_mult			= 3
-			max_friendly_building_bonus				= 500
-			max_friendly_building_bonus_per_building	= 200
-			travel_distance_mult			= 5
-			fuzzy_factor					= 150
-		}
-
-
-		[GoalPriority]
-		{
-			goal_IDS						= UNPACK
-			multiplier						= 5
-		}
-
 		[Recruiting]
 		{
 			max_goals_per_think				= -1
@@ -456,23 +438,6 @@
 			}
 		} ;; Exploration
 
-		[Unpacking] ;;wwzz
-		{
-			base_priority							= 500
-			enemy_static_influence_mult			= 3
-			enemy_dynamic_influence_mult			= 3
-			max_friendly_building_bonus				= 500
-			max_friendly_building_bonus_per_building	= 200
-			travel_distance_mult			= 5
-			fuzzy_factor					= 150
-		}
-
-		[GoalPriority]
-		{
-			goal_IDS						= UNPACK
-			multiplier						= 5
-		}
-
 		[Recruiting]
 		{
 			max_goals_per_think				= -1
@@ -786,59 +751,6 @@
 			}
 		}
 
-		[Unpacking] ;;wwzz
-		{
-			base_priority							= 1000
-			enemy_static_influence_mult			= -10
-			enemy_dynamic_influence_mult			= -10
-			max_friendly_building_bonus				= -500
-			max_friendly_building_bonus_per_building	= -200
-			travel_distance_mult			= 0
-			fuzzy_factor					= 2
-		}	
-
-		[GoalPriority]
-		{
-			goal_IDS						= UNPACK
-			multiplier						= 5
-			minimum								= -99999
-
-			[ActorPreference]
-			{
-				actor_IDS						= ned_truck_corps
-				value								= -10000
-				
-			}
-
-			[ActorPreference]
-			{
-				actor_IDS						= ned_truck_engineer
-				value								= -10000
-				
-			}
-
-			[ActorPreference]
-			{
-				actor_IDS						= ned_truck_motor
-				value								= -10000
-				
-			}
-
-			[ActorPreference]
-			{
-				actor_IDS						= ned_truck_artillery
-				value								= -10000
-				
-			}
-
-			[ActorPreference]
-			{
-				actor_IDS						= ned_truck_airfield
-				value								= -10000
-				
-			}
-		}
-
 		[Recruiting]
 		{
 			max_goals_per_think				= -1
@@ -1064,61 +976,6 @@
 				use_time_since_last_scouted	= true
 			}
 		} ;; Exploration
-
-		[Unpacking] ;;wwzz
-		{
-			base_priority							= 1000
-			enemy_static_influence_mult			= -10
-			enemy_dynamic_influence_mult			= -10
-			max_friendly_building_bonus				= -500
-			max_friendly_building_bonus_per_building	= -200
-			travel_distance_mult			= 0
-			fuzzy_factor					= 2
-		}
-
-		[GoalPriority]
-		{
-			goal_IDS						= UNPACK
-			multiplier						= 5
-			minimum								= -99999
-
-			[ActorPreference]
-			{
-				actor_IDS						= ned_truck_corps
-				value								= -10000
-				
-			}
-
-			[ActorPreference]
-			{
-				actor_IDS						= ned_truck_engineer
-				value								= -10000
-				
-			}
-
-			[ActorPreference]
-			{
-				actor_IDS						= ned_truck_motor
-				value								= -10000
-				
-			}
-
-			[ActorPreference]
-			{
-				actor_IDS						= ned_truck_artillery
-				value								= -10000
-				
-			}
-
-			[ActorPreference]
-			{
-				actor_IDS						= ned_truck_airfield
-				value								= -10000
-				
-			}
-
-
-		}
 
 		[Recruiting]
 		{

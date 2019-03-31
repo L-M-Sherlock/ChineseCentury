@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= patton_low_income_ego
 	name									= "#USA_Patton_SAI_patton_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= patton_low_low_ego
-	name									= "#USA_Patton_SAI_patton_low_income_ego_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= patton_main_game_ego
 	name									= "#USA_Patton_SAI_patton_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= patton_end_game_ego
+	name									= "#USA_Patton_SAI_patton_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= patton_end_game_ego_TK
+	name									= "#USA_Patton_SAI_patton_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= patton_end_game_ego_TK_DS
 	name									= "#USA_Patton_SAI_patton_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -32,13 +38,16 @@
 	initial_ego								= patton_low_income_ego
 
 	[Ego]
-	IDS										= patton_low_low_ego
-
-	[Ego]
 	IDS										= patton_main_game_ego
 
 	[Ego]
 	IDS										= patton_end_game_ego
+
+	[Ego]
+	IDS										= patton_end_game_ego_TK
+
+	[Ego]
+	IDS										= patton_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_usa

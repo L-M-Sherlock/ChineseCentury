@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= mikawa_low_income_ego
 	name									= "#Japan_Mikawa_SAI_mikawa_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= mikawa_low_low_ego
-	name									= "#Japan_Mikawa_SAI_mikawa_low_income_ego_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= mikawa_main_game_ego
 	name									= "#Japan_Mikawa_SAI_mikawa_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= mikawa_end_game_ego
+	name									= "#Japan_Mikawa_SAI_mikawa_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= mikawa_end_game_ego_TK
+	name									= "#Japan_Mikawa_SAI_mikawa_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= mikawa_end_game_ego_TK_DS
 	name									= "#Japan_Mikawa_SAI_mikawa_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -32,13 +38,16 @@
 	initial_ego								= mikawa_low_income_ego
 
 	[Ego]
-	IDS										= mikawa_low_low_ego
-
-	[Ego]
 	IDS										= mikawa_main_game_ego
 
 	[Ego]
 	IDS										= mikawa_end_game_ego
+
+	[Ego]
+	IDS										= mikawa_end_game_ego_TK
+
+	[Ego]
+	IDS										= mikawa_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_jpn

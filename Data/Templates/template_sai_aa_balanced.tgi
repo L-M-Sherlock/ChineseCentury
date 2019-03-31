@@ -1407,32 +1407,6 @@
 		} ;; Exploration
 
 
-		[Unpacking] ;;wwzz
-		{
-			base_priority							= 800
-			enemy_static_influence_mult			= -10
-			enemy_dynamic_influence_mult			= -10
-			max_friendly_building_bonus				= -200
-			max_friendly_building_bonus_per_building	= -20
-			travel_distance_mult			= 0
-			fuzzy_factor					= 20
-		}
-
-		[GoalPriority]
-		{
-			goal_IDS						= UNPACK
-			multiplier						= 5
-			minimum								= -99999
-
-
-			[ActorPreference]
-			{
-				actor_IDS						= cpc_truck_corps
-				value								= -10000
-				
-			}	
-		}
-
 		[Recruiting]
 		{
 			max_goals_per_think				= 36

@@ -126,14 +126,6 @@
 			}
 		} ;; Exploration
 
-		[Unpacking] ;;wwzz
-		{
-			base_priority							= 500
-			enemy_static_influence_mult			= 3
-			enemy_dynamic_influence_mult			= 3
-			fuzzy_factor					= 150
-		}
-
 		[Recruiting]
 		{
 			max_goals_per_think				= -1

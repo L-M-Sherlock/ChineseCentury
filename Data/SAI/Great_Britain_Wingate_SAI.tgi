@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1_GBR]
 {
 	IDS										= wingate_low_income_ego
 	name									= "#Great_Britain_Wingate_SAI_wingate_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= wingate_low_low_ego
-	name									= "#Great_Britain_Wingate_SAI_wingate_low_income_ego_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2_GBR]
 {
 	IDS										= wingate_main_game_ego
 	name									= "#Great_Britain_Wingate_SAI_wingate_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3_GBR]
 {
 	IDS										= wingate_end_game_ego
+	name									= "#Great_Britain_Wingate_SAI_wingate_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4_GBR]
+{
+	IDS										= wingate_end_game_ego_TK
+	name									= "#Great_Britain_Wingate_SAI_wingate_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS_GBR]
+{
+	IDS										= wingate_end_game_ego_TK_DS
 	name									= "#Great_Britain_Wingate_SAI_wingate_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -32,13 +38,16 @@
 	initial_ego								= wingate_low_income_ego
 
 	[Ego]
-	IDS										= wingate_low_low_ego
-
-	[Ego]
 	IDS										= wingate_main_game_ego
 
 	[Ego]
 	IDS										= wingate_end_game_ego
+
+	[Ego]
+	IDS										= wingate_end_game_ego_TK
+
+	[Ego]
+	IDS										= wingate_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_gbr

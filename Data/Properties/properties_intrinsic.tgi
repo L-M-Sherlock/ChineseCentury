@@ -667,6 +667,13 @@
 	icon = null
 }
 
+[Property Template=SharedProperty]
+{
+	IDS = TK_AI_SAS
+	name = "#properties_intrinsic_paratrooper_company_name"
+	icon = null
+}
+
 ;; -------------- BUNKER PROPERTIES ---------------
 
 [Property Template=SharedProperty]
