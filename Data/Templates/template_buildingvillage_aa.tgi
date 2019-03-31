@@ -247,16 +247,16 @@
 	;; then the supply, and detection should match that radius 
 	;; for consistency.
 	[CityComponent]
-	zone_radius = 30
+	zone_radius = 16
 	
 	[DetectionComponent]
-	detection_range = 55
-	remote_detection_range = 30
+	detection_range = 64
+	remote_detection_range = 32
 
 	[EconomyComponent]
 	{
 		[Production]
-		money = 15
+		money = 10
 		oil = 0
 		ammo = 0
 	}
@@ -273,8 +273,8 @@
 	;; if supply range changes the detection radius must change to match it as well.
 	[SupplyComponent]
 	is_relay = true
-	supply_range = 100
-    stockpile_max = 180	
+	supply_range = 128
+    stockpile_max = 300	
 }	
 
 ;; jjw091004 Added to make capitals a little more valuable.	
@@ -283,9 +283,9 @@
 	[EconomyComponent]
 	{
 		[Production]
-		money = 30
-		oil = 10
-		ammo = 10
+		money = 20
+		oil = 15
+		ammo = 15
 	}
 }
 

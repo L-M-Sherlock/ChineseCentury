@@ -48,7 +48,7 @@
 		[Item]
 		stat	= money_rate
 		min	= -9999999
-		max	= 100
+		max	= 120
 
 		[Item]
 		stat	= ammo_rate
@@ -184,8 +184,8 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 101
-		max	= 150
+		min	= 121
+		max	= 180
 
 		[Item]
 		stat	= ammo_rate
@@ -303,8 +303,8 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 151
-		max	= 250
+		min	= 181
+		max	= 300
 
 		[Item]
 		stat	= ammo_rate
@@ -448,7 +448,7 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 251
+		min	= 301
 		max	= 1000000
 
 		[Item]

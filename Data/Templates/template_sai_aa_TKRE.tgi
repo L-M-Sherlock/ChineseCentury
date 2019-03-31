@@ -7,6 +7,18 @@
 		tech						= tech_military_surplus
 		priority					= 50
 	}
+    
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 150
+	}
 /*
 	[TechPriority]
 	{
@@ -24,6 +36,18 @@
 	{
 		tech						= tech_military_surplus
 		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 200
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 200
 	}
 
 	[TechPriority]
@@ -92,6 +116,19 @@
 		tech						= tech_mechanical_reliability
 		priority					= 200
 	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 250
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 250
+	}
+
 /*
 	[TechPriority]
 	{
@@ -128,6 +165,18 @@
 	[TechPriority]
 	{
 		tech						= tech_military_surplus
+		priority					= 250
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 250
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
 		priority					= 250
 	}
 

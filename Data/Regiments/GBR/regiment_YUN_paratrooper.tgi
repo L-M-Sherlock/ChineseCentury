@@ -63,7 +63,7 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 150
+		money = 75
 	}
 
 	[Placement]
@@ -77,6 +77,6 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 75
+		money = 50
 	}
 }

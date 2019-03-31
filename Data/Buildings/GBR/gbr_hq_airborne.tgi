@@ -116,6 +116,9 @@
 
 		[RecruitActor]
 		actor_ids = regiment_gbr_sas_paratrooper_ground
+        
+		[RecruitActor]
+		actor_ids = regiment_gbr_sas_paratroopersAI
 	}
 	
 	[ResearchComponent]

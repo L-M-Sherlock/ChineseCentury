@@ -4,10 +4,7 @@
 	editor_name = "#regiment_ger_paratrooper_heavy_AAGERRegimentParatrooperHeavy_editor_name"
 
 	[EconomyComponent]
-	{
-		[Cost]
-		money = 160
-		
+	{		
 		[Upkeep]
 		ammo = 15
 	}	
@@ -66,7 +63,7 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 160
+		money = 90
 	}
 
 	[Placement]
@@ -80,6 +77,6 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 80
+		money = 60
 	}
 }
