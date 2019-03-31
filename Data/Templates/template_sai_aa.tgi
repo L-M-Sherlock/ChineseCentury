@@ -61,6 +61,11 @@
 		[ActorRequirements]
 		{
 			must_be_enemy				= true
+			
+			[RequiredProperty]
+			{
+				ids						= economic_building
+			}
 
 			[RequiredProperty]
 			{
@@ -175,14 +180,14 @@
 
 	[Priority]
 	{
-		base							= 1000
-		minimum							= 500
+		base							= 400
+		minimum							= 1000
 		fuzzy_factor					= 75
 
 		[CV]
 		{
 			minimum						= 0
-			multiplier					=  .2
+			multiplier					= 0
 			maximum						= -1
 
 			consider_enemy				= true
@@ -502,12 +507,11 @@
 		[GoalPriority]
 		{
 			goal_IDS						= EXPLORE
-			bonus							= 5000
 
 			[ActorPreference]
 			{
 				property_IDS				= recon
-				value						= 10000
+				value						= 500
 			}
 
 			[ActorPreference]
@@ -532,26 +536,26 @@
 		[GoalPriority]
 		{
 			goal_IDS						= DEFEND_REGION
-			bonus		                    = 0
+			bonus		                    = 500
             
 			[ActorPreference]
 			{
 				property_IDS				= property_infantry_unit
-				value						= -150
+				value						= 50
 				count_value_once_per_company = false
 			}		
 
 			[ActorPreference]
 			{
 				property_IDS				= vehicle
-				value						= -250
+				value						= -25
 				count_value_once_per_company = false
 			}
 
 			[ActorPreference]
 			{
 				property_IDS				= tank
-				value						= -250
+				value						= -25
 				count_value_once_per_company = false
 			}
 
@@ -565,7 +569,6 @@
 		[GoalPriority]
 		{
 			goal_IDS						= DEFEND_ACTOR
-			bonus							= 0
 
 			[ActorPreference]
 			{
@@ -577,29 +580,14 @@
 		[GoalPriority]
 		{
 			goal_IDS						= ATTACK_REGION
-			bonus							= 5000
+			bonus							= 750
 
 			[ActorPreference]
 			{
 				property_IDS				= property_infantry_unit
 				value						= 1000
-				count_value_once_per_company = true
+				count_value_once_per_company = false
 			}
-
-			[ActorPreference]
-			{
-				property_IDS				= vehicle
-				value						= 1200
-				count_value_once_per_company = true
-			}
-
-			[ActorPreference]
-			{
-				property_IDS				= tank
-				value						= 1200
-				count_value_once_per_company = true
-			}
-
 
 			[ActorPreference]
 			{
@@ -611,7 +599,14 @@
 		[GoalPriority]
 		{
 			goal_IDS						= ATTACK_ACTOR
-			bonus							= 17500
+			bonus							= 750
+
+			[ActorPreference]
+			{
+				property_IDS				= property_infantry_unit
+				value						= 1000
+				count_value_once_per_company = false
+			}
 
 			[ActorPreference]
 			{
@@ -633,7 +628,6 @@
 			bonus							= 10000
 		}
 
-
 		[GoalPriority]
 		{
 			goal_IDS						= REPAIR
@@ -641,20 +635,17 @@
 			bonus							= 10000
 		}
 
-		
+		[GoalPriority]
+		{
+			goal_IDS						= UNPACK
+			multiplier						= 5
+		}
+
 		[GoalPriority]
 		{
 			goal_IDS						= PACK
 			multiplier						= 1
 		}
-		
-		[GoalPriority]
-		{
-			goal_IDS						= CONSTRUCT
-			multiplier						= 100
-			bonus							= 40000
-		}
-		
 
 		[GoalPriority]
 		{
@@ -672,7 +663,7 @@
 
 		[ResourceManagement]
 		{
-			saving_time_limit				= 120
+			saving_time_limit				= 300
 
 			other_short_need				= 20	
 			other_enough_need				= 20
@@ -714,13 +705,13 @@
 		{
 			[CloseGoals]
 			{
-				num_goals					= -1
+				num_goals					= 0
 				use_time_since_last_scouted	= true
 			}
 
 			[DeepGoals]
 			{
-				intuition_region_bonus					= 1000
+				intuition_region_bonus					= 200
 				intuition_count_mines					= true
 				intuition_count_other_buildings			= true
 			}
@@ -797,7 +788,7 @@
 
 				[Priority]
 				{
-					minimum							= 1000
+					minimum							= 600
 				}
 			} ;; atomic_bomb
 
@@ -2087,7 +2078,7 @@
 		[GoalFormation]
 		{
 			goal_IDS								= DEFEND_ACTOR
-			unthreatened_formation					= regiment_aggressive
+			unthreatened_formation					= regiment_defensive
 			threatened_formation					= regiment_defensive
 			combat_formation						= regiment_aggressive
 		}
@@ -2103,7 +2094,7 @@
 		[GoalFormation]
 		{
 			goal_IDS								= ATTACK_ACTOR
-			unthreatened_formation					= regiment_aggressive
+			unthreatened_formation					= regiment_defensive
 			threatened_formation					= regiment_defensive
 			combat_formation						= regiment_aggressive
 		}

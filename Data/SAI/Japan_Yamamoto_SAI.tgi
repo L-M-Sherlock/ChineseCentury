@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= yamamoto_low_income_ego
 	name									= "#Japan_Yamamoto_SAI_yamamoto_low_income_ego_name"
 } ;; BalancedLowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= yamamoto_low_low_ego
-	name									= "#Japan_Yamamoto_SAI_yamamoto_low_income_ego_name"
-} ;; BalancedLowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= yamamoto_main_game_ego
 	name									= "#Japan_Yamamoto_SAI_yamamoto_main_game_ego_name"
 } ;; BalancedMainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= yamamoto_end_game_ego
+	name									= "#Japan_Yamamoto_SAI_yamamoto_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= yamamoto_end_game_ego_TK
+	name									= "#Japan_Yamamoto_SAI_yamamoto_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= yamamoto_end_game_ego_TK_DS
 	name									= "#Japan_Yamamoto_SAI_yamamoto_end_game_ego_name"
 } ;; BalancedEndGameEgo
 
@@ -32,13 +38,16 @@
 	initial_ego								= yamamoto_low_income_ego
 
 	[Ego]
-	IDS										= yamamoto_low_low_ego
-
-	[Ego]
 	IDS										= yamamoto_main_game_ego
 
 	[Ego]
 	IDS										= yamamoto_end_game_ego
+
+	[Ego]
+	IDS										= yamamoto_end_game_ego_TK
+
+	[Ego]
+	IDS										= yamamoto_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_jpn

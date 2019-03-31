@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= jpn_low_income_ego
 	name									= "#japan_sai_jpn_low_income_ego_unit_limit_max_needed_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= jpn_low_low_ego
-	name									= "#japan_sai_jpn_low_income_ego_unit_limit_max_needed_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= jpn_main_game_ego
 	name									= "#japan_sai_jpn_main_game_ego_unit_limit_max_needed_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= jpn_end_game_ego
+	name									= "#japan_sai_jpn_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= jpn_end_game_ego_TK
+	name									= "#japan_sai_jpn_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= jpn_end_game_ego_TK_DS
 	name									= "#japan_sai_jpn_end_game_ego_unit_limit_max_needed_name"
 } ;; EndGameEgo
 
@@ -32,15 +38,17 @@
 
 	initial_ego								= jpn_low_income_ego
 
-
-	[Ego]
-	IDS										= jpn_low_low_ego
-
 	[Ego]
 	IDS										= jpn_main_game_ego
 
 	[Ego]
 	IDS										= jpn_end_game_ego
+
+	[Ego]
+	IDS										= jpn_end_game_ego_TK
+
+	[Ego]
+	IDS										= jpn_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_jpn

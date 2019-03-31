@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1_GBR]
 {
 	IDS										= gbr_low_income_ego
 	name									= "#great_britian_sai_gbr_low_income_ego_unit_limit_max_needed_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= gbr_low_low_ego
-	name									= "#great_britian_sai_gbr_low_income_ego_unit_limit_max_needed_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2_GBR]
 {
 	IDS										= gbr_main_game_ego
 	name									= "#great_britian_sai_gbr_main_game_ego_unit_limit_max_needed_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3_GBR]
 {
 	IDS										= gbr_end_game_ego
+	name									= "#great_britian_sai_gbr_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4_GBR]
+{
+	IDS										= gbr_end_game_ego_TK
+	name									= "#great_britian_sai_gbr_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS_GBR]
+{
+	IDS										= gbr_end_game_ego_TK_DS
 	name									= "#great_britian_sai_gbr_end_game_ego_unit_limit_max_needed_name"
 } ;; EndGameEgo
 
@@ -33,13 +39,16 @@
 	initial_ego								= gbr_low_income_ego
 
 	[Ego]
-	IDS										= gbr_low_low_ego
-
-	[Ego]
 	IDS										= gbr_main_game_ego
 
 	[Ego]
 	IDS										= gbr_end_game_ego
+
+	[Ego]
+	IDS										= gbr_end_game_ego_TK
+
+	[Ego]
+	IDS										= gbr_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_gbr

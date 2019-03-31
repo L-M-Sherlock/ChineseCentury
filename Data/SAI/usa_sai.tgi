@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= usa_low_income_ego
 	name									= "#usa_sai_usa_low_income_ego_unit_limit_max_needed_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= usa_low_low_ego
-	name									= "#usa_sai_usa_low_income_ego_unit_limit_max_needed_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= usa_main_game_ego
 	name									= "#usa_sai_usa_main_game_ego_unit_limit_max_needed_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= usa_end_game_ego
+	name									= "#usa_sai_usa_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= usa_end_game_ego_TK
+	name									= "#usa_sai_usa_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= usa_end_game_ego_TK_DS
 	name									= "#usa_sai_usa_end_game_ego_unit_limit_max_needed_name"
 } ;; EndGameEgo
 
@@ -33,13 +39,16 @@
 	initial_ego								= usa_low_income_ego
 
 	[Ego]
-	IDS										= usa_low_low_ego
-
-	[Ego]
 	IDS										= usa_main_game_ego
 
 	[Ego]
 	IDS										= usa_end_game_ego
+
+	[Ego]
+	IDS										= usa_end_game_ego_TK
+
+	[Ego]
+	IDS										= usa_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_usa

@@ -4,7 +4,7 @@
 	name = "#regiment_gbr_LandSAS_name"
 	editor_name = "#regiment_gbr_LandSAS_editor_name"
 
-        transport_actor = ger_transport_water
+    transport_actor = ger_transport_water
 
 	[EconomyComponent]
 	{
@@ -56,7 +56,7 @@
 	[PropertiesComponent]
 	{	
 		[Property]
-		property_ids = infantry1_company
+		property_ids = infantry_company
 	}
 }
 

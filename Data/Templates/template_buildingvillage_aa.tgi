@@ -247,7 +247,7 @@
 	;; then the supply, and detection should match that radius 
 	;; for consistency.
 	[CityComponent]
-	zone_radius = 40
+	zone_radius = 30
 	
 	[DetectionComponent]
 	detection_range = 55

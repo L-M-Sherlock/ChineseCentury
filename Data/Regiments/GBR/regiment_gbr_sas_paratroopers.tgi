@@ -50,7 +50,7 @@
 	[PropertiesComponent]
 	{	
 		[Property]
-		property_ids = paratrooper1_company
+		property_ids = paratrooper_company
 	}	
 }
 

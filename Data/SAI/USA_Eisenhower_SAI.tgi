@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= eisenhower_low_income_ego
 	name									= "#USA_Eisenhower_SAI_eisenhower_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= eisenhower_low_low_ego
-	name									= "#USA_Eisenhower_SAI_eisenhower_low_income_ego_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= eisenhower_main_game_ego
 	name									= "#USA_Eisenhower_SAI_eisenhower_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= eisenhower_end_game_ego
+	name									= "#USA_Eisenhower_SAI_eisenhower_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= eisenhower_end_game_ego_TK
+	name									= "#USA_Eisenhower_SAI_eisenhower_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= eisenhower_end_game_ego_TK_DS
 	name									= "#USA_Eisenhower_SAI_eisenhower_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -32,13 +38,16 @@
 	initial_ego								= eisenhower_low_income_ego
 
 	[Ego]
-	IDS										= eisenhower_low_low_ego
-
-	[Ego]
 	IDS										= eisenhower_main_game_ego
 
 	[Ego]
 	IDS										= eisenhower_end_game_ego
+
+	[Ego]
+	IDS										= eisenhower_end_game_ego_TK
+
+	[Ego]
+	IDS										= eisenhower_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_usa
