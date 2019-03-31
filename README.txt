@@ -1,5 +1,6 @@
 CD-key：B2WS-6JGH-PV7G-PBKP
-
+QQ群：567246830
+请将此mod覆盖至2019/3/29版中国崛起，百度云下载地址：链接: https://pan.baidu.com/s/196yZTgFEzHz6u1l3dMH31g 提取码: ud9f 
 更新日志
 
 2016/8/5
