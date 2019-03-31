@@ -17,7 +17,7 @@
 	[TechPriority]
 	{
 		tech						= tech_sas_commandos
-		priority					= 400
+		priority					= 450
 	}
 /*
 	[TechPriority]
@@ -30,7 +30,7 @@
 
 [template TK2Research template = SAIResearchTemplate]
 {
-	base_priority	= 100
+	base_priority	= 50
 
 	[TechPriority]
 	{
@@ -41,13 +41,13 @@
 	[TechPriority]
 	{
 		tech						= tech_sas_commandos
-		priority					= 750
+		priority					= 1000
 	}
     
 	[TechPriority]
 	{
 		tech						= tech_sniper_rifle
-		priority					= 600
+		priority					= 1000
 	}
 
 	[TechPriority]
@@ -85,7 +85,7 @@
 
 [template TK3Research template = SAIResearchTemplate]
 {
-	base_priority	= 150
+	base_priority	= 50
 
 	[TechPriority]
 	{
@@ -120,13 +120,13 @@
 	[TechPriority]
 	{
 		tech						= tech_sas_commandos
-		priority					= 550
+		priority					= 1550
 	}
     
 	[TechPriority]
 	{
 		tech						= tech_sniper_rifle
-		priority					= 500
+		priority					= 1500
 	}
 
 /*
@@ -160,7 +160,7 @@
 
 [template TK4Research template = SAIResearchTemplate]
 {
-	base_priority	= 200
+	base_priority	= 50
 
 	[TechPriority]
 	{

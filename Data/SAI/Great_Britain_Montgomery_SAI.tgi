@@ -28,6 +28,12 @@
 	name									= "#Great_Britain_Montgomery_SAI_montgomery_end_game_ego_name"
 } ;; EndGameEgo
 
+[Ego template = TK_AA_DS1_GBR]
+{
+	IDS										= montgomery_end_game_ego_TK_DS1
+	name									= "#Great_Britain_Montgomery_SAI_montgomery_end_game_ego_name"
+} ;; EndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= montgomery_sai
@@ -48,6 +54,9 @@
 
 	[Ego]
 	IDS										= montgomery_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= montgomery_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_gbr

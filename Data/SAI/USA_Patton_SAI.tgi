@@ -28,6 +28,12 @@
 	name									= "#USA_Patton_SAI_patton_end_game_ego_name"
 } ;; EndGameEgo
 
+[Ego template = TK_AA_DS1]
+{
+	IDS										= patton_end_game_ego_TK_DS1
+	name									= "#USA_Patton_SAI_patton_end_game_ego_name"
+} ;; EndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= patton_sai
@@ -48,6 +54,9 @@
 
 	[Ego]
 	IDS										= patton_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= patton_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_usa

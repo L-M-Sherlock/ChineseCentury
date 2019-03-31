@@ -9,27 +9,6 @@
 			value		= 10000
 			repeat_penalty	= 10000
 		}
-
-		[ActorPriority]
-		{
-			property_IDS	= property_bunker
-			value		= 9999
-			repeat_penalty	= 9000
-		}
-
-		[ActorPriority]
-		{
-			property_IDS	= property_bunker_artillery
-			value		= 9999
-			repeat_penalty	= 9000
-		}
-
-		[ActorPriority]
-		{
-			property_IDS	= property_bunker_aa
-			value		= 9999
-			repeat_penalty	= 9000
-		}
 	}
 }
 
@@ -45,6 +24,11 @@
 
 		[Item]
 		stat	= ammo_rate
+		min	= 15
+		max	= 99999
+
+		[Item]
+		stat	= oil_rate
 		min	= 15
 		max	= 99999
 	}
@@ -144,28 +128,28 @@
 		[ActorPriority]
 		{
 			property_IDS		= airhq
-			value			= 9999
+			value			= 8999
 			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= infhq
-			value			= 9800
+			value			= 8800
 			repeat_penalty		= 10000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= TK_AI_SAS
-			value			= 9997
+			value			= 8997
 			repeat_penalty		= 50
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= paratrooper_company
-			value			= 9500
+			value			= 8500
 			repeat_penalty		= 50
 		}
 
@@ -179,7 +163,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
-			value			= 3000
+			value			= 2000
 			repeat_penalty		= 100
 		}
 
@@ -208,6 +192,11 @@
 
 		[Item]
 		stat	= ammo_rate
+		min	= 15
+		max	= 99999
+
+		[Item]
+		stat	= oil_rate
 		min	= 15
 		max	= 99999
 	}
@@ -289,14 +278,14 @@
 		[ActorPriority]
 		{
 			property_IDS		= infhq
-			value			= 9000
+			value			= 8000
 			repeat_penalty		= 10000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= airhq
-			value			= 9001
+			value			= 8001
 			repeat_penalty		= 100
 		}
 
@@ -353,6 +342,11 @@
 
 		[Item]
 		stat	= ammo_rate
+		min	= 15
+		max	= 99999
+
+		[Item]
+		stat	= oil_rate
 		min	= 15
 		max	= 99999
 	}
@@ -451,7 +445,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= airhq
-			value			= 6000
+			value			= 5000
 			repeat_penalty		= 100
 		}
 
@@ -524,6 +518,11 @@
 
 		[Item]
 		stat	= ammo_rate
+		min	= 15
+		max	= 99999
+
+		[Item]
+		stat	= oil_rate
 		min	= 15
 		max	= 99999
 	}
@@ -632,6 +631,27 @@
 			{
 				property_ids		= airfield
 			}
+		}
+
+		[ActorPriority]
+		{
+			property_IDS	= property_bunker
+			value		= 9999
+			repeat_penalty	= 900
+		}
+
+		[ActorPriority]
+		{
+			property_IDS	= property_bunker_artillery
+			value		= 9999
+			repeat_penalty	= 900
+		}
+
+		[ActorPriority]
+		{
+			property_IDS	= property_bunker_aa
+			value		= 9999
+			repeat_penalty	= 900
 		}
 
 		[ActorPriority]
@@ -771,7 +791,7 @@
 
 	[GoalEngine]
 	{
-		build_queue_max_items	= 2
+		build_queue_max_items	= 5
 
 		[GoalPriority]
 		{
@@ -850,11 +870,139 @@
 			{
 				property_ids		= corpshq
 			}
-
+			
 			[SpecificRecruitRequest]
 			{
-				property_ids		= supplydepot
-				base_priority		= 100
+				property_ids				= supplydepot
+			    number_to_request			= 6
+				base_priority				= 1200
+			}
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= supplydepot
+			value			= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= tank_company
+			value			= 5000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= artillery_company
+			value			= 9900
+			repeat_penalty		= 100
+		}
+	}
+}
+
+[template TK_AA_DS1_GBR template = TK_AA_PLAY_GBR]
+{
+	[Filters]
+	{
+		[Item]
+		stat		= money_rate
+		min		= -99999
+		max		= 99999
+
+		[Item]
+		stat		= oil_rate
+		min		= -99999
+		max		= 14
+	}
+
+	[GoalEngine]
+	{
+		build_queue_max_items	= 5
+
+		[GoalPriority]
+		{
+			goal_IDS = RESEARCH
+			multiplier = 0.1
+			fuzziness = 100
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS = CONSTRUCT
+			multiplier = 1
+		}
+
+		[Research template = TK1Research]
+
+		[OffensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 20
+			cv_exponent_under_target	= 1
+			min_cv_to_assign		= 50
+		}
+
+		[DefensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 3
+			min_cv_to_assign		= 10
+			count_static_cv			= false
+		}
+
+		[Exploration]
+		{
+			[DeepGoals]
+			{
+				num_goals			= 1
+				base_priority			= 500
+				min_priority			= 500
+				black_fog_priority		= 200
+				grey_fog_priority		= 200
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+
+			[AirReconGoals] 
+			{
+				num_goals			= 1
+				base_priority			= 100
+				min_priority			= 100
+				black_fog_priority		= 100
+				grey_fog_priority		= 100
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+		}
+
+		[Unpacking]
+		{
+			base_priority                            = 500
+			enemy_static_influence_mult              = 3
+			enemy_dynamic_influence_mult             = 3
+			max_friendly_building_bonus              = 500
+			max_friendly_building_bonus_per_building = 200
+			travel_distance_mult                     = 5
+			fuzzy_factor                             = 150
+		}
+
+		[Recruiting] 
+		{
+			max_goals_per_think		= 10
+			num_military_goals		= 10
+			insufficient_income_level	= 10
+
+			[SpecificRecruitRequest] 
+			{
+				property_ids		= corpshq
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= supplydepot
+			    number_to_request			= 6
+				base_priority				= 1200
 			}
 		}
 

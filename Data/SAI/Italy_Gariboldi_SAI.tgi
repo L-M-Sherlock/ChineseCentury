@@ -28,6 +28,12 @@
 	name									= "#Italy_Gariboldi_SAI_Gariboldi_end_game_ego_name"
 } ;; BalancedEndGameEgo
 
+[Ego template = TK_AA_DS1]
+{
+	IDS										= Gariboldi_end_game_ego_TK_DS1
+	name									= "#Italy_Gariboldi_SAI_Gariboldi_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= Gariboldi_sai
@@ -48,6 +54,9 @@
 
 	[Ego]
 	IDS										= Gariboldi_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= Gariboldi_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_ita

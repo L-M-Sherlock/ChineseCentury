@@ -28,6 +28,12 @@
 	name									= "#japan_sai_jpn_end_game_ego_unit_limit_max_needed_name"
 } ;; EndGameEgo
 
+[Ego template = TK_AA_DS1]
+{
+	IDS										= jpn_end_game_ego_TK_DS1
+	name									= "#japan_sai_jpn_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= jpn_sai
@@ -49,6 +55,9 @@
 
 	[Ego]
 	IDS										= jpn_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= jpn_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_jpn

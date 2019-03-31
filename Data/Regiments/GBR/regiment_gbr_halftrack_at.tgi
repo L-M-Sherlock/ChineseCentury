@@ -7,7 +7,7 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 225
+		money = 150
 		
 		[Upkeep]
 		ammo = 10

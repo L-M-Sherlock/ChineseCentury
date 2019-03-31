@@ -28,6 +28,12 @@
 	name									= "#Germany_Kesselring_SAI_kesselring_end_game_ego_name"
 } ;; BalancedEndGameEgo
 
+[Ego template = TK_AA_DS1]
+{
+	IDS										= kesselring_end_game_ego_TK_DS1
+	name									= "#Germany_Kesselring_SAI_kesselring_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= kesselring_sai
@@ -48,6 +54,9 @@
 
 	[Ego]
 	IDS										= kesselring_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= kesselring_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_ger
