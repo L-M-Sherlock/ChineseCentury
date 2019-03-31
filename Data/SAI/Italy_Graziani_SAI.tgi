@@ -1,18 +1,30 @@
-[Ego template = MechanizedLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= Graziani_low_income_ego
 	name									= "#Italy_Graziani_SAI_Graziani_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = MechanizedMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= Graziani_main_game_ego
 	name									= "#Italy_Graziani_SAI_Graziani_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = MechanizedEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= Graziani_end_game_ego
+	name									= "#Italy_Graziani_SAI_Graziani_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= Graziani_end_game_ego_TK
+	name									= "#Italy_Graziani_SAI_Graziani_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= Graziani_end_game_ego_TK_DS
 	name									= "#Italy_Graziani_SAI_Graziani_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -30,6 +42,12 @@
 
 	[Ego]
 	IDS										= Graziani_end_game_ego
+
+	[Ego]
+	IDS										= Graziani_end_game_ego_TK
+
+	[Ego]
+	IDS										= Graziani_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_ita

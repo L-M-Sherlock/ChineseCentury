@@ -1,18 +1,30 @@
-[Ego template = MechanizedLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= Gariboldi_low_income_ego
 	name									= "#Italy_Gariboldi_SAI_Gariboldi_low_income_ego_name"
 } ;; BalancedLowIncomeEgo
 
-[Ego template = MechanizedMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= Gariboldi_main_game_ego
 	name									= "#Italy_Gariboldi_SAI_Gariboldi_main_game_ego_name"
 } ;; BalancedMainGameEgo
 
-[Ego template = MechanizedEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= Gariboldi_end_game_ego
+	name									= "#Italy_Gariboldi_SAI_Gariboldi_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= Gariboldi_end_game_ego_TK
+	name									= "#Italy_Gariboldi_SAI_Gariboldi_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= Gariboldi_end_game_ego_TK_DS
 	name									= "#Italy_Gariboldi_SAI_Gariboldi_end_game_ego_name"
 } ;; BalancedEndGameEgo
 
@@ -30,6 +42,12 @@
 
 	[Ego]
 	IDS										= Gariboldi_end_game_ego
+
+	[Ego]
+	IDS										= Gariboldi_end_game_ego_TK
+
+	[Ego]
+	IDS										= Gariboldi_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_ita

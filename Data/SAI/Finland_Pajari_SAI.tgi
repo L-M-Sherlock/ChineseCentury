@@ -1,18 +1,30 @@
-[Ego template = MechanizedLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= pajari_low_income_ego
 	name									= "#Finland_Pajari_SAI_pajari_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = MechanizedMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= pajari_main_game_ego
 	name									= "#Finland_Pajari_SAI_pajari_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = MechanizedEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= pajari_end_game_ego
+	name									= "#Finland_Pajari_SAI_pajari_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= pajari_end_game_ego_TK
+	name									= "#Finland_Pajari_SAI_pajari_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= pajari_end_game_ego_TK_DS
 	name									= "#Finland_Pajari_SAI_pajari_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -30,6 +42,12 @@
 
 	[Ego]
 	IDS										= pajari_end_game_ego
+    
+	[Ego]
+	IDS										= pajari_end_game_ego_TK
+    
+	[Ego]
+	IDS										= pajari_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_fin
