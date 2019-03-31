@@ -12,13 +12,6 @@
 
 		[ActorPriority]
 		{
-			property_IDS	= oil
-			value		= 100
-			repeat_penalty	= 100
-		}
-
-		[ActorPriority]
-		{
 			property_IDS	= property_bunker
 			value		= 9999
 			repeat_penalty	= 9000
@@ -185,7 +178,7 @@
 		[Item]
 		stat	= money_rate
 		min	= 121
-		max	= 180
+		max	= 200
 
 		[Item]
 		stat	= ammo_rate
@@ -303,8 +296,8 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 181
-		max	= 300
+		min	= 201
+		max	= 320
 
 		[Item]
 		stat	= ammo_rate
@@ -448,7 +441,7 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 301
+		min	= 321
 		max	= 1000000
 
 		[Item]

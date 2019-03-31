@@ -51,6 +51,9 @@
 	{	
 		[Property]
 		property_ids = paratrooper_company
+        
+		[Property]
+		property_ids = TK_AI_SAS
 	}	
 }
 
