@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1_GBR]
 {
 	IDS										= montgomery_low_income_ego
 	name									= "#Great_Britain_Montgomery_SAI_montgomery_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= montgomery_low_low_ego
-	name									= "#Great_Britain_Montgomery_SAI_montgomery_low_income_ego_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2_GBR]
 {
 	IDS										= montgomery_main_game_ego
 	name									= "#Great_Britain_Montgomery_SAI_montgomery_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3_GBR]
 {
 	IDS										= montgomery_end_game_ego
+	name									= "#Great_Britain_Montgomery_SAI_montgomery_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4_GBR]
+{
+	IDS										= montgomery_end_game_ego_TK
+	name									= "#Great_Britain_Montgomery_SAI_montgomery_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS_GBR]
+{
+	IDS										= montgomery_end_game_ego_TK_DS
 	name									= "#Great_Britain_Montgomery_SAI_montgomery_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -32,13 +38,16 @@
 	initial_ego								= montgomery_low_income_ego
 
 	[Ego]
-	IDS										= montgomery_low_low_ego
-
-	[Ego]
 	IDS										= montgomery_main_game_ego
 
 	[Ego]
 	IDS										= montgomery_end_game_ego
+
+	[Ego]
+	IDS										= montgomery_end_game_ego_TK
+
+	[Ego]
+	IDS										= montgomery_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_gbr

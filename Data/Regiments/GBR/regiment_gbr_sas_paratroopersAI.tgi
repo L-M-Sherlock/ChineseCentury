@@ -1,4 +1,4 @@
-[Template AAGBRRegimentCommando Template=AAGBROrganizationParatrooper]
+[Template AAGBRRegimentCommandoAI Template=AAGBROrganizationParatrooper]
 {
 	name = "#sas_paratroopers_name"
 	editor_name = "#sas_paratroopers_editor_name"
@@ -8,7 +8,7 @@
 		[Upkeep]
 		ammo = 15
 	}
-	
+
 	[View]
 	{
 		resource_prefix = /SpecialOps/Units/SAS/SAS
@@ -22,60 +22,41 @@
 
 		[WhenCommandedAggressive Template=FXC_PlaySFX]
 		audio_ids = gbr_paratrooper_attack
-	}		
-	
+	}
+
 	[OrganizationComponent Template=AAInfantryOrganizationComponent]
 	{
 		layout_ids = regiment_infantry
 		
 		[Slot]	;; front
-		element_IDS = sas_commando
+		element_IDS = AI_sas_commando
 		
 		[Slot]	;; rear guard 1
-		element_IDS = sas_commando
-
+		element_IDS = AI_sas_commando
+		
 		[Slot]	;; rear guard 2
-		element_IDS = sas_commando
+		element_IDS = AI_sas_commando
 		
 		[Slot]	;; rear guard 3
-		element_IDS = sas_commando
-	
+		element_IDS = AI_sas_commando
+		
 		[Slot]	;; support
-		element_IDS = sas_sniper
+		element_IDS = AI_sas_sniper
 		
 		[Slot]	;; captain
-		element_IDS = sas_commando_co
+		element_IDS = AI_sas_commando_co
 	}
-	
+
 	[PropertiesComponent]
-	{	
-		[Property]
-		property_ids = paratrooper_company
-        
+	{
 		[Property]
 		property_ids = TK_AI_SAS
-	}	
-}
-
-[Thing Template=AAGBRRegimentCommando]
-{
-	IDS = regiment_gbr_sas_paratrooper
-
-	transport_actor = gbr_transport_air
-
-	[EconomyComponent]
-	{
-		[Cost]
-		money = 110
 	}
-
-	[Placement]
-	placement_group_ids = null
 }
 
-[Thing Template=AAGBRRegimentCommando]
+[Thing Template=AAGBRRegimentCommandoAI]
 {
-	IDS = regiment_gbr_sas_paratrooper_ground
+	IDS = regiment_gbr_sas_paratroopersAI
 
 	[EconomyComponent]
 	{

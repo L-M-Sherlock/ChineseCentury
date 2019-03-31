@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= kuribayashi_low_income_ego
 	name									= "#Japan_Kuribayashi_SAI_kuribayashi_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= kuribayashi_low_low_ego
-	name									= "#Japan_Kuribayashi_SAI_kuribayashi_low_income_ego_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= kuribayashi_main_game_ego
 	name									= "#Japan_Kuribayashi_SAI_kuribayashi_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= kuribayashi_end_game_ego
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= kuribayashi_end_game_ego_TK
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= kuribayashi_end_game_ego_TK_DS
 	name									= "#Japan_Kuribayashi_SAI_kuribayashi_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -32,13 +38,16 @@
 	initial_ego								= kuribayashi_low_income_ego
 
 	[Ego]
-	IDS										= kuribayashi_low_low_ego
-
-	[Ego]
 	IDS										= kuribayashi_main_game_ego
 
 	[Ego]
 	IDS										= kuribayashi_end_game_ego
+
+	[Ego]
+	IDS										= kuribayashi_end_game_ego_TK
+
+	[Ego]
+	IDS										= kuribayashi_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_jpn

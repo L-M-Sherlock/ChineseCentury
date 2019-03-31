@@ -1,0 +1,276 @@
+[template TK1Research template = SAIResearchTemplate]
+{
+	base_priority	= 50
+
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 50
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 350
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 400
+	}
+/*
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics_AI
+		priority					= 75
+	}
+*/
+}
+
+[template TK2Research template = SAIResearchTemplate]
+{
+	base_priority	= 100
+
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 750
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 600
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 100
+	}
+/*
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics_AI
+		priority					= 75
+	}
+*/
+	;; ITA MORALE+1 HEALTH+15%
+	;;[TechPriority]
+	;;{
+	;;	tech						= tech_facism
+	;;	priority					= 100
+	;;}
+
+	;; CHN MONEY+5
+	;;[TechPriority]
+	;;{
+	;;	tech						= tech_rus_assistance
+	;;	priority					= 100
+	;;}
+}
+
+[template TK3Research template = SAIResearchTemplate]
+{
+	base_priority	= 150
+
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 550
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 500
+	}
+
+/*
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics_AI
+		priority					= 75
+	}
+*/
+	;; ITA MORALE+1 HEALTH+15%
+	;;[TechPriority]
+	;;{
+	;;	tech						= tech_facism
+	;;	priority					= 100
+	;;}
+
+	;; CHN MONEY+5
+	;;[TechPriority]
+	;;{
+	;;	tech						= tech_rus_assistance
+	;;	priority					= 100
+	;;}
+
+	;; CHN MONEY-5
+	;;[TechPriority]
+	;;{
+	;;	tech						= tech_usa_assistance
+	;;	priority					= 200
+	;;}
+}
+
+[template TK4Research template = SAIResearchTemplate]
+{
+	base_priority	= 200
+
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 250
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 600
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 550
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 250
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 250
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 300
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 300
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 100
+	}
+/*
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics_AI
+		priority					= 75
+	}
+*/
+	;; ITA MORALE+1 HEALTH+15%
+	;;[TechPriority]
+	;;{
+	;;	tech						= tech_facism
+	;;	priority					= 100
+	;;}
+
+	;; CHN MONEY+5
+	;;[TechPriority]
+	;;{
+	;;	tech						= tech_rus_assistance
+	;;	priority					= 100
+	;;}
+
+	;; CHN MONEY-5
+	;;[TechPriority]
+	;;{
+	;;	tech						= tech_usa_assistance
+	;;	priority					= 200
+	;;}
+
+	;; CHN HEALTH+10% RECHARGE_TIME+10% RESUPPLY_RATE-20%
+	;;[TechPriority]
+	;;{
+	;;	tech						= tech_detection
+	;;	priority					= 250
+	;;}
+}

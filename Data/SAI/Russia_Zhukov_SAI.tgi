@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= zhukov_low_income_ego
 	name									= "#Russia_Zhukov_SAI_zhukov_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= zhukov_low_low_ego
-	name									= "#Russia_Zhukov_SAI_zhukov_low_income_ego_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= zhukov_main_game_ego
 	name									= "#Russia_Zhukov_SAI_zhukov_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= zhukov_end_game_ego
+	name									= "#Russia_Zhukov_SAI_zhukov_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= zhukov_end_game_ego_TK
+	name									= "#Russia_Zhukov_SAI_zhukov_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= zhukov_end_game_ego_TK_DS
 	name									= "#Russia_Zhukov_SAI_zhukov_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -32,13 +38,16 @@
 	initial_ego								= zhukov_low_income_ego
 
 	[Ego]
-	IDS										= zhukov_low_low_ego
-
-	[Ego]
 	IDS										= zhukov_main_game_ego
 
 	[Ego]
 	IDS										= zhukov_end_game_ego
+
+	[Ego]
+	IDS										= zhukov_end_game_ego_TK
+
+	[Ego]
+	IDS										= zhukov_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_rus

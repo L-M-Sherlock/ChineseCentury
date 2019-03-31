@@ -1,24 +1,30 @@
-[Ego template = ArmorLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= nagumo_low_income_ego
 	name									= "#Japan_Nagumo_SAI_nagumo_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = ArmorLowLowEgo]
-{
-	IDS										= nagumo_low_low_ego
-	name									= "#Japan_Nagumo_SAI_nagumo_low_income_ego_name"
-} ;; LowIncomeEgo
-
-[Ego template = ArmorMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= nagumo_main_game_ego
 	name									= "#Japan_Nagumo_SAI_nagumo_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = ArmorEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= nagumo_end_game_ego
+	name									= "#Japan_Nagumo_SAI_nagumo_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= nagumo_end_game_ego_TK
+	name									= "#Japan_Nagumo_SAI_nagumo_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= nagumo_end_game_ego_TK_DS
 	name									= "#Japan_Nagumo_SAI_nagumo_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -32,13 +38,16 @@
 	initial_ego								= nagumo_low_income_ego
 
 	[Ego]
-	IDS										= nagumo_low_low_ego
-
-	[Ego]
 	IDS										= nagumo_main_game_ego
 
 	[Ego]
 	IDS										= nagumo_end_game_ego
+
+	[Ego]
+	IDS										= nagumo_end_game_ego_TK
+
+	[Ego]
+	IDS										= nagumo_end_game_ego_TK_DS
 
 	[Nation]
 	IDS										= nation_jpn
