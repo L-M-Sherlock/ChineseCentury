@@ -53,7 +53,7 @@
 		property_ids = paratrooper_company
         
 		[Property]
-		property_ids = TK_AI_SAS
+		property_ids = special_company
 	}	
 }
 
@@ -66,7 +66,7 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 110
+		money = 105
 	}
 
 	[Placement]
@@ -80,6 +80,6 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 75
+		money = 70
 	}
 }

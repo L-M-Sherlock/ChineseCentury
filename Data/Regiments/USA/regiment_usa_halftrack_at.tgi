@@ -51,5 +51,8 @@
 	{	
 		[Property]
 		property_ids = antitank_company
+
+		[Property]
+		property_ids = special_company
 	}
 }

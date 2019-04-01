@@ -20,7 +20,10 @@
 		property_IDS = org_tank
 
 		[Property]
-		property_ids = artillery_company
+		property_ids = antitank_company
+
+		[Property]
+		property_ids = tank_company
 	}
 
 	[View]

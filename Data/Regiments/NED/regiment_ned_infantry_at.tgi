@@ -54,7 +54,7 @@
 	[PropertiesComponent]
 	{	
 		[Property]
-		property_ids = infantry_company
+		property_ids = infantry1_company
 	}
 }
 

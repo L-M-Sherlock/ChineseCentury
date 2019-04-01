@@ -24,6 +24,9 @@
 		property_IDS = recon
 		
 		[Property]
+		property_IDS = infantry_company		
+		
+		[Property]
 		property_IDS = trailblazing		
 	}
 	

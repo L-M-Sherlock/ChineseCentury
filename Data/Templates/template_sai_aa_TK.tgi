@@ -136,6 +136,13 @@
 
 		[ActorPriority]
 		{
+			property_IDS		= infantry_company
+			value			= 8999
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
 			property_IDS		= supplydepot
 			value			= 2000
 			repeat_penalty		= 100
@@ -253,15 +260,15 @@
 
 		[ActorPriority]
 		{
-			property_IDS		= infantry_company
+			property_IDS		= special_company
 			value			= 9998
-			repeat_penalty		= 10000
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
-			property_IDS		= recon
-			value			= 9999
+			property_IDS		= infantry_company
+			value			= 8999
 			repeat_penalty		= 100
 		}
 
@@ -387,7 +394,7 @@
 
 		[ActorPriority]
 		{
-			property_IDS		= infantry_company
+			property_IDS		= special_company
 			value			= 7000
 			repeat_penalty		= 100
 		}
@@ -401,7 +408,7 @@
 
 		[ActorPriority]
 		{
-			property_IDS		= recon
+			property_IDS		= infantry_company
 			value			= 8100
 			repeat_penalty		= 300
 		}
@@ -580,16 +587,16 @@
 
 		[ActorPriority]
 		{
-			property_IDS		= recon
+			property_IDS		= infantry_company
 			value			= 1000
 			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
-			property_IDS		= infantry_company
+			property_IDS		= special_company
 			value			= 1100
-			repeat_penalty		= 10000
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]

@@ -74,7 +74,7 @@ but also can cause CRASH!!!!!!!!!!!!
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 150
+		money = 180
 		
 		[Upkeep]
 		ammo = 10
@@ -139,7 +139,6 @@ but also can cause CRASH!!!!!!!!!!!!
 	
 	[PropertiesComponent]
 	{	
-
 		[Property]
 		property_ids = artillery_company
 	}

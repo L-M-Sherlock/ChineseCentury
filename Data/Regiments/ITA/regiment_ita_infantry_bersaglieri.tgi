@@ -5,7 +5,7 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 55
+		money = 65
 		
 		[Upkeep]
 		ammo = 15
@@ -30,6 +30,9 @@
 	{	
 		[Property]
 		property_ids = infantry_company
+        
+		[Property]
+		property_ids = special_company
 	}
 }
 
