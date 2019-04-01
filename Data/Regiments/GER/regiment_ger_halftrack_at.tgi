@@ -54,5 +54,8 @@
         
 		[Property]
 		property_ids = antitank_company
+
+		[Property]
+		property_ids = mechanized_company
 	}
 }
