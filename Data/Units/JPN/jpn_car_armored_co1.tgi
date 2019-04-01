@@ -80,6 +80,27 @@
 		[Property]
 		property_IDS = front
 	}
+
+    [DenizenComponent]
+	{
+		guard_range = 15
+		guard_operational_range = 30
+
+
+		[Organization]
+		organization_ids = regiment_jpn_infantry_halftrack
+			
+		behavior = MILITIA_OFFENSIVE
+		
+
+		[Inventory]
+		actor_ids = jpn_infantryt
+		count = 3
+
+		[Inventory]
+		actor_ids = jpn_infantry_co
+		count = 1
+	}
 	
 	[PerformerComponent]
 	{

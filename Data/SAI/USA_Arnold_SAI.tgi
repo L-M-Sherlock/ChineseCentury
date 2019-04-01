@@ -28,6 +28,12 @@
 	name									= "#USA_Arnold_SAI_arnold_end_game_ego_name"
 } ;; EndGameEgo
 
+[Ego template = TK_AA_DS1]
+{
+	IDS										= arnold_end_game_ego_TK_DS1
+	name									= "#USA_Arnold_SAI_arnold_end_game_ego_name"
+} ;; EndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= arnold_sai
@@ -48,6 +54,9 @@
 
 	[Ego]
 	IDS										= arnold_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= arnold_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_usa

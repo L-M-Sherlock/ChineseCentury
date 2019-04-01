@@ -28,6 +28,12 @@
 	name									= "#Russia_Rokossovski_SAI_rokossovski_end_game_ego_name"
 } ;; EndGameEgo
 
+[Ego template = TK_AA_DS1]
+{
+	IDS										= rokossovski_end_game_ego_TK_DS1
+	name									= "#Russia_Rokossovski_SAI_rokossovski_end_game_ego_name"
+} ;; EndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= rokossovski_sai
@@ -48,6 +54,9 @@
 
 	[Ego]
 	IDS										= rokossovski_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= rokossovski_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_rus

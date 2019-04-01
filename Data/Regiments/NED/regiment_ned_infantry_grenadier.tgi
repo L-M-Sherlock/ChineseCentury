@@ -55,5 +55,8 @@
 	{	
 		[Property]
 		property_ids = infantry_company
+        
+		[Property]
+		property_ids = special_company
 	}
 }

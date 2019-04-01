@@ -28,6 +28,12 @@
 	name									= "#usa_sai_usa_end_game_ego_unit_limit_max_needed_name"
 } ;; EndGameEgo
 
+[Ego template = TK_AA_DS1]
+{
+	IDS										= usa_end_game_ego_TK_DS1
+	name									= "#usa_sai_usa_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= usa_sai
@@ -49,6 +55,9 @@
 
 	[Ego]
 	IDS										= usa_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= usa_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_usa

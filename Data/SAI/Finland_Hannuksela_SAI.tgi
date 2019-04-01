@@ -1,18 +1,36 @@
-[Ego template = MechanizedLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= hannuksela_low_income_ego
 	name									= "#Finland_Hannuksela_SAI_hannuksela_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = MechanizedMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= hannuksela_main_game_ego
 	name									= "#Finland_Hannuksela_SAI_hannuksela_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = MechanizedEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= hannuksela_end_game_ego
+	name									= "#Finland_Hannuksela_SAI_hannuksela_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= hannuksela_end_game_ego_TK
+	name									= "#Finland_Hannuksela_SAI_hannuksela_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= hannuksela_end_game_ego_TK_DS
+	name									= "#Finland_Hannuksela_SAI_hannuksela_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= hannuksela_end_game_ego_TK_DS1
 	name									= "#Finland_Hannuksela_SAI_hannuksela_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -30,6 +48,15 @@
 
 	[Ego]
 	IDS										= hannuksela_end_game_ego
+
+	[Ego]
+	IDS										= hannuksela_end_game_ego_TK
+
+	[Ego]
+	IDS										= hannuksela_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= hannuksela_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_fin

@@ -11,13 +11,31 @@
 	[TechPriority]
 	{
 		tech						= tech_sniper_rifle
-		priority					= 350
+		priority					= 1250
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_bersaglieri
+		priority					= 1250
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ski
+		priority					= 1250
 	}
 
 	[TechPriority]
 	{
 		tech						= tech_sas_commandos
-		priority					= 400
+		priority					= 1250
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_guard_grenadiers
+		priority					= 1250
 	}
 /*
 	[TechPriority]
@@ -30,7 +48,7 @@
 
 [template TK2Research template = SAIResearchTemplate]
 {
-	base_priority	= 100
+	base_priority	= 50
 
 	[TechPriority]
 	{
@@ -41,13 +59,31 @@
 	[TechPriority]
 	{
 		tech						= tech_sas_commandos
-		priority					= 750
+		priority					= 1500
 	}
     
 	[TechPriority]
 	{
 		tech						= tech_sniper_rifle
-		priority					= 600
+		priority					= 1500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_bersaglieri
+		priority					= 1500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ski
+		priority					= 1500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_guard_grenadiers
+		priority					= 1500
 	}
 
 	[TechPriority]
@@ -85,7 +121,7 @@
 
 [template TK3Research template = SAIResearchTemplate]
 {
-	base_priority	= 150
+	base_priority	= 50
 
 	[TechPriority]
 	{
@@ -120,12 +156,18 @@
 	[TechPriority]
 	{
 		tech						= tech_sas_commandos
-		priority					= 550
+		priority					= 1550
 	}
     
 	[TechPriority]
 	{
 		tech						= tech_sniper_rifle
+		priority					= 1500
+	}    
+    
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
 		priority					= 500
 	}
 
@@ -160,7 +202,7 @@
 
 [template TK4Research template = SAIResearchTemplate]
 {
-	base_priority	= 200
+	base_priority	= 50
 
 	[TechPriority]
 	{
@@ -238,6 +280,66 @@
 	{
 		tech						= tech_heavy_tank
 		priority					= 100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_mannerheimline
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 100
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 400
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 300
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_east_indies
+		priority					= 400
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 100
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 100
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 500
 	}
 /*
 	[TechPriority]

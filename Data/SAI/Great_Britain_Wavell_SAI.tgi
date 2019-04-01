@@ -28,6 +28,12 @@
 	name									= "#Great_Britain_Wavell_SAI_wavell_end_game_ego_name"
 } ;; EndGameEgo
 
+[Ego template = TK_AA_DS1_GBR]
+{
+	IDS										= wavell_end_game_ego_TK_DS1
+	name									= "#Great_Britain_Wavell_SAI_wavell_end_game_ego_name"
+} ;; EndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= wavell_sai
@@ -48,6 +54,9 @@
 
 	[Ego]
 	IDS										= wavell_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= wavell_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_gbr

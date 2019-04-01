@@ -74,15 +74,16 @@ but also can cause CRASH!!!!!!!!!!!!
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 44
+		money = 50
 		
 		[Upkeep]
 		ammo = 10
+        unit_limit_consumed = 1
 	}
 
 	[View]
 	{
-                resource_prefix = /Units/jpn/jpnInfantry/jpnInfantry
+        resource_prefix = /Units/jpn/jpnInfantry/jpnInfantry
 		icon = /UI/Game/RegimentButtons/IconInfantry.png
 		banner_icon = /Organizations/Banners/Icons/IconInfantry.png
 
@@ -138,7 +139,7 @@ but also can cause CRASH!!!!!!!!!!!!
 	[PropertiesComponent]
 	{	
 
-		;;[Property]
-		;;property_ids = infantry_company
+		[Property]
+		property_ids = special_company
 	}
 }

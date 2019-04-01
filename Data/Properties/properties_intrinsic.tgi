@@ -674,6 +674,13 @@
 	icon = null
 }
 
+[Property Template=SharedProperty]
+{
+	IDS = special_company
+	name = "#properties_intrinsic_paratrooper_company_name"
+	icon = null
+}
+
 ;; -------------- BUNKER PROPERTIES ---------------
 
 [Property Template=SharedProperty]

@@ -1,24 +1,36 @@
-[Ego template = artilleryLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= voorst_low_income_ego
 	name									= "#Neatherland_Voorst_SAI_voorst_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = artilleryLowLowEgo]
-{
-	IDS										= voorst_low_low_ego
-	name									= "#Neatherland_Voorst_SAI_voorst_low_income_ego_name"
-} ;; LowIncomeEgo
-
-[Ego template = artilleryMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= voorst_main_game_ego
 	name									= "#Neatherland_Voorst_SAI_voorst_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = artilleryEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= voorst_end_game_ego
+	name									= "#Neatherland_Voorst_SAI_voorst_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= voorst_end_game_ego_TK
+	name									= "#Neatherland_Voorst_SAI_voorst_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= voorst_end_game_ego_TK_DS
+	name									= "#Neatherland_Voorst_SAI_voorst_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= voorst_end_game_ego_TK_DS1
 	name									= "#Neatherland_Voorst_SAI_voorst_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -36,6 +48,15 @@
 
 	[Ego]
 	IDS										= voorst_end_game_ego
+
+	[Ego]
+	IDS										= voorst_end_game_ego_TK
+
+	[Ego]
+	IDS										= voorst_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= voorst_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_ned

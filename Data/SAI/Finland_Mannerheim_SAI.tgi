@@ -1,18 +1,36 @@
-[Ego template = MechanizedLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= mannerheim_low_income_ego
 	name									= "#Finland_Mannerheim_SAI_mannerheim_low_income_ego_name"
 } ;; BalancedLowIncomeEgo
 
-[Ego template = MechanizedMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= mannerheim_main_game_ego
 	name									= "#Finland_Mannerheim_SAI_mannerheim_main_game_ego_name"
 } ;; BalancedMainGameEgo
 
-[Ego template = MechanizedEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= mannerheim_end_game_ego
+	name									= "#Finland_Mannerheim_SAI_mannerheim_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= mannerheim_end_game_ego_TK
+	name									= "#Finland_Mannerheim_SAI_mannerheim_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= mannerheim_end_game_ego_TK_DS
+	name									= "#Finland_Mannerheim_SAI_mannerheim_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= mannerheim_end_game_ego_TK_DS1
 	name									= "#Finland_Mannerheim_SAI_mannerheim_end_game_ego_name"
 } ;; BalancedEndGameEgo
 
@@ -30,6 +48,15 @@
 
 	[Ego]
 	IDS										= mannerheim_end_game_ego
+
+	[Ego]
+	IDS										= mannerheim_end_game_ego_TK
+
+	[Ego]
+	IDS										= mannerheim_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= mannerheim_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_fin

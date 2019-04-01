@@ -28,6 +28,12 @@
 	name									= "#Russia_Konev_SAI_konev_end_game_ego_name"
 } ;; BalancedEndGameEgo
 
+[Ego template = TK_AA_DS1]
+{
+	IDS										= konev_end_game_ego_TK_DS1
+	name									= "#Russia_Konev_SAI_konev_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= konev_sai
@@ -48,6 +54,9 @@
 
 	[Ego]
 	IDS										= konev_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= konev_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_rus

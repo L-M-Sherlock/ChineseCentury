@@ -28,6 +28,12 @@
 	name									= "#great_britian_sai_gbr_end_game_ego_unit_limit_max_needed_name"
 } ;; EndGameEgo
 
+[Ego template = TK_AA_DS1_GBR]
+{
+	IDS										= gbr_end_game_ego_TK_DS1
+	name									= "#great_britian_sai_gbr_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= gbr_sai
@@ -49,6 +55,9 @@
 
 	[Ego]
 	IDS										= gbr_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= gbr_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_gbr

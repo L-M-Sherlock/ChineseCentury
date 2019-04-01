@@ -79,7 +79,7 @@ but also can cause CRASH!!!!!!!!!!!!
 		[Upkeep]
 		ammo = 30
 		oil = 25
-                unit_limit_consumed = 1
+        unit_limit_consumed = 1
 	}
 
 	[View]
@@ -140,7 +140,7 @@ but also can cause CRASH!!!!!!!!!!!!
 	[PropertiesComponent]
 	{	
 
-		;;[Property]
-		;;property_ids = artillery_company
+		[Property]
+		property_ids = tank_company
 	}
 }

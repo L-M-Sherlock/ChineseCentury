@@ -1,18 +1,36 @@
-[Ego template = MechanizedLowIncomeEgo]
+[Ego template = TK_AA_1]
 {
 	IDS										= Badoglio_low_income_ego
 	name									= "#Italy_Badoglio_SAI_Badoglio_low_income_ego_name"
 } ;; LowIncomeEgo
 
-[Ego template = MechanizedMainGameEgo]
+[Ego template = TK_AA_2]
 {
 	IDS										= Badoglio_main_game_ego
 	name									= "#Italy_Badoglio_SAI_Badoglio_main_game_ego_name"
 } ;; MainGameEgo
 
-[Ego template = MechanizedEndGameEgo]
+[Ego template = TK_AA_3]
 {
 	IDS										= Badoglio_end_game_ego
+	name									= "#Italy_Badoglio_SAI_Badoglio_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= Badoglio_end_game_ego_TK
+	name									= "#Italy_Badoglio_SAI_Badoglio_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= Badoglio_end_game_ego_TK_DS
+	name									= "#Italy_Badoglio_SAI_Badoglio_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= Badoglio_end_game_ego_TK_DS1
 	name									= "#Italy_Badoglio_SAI_Badoglio_end_game_ego_name"
 } ;; EndGameEgo
 
@@ -30,6 +48,15 @@
 
 	[Ego]
 	IDS										= Badoglio_end_game_ego
+
+	[Ego]
+	IDS										= Badoglio_end_game_ego_TK
+
+	[Ego]
+	IDS										= Badoglio_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= Badoglio_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_ita

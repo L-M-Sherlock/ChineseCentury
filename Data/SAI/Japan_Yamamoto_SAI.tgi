@@ -28,6 +28,12 @@
 	name									= "#Japan_Yamamoto_SAI_yamamoto_end_game_ego_name"
 } ;; BalancedEndGameEgo
 
+[Ego template = TK_AA_DS1]
+{
+	IDS										= yamamoto_end_game_ego_TK_DS1
+	name									= "#Japan_Yamamoto_SAI_yamamoto_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= yamamoto_sai
@@ -48,6 +54,9 @@
 
 	[Ego]
 	IDS										= yamamoto_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= yamamoto_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_jpn

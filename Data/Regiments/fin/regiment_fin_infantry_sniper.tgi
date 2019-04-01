@@ -12,7 +12,7 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 48
+		money = 45
 		
 		[Upkeep]
 		ammo = 5
@@ -21,7 +21,10 @@
 	[PropertiesComponent]
 	{
 		[Property]
-		property_IDS = recon	
+		property_IDS = recon
+        
+		[Property]
+		property_IDS = special_company	
 		
 		[Property]
 		property_IDS = trailblazing		

@@ -28,6 +28,12 @@
 	name									= "#Japan_Nagumo_SAI_nagumo_end_game_ego_name"
 } ;; EndGameEgo
 
+[Ego template = TK_AA_DS1]
+{
+	IDS										= nagumo_end_game_ego_TK_DS1
+	name									= "#Japan_Nagumo_SAI_nagumo_end_game_ego_name"
+} ;; EndGameEgo
+
 [SAI template = SAI]
 {
 	IDS										= nagumo_sai
@@ -48,6 +54,9 @@
 
 	[Ego]
 	IDS										= nagumo_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= nagumo_end_game_ego_TK_DS1
 
 	[Nation]
 	IDS										= nation_jpn
