@@ -1065,7 +1065,7 @@ USAGE:
 
 	[ElementComponent]
 	{
-		resupply_rate = 0.1	
+		resupply_rate = 0.2
 	}
 	
 	[Flags]
@@ -1201,7 +1201,7 @@ USAGE:
 	
 	[MoverComponent]
 	{
-		speed_max = 7
+		speed_max = 6
 		turn_radius = 15
 		
 		[WhenStartMoving template=FXC_CreateVFX]
@@ -1241,8 +1241,8 @@ USAGE:
 
 	[BodyComponent]
 	{
-		health = 100
-		defense = 0
+		health = 150
+		defense = 5
 		
 		[OnDeathAbility Template=AAAttackLocal]
 		{
@@ -1267,8 +1267,8 @@ USAGE:
 	
 	[MoverComponent]
 	{
-		speed_max = 12
-		turn_radius = 7
+		speed_max = 10
+		turn_radius = 4
 		
 		[WhenStartMoving template=FXC_CreateVFX]
 		vfx_ids = fighter_contrail

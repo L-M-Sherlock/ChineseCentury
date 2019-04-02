@@ -26,6 +26,11 @@
 				
 				[Effect Template=PierceDamageEffect]
 				amount = 70
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = armor_piercing
+				targets = air
+				amount = 20
 			
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = jpn_mg_heavy

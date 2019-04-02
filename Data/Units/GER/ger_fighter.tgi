@@ -4,12 +4,6 @@
 	name = "#ger_fighter_name"
 	editor_name = "#ger_fighter_editor_name"
 
-	[BodyComponent]
-	{
-		health = 300
-		defense = 5
-	}
-
 	[View]
 	resource_prefix = GERFighter/GERFighter
 	
@@ -33,6 +27,11 @@
 				
 				[Effect Template=PierceDamageEffect]
 				amount = 70
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = armor_piercing
+				targets = air
+				amount = 25
 
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = ger_mg_heavy

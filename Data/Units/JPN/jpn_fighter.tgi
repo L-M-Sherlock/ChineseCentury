@@ -25,7 +25,12 @@
 				attenuation_factor_max = 0.5
 				
 				[Effect Template=PierceDamageEffect]
-				amount = 80
+				amount = 70
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = armor_piercing
+				targets = air
+				amount = 30
 			
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = jpn_mg_heavy

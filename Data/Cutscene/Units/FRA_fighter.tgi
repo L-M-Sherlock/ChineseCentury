@@ -3,12 +3,6 @@
 	IDS = FRA_fighter
 	name = "#FRA_fighter_name"
 	editor_name = "#FRA_fighter_editor_name"
-
-	[BodyComponent]
-	{
-		health = 300
-		defense = 5
-	}
 	
 	[View]
 	resource_prefix = FRAFighter/GBRFighter
@@ -32,6 +26,11 @@
 				
 				[Effect Template=PierceDamageEffect]
 				amount = 75
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = armor_piercing
+				targets = air
+				amount = 30
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = gbr_mg_heavy
