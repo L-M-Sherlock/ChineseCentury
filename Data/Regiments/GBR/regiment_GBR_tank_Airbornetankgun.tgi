@@ -10,7 +10,7 @@
 		money = 225
 		
 		[Upkeep]
-		ammo = 25
+		ammo = 20
 		oil = 25
 	}
 
@@ -18,9 +18,6 @@
 	{
 		[Property]
 		property_IDS = org_tank
-
-		[Property]
-		property_ids = artillery_company
 
 		[Property]
 		property_ids = tank_company

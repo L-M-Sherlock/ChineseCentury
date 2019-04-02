@@ -22,6 +22,12 @@
 	name									= "#Neatherland_VanOyen_SAI_vanoyen_end_game_ego_name"
 } ;; EndGameEgo
 
+[Ego template = TK_AA_5]
+{
+	IDS										= vanoyen_end_game_ego_END
+	name									= "#Neatherland_VanOyen_SAI_vanoyen_end_game_ego_name"
+} ;; EndGameEgo
+
 [Ego template = TK_AA_DS]
 {
 	IDS										= vanoyen_end_game_ego_TK_DS
@@ -51,6 +57,9 @@
 
 	[Ego]
 	IDS										= vanoyen_end_game_ego_TK
+
+	[Ego]
+	IDS										= vanoyen_end_game_ego_END
 
 	[Ego]
 	IDS										= vanoyen_end_game_ego_TK_DS

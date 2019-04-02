@@ -1225,7 +1225,7 @@
 		;;	supply.  We just have a flat priority for that.
 		[Packing]
 		{
-			fixed pack_out_of_supply_priority	= 9000
+			fixed pack_out_of_supply_priority	= 20000
 		}
 
 		;; used to decide when to recover from damage

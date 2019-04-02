@@ -82,7 +82,7 @@
 				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
 				range = 12
 				recharge_time = 3
-				area = 2
+				area = 3
 				
 				[Effect Template=FireDamageEffect]
 				amount = 35

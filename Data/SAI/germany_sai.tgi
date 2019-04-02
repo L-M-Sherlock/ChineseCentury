@@ -22,6 +22,12 @@
 	name									= "#germany_sai_ger_end_game_ego_unit_limit_max_needed_name"
 } ;; EndGameEgo
 
+[Ego template = TK_AA_5]
+{
+	IDS										= ger_end_game_ego_END
+	name									= "#germany_sai_ger_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
 [Ego template = TK_AA_DS]
 {
 	IDS										= ger_end_game_ego_TK_DS
@@ -52,6 +58,9 @@
 
 	[Ego]
 	IDS										= ger_end_game_ego_TK
+
+	[Ego]
+	IDS										= ger_end_game_ego_END
 
 	[Ego]
 	IDS										= ger_end_game_ego_TK_DS
