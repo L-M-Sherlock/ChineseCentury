@@ -7,9 +7,8 @@
 	name = "#kangzhan_charge_name"
 	description = "#kangzhan_charge_description"
 	targets = +FRIEND -ORGANIZATION -BUILDING
-	recharge_time = 180
+	recharge_time = 300
 	area = 32
-	max_targets = 400
 	target_location_vfx = friendly_target_decal_vfx
 
 	icon = /UI/%s/Game/SpecialOps/IconNapalm.png
@@ -28,11 +27,11 @@
 			attribute = RECHARGE_TIME
 			amount = +0.2
 
-                        [Modifier Template=MultiplyModifier]
+            [Modifier Template=MultiplyModifier]
 			attribute = SPEED_MAX
 			amount = +0.2
 
-                        [Modifier Template=AddModifier]
+            [Modifier Template=AddModifier]
 			attribute = DV
 			amount = +4
 			

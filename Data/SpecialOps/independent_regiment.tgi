@@ -6,7 +6,7 @@
 	IDS = independent_regiment
 	name = "#independent_regiment_name"
 	description = "#independent_regiment_description"
-        targets = NULL
+    targets = NULL
 	recharge_time = 180
 	range = 0
 	area = 0

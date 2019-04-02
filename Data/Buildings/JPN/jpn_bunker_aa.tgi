@@ -12,7 +12,7 @@
 
 	[DefenderComponent]
 	{
-		control_range = 25
+		control_range = 30
 	
 		[Ability Template=AAAttackLocal]
 		{		
@@ -22,7 +22,8 @@
 			{
 				name = "#jpn_bunker_aa_DefenderComponent_AbilityDefinition_name"
 				recharge_time = 2
-				range = 25
+				range = 30
+                area = 4
 				
 				[Effect Template=PierceDamageEffect]
 				amount = 40

@@ -1,11 +1,11 @@
 [template TK1Research template = SAIResearchTemplate]
 {
-	base_priority	= 50
+	base_priority	= 20
 
 	[TechPriority]
 	{
 		tech						= tech_military_surplus
-		priority					= 50
+		priority					= 150
 	}
     
 	[TechPriority]
@@ -48,12 +48,12 @@
 
 [template TK2Research template = SAIResearchTemplate]
 {
-	base_priority	= 50
+	base_priority	= 20
 
 	[TechPriority]
 	{
 		tech						= tech_military_surplus
-		priority					= 150
+		priority					= 200
 	}
 
 	[TechPriority]
@@ -121,12 +121,12 @@
 
 [template TK3Research template = SAIResearchTemplate]
 {
-	base_priority	= 50
+	base_priority	= 20
 
 	[TechPriority]
 	{
 		tech						= tech_military_surplus
-		priority					= 200
+		priority					= 250
 	}
 
 	[TechPriority]
@@ -207,7 +207,7 @@
 	[TechPriority]
 	{
 		tech						= tech_military_surplus
-		priority					= 250
+		priority					= 300
 	}
 
 	[TechPriority]

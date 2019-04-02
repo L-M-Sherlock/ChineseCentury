@@ -7,7 +7,7 @@
 	name = "#maskirovka_name"
 	description = "#maskirovka_description"
 	targets = NULL
-	recharge_time = 300
+	recharge_time = 240
 	range = 0
 	area = 0
 

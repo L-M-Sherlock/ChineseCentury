@@ -6,12 +6,11 @@
 	IDS = yundongzhan
 	name = "#yundongzhan_name"
 	description = "#yundongzhan_description"
-	targets = +FRIEND -BUILDING -ORGANIZATION
+	targets = +FRIEND -BUILDING -ORGANIZATION -AIR
 	ability_type = NULL
-	recharge_time = 180
+	recharge_time = 240
 	range = 10
 	area = 30
-	max_targets = 200
 	target_location_vfx = friendly_target_decal_vfx
 
 	icon = /UI/%s/Game/SpecialOps/IconForcedMarch.png

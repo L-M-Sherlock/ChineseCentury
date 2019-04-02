@@ -20,6 +20,12 @@
 		property_IDS = org_mechanized
 
 		[Property]
+		property_ids = special_company
+
+		[Property]
+		property_ids = mechanized_company
+
+		[Property]
 		property_ids = artillery_company
 	}
 

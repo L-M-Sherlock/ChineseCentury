@@ -6,8 +6,13 @@
 
 	[View]
 	resource_prefix = CPCTransportAir/CPCTransportAir
-
+	
 	[BodyComponent]
 	health = 500
-	defense = 5
+	defense = 10
+    
+    [MoverComponent]
+	{
+		speed_max = 9
+	}	
 }

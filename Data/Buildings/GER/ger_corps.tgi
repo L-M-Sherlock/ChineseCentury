@@ -132,11 +132,11 @@
 		{
 			property_IDS = tech_advanced_infantry_training
 			type = GLOBAL
-			research_time = 60
+			research_time = 30
 		
 			[ResearchCost Template=CostList]
 			{
-				money = 75
+				money = 25
 			}
 		}
 		
@@ -144,11 +144,11 @@
 		{
 			property_IDS = tech_advanced_armor_training
 			type = GLOBAL	
-			research_time = 60
+			research_time = 30
 		
 			[ResearchCost Template=CostList]
 			{
-				money = 75
+				money = 50
 			}
 		}
 

@@ -69,7 +69,7 @@
 		}
 		
 		[AirAttackCost]
-		money = 125
+		money = 100
 	
 		[AirReconCost]
 		money = 50

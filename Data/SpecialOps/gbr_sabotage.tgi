@@ -6,7 +6,7 @@
 	IDS = gbr_sabotage
 	name = "#gbr_sabotage_name"
 	description = "#gbr_sabotage_description"
-	recharge_time = 300
+	recharge_time = 240
 	range = 0
 
 	icon = /UI/%s/Game/SpecialOps/IconSabotage.png

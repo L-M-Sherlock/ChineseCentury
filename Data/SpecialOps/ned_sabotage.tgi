@@ -6,7 +6,7 @@
 	IDS = ned_sabotage
 	name = "#ned_sabotage_name"
 	description = "#ned_sabotage_description"
-	recharge_time = 300
+	recharge_time = 240
 	range = 0
 
 	icon = /UI/%s/Game/SpecialOps/IconHeavyParatrooper.png

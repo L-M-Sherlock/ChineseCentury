@@ -13,7 +13,7 @@
     
     [MoverComponent]
 	{
-		speed_max = 9
+		speed_max = 12
 	}	
 
 }

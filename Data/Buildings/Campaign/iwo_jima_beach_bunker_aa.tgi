@@ -42,7 +42,7 @@
 				
 				icon = /Properties/AbilityIcons/IconAbilityAntiAircraft.png
 
-				range = 30
+				range = 35
 				recharge_time = 2
 				targets = +enemy, +air
 				

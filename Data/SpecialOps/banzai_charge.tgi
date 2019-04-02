@@ -9,7 +9,6 @@
 	targets = +FRIEND -ORGANIZATION -BUILDING
 	recharge_time = 300
 	area = 20
-	max_targets = 28
 	target_location_vfx = friendly_target_decal_vfx
 
 	icon = /UI/%s/Game/SpecialOps/IconBanzaiCharge.png

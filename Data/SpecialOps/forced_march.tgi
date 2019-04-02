@@ -8,10 +8,9 @@
 	description = "#forced_march_description"
 	targets = +FRIEND -BUILDING -ORGANIZATION
 	ability_type = NULL
-	recharge_time = 180
+	recharge_time = 120
 	range = 10
 	area = 15
-	max_targets = 24
 	target_location_vfx = friendly_target_decal_vfx
 
 	icon = /UI/%s/Game/SpecialOps/IconForcedMarch.png

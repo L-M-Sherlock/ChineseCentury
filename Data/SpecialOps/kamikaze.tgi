@@ -7,7 +7,7 @@
 	name = "#kamikaze_name"
 	description = "#kamikaze_description"
 	targets = +ACTOR -ORGANIZATION -AIR
-	recharge_time = 240
+	recharge_time = 180
 	area = 12
 	attenuation_range_min = 2
 	attenuation_factor_max = 0.5
@@ -18,7 +18,7 @@
 	icon = /UI/%s/Game/SpecialOps/IconKamikaze.png
 
 	[Effect Template=APDamageEffect]
-	amount = 400
+	amount = 600
 
 	[Effect Template=AddDamageEffect]
 	damage_type_IDS = flame

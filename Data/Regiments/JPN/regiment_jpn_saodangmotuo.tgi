@@ -141,5 +141,8 @@ but also can cause CRASH!!!!!!!!!!!!
 	{	
 		[Property]
 		property_ids = artillery_company
+
+		[Property]
+		property_ids = mechanized_company
 	}
 }

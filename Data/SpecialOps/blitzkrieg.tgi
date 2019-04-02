@@ -8,10 +8,9 @@
 	description = "#blitzkrieg_description"
 	targets = +FRIEND +TANK
 	ability_type = NULL
-	recharge_time = 420
+	recharge_time = 300
 	area = 20
 	range = 10
-	max_targets = 16
 	target_location_vfx = friendly_target_decal_vfx
 
 	icon = /UI/%s/Game/SpecialOps/IconBlitzkrieg.png

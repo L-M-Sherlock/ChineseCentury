@@ -20,7 +20,7 @@
 		[Item]
 		stat	= money_rate
 		min	= -9999999
-		max	= 120
+		max	= 100
 
 		[Item]
 		stat	= ammo_rate
@@ -123,8 +123,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= infhq
-			value			= 7000
-			repeat_penalty		= 400
+			value			= 7500
+			repeat_penalty		= 300
 		}
 
 		[ActorPriority]
@@ -168,8 +168,8 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 121
-		max	= 200
+		min	= 80
+		max	= 180
 
 		[Item]
 		stat	= ammo_rate
@@ -249,13 +249,25 @@
 			{
 				property_ids		= infhq
 			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= mechhq
+			}
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= infhq
 			value			= 6000
-			repeat_penalty		= 200
+			repeat_penalty		= 500
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= mechhq
+			value			= 5500
+			repeat_penalty		= 1000
 		}
 
 		[ActorPriority]
@@ -292,8 +304,8 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 201
-		max	= 320
+		min	= 161
+		max	= 300
 
 		[Item]
 		stat	= ammo_rate
@@ -381,6 +393,11 @@
 
 			[SpecificRecruitRequest]
 			{
+				property_ids		= armorhq
+			}
+
+			[SpecificRecruitRequest]
+			{
 				property_ids		= motor_pool
 			}
 		}
@@ -389,14 +406,7 @@
 		{
 			property_IDS		= infhq
 			value			= 1000
-			repeat_penalty		= 200
-		}
-
-		[ActorPriority]
-		{
-			property_IDS		= special_company
-			value			= 7000
-			repeat_penalty		= 100
+			repeat_penalty		= 400
 		}
 
 		[ActorPriority]
@@ -404,6 +414,20 @@
 			property_IDS		= mechhq
 			value			= 8000
 			repeat_penalty		= 800
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= armorhq
+			value			= 4500
+			repeat_penalty		= 1500
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= special_company
+			value			= 8000
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
@@ -442,7 +466,7 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 321
+		min	= 280
 		max	= 1000000
 
 		[Item]
@@ -561,21 +585,21 @@
 		{
 			property_IDS	= property_bunker
 			value		= 9999
-			repeat_penalty	= 900
+			repeat_penalty	= 300
 		}
 
 		[ActorPriority]
 		{
 			property_IDS	= property_bunker_artillery
 			value		= 9999
-			repeat_penalty	= 900
+			repeat_penalty	= 300
 		}
 
 		[ActorPriority]
 		{
 			property_IDS	= property_bunker_aa
 			value		= 9999
-			repeat_penalty	= 900
+			repeat_penalty	= 300
 		}
 
 		[ActorPriority]
@@ -610,6 +634,13 @@
 		{
 			property_IDS		= antitank_company
 			value			= 3000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= mechanized_company
+			value			= 5000
 			repeat_penalty		= 100
 		}
 
@@ -786,8 +817,8 @@
 		{
 			property_IDS		= supplydepot
 			value			= 10000
+			repeat_penalty		= -100
 		}
-
 
 		[ActorPriority]
 		{
@@ -914,8 +945,8 @@
 		{
 			property_IDS		= supplydepot
 			value			= 10000
+			repeat_penalty		= -100
 		}
-
 
 		[ActorPriority]
 		{

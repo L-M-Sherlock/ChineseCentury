@@ -7,9 +7,8 @@
 	name = "#resupply_tank_name"
 	description = "#resupply_tank_description"
 	targets = +FRIEND +ORGANIZATION +ORG_TANK
-	recharge_time = 300
+	recharge_time = 180
 	area = 15
-	max_targets = 4
 	target_location_vfx = friendly_target_decal_vfx
 	
 	icon = /UI/%s/Game/SpecialOps/IconResupplyTank.png

@@ -4,7 +4,7 @@
 	name = "#knil_conscript_name"
 	description = "#knil_conscript_description"
 	targets = NULL
-	recharge_time = 420
+	recharge_time = 180
 	range = 0
 	area = 0
 

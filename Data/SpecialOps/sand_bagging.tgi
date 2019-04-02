@@ -7,7 +7,7 @@
 	name = "#sand_bagging_name"
 	description = "#sand_bagging_description"
 	targets = +FRIEND +BUILDING
-	recharge_time = 480
+	recharge_time = 180
 	range = 10
 	area = 20
 	target_location_vfx = friendly_target_decal_vfx

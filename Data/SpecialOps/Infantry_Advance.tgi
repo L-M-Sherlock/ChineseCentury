@@ -8,7 +8,7 @@
 	description = "#infantry_advance_description"
 	targets = +FRIEND +INFANTRY
 	ability_type = NULL
-	recharge_time = 420
+	recharge_time = 240
 	area = 20
 	range = 10
 	max_targets = 90

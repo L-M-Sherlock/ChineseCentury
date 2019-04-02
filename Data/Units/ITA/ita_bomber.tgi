@@ -2,9 +2,8 @@
 {
 	mana_cost = 5
 	range = 15
-	area = 6
+	area = 9
 	recharge_time = 5
-	max_targets = 12
 							
 	[Effect Template=BlastDamageEffect]
 	amount = 70

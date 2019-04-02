@@ -4,10 +4,9 @@
 	name = "#purge_name"
 	description = "#purge_description"
 	targets = +FRIEND -ORGANIZATION -BUILDING -VEHICLE
-	recharge_time = 240
+	recharge_time = 120
 	range = 10
 	area = 20
-	max_targets = 32
 	target_location_vfx = friendly_target_decal_vfx
 
 	icon = /UI/%s/Game/SpecialOps/IconPurge.png
