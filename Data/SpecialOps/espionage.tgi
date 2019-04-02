@@ -7,7 +7,7 @@
 	name = "#espionage_name"
 	description = "#espionage_description"
 	targets = +ENEMY +BUILDING
-	recharge_time = 300
+	recharge_time = 180
 
 	icon = /UI/%s/Game/SpecialOps/IconEspionage.png
 

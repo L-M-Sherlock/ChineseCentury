@@ -31,7 +31,6 @@
 	targets = +ENEMY -ORGANIZATION -BUILDING
 	recharge_time = 300
 	area = 15
-	max_targets = 24
 	projectile_ids = propaganda_war_projectile
 
 	icon = /UI/%s/Game/SpecialOps/IconPropagandaWar.png

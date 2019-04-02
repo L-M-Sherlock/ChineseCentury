@@ -7,7 +7,7 @@
 	name = "#industrial_sabotage_name"
 	description = "#industrial_sabotage_description"
 	targets = +ENEMY +DEPOT
-	recharge_time = 300
+	recharge_time = 180
 	projectile_ids = industrial_sabotage_projectile
 
 	icon = /UI/%s/Game/SpecialOps/IconIndustrialSabotage.png

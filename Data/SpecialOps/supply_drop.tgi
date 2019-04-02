@@ -7,7 +7,7 @@
 	name = "#supply_drop_name"
 	description = "#supply_drop_description"
 	targets = NULL
-	recharge_time = 600
+	recharge_time = 210
 	range = 0
 	area = 0
 

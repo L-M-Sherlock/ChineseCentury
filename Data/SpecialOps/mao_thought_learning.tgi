@@ -10,7 +10,6 @@
 	recharge_time = 120
 	range = 10
 	area = 30
-	max_targets = 200
 	target_location_vfx = friendly_target_decal_vfx
 
 	icon = /UI/%s/Game/SpecialOps/IconCourage.png

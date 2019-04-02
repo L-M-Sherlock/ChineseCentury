@@ -6,7 +6,7 @@
 	name = "#carpet_bomb_name"
 	description = "#carpet_bomb_description"
 	targets = +ACTOR -ORGANIZATION -AIR
-	recharge_time = 240
+	recharge_time = 210
 	area = 16
 	attenuation_range_min = 4
 	attenuation_factor_max = 0.25
@@ -17,7 +17,7 @@
 	icon = /UI/%s/Game/SpecialOps/IconCarpetBomb.png
 
 	[Effect Template=BlastDamageEffect]
-	amount = 400
+	amount = 600
 
 	[Effect Template=AddDamageEffect]
 	damage_type_IDS = explosive

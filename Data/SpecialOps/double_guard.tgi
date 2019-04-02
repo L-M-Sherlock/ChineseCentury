@@ -7,7 +7,7 @@
 	name = "#double_guard_name"
 	description = "#double_guard_description"
 	targets = +FRIEND +BUILDING
-	recharge_time = 480
+	recharge_time = 300
 	range = 10
 	area = 30
 	target_location_vfx = friendly_target_decal_vfx

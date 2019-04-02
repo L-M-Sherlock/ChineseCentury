@@ -7,9 +7,8 @@
 	name = "#resupply_name"
 	description = "#resupply_description"
 	targets = +FRIEND +ORGANIZATION +ORG_INFANTRY
-	recharge_time = 240
+	recharge_time = 180
 	area = 15
-	max_targets = 4
 	target_location_vfx = friendly_target_decal_vfx
 
 	icon = /UI/%s/Game/SpecialOps/IconResupply.png

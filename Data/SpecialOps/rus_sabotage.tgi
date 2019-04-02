@@ -9,7 +9,7 @@
 	IDS = rus_sabotage
 	name = "#rus_sabotage_name"
 	description = "#rus_sabotage_description"
-	recharge_time = 300
+	recharge_time = 240
 	range = 0
 
 	icon = /UI/%s/Game/SpecialOps/IconSabotage.png

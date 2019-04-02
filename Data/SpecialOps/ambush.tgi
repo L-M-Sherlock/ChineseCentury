@@ -9,7 +9,6 @@
 	targets = +ENEMY -ORGANIZATION -BUILDING -AIR
 	recharge_time = 300
 	area = 30
-	max_targets = 240
 
 	icon = /UI/%s/Game/ActionButtons/IconCommandAll.png
 	

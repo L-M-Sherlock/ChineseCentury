@@ -7,7 +7,7 @@
 	name = "#radar_scan_name"
 	description = "#radar_scan_description"
 	targets = +ACTOR, +SELF, +INVULNERABLE
-	recharge_time = 300
+	recharge_time = 240
 
 	icon = /UI/%s/Game/SpecialOps/IconRadarScan.png
 

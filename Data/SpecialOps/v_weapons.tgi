@@ -8,7 +8,7 @@
 	description = "#v_weapons_description"
 	targets = +ACTOR -ORGANIZATION -AIR
 	ability_type = NULL
-	recharge_time =240
+	recharge_time =180
 	area = 12
 	attenuation_range_min = 3
 	attenuation_factor_max = 0.5
@@ -19,12 +19,12 @@
 	icon = /UI/%s/Game/SpecialOps/IconVWeapons.png
 	
 	[Effect Template=BlastDamageEffect]
-	amount = 600
+	amount = 800
 
 	[Effect Template=AddDamageEffect]
 	damage_type_IDS = explosive
 	targets = building
-	amount = 600
+	amount = 800
 
 	[Effect Template=SummonEffect]
 	hide_from_tooltip = true

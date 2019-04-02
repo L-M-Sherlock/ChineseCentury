@@ -6,7 +6,7 @@
 IDS = ita_sabotage
 	name = "#ita_sabotage_name"
 	description = "#ita_sabotage_description"
-	recharge_time = 250
+	recharge_time = 120
 	range = 0
 
 	icon = /UI/%s/Game/SpecialOps/IconAirRecon.png

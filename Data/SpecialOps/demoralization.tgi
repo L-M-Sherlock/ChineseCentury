@@ -10,7 +10,6 @@
 	recharge_time = 240
 	range = 10
 	area = 15
-	max_targets = 24
 
 	icon = /UI/%s/Game/SpecialOps/IconFear.png
 	

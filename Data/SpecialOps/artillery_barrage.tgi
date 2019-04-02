@@ -6,7 +6,7 @@
 	name = "#artillery_barrage_name"
 	description = "#artillery_barrage_description"
 	targets = +ACTOR -ORGANIZATION -AIR
-	recharge_time = 240
+	recharge_time = 210
 	area = 20
 	attenuation_range_min = 4
 	attenuation_factor_max = 0.25
@@ -22,7 +22,7 @@
 	[Effect Template=AddDamageEffect]
 	damage_type_IDS = explosive
 	targets = building
-	amount = 500
+	amount = 1200
 
 	[Effect Template=SummonEffect]
 	hide_from_tooltip = true

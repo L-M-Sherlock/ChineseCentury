@@ -4,7 +4,7 @@
 	name = "#assembly_line_name"
 	description = "#assembly_line_description"
 	targets = NULL
-	recharge_time = 600
+	recharge_time = 480
 	range = 0
 	area = 0
 

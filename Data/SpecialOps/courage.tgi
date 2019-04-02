@@ -7,10 +7,8 @@
 	name = "#courage_name"
 	description = "#courage_description"
 	targets = +FRIEND -BUILDING -ORGANIZATION
-	recharge_time = 300
-	range = 10
+	recharge_time = 180
 	area = 20
-	max_targets = 24
 	target_location_vfx = friendly_target_decal_vfx
 
 	icon = /UI/%s/Game/SpecialOps/IconCourage.png

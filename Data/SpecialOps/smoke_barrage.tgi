@@ -7,9 +7,8 @@
 	name = "#smoke_barrage_name"
 	description = "#smoke_barrage_description"
 	targets = +ENEMY -ORGANIZATION -BUILDING
-	recharge_time = 300
+	recharge_time = 210
 	area = 15
-	max_targets = 24
 
 	icon = /UI/%s/Game/SpecialOps/IconSmokeBarrage.png
 	

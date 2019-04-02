@@ -3,7 +3,7 @@
 	name = "#military_gear_up_name"
 	description = "#military_gear_up_description"
 	targets = NULL
-	recharge_time = 480
+	recharge_time = 180
 	range = 0
 	area = 0
 
