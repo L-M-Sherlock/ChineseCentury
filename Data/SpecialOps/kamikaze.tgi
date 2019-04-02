@@ -7,7 +7,7 @@
 	name = "#kamikaze_name"
 	description = "#kamikaze_description"
 	targets = +ACTOR -ORGANIZATION -AIR
-	recharge_time = 150
+	recharge_time = 180
 	area = 12
 	attenuation_range_min = 2
 	attenuation_factor_max = 0.5

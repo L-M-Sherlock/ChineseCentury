@@ -14,8 +14,9 @@
 				name = "#usa_fighter_AbilityDefinition_name"
 				mana_cost = 1
 				recharge_time = 1
+				range = 50
 
-                                area = 4
+                area = 4
 				attenuation_range_min = 2
 				attenuation_factor_max = 0.5
 				

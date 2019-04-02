@@ -20,7 +20,7 @@
 		[Item]
 		stat	= money_rate
 		min	= -9999999
-		max	= 120
+		max	= 100
 
 		[Item]
 		stat	= ammo_rate
@@ -168,8 +168,8 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 121
-		max	= 200
+		min	= 80
+		max	= 180
 
 		[Item]
 		stat	= ammo_rate
@@ -249,6 +249,11 @@
 			{
 				property_ids		= infhq
 			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= mechhq
+			}
 		}
 
 		[ActorPriority]
@@ -256,6 +261,13 @@
 			property_IDS		= infhq
 			value			= 6000
 			repeat_penalty		= 500
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= mechhq
+			value			= 5500
+			repeat_penalty		= 1000
 		}
 
 		[ActorPriority]
@@ -292,7 +304,7 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 201
+		min	= 161
 		max	= 300
 
 		[Item]
@@ -381,6 +393,11 @@
 
 			[SpecificRecruitRequest]
 			{
+				property_ids		= armorhq
+			}
+
+			[SpecificRecruitRequest]
+			{
 				property_ids		= motor_pool
 			}
 		}
@@ -394,16 +411,23 @@
 
 		[ActorPriority]
 		{
-			property_IDS		= special_company
-			value			= 7000
-			repeat_penalty		= 100
+			property_IDS		= mechhq
+			value			= 8000
+			repeat_penalty		= 800
 		}
 
 		[ActorPriority]
 		{
-			property_IDS		= mechhq
+			property_IDS		= armorhq
+			value			= 4500
+			repeat_penalty		= 1500
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= special_company
 			value			= 8000
-			repeat_penalty		= 800
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
@@ -442,7 +466,7 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 301
+		min	= 280
 		max	= 1000000
 
 		[Item]

@@ -6,7 +6,7 @@
 	name = "#carpet_bomb_name"
 	description = "#carpet_bomb_description"
 	targets = +ACTOR -ORGANIZATION -AIR
-	recharge_time = 210
+	recharge_time = 240
 	area = 16
 	attenuation_range_min = 4
 	attenuation_factor_max = 0.25

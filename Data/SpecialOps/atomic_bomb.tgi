@@ -7,7 +7,7 @@
 	name = "#atomic_bomb_name"
 	description = "#atomic_bomb_description"
 	targets = +ACTOR -ORGANIZATION
-	recharge_time = 240
+	recharge_time = 300
 	area = 20
 	attenuation_range_min = 4
 	attenuation_factor_max = 0.25
@@ -16,7 +16,7 @@
 	icon = /UI/%s/Game/SpecialOps/IconAtomicBomb.png
 
 	[Effect Template=FireDamageEffect]
-	amount = 600
+	amount = 500
 
 	[Effect Template=SummonEffect]
 	hide_from_tooltip = true
@@ -26,7 +26,7 @@
 	[Effect Template=AddDamageEffect]
 	damage_type_IDS = explosive
 	targets = building
-	amount = 1000
+	amount = 1200
 	
 	[Effect Template=EnchantmentEffect]
 	{
@@ -40,7 +40,7 @@
 				
 			[Modifier template=PeriodicDamageModifier]
 			damage_type = flame
-			amount = 15
+			amount = 10
 			
 			[WhenAdded Template=FXC_CreateVFX]
 			{

@@ -80,13 +80,12 @@
 				
 				name = "#gbr_tank_flame_AbilityDefinition_name"
 				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
-				range = 6
+				range = 12
 				recharge_time = 3
 				area = 2
-				max_targets = 4
 				
 				[Effect Template=FireDamageEffect]
-				amount = 30
+				amount = 35
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = gbr_flame_tank

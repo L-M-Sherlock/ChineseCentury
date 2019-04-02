@@ -22,7 +22,8 @@
 			{
 				name = "#ita_bunker_aa_DefenderComponent_AbilityDefinition_name"
 				recharge_time = 2
-				range = 25
+				range = 30
+                area = 4
 								
 				[Effect Template=PierceDamageEffect]
 				amount = 40

@@ -18,8 +18,9 @@
 				name = "#ned_fighter_AbilityDefinition_name"
 				mana_cost = 1
 				recharge_time = 1
+				range = 50
 
-				area = 3
+				area = 4
 				attenuation_range_min = 1
 				attenuation_factor_max = 0.5
 				

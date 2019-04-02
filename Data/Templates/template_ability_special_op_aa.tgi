@@ -83,7 +83,7 @@ smm042004 - created
 
 [Template AASpecialOpAtomicBomb Template=AASpecialOpShared]
 {
-	cost_faction_experience = 2400
+	cost_faction_experience = 3000
 	ability_ids = atomic_bomb	
 }
 
@@ -109,7 +109,7 @@ smm042004 - created
 
 [Template AASpecialOpCarpetBomb Template=AASpecialOpShared]
 {
-	cost_faction_experience = 2000
+	cost_faction_experience = 2400
 }
 
 [Template AASpecialOpCarpetBombGBR Template=AASpecialOpCarpetBomb]
@@ -253,7 +253,7 @@ smm042004 - created
 
 [Template AASpecialOpKamikaze Template=AASpecialOpShared]
 {
-	cost_faction_experience = 1600
+	cost_faction_experience = 1800
 	ability_ids = kamikaze
 }
 

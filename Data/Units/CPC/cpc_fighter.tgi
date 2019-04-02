@@ -26,7 +26,7 @@
 				recharge_time = 0.5
 				range = 42
 				
-				area = 3.6
+				area = 4
 				attenuation_range_min = 2.5
 				attenuation_factor_max = 0.5
 
@@ -60,7 +60,7 @@
 				name = "#cpc_halftrack_aa_AbilityDefinition_name"
 				recharge_time = 1
 				range = 50
-			        area = 5
+			    area = 5
 				attenuation_range_min = 0.5
 				attenuation_factor_max = 1	
 		
@@ -68,7 +68,7 @@
 				amount = 100
 				
 				[WhenDo template=FXC_PlaySFX]
-                                audio_ids = rus_aa
+                audio_ids = rus_aa
 
 			}
 		}
