@@ -74,7 +74,7 @@ but also can cause CRASH!!!!!!!!!!!!
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 50
+		money = 40
 		
 		[Upkeep]
 		ammo = 10

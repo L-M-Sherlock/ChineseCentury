@@ -20,7 +20,7 @@
 		[Item]
 		stat	= money_rate
 		min	= -9999999
-		max	= 100
+		max	= 120
 
 		[Item]
 		stat	= ammo_rate
@@ -168,8 +168,8 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 80
-		max	= 180
+		min	= 100
+		max	= 200
 
 		[Item]
 		stat	= ammo_rate
@@ -254,6 +254,11 @@
 			{
 				property_ids		= mechhq
 			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= motor_pool
+			}
 		}
 
 		[ActorPriority]
@@ -266,21 +271,28 @@
 		[ActorPriority]
 		{
 			property_IDS		= mechhq
-			value			= 5500
+			value			= 3800
 			repeat_penalty		= 1000
 		}
 
 		[ActorPriority]
 		{
+			property_IDS		= motor_pool
+			value			= 4500
+			repeat_penalty		= 10000
+		}
+
+		[ActorPriority]
+		{
 			property_IDS		= special_company
-			value			= 9998
+			value			= 9000
 			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= infantry_company
-			value			= 8999
+			value			= 8000
 			repeat_penalty		= 100
 		}
 
@@ -304,7 +316,7 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 161
+		min	= 181
 		max	= 300
 
 		[Item]
@@ -405,6 +417,16 @@
 			{
 				property_ids		= motor_pool
 			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= artillery_brigade
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= engineer_brigade
+			}
 		}
 
 		[ActorPriority]
@@ -458,6 +480,13 @@
 
 		[ActorPriority]
 		{
+			property_IDS		= artillery_brigade
+			value			= 8000
+			repeat_penalty		= 10000
+		}
+
+		[ActorPriority]
+		{
 			property_IDS		= property_city
 			value			= 1000
 		}
@@ -471,7 +500,7 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 280
+		min	= 301
 		max	= 1000000
 
 		[Item]
@@ -573,16 +602,19 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= motor_pool
+                base_priority       = 1000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= artillery_brigade
+                base_priority       = 1000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= engineer_brigade
+                base_priority       = 1000
 			}
 
 			[SpecificRecruitRequest]
@@ -641,7 +673,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= airfield
-			value			= 9200
+			value			= 12000
 			repeat_penalty		= 10000
 		}
 
@@ -690,7 +722,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= engineer
-			value			= 10000
+			value			= 15000
 			repeat_penalty		= 10000
 		}
 
@@ -812,6 +844,13 @@
 			property_IDS		= supplydepot
 			value			= 10000
 			repeat_penalty		= -100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= special_company
+			value			= 1000
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
@@ -944,6 +983,13 @@
 
 		[ActorPriority]
 		{
+			property_IDS		= special_company
+			value			= 1000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
 			property_IDS		= tank_company
 			value			= 5000
 			repeat_penalty		= 100
@@ -990,7 +1036,7 @@
 		[GoalPriority]
 		{
 			goal_IDS	= RESEARCH
-			multiplier	= 5.0
+			multiplier	= 10.0
 			fuzziness	= 100
 		}
 
@@ -1040,11 +1086,11 @@
 		[Unpacking]
 		{
 			base_priority							= 800
-			enemy_static_influence_mult			= 5
-			enemy_dynamic_influence_mult			= 5
-			max_friendly_building_bonus				= -50
-			max_friendly_building_bonus_per_building	= -10
-			fuzzy_factor					= 100
+			enemy_static_influence_mult			= -50
+			enemy_dynamic_influence_mult			= -50
+			max_friendly_building_bonus				= 10
+			max_friendly_building_bonus_per_building	= 10
+			fuzzy_factor					= 150
 		}
         
 		[Recruiting]
@@ -1076,16 +1122,19 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= motor_pool
+                base_priority       = 1000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= artillery_brigade
+                base_priority       = 1000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= engineer_brigade
+                base_priority       = 1000
 			}
 
 			[SpecificRecruitRequest]
@@ -1111,21 +1160,21 @@
 		[ActorPriority]
 		{
 			property_IDS	= property_bunker
-			value		= 4000
+			value		= 5000
 			repeat_penalty	= -50
 		}
 
 		[ActorPriority]
 		{
 			property_IDS	= property_bunker_artillery
-			value		= 4000
+			value		= 5000
 			repeat_penalty	= -50
 		}
 
 		[ActorPriority]
 		{
 			property_IDS	= property_bunker_aa
-			value		= 4000
+			value		= 5000
 			repeat_penalty	= -50
 		}
 
@@ -1181,7 +1230,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= tank_company
-			value			= 7000
+			value			= 8000
 			repeat_penalty		= 100
 		}
 
@@ -1202,28 +1251,28 @@
 		[ActorPriority]
 		{
 			property_IDS		= motor_pool
-			value			= 9999
-			repeat_penalty		= 10000
+			value			= 19999
+			repeat_penalty		= 5000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= artillery_brigade
-			value			= 9998
-			repeat_penalty		= 10000
+			value			= 19998
+			repeat_penalty		= 5000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= engineer_brigade
-			value			= 9997
-			repeat_penalty		= 10000
+			value			= 19997
+			repeat_penalty		= 5000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= engineer
-			value			= 10000
+			value			= 20000
 			repeat_penalty		= 10000
 		}
 

@@ -250,7 +250,7 @@
 	zone_radius = 24
 	
 	[DetectionComponent]
-	detection_range = 64
+	detection_range = 32
 	remote_detection_range = 32
 
 	[EconomyComponent]
@@ -273,7 +273,7 @@
 	;; if supply range changes the detection radius must change to match it as well.
 	[SupplyComponent]
 	is_relay = true
-	supply_range = 128
+	supply_range = 64
     stockpile_max = 300	
 }	
 

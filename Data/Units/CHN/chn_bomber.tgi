@@ -34,7 +34,7 @@
 				amount = 66
 		
 				[Effect Template=MoraleLossEffect]
-				amount = .5
+				amount = 2
 			}
 		}
 
@@ -51,7 +51,7 @@
 				amount = 66
 		
 				[Effect Template=MoraleLossEffect]
-				amount = .5
+				amount = 2
 			}
 		}
 
@@ -68,7 +68,7 @@
 				amount = 66
 		
 				[Effect Template=MoraleLossEffect]
-				amount = .5
+				amount = 2
 			}
 		}
 
@@ -85,7 +85,7 @@
 				amount = 66
 		
 				[Effect Template=MoraleLossEffect]
-				amount = .5
+				amount = 2
 			}
 		}
 				

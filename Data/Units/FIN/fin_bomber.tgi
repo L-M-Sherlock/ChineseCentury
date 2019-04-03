@@ -9,7 +9,7 @@
 	amount = 70
 
 	[Effect Template=MoraleLossEffect]
-	amount = .5
+	amount = 2
 
 	[WhenDo Template=FXC_PlaySFX]
 	audio_ids = bomb_heavy

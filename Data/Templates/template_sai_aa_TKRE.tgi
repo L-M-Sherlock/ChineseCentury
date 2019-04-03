@@ -11,31 +11,31 @@
 	[TechPriority]
 	{
 		tech						= tech_sniper_rifle
-		priority					= 1250
+		priority					= 1500
 	}
 
 	[TechPriority]
 	{
 		tech						= tech_bersaglieri
-		priority					= 1250
+		priority					= 1500
 	}
 
 	[TechPriority]
 	{
 		tech						= tech_ski
-		priority					= 1250
+		priority					= 1500
 	}
 
 	[TechPriority]
 	{
 		tech						= tech_sas_commandos
-		priority					= 1250
+		priority					= 1500
 	}
 
 	[TechPriority]
 	{
 		tech						= tech_guard_grenadiers
-		priority					= 1250
+		priority					= 1500
 	}
 /*
 	[TechPriority]
@@ -59,31 +59,31 @@
 	[TechPriority]
 	{
 		tech						= tech_sas_commandos
-		priority					= 1500
+		priority					= 1800
 	}
     
 	[TechPriority]
 	{
 		tech						= tech_sniper_rifle
-		priority					= 1500
+		priority					= 1800
 	}
 
 	[TechPriority]
 	{
 		tech						= tech_bersaglieri
-		priority					= 1500
+		priority					= 1800
 	}
 
 	[TechPriority]
 	{
 		tech						= tech_ski
-		priority					= 1500
+		priority					= 1800
 	}
 
 	[TechPriority]
 	{
 		tech						= tech_guard_grenadiers
-		priority					= 1500
+		priority					= 1800
 	}
 
 	[TechPriority]
@@ -126,7 +126,7 @@
 	[TechPriority]
 	{
 		tech						= tech_military_surplus
-		priority					= 250
+		priority					= 500
 	}
 
 	[TechPriority]
@@ -171,6 +171,12 @@
 		priority					= 500
 	}
 
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 300
+	}
+
 /*
 	[TechPriority]
 	{
@@ -207,7 +213,7 @@
 	[TechPriority]
 	{
 		tech						= tech_military_surplus
-		priority					= 300
+		priority					= 1600
 	}
 
 	[TechPriority]
@@ -279,7 +285,19 @@
 	[TechPriority]
 	{
 		tech						= tech_heavy_tank
-		priority					= 100
+		priority					= 1500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 1200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 1200
 	}
 
 	[TechPriority]

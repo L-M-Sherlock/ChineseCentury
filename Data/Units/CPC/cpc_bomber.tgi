@@ -29,7 +29,7 @@
 				amount = 33
 
 				[Effect Template=MoraleLossEffect]
-				amount = .3
+				amount = 2
 	
 				[WhenDo Template=FXC_PlaySFX]
 				audio_ids = bomb_heavy
@@ -50,7 +50,7 @@
 				amount = 33
 
 				[Effect Template=MoraleLossEffect]
-				amount = .3
+				amount = 2
 	
 				[WhenDo Template=FXC_PlaySFX]
 				audio_ids = bomb_heavy
@@ -71,7 +71,7 @@
 				amount = 99
 
 				[Effect Template=MoraleLossEffect]
-				amount = .6
+				amount = 3
 	
 				[WhenDo Template=FXC_PlaySFX]
 				audio_ids = bomb_heavy
@@ -92,7 +92,7 @@
 				amount = 99
 
 				[Effect Template=MoraleLossEffect]
-				amount = .6
+				amount = 3
 	
 				[WhenDo Template=FXC_PlaySFX]
 				audio_ids = bomb_heavy

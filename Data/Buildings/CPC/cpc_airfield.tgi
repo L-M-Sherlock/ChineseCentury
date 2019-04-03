@@ -10,7 +10,7 @@
 
 	[DenizenComponent]
 	{
-		guard_range = 90
+		guard_range = 80
 		guard_operational_range = 100
 
 		[DenizenGroup]
@@ -24,6 +24,12 @@
 			
 			[FormationPositions]
 			offset = +9,+15,-2
+			
+			[FormationPositions]
+			offset = -12,+20,-2
+			
+			[FormationPositions]
+			offset = +12,+20,-2
 		}
 
 		[DenizenGroup]
@@ -46,10 +52,10 @@
 			offset = +9,+15,-2
 			
 			[FormationPositions]
-			offset = -9,-15,-2
+			offset = -12,+20,-2
 			
 			[FormationPositions]
-			offset = +9,-15,-2
+			offset = +12,+20,-2
 		}
 
 		[Inventory]
@@ -58,7 +64,7 @@
 
 		[Inventory]
 		actor_ids = cpc_fighter
-		count = 9
+		count = 12
 
 		[Runway]
 		{
@@ -80,7 +86,7 @@
 
 	[DetectionComponent]
 	{
-		detection_range = 250
+		detection_range = 125
 	}
 	
 	[EconomyComponent]

@@ -10,8 +10,8 @@
 
 	[DenizenComponent]
 	{
-		guard_range = 60
-		guard_operational_range = 75
+		guard_range = 64
+		guard_operational_range = 80
 
 		[DenizenGroup]
 		{
@@ -24,19 +24,31 @@
 			
 			[FormationPositions]
 			offset = +9,+15,-2
+			
+			[FormationPositions]
+			offset = -12,+20,-2
+			
+			[FormationPositions]
+			offset = +12,+20,-2
+			
+			[FormationPositions]
+			offset = -15,+25,-2
+			
+			[FormationPositions]
+			offset = +15,+25,-2
 		}
 
 		[DenizenGroup]
 		{
 			actor_ids = gbr_fighter
 			size = 1,1
-			behavior = AIR_DEFENSIVE + AIR_RECON + Air_Offensive
+			behavior = AIR_DEFENSIVE + AIR_RECON
 		}
 
 		[DenizenGroup]
 		{
 			actor_ids = gbr_fighter
-			size = 1,2
+			size = 1,6
 			behavior = AIR_ESCORT
 			
 			[FormationPositions]
@@ -44,6 +56,18 @@
 			
 			[FormationPositions]
 			offset = +9,+15,-2
+			
+			[FormationPositions]
+			offset = -12,+20,-2
+			
+			[FormationPositions]
+			offset = +12,+20,-2
+			
+			[FormationPositions]
+			offset = -15,+25,-2
+			
+			[FormationPositions]
+			offset = +15,+25,-2
 		}
 
 		[Inventory]
@@ -52,7 +76,7 @@
 
 		[Inventory]
 		actor_ids = gbr_fighter
-		count = 12
+		count = 24
 
 		[Runway]
 		{
@@ -66,15 +90,15 @@
 		}
 
 		[AirAttackCost]
-		money = 100
+		money = 50
 	
 		[AirReconCost]
-		money = 25
+		money = 10
 	}
 
 	[DetectionComponent]
 	{
-		detection_range = 200
+		detection_range = 96
 	}
 
 	[EconomyComponent]

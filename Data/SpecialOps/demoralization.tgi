@@ -60,7 +60,7 @@
 	
 	[Effect Template=MoraleLossEffect]
 	{
-		amount = 3
+		amount = 10
 	}
 	
 	[WhenDo Template=FXC_CreateVFX]

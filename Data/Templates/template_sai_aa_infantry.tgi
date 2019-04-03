@@ -205,7 +205,7 @@
 				number_to_request			= 3
 			}
 
-			/*[SpecificRecruitRequest]
+			[SpecificRecruitRequest]
 			{
 				property_ids				= recon
 			}
@@ -238,7 +238,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= tank_company
-			}*/
+			}
 
 		}
 
@@ -356,8 +356,14 @@
 
 		[ActorPriority]
 		{
+			property_IDS					= airhq
+			value							= 3000
+		}
+
+		[ActorPriority]
+		{
 			actor_IDS					= chn_truck_airborne
-			value							= 1800
+			value							= 2500
 		}
 
 		[ActorPriority]

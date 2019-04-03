@@ -97,7 +97,7 @@
 			[AbilityDefinition Template=AARepairAction]
 			{
 				[Effect Template=RepairEffect]
-				amount = 5
+				amount = 8
 			}
 		}
 		
@@ -108,7 +108,7 @@
 			[AbilityDefinition Template=AAConstructAction]
 			{
 				[Effect Template=RepairEffect]
-				amount = 5
+				amount = 8
 			}
 		}
 	}

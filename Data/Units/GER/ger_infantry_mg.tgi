@@ -12,7 +12,7 @@
 	
 	[MoverComponent]
 	{
-		speed_max = 2.5
+		speed_max = 3
 	}
 		
 	[PropertiesComponent]
@@ -49,7 +49,7 @@
 				range = 12
 				
 				[Effect Template=PierceDamageEffect]
-				amount = 14
+				amount = 15
 
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = ger_mg_heavy

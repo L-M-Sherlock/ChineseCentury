@@ -3,13 +3,13 @@
 	name = "#ger_infantry_name"
 		
 	[BodyComponent]
-	health = 150
+	health = 175
 	defense = 1
 	
 	[CharacterComponent Template=AAInfantryCharacterComponent]
 
 	[MoverComponent]
-	speed_max = 2.5
+	speed_max = 3
 	
 	[PropertiesComponent]
 	{

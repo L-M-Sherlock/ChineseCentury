@@ -50,6 +50,6 @@
 	[PropertiesComponent]
 	{	
 		[Property]
-		property_ids = tank_company
+		property_ids = tank1_company
 	}	
 }

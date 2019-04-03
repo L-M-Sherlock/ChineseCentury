@@ -419,6 +419,11 @@
 			{
 				property_ids		= motor_pool
 			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= engineer_brigade
+			}
 		}
 
 		[ActorPriority]
@@ -606,16 +611,19 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= motor_pool
+                base_priority       = 1000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= artillery_brigade
+                base_priority       = 1000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= engineer_brigade
+                base_priority       = 1000
 			}
 
 			[SpecificRecruitRequest]
@@ -683,7 +691,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= antitank_company
-			value			= 3000
+			value			= 9000
 			repeat_penalty		= 100
 		}
 
@@ -711,21 +719,21 @@
 		[ActorPriority]
 		{
 			property_IDS		= airfield
-			value			= 9200
+			value			= 9800
 			repeat_penalty		= 10000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= tank_company
-			value			= 7000
+			value			= 9500
 			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= artillery_company
-			value			= 9900
+			value			= 9000
 			repeat_penalty		= 100
 		}
 
@@ -760,7 +768,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= engineer
-			value			= 10000
+			value			= 15000
 			repeat_penalty		= 10000
 		}
 
@@ -1055,12 +1063,12 @@
 
 	[GoalEngine]
 	{
-		build_queue_max_items	= 2
+		build_queue_max_items	= 5
 
 		[GoalPriority]
 		{
 			goal_IDS	= RESEARCH
-			multiplier	= 3.0
+			multiplier	= 10.0
 			fuzziness	= 100
 		}
 
@@ -1109,12 +1117,12 @@
 
 		[Unpacking]
 		{
-			base_priority							= 800
-			enemy_static_influence_mult			= -100
+			base_priority							= 1000
+			enemy_static_influence_mult			= -50
 			enemy_dynamic_influence_mult			= -50
-			max_friendly_building_bonus				= -50
-			max_friendly_building_bonus_per_building	= -10
-			fuzzy_factor					= 100
+			max_friendly_building_bonus				= 10
+			max_friendly_building_bonus_per_building	= 10
+			fuzzy_factor					= 150
 		}
 
 		[Recruiting]
@@ -1151,16 +1159,19 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= motor_pool
+                base_priority       = 1000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= artillery_brigade
+                base_priority       = 1000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= engineer_brigade
+                base_priority       = 1000
 			}
 
 			[SpecificRecruitRequest]
@@ -1186,21 +1197,21 @@
 		[ActorPriority]
 		{
 			property_IDS	= property_bunker
-			value		= 4000
+			value		= 6000
 			repeat_penalty	= -50
 		}
 
 		[ActorPriority]
 		{
 			property_IDS	= property_bunker_artillery
-			value		= 4000
+			value		= 6000
 			repeat_penalty	= -50
 		}
 
 		[ActorPriority]
 		{
 			property_IDS	= property_bunker_aa
-			value		= 4000
+			value		= 6000
 			repeat_penalty	= -50
 		}
 
@@ -1242,15 +1253,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= antitank_company
-			value			= 7000
-			repeat_penalty		= 100
-		}
-
-		[ActorPriority]
-		{
-			property_IDS		= mechanized_company
-			value			= 7000
-			repeat_penalty		= 100
+			value			= 9900
+			repeat_penalty		= 200
 		}
 
 		[ActorPriority]
@@ -1277,14 +1281,14 @@
 		[ActorPriority]
 		{
 			property_IDS		= tank_company
-			value			= 7000
+			value			= 9900
 			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= artillery_company
-			value			= 9900
+			value			= 9000
 			repeat_penalty		= 100
 		}
 
@@ -1298,28 +1302,28 @@
 		[ActorPriority]
 		{
 			property_IDS		= motor_pool
-			value			= 9999
-			repeat_penalty		= 10000
+			value			= 19999
+			repeat_penalty		= 5000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= artillery_brigade
-			value			= 9998
-			repeat_penalty		= 10000
+			value			= 19998
+			repeat_penalty		= 5000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= engineer_brigade
-			value			= 9997
-			repeat_penalty		= 10000
+			value			= 19997
+			repeat_penalty		= 5000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= engineer
-			value			= 10000
+			value			= 20000
 			repeat_penalty		= 10000
 		}
 
