@@ -7,10 +7,10 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 225
+		money = 275
 		
 		[Upkeep]
-		ammo = 25
+		ammo = 20
 		oil = 25
 	}
 
@@ -20,10 +20,10 @@
 		property_IDS = org_tank
 
 		[Property]
-		property_ids = artillery_company
-
-		[Property]
 		property_ids = tank_company
+        
+		[Property]
+		property_ids = artillery_company
 	}
 
 	[View]

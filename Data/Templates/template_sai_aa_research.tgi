@@ -2534,7 +2534,7 @@
 	[TechPriority]
 	{
 		tech						= tech_paratrooper_MP
-		priority					= 1500
+		priority					= 1300
 	}
 } ;; LowIncomeEgoResearch
 

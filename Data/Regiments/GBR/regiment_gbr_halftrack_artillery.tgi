@@ -17,13 +17,10 @@
 	[PropertiesComponent]
 	{	
 		[Property]
-		property_ids = artillery_company
+		property_ids = mechanized1_company
 
 		[Property]
 		property_IDS = org_mechanized
-
-		[Property]
-		property_ids = mechanized_company
 	}
 
 	[View]

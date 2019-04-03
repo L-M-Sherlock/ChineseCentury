@@ -1405,7 +1405,17 @@
 				use_time_since_last_scouted	= true
 			}
 		} ;; Exploration
-
+        
+		[Unpacking] ;;wwzz
+		{
+			base_priority							= 800
+			enemy_static_influence_mult			= -10
+			enemy_dynamic_influence_mult			= -10
+			max_friendly_building_bonus				= -200
+			max_friendly_building_bonus_per_building	= -20
+			travel_distance_mult			= 0
+			fuzzy_factor					= 20
+		}
 
 		[Recruiting]
 		{

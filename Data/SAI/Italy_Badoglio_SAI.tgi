@@ -22,6 +22,12 @@
 	name									= "#Italy_Badoglio_SAI_Badoglio_end_game_ego_name"
 } ;; EndGameEgo
 
+[Ego template = TK_AA_5]
+{
+	IDS										= Badoglio_end_game_ego_END
+	name									= "#Italy_Badoglio_SAI_Badoglio_end_game_ego_name"
+} ;; EndGameEgo
+
 [Ego template = TK_AA_DS]
 {
 	IDS										= Badoglio_end_game_ego_TK_DS
@@ -51,6 +57,9 @@
 
 	[Ego]
 	IDS										= Badoglio_end_game_ego_TK
+
+	[Ego]
+	IDS										= Badoglio_end_game_ego_END
 
 	[Ego]
 	IDS										= Badoglio_end_game_ego_TK_DS

@@ -9,7 +9,7 @@
 	[CharacterComponent Template=AAInfantryCharacterComponent]
 
 	[MoverComponent]
-	speed_max = 2.5
+	speed_max = 3
 	
 	[PropertiesComponent]
 	{

@@ -4,6 +4,13 @@
 	name = "#jpn_brigade_engineer_Thing_name"
 	editor_name = "#jpn_brigade_engineer_Thing_editor_name"
 
+	[SupplyComponent]
+	{
+		supply_range = 50
+		is_relay = true
+		stockpile_max = 60
+	}
+
 	[BodyComponent]
 	health = 750
 	defense = 5

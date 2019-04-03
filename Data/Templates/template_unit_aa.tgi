@@ -1065,7 +1065,7 @@ USAGE:
 
 	[ElementComponent]
 	{
-		resupply_rate = 0.2
+		resupply_rate = 0.05
 	}
 	
 	[Flags]
@@ -1241,7 +1241,7 @@ USAGE:
 
 	[BodyComponent]
 	{
-		health = 150
+		health = 100
 		defense = 5
 		
 		[OnDeathAbility Template=AAAttackLocal]
@@ -1264,10 +1264,11 @@ USAGE:
 
 	[ElementComponent]
 	denizen_type = denizen_type_fighter
+    resupply_rate = 0.2
 	
 	[MoverComponent]
 	{
-		speed_max = 10
+		speed_max = 12
 		turn_radius = 4
 		
 		[WhenStartMoving template=FXC_CreateVFX]

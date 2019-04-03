@@ -13,20 +13,20 @@
 			{
 				name = "#chn_fighter_AbilityDefinition_name"
 				mana_cost = 1
-				recharge_time = 1
-				range = 50
+				recharge_time = 2
+				range = 40
 
                 area = 4
 				attenuation_range_min = 1
 				attenuation_factor_max = 0.5
 				
 				[Effect Template=PierceDamageEffect]
-				amount = 75
+				amount = 55
 
 				[Effect Template=AddDamageEffect]
 				damage_type_IDS = armor_piercing
 				targets = air
-				amount = 25
+				amount = 45
 
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = chn_mg_heavy

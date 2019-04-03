@@ -74,7 +74,7 @@ but also can cause CRASH!!!!!!!!!!!!
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 180
+		money = 150
 		
 		[Upkeep]
 		ammo = 10
@@ -144,5 +144,8 @@ but also can cause CRASH!!!!!!!!!!!!
 
 		[Property]
 		property_ids = mechanized_company
+
+		[Property]
+		property_ids = special_company
 	}
 }

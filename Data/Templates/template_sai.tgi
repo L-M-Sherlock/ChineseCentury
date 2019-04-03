@@ -996,7 +996,7 @@
 				
 				fixed resupplying_mult						= 0
 				
-				fixed min_time_between_attacks				= 120
+				fixed min_time_between_attacks				= 150
 				
 				fixed extra_planes_multiplier_max			= 2
 				fixed extra_planes_multiplier_per_plane		= 0.5
@@ -1225,7 +1225,7 @@
 		;;	supply.  We just have a flat priority for that.
 		[Packing]
 		{
-			fixed pack_out_of_supply_priority	= 9000
+			fixed pack_out_of_supply_priority	= 20000
 		}
 
 		;; used to decide when to recover from damage

@@ -6,7 +6,7 @@
 
 	[BodyComponent]
 	{
-		health = 250
+		health = 200
 		defense = 10
 	}
 
@@ -58,7 +58,7 @@
 			[AbilityDefinition Template=AAAttackAntiAirMG]
 			{
 				name = "#cpc_halftrack_aa_AbilityDefinition_name"
-				recharge_time = 1
+				recharge_time = 2
 				range = 50
 			    area = 5
 				attenuation_range_min = 0.5
