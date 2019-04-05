@@ -446,7 +446,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= armorhq
-			value			= 4500
+			value			= 5000
 			repeat_penalty		= 1500
 		}
 
@@ -652,7 +652,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= mechhq
-			value			= 2000
+			value			= 1500
 			repeat_penalty		= 200
 		}
 
@@ -757,7 +757,7 @@
 		{
 			goal_IDS = RESEARCH
 			multiplier = 0.01
-			fuzziness = 100
+			fuzziness = 1
 		}
 
 		[GoalPriority]
@@ -812,11 +812,11 @@
 		[Unpacking]
 		{
 			base_priority                            = 500
-			enemy_static_influence_mult              = 3
-			enemy_dynamic_influence_mult             = 3
+			enemy_static_influence_mult              = 10
+			enemy_dynamic_influence_mult             = 10
 			max_friendly_building_bonus              = 500
 			max_friendly_building_bonus_per_building = 200
-			travel_distance_mult                     = 5
+			travel_distance_mult                     = 3
 			fuzzy_factor                             = 150
 		}
 
@@ -843,6 +843,7 @@
 		{
 			property_IDS		= supplydepot
 			value			= 10000
+            max_recruited_per_think			= 0
 			repeat_penalty		= -100
 		}
 
@@ -892,7 +893,7 @@
 		{
 			goal_IDS = RESEARCH
 			multiplier = 0.01
-			fuzziness = 100
+			fuzziness = 1
 		}
 
 		[GoalPriority]
@@ -947,11 +948,11 @@
 		[Unpacking]
 		{
 			base_priority                            = 500
-			enemy_static_influence_mult              = 3
-			enemy_dynamic_influence_mult             = 3
+			enemy_static_influence_mult              = 10
+			enemy_dynamic_influence_mult             = 10
 			max_friendly_building_bonus              = 500
 			max_friendly_building_bonus_per_building = 200
-			travel_distance_mult                     = 5
+			travel_distance_mult                     = 3
 			fuzzy_factor                             = 150
 		}
 
@@ -978,6 +979,7 @@
 		{
 			property_IDS		= supplydepot
 			value			= 10000
+            max_recruited_per_think			= 0
 			repeat_penalty		= -100
 		}
 
@@ -1086,11 +1088,11 @@
 		[Unpacking]
 		{
 			base_priority							= 800
-			enemy_static_influence_mult			= -50
-			enemy_dynamic_influence_mult			= -50
-			max_friendly_building_bonus				= 10
-			max_friendly_building_bonus_per_building	= 10
-			fuzzy_factor					= 150
+			enemy_static_influence_mult			= -10
+			enemy_dynamic_influence_mult			= -5
+			max_friendly_building_bonus				= 100
+			max_friendly_building_bonus_per_building	= 50
+			fuzzy_factor					= 50
 		}
         
 		[Recruiting]
@@ -1153,8 +1155,9 @@
 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
-			value			= 3000
-			repeat_penalty		= -100
+			value			= 8000
+            max_recruited_per_think			= 0
+			repeat_penalty	= 5
 		}
         
 		[ActorPriority]
@@ -1210,6 +1213,7 @@
 		{
 			property_IDS		= antitank_company
 			value			= 7000
+            max_recruited_per_think			= 0
 			repeat_penalty		= 100
 		}
 
@@ -1217,6 +1221,7 @@
 		{
 			property_IDS		= mechanized_company
 			value			= 7000
+            max_recruited_per_think			= 0
 			repeat_penalty		= 100
 		}
 
@@ -1231,6 +1236,7 @@
 		{
 			property_IDS		= tank_company
 			value			= 8000
+            max_recruited_per_think			= 0
 			repeat_penalty		= 100
 		}
 
@@ -1238,6 +1244,7 @@
 		{
 			property_IDS		= artillery_company
 			value			= 9900
+            max_recruited_per_think			= 0
 			repeat_penalty		= 100
 		}
 

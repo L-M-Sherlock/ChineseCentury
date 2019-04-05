@@ -294,7 +294,7 @@
 		{
 			actor_IDS					= regiment_chn_infantry
 			value							= 4000
-			repeat_penalty					= 500
+			repeat_penalty					= 50
 		}
 
 		;;default_max_recruited_per_think		= 0
@@ -302,14 +302,14 @@
 		{
 			actor_IDS					= regiment_chn_paratrooper_MP_ground
 			value							= 3000
-			repeat_penalty					= 600
+			repeat_penalty					= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_chn_halftrack_artillery_ger
 			value							= 3200
-			repeat_penalty					= 400
+			repeat_penalty					= 200
 		}
 
 		/*[ActorPriority]
@@ -323,14 +323,14 @@
 		{
 			property_IDS					= mechanized_company
 			value							= 1000
-			;;repeat_penalty					= 150				
+			repeat_penalty					= 150				
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= artillery_company
 			value							= 1000
-			;;repeat_penalty					= 40				
+			repeat_penalty					= 40				
 		}
 
 		[ActorPriority]
@@ -924,7 +924,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 24
 			cv_exponent_under_target = 1 
-			min_cv_to_assign = 100
+			min_cv_to_assign = 59
 		}
 
 		[DefensiveCV]
@@ -963,7 +963,7 @@
 		[Recruiting]
 		{
 			max_goals_per_think				= -1
-			num_military_goals				= 36
+			num_military_goals				= 10
 			insufficient_income_level		= 10
 
 			[SpecificRecruitRequest]

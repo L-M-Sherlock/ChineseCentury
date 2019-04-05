@@ -1159,7 +1159,7 @@
 
 			;; We like to build military buildings in supply zones, because those are indicative
 			;;	of places we need to defend.
-			fixed construct_supply_defense_bonus		= 400
+			fixed construct_supply_defense_bonus		= 800
 			
 			;; In A&A I want to make sure defenders are placed in our cities and bases.  Therefor,
 			;;	two requirements:
@@ -1208,12 +1208,12 @@
 			;;	formula: max_friendly_building_bonus * ((distance / max_distance) ^ distance_exponent)
 			fixed max_friendly_building_bonus				= 500
 			fixed max_friendly_building_bonus_per_building	= 200
-			fixed max_distance								= 30	;; in meters, but we use a very rough estimate of distance based on region centers
+			fixed max_distance								= 20	;; in meters, but we use a very rough estimate of distance based on region centers
 			fixed distance_exponent							= 1
 			
 			;; travel distance - subtracted off value
 			;;	formula: (distance * travel_distance_mult) ^ travel_distance_exponent
-			fixed travel_distance_mult			= 5
+			fixed travel_distance_mult			= 4
 			fixed travel_distance_exponent		= 1
 			
 			;; fuzzy factor & inertia
