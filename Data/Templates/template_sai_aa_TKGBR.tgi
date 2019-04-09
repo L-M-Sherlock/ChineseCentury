@@ -1187,6 +1187,78 @@
 				base_priority				= 1000
 			    number_to_request			= 5
 			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_rus_tank_artillery
+				number_to_request			= 15
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_rus_tank_rocket_truck
+				number_to_request			= 15
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_rus_tank_heavy
+				number_to_request			= 15
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_GBR_tank_Tankkiller
+				number_to_request			= 15
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_GBR_tank_Airbornetankgun
+				number_to_request			= 15
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_ger_tank_artillery
+				number_to_request			= 15
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_GER_tank_SuperTiger
+				number_to_request			= 15
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_usa_halftrack_at
+				number_to_request			= 5
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_usa_tank_artillery
+				number_to_request			= 15
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_usa_tank_heavy
+				number_to_request			= 15
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_jpn_tank_artillery
+				number_to_request			= 15
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_jpn_tksaodang
+				number_to_request			= 10
+			}
 		}
 
 		[ActorPriority]
@@ -1330,6 +1402,72 @@
 		{
 			property_IDS		= property_city
 			value			= 1000
+		}
+        
+        [ActorPriority]
+		{
+			actor_IDS					= regiment_rus_tank_rocket_truck
+			value							= 1300
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_rus_tank_artillery
+			value							= 1300
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_rus_tank_heavy
+			value							= 1350
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_GER_tank_SuperTiger
+			value							= 1400
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_GBR_tank_Tankkiller
+			value							= 1300
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_GBR_tank_Airbornetankgun
+			value							= 1300
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_usa_halftrack_at
+			value							= 1200
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					=  regiment_usa_tank_Mixed
+			value							= 1350
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_usa_halftrack_PromotionDelegation
+			value							= 1350
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_jpn_tank_artillery
+			value							= 1350
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_jpn_tksaodang
+			value							= 1200
 		}
 	}
 }

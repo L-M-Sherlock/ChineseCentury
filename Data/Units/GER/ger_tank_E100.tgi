@@ -71,7 +71,6 @@
 				recharge_time = 8
 				range = 32
 				area = 3
-				max_targets = 12
 
 				[Effect Template=BlastDamageEffect]
 				amount = 200
@@ -84,26 +83,6 @@
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = ger_cannon_heavy
-			}
-		}
-		[Ability Template=AATurretAttackLocal]
-		{	
-			[AbilityDefinition Template=AAVehicleMG]
-			{
-				name = "#ger_halftrack_AbilityDefinition_name"
-				area = 1.5
-				attenuation_range_min = 0.5
-				attenuation_factor_max = 0.5
-				max_targets = 4
-				
-				recharge_time = 2
-				range = 12
-				
-				[Effect Template=PierceDamageEffect]
-				amount = 25
-
-				[WhenDo template=FXC_PlaySFX]
-				audio_ids = ger_mg_heavy
 			}
 		}
 	}

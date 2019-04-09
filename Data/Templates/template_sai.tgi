@@ -794,7 +794,7 @@
 		} ;; ActorPriority
 		
 		;; see comment in ActorPriority (above)
-		int default_max_recruited_per_think		= 1		;; 0 indicates unlimited
+		int default_max_recruited_per_think		= 0		;; 0 indicates unlimited
 		
 		;; This controls the number of items we can have queued at one time.  In K2 it's not an
 		;;	issue, since recruiting is immediate (research is not as large of a concern).  In A&A,
