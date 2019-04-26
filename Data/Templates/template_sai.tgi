@@ -505,7 +505,7 @@
 		{
 			;; How often should the goal engine think?  Use MUCH CAUTION decreasing this, it can
 			;;	cause serious performance issues, especially on large maps with many AIs.
-			fixed think_frequency				= 25
+			fixed think_frequency				= 30
 
 			;; Once the AI thinks, how long should it wait to send out its order.  Generally 0 
 			;;	unless you're trying to dumb down the AI for some reason.
@@ -1034,7 +1034,7 @@
 
 				black_fog_priority						= 500
 				grey_fog_priority						= 100
-				fog_search_depth						= 3
+				fog_search_depth						= 5
 
 				current_region_bonus					= 200
 				actor_region_bonus						= 100
@@ -1072,7 +1072,7 @@
 
 				black_fog_priority						= 500
 				grey_fog_priority						= 100
-				fog_search_depth						= 3
+				fog_search_depth						= 5
 
 				current_region_bonus					= 0
 				actor_region_bonus						= 0
@@ -1251,11 +1251,11 @@
 		{
 			;; We limit the number of recruit goals per think because they only reason about their own
 			;;	effect on the kingdom's economy, not that of other recruit goals.
-			int max_goals_per_think				= 1		;; < 0 indicates unlimited
+			int max_goals_per_think				= -1		;; < 0 indicates unlimited
 			
 			;; We generate this many military recruit goals each think cycle.  Must be greater than
 			;;	0.
-			int num_military_goals				= 1
+			int num_military_goals				= 10
 			
 			;; We may not recruit settlers when all settlement spots are settled, or even when they
 			;;	all have camps on them.  Toggle those checks on and off here.
@@ -1748,7 +1748,7 @@
 		;;	from 1, while values smaller than 1 will move them close to 1.  Setting this to 0 turns
 		;;	learning off entirely.  This doesn't affect the value other than to move the floor and
 		;;	ceiling, though perhaps it should.
-		fixed learning_factor					= 1
+		fixed learning_factor					= 10
 		
 		;; When modifying the value of recruiting something, we compute the value of each victory
 		;;	and loss based on the relative CV of the units involved.  We then take the ratio of
@@ -1756,9 +1756,9 @@
 		;;	ceiling to clamp it to a reasonable value.  Victories and losses are tracked for the 
 		;;	specified duration.
 		fixed recruit_duration					= 180
-		fixed recruit_exponent					= 0.25
+		fixed recruit_exponent					= 0.5
 		fixed recruit_floor						= 0.5
-		fixed recruit_ceiling					= 1.0
+		fixed recruit_ceiling					= 1.5
 		bool recruit_scale_over_duration		= false
 
 		;; When modifying the cv of an enemy unit, we compute the value of each enemy victory based

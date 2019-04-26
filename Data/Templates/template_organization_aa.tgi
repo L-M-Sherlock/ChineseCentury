@@ -23,7 +23,7 @@ USAGE:
 	layout_IDS = infantry_regiment_standard
 	entrenchment_time = 20
 
-	control_range = 30
+	control_range = 36
 	operational_range = 36
 	morale_breakpoint = 20
 
@@ -40,7 +40,7 @@ USAGE:
 
 	control_range = 40
 	operational_range = 40
-	morale_breakpoint = 20
+	morale_breakpoint = 30
 
 	recruit_time = 25
 	recruit_full = false
@@ -53,9 +53,9 @@ USAGE:
 	layout_IDS = vehicle_regiment_standard
 	entrenchment_time = 30
 
-	control_range = 40
+	control_range = 45
 	operational_range = 45
-	morale_breakpoint = 15
+	morale_breakpoint = 40
 
 	recruit_time = 30
 	recruit_full = false
@@ -117,11 +117,11 @@ USAGE:
 [Template AAOrganizationArmor Template=AAOrganization]
 {
 	numbered = true
-
+    
 	[DetectionComponent]
 	{
-		detection_range = 18
-		remote_detection_range = 12
+		detection_range = 36
+		remote_detection_range = 36
 	}
 
 	[EconomyComponent]
@@ -148,8 +148,8 @@ USAGE:
 
 	[DetectionComponent]
 	{
-		detection_range = 18
-		remote_detection_range = 12
+		detection_range = 36
+		remote_detection_range = 36
 	}
 
 	[EconomyComponent]
@@ -177,7 +177,7 @@ USAGE:
 	[DetectionComponent]
 	{
 		detection_range = 26
-		remote_detection_range = 12
+		remote_detection_range = 26
 	}
 
 	[EconomyComponent]
@@ -205,7 +205,7 @@ USAGE:
 	[DetectionComponent]
 	{
 		detection_range = 26
-		remote_detection_range = 12
+		remote_detection_range = 26
 	}
 
 	[EconomyComponent]
@@ -233,7 +233,7 @@ USAGE:
 	[DetectionComponent]
 	{
 		detection_range = 30
-		remote_detection_range = 12
+		remote_detection_range = 30
 	}
 
 	[EconomyComponent]
@@ -261,7 +261,7 @@ USAGE:
 	[DetectionComponent]
 	{
 		detection_range = 30
-		remote_detection_range = 12
+		remote_detection_range = 30
 	}
 
 	[EconomyComponent]
@@ -288,8 +288,8 @@ USAGE:
 
 	[DetectionComponent]
 	{
-		detection_range = 22
-		remote_detection_range = 12
+		detection_range = 30
+		remote_detection_range = 30
 	}
 
 	[EconomyComponent]
@@ -316,8 +316,8 @@ USAGE:
 
 	[DetectionComponent]
 	{
-		detection_range = 22
-		remote_detection_range = 12
+		detection_range = 30
+		remote_detection_range = 30
 	}
 
 	[EconomyComponent]
@@ -345,7 +345,7 @@ USAGE:
 	[DetectionComponent]
 	{
 		detection_range = 26
-		remote_detection_range = 12
+		remote_detection_range = 26
 	}
 
 	[EconomyComponent]
@@ -373,7 +373,7 @@ USAGE:
 	[DetectionComponent]
 	{
 		detection_range = 26
-		remote_detection_range = 12
+		remote_detection_range = 26
 	}
 
 	[EconomyComponent]
@@ -401,7 +401,7 @@ USAGE:
 	[DetectionComponent]
 	{
 		detection_range = 20
-		remote_detection_range = 12
+		remote_detection_range = 20
 	}
 
 	[EconomyComponent]
@@ -424,7 +424,7 @@ USAGE:
 	[DetectionComponent]
 	{
 		detection_range = 20
-		remote_detection_range = 12
+		remote_detection_range = 20
 	}
 
 	[EconomyComponent]
@@ -1753,7 +1753,7 @@ USAGE:
 
 	control_range = 40
 	operational_range = 34
-	morale_breakpoint = 20
+	morale_breakpoint = 30
 
 	recruit_time = 25
 	recruit_full = false
@@ -1769,7 +1769,7 @@ USAGE:
 
 	control_range = 40
 	operational_range = 34
-	morale_breakpoint = 15
+	morale_breakpoint = 40
 
 	recruit_time = 30
 	recruit_full = false

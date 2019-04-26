@@ -79,9 +79,9 @@
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = usa_mg_light
-                        }
-                }
+            }
         }
+    }
 }
 
 [Thing Template=AAUnitCPCInfantry]

@@ -65,85 +65,87 @@
 	{
 		[Ability Template=AAGunLocal]
 		{	
-			move_bonus = 666
-			use_bonus = 666
 			[AbilityDefinition Template=AAInfantrySMG]
 			{
 				name = "#cpc_reconQB_AbilityDefinition_name"
-				area = 2
+				area = 1
 				attenuation_range_min = 0.5
 				attenuation_factor_max = 0.5
-				recharge_time = 0.5
-				range = 8
+				max_targets = 5
+				recharge_time = 0.2
+				range = 5
 				
 				[Effect Template=PierceDamageEffect]
-				amount = 3
+				amount = 2
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = usa_mg_light
-			}
-		}
-		[Ability Template=AAGrenadeLocal]
+            }
+        }
+        
+        [Ability Template=AAGrenadeLocal]
 		{
-			[AbilityDefinition Template=AAThrownGrenade]
-			{
-				name = "#rus_conscript_AbilityDefinition_name_2"
-				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
-				projectile_ids = grenade01
-				range = 3
-				area = 8
-				recharge_time = 60
-				
-				[Effect Template=FireDamageEffect]
-				amount = 1
+            [AbilityDefinition Template=AAThrownGrenade]
+            {
+                name = "#rus_conscript_AbilityDefinition_name_2"
+                icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
+                projectile_ids = grenade01
+                range = 30
+                area = 5
+                recharge_time = 60
+                
+                [Effect Template=FireDamageEffect]
+                amount = 10
 
-				[Effect Template=MoraleLossEffect]
-				amount = 0.1
+                [Effect Template=MoraleLossEffect]
+                amount = 1
+                
+                [Flags]
+                 spell = true	       	
 
-				[Effect Template=EnchantmentEffect]
-				{
-					[EnchantmentProperty]
-					{
-						IDS = radiation5
-						name = "#Molotov_cocktail_Effect_EnchantmentProperty_name"
-						enchantment_type = ench_type_radiation
-						duration = 150
-						icon = /Properties/PropertyIcons/IconPropertyHealth.png
-				
-						[Modifier template=PeriodicDamageModifier]
-						damage_type = flame
-						amount = 1
+                [Effect Template=EnchantmentEffect]
+                {
+                    [EnchantmentProperty]
+                    {
+                        IDS = radiation5
+                        name = "#Molotov_cocktail_Effect_EnchantmentProperty_name"
+                        enchantment_type = ench_type_radiation
+                        duration = 180
+                        icon = /Properties/PropertyIcons/IconPropertyHealth.png
+                
+                        [Modifier template=PeriodicDamageModifier]
+                        damage_type = flame
+                        amount = 1
 
-						[WhenAdded Template=FXC_CreateVFX]
-						{
-							VFX_IDS = atomic_radiation
-						}
-			
-						[WhenAdded Template=FXC_CreateVFX]
-						{
-							VFX_IDS = atomic_sparks_large
-							target_flags = +tank
-							location = position
-							attached = true
-						}
-			
-						[WhenAdded Template=FXC_CreateVFX]
-						{
-							VFX_IDS = atomic_sparks_large
-							target_flags = +vehicle
-							location = position
-							attached = true
-						}
-			
-						[WhenAdded Template=FXC_CreateVFX]
-						{
-							VFX_IDS = atomic_sparks_small
-							target_flags = +infantry
-							location = position
-							attached = true
-						}
-
-					}	
+                        [WhenAdded Template=FXC_CreateVFX]
+                        {
+                            VFX_IDS = atomic_radiation
+                        }
+            
+                        [WhenAdded Template=FXC_CreateVFX]
+                        {
+                            VFX_IDS = atomic_sparks_large
+                            target_flags = +tank
+                            location = position
+                            attached = true
+                        }
+            
+                        [WhenAdded Template=FXC_CreateVFX]
+                        {
+                            VFX_IDS = atomic_sparks_large
+                            target_flags = +vehicle
+                            location = position
+                            attached = true
+                        }
+            
+                        [WhenAdded Template=FXC_CreateVFX]
+                        {
+                            VFX_IDS = atomic_sparks_small
+                            target_flags = +infantry
+                            location = position
+                            attached = true
+                        }	
+                    }	
                 }		
             }
         }

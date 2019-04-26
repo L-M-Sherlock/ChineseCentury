@@ -7,10 +7,10 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 35
+		money = 30
 		
 		[Upkeep]
-	        ammo = 6
+	    ammo = 5
 	}
 
 	[View]
@@ -32,7 +32,7 @@
 	[OrganizationComponent Template=AAInfantryOrganizationComponent]
 	{	
 		layout_IDS = regiment_infantry
-                recruit_time = 10
+        recruit_time = 10
 		recruit_full = true
 		
 		[Slot]	;; front
@@ -51,7 +51,7 @@
 		element_IDS = cpc_conscript
 		
 		[Slot]	;; captain
-		element_IDS = cpc_infantry_sniper
+		element_IDS = cpc_paratrooper_co
 	}
 	
 	[PropertiesComponent]

@@ -15,12 +15,12 @@
 	[ElementComponent]
 	{
 		required_structures = cpc_motor_pool
-		morale_value = 4
+		morale_value = 0
 	}
 	
 	[MoverComponent]
 	{
-		speed_max = 2.5
+		speed_max = 3
         acceleration = 0.5
 	}
 	
@@ -57,7 +57,7 @@
 			[AbilityDefinition Template=AAInfantryRocket]
 			{				
 				name = "#cpc_infantry_at_AbilityDefinition_name"
-				recharge_time = 6
+				recharge_time = 5
 				range = 27
 				
 				[Effect Template=APDamageEffect]

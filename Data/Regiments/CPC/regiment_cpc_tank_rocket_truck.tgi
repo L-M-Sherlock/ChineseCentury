@@ -18,6 +18,9 @@
 	{	
 		[Property]
 		property_ids = tank_company
+        
+		[Property]
+		property_ids = artillery_company
 	}
 
 	[View]
@@ -40,7 +43,7 @@
 	}		
 	
 
-	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	[OrganizationComponent Template=AAArmorOrganizationComponent]
 	{	
 		layout_IDS = regiment_vehicle_light
 		control_range = 50

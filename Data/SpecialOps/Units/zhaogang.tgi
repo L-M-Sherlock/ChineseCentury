@@ -57,12 +57,12 @@
 				range = 36
 				
 				[Effect Template=PierceDamageEffect]
-				amount = 25
+				amount = 30
 
 				[Effect Template=AddDamageEffect]
 				damage_type_IDS = gunfire
 				targets = infantry
-				amount = 250
+				amount = 300
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = rus_rifle

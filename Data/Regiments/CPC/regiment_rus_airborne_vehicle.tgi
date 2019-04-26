@@ -7,7 +7,7 @@
 	{
 		[Upkeep]
 		ammo = 20
-		oil = 20
+		oil = 15
 	}		
 	
 	[View]
@@ -64,7 +64,7 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 350
+		money = 250
 	}
 
 	[Placement]
@@ -78,6 +78,6 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 250
+		money = 175
 	}
 }

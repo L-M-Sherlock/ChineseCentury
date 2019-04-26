@@ -899,7 +899,7 @@
 		{
 			stat								= building_limit_consumption
 			min									= -99
-			max									= -15
+			max									= -15.5
 		}
 	}
 
@@ -959,6 +959,16 @@
 				use_time_since_last_scouted	= true
 			}
 		} ;; Exploration
+
+		[Unpacking]
+		{
+			base_priority							= 800
+			enemy_static_influence_mult			= -20
+			enemy_dynamic_influence_mult			= -10
+			max_friendly_building_bonus				= -5
+			max_friendly_building_bonus_per_building	= -5
+			fuzzy_factor					= 50
+		}
 
 		[Recruiting]
 		{
@@ -1073,8 +1083,7 @@
 			{
 				recruit_ids				= regiment_chn_paratrooper_MP
 				number_to_request			= 24
-				base_priority				= 1200
-				repeat_penalty				= -10
+				base_priority				= 9999
 			}
 
 		} ;; Recruiting
@@ -1116,7 +1125,6 @@
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_chn_paratrooper_MP_ground
-			max_recruited_per_think			= 12
 			value							= 1200
 		}
 
@@ -1129,8 +1137,8 @@
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_chn_paratrooper_MP
-			max_recruited_per_think			= 24
-			value							= 1250
+			value							= 2000
+			repeat_penalty				= -10
 		}
 
 		[ActorPriority]

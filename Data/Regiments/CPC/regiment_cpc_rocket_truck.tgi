@@ -33,10 +33,11 @@
 		audio_ids = cpc_rocket_truck_attack
 	}		
 	
-	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
 	{	
 		layout_IDS = regiment_mechanized
 		control_range = 50
+        operational_range = 50
 		
 		[Slot]	;; front
 		element_IDS = cpc_rocket_truck

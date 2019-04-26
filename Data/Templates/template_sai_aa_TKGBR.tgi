@@ -1264,9 +1264,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
-			value			= 8000
-            max_recruited_per_think			= 0
-			repeat_penalty	= 5
+			value			= 15000
+			repeat_penalty	= 50
 		}
         
 		[ActorPriority]

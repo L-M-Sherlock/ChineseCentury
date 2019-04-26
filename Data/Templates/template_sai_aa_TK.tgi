@@ -1301,7 +1301,7 @@
 		{
 			property_IDS		= supplydepot
 			value			= 15000
-			repeat_penalty	= -5
+			repeat_penalty	= 50
 		}
         
 		[ActorPriority]
@@ -1357,7 +1357,6 @@
 		{
 			property_IDS		= antitank_company
 			value			= 7000
-            max_recruited_per_think			= 0
 			repeat_penalty		= 100
 		}
 
@@ -1365,7 +1364,6 @@
 		{
 			property_IDS		= mechanized_company
 			value			= 7000
-            max_recruited_per_think			= 0
 			repeat_penalty		= 100
 		}
 
@@ -1380,7 +1378,6 @@
 		{
 			property_IDS		= tank_company
 			value			= 8000
-            max_recruited_per_think			= 0
 			repeat_penalty		= 100
 		}
 
@@ -1388,7 +1385,6 @@
 		{
 			property_IDS		= artillery_company
 			value			= 9900
-            max_recruited_per_think			= 0
 			repeat_penalty		= 100
 		}
 

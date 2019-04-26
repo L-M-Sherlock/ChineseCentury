@@ -411,7 +411,7 @@
 	[TechPriority]
 	{
 		tech						= tech_nosupply
-		priority					= 150
+		priority					= 1500
 	}
 
 	[TechPriority]
@@ -515,7 +515,7 @@
 	[TechPriority]
 	{
 		tech						= tech_sniper_rifle
-		priority					= 750
+		priority					= 1250
 	}
 
 	;; access to some sort of rifle grenade infantry
@@ -571,7 +571,7 @@
 	[TechPriority]
 	{
 		tech						= tech_conscription
-		priority					= 500
+		priority					= 1800
 	}
 
 	;; +20% entrenchment rate
@@ -815,7 +815,7 @@
 
 [template BalancedMainGameEgoResearch template = SAIResearchTemplate]
 {
-	base_priority					= 50
+	base_priority					= 100
 	;; access to some sort of commando infantry
 
 	[TechPriority]
@@ -1090,7 +1090,7 @@
 	[TechPriority]
 	{
 		tech						= tech_rocket_truck
-		priority					= 1200
+		priority					= 3200
 	}
 
 	;; access to tankettes
