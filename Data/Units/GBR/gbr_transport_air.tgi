@@ -1,0 +1,19 @@
+[Thing Template=AAUnitGBRAirplaneBomber]
+{
+	;;IDS = gbr_air_transport
+	IDS = gbr_transport_air
+	name = "#gbr_transport_air_name"
+	editor_name = "#gbr_transport_air_editor_name"
+
+	[View]
+	resource_prefix = GBRTransportAir/GBRTransportAir
+	
+	[BodyComponent]
+	health = 500
+	defense = 10
+    
+    [MoverComponent]
+	{
+		speed_max = 9
+	}	
+}

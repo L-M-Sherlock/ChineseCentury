@@ -1,0 +1,380 @@
+
+/**************************************************************************
+
+template_rmc_savannah_aa.tgi
+Copyright © 2004 TimeGate Studios
+
+DESCRIPTION:  Templates for A&A boreal random maps
+
+REVISION HISTORY:
+ick042204 - created
+
+USAGE:
+
+
+**************************************************************************
+
+/*	SAVANNAH TERRAINS		*/
+
+[Template SavDirtTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,30
+	area_factor = 2
+	show_ui = true
+	override_same = true
+	terrain_ids = savannah_dirt
+	blob_size = 24,48
+	consistency = 0.3
+	proximity = 0.4
+	fuzzy_factor = 0.4
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.6,0.8
+		blob_size = 1,4
+		consistency = 0.25
+		proximity = 0.35
+		fuzzy_factor = 0.05
+	}
+}
+
+[Template SavDirtTerrainBlob02 Template=RMCTerrainBlob]
+{
+	range = 0,10
+	area_factor = 2
+	show_ui = false
+	terrain_ids = savannah_dirt
+	blob_size = 32,64
+	consistency = 0.3
+	proximity = 0.5
+	fuzzy_factor = 0.5
+	
+	[MicroBlobs]
+	{
+		ratio_range = 0.6,0.8
+		blob_size = 2,3
+		consistency = 0.35
+		proximity = 0.05
+		fuzzy_factor = 0.05
+	}
+}
+
+[Template SavScrubTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,30
+	area_factor = 2
+	show_ui = true
+	override_same = true
+	terrain_ids = savannah_scrub
+	blob_size = 24,48
+	consistency = 0.3
+	proximity = 0.4
+	fuzzy_factor = 0.4
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.6,0.8
+		blob_size = 1,4
+		consistency = 0.25
+		proximity = 0.35
+		fuzzy_factor = 0.05
+	}
+}
+
+[Template SavScrubTerrainBlob02 Template=RMCTerrainBlob]
+{
+	range = 0,10
+	area_factor = 2
+	show_ui = false
+	terrain_ids = savannah_scrub
+	blob_size = 32,64
+	consistency = 0.3
+	proximity = 0.5
+	fuzzy_factor = 0.5
+	
+	[MicroBlobs]
+	{
+		ratio_range = 0.6,0.8
+		blob_size = 2,3
+		consistency = 0.35
+		proximity = 0.05
+		fuzzy_factor = 0.05
+	}
+}
+
+[Template SavGrasslandTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,10
+	area_factor = 2
+	show_ui = true
+	override_same = true
+	terrain_ids = savannah_grassland
+	blob_size = 24,48
+	consistency = 0.3
+	proximity = 0.4
+	fuzzy_factor = 0.4
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.6,0.8
+		blob_size = 1,4
+		consistency = 0.25
+		proximity = 0.35
+		fuzzy_factor = 0.05
+	}
+}
+
+[Template SavGrasslandTerrainBlob02 Template=RMCTerrainBlob]
+{
+	range = 0,10
+	area_factor = 2
+	show_ui = false
+	terrain_ids = savannah_grassland
+	blob_size = 32,64
+	consistency = 0.3
+	proximity = 0.5
+	fuzzy_factor = 0.5
+	
+	[MicroBlobs]
+	{
+		ratio_range = 0.6,0.8
+		blob_size = 2,3
+		consistency = 0.35
+		proximity = 0.05
+		fuzzy_factor = 0.05
+	}
+}
+
+[Template SavForestTerrainStreak Template=RMCTerrainStreak]
+{
+	range = 0,10
+	area_factor = 2
+	show_ui = false
+	terrain_ids = savannah_forest
+	streaks_min = 6
+	streaks_max = 8
+	width_range = 12,16
+	length_range = 12,16
+	angle_range = -65,+65
+}
+
+[Template SavForestTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,30
+	area_factor = 2
+	show_ui = true
+	override_same = true
+	terrain_ids = savannah_forest
+	blob_size = 32,64
+	consistency = 0.4
+	proximity = 0.4
+	fuzzy_factor = 0.5
+	
+	[MicroBlobs]
+	{
+		ratio_range = 0.6,0.8
+		blob_size = 2,3
+		consistency = 0.25
+		proximity = 0.35
+		fuzzy_factor = 0.5
+	}
+}
+
+/********************    BOREAL BLOCKING TERRAIN    ********************/
+
+[Template SavMountainTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,15
+	area_factor = 2.0
+	show_ui = true
+	override_same = true
+	terrain_ids = savannah_mountain
+	blob_size = 16,24
+	consistency = 0.5
+	proximity = 0.9
+	fuzzy_factor = 0.9
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 1,3
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+		affect_height = false
+	}
+}
+
+[Template SavMountainTerrainBlob02 Template=RMCTerrainBlob]
+{
+	range = 0,5
+	area_factor = 2.0
+	show_ui = false
+	terrain_ids = savannah_mountain
+	blob_size = 12,24
+	consistency = 0.6
+	proximity = 0.8
+	fuzzy_factor = 0.6
+	dir_bias = 0,0
+	dir_bias_factor	= 2.5
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 1,3
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+		affect_height = false
+	}
+}
+
+[Template SavMountainTerrainBlob03 Template=RMCTerrainBlob]
+{
+	range = 0,10
+	area_factor = 1.5
+	show_ui = false
+	attachto = CENTER
+	attach_range = 0
+	terrain_ids = savannah_mountain
+	blob_size = 16,24
+	consistency = 0.6
+	proximity = 0.6
+	fuzzy_factor = 0.6
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 1,3
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+		affect_height = false
+	}
+}
+
+[Template SavMountainTerrainBlob04 Template=RMCTerrainBlob]
+{
+	range = 0,5
+	area_factor = 2.1
+	show_ui = false
+	terrain_ids = savannah_mountain
+	blob_size = 18,36
+	consistency = 0.5
+	proximity = 0.8
+	fuzzy_factor = 1.0
+	dir_bias = 0,0
+	dir_bias_factor	= 2.5
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 1,3
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+		affect_height = false
+	}
+}
+
+[Template SavMountainTerrainBlob05 Template=RMCTerrainBlob]
+{
+	range = 0,5
+	area_factor = 2.1
+	show_ui = false
+	terrain_ids = savannah_mountain
+	blob_size = 16,24
+	consistency = 0.9
+	proximity = 0.8
+	fuzzy_factor = 1.0
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 1,3
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+		affect_height = false
+	}
+}
+
+[Template SavOceanTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 0,15
+	area_factor = 1.9
+	show_ui = true
+	attachto = NORTH,NORTHEAST,EAST,SOUTHEAST,SOUTH,SOUTHWEST,WEST,NORTHWEST
+	attach_range = 0
+	override_same = true
+	terrain_ids = savannah_ocean
+	blob_size = 32,64
+	consistency = 0.9
+	proximity = 0.9
+	fuzzy_factor = 0.1
+	dir_bias = 0,0
+	dir_bias_factor	= 5.0
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 6,8
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+	}
+}
+
+/********************    TERRAIN NOISE    ********************/
+
+[Template SavNoisePhase01 Template=NoiseData]
+{	
+	terrain_noise_num_blobs_min		= 64	;; min num blobs
+	terrain_noise_num_blobs_max		= 128	;; max num blobs
+	terrain_noise_blob_size_min		= 36	;; min blob radius (meters)
+	terrain_noise_blob_size_max		= 72	;; max blob radius (meters)
+	terrain_noise_offset_magnitude_min	= 3	;; magnitude of min vertical noise offset (in meters)
+	terrain_noise_offset_magnitude_max	= 3	;; magnitude of max vertical noise offset (in meters)
+	terrain_noise_up_frequency		= 1.0	;; frequency of blobs add positive vertical noise (zero-one)
+	terrain_noise_reference_size		= 256	;; the reference map size which the other params apply to (in meters)
+	terrain_noise_area_factor		= 0.6	;; percent of blobs to actually apply (0-1)
+}
+
+[Template SavNoisePhase02 Template=NoiseData]
+{	
+	terrain_noise_num_blobs_min		= 64	;; min num blobs
+	terrain_noise_num_blobs_max		= 128	;; max num blobs
+	terrain_noise_blob_size_min		= 36	;; min blob radius (meters)
+	terrain_noise_blob_size_max		= 72	;; max blob radius (meters)
+	terrain_noise_offset_magnitude_min	= 3	;; magnitude of min vertical noise offset (in meters)
+	terrain_noise_offset_magnitude_max	= 3	;; magnitude of max vertical noise offset (in meters)
+	terrain_noise_up_frequency		= 0.0	;; frequency of blobs add positive vertical noise (zero-one)
+	terrain_noise_reference_size		= 256	;; the reference map size which the other params apply to (in meters)
+	terrain_noise_area_factor		= 0.6	;; percent of blobs to actually apply (0-1)
+}
+
+[Template SavNoisePhase03 Template=NoiseData]
+{	
+	terrain_noise_num_blobs_min		= 32	;; min num blobs
+	terrain_noise_num_blobs_max		= 64	;; max num blobs
+	terrain_noise_blob_size_min		= 32	;; min blob radius (meters)
+	terrain_noise_blob_size_max		= 64	;; max blob radius (meters)
+	terrain_noise_offset_magnitude_min	= 2	;; magnitude of min vertical noise offset (in meters)
+	terrain_noise_offset_magnitude_max	= 2	;; magnitude of max vertical noise offset (in meters)
+	terrain_noise_up_frequency		= 0.5	;; frequency of blobs add positive vertical noise (zero-one)
+	terrain_noise_reference_size		= 256	;; the reference map size which the other params apply to (in meters)
+	terrain_noise_area_factor		= 0.6	;; percent of blobs to actually apply (0-1)
+}
+
+[Template SavNoisePhase04 Template=NoiseData]
+{	
+	terrain_noise_num_blobs_min		= 16	;; min num blobs
+	terrain_noise_num_blobs_max		= 32	;; max num blobs
+	terrain_noise_blob_size_min		= 32	;; min blob radius (meters)
+	terrain_noise_blob_size_max		= 64	;; max blob radius (meters)
+	terrain_noise_offset_magnitude_min	= 1	;; magnitude of min vertical noise offset (in meters)
+	terrain_noise_offset_magnitude_max	= 1	;; magnitude of max vertical noise offset (in meters)
+	terrain_noise_up_frequency		= 0.5	;; frequency of blobs add positive vertical noise (zero-one)
+	terrain_noise_reference_size		= 256	;; the reference map size which the other params apply to (in meters)
+	terrain_noise_area_factor		= 0.6	;; percent of blobs to actually apply (0-1)
+}

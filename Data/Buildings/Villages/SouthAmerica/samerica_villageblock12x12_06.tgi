@@ -1,0 +1,45 @@
+[Thing Template=AACitySouthAmerica]
+{
+	IDS = samerica_villageblock12x12_06
+	editor_name = "#south_america_city07_editor_name"
+
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 12
+
+	[View]
+	{
+		resource_prefix = SouthAmericaCity07/SouthAmericaCity07
+		
+		[AspectNormal]
+		visual_radius_estimate = 9
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures/Buildings/SouthAmerica
+	
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_03
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_04
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_05
+		attached = true
+	}
+}

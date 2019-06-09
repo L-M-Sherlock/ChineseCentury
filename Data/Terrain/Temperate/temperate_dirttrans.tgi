@@ -1,0 +1,33 @@
+[Terrain template=Terrain]
+{
+	IDS = temperate_dirttrans
+	name = "#temperate_dirttrans_name"
+	
+	base_priority = 400
+	terrain_group = dirt
+	terrain_color = 0.600, 0.439, 0.263
+	
+	doodad_frequency = 0.01
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = temperate_dirtgrasslushtrans01
+	name = "#temperate_dirttrans_temperate_dirtgrasslushtrans01_name"
+	texture = TemperateDirtTrans/TemperateDirtGrassLushTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = temperate_dirtforestdeciduoustrans01
+	name = "#temperate_dirttrans_temperate_dirtforestdeciduoustrans01_name"
+	texture = TemperateDirtTrans/TemperateDirtForestDeciduousTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = temperate_dirtgrassdrytrans01
+	name = "#temperate_dirttrans_temperate_dirtgrassdrytrans01_name"
+	texture = TemperateDirtTrans/TemperateDirtGrassDryTrans01.tga
+	texture_width = 8
+	texture_height = 8
+}

@@ -1,0 +1,19 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Invasion of Okinawa"
+
+	kingdom_1 = "Ushijima's Force"
+	kingdom_0 = "Buckner's Force"
+	objective_7 = "1. Capture and hold Shuri."
+	objective_6 = "2. Capture and hold Hagushi."
+	objective_5 = "3. Capture and hold Taira."
+	map_description = "Iwo Jima is in American hands.  Japanese airspace is now dominated by endless American bomber runs.  Nevertheless, an amphibious invasion will be necessary to ensure final victory.  Every island closer to Japan has proven harder to take, with fiercer resistance and more brutal fighting.  Now, the invasion of the Home Islands must begin, with an assault on Okinawa.  The battle is guaranteed to be the most difficult yet."
+	independent_4 = "Civilian - Agressive"
+	name_3799 = "Shuri"
+	independent_3 = "Civilian - Passive"
+	objective_1 = "4. Destroy the Japanese aircraft carrier."
+	map_name = "Invasion of Okinawa"
+	name_3816 = "Taira"
+	name_3776 = "Hagushi"
+}

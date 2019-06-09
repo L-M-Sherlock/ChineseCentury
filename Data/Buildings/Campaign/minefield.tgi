@@ -1,0 +1,156 @@
+[Thing Template=Building]
+{
+	IDS = minefield
+	name = "#minefield_name"
+
+	[BodyComponent]
+	{
+		defense_icon = /Properties/AbilityIcons/IconAbilityDefense.png
+
+		rot_time = 0
+		sink_time = 1
+		health = 1
+		defense = 0
+	}
+	
+	[ConstructionComponent]
+	{
+		;; TODO: are construction nodes necessary?
+		construction_node_name_prefix = Stage
+		finished_node_name = Final
+	}
+
+	[DefenderComponent]
+	{
+		control_range = 5		
+			
+		[Ability Template=AAAttackLocal]
+		{
+			reload_time = 0
+			priority = 20
+
+			move_weight = 0
+			use_weight = 1
+			wait_weight = 0
+		
+			move_bonus = 1
+			use_bonus = 1
+			wait_bonus = 1
+
+			[AbilityDefinition Template=AABunkerAttack]
+			{	
+				IDS = mine_self_attack
+				name = "#minefield_DefenderComponent_AbilityDefinition_name"
+				ability_type = null
+				range = 5
+				recharge_time = 10
+
+				[Effect Template=BlastDamageEffect]
+				{
+					targets = SELF
+					amount = 25
+				}
+	
+			}
+		}
+
+		[Ability Template=AAAttackLocal]
+		{
+			reload_time = 0
+			priority = 20
+
+			move_weight = 0
+			use_weight = 1
+			wait_weight = 0
+		
+			move_bonus = 1
+			use_bonus = 2
+			wait_bonus = 1
+
+			[AbilityDefinition Template=AABunkerAttack]
+			{	
+				IDS = mine_attack_enemy
+				name = "#minefield_DefenderComponent_AbilityDefinition_name_2"
+				ability_type = null
+				range = 4
+				recharge_time = 50
+				area = 8
+				impact_impulse = 2000
+
+				[Flags]
+				{
+					center_on_source = true
+				}
+
+				[Effect Template=BlastDamageEffect]
+				{
+					amount = 50
+				}
+			
+				;;explosion on target
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = temperate_medium_explosion_1
+			
+					at = SELF
+					attached = false
+				}
+				
+			}
+
+		}
+	}
+
+	[DetectionComponent]
+	{
+		detection_range = 0
+		remote_detection_range = 0
+	}
+
+	[EconomyComponent]
+
+	[Flags]
+	{
+		blocking = false
+		invulnerable = true
+		axis_locked = false
+		radar = false
+	}
+
+	;; Needed to make the Defender Component work.
+	[PerformerComponent]
+
+	[PropertiesComponent]
+	{
+		[Property]
+		{
+			property_ids = minefield
+		}
+
+	}
+
+	
+	[Placement]
+	{
+		placement_group_IDS = group_campaign
+	}
+
+	[Size]
+	{
+		height = 2
+	}
+
+	[StructureComponent]
+	
+	[View]
+	{
+		resource_prefix = minefield/minefield
+		shadow_type = NONE
+		shadow_texture = null
+		
+		[WhenDestroyed template=FXC_PlaySFX]
+		audio_ids = explosion_landmine
+		at = TARGET_GROUND
+	
+	}
+}

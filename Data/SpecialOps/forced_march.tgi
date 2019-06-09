@@ -1,0 +1,53 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = forced_march
+	name = "#forced_march_name"
+	description = "#forced_march_description"
+	targets = +FRIEND -BUILDING -ORGANIZATION
+	ability_type = NULL
+	recharge_time = 120
+	range = 10
+	area = 15
+	target_location_vfx = friendly_target_decal_vfx
+
+	icon = /UI/%s/Game/SpecialOps/IconForcedMarch.png
+	
+	[Effect Template=EnchantmentEffect]
+	{
+		[EnchantmentProperty]
+		{
+			IDS = property_forced_march
+			name = "#forced_march_Effect_EnchantmentProperty_name"
+			enchantment_type = ench_type_generic
+			duration = 30
+			icon = /Properties/PropertyIcons/IconPropertyMovement.png
+				
+			[Modifier Template=MultiplyModifier]
+			attribute = SPEED_MAX
+			amount = 0.5
+			
+			[Modifier template=PeriodicDamageModifier]
+			damage_type = flame
+			amount = 1
+						
+			[WhenAdded Template=FXC_CreateVFX]
+			VFX_IDS = Forced_red
+			location = position
+		}
+	}
+	
+	[Flags]
+	enchantment = true
+
+	[WhenDo Template=FXC_CreateVFX]
+	vfx_ids = forced_march_boot
+	at = TARGET_GROUND
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = forced_march_sfx
+	at = TARGET_GROUND
+
+}

@@ -1,0 +1,99 @@
+[Thing Template=AAUnitUSAProne]
+{
+	IDS = usa_engineer
+	name = "#usa_engineer_name"
+	editor_name = "#usa_engineer_editor_name"
+	
+	[View]
+	{
+		resource_prefix = USAEngineer/USAEngineer
+	
+		[WhenCreated Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = hammer
+		
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+		
+	}
+
+	[BodyComponent]
+	health = 200
+	defense = 1
+	
+	[BuilderComponent]
+	{
+		[BuildActor]
+		actor_ids = usa_bunker
+		
+		[BuildActor]
+		actor_ids = usa_bunker_aa
+		
+		[BuildActor]
+		actor_ids = usa_bunker_artillery
+	}
+
+	[ElementComponent]
+	required_structures = usa_brigade_engineer
+
+	[MoverComponent]
+	speed_max = 3
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+
+		[Property]
+		property_IDS = garand_semi_automatic_rifle
+		
+		[Property]
+		property_IDS = engineer		
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				name = "#usa_engineer_AbilityDefinition_name"
+				recharge_time = 3
+				range = 10
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = usa_rifle
+			}
+		}
+
+		[Ability Template=AARepairLocal]
+		{			
+			animation1 = build1
+			
+			[AbilityDefinition Template=AARepairAction]
+			{
+				[Effect Template=RepairEffect]
+				amount = 8
+			}
+		}
+		
+		[Ability Template=AAConstructLocal]
+		{
+			animation1 = build1
+			
+			[AbilityDefinition Template=AAConstructAction]
+			{
+				[Effect Template=RepairEffect]
+				amount = 8
+			}
+		}
+	}
+	
+	[CharacterComponent Template=AAEngineerCharacterComponent]
+}

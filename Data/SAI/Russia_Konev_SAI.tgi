@@ -1,0 +1,75 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= konev_low_income_ego
+	name									= "#Russia_Konev_SAI_konev_low_income_ego_name"
+} ;; BalancedLowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= konev_main_game_ego
+	name									= "#Russia_Konev_SAI_konev_main_game_ego_name"
+} ;; BalancedMainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= konev_end_game_ego
+	name									= "#Russia_Konev_SAI_konev_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= konev_end_game_ego_TK
+	name									= "#Russia_Konev_SAI_konev_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= konev_end_game_ego_END
+	name									= "#Russia_Konev_SAI_konev_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= konev_end_game_ego_TK_DS
+	name									= "#Russia_Konev_SAI_konev_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= konev_end_game_ego_TK_DS1
+	name									= "#Russia_Konev_SAI_konev_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= konev_sai
+	name									= "#Russia_Konev_SAI_konev_sai_name"
+	description								= "#Russia_Konev_SAI_konev_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= konev_low_income_ego
+
+	[Ego]
+	IDS										= konev_main_game_ego
+
+	[Ego]
+	IDS										= konev_end_game_ego
+
+	[Ego]
+	IDS										= konev_end_game_ego_TK
+
+	[Ego]
+	IDS										= konev_end_game_ego_END
+
+	[Ego]
+	IDS										= konev_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= konev_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_rus
+	
+	[Faction]
+	ids										= konev
+} ;; jpn SAI

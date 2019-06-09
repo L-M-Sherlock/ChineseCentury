@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = mikawa_portrait
+	name = "#mikawa_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Mikawa/MikawaPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = jpn_mikawa_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = mikawa
+	name = "#mikawa_name"
+	description = "#mikawa_description"
+	staging_name = "#mikawa_staging_name"
+	icon_texture_ids = Mikawa/MikawaPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/JPN/Mikawa.bik
+	portrait_ids = mikawa_portrait
+	
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpBanzaiCharge]
+	
+	[Ability Template=AASpecialOpEconomicAidMoney]
+	
+	[Ability Template=AASpecialOpRapidDeployment]
+	
+	[Ability Template=AASpecialOpCorpsJPN]
+}

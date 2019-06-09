@@ -1,0 +1,349 @@
+
+;; ---------------------------- Scoring Interface ----------------------------
+
+[Scoring Inherit=MenuInterface]
+{
+	[View]
+	{
+		T = 0%
+		B = 100%
+
+		L = 0%
+		R = 100%
+		
+		;;cwp040804 - children are not longer defined in template, but be added explicitly.
+		[Child Template=SharedMessageBoxPanelGroupVE]
+	}
+
+	[Header Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		{
+			T = 25
+			B = +50
+		}
+		
+		[Label Template=SharedSmallCenteredLabelVE]			
+	}
+}
+
+[ScoreChart Inherit=MenuPanelWidget]
+{
+	fixed tab_left_border	= 23
+	fixed tab_width			= 129
+
+	[View]
+	{
+		L = 42
+		T = 38
+		R = +938
+		B = +388
+
+		;;cwp040804 - children are not longer defined in template, but be added explicitly.
+		;;[Child Template=SharedChildLargePanelVE]
+		[Child Template = DecalVETiled]
+		{
+			L = 0
+			T = 26
+			R = +938
+			B = +362
+			
+			alpha_blending = true
+			
+			corners_texture = /UI/%s/Default/Tabs/ScoringPanelCorners.png
+			left_border_texture = /UI/%s/Default/Tabs/ScoringPanelTileLeft.png
+			right_border_texture = /UI/%s/Default/Tabs/ScoringPanelRight.png
+			top_border_texture = /UI/%s/Default/Tabs/ScoringPanelTop.png
+			bottom_border_texture = /UI/%s/Default/Tabs/ScoringPanelBottom.png
+			center_texture = /UI/%s/Default/Tabs/ScoringPanelCenter.png
+		}
+	}
+	
+	[Tab Template=SharedToggleButtonWidget]
+	{
+		pressed_client_T = 12
+		
+		;; cwp040804 - children no longer being defined in template, must explicitly define
+		[View Template=SharedScoringTabsGroupVE]
+		{
+			;; L set in code, based on constants above.
+			T = 0
+		}
+
+		[Client Template=LabelWidget]
+		{
+			[View Template=NoVE]
+			T=12
+			
+			[Label Template=SharedSmallCenteredLabelVE]
+			color = 0,0,0
+		}
+	}
+}
+
+;; We need a template for the panel widget that holds a single row in the chart, which will be
+;;	inherited from below.  The only thing that is set when we inherit is the color (in the View),
+;;	because that needs to be different for odd and even rows.
+[Template DataRow Inherit=PanelWidget]
+{
+	;; these should be taken from the score sheet, adjusted for the position of the viewport.
+	fixed column_left_border	= 187
+	fixed column_width			= 133
+	
+	[View Template=DecalVE]
+	{
+		B = +20
+		texture = NULL
+	}
+
+	[RowHeader Template=SharedToggleButtonWidget]
+	{
+		pressed_client_L = 31
+		
+		;; cwp040804 - children no longer being defined in template, must explicitly define
+		[View Template=GroupVE]
+		{
+			L = 0
+			T = 0
+			R = +190
+			B = +20
+			
+			[Child Template = SharedToggleButtonGroupVE]
+			{
+				L = 0
+				T = 0
+				R = +20
+				B = +20
+			}
+		}
+
+		[Client Template=LabelWidget]
+		{
+			[View Template=NoVE]
+			{
+				L = 31 
+				T = 0
+			}
+			
+			[Label Template=SharedSmallLeftLabelVE]		
+			color = 0,0,0	
+		}
+	}
+	
+	[Datum Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		;; L set in code
+		T = 0	;; recommend this match the row header
+		R = 133	;; recommend this match the column header
+		B = +20	;; ditto
+		
+		[Label Template=SharedSmallCenteredLabelVE]
+		color = 0,0,0
+	}
+}
+
+[ScoreSheet Inherit=PanelWidget]
+{
+	fixed column_left_border	= 210
+	fixed column_width			= 132
+	
+	[View Template=NoVE]
+	T = 45
+
+	[ColumnHeader Template=SharedToggleButtonWidget]
+	{
+		pressed_client_T = 8
+		
+		;; cwp040804 - children no longer being defined in template, must explicitly define
+		[View Template=SharedScoringButtonsGroupVE]
+		{
+			;; L set in code based on constants above.
+			T = 0
+			R = +132
+		}
+
+		[Client Template=LabelWidget]
+		{
+			[View Template=NoVE]
+			T = 8
+			
+			[Label Template=SharedSmallCenteredLabelVE]	
+			color = 0,0,0		
+		}
+	}
+
+	[ViewportPanel Inherit = SharedPanelWidget]
+	{
+		[View]
+		{
+			L = 0
+			T = 0
+			R = 100%
+			B = 100%
+		}
+		
+		[Viewport Inherit=SharedViewportScrollWidget]
+		{
+			[View]
+			{
+				L = 20
+				T = 36
+				R = +883
+				B = 10b
+			}
+			
+			[DataRowOdd Template=DataRow]
+			{
+				[View]
+				texture = /UI/%s/Default/Tabs/DataRowOdd.png
+			}
+
+			[DataRowEven Template=DataRow]
+			{
+				[View]
+				texture = /UI/%s/Default/Tabs/DataRowEven.png
+			}
+		}
+	}	
+}
+
+[ScoreGraph Inherit=PanelWidget]
+{
+	[View Template = GroupVE]
+	{
+		L = 35
+		T = 437
+		R = +944
+		B = +244
+		
+		[Child Template = GameListboxGroupVE]
+		{
+			L = 51
+			T = 0
+			R = +895
+			B = +220
+		}
+	}
+	
+	[GraphVE Template=ScoreGraph]
+	{
+		L = 65
+		T = 10
+		R = +870
+		B = +195
+
+		color = 1,1,1
+		
+		x_tick_length	= 11	
+		x_max_ticks		= 20	;; should be at least 2 (0 and whatever is the max)
+		
+		y_tick_length	= 11	
+		y_max_ticks		= 5		;; should be at least 3 (one below 0, 0, and one above 0)
+	}
+	
+	[XLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		T = 30b
+		B = 10b
+		L = 135
+		R = 990
+		
+		[Label Template=SharedSmallCenteredLabelVE]
+	}
+	
+	[YLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		L = 0
+		T = 85
+		B = 150b
+		R = 90
+		
+		[Label Template=SharedSmallRightLabelVE]
+		multiline = true
+	}
+	
+	[XTickLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		;; L set in code
+		T = 226
+		R = 30
+		B = 100%
+		
+		[Label Template=SharedSmallCenteredLabelVE]
+	}
+	
+	[YTickLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		L = 0
+		;; T set in code
+		R = +50
+		B = +20
+		
+		[Label Template=SharedSmallRightLabelVE]
+	}
+}
+
+[SaveFilm Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#scoring_Client_View_text"
+	}
+
+	[View]
+	{
+		L = 43
+		T = 683
+	}
+}
+
+
+[Debriefing Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#scoring_Client_View_text_5"
+	}
+
+	[View]
+	{
+		L = 802
+		T = 683
+	}
+}
+
+[Exit Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#scoring_Client_View_text_3"
+	}
+
+	[View]
+	{
+		L = 802
+		T = 683
+	}
+}
+[ScoringReplay Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#scoring_Client_View_text_4"
+	}
+
+	[View]
+	{
+		L = 290
+		T = 683
+	}
+}

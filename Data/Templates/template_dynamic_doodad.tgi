@@ -1,0 +1,56 @@
+[Template DynamicDoodadComponent]
+{
+	;; each derived component fills this in
+	string type
+	
+	;; list of fX actions to take when the doodad is triggered
+	[optional list Action Template=FXC]
+}
+
+[Template UpdatableDynamicDoodadComponent Inherit=DynamicDoodadComponent]
+{
+	;; how long before next update (in seconds)
+	fixed update_time
+}
+
+[Template DynamicDoodad Inherit=Object]
+{
+	category = DYNAMIC_DOODAD
+
+	;; components
+	[list Component Inherit=DynamicDoodadComponent]
+}
+
+[Template DisturbableDynamicDoodadComponent Inherit=UpdatableDynamicDoodadComponent]
+{
+	type = DISTURBABLE
+
+	;; radius of disturbable area (in meters)
+	fixed affect_radius
+	
+	;; how many seconds of 'peace' must there be before this triggers again
+	fixed recharge_time_min
+	fixed recharge_time_max
+}
+
+[Template BreakableDynamicDoodadComponent Inherit=UpdatableDynamicDoodadComponent]
+{
+	type = BREAKABLE
+
+	fixed break_impulse
+	
+	bool toppled
+	fixed topple_duration = 0				;; if toppled = true, amount of time taken to topple
+	fixed bounce_duration = 0				;; if toppled = true, amount of time taken to bounce
+	fixed bounce_percentage = 0				;; if toppled = true, how far up it bounces (maybe 25?)
+	string trampled_aspect_ids = null		;; if toppled = false, aspect to used for the trampled object
+	
+	bool regrow
+	fixed regrow_dead_duration = 0			;; if regrow = true, delay between end of topple and begining of sink
+	fixed regrow_sink_duration = 0			;; if regrow = true, amount of time taken to sink (same as rot)
+	fixed regrow_grow_duration = 0			;; if regrow = true, amount of time taken to regrow
+
+	;; list of fX actions to take when the toppled doodad hits the ground
+	[optional list ToppledAction Template=FXC]
+}
+

@@ -1,0 +1,59 @@
+[Thing Template=AACHNOrganizationArtillery]
+{	
+	IDS = regiment_chn_halftrack_artillery_ger
+	name = "#regiment_chn_halftrack_artillery_ger_name"
+	editor_name = "#regiment_chn_halftrack_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 125
+		
+		[Upkeep]
+		ammo = 10
+		oil = 15
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CHN/CHNHalftrack/CHNHalftrack
+		icon = /UI/Game/RegimentButtons/IconHalftrackArtillery.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = chn_vehicle_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = chn_halftrack_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = chn_halftrack_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = chn_halftrack_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_heavy
+		
+		[Slot]	;; front
+		element_IDS = chn_halftrack_ger
+	
+		[Slot]	;; support
+		element_IDS = chn_halftrack_artillery_ger
+		
+		[Slot]	;; captain
+		element_IDS = chn_car_armored_co_ger
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = org_mechanized
+
+		[Property]
+		property_ids = artillery_company
+	}
+
+	[ExperienceComponent template=AAMechanizedExperienceComponent]
+}

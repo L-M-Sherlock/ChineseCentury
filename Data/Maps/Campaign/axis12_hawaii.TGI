@@ -1,0 +1,29 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "axis12_hawaii"
+
+	independent_5 = ""
+	name_14244 = ""
+	trigger_56_element_1 = ":              ."
+	independent_2 = ""
+	name_1496 = ""
+	trigger_18_element_11 = ":              .                !"
+	map_name = "axis12_hawaii"
+	name_1495 = ""
+	name_1494 = ""
+	kingdom_1 = ""
+	trigger_18_element_6 = ":              .                !"
+	name_14237 = ""
+	kingdom_0 = ""
+	objective_4 = "5.            ."
+	trigger_17_element_5 = "!  "
+	objective_3 = "4.         ."
+	objective_2 = "2.          ."
+	objective_1 = "1.          ."
+	objective_0 = "3.          ."
+	name_10436 = ""
+	name_14230 = ""
+	trigger_56_element_7 = " :             ."
+	map_description = ",   ,     ,   ,                   .    ,            r,            .                            !"
+}

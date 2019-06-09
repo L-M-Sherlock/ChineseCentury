@@ -1,0 +1,25 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = """"""""
+
+	side10 = "Side 10"
+	side09 = "Side 9"
+	side08 = """ 8"
+	side07 = """ 7"
+	side06 = """ 6"
+	side05 = """ 5"
+	side04 = """ 4"
+	side03 = """ 3"
+	side_enemy = """"
+	side_indie = """"
+	side_herd = "Herds"
+	side02 = """ 2"
+	side01 = """ 1"
+	team_3 = """ 4"
+	team_2 = """ 3"
+	team_1 = """ 2"
+	team_0 = """ 1"
+	map_description = """"""
+	map_name = """"""""
+}

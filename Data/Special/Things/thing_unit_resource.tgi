@@ -1,0 +1,32 @@
+[Thing template=Actor]
+{
+	IDS = thing_unit_resource
+	name = "#thing_unit_resource_name"
+	category = UNIT
+	
+	[EconomyComponent]
+	{
+		[Production]
+		unit_limit_provided = 5
+	}
+	
+	[Flags]
+	invulnerable = true
+	invisible = true
+	blocking = false
+	targetable = false
+	ethereal = true
+	
+	[Placement]
+	placement_group_IDS = group_special
+
+	[View]
+	{
+		resource_prefix = ThingUnitResource/ThingUnitResource
+		shadow_type = none
+		shadow_texture = null
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+	}
+}

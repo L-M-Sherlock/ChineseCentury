@@ -1,0 +1,76 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = mao_thought_learning
+	name = "#mao_thought_learning_name"
+	description = "#mao_thought_learning_description"
+	targets = +FRIEND -BUILDING -ORGANIZATION
+	recharge_time = 120
+	range = 10
+	area = 30
+	target_location_vfx = friendly_target_decal_vfx
+
+	icon = /UI/%s/Game/SpecialOps/IconCourage.png
+	
+	[Effect Template=EnchantmentEffect]
+	{
+		[EnchantmentProperty]
+		{
+			IDS = mao_thought
+			name = "#courage_Effect_EnchantmentProperty_name"
+			enchantment_type = ench_type_courage
+			duration = 120
+			icon = /Properties/PropertyIcons/IconPropertyMorale.png
+			
+			[Modifier Template=AddModifier]
+			attribute = MORALE
+			amount = +5
+
+			[Modifier Template=FlagModifier]
+			modifier_flag = BERSERK
+			
+			[Modifier Template=MultiplyModifier]
+			attribute = HEALTH
+			amount = +0.5
+
+			[WhenAdded Template=FXC_CreateVFX]
+			{
+				VFX_IDS = courage_glow
+			}
+
+			[WhenAdded Template=FXC_CreateVFX]
+			{
+				VFX_IDS = courage_cloud_small
+				location = position
+				target_flags = +infantry
+			}
+		
+			[WhenAdded Template=FXC_CreateVFX]
+			{
+				VFX_IDS = courage_cloud_large
+				location = position
+				target_flags = +vehicle
+			}
+		}
+	}
+	
+	[Effect Template=MoraleGainEffect]
+	{
+		amount = 10
+	}
+		
+	[Flags]
+	enchantment = true
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = courage_sfx
+	at = TARGET_GROUND
+	
+	[WhenDo Template=FXC_CreateVFX]
+	vfx_ids = courage_lion
+	at = TARGET_GROUND
+
+}
+

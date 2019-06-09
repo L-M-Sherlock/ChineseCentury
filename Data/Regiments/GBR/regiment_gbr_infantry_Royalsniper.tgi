@@ -1,0 +1,63 @@
+[Thing Template=AAGBROrganizationInfantry]
+{
+	IDS = regiment_gbr_infantry_Royalsniper
+	name = "#regiment_gbr_infantry_Royalsniper_name"
+	editor_name = "#regiment_gbr_infantry_Royalsniper_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 70
+		
+		[Upkeep]
+		ammo = 15
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/GBR/GBRInfantry/GBRInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantrySniper.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_infantry_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = sas_commando
+		
+		[Slot]	;; rear guard 1
+		element_IDS = sas_sniper
+
+		[Slot]	;; rear guard 2
+		element_IDS = sas_sniper
+		
+		[Slot]	;; rear guard 3
+		element_IDS = sas_sniper
+	
+		[Slot]	;; flank
+		element_IDS = sas_sniper
+		
+		[Slot]	;; captain
+		element_IDS = sas_commando_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = recon
+        
+		[Property]
+		property_ids = special_company
+	}
+}
+

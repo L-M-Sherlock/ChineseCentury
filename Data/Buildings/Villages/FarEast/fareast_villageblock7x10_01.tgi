@@ -1,0 +1,35 @@
+
+[Thing Template=AACityFarEast]
+{
+	IDS = fareast_villageblock7x10_01
+	name = "#far_east_village01_name"
+	editor_name = "#far_east_village01_editor_name"
+	
+	[Size]
+	blocking_shape = RECT
+	rect_width = 10
+	rect_height = 7
+
+	[View]
+	{
+		resource_prefix = FarEastVillage01/FarEastVillage01
+		
+		[AspectNormal]
+    	ground_size = 6.5,3.5
+    
+		[TextureSearchPath]
+		path = /Shared/SharedTextures/Buildings/FarEast
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+		
+	
+	}
+}

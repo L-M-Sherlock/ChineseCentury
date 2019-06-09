@@ -1,0 +1,634 @@
+
+[Biome template=Biome]
+{
+	IDS = boreal_forest
+	name = "#arctic_forest_name_2"
+	;detail_texture = /Textures/Beauty/detail.dds
+	;macro_texture = /Textures/Beauty/macro.tga
+	texture_subfolder_name = Arctic
+	
+	[CloudInfo]
+	{
+		cloud_texture = /Textures/clouds/CloudMapMedium.tga
+		cloud_scale = 128.0, 128.0
+
+		cloud_movement_direction = 1, 0.5
+		
+		cloud_max_delta_velocity_per_sec = 0.02
+		cloud_min_velocity = 0.3
+		cloud_max_velocity = 0.6
+	}
+
+/********************    TERRAINS    ********************/
+
+	[Terrain]
+	terrain_IDS = boreal_grassdry
+
+	[Terrain]
+	terrain_IDS = boreal_grassdrytrans
+
+	[Terrain]
+	terrain_IDS = boreal_city
+
+	[Terrain]
+	terrain_IDS = boreal_citytrans
+
+	[Terrain]
+	terrain_IDS = boreal_crops
+
+	[Terrain]
+	terrain_IDS = boreal_dirt
+
+	[Terrain]
+	terrain_IDS = boreal_dirttrans
+
+	[Terrain]
+	terrain_IDS = boreal_forest
+	
+	[Terrain]
+	terrain_IDS = boreal_grass
+
+	[Terrain]
+	terrain_IDS = boreal_grasstrans
+
+	[Terrain]
+	terrain_IDS = boreal_mountain
+
+	[Terrain]
+	terrain_IDS = boreal_mountainpeak
+
+	[Terrain]
+	terrain_IDS = boreal_mountaintrans
+
+	[Terrain]
+	terrain_IDS = boreal_shore
+
+	[Terrain]
+	terrain_IDS = boreal_shoretrans
+
+	[Terrain]
+	terrain_IDS = boreal_tundra
+
+	[Terrain]
+	terrain_IDS = boreal_tundratrans
+
+/********************    WATER TERRAINS    ********************/
+
+	[Terrain]
+	terrain_IDS = boreal_ocean
+
+	[Terrain]
+	terrain_IDS = boreal_river
+
+	[Terrain]
+	terrain_IDS = boreal_riverfordable
+
+	[Terrain]
+	terrain_IDS = boreal_shallows
+
+/********************    TRANSITION SETS    ********************/
+
+	[TransitionSet]
+	set_IDS = transition_set_global_01
+
+/*************************    CITY TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = boreal_city
+	terrain2_IDS = boreal_dirt
+	variation_IDS = boreal_citydirttrans01
+
+	[Transition]
+	terrain1_IDS = boreal_city
+	terrain2_IDS = boreal_forest
+	variation_IDS = boreal_cityforesttrans01
+
+	[Transition]
+	terrain1_IDS = boreal_city
+	terrain2_IDS = boreal_grassdry
+	variation_IDS = boreal_citygrassdrytrans01
+
+	[Transition]
+	terrain1_IDS = boreal_city
+	terrain2_IDS = boreal_grass
+	variation_IDS = boreal_citygrasstrans01
+
+	[Transition]
+	terrain1_IDS = boreal_city
+	terrain2_IDS = boreal_shore
+	variation_IDS = boreal_cityshoretrans01
+
+	[Transition]
+	terrain1_IDS = boreal_city
+	terrain2_IDS = boreal_tundra
+	variation_IDS = boreal_citytundratrans01
+
+/*************************    DIRT TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = boreal_dirt
+	terrain2_IDS = boreal_forest
+	variation_IDS = boreal_dirtforesttrans01
+
+	[Transition]
+	terrain1_IDS = boreal_dirt
+	terrain2_IDS = boreal_grass
+	variation_IDS = boreal_dirtgrasstrans01
+
+/*************************    DRY GRASS TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = boreal_grassdry
+	terrain2_IDS = boreal_dirt
+	variation_IDS = boreal_grassdrydirttrans01
+
+	[Transition]
+	terrain1_IDS = boreal_grassdry
+	terrain2_IDS = boreal_forest
+	variation_IDS = boreal_grassdryforesttrans01
+
+	[Transition]
+	terrain1_IDS = boreal_grassdry
+	terrain2_IDS = boreal_grass
+	variation_IDS = boreal_grassdrygrasstrans01
+
+	[Transition]
+	terrain1_IDS = boreal_grassdry
+	terrain2_IDS = boreal_shore
+	variation_IDS = boreal_grassdryshoretrans01
+
+	[Transition]
+	terrain1_IDS = boreal_grassdry
+	terrain2_IDS = boreal_tundra
+	variation_IDS = boreal_grassdrytundratrans01
+
+/*************************    GRASS TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = boreal_grass
+	terrain2_IDS = boreal_forest
+	variation_IDS = boreal_grassforesttrans01
+
+	[Transition]
+	terrain1_IDS = boreal_grass
+	terrain2_IDS = boreal_tundra
+	variation_IDS = boreal_grasstundratrans01
+
+/*************************    MOUNTAIN TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = boreal_mountain
+	terrain2_IDS = boreal_city
+	variation_IDS = boreal_mountaincitytrans01
+
+	[Transition]
+	terrain1_IDS = boreal_mountain
+	terrain2_IDS = boreal_dirt
+	variation_IDS = boreal_mountaindirttrans01
+
+	[Transition]
+	terrain1_IDS = boreal_mountain
+	terrain2_IDS = boreal_forest
+	variation_IDS = boreal_mountainforesttrans01
+
+	[Transition]
+	terrain1_IDS = boreal_mountain
+	terrain2_IDS = boreal_grassdry
+	variation_IDS = boreal_mountaingrassdrytrans01
+
+	[Transition]
+	terrain1_IDS = boreal_mountain
+	terrain2_IDS = boreal_grass
+	variation_IDS = boreal_mountaingrasstrans01
+
+	[Transition]
+	terrain1_IDS = boreal_mountain
+	terrain2_IDS = boreal_shore
+	variation_IDS = boreal_mountainshoretrans01
+
+	[Transition]
+	terrain1_IDS = boreal_mountain
+	terrain2_IDS = boreal_tundra
+	variation_IDS = boreal_mountaintundratrans01
+
+/*************************    MOUNTAIN PEAK TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_city
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_citytrans
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_crops
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_dirt
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_dirttrans
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_forest
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_grass
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_grassdry
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_grassdrytrans
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_grasstrans
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_mountaintrans
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_shoretrans
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_tundra
+	variation_IDS = boreal_mountain01
+
+	[Transition]
+	terrain1_IDS = boreal_mountainpeak
+	terrain2_IDS = boreal_tundratrans
+	variation_IDS = boreal_mountain01
+
+/*************************    SHORE TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = boreal_shore
+	terrain2_IDS = boreal_dirt
+	variation_IDS = boreal_shoredirttrans01
+
+	[Transition]
+	terrain1_IDS = boreal_shore
+	terrain2_IDS = boreal_forest
+	variation_IDS = boreal_shoreforesttrans01
+
+	[Transition]
+	terrain1_IDS = boreal_shore
+	terrain2_IDS = boreal_grassdry
+	variation_IDS = boreal_shoregrassdrytrans01
+
+	[Transition]
+	terrain1_IDS = boreal_shore
+	terrain2_IDS = boreal_grass
+	variation_IDS = boreal_shoregrasstrans01
+
+	[Transition]
+	terrain1_IDS = boreal_shore
+	terrain2_IDS = boreal_tundra
+	variation_IDS = boreal_shoretundratrans01
+
+/*************************    TUNDRA TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = boreal_tundra
+	terrain2_IDS = boreal_dirt
+	variation_IDS = boreal_tundradirttrans01
+
+	[Transition]
+	terrain1_IDS = boreal_tundra
+	terrain2_IDS = boreal_forest
+	variation_IDS = boreal_tundraforesttrans01
+
+	[Transition]
+	terrain1_IDS = boreal_tundra
+	terrain2_IDS = boreal_grass
+	variation_IDS = boreal_tundragrasstrans01
+
+/*************************    OCEAN TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_city
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_citytrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_crops
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_dirt
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_dirttrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_forest
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_grass
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_grassdry
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_grassdrytrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_grasstrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_mountainpeak
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_shoretrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_tundra
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_ocean
+	terrain2_IDS = boreal_tundratrans
+	variation_IDS = boreal_shore01
+
+/*************************    RIVER TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_city
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_citytrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_crops
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_dirt
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_dirttrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_forest
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_grass
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_grassdry
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_grassdrytrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_grasstrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_mountainpeak
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_shoretrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_tundra
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_river
+	terrain2_IDS = boreal_tundratrans
+	variation_IDS = boreal_shore01
+
+/*************************    RIVERFORDABLE TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_city
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_citytrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_crops
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_dirt
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_dirttrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_forest
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_grass
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_grassdry
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_grassdrytrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_grasstrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_mountainpeak
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_shoretrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_tundra
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_riverfordable
+	terrain2_IDS = boreal_tundratrans
+	variation_IDS = boreal_shore01
+
+/*************************    SHALLOWS TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_city
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_citytrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_crops
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_dirt
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_dirttrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_forest
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_grass
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_grassdry
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_grassdrytrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_grasstrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_mountainpeak
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_shoretrans
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_tundra
+	variation_IDS = boreal_shore01
+
+	[Transition]
+	terrain1_IDS = boreal_shallows
+	terrain2_IDS = boreal_tundratrans
+	variation_IDS = boreal_shore01
+
+/********************    WATER INFO    ********************/
+
+	
+	[WaterInfo Template=AABorealWaterInfo]
+	terrain_ids = boreal_ocean
+	
+	[WaterInfo Template=AABorealWaterInfo]
+	terrain_ids = boreal_shallows
+
+	[WaterInfo Template=AABorealWaterInfo]
+	terrain_ids = boreal_river
+
+	[WaterInfo Template=AABorealWaterInfo]
+	terrain_IDS = boreal_riverfordable	
+}
+
+

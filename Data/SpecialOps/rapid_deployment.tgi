@@ -1,0 +1,23 @@
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = rapid_deployment
+	name = "#rapid_deployment_name"
+	description = "#rapid_deployment_description"
+	targets = NULL
+	recharge_time = 240
+	range = 0
+	area = 0
+
+	icon = /UI/%s/Game/SpecialOps/IconRapidDeployment.png
+
+	[Flags]
+	target_location = true
+
+	[Effect Template=SummonEffect]
+	object_ids = deployment_crates
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = pallet_deployment_sfx
+	at = TARGET_GROUND
+}
+

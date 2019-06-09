@@ -1,0 +1,150 @@
+[GameFileDialog Template=GameFileDialogWidget]
+{
+	[View Template=GamePanelGroupVE]
+	{
+		L = 320
+		T = 180
+		R = +400
+		B = +430
+	}
+
+	[Title Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		T = 10
+		B = 50
+		
+		[Label Template=SharedSmallCenteredLabelVE]
+		text = "#file_dialog_Title_Label_text_4"		; replaced with "Load File..." or "Save File..."
+	}
+
+	/*
+	[Listbox Template=GameSortedListboxWidget]
+	{
+		num_visible_items = 8
+
+		[View]
+		{
+			L = 50
+			T = 36
+			R = 50r
+		}
+		
+		[Scrollbar Template=SharedSmallScrollbarWidget]
+	}
+	*/
+	
+	[ListboxPanel Inherit = SharedMediumPanelWidget]
+	{
+		[View]
+		{
+			L = 50
+			T = 36
+			R = 50r
+			
+			;; cwp041204 - Children no longer being defined in template
+			[Child Template = SharedChildMediumPanelVE]
+		}
+		
+		[Listbox Template=SharedListBoxWidgetNoDecals]
+		{
+			num_visible_items = 8
+
+			[View]
+						
+			[Scrollbar Template=SharedSmallScrollbarWidget]
+		}
+	}	
+
+	[Editbox Template=GameEditboxWidget]
+	{
+		[View]
+		L = 50
+		T = 189b
+		R = 50r
+		B = +20
+	}
+
+	[FileButtonOK]
+	{
+		[View]
+		{
+			L = 50
+			T = 141b
+			R = +135
+		}
+
+		[Client]
+		{
+			[View]
+			T = 4
+
+			[Label]
+			text = "#file_dialog_FileButtonOK_Client_Label_text_4"		; replaced with "Load" or "Save"
+		}
+	}
+
+	[FileButtonCancel]
+	{
+		[Client]
+		{
+			[View]
+			text = "#file_dialog_FileButtonCancel_Client_View_text_3"
+		}
+
+		[View]
+		{
+			L = 215
+			T = 69b
+			R = +135
+		}
+	}
+
+	[FileButtonDelete]
+	{
+		[Client]
+		{
+			[View]
+			text = "#file_dialog_FileButtonDelete_Client_View_text_3"
+		}
+
+		[View]
+		{
+			L = 215
+			T = 141b
+			R = +135
+		}
+	}
+
+	[FileButtonNewFolder]
+	{
+		[Client]
+		{
+			[View]
+			text = "#file_dialog_FileButtonNewFolder_Client_View_text_3"
+		}
+
+		[View]
+		{
+			L = 50
+			T = 105b
+			R = +135
+		}
+	}
+
+	[FileButtonRefresh]
+	{
+		[Client]
+		{
+			[View]
+			text = "#file_dialog_FileButtonRefresh_Client_View_text_3"
+		}
+
+		[View]
+		{
+			L = 215
+			T = 105b
+			R = +135
+		}
+	}
+}

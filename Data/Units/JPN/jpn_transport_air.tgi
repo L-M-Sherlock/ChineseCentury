@@ -1,0 +1,18 @@
+[Thing Template=AAUnitJPNAirplaneBomber]
+{
+	IDS = jpn_transport_air
+	name = "#jpn_transport_air_name"
+	editor_name = "#jpn_transport_air_editor_name"
+
+	[View]
+	resource_prefix = JPNTransportAir/JPNTransportAir
+	
+	[BodyComponent]
+	health = 500
+	defense = 10
+    
+    [MoverComponent]
+	{
+		speed_max = 9
+	}	
+}

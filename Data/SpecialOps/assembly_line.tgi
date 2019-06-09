@@ -1,0 +1,23 @@
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = assembly_line
+	name = "#assembly_line_name"
+	description = "#assembly_line_description"
+	targets = NULL
+	recharge_time = 480
+	range = 0
+	area = 0
+
+	icon = /UI/%s/Game/SpecialOps/IconAssemblyLine.png
+
+	[Flags]
+	target_location = true
+	
+	[Effect Template=SummonEffect]
+	object_ids = assembly_parts
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = pallet_deployment_sfx
+	at = TARGET_GROUND
+
+}

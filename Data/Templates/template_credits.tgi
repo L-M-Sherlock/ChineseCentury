@@ -1,0 +1,134 @@
+
+/**************************************************************************
+
+template_credits.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: Data for specify credits.
+
+REVISION HISTORY:
+cwk040904 - created
+
+USAGE:
+
+Specify a tgi file in Data/Credits or Data/Localization/Credits:
+
+[CreditsData]
+{
+	ids = credits_standard
+	name = "Standard Credits"
+
+	[CreditNode template=CreditNIFNodeData]
+	nif = UI/Menus/Credits/intro.nif
+
+	[CreditNode template=CreditDecalNodeData]
+	texture = /UI/Menus/Credits/intro.tga
+
+	[CreditNode template=CreditsTextHeader]
+	text = "T I M E G A T E   S T U D I O S"
+	leading = 50
+
+	...
+}
+		  	
+**************************************************************************/
+
+;; CreditNodeData
+;; ---------------
+;; base node for all credit nodes
+
+[template CreditNodeData]
+{
+	;; should be TEXT, NIF or DECAL
+	string type
+}
+
+;; CreditTextNode
+;; --------------
+;; credit node for specifying text; note: designers should not use this node
+;; by itself; instead, they should use one of the templated text nodes below
+
+[template CreditTextNodeData inherit=CreditNodeData]
+{
+	type = TEXT
+	
+	;; IDS of the label widget to use to display this text; must be a valid
+	;; label widget in the CreditsInterface widget
+	string label_ids
+
+	;; the text that should be displayed
+	localized text
+	
+	;; leading (in pixels) - how much to scroll past the bottom of this text label
+	;; before the next series of nodes are processed
+	float leading = 0
+}
+
+;; Templated Text Nodes
+;; --------------------
+;; the label_ids must refer to a valid label widget node in the CreditsInterface
+
+[Template CreditsTextHeader Template=CreditTextNodeData]
+{
+	label_ids = CreditsTextLabelHeader
+}
+
+[Template CreditsTextNames Template=CreditTextNodeData]
+{
+	label_ids = CreditsTextLabelNames
+}
+
+[Template CreditsTextNamesLeft Template=CreditTextNodeData]
+{
+	label_ids = CreditsTextLabelNamesLeft
+}
+
+[Template CreditsTextCopyright Template=CreditTextNodeData]
+{
+	label_ids = CreditsTextLabelCopyright
+}
+
+
+;; CreditDecalNodeData 
+;; -------------------
+;; credit node for specifying a decal to display in the background
+
+[template CreditDecalNodeData inherit=CreditNodeData]
+{
+	type = DECAL
+	
+	;; the texture to display
+	string texture
+}
+
+;; CreditNIFNodeData 
+;; -------------------
+;; credit node for specifying a nif to display in the background
+
+[template CreditNIFNodeData inherit=CreditNodeData]
+{
+	type = NIF
+	
+	;; the NIF model to play
+	string nif
+	
+	;; the scene camera to use
+	string camera
+}
+
+;; CreditsData
+;; ------------
+;; the credits data is a list of credit nodes to display. the Credits Interface will run through
+;; the nodes in order. because decal and nif nodes don't specify a duration and change instantly
+;; they should be grouped with the start of a text node for timing purposes. for example, usually
+;; you want to specify a decal and nif change at the start of a new credits section. so you will
+;; want to put this decal and nif node before the first text node of that section.
+
+[template CreditsData]
+{
+	string		ids
+	localized	name
+	
+	;; list of credits
+	[list CreditNode template=CreditNodeData]
+}

@@ -1,0 +1,28 @@
+
+[VFX Template=VFXTintModifier]
+{
+	IDS = tint_blue
+	name = "#tints_tint_blue_name"
+	color = 0,0,1
+}
+
+[VFX Template=VFXTintModifier]
+{
+	IDS = tint_red
+	name = "#tints_tint_red_name"
+	color = 1,0,0
+}
+
+[VFX Template=VFXTintModifier]
+{
+	IDS = tint_green
+	name = "#tints_tint_green_name"
+	color = 0,1,0
+}
+
+[VFX Template=VFXTintModifier]
+{
+	IDS = tint_grey
+	name = "#tints_tint_grey_name"
+	color = .3,.3,.2
+}

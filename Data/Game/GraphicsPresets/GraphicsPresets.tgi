@@ -1,0 +1,104 @@
+[GraphicsPreset]
+{
+		ids = high
+		name = "#GraphicsPresets3High_name"
+
+		;;;;;; PERFORMANCE SETTINGS
+		
+		;; to maximize:
+		;; - no screenshots
+		;; - not multi-threaded
+		;; - precache textures shouldn't matter
+		;; - remove normals
+		;; - disable blending
+		;; - disable interpolation
+		;; - disable terrain specular
+		;; - minimize resolution
+		;; - disable windowed mode
+		;; - disable hight quality textures
+		;; - TODO: increase BoneLOD
+		;; - TODO: increase mip-map skip level
+		
+		;; flag ResolutionWindowed is defaulted by the code
+		
+		;; performance: view-related quality settings
+		flag TerrainTrilinearFilter = true
+		int TerrainQuadSize = 1
+		flag TerrainExtraQuality = true
+		int  RenderLODShadows = 3
+		float ParticleGeneratePCG = 1
+		flag RenderDrawFootsteps = true
+		flag UnitFogSimplified = false
+		flag RendererUseHighQualityTextures = true
+		flag PerformanceDisableDecals = true
+}
+
+[GraphicsPreset]
+{
+		ids = medium
+		name = "#GraphicsPresets2Med_name"
+
+		;;;;;; PERFORMANCE SETTINGS
+		
+		;; to maximize:
+		;; - no screenshots
+		;; - not multi-threaded
+		;; - precache textures shouldn't matter
+		;; - remove normals
+		;; - disable blending
+		;; - disable interpolation
+		;; - disable terrain specular
+		;; - minimize resolution
+		;; - disable windowed mode
+		;; - disable hight quality textures
+		;; - TODO: increase BoneLOD
+		;; - TODO: increase mip-map skip level
+		
+		;; flag ResolutionWindowed is defaulted by the code
+		
+		;; performance: view-related quality settings
+		flag TerrainTrilinearFilter = true
+		int TerrainQuadSize = 1
+		flag TerrainExtraQuality = false
+		int  RenderLODShadows = 1
+		float ParticleGeneratePCG = 0.6
+		flag RenderDrawFootsteps = true
+		flag UnitFogSimplified = true
+		flag RendererUseHighQualityTextures = true
+		flag PerformanceDisableDecals = true
+}
+
+[GraphicsPreset]
+{
+		ids = low
+		name = "#GraphicsPresets1Low_name"
+
+		;;;;;; PERFORMANCE SETTINGS
+		
+		;; to maximize:
+		;; - no screenshots
+		;; - not multi-threaded
+		;; - precache textures shouldn't matter
+		;; - remove normals
+		;; - disable blending
+		;; - disable interpolation
+		;; - disable terrain specular
+		;; - minimize resolution
+		;; - disable windowed mode
+		;; - disable hight quality textures
+		;; - TODO: increase BoneLOD
+		;; - TODO: increase mip-map skip level
+		
+		;; flag ResolutionWindowed is defaulted by the code
+		
+		;; performance: view-related quality settings
+		flag TerrainTrilinearFilter = false
+		int TerrainQuadSize = 2
+		flag TerrainExtraQuality = false
+		int  RenderLODShadows = 0
+		float ParticleGeneratePCG = 0.25
+		flag RenderDrawFootsteps = false
+		flag UnitFogSimplified = true
+		flag RendererUseHighQualityTextures = false
+		flag PerformanceDisableDecals = true
+}

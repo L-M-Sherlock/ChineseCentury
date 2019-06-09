@@ -1,0 +1,75 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= yamamoto_low_income_ego
+	name									= "#Japan_Yamamoto_SAI_yamamoto_low_income_ego_name"
+} ;; BalancedLowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= yamamoto_main_game_ego
+	name									= "#Japan_Yamamoto_SAI_yamamoto_main_game_ego_name"
+} ;; BalancedMainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= yamamoto_end_game_ego
+	name									= "#Japan_Yamamoto_SAI_yamamoto_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= yamamoto_end_game_ego_TK
+	name									= "#Japan_Yamamoto_SAI_yamamoto_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= yamamoto_end_game_ego_END
+	name									= "#Japan_Yamamoto_SAI_yamamoto_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= yamamoto_end_game_ego_TK_DS
+	name									= "#Japan_Yamamoto_SAI_yamamoto_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= yamamoto_end_game_ego_TK_DS1
+	name									= "#Japan_Yamamoto_SAI_yamamoto_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= yamamoto_sai
+	name									= "#Japan_Yamamoto_SAI_yamamoto_sai_name"
+	description								= "#Japan_Yamamoto_SAI_yamamoto_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= yamamoto_low_income_ego
+
+	[Ego]
+	IDS										= yamamoto_main_game_ego
+
+	[Ego]
+	IDS										= yamamoto_end_game_ego
+
+	[Ego]
+	IDS										= yamamoto_end_game_ego_TK
+
+	[Ego]
+	IDS										= yamamoto_end_game_ego_END
+
+	[Ego]
+	IDS										= yamamoto_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= yamamoto_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_jpn
+	
+	[Faction]
+	ids										= yamamoto
+} ;; jpn SAI

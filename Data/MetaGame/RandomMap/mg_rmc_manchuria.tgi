@@ -1,0 +1,162 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_manchuria
+	name = "#mg_rmc_manchuria_name"
+	description = "#mg_rmc_manchuria_description"
+	biome = temperate_forest
+
+	sun = SUN_DEFAULT,SUN_DEFAULT,SUN_DEFAULT,SUN_DUSK,SUN_MORNING,SUN_NIGHT
+	weather = NONE,NONE,RAIN_LIGHT,RAIN_HEAVY
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 512
+	height = 512
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	Central China
+	starting_pos = 20,20
+	
+	[Kingdom Template = KingdomDefender]
+	;;	Manchuria
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	Eastern China
+	starting_pos = 160,20
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	Japan
+	starting_pos = 300,160
+	type = water
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	Siberia
+	starting_pos = 160,300
+	
+	[Kingdom Template = KingdomAttacker5]
+	;;	Eastern Siberia
+	starting_pos = 300,300
+
+	[Kingdom Template = KingdomAttacker6]
+	;;	Mongolia
+	starting_pos = 20,160
+	
+/********************    TERRAIN    ********************/
+
+	[TerrainBlob Template=TempGrassTerrainBlob]
+	
+	[TerrainStreak Template=TempGrassDryTerrainStreak]
+
+	[TerrainBlob Template=TempDirtDarkTerrainBlob]
+	
+	[TerrainBlob Template=TempGrassDryTerrainBlob]
+	
+	[TerrainBlob Template=TempDirtDarkTerrainBlob02]
+	
+	[TerrainBlob Template=TempGrassDryTerrainBlob02]
+	
+	[TerrainStreak Template=TempForestConiferousTerrainStreak]
+
+	[TerrainBlob Template=TempForestConiferousTerrainBlob]
+	
+	[TerrainBlob Template=TempGrassTerrainBlob02]
+
+/********************    BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=TempMountainTerrainBlob]
+
+	[TerrainBlob Template=TempMountainTerrainBlob02]
+	
+	[TerrainBlob Template=TempMountainTerrainBlob03]
+	
+	[TerrainBlob Template=TempMountainTerrainBlob04]
+	
+	[TerrainBlob Template=TempMountainTerrainBlob05]
+	
+/********************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = temperate_ocean
+	dir_bias = 0,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = temperate_ocean
+	dir_bias = 0,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = temperate_ocean
+	dir_bias = 0,-1
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = EAST
+	terrain_ids = temperate_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = temperate_ocean
+	dir_bias = 0,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = temperate_ocean
+	dir_bias = 0,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = temperate_ocean
+	dir_bias = 0,-1
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = temperate_ocean
+	
+/********************    TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=TempNoisePhase01]
+	
+	[TerrainNoise Template=TempNoisePhase02]
+	
+	[TerrainNoise Template=TempNoisePhase03]
+	
+	[TerrainNoise Template=TempNoisePhase04]
+
+	[TerrainNoise Template=TempNoisePhase05]
+
+	[TerrainNoise Template=TempNoisePhase06]
+
+/*************************    ACTOR GROUPS    **************************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_manchuria
+		name = "Villages"
+
+		[Object]
+		object_ids = random_village_manchuria
+		weight = 1
+	}
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_3
+		name = "#mg_rmc_manchuria_bunkers_coastline_3_name"
+		search_relative_kingdom_ids = kingdom_attacker_3
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 128		
+		proximity_desired = 384
+	}
+}

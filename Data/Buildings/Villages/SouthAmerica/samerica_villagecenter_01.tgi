@@ -1,0 +1,321 @@
+
+/********************    VILLAGE CENTER    ********************/
+
+[Template SouthAmericaVillageCenter Template=AACityCenterSouthAmerica]
+{
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 12
+
+	[View]
+	{
+		resource_prefix = SouthAmericaCityCenter01/SouthAmericaCityCenter01
+		
+		[AspectNormal]
+		visual_radius_estimate = 9
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_03
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_04
+		attached = true
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = city_name_vfx
+		location = base
+	}
+}
+
+/********************    RANDOM MAP CENTERS    ********************/
+
+[Thing Template=SouthAmericaVillageCenter]
+{
+	IDS = argentina_village01
+	name_list_ids = namelist_argentina
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_argentina
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage03]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage04]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage05]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage06]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage07]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage08]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage09]
+	}
+}
+
+[Thing Template=SouthAmericaVillageCenter]
+{
+	IDS = brazil_village01
+	name_list_ids = namelist_brazil
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_brazil
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage03]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage04]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage05]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage06]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage07]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage08]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage09]
+	}
+}
+
+[Thing Template=SouthAmericaVillageCenter]
+{
+	IDS = caribbean_village01
+	name_list_ids = namelist_caribbean
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_caribbean
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage03]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage04]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage05]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage06]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage07]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage08]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage09]
+	}
+}
+
+[Thing Template=SouthAmericaVillageCenter]
+{
+	IDS = congo_village01
+	name_list_ids = namelist_congo
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_congo
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage03]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage04]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage05]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage06]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage07]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage08]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage09]
+	}
+}
+
+[Thing Template=SouthAmericaVillageCenter]
+{
+	IDS = madagascar_village01
+	name_list_ids = namelist_madagascar
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_madagascar
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage03]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage04]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage05]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage06]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage07]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage08]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage09]
+	}
+}
+
+[Thing Template=SouthAmericaVillageCenter]
+{
+	IDS = mexico_village01
+	name_list_ids = namelist_mexico
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_mexico
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage03]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage04]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage05]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage06]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage07]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage08]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage09]
+	}
+}
+
+[Thing Template=SouthAmericaVillageCenter]
+{
+	IDS = venezuela_village01
+	name_list_ids = namelist_venezuela
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_venezuela
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage01]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage03]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage04]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage05]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage06]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage07]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage08]
+
+		[Layout Template=LayoutRMCSouthAmericaVillage09]
+	}
+}
+
+/********************    CAMPAIGN MAP CENTERS    ********************/
+
+[Thing Template=SouthAmericaVillageCenter]
+{
+	IDS = samerica_villagecenter_wealthy
+	editor_name = "#samerica_villagecenter_01_samerica_villagecenter_wealthy_editor_name"
+
+	[EconomyComponent Template=EconomyComponentCityLarge]
+
+	[CityComponent]
+	{
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = tropical_treespalm
+			offset = -6, -6
+			orientation = 0, 1
+		}
+	}
+}
+
+[Thing Template=SouthAmericaVillageCenter]
+{
+	IDS = samerica_villagecenter
+	editor_name = "#samerica_villagecenter_01_samerica_villagecenter_editor_name"
+
+	[EconomyComponent Template=EconomyComponentCitySmall]
+
+	[CityComponent]
+	{
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = tropical_treespalm
+			offset = -6, -6
+			orientation = 0, 1
+		}
+	}
+}

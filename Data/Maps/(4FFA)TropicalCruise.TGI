@@ -1,0 +1,16 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "(4FFA) Tropical Cruise"
+
+	kingdom_1 = "Japan"
+	kingdom_0 = "Germany"
+	restriction_group_0000 = "Airbase"
+	map_description = "4 player free-for-all accumulate resources map.  Neutral airbase objective in the center."
+	kingdom_4 = "Neutral"
+	map_name = "(4FFA) Tropical Cruise"
+	objective_1 = "Supply oil to the Airbase to use it."
+	objective_0 = "Accumulate 2500 resource points."
+	kingdom_3 = "Great Britain"
+	kingdom_2 = "USA"
+}

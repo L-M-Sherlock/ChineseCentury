@@ -1,0 +1,54 @@
+[Thing Template=AAGBROrganizationArmor]
+{	
+	IDS = regiment_fra_tank_BT
+	name = "BT tank"
+	editor_name = "BT tank"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 130
+		
+		[Upkeep]
+		ammo = 15
+		oil = 20
+	}
+
+	[View]
+	{
+		resource_prefix = /Organizations/Banners/Icons/IconArmorMedium.png
+		icon = /UI/Game/RegimentButtons/Germany-Pz35t.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_vehicle_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_halftrack_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_halftrack_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_halftrack_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = FRA_tank_BT
+	
+		[Slot]	;; support
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = fra_tank_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = mechanized_company
+	}
+}

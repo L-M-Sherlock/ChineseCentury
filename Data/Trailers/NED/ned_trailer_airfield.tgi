@@ -1,0 +1,19 @@
+[Thing Inherit=AATrailerTwoTires]
+{
+	IDS = ned_trailer_airfield
+	name = "#ned_trailer_airfield_name"
+	editor_name = "#ned_trailer_airfield_editor_name"
+
+	[MoverComponent]
+	{
+		[TrailerHitch]		
+		;; node name and node offset of the truck's hitch
+		node_ids = hitch
+		node_offset = 0, 1.5, .8
+	}
+	
+	[View]
+	{
+		resource_prefix = nedTrailerAirfield/nedTrailerAirfield
+	}
+}

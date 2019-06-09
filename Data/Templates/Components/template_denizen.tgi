@@ -1,0 +1,88 @@
+[template DenizenComponent]
+{
+	[list Organization]
+	{
+		;; which organization 
+		string	organization_ids
+
+		;; at least one of the following (use +):
+		;;	WORKER - creates/repairs components, upgrades, razes, etc.
+		;;	MILITIA_OFFENSIVE - engages in combat when settlement is under siege
+		;;	MILITIA_DEFENSIVE - engages in combat when settlement is under siege and wall is breached
+		string	behavior
+	}
+
+	[list DenizenGroup]
+	{
+		;; which actors
+		string  actor_ids
+		
+		;; min/max size for the group
+		point2	size
+		
+		;; at least one of the following (use +):
+		;;	AIR_OFFENSIVE - air attack command
+		;;	AIR_DEFENSIVE - deployed when the airfield s under siege
+		;;	AIR_RECON - air recon command
+		;;	AIR_ESCORT - escorters enabled actors
+		string	behavior
+		
+		[optional list FormationPositions]
+		{
+			point3	offset		;; position offset.  "0,1,0" is forward, "0,0,1" is up, "1,0,0" is right
+		}
+		
+	}
+	
+	[list Inventory]
+	{
+		;; actors provided intrinsically by the denizen component.
+		;; should specify elements of the DenizenType organization layouts.
+
+		string	actor_ids
+		int		count
+	}
+
+	;; uses guard zone
+	;; TODO: should be required in the template
+	fixed	guard_range = 10
+	fixed	guard_operational_range = 0
+	
+	[optional Runway]
+	{
+		;; offset from the root node of the place where planes appear in the hanger
+		point3		hangar_offset
+		;; orientation of the planes when they appear
+		point2		hangar_orientation
+		;; distance forward that the plane must move in the hangar before it can turn
+		fixed		hangar_length
+		
+		;; offset from the root node of the start of the runway
+		;; this is where the plane starts its takeoff
+		point3		offset
+		;; orientation of the runway
+		point2		orientation
+		;; runway length (takeoff length)
+		fixed		length = 4
+		;; delay between planes taking off
+		fixed		delay = 0.5
+		
+		;; to support carriers where the planes land from the opposite direction of takeoff
+		;; planes touchdown at landing_offset, go landing_length distance in landing_orientation direction,
+		;; and move to landing_orientation, and move landing_hangar_length distance in landing_hangar_orientation
+		flag		has_landing_runway = false
+		point3		landing_offset = 0,0,0
+		point2		landing_orientation = 0,0
+		fixed		landing_length = 0
+		point3		landing_hangar_offset = 0,0,0
+		point2		landing_hangar_orientation = 0,0
+		fixed		landing_hangar_length = 0
+	}
+	
+	[optional DeploymentInfo template=DeploymentData]
+
+	[optional AirAttackCost template=CostList]		;; positive numbers
+	
+	[optional AirReconCost template=CostList]		;; positive numbers
+	
+}

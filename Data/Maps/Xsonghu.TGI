@@ -1,0 +1,29 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Battle of Songhu"
+
+	kingdom_8 = "Right wing regiment"
+	kingdom_7 = "Japanese Support"
+	kingdom_6 = "Left wing regiment"
+	kingdom_5 = "Shanghai Garrison"
+	team_1 = "1"
+	kingdom_4 = "Three army group"
+	team_0 = "0"
+	restriction_group_0001 = "1"
+	kingdom_3 = "Five army group"
+	map_name = "<color=0.7,1.0,0.7>Map Pack:Battle of Songhu"
+	restriction_group_0000 = "0"
+	kingdom_2 = "Chongming Garrison"
+	kingdom_1 = "zhong"
+	kingdom_0 = "YOU"
+	name_2272 = "Northern Shanghai"
+	objective_3 = "Destroy three airports and get massive air support"
+	objective_2 = "Occupy Chongming Island and get massive army support"
+	objective_1 = "Occupy northern Shanghai"
+	objective_0 = "Occupy enemy rear airfield"
+	trigger_13_element_6 = "1"
+	name_2312 = "Southern Shanghai"
+	name_18620 = "1"
+	map_description = "BY:xiaoming"
+}

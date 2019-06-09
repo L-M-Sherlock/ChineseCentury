@@ -1,0 +1,197 @@
+[Thing Template=AANEDBuildingPackable]
+{
+	IDS = ned_brigade_engineer
+	name = "#ned_brigade_engineer_Thing_name"
+	editor_name = "#ned_brigade_engineer_Thing_editor_name"
+
+	[SupplyComponent]
+	{
+		supply_range = 50
+		is_relay = true
+		stockpile_max = 60
+	}
+
+	[BodyComponent]
+	health = 750
+	defense = 5
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 100
+		
+		[Production]
+		ammo = 20
+		oil = 20
+		
+		[Upkeep]
+		building_limit_consumed = 0
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = engineer_brigade
+
+		[Property]
+		property_IDS = economic_building	
+
+		[Property]
+		property_IDS = ammo
+
+		[Property]
+		property_IDS = oil
+	}	
+	
+	[ResearchComponent]
+	{
+
+		[ResearchItem]
+		{
+			property_IDS = tech_oil_production
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 150
+			}
+		}
+				
+		[ResearchItem]
+		{
+			property_IDS = tech_improved_fortifications
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 75
+			}
+		}
+				
+		[ResearchItem]
+		{
+			property_IDS = tech_entrenchment
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 75
+			}
+		}
+		
+		[ResearchItem]
+		{
+			property_IDS = tech_construction_battalions
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 75
+			}
+		}		
+	
+	}
+
+
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 8
+	}
+
+	[View]
+	{
+		resource_prefix = NEDBrigadeEngineer/NEDBrigadeEngineer
+		icon = /UI/Game/BuildingButtons/IconBrigadeEngineer.png
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_brigade_dirt
+			terrain_group_filter = dirt
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_brigade_desert
+			terrain_group_filter = desert
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_brigade_snow
+			terrain_group_filter = snow
+		}
+
+		[WhenSelected Template=FXC_PlaySFX]
+		{
+			audio_ids = brigade_engineer_select
+		}
+		
+		;;----- Spot Lights ----------------------
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_02_bright
+			location = spotlight_ae_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_03
+			location = spotlight_ae_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_02
+			location = spotlight_ae_03
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_03
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_04
+			attached = true
+		}
+	}
+
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_packing
+		audio_ids = pack_7s_sfx
+	}
+	
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_unpacking
+		audio_ids = unpack_7s_sfx
+	}
+}

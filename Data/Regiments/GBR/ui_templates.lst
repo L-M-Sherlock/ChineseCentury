@@ -1,0 +1,7 @@
+
+;; UI_Templates.LST
+;;
+;; Templates for view elements and widgets defined by the UI system
+
+UI/template_ve.tgi
+UI/template_widget.tgi

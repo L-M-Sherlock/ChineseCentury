@@ -1,0 +1,31 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Far east breakthrough"
+
+	name_6769 = "Pyongyang"
+	name_6792 = "Busan"
+	independent_4 = "4"
+	restriction_group_0003 = "3"
+	kingdom_6 = "6"
+	team_2 = "2"
+	restriction_group_0002 = "2"
+	name_6787 = "wonsan"
+	kingdom_5 = "5"
+	team_1 = "1"
+	restriction_group_0001 = "1"
+	kingdom_3 = "3"
+	map_name = "Far east breakthrough"
+	kingdom_2 = "2"
+	name_6806 = "Shimane"
+	kingdom_1 = "1"
+	kingdom_0 = "0"
+	name_6778 = "Seoul"
+	objective_2 = "Occupation wonsan to cut off the support of the Soviet union forces"
+	objective_1 = "occupied Pyongyang"
+	name_6799 = "Kwangju"
+	objective_0 = "With the fastest speed to shoot Seoul garrison to occupy it"
+	trigger_5_element_18 = "Russian reinforcements arrived"
+	trigger_5_element_17 = "Russian reinforcements arrived"
+	map_description = "The Soviet union had a series of victories in the west, but we don't agree, it's time to wake them up from the joy of success, we will  bash them on the Korean peninsula , let them taste the pain of failure! BY:Songfysong"
+}

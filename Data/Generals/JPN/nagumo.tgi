@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = nagumo_portrait
+	name = "#nagumo_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Nagumo/NagumoPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = jpn_nagumo_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = nagumo
+	name = "#nagumo_name"
+	description = "#nagumo_description"
+	staging_name = "#nagumo_staging_name"
+	icon_texture_ids = Nagumo/NagumoPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/JPN/Nagumo.bik
+	portrait_ids = nagumo_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpKamikaze]
+	
+	[Ability Template=AASpecialOpIndustrialSabotage]
+	
+	[Ability Template=AASpecialOpCodeBreaker]
+	
+	[Ability Template=AASpecialOpCorpsJPN]
+}

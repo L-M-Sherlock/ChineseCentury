@@ -1,0 +1,69 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+;; ------------------------ Ability Definition Template ---------------- ;;
+
+[Template AAAbilityDefEconomicAid Template=AASpecialOp]
+{
+	IDS = economic_aid
+	name = "#economic_aid_name"
+	description = "#economic_aid_description"
+	targets = NULL
+	recharge_time = 300
+	range = 0
+	area = 0
+
+	icon = /UI/%s/Game/SpecialOps/IconEconomicAid.png
+
+	[Flags]
+	target_location = true
+
+	[Effect Template=SummonEffect]
+	hide_from_tooltip = true
+	object_ids = smoke_grenade
+}
+
+
+;; ---------------------- Special Op Economic Aid -------------------- ;;
+;; Ability Definitions only differ by type of transport used
+
+[AbilityDefinition Template=AAAbilityDefEconomicAid]
+{
+	IDS = gbr_economic_aid
+	
+	[Effect Template=SummonEffect]
+	object_ids = gbr_economic_aid
+}
+
+[AbilityDefinition Template=AAAbilityDefEconomicAid]
+{
+	IDS = ger_economic_aid
+	
+	[Effect Template=SummonEffect]
+	object_ids = ger_economic_aid
+}
+
+
+[AbilityDefinition Template=AAAbilityDefEconomicAid]
+{
+	IDS = jpn_economic_aid
+	
+	[Effect Template=SummonEffect]
+	object_ids = jpn_economic_aid
+}
+
+[AbilityDefinition Template=AAAbilityDefEconomicAid]
+{
+	IDS = rus_economic_aid
+	
+	[Effect Template=SummonEffect]
+	object_ids = rus_economic_aid
+}
+
+[AbilityDefinition Template=AAAbilityDefEconomicAid]
+{
+	IDS = usa_economic_aid
+	
+	[Effect Template=SummonEffect]
+	object_ids = usa_economic_aid
+}

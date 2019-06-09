@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = voorst_portrait
+	name = "#voorst_portrait_name"
+
+	[View]
+	{
+		resource_prefix = voorst/voorstPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = ned_voorst_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = voorst
+	name = "#voorst_name"
+	description = "#voorst_description"
+	staging_name = "#voorst_staging_name"
+	icon_texture_ids = voorst/voorstPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/NED/voorst.bik
+	portrait_ids = voorst_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpCarpetBombNED]
+	
+	[Ability Template=AASpecialOpCourage]
+	
+	[Ability Template=AASpecialOpResupply2]
+		
+	[Ability Template=AASpecialOpCorpsNED]
+}

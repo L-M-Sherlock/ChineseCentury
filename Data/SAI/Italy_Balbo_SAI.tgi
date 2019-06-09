@@ -1,0 +1,75 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= Balbo_low_income_ego
+	name									= "#Italy_Balbo_SAI_Balbo_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= Balbo_main_game_ego
+	name									= "#Italy_Balbo_SAI_Balbo_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= Balbo_end_game_ego
+	name									= "#Italy_Balbo_SAI_Balbo_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= Balbo_end_game_ego_TK
+	name									= "#Italy_Balbo_SAI_Balbo_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= Balbo_end_game_ego_END
+	name									= "#Italy_Balbo_SAI_Balbo_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= Balbo_end_game_ego_TK_DS
+	name									= "#Italy_Balbo_SAI_Balbo_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= Balbo_end_game_ego_TK_DS1
+	name									= "#Italy_Balbo_SAI_Balbo_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= Balbo_sai
+	name									= "#Italy_Balbo_SAI_Balbo_sai_name"
+	description								= "#Italy_Balbo_SAI_Balbo_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= Balbo_low_income_ego
+
+	[Ego]
+	IDS										= Balbo_main_game_ego
+
+	[Ego]
+	IDS										= Balbo_end_game_ego
+
+	[Ego]
+	IDS										= Balbo_end_game_ego_TK
+
+	[Ego]
+	IDS										= Balbo_end_game_ego_END
+
+	[Ego]
+	IDS										= Balbo_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= Balbo_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_ita
+	
+	[Faction]
+	ids										= Balbo
+} ;; von_manstein SAI

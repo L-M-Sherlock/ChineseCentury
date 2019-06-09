@@ -1,0 +1,106 @@
+
+[Thing Template=AATemperateDoodad]
+{
+	IDS = temperate_rocks
+	name = "#temperate_rocks_name"
+	
+	[Placement]
+	{
+		[Biome]
+		{
+			ids = temperate_forest
+			weight = 0.10
+		
+			[Terrain]
+			IDS = temperate_city
+			weight = 0.0
+
+			[Terrain]
+			IDS = temperate_shore
+			weight = 0.001
+
+			[Terrain]
+			IDS = temperate_shoretrans
+			weight = 0.0
+
+			[Terrain]
+			IDS = temperate_ocean
+			weight = 0.0
+
+			[Terrain]
+			IDS = temperate_river
+			weight = 0.001
+
+			[Terrain]
+			IDS = temperate_shallows
+			weight = 0.001
+		}
+
+		[Biome]
+		{
+			ids = temperate_grassland
+			weight = 0.10
+		
+			[Terrain]
+			IDS = temperate_city
+			weight = 0.0
+
+			[Terrain]
+			IDS = temperate_shore
+			weight = 0.001
+
+			[Terrain]
+			IDS = temperate_shoretrans
+			weight = 0.0
+
+			[Terrain]
+			IDS = temperate_ocean
+			weight = 0.0
+
+			[Terrain]
+			IDS = temperate_river
+			weight = 0.001
+
+			[Terrain]
+			IDS = temperate_shallows
+			weight = 0.001
+		}
+	}
+
+	[Size]
+	scale_min = 0.6
+	scale_max = 0.9
+	
+	[View]
+	{
+		resource_prefix = TemperateRocks/TemperateRock
+		shadow_type = TEXTURE
+		shadow_texture = /effects/shadows/UnitShadow.dds
+
+		[Aspect Template=Aspect]
+		IDS = temperate_rock_1
+		model = %s1.nif
+		skin = %s1Base.dds
+		
+		[Aspect Template=Aspect]
+		IDS = temperate_rock_2
+		model = %s2.nif
+		skin = %s2Base.dds
+
+		[Aspect Template=Aspect]
+		IDS = temperate_rock_3
+		model = %s3.nif
+		skin = %s3Base.dds
+
+		[Aspect Template=Aspect]
+		IDS = temperate_rock_4
+		model = %s4.nif
+		skin = %s4Base.dds
+
+		[Aspect Template=Aspect]
+		IDS = temperate_rock_5
+		model = %s5.nif
+		skin = %s5Base.dds
+	}
+}
+

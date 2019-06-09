@@ -1,0 +1,65 @@
+[Thing Template=AAUnitGBRVehicleHQTruck]
+{
+	;; IDS = YUN_hq_truck_ammo
+	IDS = YUN_truck_ammo
+	name = "#YUN_truck_ammo_name"
+	editor_name = "#YUN_truck_ammo_editor_name"
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = ammo
+	}
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 70
+
+		[Production]
+		ammo = 12
+
+		[Upkeep]
+		building_limit_consumed = 1
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = YUN_depot_ammo
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 3
+		acceleration = 2
+		trailer_actor = gbr_trailer_ammo
+
+		[TrailerHitch]
+		{
+			node_ids = hitch
+			node_offset = 0, -1.7, .5
+		}
+	}
+
+	[View]
+	{
+		resource_prefix = YUNTruck/RUSTruck
+		icon = /UI/Game/BuildingButtons/IconDepotAmmo.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = depot_ammo_select
+	}
+}

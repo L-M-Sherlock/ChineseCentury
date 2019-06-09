@@ -1,0 +1,35 @@
+[Terrain template=Terrain]
+{
+	IDS = boreal_grass
+	name = "#boreal_grass_name"
+	
+	base_priority = 7000
+	terrain_group = snow
+	
+	doodad_frequency = 0.025
+	primary_doodad_frequency = 0.20
+
+	[Variation]
+	IDS = boreal_grass01
+	name = "#boreal_grass_01_name"
+	texture = BorealGrass/BorealGrass01.tga
+	texture_width = 16
+	texture_height = 16
+	terrain_color = 0.533, 0.573, 0.388
+
+	[Variation]
+	IDS = boreal_grass02
+	name = "#boreal_grass_02_name"
+	texture = BorealGrass/BorealGrass02.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.513, 0.553, 0.388
+
+	[Variation]
+	IDS = boreal_grass03
+	name = "#boreal_grass_03_name"
+	texture = BorealGrass/BorealGrass03.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.553, 0.593, 0.368
+}

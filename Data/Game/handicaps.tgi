@@ -1,0 +1,57 @@
+;; Handicaps
+
+;; Economy Penalty
+[Handicap Template=Handicap]
+{
+	IDS = handicap_easy
+	name = "#handicaps_name"
+	description = "#handicaps_description"
+
+	property_ids = property_handicap_easy
+}
+
+[Handicap Template=Handicap]
+{
+	IDS = handicap_medium
+	name = "#handicaps_handicap_medium_name"
+	description = "#handicaps_handicap_medium_description"
+
+	property_ids = property_handicap2
+}
+
+[Handicap Template=Handicap]
+{
+	IDS = handicap_hard
+	name = "#handicaps_handicap_hard_name"
+	description = "#handicaps_handicap_hard_description"
+
+	property_ids = property_handicap_hard
+}
+
+[Handicap Template=Handicap]
+{
+	IDS = handicap3
+	name = "#handicaps_handicap3_name"
+	description = "#handicaps_handicap3_description"
+
+	property_ids = property_handicap3
+}
+
+[Handicap Template=Handicap]
+{
+	IDS = handicap4
+	name = "#handicaps_handicap4_name"
+	description = "#handicaps_handicap4_description"
+
+	property_ids = property_handicap4
+}
+/*
+[Handicap Template=Handicap]
+{
+	IDS = handicap_economy_penalty_1
+	name = "#handicaps_name"
+	description = "#handicaps_description"
+
+	property_ids = property_handicap_economy_penalty_1
+}
+*/

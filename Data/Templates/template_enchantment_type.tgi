@@ -1,0 +1,18 @@
+/**************************************************************************
+
+template_enchantment_type.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: Types of enchantments used in the game
+
+REVISION HISTORY:
+smm091503 - created
+
+**************************************************************************/
+
+[Template EnchantmentType]
+{
+	string		ids
+	localized	name
+	localized	description
+}

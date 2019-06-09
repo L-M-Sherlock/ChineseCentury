@@ -1,0 +1,381 @@
+
+;; ---------------------------- Main Menu ----------------------------
+[MainMenuInterface Template=Interface]
+{
+	interface_music = main_title_music
+	
+	show_logo_and_build_stamp = true
+	
+	show_menu_background = true
+	
+	[View Template=NoVE]
+}
+
+[MainMenu Inherit=PanelWidget]
+{
+	[View Template=GroupVE]
+	{
+		L = 783
+		T = 8
+		R = +237
+		B = +758
+		
+		validate_decal_children = false
+		
+		[Child Template = DecalVETiledHorizontal]
+		{
+			L = 22
+			T = 198
+			R = +191
+			B = +488
+			
+			alpha_blending = true
+			ends_texture = /UI/%s/Default/Menus/MainMenu/MainMenuGrayTile.tga
+			center_texture = /UI/%s/Default/Menus/MainMenu/MainMenuGrayTile.tga
+		}
+		
+		;;axis and allies logo
+		[Child Template = DecalVE]
+		{
+			L = 0
+			T = 0
+			R = 100%
+			B = +198
+			
+			alpha_blending = true
+			texture /UI/%s/Default/Menus/MainMenu/MainMenuTop.tga
+		}
+		
+		;;button seperator
+		[Child Template = DecalVE]
+		{
+			L = 0
+			T = 301
+			R = 100%
+			B = +19
+			
+			alpha_blending = true
+			texture = /UI/%s/Default/Menus/MainMenu/MainMenuButtonSeperator.tga
+		}
+		
+		[Child Template = DecalVE]
+		{
+			L = 0
+			T = 541
+			R = 100%
+			B = +19
+			
+			alpha_blending = true
+			texture = /UI/%s/Default/Menus/MainMenu/MainMenuButtonSeperator.tga
+		}
+		
+		;; timegate logo
+		[Child Template = DecalVE]
+		{
+			L = 0
+			T = 686
+			R = 100%
+			B = +72
+			
+			alpha_blending = true
+			texture = /UI/%s/Default/Menus/MainMenu/MainMenuBottom.tga
+		}
+	}	
+	
+	[MainMenuButtonSinglePlayer Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#mainMenuButtonSinglePlayer_Client_View_text"
+			font = large
+		}
+
+		[View]
+		{
+			L = 26
+			T = 204
+		}
+	}
+
+	[MainMenuButtonMultiplayer Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#mainMenuButtonMultiplayer_Client_View_text"
+			font = large
+		}
+
+		[View]
+		{
+			L = 26
+			T = 252
+		}
+	}
+
+	[MainMenuButtonEditor Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#mainMenuButtonEditor_Client_View_text"
+			font = large
+		}
+
+		[View]
+		{
+			L = 26
+			T = 327
+		}
+	}
+
+	[MainMenuButtonFilm Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#mainMenuButtonFilm_Client_View_text"
+			font = large
+		}
+
+		[View]
+		{
+			L = 26
+			T = 379
+		}
+	}
+
+	[MainMenuButtonOptions Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#mainMenuButtonOptions_Client_View_text"
+			font = large
+		}
+
+		[View]
+		{
+			L = 26
+			T = 429
+		}
+	}
+
+	[MainMenuButtonCredits Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#mainMenuButtonCredits_Client_View_text"
+			font = large
+		}
+
+		[View]
+		{
+			L = 26
+			T = 479
+		}
+	}
+
+	[MainMenuButtonCheckForUpdates Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#mainMenuButtonCheckForUpdates_Client_View_text"
+			font = large
+		}
+
+		[View]
+		{
+			L = 26
+			T = 578
+		}
+	}
+
+	[MainMenuButtonQuit Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#mainMenuButtonQuit_Client_View_text"
+			font = large
+		}
+
+		[View]
+		{
+			L = 26
+			T = 630
+		}
+	}
+}
+
+[MainMenuBackground Template=CinematicWidget]
+{
+	[VideoResource]
+	video_resource = /UI/%s/asdf
+}
+
+/*
+[MenuBar Inherit=PanelWidget]
+{
+	[View Template=DecalVETiledHorizontal]
+	{
+		L = 0
+		T = 0
+		R = 100%
+		B = 32
+		
+		ends_texture = /UI/%s/Default/TopMenu/TileEnds.tga
+		center_texture = /UI/%s/Default/TopMenu/TileCenter.tga
+	}
+
+	[MenuBarFile Template=SharedMenuWidget]
+	{
+		;item_width = 400
+	
+		[View]
+		L = 0
+		T = 6
+		R = +100
+
+		[Label]
+		text = "File"
+
+		[ItemEntry]
+		text = "Clear Viewport"
+		command = TempClearViewport
+
+		[ItemEntry]
+		text = "Add 20 items to front of Viewport"
+		command = TempAdd20ItemsToFront
+
+		[ItemEntry]
+		text = "Add 20 items to back of Viewport"
+		command = TempAdd20ItemsToBack
+
+		[ItemEntry]
+		text = "Exit"
+		command = Quit
+	}
+
+	[MenuBarOptions Template=SharedMenuWidget]
+	{
+		[View]
+		L = 150
+		T = 6
+		R = +100
+
+		[Label]
+		text = "Options"
+
+		[ItemEntry]
+		text = "Foo"
+		command = echo Options - Foo
+
+		[ItemEntry]
+		text = "Goo"
+		command = echo Options - Goo
+
+		[ItemEntry]
+		text = "Blah"
+		command = echo Options - Blah
+	}
+}
+
+[MainMenuViewport Template=SharedViewportScrollWidget]
+{
+
+	[View Template=DecalVETiled]
+
+	L = 50
+	T = 73
+	R = +284
+	B = +324
+
+	corners_texture = /UI/%s/Default/ListBox/TileCorners.tga
+	left_border_texture = /UI/%s/Default/ListBox/TileLeft.tga
+	right_border_texture = /UI/%s/Default/ListBox/TileRight.tga
+	top_border_texture = /UI/%s/Default/ListBox/TileTop.tga
+	bottom_border_texture = /UI/%s/Default/ListBox/TileBottom.tga
+	center_texture = /UI/%s/Default/ListBox/TileCenter.tga
+
+	
+}
+
+[MainMenuViewportItemFront Template=StaticDecalWidget]
+{
+	[View]
+	R = 70%
+	B = +20
+	texture = /UI/%s/test/listbox/item_unselected_focused.tga
+}
+
+[MainMenuViewportItemBack Template=StaticDecalWidget]
+{
+	[View]
+	R = 40%
+	B = +10
+	texture = /UI/%s/test/listbox/item_selected.tga
+}
+*/
+
+[MainMenuEditbox Template=SharedMultilineEditBoxWidget]
+{
+	[View]
+	{
+		L = 20
+		T = 422
+		R = +284
+		B = +107
+	}
+
+	;; text = "This is some really long text that should wrap around eventually if it is long enough.\nThis line has two newlines at the end.\n\nThis line has none."
+}
+
+[MainMenuEditbox2 Template=SharedMultilineEditBoxWidget]
+{
+	[View]
+	{
+		L = 310
+		T = 422
+		R = +120
+		B = +107
+	}
+
+	;;text = "This is some really"
+}
+
+[MainMenuEditbox3 Template=SharedEditBoxWidget]
+{
+	[View]
+	{
+		L = 20
+		T = 540
+		R = +120
+		B = +25
+	}
+
+	;;text = "This is a single line editbox with way too much text in it."
+}
+
+
+[MainMenuLabelVersion Template=MenuSmallLeftLabelWidget]
+{
+	[Label]
+	L = 130
+	T = 25b
+	R = +663
+	B = +20
+}
+
+[MenuLegalText Template=MenuSmallLeftLabelWidget]
+{
+	[Label]
+	L = 130
+	T = 725
+	R = +663
+	B = +20
+	text = "#main_Label_text"
+}

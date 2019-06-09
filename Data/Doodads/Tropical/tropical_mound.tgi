@@ -1,0 +1,63 @@
+[Thing Template=AATropicalDoodad]
+{
+	IDS = tropical_mound
+	name = "#tropical_mound_name"
+
+	[Flags]
+	random_orientation = true	
+
+	[Placement]
+	{
+		[Biome]
+		IDS = tropical_savannah
+		weight = -1.00		
+
+		[Biome]
+		{
+			ids = tropical_forest
+			weight = 0.00
+			
+			[Terrain]
+			IDS = tropical_jungledense
+			weight = 0.01
+
+			[Terrain]
+			IDS = tropical_shore
+			weight = 0.01
+
+			[Terrain]
+			IDS = tropical_swamp
+			weight = 0.01
+		}
+	}
+
+	[Size]
+	scale_min = 1.0
+	scale_max = 1.0
+	
+	[View]
+	{
+		resource_prefix = TropicalMound/TropicalMound
+		shadow_type = TEXTURE
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		
+		[TextureSearchPath]
+		path = /Doodads/Tropical/TropicalBambooReeds				
+
+		[Aspect Template=Aspect]
+		IDS = tropical_mound_01
+		model = %s01.nif
+
+		[Aspect Template=Aspect]
+		IDS = tropical_mound_02
+		model = %s02.nif
+
+		[Aspect Template=Aspect]
+		IDS = tropical_mound_03
+		model = %s03.nif
+
+		[Aspect Template=Aspect]
+		IDS = tropical_mound_04
+		model = %s04.nif
+	}
+}

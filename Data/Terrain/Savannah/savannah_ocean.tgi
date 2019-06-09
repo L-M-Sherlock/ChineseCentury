@@ -1,0 +1,42 @@
+[Terrain template=WaterTerrain]
+{
+	IDS = savannah_ocean
+	name = "#savannah_ocean_name"
+
+	base_priority = 12000
+	terrain_group = water
+	terrain_color = 0.126, 0.365, 0.482
+		
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.10
+
+/********************	WATER PARAMETERS		********************/
+
+	paint_slope = .23
+  	max_slope = .2
+  	paint_max_step = 1.0
+  	max_depth = 5.5
+	anim_textures_path_prefix= SavannahWater/WaterFrames%04d.dds
+	anim_fps = 10
+	color = 0.122, 0.259, 0.333
+	
+ 	water_doodad_IDS = waves
+ 	water_doodad_offset_perpendicular = 0.25
+ 	water_doodad_offset_parallel = 2.0
+
+/********************	WATER VARIATIONS		********************/
+
+	[Variation]
+	IDS = savannah_ocean01
+	name = "#savannah_ocean_01_name"
+	texture = SavannahWater/SavannahWater01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = savannah_ocean02
+	name = "#savannah_ocean_02_name"
+	texture = SavannahWater/SavannahWater01.tga
+	texture_width = 8
+	texture_height = 8
+}

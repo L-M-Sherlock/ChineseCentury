@@ -1,0 +1,66 @@
+[Thing Template=AACPCOrganizationArtillery]
+{	
+	IDS = regiment_cpc_tank_artillery
+	name = "#regiment_cpc_tank_artillery_name"
+	editor_name = "#regiment_cpc_tank_artillery_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 225
+
+		[Upkeep]
+		ammo = 25
+		oil = 25
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = artillery_company
+	}	
+
+	[View]
+	{
+		resource_prefix = /Units/CPC/CPCTankSPA/CPCTankSPA
+		icon = /UI/Game/RegimentButtons/IconTankArtillery.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = rus_tank_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_artillery_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_artillery_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_artillery_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_mechanized
+		control_range = 50
+		
+		[Slot]	;; front
+		element_IDS = cpc_tank_light
+		
+		[Slot]	;; rear guard 1
+		element_IDS = cpc_rocket_truck
+
+		[Slot]	;; rear guard 2
+		element_IDS = cpc_rocket_truck
+		
+		[Slot]	;; rear guard 3
+		element_IDS = cpc_rocket_truck
+	
+		[Slot]	;; flank
+		element_IDS = cpc_tank_spa
+		
+		[Slot]	;; captain
+		element_IDS = cpc_tank_co
+	}
+	
+	[ExperienceComponent template=AAArmorExperienceComponent]
+}

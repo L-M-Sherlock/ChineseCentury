@@ -1,0 +1,201 @@
+[Template AACPCAirplaneAttackBomb Template=AAAirplaneAttackBomb]
+{
+	mana_cost = 5
+	range = 15
+	area = 12
+	recharge_time = 5
+}
+
+[Thing Template=AAUnitCPCAirplaneBomber]
+{
+	IDS = cpc_bomber
+	name = "#cpc_bomber_name"
+	editor_name = "#cpc_bomber_editor_name"
+		
+	[View]
+	resource_prefix = CPCFighter/CPCFighter
+
+	[PerformerComponent]
+	{
+		[Ability Template=AAProjectileLocal]
+		{
+			;spawn_position = -0.3,-3.0,-0.4
+			
+			[AbilityDefinition Template=AACPCAirplaneAttackBomb]
+			{	IDS = cpc_bomb1
+				name = "#cpc_bomber_AbilityDefinition_name"
+
+				[Effect Template=BlastDamageEffect]
+				amount = 33
+
+				[Effect Template=MoraleLossEffect]
+				amount = 2
+	
+				[WhenDo Template=FXC_PlaySFX]
+				audio_ids = bomb_heavy
+				at = TARGET_GROUND
+			}
+		}
+
+		[Ability Template=AAProjectileLocal]
+		{
+			;spawn_position = 0.3,-3.0,-0.3
+			
+			[AbilityDefinition Template=AACPCAirplaneAttackBomb]
+			{	
+				IDS = cpc_bomb2
+				name = "#cpc_bomber_AbilityDefinition_name_2"
+
+				[Effect Template=BlastDamageEffect]
+				amount = 33
+
+				[Effect Template=MoraleLossEffect]
+				amount = 2
+	
+				[WhenDo Template=FXC_PlaySFX]
+				audio_ids = bomb_heavy
+				at = TARGET_GROUND
+			}
+		}
+
+		[Ability Template=AAProjectileLocal]
+		{
+			;spawn_position = -0.3,-4.5,-0.2
+			
+			[AbilityDefinition Template=AACPCAirplaneAttackBomb]
+			{	
+				IDS = cpc_bomb3
+				name = "#cpc_bomber_AbilityDefinition_name_3"
+
+				[Effect Template=BlastDamageEffect]
+				amount = 99
+
+				[Effect Template=MoraleLossEffect]
+				amount = 3
+	
+				[WhenDo Template=FXC_PlaySFX]
+				audio_ids = bomb_heavy
+				at = TARGET_GROUND
+			}
+		}
+
+		[Ability Template=AAProjectileLocal]
+		{
+			;spawn_position = 0.3,-4.5,-0.1
+			
+			[AbilityDefinition Template=AACPCAirplaneAttackBomb]
+			{	
+				IDS = cpc_bomb4
+				name = "#cpc_bomber_AbilityDefinition_name_4"
+
+				[Effect Template=BlastDamageEffect]
+				amount = 99
+
+				[Effect Template=MoraleLossEffect]
+				amount = 3
+	
+				[WhenDo Template=FXC_PlaySFX]
+				audio_ids = bomb_heavy
+				at = TARGET_GROUND
+			}
+		}
+
+		[Ability Template=AAProjectileLocal]
+		{
+			;spawn_position = 0.3,-2.5,-0.1
+			required_properties = tech_nuclear_weapons
+			
+			[AbilityDefinition Template=AACPCAirplaneAttackBomb]
+			{
+				IDS = cpc_bomb5
+				mana_cost = 0		
+				name = "#atomic_bomb_name"
+				description = "#atomic_bomb_description"
+				targets = +ACTOR -ORGANIZATION 
+				area = 20
+				projectile_ids = atomicbomb
+				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
+				attenuation_range_min = 4
+				attenuation_factor_max = 0.25
+				impact_impulse = 50000
+
+			
+				[Effect Template=FireDamageEffect]
+				amount = 666
+
+				[Effect Template=SummonEffect]
+				hide_from_tooltip = true
+				targets = +SELF	
+				object_ids = thing_visibilityactormedium_decay
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = explosive
+				targets = building
+				amount = 888
+	
+				[Effect Template=EnchantmentEffect]
+				{
+					[EnchantmentProperty]
+					{
+						IDS = radiation1
+						name = "#atomic_bomb_Effect_EnchantmentProperty_name"
+						enchantment_type = ench_type_radiation
+						duration = 10
+						icon = /Properties/PropertyIcons/IconPropertyHealth.png
+				
+						[Modifier template=PeriodicDamageModifier]
+						damage_type = flame
+						amount = 15
+			
+						[WhenAdded Template=FXC_CreateVFX]
+						{
+							VFX_IDS = atomic_radiation
+						}
+			
+						[WhenAdded Template=FXC_CreateVFX]
+						{
+							VFX_IDS = atomic_sparks_large
+							target_flags = +tank
+							location = position
+							attached = true
+						}
+			
+						[WhenAdded Template=FXC_CreateVFX]
+						{
+							VFX_IDS = atomic_sparks_large
+							target_flags = +vehicle
+							location = position
+							attached = true
+						}
+			
+						[WhenAdded Template=FXC_CreateVFX]
+						{
+							VFX_IDS = atomic_sparks_small
+							target_flags = +infantry
+							location = position
+							attached = true
+						}
+
+					}	
+				}
+			}
+		}
+	}
+	
+	[ElementComponent]
+	{
+           required_properties = tech_nuclear_weapons
+	}	
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = bomber
+		
+		[Property]
+		property_IDS = combat_unit
+
+		[Property]
+		property_IDS = airplane
+	}
+}

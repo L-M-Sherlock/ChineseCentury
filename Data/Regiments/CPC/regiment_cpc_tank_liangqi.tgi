@@ -1,0 +1,55 @@
+[Thing Template=AACPCOrganizationArmor]
+{	
+	IDS = regiment_cpc_tank_liangqi
+	name = "#regiment_cpc_tank_liangqi_name"
+	editor_name = "#regiment_cpc_tank_liangqi_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 175
+		
+		[Upkeep]
+		ammo = 20
+		oil = 20
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CPC/CPCTankHeavy/CPCTankHeavy
+		icon = /UI/Game/RegimentButtons/IconTankHeavy.png
+		banner_icon = /Organizations/Banners/Icons/IconArmorHeavy.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = rus_tank_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_tank_heavy_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_tank_heavy_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_tank_heavy_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = cpc_tank_liangqi
+	
+		[Slot]	;; support
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = cpc_tank_liangqi
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = tank_company
+	}
+}

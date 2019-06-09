@@ -1,0 +1,23 @@
+[Thing Template=AASharedDoodad]
+{
+	IDS = cpc_bomber_shared1
+	name = "#cpc_bomber_shared_Thing_name"
+
+	[Flags]
+	random_orientation = false	
+
+	[Size]
+	scale_min = 1.0
+	scale_max = 1.0
+	
+	[View]
+	{
+		resource_prefix = Bomber/cpcBomber/cpcBomber
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		shadow_type = STENCIL
+
+		[Aspect Template=Aspect]
+		IDS = cpc_bomber_shared1
+		model = Bomber/cpcBomber/cpcBomber.nif
+	}
+}

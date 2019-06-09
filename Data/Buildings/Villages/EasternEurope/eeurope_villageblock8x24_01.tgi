@@ -1,0 +1,42 @@
+[Thing Template=AACityEasternEurope]
+{
+	IDS = eeurope_villageblock8x24_01
+	editor_name = "#eeurope_villageblock8x24_01_editor_name"
+
+	[Size]
+	blocking_shape = RECT
+	rect_width = 24
+	rect_height = 8
+
+	[View]
+	{
+		resource_prefix = EasternEuropeVillage10/EasternEuropeVillage10
+		
+		[AspectNormal]
+		ground_size = 16,4
+		visual_radius_estimate = 12	
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures/Buildings/EasternEurope
+	  
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_03
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_04
+		attached = true
+	}
+}

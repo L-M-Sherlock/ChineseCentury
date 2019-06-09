@@ -1,0 +1,75 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= manstein_low_income_ego
+	name									= "#Germany_Manstein_SAI_manstein_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= manstein_main_game_ego
+	name									= "#Germany_Manstein_SAI_manstein_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= manstein_end_game_ego
+	name									= "#Germany_Manstein_SAI_manstein_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= manstein_end_game_ego_TK
+	name									= "#Germany_Manstein_SAI_manstein_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= manstein_end_game_ego_END
+	name									= "#Germany_Manstein_SAI_manstein_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= manstein_end_game_ego_TK_DS
+	name									= "#Germany_Manstein_SAI_manstein_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= manstein_end_game_ego_TK_DS1
+	name									= "#Germany_Manstein_SAI_manstein_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= manstein_sai
+	name									= "#Germany_Manstein_SAI_manstein_sai_name"
+	description								= "#Germany_Manstein_SAI_manstein_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= manstein_low_income_ego
+
+	[Ego]
+	IDS										= manstein_main_game_ego
+
+	[Ego]
+	IDS										= manstein_end_game_ego
+
+	[Ego]
+	IDS										= manstein_end_game_ego_TK
+
+	[Ego]
+	IDS										= manstein_end_game_ego_END
+
+	[Ego]
+	IDS										= manstein_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= manstein_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_ger
+	
+	[Faction]
+	ids										= manstein
+} ;; von_manstein SAI

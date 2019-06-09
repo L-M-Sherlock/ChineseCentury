@@ -1,0 +1,76 @@
+[Thing Template=AACitySouthPacific]
+{
+	IDS = spacific_villageblock10x10_01
+	name = "#south_pacific_village04_name"
+	editor_name = "#south_pacific_village04_editor_name"
+		
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 10
+	
+	[View]
+	{
+		resource_prefix = SouthPacificVillage04/SouthPacificVillage04
+		
+		[AspectNormal]
+    	ground_size = 5,4
+    		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_03
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_04
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_05
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_06
+		attached = true
+	}
+
+	[CityComponent]
+	{
+		zone_radius = 0
+				
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = tropical_bambooreeds
+			offset = 4.058, -3.641
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = tropical_bambooreeds
+			offset = -.376, -3.611
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = tropical_bambooreeds
+			offset = 4.202, 1.256
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = tropical_bambooreeds
+			offset = .565, 3.907
+			orientation = 0, 1
+		}
+	}
+}

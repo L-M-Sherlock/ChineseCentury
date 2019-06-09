@@ -1,0 +1,75 @@
+[Ego template = TK_AA_1_GBR]
+{
+	IDS										= wavell_low_income_ego
+	name									= "#Great_Britain_Wavell_SAI_wavell_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = TK_AA_2_GBR]
+{
+	IDS										= wavell_main_game_ego
+	name									= "#Great_Britain_Wavell_SAI_wavell_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = TK_AA_3_GBR]
+{
+	IDS										= wavell_end_game_ego
+	name									= "#Great_Britain_Wavell_SAI_wavell_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4_GBR]
+{
+	IDS										= wavell_end_game_ego_TK
+	name									= "#Great_Britain_Wavell_SAI_wavell_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_5_GBR]
+{
+	IDS										= wavell_end_game_ego_END
+	name									= "#Great_Britain_Wavell_SAI_wavell_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS_GBR]
+{
+	IDS										= wavell_end_game_ego_TK_DS
+	name									= "#Great_Britain_Wavell_SAI_wavell_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1_GBR]
+{
+	IDS										= wavell_end_game_ego_TK_DS1
+	name									= "#Great_Britain_Wavell_SAI_wavell_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= wavell_sai
+	name									= "#Great_Britain_Wavell_SAI_wavell_sai_name"
+	description								= "#Great_Britain_Wavell_SAI_wavell_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= wavell_low_income_ego
+
+	[Ego]
+	IDS										= wavell_main_game_ego
+
+	[Ego]
+	IDS										= wavell_end_game_ego
+
+	[Ego]
+	IDS										= wavell_end_game_ego_TK
+
+	[Ego]
+	IDS										= wavell_end_game_ego_END
+
+	[Ego]
+	IDS										= wavell_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= wavell_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_gbr
+	
+	[Faction]
+	ids										= wavell
+} ;; gbr SAI

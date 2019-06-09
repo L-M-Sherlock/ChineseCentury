@@ -1,0 +1,75 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= kuribayashi_low_income_ego
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= kuribayashi_main_game_ego
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= kuribayashi_end_game_ego
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= kuribayashi_end_game_ego_TK
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= kuribayashi_end_game_ego_END
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= kuribayashi_end_game_ego_TK_DS
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= kuribayashi_end_game_ego_TK_DS1
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= kuribayashi_sai
+	name									= "#Japan_Kuribayashi_SAI_kuribayashi_sai_name"
+	description								= "#Japan_Kuribayashi_SAI_kuribayashi_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= kuribayashi_low_income_ego
+
+	[Ego]
+	IDS										= kuribayashi_main_game_ego
+
+	[Ego]
+	IDS										= kuribayashi_end_game_ego
+
+	[Ego]
+	IDS										= kuribayashi_end_game_ego_TK
+
+	[Ego]
+	IDS										= kuribayashi_end_game_ego_END
+
+	[Ego]
+	IDS										= kuribayashi_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= kuribayashi_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_jpn
+	
+	[Faction]
+	ids										= kuribayashi
+} ;; jpn SAI

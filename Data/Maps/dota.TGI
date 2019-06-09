@@ -1,0 +1,27 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Dota assault storm V1.0"
+
+	kingdom_9 = "AIB1"
+	kingdom_8 = "AIA1"
+	kingdom_7 = "B4"
+	team_3 = "AI Team 2"
+	kingdom_6 = "B3"
+	team_2 = "AI Team 1"
+	kingdom_5 = "B2"
+	team_1 = "Team 2"
+	kingdom_4 = "B1"
+	team_0 = "Team 1"
+	kingdom_3 = "A4"
+	map_name = "<color=1.0,0.2,0.2>Dota assault storm V1.0"
+	kingdom_2 = "A3"
+	independent_13 = "CC"
+	trigger_93_element_8 = "Destroy the enemy's two bases"
+	kingdom_1 = "A2"
+	independent_12 = "HR"
+	kingdom_0 = "A1"
+	independent_11 = "GER"
+	independent_10 = "USA"
+	map_description = "QQ:3090837387"
+}

@@ -1,0 +1,58 @@
+[Thing Template=AAGBROrganizationArmor]
+{	
+	IDS = regiment_gbr_tank_heavy
+	name = "#regiment_gbr_tank_heavy_name"
+	editor_name = "#regiment_gbr_tank_heavy_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 175
+		
+		[Upkeep]
+		ammo = 20
+		oil = 20
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/GBR/GBRTankHeavy/GBRTankHeavy
+		icon = /UI/Game/RegimentButtons/IconTankHeavy.png
+		banner_icon = /Organizations/Banners/Icons/IconArmorHeavy.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_tank_deployed
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_tank_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_tank_heavy_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_tank_heavy_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_tank_heavy_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = gbr_tank_heavy
+	
+		[Slot]	;; support
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = gbr_tank_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = tank_company
+	}
+}

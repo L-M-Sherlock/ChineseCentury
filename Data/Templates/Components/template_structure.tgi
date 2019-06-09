@@ -1,0 +1,11 @@
+[template StructureComponent]
+{
+	;;;;;; SUPPORT PROPERTIES
+	;; TODO: load in code
+
+	;; support properties that are shared
+	[list SupportProperty template=PropertyReference]
+
+	;; technology properties that are shared
+	[list TechnologyProperty template=PropertyReference]
+}

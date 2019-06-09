@@ -1,0 +1,86 @@
+[Ego template = TK_AA_1_GBR]
+{
+	IDS										= gbr_low_income_ego
+	name									= "#great_britian_sai_gbr_low_income_ego_unit_limit_max_needed_name"
+} ;; LowIncomeEgo
+
+[Ego template = TK_AA_2_GBR]
+{
+	IDS										= gbr_main_game_ego
+	name									= "#great_britian_sai_gbr_main_game_ego_unit_limit_max_needed_name"
+} ;; MainGameEgo
+
+[Ego template = TK_AA_3_GBR]
+{
+	IDS										= gbr_end_game_ego
+	name									= "#great_britian_sai_gbr_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4_GBR]
+{
+	IDS										= gbr_end_game_ego_TK
+	name									= "#great_britian_sai_gbr_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_5_GBR]
+{
+	IDS										= gbr_end_game_ego_END
+	name									= "#great_britian_sai_gbr_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS_GBR]
+{
+	IDS										= gbr_end_game_ego_TK_DS
+	name									= "#great_britian_sai_gbr_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1_GBR]
+{
+	IDS										= gbr_end_game_ego_TK_DS1
+	name									= "#great_britian_sai_gbr_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= gbr_sai
+	name									= "#great_britian_sai_gbr_sai_name_2"
+	description								= "#great_britian_sai_gbr_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+	public									= false
+
+	initial_ego								= gbr_low_income_ego
+
+	[Ego]
+	IDS										= gbr_main_game_ego
+
+	[Ego]
+	IDS										= gbr_end_game_ego
+
+	[Ego]
+	IDS										= gbr_end_game_ego_TK
+
+	[Ego]
+	IDS										= gbr_end_game_ego_END
+
+	[Ego]
+	IDS										= gbr_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= gbr_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_gbr
+	
+	[Faction]
+	ids										= montgomery
+	
+	[Faction]
+	ids										= mountbatten
+	
+	[Faction]
+	ids										= wavell
+	
+	[Faction]
+	ids										= wingate
+	
+} ;; gbr SAI

@@ -1,0 +1,66 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[Template AAartillerybarrageAbilityDef Template=AASpecialOp]
+{
+	name = "#artillery_barrage_name"
+	description = "#artillery_barrage_description"
+	targets = +ACTOR -ORGANIZATION -AIR
+	recharge_time = 210
+	area = 20
+	attenuation_range_min = 4
+	attenuation_factor_max = 0.25
+	impact_impulse = 10000
+	;; the projectile's life determines when the effect of the ability takes place.
+	projectile_ids = carpet_bomb_projectile
+
+	icon = /UI/%s/Game/SpecialOps/Iconartillerybarrage.png
+
+	[Effect Template=BlastDamageEffect]
+	amount = 600
+
+	[Effect Template=AddDamageEffect]
+	damage_type_IDS = explosive
+	targets = building
+	amount = 1200
+
+	[Effect Template=SummonEffect]
+	hide_from_tooltip = true
+	targets = +SELF	
+	object_ids = thing_visibilityactormedium_decay
+
+	[Flags]
+	target_location = true
+	bombard = true
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = explosion_bomb_light
+	at = TARGET_GROUND
+	delay = 3
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = explosion_bomb_medium
+	at = TARGET_GROUND
+	delay = 3.2
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = explosion_bomb_heavy
+	at = TARGET_GROUND
+	delay = 3.6
+}
+
+;; brw091304 - Separating the Ability Definitions only for art purposes to show different bombers.
+
+[AbilityDefinition Template=AAartillerybarrageAbilityDef]
+{
+	IDS = artillery_barrage
+	
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = arty_bomb01
+		at = TARGET_GROUND
+		attached = false
+	}
+
+}
+

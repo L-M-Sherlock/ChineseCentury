@@ -1,0 +1,86 @@
+/**************************************************************************
+
+template_actor_command.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: Actor commands that the game refers to.
+
+REVISION HISTORY:
+pcb021003 - created
+
+USAGE:
+
+	[ActorCommand template=ActorCommand]
+	This node goes at the root level to define a command available to 
+	actors in the game.
+
+FIELDS:
+
+	icon = Some texture for the UI to represent the command (if NULL, command
+			will not be dispalyed as action button)
+
+	tooltip = Text to be displayed to the user when the mouse hovers
+		over the command icon/button.
+
+	cursor_ids = any ActorCommand that needs a UI State should define a cursor
+
+	can_hot_command_actor = True if can execute with a right click on an actor
+
+	can_hot_command_location = True if can execute with a right click at a location
+
+**************************************************************************/
+
+[template ActorCommand]
+{
+	;; general info
+	string		IDS
+	localized	name
+	string		icon	;; if NULL, command will not be displayed as action button
+	localized	tooltip
+	localized	description_disabled = ""
+	string		cursor_ids	
+
+	;; NOTE: invalid cursor only suppored by BOMBARD command
+	string		cursor_invalid_ids = null
+	
+	;; (optional) vfxs used to visualize command in world (command not visualized if NULL)
+	string		command_vfx_ids_actor = NULL
+	string		command_vfx_ids_location = NULL
+
+	;; should be set for commands that are not to be available for groups
+	;; NOTE: will be set automaticall by code for actor data commands (ex: attach/detach,
+	;; construct) as well as for packing/unpacking
+	bool		non_group_command = false
+
+	;; smm042904 - if not set, when command is issued to a group of actors, an individual actor's
+	;; final destination will not be adjusted based on it's relative position inside the group
+	bool		apply_group_offset = true
+	
+	;; Should be set for commands that should play attack VFX instead of the command VFX.
+	;; Currently, this is for the bombard and attack commands.
+	bool		aggressive_command = false
+
+	;; hot command info
+	flag		can_hot_command_actor = false
+	flag		can_hot_command_location = false
+
+	;; UI command button placement
+	;; kad110603 - there are 12 buttons now (3 rows, 4 columns).  I don't know how this will effect
+	;;	the numbering just yet.
+		;; the command buttons in the UI will be layed out as follows
+		;;       0 | 1 | 2
+		;;      ---|---|---
+		;;       3 | 4 | 5
+		;;      ---|---|---
+		;;       6 | 7 | 8
+
+		;; high importance items are placed starting at the lower
+		;; right corner, while low importance at the upper left
+	flag		high_importance;
+
+		;; preferred position for the action button in the UI (if
+		;; cannot be accomodated, next available one will be chosen)
+		;; NOTE: an out of bounds preferred position (i.e less than zero or greater than the number
+		;; of buttons) will result in the button not being shown at all
+	int		preferred_position;
+}

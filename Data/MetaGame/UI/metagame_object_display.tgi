@@ -1,0 +1,334 @@
+[Template MetaGameNameOwnerDisplay Inherit=PanelWidget]
+{
+	[View Template=GroupVE]
+	{
+		L = 0
+		T = 0
+		R = 100%
+		B = 100%
+	}
+
+	[Name Template=LabelWidget]
+	{
+		;ToolTip = "#metagame_object_display_Name_ToolTip"
+	
+		[View Template=NoVE]
+	
+		[Label]
+		{
+			L = 2
+			T = 0
+			R = +192
+			B = +20
+		
+			text = ""
+			font = small
+			justify = LEFT
+		}
+	}
+	
+	[Owner Template=LabelWidget]
+	{
+		;ToolTip = "#metagame_object_display_Owner_ToolTip"
+	
+		[View Template=NoVE]
+	
+		[Label]
+		{
+			L = 243
+			T = 0
+			R = +192
+			B = +20
+		
+			text = ""
+			font = small
+			justify = LEFT
+		}
+	}	
+
+	[PortraitButton Inherit=PushButtonWidget]
+	{
+		pressed_client_L = 1
+		pressed_client_T = 1
+		pressed_client_R = 1r
+		pressed_client_B = 1b
+
+	
+		[View Template=GroupVE]
+		{
+			L = 26
+			T = 70
+			R = +66
+			B = +55
+		}
+
+		[Portrait Template=ModelWidget]
+		{
+		}
+	}
+
+	[KingdomDecal Inherit=DecalWidget]
+	{
+		[View Template=GroupVE]
+		{
+			L = 288
+			T = 55
+			R = +124
+			B = +101
+		}
+
+		[Decal Template=DecalVE]
+		;; texture will be set based on kingdom
+		texture = NULL
+		alpha_blending = true
+	}
+}
+
+[MetaGameObjectDisplay Inherit=PanelWidget]
+{
+	[View Template=GroupVE]
+	{
+		L = 357
+		T = 81
+		R = 733
+		B = 249
+	}
+
+	[ActorDisplay Inherit=MetaGameNameOwnerDisplay]
+	{	
+		[MovesRemaining Template=LabelWidget]
+		{
+			visible = false
+			;ToolTip = "#metagame_object_display_ActorDisplay_MovesRemaining_ToolTip"
+		
+			[View Template=NoVE]
+		
+			[Label]
+			{
+				L = 0
+				T = 20
+				R = +140
+				B = +15
+			
+				text = ""
+				font = tiny
+				justify = LEFT
+			}
+		}
+
+		[MGDivisionList Inherit=PanelWidget]
+		{
+			[View Template=GroupVE]
+			{
+				L = 123
+				T = 34
+				R = +134
+				B = +134
+			}
+
+			[MGDivisionItem0 Template=DecalWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 0
+					T = 0
+					R = +66
+					B = +66
+				}
+				
+				[Decal Template=DecalVE]
+				;; texture will be set based on division
+				texture = NULL
+				alpha_blending = true
+			}
+
+			[MGDivisionItem1 Template=DecalWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 67
+					T = 0
+					R = +66
+					B = +66
+				}
+				
+				[Decal Template=DecalVE]
+				;; texture will be set based on division
+				texture = NULL
+				alpha_blending = true
+			}
+
+			[MGDivisionItem2 Template=DecalWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 0
+					T = 67
+					R = +66
+					B = +66
+				}
+				
+				[Decal Template=DecalVE]
+				;; texture will be set based on division
+				texture = NULL
+				alpha_blending = true
+			}
+
+			[MGDivisionItem3 Template=DecalWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 67
+					T = 67
+					R = +66
+					B = +66
+				}
+				
+				[Decal Template=DecalVE]
+				;; texture will be set based on division
+				texture = NULL
+				alpha_blending = true
+			}
+
+			;; Reserved for future use
+			[MGDivisionItem4 Template=DecalWidget]
+			{
+				visible = false
+				[View Template=GroupVE]
+				{
+					L = 0
+					T = 0
+					R = 0
+					B = 0
+				}
+				
+				[Decal Template=DecalVE]
+				;; texture will be set based on division
+				texture = NULL
+				alpha_blending = true
+			}
+
+			;; Reserved for future use
+			[MGDivisionItem5 Template=DecalWidget]
+			{
+				visible = false
+				[View Template=GroupVE]
+				{
+					L = 0
+					T = 0
+					R = 0
+					B = 0
+				}
+				
+				[Decal Template=DecalVE]
+				;; texture will be set based on division
+				texture = NULL
+				alpha_blending = true
+			}
+		}
+
+		[PortraitButton Inherit=PushButtonWidget]
+		{
+			[Portrait Template=ModelWidget]
+			{
+				[Model]
+				{
+					color = 0,0,0
+	
+					fit_model = FALSE
+					position = 1,-1,1
+					look_at = 0,0,0
+					zoom = 1
+				}
+			}
+		}
+
+		[DecalButton Inherit=PushButtonWidget]
+		{
+			visible = false
+
+			pressed_client_L = 1
+			pressed_client_T = 1
+			pressed_client_R = 1r
+			pressed_client_B = 1b
+	
+			[View Template=GroupVE]
+			{
+				L = 8
+				T = 66
+				R = +66
+				B = +65
+			}
+
+			[Decal Template=DecalWidget]
+			{
+				[View Template=NoVE]
+			
+				[Decal Template=DecalVE]
+				;; texture will be set based on unit
+				texture = NULL
+			}
+		}
+	}
+
+	[TerritoryDisplay Inherit=MetaGameNameOwnerDisplay]
+	{
+
+		[View Template=SharedPanelGroupVE]
+		{
+			L = 0
+			T = 0
+			R = 100%
+			B = 100%
+
+			transparent = true
+
+			[Child Template=DecalVE]
+			{
+				L = 123
+				T = 34
+				R = +134
+				B = +134
+
+				texture = /MetaGame/UI/%s/ControlPanel/TerritoryBox.tga
+				;; texture = /MetaGame/UI/ControlPanel/TerritoryBox.tga
+			}
+		}
+
+		[Money Template=LabelWidget]
+		{
+			tooltip_name = "#metagame_object_display_TerritoryDisplay_Money_ToolTip"
+			ToolTip = "#metagame_object_display_TerritoryDisplay_Money_ToolTip_2"
+		
+			[View Template=NoVE]
+		
+			[Label]
+			{
+				L = 160
+				T = 89
+				R = +140
+				B = +15
+		
+				text = ""
+				font = small
+				justify = LEFT
+			}
+		}
+
+		[PortraitButton Inherit=PushButtonWidget]
+		{
+			[Portrait Template=ModelWidget]
+			{
+				[Model]
+				{
+					color = 0,0,0
+	
+					fit_model = TRUE
+					position = 0,-10,40
+					look_at = 0,0,0
+					zoom = 1
+				}
+			}
+		}
+	}
+}

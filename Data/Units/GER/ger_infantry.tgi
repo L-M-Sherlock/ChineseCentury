@@ -1,0 +1,88 @@
+[Template AAUnitGERInfantry Template=AAUnitGERProne]
+{
+	name = "#ger_infantry_name"
+		
+	[BodyComponent]
+	health = 200
+	defense = 1
+	
+	[CharacterComponent Template=AAInfantryCharacterComponent]
+
+	[MoverComponent]
+	speed_max = 3
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				name = "#ger_infantry_AbilityDefinition_name"
+				recharge_time = 3
+				range = 15
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ger_rifle
+			}
+		}
+		
+		[Ability Template=AAGrenadeLocal]
+		{		
+			[AbilityDefinition Template=AAThrownGrenade]
+			{
+				name = "#ger_infantry_AbilityDefinition_name_2"
+				projectile_ids = grenade02
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 25
+			}
+		}
+	}
+
+	[View]
+	{
+		resource_prefix = GERInfantry/GERInfantry
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+}
+
+[Thing Template=AAUnitGERInfantry]
+{
+	IDS = ger_infantry_amphib
+	editor_name = "#ger_infantry_amphib_editor_name"
+
+	[Placement]
+	placement_group_ids = null
+
+	[ElementComponent]
+	required_properties = tech_battleship
+}
+
+[Thing Template=AAUnitGERInfantry]
+{
+	IDS = ger_infantry
+	editor_name = "#ger_infantry_editor_name"
+}	
+

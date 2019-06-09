@@ -1,0 +1,119 @@
+[Template CHNHalftrack Inherit=AAUnitCHNVehicleHalftrack]
+{
+	[BodyComponent]
+	{
+		health = 275
+		defense = 3
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 4.5
+		acceleration = 3.5
+		turn_radius = 1.5
+	}
+
+	[ElementComponent]
+	{
+		required_properties = tech_usa_assistance
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = mg		
+		
+		[Property]
+		property_IDS = combat_unit
+		
+		[Property]
+		property_IDS = halftrack_unit
+	} 
+
+        [DenizenComponent]
+	{
+		guard_range = 15
+		guard_operational_range = 30
+
+
+		[Organization]
+		organization_ids = regiment_chn_infantry_halftrack
+			
+		behavior = MILITIA_OFFENSIVE
+		
+
+		[Inventory]
+		actor_ids = chn_infantry_gbr
+		count = 3
+
+		[Inventory]
+		actor_ids = chn_infantry_co_er
+		count = 1
+
+
+
+	}
+
+	
+	[PerformerComponent]
+	
+	[View]
+	{
+		resource_prefix = CHNHalftrack/CHNHalftrack
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = headlight_projection
+			location = headlight_projection_01
+			
+			attached = true
+		}
+	
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = headlight_projection
+			location = headlight_projection_02
+			
+			attached = true
+		}
+	}
+}
+
+;;----------------------------- UNITS ------------------------ ;;
+
+[Thing Template=CHNHalftrack]
+{
+	IDS = chn_halftrack
+	name = "#usa_halftrack_Thing_name"
+	editor_name = "#usa_halftrack_Thing_editor_name"
+
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{	
+			[AbilityDefinition Template=AAVehicleMG]
+			{
+				name = "#usa_halftrack_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 2
+				range = 14
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 15
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = usa_mg_heavy
+			}
+		}
+	}
+}

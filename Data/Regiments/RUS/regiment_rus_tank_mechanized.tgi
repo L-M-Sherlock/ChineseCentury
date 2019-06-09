@@ -1,0 +1,54 @@
+[Thing Template=AARUSOrganizationArmor]
+{	
+	IDS = regiment_rus_tank_mechanized
+	name = "#regiment_rus_tank_mechanized_name"
+	editor_name = "#regiment_rus_tank_mechanized_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 150
+		
+		[Upkeep]
+		ammo = 15
+		oil = 20
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/RUS/RUSTankLight/RUSTankLight
+		icon = /UI/Game/RegimentButtons/IconTankMechanized.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = rus_vehicle_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = rus_halftrack_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = rus_halftrack_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = rus_halftrack_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = rus_tank_light
+	
+		[Slot]	;; support
+		element_IDS = rus_halftrack
+		
+		[Slot]	;; captain
+		element_IDS = rus_tank_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = mechanized_company
+	}
+}

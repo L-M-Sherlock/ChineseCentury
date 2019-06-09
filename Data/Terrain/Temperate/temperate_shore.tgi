@@ -1,0 +1,26 @@
+[Terrain template=Terrain]
+{
+	IDS = temperate_shore
+	name = "#temperate_shore_name"
+	
+	base_priority = 10
+	terrain_group = dirt
+	terrain_color = 0.796, 0.706, 0.514
+		
+	doodad_frequency = 0.01
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = temperate_shore01
+	name = "#temperate_shore_01_name"
+	texture = TemperateShore/TemperateShore01.tga
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = temperate_shore02
+	name = "#temperate_shore_02_name"
+	texture = TemperateShore/TemperateShore02.tga
+	texture_width = 8
+	texture_height = 8
+}

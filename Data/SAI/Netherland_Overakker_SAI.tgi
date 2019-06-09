@@ -1,0 +1,75 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= overakker_low_income_ego
+	name									= "#Neatherland_Overakker_SAI_overakker_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= overakker_main_game_ego
+	name									= "#Neatherland_Overakker_SAI_overakker_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= overakker_end_game_ego
+	name									= "#Neatherland_Overakker_SAI_overakker_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= overakker_end_game_ego_TK
+	name									= "#Neatherland_Overakker_SAI_overakker_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= overakker_end_game_ego_END
+	name									= "#Neatherland_Overakker_SAI_overakker_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= overakker_end_game_ego_TK_DS
+	name									= "#Neatherland_Overakker_SAI_overakker_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= overakker_end_game_ego_TK_DS1
+	name									= "#Neatherland_Overakker_SAI_overakker_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= overakker_sai
+	name									= "#Neatherland_Overakker_SAI_overakker_sai_name"
+	description								= "#Neatherland_Overakker_SAI_overakker_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= overakker_low_income_ego
+
+	[Ego]
+	IDS										= overakker_main_game_ego
+
+	[Ego]
+	IDS										= overakker_end_game_ego
+
+	[Ego]
+	IDS										= overakker_end_game_ego_TK
+
+	[Ego]
+	IDS										= overakker_end_game_ego_END
+
+	[Ego]
+	IDS										= overakker_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= overakker_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_ned
+	
+	[Faction]
+	ids										= overakker
+} ;; von_manstein SAI

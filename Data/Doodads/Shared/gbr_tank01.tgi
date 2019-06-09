@@ -1,0 +1,49 @@
+[Thing Inherit=VFXProjectedTextureLit]
+{
+	name = "#gbr_tank01_GBRDestroyed01Ground_name"
+	texture = TanksDead/GBRDestroyed01Ground.dds	
+	IDS = GBRDestroyed01Ground
+	attached_scale = 0
+	texture_size = 6
+}
+
+[Thing Template=AASharedDoodad]
+{
+	IDS = gbr_destroyed01
+	name = "#gbr_tank01_gbr_destroyed01_name"
+
+	[Flags]
+	random_orientation = false	
+	blocking = true
+
+	[Size]
+	{
+		scale_min = 1
+		scale_max = 1
+		
+		blocking_shape = CIRCLE
+		blocking_radius = 2
+		
+		soft_shape = CIRCLE
+		soft_radius = 2.1
+	}
+	
+	[View]
+	{
+		resource_prefix = TanksDead/GBRDestroyed01
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		shadow_type = STENCIL
+		aspects_as_variations=false
+
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = GBRDestroyed01Ground
+		
+		[TextureSearchPath]
+		path = /Units/GBR/GBRTankMedium
+
+		[WhenCreated template=FXC_CreateVFX]
+		vfx_ids = tank_death_smoke
+		location = damage_point20
+		attached = true
+	}
+}

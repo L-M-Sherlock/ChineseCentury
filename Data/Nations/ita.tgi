@@ -1,0 +1,102 @@
+[Nation template=Nation]
+{
+	ids = nation_ita
+	name = "#ITA_name"
+	game_music = Ita_ambient
+	placement_group_IDS = group_nation_ita
+
+	string loading_texture_left = ita/itaSplashScreenLeft.png
+	string loading_texture_right = ita/itaSplashScreenRight.png
+
+	;; srp060104 - Added WAD to depot list.
+    depot_name = Skins/ita.rwd,Skins/ita/
+	;; depot_name = Skins/ita/
+	
+	factions = Badoglio, Balbo, Graziani, Gariboldi
+	resource_prefix = ita/ita
+	stats_icon = ita/ita.tga
+	
+	flag_icon = /UI/%s/Default/Staging/Flagita.png
+
+	[Placeholder]
+	placeholder_IDS = placeholder_corpsunpacked
+	thing_ids = ita_corps
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_airfield
+	thing_IDS = ita_airfield
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_bunker
+	thing_IDS = ita_bunker
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_bunker_antiaircraft
+	thing_IDS = ita_bunker_aa
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_bunker_artillery
+	thing_IDS = ita_bunker_artillery
+
+	[Placeholder]
+	placeholder_IDS = placeholder_depot_supply
+	thing_IDS = ita_truck_supply
+
+	[Badge]
+	badge_texture = ita/itlBadge01.png
+
+	[Badge]
+	badge_texture = ita/itlBadge02.png
+
+	[Badge]
+	badge_texture = ita/itlBadge03.png
+
+	[Badge]
+	badge_texture = ita/itlBadge04.png
+
+	[Badge]
+	badge_texture = ita/itlBadge06.png
+
+	[Badge]
+	badge_texture = ita/itlBadge07.png
+
+	[Badge]
+	badge_texture = ita/itlBadge08.png
+
+	[Badge]
+	badge_texture = ita/itlBadge09.png
+
+	[Badge]
+	badge_texture = ita/itlBadge10.png
+
+	[Badge]
+	badge_texture = ita/itlBadge11.png
+
+	[Badge]
+	badge_texture = ita/itlBadge12.png
+
+	[Badge]
+	badge_texture = ita/itlBadge13.png
+
+	[Badge]
+	badge_texture = ita/itlBadge14.png
+
+	[Badge]
+	badge_texture = ita/itlBadge15.png
+
+	[Badge]
+	badge_texture = ita/itlBadge16.png
+
+	[Badge]
+	badge_texture = ita/itlBadge17.png
+
+	[Badge]
+	badge_texture = ita/itlBadge18.png
+
+	[Badge]
+	badge_texture = ita/itlBadge19.png
+
+	[Badge]
+	badge_texture = ita/itlBadge20.png
+	
+	}

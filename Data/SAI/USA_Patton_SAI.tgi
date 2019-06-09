@@ -1,0 +1,75 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= patton_low_income_ego
+	name									= "#USA_Patton_SAI_patton_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= patton_main_game_ego
+	name									= "#USA_Patton_SAI_patton_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= patton_end_game_ego
+	name									= "#USA_Patton_SAI_patton_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= patton_end_game_ego_TK
+	name									= "#USA_Patton_SAI_patton_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= patton_end_game_ego_END
+	name									= "#USA_Patton_SAI_patton_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= patton_end_game_ego_TK_DS
+	name									= "#USA_Patton_SAI_patton_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= patton_end_game_ego_TK_DS1
+	name									= "#USA_Patton_SAI_patton_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= patton_sai
+	name									= "#USA_Patton_SAI_patton_sai_name"
+	description								= "#USA_Patton_SAI_patton_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= patton_low_income_ego
+
+	[Ego]
+	IDS										= patton_main_game_ego
+
+	[Ego]
+	IDS										= patton_end_game_ego
+
+	[Ego]
+	IDS										= patton_end_game_ego_TK
+
+	[Ego]
+	IDS										= patton_end_game_ego_END
+
+	[Ego]
+	IDS										= patton_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= patton_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_usa
+	
+	[Faction]
+	ids										= patton
+} ;; jpn SAI

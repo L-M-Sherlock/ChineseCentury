@@ -1,0 +1,11 @@
+# START.TXT (runs after application is initialized)
+#
+# INITIALIZATION ORDER:
+# autoexec.txt		from working folder, this calls "adddepot"
+# Vars.TGI			files from the depots
+# Command Line		command line vars will clobber TGI file vars
+# UI creation		code
+# start.txt			from the depots, used to setup hotkeys
+# user.txt			from working folder, can clobber vars
+
+exechere Localization/Hotkeys/start.txt

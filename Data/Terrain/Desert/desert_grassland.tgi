@@ -1,0 +1,35 @@
+[Terrain template=Terrain]
+{
+	IDS = desert_grassland
+	name = "#desert_grassland_name"
+	
+	base_priority = 6000
+	terrain_group = desert
+	
+	doodad_frequency = 0.025
+	primary_doodad_frequency = 0.20
+
+	[Variation]
+	IDS = desert_grassland01
+	name = "#desert_grassland_01_name"
+	texture = DesertGrassland/DesertGrassland01.tga
+	texture_width = 16
+	texture_height = 16
+	terrain_color = 0.506, 0.565, 0.345
+	
+	[Variation]
+	IDS = desert_grassland02
+	name = "#desert_grassland_02_name"
+	texture = DesertGrassland/DesertGrassland02.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.526, 0.575, 0.335
+
+	[Variation]
+	IDS = desert_grassland03
+	name = "#desert_grassland_03_name"
+	texture = DesertGrassland/DesertGrassland03.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.516, 0.555, 0.355
+}

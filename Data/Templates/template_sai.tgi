@@ -1,0 +1,1824 @@
+;; SAI profile template
+;; KAD040303 - created
+
+;; For general powers, we sometimes need to screen actors that we would consider using the power on
+;;	(or near).
+[template GeneralPowerActorRequirements]
+{
+	;; The actor's health must be <= this.
+	fixed max_percent_health			= 100%
+
+	;; Engaged means either it is engaging something, or something is engaging it.  I don't 
+	;;	currently look at bombardment.
+	bool must_be_engaged				= false
+	bool must_not_be_engaged			= false	;; checks reverse engagement
+
+	;; Friendly includes owned units.
+	bool must_be_friendly				= false
+	bool must_be_enemy					= false
+	bool must_be_owned					= false
+
+	;; If more than one property is listed here, the actor only needs to match one of them.
+	[list RequiredProperty]
+	{
+		string ids
+	}
+
+	;; I include this here for convenience.  It's used in priority calculations, where certain
+	;;	types of actors will have different multipliers applied to them.
+	fixed multiplier					= 1
+}
+
+[template GeneralPower]
+{
+	;; The IDS of the ability
+	string ability_ids
+
+	[Location]
+	{
+		;; This can be NEAR_ACTOR, ON_ACTOR, or FOG.
+		string type
+
+		;; if the type is ON_ACTOR or NEAR_ACTOR, we start by getting a list of every actor on the
+		;;	map that matches these requirements.
+		[ActorRequirements template = GeneralPowerActorRequirements]
+
+		[Placement]
+		{
+			;; This is for powers that are type NEAR_ACTOR.  It will randomly select num_candidates
+			;;	random location within radius of each actor on the map that matches the actor
+			;;	requirements, then take the one that comes out to be highest priority (usually the 
+			;;	one where the power will affect the most stuff).
+			fixed radius				= -1
+			int num_candidates			= 3
+		}
+
+		;; For each candidate location, we may want to check that the location is in supply.  We 
+		;;	may also want to exclude locations if there are any actors that are friendly, enemy,
+		;;	or owned in the power's radius.  This uses the actual area given in the ability, not
+		;;	the placement radius specified above.
+		[GeneralRequirements]
+		{
+			bool no_friendly_actors		= false
+			bool no_enemy_actors		= false
+			bool no_owned_actors		= false
+
+			bool requires_supply		= false
+		}
+	}
+
+	;; Calculate the priority for each candidate location (regardless of type).
+	[Priority]
+	{
+		;; The base priority is used to select the order in which powers will be used (using the
+		;;	ping-pong ball squared method, see design).  It is also added on to the overall
+		;;	priority, so if you set a minimum take that into account.
+		fixed base						= 0
+		
+		;; You can set a minimum for the total priority.  If it is below that minimum, the power
+		;;	will not be used.
+		fixed minimum					= 0
+		
+		;; When selecting from among potential candidate locations, assuming we are above the 
+		;;	minimum we add on a random number between 0 and this value in order to provide some
+		;;	randomness.
+		fixed fuzzy_factor				= 100
+
+		;; The following factors are calculated independently and added together.  If any one of
+		;;	of them fails to meet its minimum, the general power is not used in that location.
+		;;	If a factor is irrelevant, just leave its multiplier set to 0.  The maximum is optional,
+		;;	set it to -1 to indicate no limit.
+
+		[CV]
+		{
+			;; We consider the CV of every actor that is in the radius of the power (or just the
+			;;	targetted actor if the type is ON_ACTOR).  
+
+			fixed minimum				= 0
+			fixed multiplier			= 0		;; used on actors who don't match any category
+			fixed maximum				= -1	;; negative indicates none
+
+			;; In order to make this go faster, we only look at actors whose kingdom matches the 
+			;;	following flags
+			bool consider_friendly		= false
+			bool consider_enemy			= false
+			bool consider_owned			= false
+
+			;; Because we want to apply different multipliers to the CV of actors depending on
+			;;	what type of actor they are (for instance, one multiplier for friendly and another
+			;;	for enemy), you can apply one or more categories here.  If you want to treat all 
+			;;	actors the same, just leave this list empty and define your parameters above.
+			[list Category template = GeneralPowerActorRequirements]
+		}
+
+		[ActorValue]
+		{
+			;; This functions more or less the same as the CV calculations above, except that it
+			;;	computes actor value.  It is appropriate when deciding whether or not to attack
+			;;	a building, but probably not the right thing to use for buffs or when looking at
+			;;	mobile actors.
+			fixed minimum				= 0
+			fixed multiplier			= 0		;; used on actors who don't match any category
+			fixed maximum				= -1	;; negative indicates none
+
+			bool consider_friendly		= false
+			bool consider_enemy			= false
+			bool consider_owned			= false
+
+			[list Category template = GeneralPowerActorRequirements]
+		}
+
+		[ActorEconomy]
+		{
+			;; This is intended for powers that disable enemy buildings temporarily.  Its value is
+			;;	the value of the economy provided by the targetted actor according to the SAI.  It
+			;;	should only be used if the type is ON_ACTOR.
+
+			fixed minimum				= 0
+			fixed multiplier			= 0		;; used on actors who don't match any category
+			fixed maximum				= -1	;; negative indicates none
+		}
+
+		[EnemyInfluence]
+		{
+			;; This is for powers that should be used where there is a lot of enemy strenght.  It
+			;;	doesn't say anything about friendly strength, so it can be used in conjunction with
+			;;	InfluenceRatio (below) to find large battles that are still undecided.  If you want
+			;;	an area with a low enemy influence, you can use a negative exponent (that's why that
+			;;	is there).  In that case you'll probably also want a multiplier and a max.
+
+			fixed minimum				= 0
+			fixed multiplier			= 0
+			fixed maximum				= -1	;; negative indicates none
+
+			fixed exponent				= 1		;; before multiplier or max
+		}
+
+		[InfluenceRatio]						;; friendly / enemy
+		{
+			;; This is friendly influence / enemy influence.  Often, we want to find areas where
+			;;	the value is close to one (that is, where friendly and enemy influence are about
+			;;	the same), as those tend to indicate high conflict areas where it is most beneficial
+			;;	to use things like buffs and debuffs.  In that case, you can set exponent_over_one
+			;;	to a negative value, but leave exponent_under_one positive.
+
+			fixed minimum				= 0
+			fixed multiplier			= 0
+			fixed maximum				= -1	;; negative indicates none
+
+			bool count_owned_only		= false	;; otherwise, count all friendly
+
+			fixed exponent_over_one		= 1		;; before multiplier or max
+			fixed exponent_under_one	= 1		;; before multiplier or max
+		}
+
+		[TimeSinceExplored]
+		{
+			;; This is intended for use on powers of type FOG.  It uses the amount of time since the
+			;;	region being targetted has been scouted.
+
+			fixed minimum				= 0
+			fixed multiplier			= 0
+			fixed maximum				= -1	;; negative indicates none
+		}
+		
+		[EconomyGenerated]						;; uses standard value for economy
+		{
+			;; If the power generates some economy (for instance, a power that gives you 100 money)
+			;;	then that should be specified here.  The SAI uses the standard economy rules to 
+			;;	determine the value of those resources.
+
+			fixed minimum				= 0
+			fixed multiplier			= 0
+
+			[list Resource]
+			{
+				string ids
+				fixed amount
+			}
+		}
+	}
+
+	[Followup]
+	{
+		;; In some cases, you want to follow a general power with an attack in the same location.
+		;;	The SAI will place an internal flare if the priority and duration are set to something
+		;;	other than 0.
+
+		fixed attack_flare_priority		= 0
+		fixed attack_flare_duration		= 0
+	}
+}
+
+;; used a number of places to turn things (like egos or templates) on and off.  For templates, 
+;;	instances_max gives the maximum number of them we can have.  1 is usually the right choice.
+;;	For stats, you can look in the scoring tgi (assuming that's exposed).  Some obvious ones are:
+;;		SETTLEMENTS_OWNED
+;;		gold_rate
+;;		
+[template Filters]
+{
+	fixed	instances_max						= 10000	;; ignored for egos
+
+	[list Item]
+	string stat
+	fixed min
+	fixed max
+} ;; FilterTemplate
+
+;; For each goal, we can set what formation it will be in when it moves.  Values are:
+;;		company_column
+;;		company_skirmish
+;;		company_combat
+[template FormationData]
+{
+	string goal_IDS
+	string unthreatened_formation
+	string threatened_formation	
+	string combat_formation
+} ;; FormationData
+
+;; These are the fields for each build item in a settlement template, along with priorities
+[template SettlementTemplateBuildItem]
+{
+	string IDS											;; the IDS of the building to build
+	fixed build_next_item_priority						;; the priority bonus to build that specific building when it's the next item in the template
+	fixed build_later_item_priority				= 0		;; the priority bonus to build that specific building when it's later in the template
+	fixed build_next_item_precursor_priority	= 0		;; the priority bonus to build a different building that can be upgraded to that specific building when it's the next item in the template
+	fixed build_later_item_precursor_priority	= 0		;; the priority bonus to build a different building that can be upgraded to that specific building when it's later in the template
+	fixed destroy_mismatch_priority				= 0		;; the priority to destroy buildings that don't match the template if needed in order to make room for this building
+	fixed upgrade_settlement_priority			= 0		;; the priority to upgrade the settlement in order to make room for this building
+} ;; SettlementTemplateBuildItem
+
+[template SettlementTemplate]
+{
+	string IDS
+	localized name 
+
+	[Filters template = Filters]
+
+	[Links]
+	string next_template						= null
+
+	[Priority]
+	fixed priority
+	fixed fuzziness								= 100
+	fixed inertia								= 250
+	fixed repeat_penalty						= 0
+	fixed mismatch_structure_cost_mult			= -0.2	;; the cost of a mismatched building is multiplied by this and added to priority.  Recommend a NEGATIVE value.
+	fixed match_structure_cost_mult				= 0.2	;; the cost of a matched building is multiplied by this and added to priority.  Recommend a POSITIVE value.
+	fixed enemy_influence_mult					= 0		;; the enemy influence is multiplied by this and added to the priority (so you can prefer settlements close to or far from the enemy)
+
+	[Recruiting]
+	fixed recruiting_preference					= 0		;; add to the priority for selecting this settlement when deciding where to recruit a company
+
+	[list TechPriority]									;; add to the priority for developing a particular technology here
+	{
+		string tech
+		fixed priority
+	}
+
+	[list Build template = SettlementTemplateBuildItem]
+} ;; SettlementTemplate
+
+;; Company templates didn't really work out as well as I intended, so I've moved away from using them.
+[template CompanyTemplateSlotItem]
+{
+	string IDS									= NULL	// use none to give a priority to keep the slot empty (or to indicate any if priority is 0).
+	fixed priority								= 7500
+} ;; CompanyTemplateSlotItem
+
+[template CompanyTemplate]
+{
+	string IDS
+	localized name 
+	string organization_IDS
+
+	[Filters template = Filters]
+
+	[Priority]
+	fixed desired_ratio									;; these should add up to be <= 1.
+	fixed fuzziness								= 0.1
+
+	[list Slot template = CompanyTemplateSlotItem]
+} ;; CompanyTemplate
+
+;; There are three exploration types - close (near your buildings), deep (far from your buildings) 
+;;	and air (A&A only).  These are the parameters and defaults for each.
+[template ExplorationTypeData]
+{
+	;; NOTE: this section reworked as of 6/1/04
+	
+	;; Step 1: Decide whether to explore.  This decision is fairly simple.  The priority of an 
+	;;	explore goal starts at a set base priority, and scales linearly to a minimum priority.  
+	;;	The scaling is based on the percent of regions in the current island which are completely
+	;;	explored (no black fog remaining).  This allows us to decrease the priority of the explore
+	;;	goal (or increase it if you set the minimum to be greater than the base, though that would
+	;;	be weird) as more and more of the map is successfully explored.  We also need to know the
+	;;	number of goals of this type to create, and what the repeat penalty should be if we have
+	;;	more than one goal.  The repeat penalty is applied before the scaling.  Finally, if there
+	;;	are any explore flares we apply the highest priority from them.
+	;;	TODO: Specify a flare priority here and apply each flare to exactly one explore goal.
+	;;	TODO: Don't reconsider region every think.
+	
+	int		num_goals
+	fixed	base_priority
+	fixed	repeat_penalty
+	fixed	min_priority
+	fixed	percent_to_count_region_explored	;; at least this percent of a region must be explored for us to count it as explored
+
+	;; Step 2: Pick actor(s)
+	;;	The ego specified the number of actors to assign to each explore goal.  There
+	;;	are a number of factors that go into the priority provided by each actor.  All
+	;;	are ADDITIVE, except for the last one (based on the number of actors assigned),
+	;;	which is multiplied by the total of the base priority (calculated above) and all
+	;;	the actor factors.
+
+	;;	- The movement rate of the slowest actor is added on
+
+	fixed	move_rate_mult						= 20
+	fixed	move_rate_exp						= 1
+
+	;;	- The sight radius of the best actor is added on
+
+	fixed	sight_mult							= 5
+	fixed	sight_exp							= 1
+
+	;;	- The CV.  Some egos may prefer this to be low, while others may want it to be
+	;;		high.  Different values can be given for close and deep goals.
+
+	bool	subtract_cv							= TRUE	;; if FALSE, then we add it
+	fixed	cv_mult								= 1
+	fixed	cv_exp								= 1
+
+	;; a bonus to keeping the same unit assigned as we used last time.
+	fixed	unit_inertia						= 20
+
+
+	;; Step 3: after the goal is selected an actor is assigned, pick an actual region.  In order to
+	;;	do that we generate a number of candidates.  Candidates are generated as follows:
+	;;		- the current region we're exploring is a candidate, and has some inertia.
+	;;		- the region where the assigned actor is located is a candidate, and can be given a 
+	;;			bonus.
+	;;		- any region that has an explore flare in it is a candidate, and the explore flare gives
+	;;			a bonus to selecting that region.
+	;;		- any region that has one of my buildings in it is a candidate (near goals only)
+	;;		- any region where there are unknown enemy buildings or unused markers that is within 
+	;;			some distance of one of my buildings has a random chance of being a candidate, and 
+	;;			can have a bonus applied to it based on the number of items (building or markers) 
+	;;			ther.  If this is a deep goal, there's no distance limit placed on this but the 
+	;;			bonus should be kept small.  The probability of counting such a region is called 
+	;;			the intuition_probability (because it mimics human intuition).
+	;;		- we generate a certain number of candidates at random from the regions on this island.
+
+	fixed	intuition_probability				= 1		;; 0 to 1
+	int		intuition_distance					= -1	;; in regions, negative means unlimited
+	bool	intuition_count_mines				= false
+	bool	intuition_count_settlement_spots	= true
+	bool	intuition_count_settlements			= true
+	bool	intuition_count_other_buildings		= false
+	int		num_random_candidates				= 10	;; be very careful increasing this, it uses a lot of CPU and can make it less likely to pick one of our good candidates.
+
+	;; Step 4: compute the priority for each candidate.  Start by looking for the closest region
+	;;	with black fog.  We will search out to the specified depth.  The base priority is determined
+	;;	by scaling from the grey fog priority (if no black fog is found) to the black fog priority
+	;;	(if the candidate has black fog).
+
+	fixed	black_fog_priority
+	fixed	grey_fog_priority
+	int		fog_search_depth
+
+	;;	Next, we can apply a bonus (or penalty) to each of the categories above.  The bonuses are
+	;;	additive.  If a bonus is 0, it will have no effect and if it's the only bonus for that 
+	;;	region the region won't be picked.
+
+	fixed	current_region_bonus
+	fixed	actor_region_bonus
+	fixed	building_region_bonus						;; ignored for deep goals
+	fixed	flare_region_bonus							;; this is used in place of the flare priority
+
+	fixed	intuition_region_bonus				= 100	;; the actual formula is bonus * num_items ^ exponent
+	fixed	intuition_region_exponent			= 0		;; <=0 means don't consider num_items
+
+	fixed	random_candidate_bonus				= 1
+
+	;;	Distance to the kingdom center.  This is base on the straight line distance, and involves
+	;;		several steps.
+	;;		- Compute the kingdom center by averaging the position of every building we 
+	;;			have owned for at least the minimum time specified.  There is a bool to
+	;;			control whether or not we consider buildings inside of settlements (if
+	;;			not, we just count the settlement center).
+	;;		- Don't even consider candidates that exceed the cap.
+	;;		- If it's greater than the max, set it to be equal to the max.
+	;;		- Compute the base multiplier: base_mult = (distance / max)
+	;;		- If we prefer the distance to be short take 1 - base_mult
+	;;		- apply the exponent: base_mult ^ exp
+	;;		- Compute the final multiplier: (base_mult * (ceiling - floor)) + floor
+	;;		- For some goals, we may invert the multiplier (because we prefer distant
+	;;			regions
+
+	bool	consider_distance_to_kingdom_center
+	fixed	kingdom_center_distance_cap			= -1	;; negative means no cap
+	fixed	kingdom_center_distance_max			= 400
+	fixed	kingdom_center_distance_exp			= 1
+	fixed	kingdom_center_distance_ceil		= 1
+	fixed	kingdom_center_distance_floor		= 0.7
+	bool	kingdom_center_distance_prefer_close
+
+	;;	- Distance to the last region.  If this goal was selected last think cycle, we apply
+	;;		the above calculations to the distance to the region used last time as well.  
+	;;		This will encourage close goals to pick new regions close to the old one, and
+	;;		deep goals to pick distant regions.
+
+	bool	consider_distance_to_last_region
+	fixed	last_region_distance_cap			= 100	;; negative means no cap
+	fixed	last_region_distance_max			= 100
+	fixed	last_region_distance_exp			= 1
+	fixed	last_region_distance_ceil			= 1
+	fixed	last_region_distance_floor			= 0.7
+	bool	last_region_distance_prefer_close
+
+	;;	Distance to actor.  If this is true, we apply the above calculations to the distance to the 
+	;;		actor.  Should probably be true for close and false for deep.
+
+	bool	consider_distance_to_actor
+	fixed	actor_distance_cap					= 100	;; negative means no cap
+	fixed	actor_distance_max					= 100
+	fixed	actor_distance_exp					= 1
+	fixed	actor_distance_ceil					= 1
+	fixed	actor_distance_floor				= 0.5
+	bool	actor_distance_prefer_close
+
+	;;	Time since we last looked at this region.  If the region has been fully explored then we
+	;;		modify its priority based on how long it's been since we had some white fog there. The
+	;;		percent white fog necessary to reset this timer can also be set.  This should probably
+	;;		be used in A&A but not K2.
+
+	bool	use_time_since_last_scouted
+	fixed	time_since_last_scouted_max			= 300
+	fixed	time_since_last_scouted_exp			= 1
+
+	;;	Finally, a fuzzy factor.
+
+	fixed	fuzzy_factor						= 200
+} ;; ExplorationTypeData
+
+;; Research is a long list of techs and priorities.  In order to simplify ego construction, I've 
+;;	pulled it out into its own template.
+[template SAIResearchTemplate]
+{
+	;; The core or research priority involves simply giving a base priority to each
+	;;	technology.  This defaults to the base priority, but you can also specify
+	;;	a priority for particular technologies (which overrides the base priority).
+	;;	Not yet implemented are the ability to assign priority based on the number
+	;;	of existing actors we have that this technology would improve, and also by
+	;;	the ActorPriority for actor types that this technology would improve.
+	fixed base_priority					= 100
+	
+	[list TechPriority]
+	{
+		string tech
+		fixed priority
+	} ;; TechPriority
+} ;; Research
+
+[template Ego]
+{
+	string IDS
+	localized name 
+	fixed priority								= 500
+
+	[Filters template = Filters]
+
+	;; This adjusts how much threat we attribute to enemy units outside of the region where they are
+	;;	currently located.  Influence reaches out to a travel distance of (roughly) however many
+	;;	seconds are specified.  The influence is the CV of the unit times distance / max_distance, 
+	;;	with the exponent applied.
+	[MapAnalysis]
+	fixed cv_influence_exponent					= 1.5	;; should be >= 1, if it is 1 it'll be linear
+	fixed cv_influence_max_travel_time			= 45
+	fixed border_influence_range				= 300	;; the distance out from a structure we should look for enemies to detect our border
+
+	[GoalEngine]
+	{
+		[GeneralSettings]
+		{
+			;; How often should the goal engine think?  Use MUCH CAUTION decreasing this, it can
+			;;	cause serious performance issues, especially on large maps with many AIs.
+			fixed think_frequency				= 25
+
+			;; Once the AI thinks, how long should it wait to send out its order.  Generally 0 
+			;;	unless you're trying to dumb down the AI for some reason.
+			fixed reaction_time					= 0
+			
+			;; Each goal gets a random priority boost from 0 to the fuzziness.  In addition, if we
+			;;	decided to perform the goal last time we thought, we apply the goal_inertia to
+			;;	continuing to apply it.
+			fixed fuzziness						= 200
+			fixed goal_inertia					= 250
+
+			;; If it has fewer settlements than this, and also the game time is less than this, then
+			;;	it will immediately rethink under certain situations:
+			;;		- whenever it builds anything
+			;;		- whenever it finishes recruiting a builder company (settler or engineer)
+			;;		- whenever it finds a settlement spot
+			int immediate_think_on_build_max_settlements	= 2
+			fixed immediate_think_on_build_max_time			= 600
+		}
+
+		;; For balancing - boost and lower the value of specified goals.  For any goal type, you
+		;;	can specify one or more of the following:
+		;;		- a multiplier
+		;;		- a bonus amount to be added in
+		;;		- a minimum value.  If it's under this, priority is set to 0.
+		;; NOTE: These are applied after base priority is calculated for the specific goal, but 
+		;;	before the fuzzy factor or inertia are applied.  Also, they are applied only if the
+		;;	goal's base priority is already > 0.
+		;; ALSO NOTE: Adjusting these can be very finicky.  I'd recommend going with what's in the
+		;;	example AI or making small, careful changes.  Much of the work in tweaking an AI can
+		;;	be done here, but it has to be done carefully.
+		;;
+		;; kad080604 - new features:
+		;;		- custom fuzzy factors and goal inertia for some goals.  If these are < 0, the
+		;;			setting for the ego is used (defined above).
+		;;		- preferred actors: a list of actor ids's and/or actor properties that give a bonus
+		;;			(or penalty) when applied to this goal type.  Useful to customize what actor
+		;;			types are preferred for attack, defend, and explore.  Not recommended for other
+		;;			goal types at this time.
+		[list GoalPriority]
+		{
+			string goal_IDS
+			fixed multiplier							= 1
+			fixed bonus									= 0
+			fixed minimum								= 0
+
+			fixed fuzziness								= -1	;; if < 0, use default (above)
+			fixed inertia								= -1	;; if < 0, use default (above)
+
+			[list ActorPreference]
+			{
+				string property_IDS						= null	;; must specify exactly 1 of these 2.
+				string actor_IDS						= null
+
+				fixed value								= 0		;; additive
+				bool count_value_once_per_company		= true	;; if false we count it once for each matching actor in the company
+
+				fixed multiplier						= 1		;; to overall goal priority
+				bool count_multiplier_once_per_goal		= true	;; if false, we apply it for each company or actor, depending on the next value
+				bool count_multiplier_once_per_company	= true	;; ignored if count_multiplier_once_per_goal is true
+			}
+		}
+
+		;; Evaluate the production and consumption of resources for actors we're
+		;;	considering creating. 
+		[ResourceManagement]
+		{
+			;; how long will we save up resources to fill a big goal
+			fixed saving_time_limit						= 180
+
+			;; How much do we reserve for building settlements, and how long into the game to we
+			;;	continue to do so?  This will only hurt A&A, so turning it off here.
+			fixed settlement_reserved_resources_amt				= 0
+			fixed settlement_reserved_resources_time			= 0
+			int settlement_reserved_resources_max_settlements	= 0
+
+			;; determine how the actor's production will affect our economic situation
+			fixed stockpilable_short_need				= 50	;; if our kingdom's income is below 0, we generate this much need per point of resource
+			fixed stockpilable_enough_need				= 25	;; if our kingdom's income is between 0 and stockpilable_plenty_value, we generate this much need per point of resource
+			fixed stockpilable_plenty_value				= 0		;; if our income is over this, we're considered to have plenty.  If 0, we never have plenty.
+			fixed stockpilable_plenty_need				= 25	;; if our kingdom has plenty, we generate this much need per point of resource
+
+			fixed other_short_need						= 0	;; same as above but for non-stockpilable resources
+			fixed other_enough_need						= 10
+			fixed other_plenty_value					= 10
+			fixed other_plenty_need						= 1
+
+			[list ResourceNeed]
+			{
+				string resource_IDS
+				fixed short_need
+				fixed enough_need
+				fixed plenty_value
+				fixed plenty_need
+			}
+		} ;; ResourceManagement
+
+		;; we give a bonus to creating actors that consume a non-stockpliable resource 
+		;;	which we have a large excess of.  For any non-stockpilable, if our income 
+		;;	exceeds the income (and if the actor doesn't consume any other resources we're 
+		;;	short of) then we apply the bonus.
+		;; NOTE: this will get funky if bonus ever decreases when quantity increases, so
+		;;	don't do that.
+
+		[list EconomicExcess]
+		{
+			fixed quantity
+			fixed bonus
+		}
+
+		;; Decide how much we value an actor - used in most every goal one way or another.
+		[ActorValue]
+		{
+			;; multiplied last, to let us scale this whole thing
+			fixed scaling_mult					= 0.3
+
+			;; values for specified components
+			[list ComponentValue]
+			{
+				string component_IDS
+				fixed value
+				bool new_construction_only		= false	;; only count if building something new
+			}
+
+			;; influence
+			;; The economic value of an actor is reduced by the strength of the enemy's
+			;;	influence in the location compared to ours.  This is only applied to static
+			;;	actors, as dynamic actors can move to a safer location, so they are presumably
+			;;	there for a good reason.  The formula for this is as follows:
+			;;
+			;;	((1 - ((enemy_cv * enemy_influence_mult) / friendly_cv)) ^ influence_exponent)
+			;;
+			;;	we also keep a minimum value which we use when the enemy influence is really
+			;;	high.  The minimum is applied before the exponent, to prevent sign changing or
+			;;	imaginary numbers.  For actors with a negative economic value, we take 1 / this 
+			;;	factor in order to get an appropriate result.
+			fixed enemy_influence_mult			= 0.5	;; smaller number means more aggressive - we value actors higher in areas of enemy influence more
+			fixed min_influence_factor			= 0.5
+			fixed influence_exponent			= 2
+
+			;; Military value is based on CV.  For static actors, there's a complicated formula
+			;;	based on what they protect and how well they protect it.  For dynamic actors,
+			;;	we just use a multiplier (given below) times the CV, and then apply the military
+			;;	value scaling multiplier (below)
+			fixed military_cv_mult				= 5
+
+			;; All military values have this multiplier applied to them, to let us scale this 
+			;;	this portion of the actor value as appropriate.
+			fixed military_value_scaling_mult	= 1
+
+			;; When computing the value of a static military actor (such as an outpost) we look at
+			;;	the following factors, in the order listed.
+			
+			;; Our first task is to determine the influence ratio.  This is EnemyCV / MyCV, and is
+			;;	applied to most (but not all) of the later considerations.  If the influence ratio
+			;;	is less than the minimum, then it is set to 0 (because there isn't enough enemy
+			;;	influence to justify building a defense).  If it is over the maximum and we are
+			;;	considering building a NEW actor, then it is set to 0 (because the enemy is too
+			;;	powerful and we would just lose our building).  If it is over the max but the 
+			;;	building already exists, then we set it to the max in order to keep the final
+			;;	values from becoming too great.  Finally, after we've applied min and max we apply
+			;;	an exponent to make the multiplier more (or less) extreme.
+			fixed military_value_influence_ratio_min			= 0.5
+			fixed military_value_influence_ratio_max			= 2
+			fixed military_value_influence_ratio_exponent		= 2
+
+			;; Next we determine how far away a defensive structure can be and still be considered
+			;;	to be defending a building.  In general this should be between 0 and 1, and is a 
+			;;	percentage of the structures guard radius.
+			;; Once we've determined that a building is within range of the defender, the value
+			;;	added on is equal to the economic value of the building times the influence ratio.
+			fixed military_value_radius_mult					= 0.6
+
+			;; Another consideration that gets added on to a defensive structure's military value is
+			;;	whether it defends an unused marker.  In principal we might want to distinguish 
+			;;	between settlement markers and other markers (because this is even more valuable for
+			;;	settlement markers), but in practice I'm not currently doing that.  For each marker
+			;;	that is not currently built on, and is within the radius I computed in the last 
+			;;	step, we add on the marker value times the influence ratio.
+			fixed military_value_marker_value					= 200
+
+			;; We also might want to build defensive structures in areas with high enemy traffic.
+			;;	For each enemy unit that has LEFT the region we are considering building in (but
+			;;	not for the ones currently there) we add on the following value.  The influence
+			;;	ratio is not applied in this case.  I'm not totally sure this is a good idea, but 
+			;;	it's easy to turn it off by setting it to 0.
+			fixed military_value_enemy_traffic_value			= 20
+
+			;; Finally, we look for bottlenecks.  Bottlenecks are regions which have to be traversed
+			;;	in order to move between two of their adjacent regions.  If the region we are in is
+			;;	a bottleneck, we add this value multiplied by the influence ratio.
+			fixed military_value_bottleneck_value				= 200
+
+			;; Putting military value aside, actor value can also be affected by the distance from
+			;;	the actor to the kingdom center.  For actors where this is applied, we take the
+			;;	ratio of this straight line distance to the max straight line distance on the map.
+			;;	We then normalize this value to lie between the following min and max.
+			fixed distance_mult_min								= 0.01
+			fixed distance_mult_max								= 1.0
+		} ;; ActorValue
+
+		;; This is used to determine how much CV we will apply to an attack or defend goal.  
+		;;	The advantage referred to is the strength of the actual forces we are applying 
+		;;	(*not* our influence) / enemy influence in the region.  For defend goals, we don't 
+		;;	count the enemy's static influence.  The result is applied as a multiplier to the 
+		;;	value of the juiciest target there in the region (though I may change that to be 
+		;;	the sum of the values of all targets).
+		;; NOTE: with the implementation of linked attack and defend goals, attack and defend
+		;;	goals will include the CV assigned to other goals with nearby targets in their 
+		;;	total.
+		;; NOTE: this is also used in computing the actor value of a static actor that has
+		;;	CV.
+		;; NOTE: By setting cv_max_mult_over_target to 0.5 the SAI will be able to attack
+		;;	multiple targets at the same time
+		[OffensiveCV]
+		{
+			;; effect of cv
+			fixed cv_advantage_target			= 1		;; priority drops exponentially if we're below this, goes up linearly if above (was 2)
+			fixed cv_advantage_max				= 5			;; CV over this is irrelevant
+			fixed cv_exponent_under_target		= 4			;; the exponent used if under target cv
+			fixed cv_max_mult_over_target		= 15		;; the maximum bonus to priority if over target cv
+
+			;; the minimum cv we should assign to any defense or offense (regardless of enemy strength)
+			fixed min_cv_to_assign				= 50		;; this should NEVER NEVER be zero (or less than zero).
+			
+			;; if our kingdom has no primary supply anyway, all of a sudden attacking even under 
+			;;	strength makes a lot more sense.  In order to make that happen, we apply this bonus 
+			;;	AFTER THE CURVE in that situation
+			fixed no_primary_supply_bonus		= 500
+		} ;; OffensiveCV
+
+		[DefensiveCV]
+		{
+			;; effect of cv
+			fixed cv_advantage_target			= 2			;; priority drops exponentially if we're below this, goes up linearly if above
+			fixed cv_advantage_max				= 10		;; CV over this is irrelevant
+			fixed cv_exponent_under_target		= 1.5		;; the exponent used if under target cv
+			fixed cv_max_mult_over_target		= 4			;; the maximum bonus to priority if over target cv
+
+			;; the minimum cv we should assign to any defense or offense (regardless of enemy strength)
+			fixed min_cv_to_assign				= 75		;; this should NEVER NEVER be zero (or less than zero).
+			
+			;; should we cound CV from buildings
+			bool count_static_cv				= true
+		} ;; DefensiveCV
+
+		;; TODO: put in values for a CV curve for assigning defenders to a construct goal.  For now
+		;;	it uses the attack curve but ignores min_cv_to_assign.
+		[DefendConstructGoalCV]
+		{
+			;; turn this feature on or off completely
+			bool disable_construct_goal_defense	= false
+		}
+
+		;; This is applied as a modifier to the value of every goal that involved travel
+		[TravelTime]
+		{
+			fixed max_travel_time				= 300
+			fixed travel_time_exponent			= 2		;; should be >= 1, if it is 1 it'll be linear
+		} ;; TravelTime
+
+		;; these bonuses are applied to building, constructing, or recruiting matching actors.
+		[list ActorPriority]
+		{
+			string property_IDS					= null	;; must specify exactly 1 of these 2.
+			string actor_IDS					= null
+			
+			;; If this is a property and this flag is set to true, we count all actors with the 
+			;;	property toward the repeat penalty.  Otherwise, we count only actors with the same
+			;;	actor data.
+			bool count_all_property_actors		= true
+
+			fixed value							= 0
+			fixed repeat_penalty				= 0
+			
+			;; This last field tells us the maximum number OF A SPECIFIC ACTOR TYPE we can build in
+			;;	one think cycle.  It was implemented for mobile buildings, so that we can limit it
+			;;	to building one or two of each type per think (so one ammo depot, one oil depot, 
+			;;	and one HQ is fine - but 5 ammo depots is not).  We may want to use it for other
+			;;	unit types, however.  The default for this value is default_max_recruited_per_think,
+			;;	defined below.
+			int max_recruited_per_think			= 0		;; 0 indicates unlimited
+			
+			;; One time bonus applies a bonus to this item if we don't have any of them currently.
+			fixed one_time_bonus				= 0
+		} ;; ActorPriority
+		
+		;; see comment in ActorPriority (above)
+		int default_max_recruited_per_think		= 1		;; 0 indicates unlimited
+		
+		;; This controls the number of items we can have queued at one time.  In K2 it's not an
+		;;	issue, since recruiting is immediate (research is not as large of a concern).  In A&A,
+		;;	however, we don't want to get too far ahead of ourselves - especially since it will 
+		;;	cause us to account for costs incorrectly.
+		int build_queue_max_items				= 2		;; 0 indicates unlimited
+		
+		[Combat]
+		{
+			;; kad051904 - I'm reworking the priority for the defend goal.  It was previously based
+			;;	solely on the economic value of the juiciest building in the region.  I'm changing
+			;;	it to include the enemy influence, friendly and enemy border influence, a bonus if
+			;;	there are enemy units nearby, and a bonus if the ratio of enemy : friendly influence
+			;;	is very high (because of the risk of capture).  Each factor can have a multiplier 
+			;;	and an exponent applied before they are added together.  The exponent will be 
+			;;	applied before the multiplier.
+			[DefendPriority]
+			{
+				fixed economic_value_exponent				= 0.5
+				fixed economic_value_multiplier				= 2
+
+				fixed enemy_influence_exponent				= 1
+				fixed enemy_influence_multiplier			= .5
+
+				fixed friendly_border_influence_exponent	= 1		;; this is probably a bad idea.
+				fixed friendly_border_influence_multiplier	= 0		;; negative so it will decrease priority
+
+				fixed enemy_border_influence_exponent		= 1
+				fixed enemy_border_influence_multiplier		= .2
+
+				fixed enemy_forces_threat_distance			= 80
+				fixed enemy_forces_bonus					= 3		;; NOTE: actually a multiplier
+
+				fixed capture_risk_ratio					= 1		;; enemy influence / friendly influence
+				fixed capture_risk_bonus					= 2		;; NOTE: actually a multiplier
+			}
+
+			[Teamwork]
+			{
+				;; kad072804 - allied AIs need to exhibit some teamwork.  With the player this is done
+				;;	using team commands, but with other AIs that's excessively clunky.  Instead, we
+				;;	use the following modifiers to coordinate attack and defense.
+				
+				;; First, we consider defending friendly actors that belong to other kingdoms.  However
+				;;	the priority for defending such actors is modified by this multiplier
+				fixed defend_friendly_kingdom_actor_multiplier	= 0.2
+				
+				;; Second, when we're attacking a region we look for friendly AIs that have 
+				;;	influence in the same region.  If we find any, we add their influence, 
+				;;	modified by this multiplier, onto our CV.  Depending on how the flag is 
+				;;	set, we may allow this to go over the max_multiplier, so that we can still 
+				;;	attack with full strength (but at higher overall priority).
+				fixed attack_allied_influence_cv_multiplier		= 0.5	;; between 0 and 1 please
+				flag attack_allied_influence_cv_can_exceed_max	= true
+				
+				;; Finally, when defending a region we look for friendly AIs that have a selected 
+				;;	defend goal for the region, and treat the assigned CV the same as we did for
+				;;	attack goals
+				fixed defend_allied_influence_cv_multiplier		= 0.2	;; between 0 and 1 please
+				flag defend_allied_influence_cv_can_exceed_max	= true
+			}
+
+			;; Sometimes there will be several objects that need to be attacked or defended 
+			;;	placed in separate regions but in close proximity to each other.  This is 
+			;;	common in A&A, where we can have a number of buildings placed near each other.  
+			;;	In order to avoid placing far more defensive forces then we actually need, we
+			;;	link the attack and defend goals for regions that are close to each other - 
+			;;	that is, ubits assigned to one count for both.  This parameter tells us how 
+			;;	many regions away two regions can be and still have their combat goals linked.
+			int	linked_region_distance			= 2
+
+			;; we need a way to determine how many static defenses to build around any economic 
+			;;	structure (settlement, mine, etc.).  The total static defensive cv we will want
+			;;	in the region is the defensive priority of the region * this multiplier + 
+			;;	min_defensive_cv (above).  We then use this as the target CV and determine 
+			;;	priority the same as we would for a defend region goal (by using cv_advantage_max, 
+			;;	cv_exponent_under_target, and cv_max_mult_over_target).
+			;; NOTE: this is not currently supported.
+			fixed static_defensive_cv_mult		= 0.5
+
+			;; If we select a defend goal for a particular region, this specified how many
+			;;	regions away we will allow defenders assigned to that goal to be placed.
+			int max_defense_depth				= 3
+			
+			;; Actors need to be able to commit to and lock on to attack goals.  However, this 
+			;;	is only appropriate when we are reasonably close to the target.  So we commit
+			;;	to an attack goal if we are no more than this many regions away
+			int attack_commit_distance			= 3 ;; regions
+
+			;; For offensive goals, we give a penalty to the goal's priority based on the congruency
+			;;	of the assigned actors.  First we compute the avg dot product between the vector 
+			;;	from each attacking actor to the target and the average of all those vectors.  That
+			;;	value is the average congruency.  We then calculate the multiplier like this:
+			;;
+			;;	multiplier = min_mult + pow(avg_dot_product, power) * (1 - min_mult);
+			fixed congruency_min_multiplier		= 0.6
+			fixed congruency_power				= 3
+
+			;; We apply this penalty to the CV of units that have a builder when we are considering
+			;;	applying them to an attack or defend goal.  This should help discourage us from 
+			;;	using them in combat when there are other goals that need them.  Given as a percent.
+			fixed penalty_to_builder_cv			= 0.3
+
+			;; We need a way to account for the strength that walls provide to a settlement, so that
+			;;	the SAI will attack with sufficient strength.  So, for each settlement level there
+			;;	is a base value.  In addition, some nations may have stronger walls than others,
+			;;	so we provide an optional multiplier.  If the base value is not defined for a 
+			;;	particular settlement level, we take the value for the next lower level.  Because
+			;;	of this, you must at least define it for level 0.
+			[WallStrength]
+			{
+				[list SettlementLevel]
+				{
+					int level
+					fixed value
+				}
+
+;;				[list NationMultiplier]
+;;				{
+;;					string nation
+;;					fixed value
+;;				}
+			}
+
+			;; The SAI needs to be able to account for the value of using different types of units
+			;;	together.  For example, ranged units are more effective if they have strong 
+			;;	defensive units with them to protect them from their enemies.  Siege units are not
+			;;	all that great on their own, but when used as part of an attack force against enemy
+			;;	walls they are extremely useful.  
+			;; When considering the CV of a group of units, we first multiply the overall CV by the 
+			;;	base multiplier.  We than calculate what percent of that CV is provided by elements
+			;;	with each property.  For each property that appears on the list, if the percent of
+			;;	CV provided by that multiplier is at least the max_percent, we apply the 
+			;;	max_multiplier.  If it is less than that, we scale the max_multiplier linearly.
+			;; Ideally, base_multiplier * max_multiplier should be 1 for most properties, although
+			;;	there might be a few (such as sieging) where it is less that 1.
+			;; This is computed at the level of individual elements, not companies, and it needs to
+			;;	take into account which actors are currently alive (regardless of health).
+			[CombinedArmsGeneral]
+			{
+				fixed base_multiplier			= 1
+
+				[list Element]
+				{
+					string property
+					fixed max_percent
+					fixed max_multiplier
+				}
+			}
+
+			[CombinedArmsWalls]
+			{
+				fixed base_multiplier			= 1
+				
+				[list Element]
+				{
+					string property
+					fixed max_percent
+					fixed max_multiplier
+				}
+			}
+			
+			;; Air attacks have some special parameters.
+			;; First, there are three conditions under which we would give a bonus (multiplier) to
+			;;	an attack goal.  They are:
+			;;		- if the target is engaged by enemies
+			;;		- if the targets % health is between the specified floor and ceiling
+			;;		- it the target's region is the target of a selected attack goal
+			;; Second, there is an absolute min health parameter.  For targets under this, we have
+			;;	one bonus if they're engaged, and a second bonus if they are not engaged.  The idea
+			;;	is, if they're engaged then we want to let the ground units handle them (they'll be
+			;;	dead before the planes arrive) but if they're not engaged then they're optimal
+			;;	targets to finish off.
+			;; Third, we have a multiplier for targets that are resupplying.  In general these make
+			;;	lousy targets because they heal faster than we can kill them.
+			;; Fourth, if none of those bonuses apply then there is a penalty multiplier (0 is a
+			;;	very valid option).
+			;; Fifth, there is a time limit.  Once we send an attack against a particular target, 
+			;;	we can't send another until the limit expires.
+			;; Sixth, we have to decide how many planes to send.  I hacked in a pretty lame formula,
+			;;	but it should get the job done.  The formula looks like this:
+			;;		(max_multiplier - (max_multiplier - 1) * (KF32)pow(per_plane, count - 1))
+			;;	max_multiplier and per_plane are specified here.
+			[AirAttacks]
+			{
+				fixed engaged_bonus							= 2
+				
+				fixed target_damage_floor					= 0.5
+				fixed target_damage_ceiling					= 0.8
+				fixed target_damage_bonus					= 2
+				
+				fixed support_ground_attack_bonus			= 2
+				
+				fixed no_bonus_penalty						= 0
+				
+				fixed absolute_min_health					= 0.3
+				fixed absolute_min_health_engaged_mult		= 0
+				fixed absolute_min_health_unengaged_mult	= 5
+				
+				fixed resupplying_mult						= 0
+				
+				fixed min_time_between_attacks				= 150
+				
+				fixed extra_planes_multiplier_max			= 2
+				fixed extra_planes_multiplier_per_plane		= 0.5
+			}
+			
+			;; Another special type of attack is the bombard attack.  There only need a couple
+			;;	special modifiers.  In general, here is how they work:
+			;;		- The priority to bombard is the attack priority for the target.
+			;;		- If there is no attack planned for the target's region, and the target is 
+			;;			unengaged, then reduce priority dramatically.
+			;;		- Attack flares can also encourage bombarding.
+			;;		- The priority for each actor place on the goal is:
+			;;			base_priority * (CV / balancing_constant)
+			;;		- Bombarders do not move to bombard - they will only fire on targets that are 
+			;;			already in range.
+			[Bombardement]
+			{
+				fixed unengaged_target_multiplier			= 0.1
+				fixed balancing_constant					= 0.001
+			}
+		}
+
+		[Exploration]
+		{
+			bool	kingdom_center_count_settlement_bldgs	= true
+			fixed	kingdom_center_min_time_owned			= 120
+
+			[CloseGoals template = ExplorationTypeData]
+			{
+				num_goals										;; specify in game-specific template
+				base_priority							= 200
+				repeat_penalty							= 0
+				min_priority							= 0
+				percent_to_count_region_explored		= 0.8
+
+				black_fog_priority						= 500
+				grey_fog_priority						= 100
+				fog_search_depth						= 3
+
+				current_region_bonus					= 200
+				actor_region_bonus						= 100
+				building_region_bonus					= 50
+				flare_region_bonus						= 1000
+
+				intuition_region_bonus					= 100
+				intuition_region_exponent				= 0
+				intuition_probability					= 1
+				intuition_distance						= -1
+				intuition_count_mines					= false
+				intuition_count_settlement_spots		= true
+				intuition_count_settlements				= false
+				intuition_count_other_buildings			= false
+
+				consider_distance_to_kingdom_center		= true
+				kingdom_center_distance_prefer_close	= true
+
+				consider_distance_to_last_region		= true
+				last_region_distance_prefer_close		= true
+
+				consider_distance_to_actor				= true
+				actor_distance_prefer_close				= true
+
+				use_time_since_last_scouted						;; specify in game-specific template
+			} ;; CloseGoals
+
+			[DeepGoals template = ExplorationTypeData]
+			{
+				num_goals										;; specify in game-specific template
+				base_priority							= 200
+				repeat_penalty							= 0
+				min_priority							= 100
+				percent_to_count_region_explored		= 0.8
+
+				black_fog_priority						= 500
+				grey_fog_priority						= 100
+				fog_search_depth						= 3
+
+				current_region_bonus					= 0
+				actor_region_bonus						= 0
+				building_region_bonus					= 0
+				flare_region_bonus						= 1000
+
+				intuition_region_bonus					= 100
+				intuition_region_exponent				= 0
+				intuition_probability					= 1
+				intuition_distance						= -1
+				intuition_count_mines					= false
+				intuition_count_settlement_spots		= false
+				intuition_count_settlements				= true
+				intuition_count_other_buildings			= true
+
+				consider_distance_to_kingdom_center		= true
+				kingdom_center_distance_prefer_close	= false
+
+				consider_distance_to_last_region		= false
+				last_region_distance_prefer_close		= false
+
+				consider_distance_to_actor				= true
+				actor_distance_prefer_close				= false
+
+				use_time_since_last_scouted						;; specify in game-specific template
+			} ;; DeepGoals
+
+			[AirReconGoals template = ExplorationTypeData]
+			{
+				num_goals										;; specify in game-specific template
+				base_priority							= 150
+				repeat_penalty							= 50
+				min_priority							= 0
+				percent_to_count_region_explored		= 0.8
+
+				black_fog_priority						= 500
+				grey_fog_priority						= 100
+				fog_search_depth						= 3
+
+				current_region_bonus					= -200
+				actor_region_bonus						= -200
+				building_region_bonus					= -200
+				flare_region_bonus						= 200
+
+				intuition_region_bonus					= 100
+				intuition_region_exponent				= 0
+				intuition_probability					= 1
+				intuition_distance						= -1
+				intuition_count_mines					= false
+				intuition_count_settlement_spots		= false
+				intuition_count_settlements				= false
+				intuition_count_other_buildings			= true
+
+				consider_distance_to_kingdom_center		= true
+				kingdom_center_distance_prefer_close	= false
+
+				consider_distance_to_last_region		= true
+				last_region_distance_prefer_close		= false
+
+				consider_distance_to_actor				= false
+				actor_distance_prefer_close				= false
+
+				use_time_since_last_scouted						;; specify in game-specific template
+			} ;; AirReconGoals
+		} ;; Exploration
+
+		[Construction]
+		{
+			;; Priority of construct and repair goals - construct_max_multiplier is the max amount 
+			;;	you can multiply the base repair priority by if you assign extra units.  Roughly 
+			;;	equivalent to cv_max_mult_over_target.
+			fixed construct_max_multiplier				= 1
+
+			;; Goals that are actually in progress should have this bonus to their priority - in
+			;;	general it looks really bad to stop half way through building something.  This is
+			;;	currently only applied to new construction.
+			fixed construct_in_progress_bonus			= 2000
+
+			;; Military buildings in city zones get a bonus.  That based on the total number of 
+			;;	friendly military buildings in the zone (including the one to be built):
+			;;		priority += max_bonus * ((1 / num_buildings) ^ exponent)
+			fixed construct_city_defense_max_bonus		= 200
+			fixed construct_city_defense_exponent		= 1
+
+			;; We like to build military buildings in supply zones, because those are indicative
+			;;	of places we need to defend.
+			fixed construct_supply_defense_bonus		= 400
+			
+			;; In A&A I want to make sure defenders are placed in our cities and bases.  Therefor,
+			;;	two requirements:
+			;;	1) Only construct in supply
+			;;	2) Only construct in regions where there is are buildings to defend.  Four bools
+			;;		define this:
+			;;		a) we can allow construction in all regions (in which case the following two are
+			;;			ignored, but we still respect construct_in_supply_only)
+			;;		b) we can defend things that can research
+			;;		c) we can defend things that can recruit
+			;;		d) we can defend things that have city components
+			bool construct_in_supply_only				= false
+			bool construct_in_all_regions				= true
+			bool construct_to_defend_research			= true
+			bool construct_to_defend_recruiters			= true
+			bool construct_to_defend_cities				= false
+		} ;; Construction
+
+		[Unpacking]
+		{
+			;; Priority and region selection parameters for unpack goals, which are used for
+			;;	mobile buildings (like we have in A&A).
+
+			;; We look at all adjacent regions out to the specified depth, plus some additional
+			;;	regions selected at random from the current island.
+			int adjacent_region_depth					= 1
+			int num_random_regions						= 20
+			
+			;; priority is just a const for these goals - probably want it to be big enough 
+			;;	that the actors won't be used in combat
+			fixed base_priority							= 500
+			
+			;; when selecting a region, we consider six factors: whether there is room for
+			;;	the building, the amount of enemy influence, proximity to friendly buildings
+			;;	already in place, travel distance, a fuzzy factor, and an inertia for the 
+			;;	currently selected region
+			
+			;; enemy influence - subtracted off value
+			;; TODO: we have some buildings that we want to be close to the enemy, but not TOO 
+			;;	close.  Need to find a way to support that.
+			fixed enemy_static_influence_mult			= 3
+			fixed enemy_dynamic_influence_mult			= 3
+			
+			;; friendly buildings nearby - computed per building and added to value, so the more 
+			;;	nearby buildings we have, the greater this bonus can be.
+			;;	formula: max_friendly_building_bonus * ((distance / max_distance) ^ distance_exponent)
+			fixed max_friendly_building_bonus				= 500
+			fixed max_friendly_building_bonus_per_building	= 200
+			fixed max_distance								= 30	;; in meters, but we use a very rough estimate of distance based on region centers
+			fixed distance_exponent							= 1
+			
+			;; travel distance - subtracted off value
+			;;	formula: (distance * travel_distance_mult) ^ travel_distance_exponent
+			fixed travel_distance_mult			= 5
+			fixed travel_distance_exponent		= 1
+			
+			;; fuzzy factor & inertia
+			fixed fuzzy_factor					= 150
+			fixed inertia						= 300
+		} ;; Unpacking
+
+		;; Currently the only time we pack is when we're out of supply and need to move back into
+		;;	supply.  We just have a flat priority for that.
+		[Packing]
+		{
+			fixed pack_out_of_supply_priority	= 20000
+		}
+
+		;; used to decide when to recover from damage
+		;; formula: base_priority * ((1 - percent_health) ^ exponent)
+		;; an actor will never switch to a recover goal unless its % health is below max_health
+		[Recover]
+		{
+			fixed base_priority_hp				= 500
+			fixed exponent_hp					= 3
+			fixed max_hp						= 0.4
+			fixed base_priority_morale			= 500
+			fixed exponent_morale				= 3
+			fixed max_morale					= 0.5
+			
+			;; There are a couple cases where we wouldn't normally try to recover (like if there's
+			;;	no supply left, or if our supplier came under attack) where we will if our morale
+			;;	is critical.  The value of "critical" is defined here.
+			fixed critical_morale				= 0.3
+		} ;; Recover
+
+		;; used when the SAI designs a company
+		[Recruiting]
+		{
+			;; We limit the number of recruit goals per think because they only reason about their own
+			;;	effect on the kingdom's economy, not that of other recruit goals.
+			int max_goals_per_think				= 1		;; < 0 indicates unlimited
+			
+			;; We generate this many military recruit goals each think cycle.  Must be greater than
+			;;	0.
+			int num_military_goals				= 1
+			
+			;; We may not recruit settlers when all settlement spots are settled, or even when they
+			;;	all have camps on them.  Toggle those checks on and off here.
+			bool recruit_settlers_when_all_camped	= true
+			bool recruit_settlers_when_all_settled	= false
+			
+			;; These values are used to select what we're recruiting
+			fixed core_cv_multiplier			= 3		;; Multiply CV by this if it's for a military goal.
+			fixed core_cv_ratio_multiplier		= 0		;; Multiply CV / cost by this if it's for a military goal.
+
+			fixed support_cv_multiplier			= 3		;; Multiply CV by this if it's for a non-military goal.
+			fixed support_cv_ratio_multiplier	= 0		;; Multiply CV / cost by this if it's for a non-military goal.
+
+			;; Recruit preferences are used to specify which other units a particular unit likes or does not
+			;;	like to be with.  So for instance there may be an ego that likes to pair swordsman and mages.
+			;;	Or, there may be one that doesn't like archers and crossbowman to be in the same company.  When
+			;;	the SAI is considering adding a particular unit, it will check the existing units in the 
+			;;	company against the new unit, and also check the new unit against th existing units.  That means
+			;;	that you only have to define the preference one way (so if mages like swordsman then swordsman
+			;;	don't have to also like mages).  If it is defined both ways it will be double counted.
+			;; NOTE: These are also used in hero assignment.
+			[list RecruitPreference]
+			{
+				string unit_ids			;; the first unit
+
+				[list Match]			;; a list of units it likes or dislikes, and how strong that preference is
+				{
+					string unit_ids		;; the second unit
+					fixed priority		;; positive means likes, negative means dislikes
+				}
+			} ;; RecruitPreference
+
+			fixed economic_value_multiplier		= 0.2	;; multiply the economic value by this to balance it
+			fixed decreased_income_penalty		= 20	;; if we would decrease the economy, apply this
+			fixed insufficient_income_level		= 40	;; if recruiting would drive our economy below this level, apply the following penalty
+			fixed insufficient_income_penalty	= 350
+
+			fixed matching_builder_bonus		= 500	;; Added for each builder component that matches what we need.
+			fixed mismatching_builder_penalty	= 500	;; Subtracted off for each builder component that doesn't match what we need.
+			fixed empty_slot_value				= 0		;; When we're looking to fill a non-required slot in an organization, this is the priority for leaving it empty.  If it is less than 0, we won't ever leave slots empty, if it is equal to 0 we still might.  Currently the fuzzy factor is not added to this, though I can change that if it's wrong.
+			fixed candidate_fuzziness			= 50
+
+			;; These values are used to select the location where we're recruiting it.  If you 
+			;;	set everything except base value to 0 then we'll select purely on the basis of 
+			;;	distance.  This is important, because the build location is selected after 
+			;;	we've chosen an organization template, but before we fill in the optional 
+			;;	slots.  So, this will affect what we can put in those slots.
+			fixed base_value					= 100	;; a base value applied to every candidate
+			fixed building_bonus				= 50	;; the bonus given for each building in the settlement
+
+			[list SpecificBuildingBonus]
+			{
+				string building_ids
+				fixed bonus
+			}
+
+			fixed location_fuzziness			= 100
+
+			;; When our unit limit is used up, we may still want to recruit more CV.  In that case,
+			;;	we can destroy old units in order to recruit new ones.  In order to do so, the CV
+			;;	of the old unit must be less than the CV of the new unit * this multiplier.  This
+			;;	should be less than 1, lest we destroy strong companies to make room for weak ones.
+			fixed replace_company_cv_mult		= 0.6
+
+			;; If we have the capability to recruit airborne units, we'll need to pick a location
+			;;	to land them.  In general, we prefer regions that are high priority to attack and
+			;;	defend, where we are close to having an even fight. 
+			;; NOTE: the ratio is friendly / enemy.
+
+			;; These pick which region we want to reinforce:
+			fixed recruit_by_air_min_ratio					= 0.2	;; between 0 and 1, if it's below it will be set to this
+			fixed recruit_by_air_max_ratio					= 5		;; greater than 1, if it's above it will be set to this and then inverted
+			fixed recruit_by_air_ratio_under_one_multiplier	= 1		;; applied after the min/max
+			fixed recruit_by_air_ratio_over_one_multiplier	= 1
+			fixed recruit_by_air_ratio_under_one_exponent	= 2		;; applied after the multiplier
+			fixed recruit_by_air_ratio_over_one_exponent	= 1
+			fixed recruit_by_air_fuzziness					= 200
+
+			;; These pick which nearby region we actually drop the troops in:
+			int recruit_by_air_target_search_depth			= 2
+			fixed recruit_by_air_target_search_min_ratio	= 0.2
+			fixed recruit_by_air_target_search_max_ratio	= 5
+			fixed recruit_by_air_target_search_ratio_multiplier = 100
+			fixed recruit_by_air_target_search_fuzziness	= 500
+
+			;; It's possible to recruit corps HQs from ships, but dangerous to do so if we 
+			;;	don't hold the beach.  So in order to prevent it from happening, we'll greatly
+			;;	decrease the corps HQ priority if the influence ratio is not adequately favorable.
+			;;	Influence ratio in this case is friendly / enemy.
+			fixed non_combat_landing_min_influence			= 0.75
+			fixed non_combat_landing_high_risk_multiplier	= 0.001
+
+			;; When picking a place to land, we want to pick one where enemy influence is minimized
+			;;	and friendly influence is maximized.  The trick is, how far will we travel to find
+			;;	such a region? The answer: (enemy_influence - friendly_influence) * multiplier 
+			;;	(below).
+			fixed landing_location_influence_multiplier		= 1		;; for now
+			fixed landing_location_influence_ceiling		= 100
+			fixed landing_location_influence_floor			= -50
+
+			;; We also prefer to land in a location where there are already friendly buildings.  We 
+			;;	reduce the distance of such regions by this amount:
+			fixed landing_location_friendly_buildings_distance_modifier = 150
+
+			;; Next issue: specific things we need to recruit, that the code won't request.  For
+			;;	instance, in A&A the code doesn't request mobile buildings, so we need to be able
+			;;	to request them here.  Each think cycle, we will create these recruit requests.
+			;; NOTE: this needs to be the highest level thing.  So if you want to recruit a company,
+			;;	this needs to be the ids of the company.  If you want to recruit a single unit, this
+			;;	should be the IDS of that unit.
+			;; ALSO NOTE: the priority for recruiting is the base priority (given here) plus the 
+			;;	economic value of the item you're recruiting (fully instantiated if it's a company).
+			;;	There is a multiplier for the economic value to allow you to scale it.  I'm going to
+			;;	need to modify the economic value of packed mobile buildings so that it includes 
+			;;	the value of the building which they unpack to.  There is also a repeat penalty,
+			;;	which can be used to prevent us from recruiting a ridiculous number of the same
+			;;	type item.
+			[list SpecificRecruitRequest]
+			{
+				string	recruit_ids					= NULL
+				string	property_ids				= NULL
+				int		number_to_request			= 1
+				fixed	base_priority				= 0
+				fixed	economic_value_multiplier	= 1
+				fixed	repeat_penalty				= 0
+				fixed	one_time_bonus				= 0
+				
+				;; This last bonus is for HQ's in A&A.  If we don't have an HQ of a given type, or
+				;;	if all of the HQ's we have are full (they have no available attachment slots)
+				;;	then this bonus will fire.  If the actor doesn't have an HQ component then this
+				;;	is ignored
+				fixed	hq_type_not_available_bonus	= 1100
+			}
+		} ;; Recruiting
+
+		[Attach]
+		{
+			;; The priority to attach a unit is pretty simple - it's just the current actor priority
+			;;	for that actor + the CV.  In general, we're going to want this to be pretty high
+			;;	(higher than recruiting a similar actor).  I give the option to prevent attachment
+			;;	when a unit is engaged (which means either it is engaged, it has reverse engage
+			;;	targets, or it has reverse bombard targets).  This is because there's no point
+			;;	spending money on attaching an actor that is about to die.
+			bool attach_when_engaged				= false
+			KF32 cv_multiplier						= 5
+		}
+
+		[Destroy]
+		{
+			;; There are 5 factors that go into the destroy goal's priority, which are added
+			;;	together:
+			;;	- a base priority, which should be negative.  You have to overcome this to
+			;;		destroy an actor
+			;;	- a fuzzy factor.  The standard goal engine fuzzy factor doesn't help us,
+			;;		since it's only applied to goals whose priority is already greater than 0,
+			;;		and if a destroy goal's priority goes over 0 it will be applied regardless
+			;;		of how far over 0 the priority is.
+			;;	- the economic value of the actor times negative one, so that actors that are
+			;;		costing us a lot of badly needed resources while not providing much value
+			;;		in return will tend to be destroyed.  If this value is negative (reduces 
+			;;		the value of destroying the actor) we always consider it, but if it is
+			;;		positive we only consider it when the actor is in trouble.  We have a 
+			;;		constant multiplier that allows us to scale this with respect to the other 
+			;;		considerations.
+			;;	- the sale value of the actor.  If our economy is in trouble, we may consider
+			;;		selling actors to repair it.  Generally, we'll look for actors which are
+			;;		producing only things we don't need, so we don't get ourselves into
+			;;		further trouble.  If the actor has CV, we subtract the CV times a
+			;;		a multiplier (can be 0) to reduce the likelihood of selling things like
+			;;		outposts.  Remember that outposts will already be considered if their
+			;;		economic value is negative.  Also, this value is not allowed to drop 
+			;;		below 0 (so it can't prevent us from destroying something that we would
+			;;		otherwise select).  That is not true of the economic value.
+			;;	- the desire to deny an actor to the enemy.  We may destroy an actor if the
+			;;		enemy influence exceeds ours by some threshold.  We will be less and less
+			;;		likely to do this the longer we've had the actor, so things we've just
+			;;		acquired are most likely to be destroyed for this reason.  The likelihood
+			;;		of doing this has separate parameters for actors we would sell and actors
+			;;		we would destroy.  There is also a multiplier for the CV of the actor 
+			;;		that can be used to reduce this factor, so we don't raze actors that could
+			;;		attrit the enemy on his way by.  This will also never drop below 0.
+			;;
+			;; Further comments: 
+			;;	- the goal inertia doesn't apply to destroy goals.  Just because we selected
+			;;		a destroy goal but were unable to carry through last think cycle doesn't
+			;;		mean that we still want to destroy the actor.
+			
+			;; the base priority we have to overcome, and the fuzzy factor that will help us
+			;;	to overcome it.
+			fixed base_priority					= -300	;; NEGATIVE please!  Otherwise we destroy everything.
+			fixed fuzzy_factor					= 100
+
+			;; economic thresholds - we won't get rid of actors for either of the economic 
+			;;	reasons unless one of these thresholds is met.
+			fixed min_stockpilable_income		= -9999	;; if our income of any stockpilable resource falls below this value, consider economic factors
+			fixed min_stockpile					= 1		;; if our stockpile of any stockpilable resource drops below this value, consider economic factors
+			fixed min_seconds_solvency			= 60	;; if any stockpilable resource will go negative given current income levels within this many seconds, consider economic factors
+
+			;; economic multiplier - a constant factor used to scale the actor's economic 
+			;;	value if it's considered
+			fixed economic_value_mult			= 0.85
+
+			;; sale value
+			fixed sale_base_value				= 50
+			fixed sale_price_multiplier			= 2		;; multiply the profit we will gain by this and add it on
+			fixed sale_cv_mult					= 0.2	;; current CV * this is subtracted
+			fixed sale_resource_income_min		= -5	;; we must still have this much income of every non-stockpilable resource the actor produces to even consider it
+			fixed sale_resource_income_mult		= 3		;; multiply the income of each non-stockpilable resource that the actor produces by this amount if it's below the max (below)
+			fixed sale_resource_income_max		= 10	;; see sale_resource_income_mult
+
+			;; denying actors to the enemy - if they can be sold
+			fixed denial_sale_min_cv_advantage	= 0.8	;; enemy CV in the region must exceed our CV multiplied by this constant to consider this factor
+			fixed denial_sale_max_time_owned	= 300	;; we won't even consider this on actors we've owned for this many seconds
+			fixed denial_sale_max_priority		= 200	;; this is what the priority is the instant we acquire the actor, drops off over time.
+			fixed denial_sale_exponent			= 1		;; (((denial_sale_max_time_owned - time_owned) / denial_sale_max_time_owned) ^ denial_sale_exponent) * denial_sale_max_priority
+			fixed denial_sale_cv_mult			= 5		;; subtract the current cv * this amount from the above formula
+
+			;; denying actors to the enemy - if they must be razed
+			fixed denial_raze_min_cv_advantage	= 1.2	;; enemy CV in the region must exceed our CV multiplied by this constant to consider this factor
+			fixed denial_raze_max_time_owned	= 300	;; we won't even consider this on actors we've owned for this many seconds
+			fixed denial_raze_max_priority		= 200	;; this is what the priority is the instant we acquire the actor, drops off over time.
+			fixed denial_raze_exponent			= 1		;; (((denial_sale_max_time_owned - time_owned) / denial_sale_max_time_owned) ^ denial_sale_exponent) * denial_sale_max_priority
+			fixed denial_raze_cv_mult			= 5		;; subtract the current cv * this amount from the above formula
+
+			;; scorched earth
+			;;	This is a completely separate decision path for destroying things which does
+			;;	not consider any of the above factors.  When we capture an enemy structure
+			;;	which can be razed (not sold, razed), we will roll against this probability
+			;;	to decide whether to raze it at our first opportunity.
+			;;
+			;;	The probability of razing for scorched earth is given by the following formula:
+			;;
+			;;	base_se_probability * (((enemy_influence * se_influence_mult) / my_influence) ^ se_exponent)
+			;;
+			;;	We also provide a floor and ceiling for the influence factor (applied after 
+			;;	the exponent).  If you don't want that to be a factor at all, set se_exponent 
+			;;	to 0.
+			fixed se_base_probability			= 0.2	;; 0 to 1 please
+			fixed se_influence_mult				= 1
+			fixed se_exponent					= 2
+			fixed se_influence_floor			= 0
+			fixed se_influence_ceiling			= 5
+		} ;; Destroy
+
+		[Heroes]
+		{
+			;; In order to compute the priority of attaching a hero to an organization, we
+			;;	start with a constant base value, and then we add the CV of the organization
+			;;	times a multiplier and the CV of the hero times another multiplier.  Finally,
+			;;	we add a random factor
+			;; KAD040604 - removed the fuzzy factor to avoid thrashing when two similar heroes
+			;;	are competing for the same actor.
+			fixed base_priority					= 0
+			fixed organization_cv_mult			= 2
+			fixed hero_cv_multiplier			= 5	;; no longer used
+			
+			;; We only attach heroes to organizations that are in supply - we don't try to move
+			;;	organizations into supply just to have a hero attached.  In order to avoid 
+			;;	attaching heroes to lousy companies, we will not attach a hero to a company
+			;;	unless its priority times this multiplier exceeds the priority for the best
+			;;	organization that is not in supply.
+			fixed wait_for_out_of_supply_mult	= 1.2
+			
+			;; We may want to move a hero if there is a better company that is in supply and
+			;;	able to receive it.  We only move a hero if the priority for the new company
+			;;	exceeds the priority for the old company times this multipler.
+			fixed move_hero_mult				= 1.1
+
+			;; NOTE: Recruit preferences are also used here.  If desperately needed, I can create
+			;;	a separate set of preferences that use the same mechanism, but that seems awfully
+			;;	redundant.
+		} ;; Heroes
+		
+		[Research template = SAIResearchTemplate]
+		
+		[Give]
+		{
+			;; For giving resources away when none have been requested, we add together a number of
+			;;	factors:
+			;;		base priority given here
+			;;		my stockpile after higher priority goals * multiplier given here
+			;;		their stockpile * multiplier given here
+			;;		my income * multiplier given here
+			;;		their income * multiplier given here
+			;;		fuzzy factor
+			;;
+			;; Goal inertia is never applied to a give goal.
+			;;
+			;; If the goal is selected, the amount given is based on the following formula:
+			;;		(my stockpile after higher priority goals - their stockpile) * (give amt base mutiplier + fuzzy factor)
+
+			fixed resource_without_request_base_priority			= -200
+			fixed resource_without_request_my_stockpile_mult		= 1
+			fixed resource_without_request_their_stockpile_mult		= -1
+			fixed resource_without_request_my_income_mult			= 5
+			fixed resource_without_request_their_income_mult		= -5
+
+			fixed resource_without_request_give_amount_base_mult	= .2
+			fixed resource_without_request_give_amount_fuzzy_factor	= .2
+
+			;; For give goals when there is a request, the priority is almost the same as the above.
+			;;	The differences are that we replace that base priority with this one, and we also
+			;;	add the following factor:
+			;;		(avg give amount from above - amount requested) * request amount multiplier
+			;;	where the avg give amount is the average amount we would give on our own.
+
+			fixed resource_with_request_base_priority				= 0
+			fixed resource_with_request_amount_mult					= 2
+
+			;; For giving actors, we don't even create the goal until there is a request from the
+			;;	player.
+			;;	a higher priority goal.
+			fixed actor_base_priority								= -100
+			fixed actor_my_stockpile_mult							= 1
+			fixed actor_their_stockpile_mult						= -1
+			fixed actor_my_income_mult								= 5
+			fixed actor_their_income_mult							= -5
+			fixed actor_my_building_count_mult						= 10
+			fixed actor_their_building_count_mult					= -10
+			fixed actor_building_value_mult							= 0
+		}
+		
+		[GeneralPowers]
+		{
+			[list Power template = GeneralPower]
+		}
+		
+		[TeamCommands]
+		{
+			;; This priority is added on to anything that supports a flare placed for this kingdom
+			;;	EXPLORE: added to the priority for exploring the region specified
+			;;	ATTACK/DEFEND LOCATION: added to the priority for that attack/defend goal and all
+			;;		linked goals
+			;;	ATTACK/DEFEND ACTOR: if actor is static then added to the priority for attacking or
+			;;		defending the region it is in, otherwise added to the priority for attacking or
+			;;		defending the specific actor
+			;;	BUILD (several may apply):
+			;;		- if placed on a marked, added to the priority for building at that marker
+			;;		- if placed on a location, added to the priority for building a defensive 
+			;;			structure
+			;;		- if placed on a damaged building, added to the priority for repairing that 
+			;;			building
+			;;		- if placed on a healthy building, added to the priority for upgrading that 
+			;;			building
+			;;		- if placed on a settlement, added to the priority for building new buildings
+			;;			in that settlement
+			;;		- if placed on a damaged unit, added to the priority for recovering that unit
+			fixed obey_flare_priority								= 99999
+		}
+
+		[InternalFlares]
+		{
+			;; when one of out static actors is engaged, we generate a flare with this priority to
+			;;	defend it.
+			fixed defend_attacked_target_flare_duration				= 240			
+			fixed defend_attacked_target_flare_priority				= 500
+
+			;; when one of our units defeats an enemy organization, we add a low priority, short 
+			;;	duration flare in that region.  These should probably be additive, which means that 
+			;;	if there's more than one we just add them all together (and they count in addition
+			;;	to other flares).
+			fixed attack_region_on_organization_defeated_flare_duration		= 45
+			fixed attack_region_on_organization_defeated_flare_priority		= 200
+			bool attack_region_on_organization_defeated_flare_is_additive	= true
+			
+			;; when trying to add an actor to an attack goal, we walk the region path and look for
+			;;	regions that have enemy buildings on or near them.  If we find any such locations,
+			;;	then the actor can not be placed on the goal.  Instead, we add an attack flare to
+			;;	the occluding region with a priority equal to the priority to attack the original
+			;;	destination region multiplied by the modifier below.
+			int occluded_target_search_depth						= 2
+			fixed occluded_target_flare_duration					= 45
+			fixed occluded_target_flare_priority_mult				= 0.25
+
+			;; when one of our static actors is captured, we generate a flare with this priority to
+			;;	counter-attack and take it back
+			
+			fixed counter_attack_captured_actor_flare_duration		= 90
+			fixed counter_attack_captured_actor_flare_priority		= 500
+
+			;; when we build a new structure or settlement, we generate a flare with this priority
+			fixed defend_new_structure_flare_duration				= 120
+			fixed defend_new_structure_flare_priority				= 500		
+			fixed defend_new_settlement_flare_duration				= 120
+			fixed defend_new_settlement_flare_priority				= 500
+
+			;; when we capture a structure or settlement, we generate a flare with this priority
+			fixed defend_captured_structure_flare_duration			= 180
+			fixed defend_captured_structure_flare_priority			= 500
+			fixed defend_captured_settlement_flare_duration			= 180
+			fixed defend_captured_settlement_flare_priority			= 750
+
+			;; When enemies bombard us, we place an attack flare on them.  The duration and priority for
+			;;	that flare are set here.  If the goal that the units being bombarded are assigned to is
+			;;	of one of the specified types, we may have a different priority.
+			fixed attack_bombarder_flare_duration					= 90
+			fixed attack_bombarder_flare_default_priority			= 1000
+
+			[list AttackBombarderGoalPriority]
+			{
+				string goal
+				fixed priority
+			}
+		}
+	}
+
+	[ReactiveAI]
+	{
+		fixed think_frequency					= 2
+		fixed reaction_time						= 0
+
+		;; data for unit retreat
+		;;	When deciding whether a particlar unit (or organization) should retreat, we first figure 
+		;;		out the CV ratio between friendly and enemy forces in the immediate fight.  The
+		;;		immediate fight is defined as:
+		;;			- the unit we're considering
+		;;			- all units attacking that unit
+		;;			- all units attacking those attackers
+		;;		and so on, to the depth specified below.  When that CV ratio drops low enough, we
+		;;		will consider retreating by simply picking a random number and comparing it to the
+		;;		retreat probability.  Once we've made that decision, we will not reconsider it until
+		;;		our CV has risen above the specified threshold.
+		;;	PARAMETERS:
+		;;		- unit_retreat_max_health - if our % health is above this number, we won't 
+		;;			consider retreat
+		;;		- unit_retreat_depth - the number of steps out we'll go when deciding who is in the 
+		;;			"immediate fight."  0 means only consider the unit that might retreat (in which 
+		;;			case you'll never retreat).  1 means consider that unit and the units directly 
+		;;			engaging it.  And so on.  It is recommended not to set this lower than 1 or 
+		;;			higher than 2.
+		;;		- unit_retreat_cv_ratio - we consider retreat when CV is below this ratio.
+		;;		- unit_retreat_probability - the probability of deciding to retreat if the 
+		;;			constraints are met.
+		;;		- unit_retreat_num_cycles_til_reconsider - if we decide not to retreat, we won't 
+		;;			reconsider that decision until the RAI has thought at least this many times.
+		fixed unit_retreat_max_health			= 0.3
+		int unit_retreat_depth					= 1
+		fixed unit_retreat_cv_ratio				= 0.9
+		fixed unit_retreat_probability			= 1
+		int unit_retreat_cycles_til_reconsider	= 4
+
+		;; data for general retreat
+		;;	When this goes off, all units in the area retreat.  This is basically a check to try 
+		;;		and salvage some forces if you're losing the battle.  For each region we get the 
+		;;		CV ratio of friendly to enemy for that region and surrounding regions out to the 
+		;;		specified depth.  If that ratio drops under the specified ratio, then we retreat 
+		;;		all units in that region (making it more likely that neighboring regions will 
+		;;		retreat as well, of course).
+		int region_retreat_depth					= 2
+		fixed region_retreat_cv_ratio				= 0.25
+		fixed region_retreat_probability			= 0.75
+		int region_retreat_cycles_til_reconsider	= 4
+
+		;; data for halting retreat
+		;;	If units in a region are retreating, and the local strength in this region exceeds enemy
+		;;		strength by at least this ratio, then the units will stop and engage their attackers
+		fixed halt_retreat_cv_ratio				= 1.4
+
+		;; data for attack and defend goals
+		;;	- attack_distance - for a defend goal, how many regions will we travel to attack 
+		;;		threatening forces.  For an attack goal, how many regions away will we just launch
+		;;		into an attack rather than trying to coordinate with allied units.
+		;;	- min_attack_advantage - the minimum CV advantage I will try to attain on each target.
+		;;	- max_attack_advantage - if I achieve this advantage, I won't add any more units to a 
+		;;		target.
+		int attack_distance						= 2
+		fixed min_attack_advantage				= 1
+		fixed max_attack_advantage				= 1.5
+
+		;; data for selecting formations
+		;;	- threatened_region_influence_ratio - if the ratio of enemy influence to our influence
+		;;		exceeds this number then the region is considered threatened.
+		fixed threatened_region_influence_ratio	= 0.3
+
+		;; The stopped formation is what the RAI will use for organizations that aren't moving.  If
+		;;	you don't want to specify one, set it to null
+		string stopped_formation				= null
+		
+		[DefaultFormation template = FormationData]
+		{}
+		
+		[list GoalFormation template = FormationData]
+		{}
+	} ;; ReactiveAI
+
+	[Learning]
+	{
+		;; This gives a singe knob you can adjust to increase or decrease the effect of learning. 
+		;;	Values higher than one will move the ceiling and floor in the below settings farther
+		;;	from 1, while values smaller than 1 will move them close to 1.  Setting this to 0 turns
+		;;	learning off entirely.  This doesn't affect the value other than to move the floor and
+		;;	ceiling, though perhaps it should.
+		fixed learning_factor					= 1
+		
+		;; When modifying the value of recruiting something, we compute the value of each victory
+		;;	and loss based on the relative CV of the units involved.  We then take the ratio of
+		;;	victories over losses, raise it to the specified exponent, and then apply the floor and
+		;;	ceiling to clamp it to a reasonable value.  Victories and losses are tracked for the 
+		;;	specified duration.
+		fixed recruit_duration					= 180
+		fixed recruit_exponent					= 0.25
+		fixed recruit_floor						= 0.5
+		fixed recruit_ceiling					= 1.0
+		bool recruit_scale_over_duration		= false
+
+		;; When modifying the cv of an enemy unit, we compute the value of each enemy victory based
+		;;	on the relative CV of the units involved.  We then add this value to 1, raise the result
+		;;	to the specified exponent, and apply the ceiling to clamp the modifier to a reasonable
+		;;	value.  Enemy victories are tracked for the specified duration.
+		fixed cv_duration						= 300
+		fixed cv_exponent						= 0.7
+		fixed cv_ceiling						= 3
+		bool cv_scale_over_duration				= true
+
+		;; When modifying the priority for defending a region, we add together the total CV 
+		;;	currently located in the region and the amount of CV that has departed within the 
+		;;	specified duration.  We then apply the multipliers, add 1, and apply the exponent and 
+		;;	the ceiling.  We extend the search to the specified depth (in regions, where 0 means 
+		;;	only the local region).  When extending the search, we take the highest value found.
+		;; kad062103 - in order to make this more reasonable, we subtract friendly CV in the 
+		;;	region before doing any of that fancy math stuff.
+		fixed defend_duration					= 300
+		fixed defend_multiplier					= 0.02
+		fixed defend_exponent					= 0.5
+		fixed defend_ceiling					= 2
+		bool defend_scale_over_duration			= true
+		int defend_depth						= 2
+	} ;; Learning
+
+	[list SettlementTemplate]
+	string IDS
+
+	[list CompanyTemplate]
+	string IDS
+} ;; Ego
+
+[template SAI]
+{
+	string IDS
+	localized name
+	localized description
+	
+	string difficulty_level						= hard	;; easy / hard, only hard will be selected on random
+	bool public									= true	;; if false it is hidden in staging
+	
+	fixed command_max_delay						= 0.05	;; the longest we will wait to send a single command (after the previous is sent)
+	fixed command_max_total_delay				= 5		;; the longest we will wait to send an entire set of commands from a think
+	int max_ge_commands							= 100	;; the most commands the goal engine will send at once
+	int max_rai_commands						= 40	;; the most commands the RAI will send at once.
+
+	;; This is used to select between egos.  There isn't any AI to selecting an ego, we just
+	;;	select randomly from among the ones that match the current filters.  We can weight egos
+	;;	by assigning them a priority, however, which is why we need to specify the fuzziness
+	fixed ego_fuzziness							= 200
+
+	string initial_ego							;; does not need to be duplicated in the list below
+
+	[list Ego]
+	string IDS
+
+	[list Nation]								;; leave empty if the SAI can be used for any nation
+	string IDS
+
+	[list Faction]								;; leave empty if the SAI can be used for any faction
+	string IDS
+} ;; SAI

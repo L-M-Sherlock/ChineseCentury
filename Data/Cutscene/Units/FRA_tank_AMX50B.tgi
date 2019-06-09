@@ -1,0 +1,83 @@
+[Thing Template=AAUnitGBRVehicleLightTank]
+{
+	IDS = FRA_tank_AMX50B
+	name = "AMX50B"
+	editor_name = "AMX50B"
+
+	[BodyComponent]
+	{
+		health = 400
+		defense = 7
+	}
+
+	[ElementComponent]
+
+	[MoverComponent]
+	{
+		speed_max = 3.5
+		acceleration = 3
+				
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_01
+			location = exhaust_point_01	
+	  	}
+	  	
+	  	[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_01
+			location = exhaust_point_02	
+	  	}
+	}
+	
+	[PerformerComponent]
+	{
+		check_damage_resistance = true
+
+		[Ability template=AATurretAttackLocal]
+		{
+			
+			[AbilityDefinition Template=AALightTankGun]
+			{				
+				name = "#gbr_tank_light_AbilityDefinition_name"
+				recharge_time = 6
+				area = 1
+				range = 18
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+				
+				[Effect Template=APDamageEffect]
+				amount = 50
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = gbr_cannon_light
+			}
+		}
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[View]
+	{
+		resource_prefix = AMX50B/amx50b
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = FRATankLight/GBRTankLightRecoil1.kf
+		}
+	}
+}

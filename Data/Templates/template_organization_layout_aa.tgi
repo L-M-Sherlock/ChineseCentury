@@ -1,0 +1,32 @@
+/**************************************************************************
+
+template_organization_layout_aa.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION:  Template used to define aa organization layouts.  See RTSE templates for more information.
+			
+
+REVISION HISTORY:
+ban031104 - created
+
+	
+**************************************************************************/
+	
+[template AAOrganizationLayout template=OrganizationLayout]
+{
+	;; property used when organization is in a broken formation
+	[BrokenProperty Template=ModifierProperty]
+	{
+		name = "#template_organization_layout_aa_BrokenProperty_name"
+		icon = /Properties/PropertyIcons/IconPropertyCombat.png
+	
+		[Modifier template=MultiplyModifier]
+		attribute = SPEED_MAX
+		amount = +.25
+		
+		[Modifier template=MultiplyModifier]
+		attribute = ATTACK_EFFICIENCY_DESIRED
+		amount = -.50
+	}
+}
+

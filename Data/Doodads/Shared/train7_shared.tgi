@@ -1,0 +1,23 @@
+[Thing Template=AASharedDoodad]
+{
+	IDS = train7_shared
+	name = "#train7_shared_Thing_name"
+
+	[Flags]
+	random_orientation = false	
+
+	[Size]
+	scale_min = 1.0
+	scale_max = 1.0
+	
+	[View]
+	{
+		resource_prefix = train/train7
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		shadow_type = STENCIL
+	
+		[Aspect Template=Aspect]
+		IDS = train7_shared
+		model = train/train7.nif
+	}
+}

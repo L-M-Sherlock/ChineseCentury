@@ -1,0 +1,405 @@
+[Template NorthAfricaCityCenter Template=AACityCenterNorthAfrica]
+{
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 12
+
+	[View]
+	{
+		resource_prefix = NorthAfricaCityCenter01/NorthAfricaCityCenter01
+		
+		[AspectNormal]
+		visual_radius_estimate = 9
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = city_name_vfx
+		location = base
+	}
+}
+
+/********************    RANDOM MAP CENTERS    ********************/
+
+[Thing Template=NorthAfricaCityCenter]
+{
+	IDS = nafrica_village01
+	editor_name = "#nafrica_villagecenter_01_nafrica_village01_editor_name"
+	name_list_ids = namelist_northafrica
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_northafrica
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCNorthAfrica01]
+
+		[Layout Template=LayoutRMCNorthAfrica02]
+
+		[Layout Template=LayoutRMCNorthAfrica03]
+
+		[Layout Template=LayoutRMCNorthAfrica04]
+
+		[Layout Template=LayoutRMCNorthAfrica05]
+
+		[Layout Template=LayoutRMCNorthAfrica06]
+
+		[Layout Template=LayoutRMCNorthAfrica07]
+
+		[Layout Template=LayoutRMCNorthAfrica08]
+
+		[Layout Template=LayoutRMCNorthAfrica09]
+	}
+}
+
+[Thing Template=NorthAfricaCityCenter]
+{
+	IDS = egypt_village01
+	editor_name = "#nafrica_villagecenter_01_egypt_village01_editor_name"
+	name_list_ids = namelist_egypt
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_egypt
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCNorthAfrica01]
+
+		[Layout Template=LayoutRMCNorthAfrica02]
+
+		[Layout Template=LayoutRMCNorthAfrica03]
+
+		[Layout Template=LayoutRMCNorthAfrica04]
+
+		[Layout Template=LayoutRMCNorthAfrica05]
+
+		[Layout Template=LayoutRMCNorthAfrica06]
+
+		[Layout Template=LayoutRMCNorthAfrica07]
+
+		[Layout Template=LayoutRMCNorthAfrica08]
+
+		[Layout Template=LayoutRMCNorthAfrica09]
+	}
+}
+
+[Thing Template=NorthAfricaCityCenter]
+{
+	IDS = frenchnorthafrica_village01
+	editor_name = "#nafrica_villagecenter_01_frnafrica_village01_editor_name"
+	name_list_ids = namelist_frenchnorthafrica
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_frenchnorthafrica
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCNorthAfrica01]
+
+		[Layout Template=LayoutRMCNorthAfrica02]
+
+		[Layout Template=LayoutRMCNorthAfrica03]
+
+		[Layout Template=LayoutRMCNorthAfrica04]
+
+		[Layout Template=LayoutRMCNorthAfrica05]
+
+		[Layout Template=LayoutRMCNorthAfrica06]
+
+		[Layout Template=LayoutRMCNorthAfrica07]
+
+		[Layout Template=LayoutRMCNorthAfrica08]
+
+		[Layout Template=LayoutRMCNorthAfrica09]
+	}
+}
+
+[Thing Template=NorthAfricaCityCenter]
+{
+	IDS = libya_village01
+	editor_name = "#nafrica_villagecenter_01_libya_village01_editor_name"
+	name_list_ids = namelist_libya
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_libya
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCNorthAfrica01]
+
+		[Layout Template=LayoutRMCNorthAfrica02]
+
+		[Layout Template=LayoutRMCNorthAfrica03]
+
+		[Layout Template=LayoutRMCNorthAfrica04]
+
+		[Layout Template=LayoutRMCNorthAfrica05]
+
+		[Layout Template=LayoutRMCNorthAfrica06]
+
+		[Layout Template=LayoutRMCNorthAfrica07]
+
+		[Layout Template=LayoutRMCNorthAfrica08]
+
+		[Layout Template=LayoutRMCNorthAfrica09]
+	}
+}
+
+[Thing Template=NorthAfricaCityCenter]
+{
+	IDS = palestine_village01
+	editor_name = "#nafrica_villagecenter_01_palestine_village01_editor_name"
+	name_list_ids = namelist_palestine
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_palestine
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCNorthAfrica01]
+
+		[Layout Template=LayoutRMCNorthAfrica02]
+
+		[Layout Template=LayoutRMCNorthAfrica03]
+
+		[Layout Template=LayoutRMCNorthAfrica04]
+
+		[Layout Template=LayoutRMCNorthAfrica05]
+
+		[Layout Template=LayoutRMCNorthAfrica06]
+
+		[Layout Template=LayoutRMCNorthAfrica07]
+
+		[Layout Template=LayoutRMCNorthAfrica08]
+
+		[Layout Template=LayoutRMCNorthAfrica09]
+	}
+}
+
+[Thing Template=NorthAfricaCityCenter]
+{
+	IDS = persia_village01
+	editor_name = "#nafrica_villagecenter_01_persia_village01_editor_name"
+	name_list_ids = namelist_persia
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_persia
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCNorthAfrica01]
+
+		[Layout Template=LayoutRMCNorthAfrica02]
+
+		[Layout Template=LayoutRMCNorthAfrica03]
+
+		[Layout Template=LayoutRMCNorthAfrica04]
+
+		[Layout Template=LayoutRMCNorthAfrica05]
+
+		[Layout Template=LayoutRMCNorthAfrica06]
+
+		[Layout Template=LayoutRMCNorthAfrica07]
+
+		[Layout Template=LayoutRMCNorthAfrica08]
+
+		[Layout Template=LayoutRMCNorthAfrica09]
+	}
+}
+
+[Thing Template=NorthAfricaCityCenter]
+{
+	IDS = saudiarabia_village01
+	editor_name = "#nafrica_villagecenter_01_saudiarabia_village01_editor_name"
+	name_list_ids = namelist_saudiarabia
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_saudiarabia
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCNorthAfrica01]
+
+		[Layout Template=LayoutRMCNorthAfrica02]
+
+		[Layout Template=LayoutRMCNorthAfrica03]
+
+		[Layout Template=LayoutRMCNorthAfrica04]
+
+		[Layout Template=LayoutRMCNorthAfrica05]
+
+		[Layout Template=LayoutRMCNorthAfrica06]
+
+		[Layout Template=LayoutRMCNorthAfrica07]
+
+		[Layout Template=LayoutRMCNorthAfrica08]
+
+		[Layout Template=LayoutRMCNorthAfrica09]
+	}
+}
+
+[Thing Template=NorthAfricaCityCenter]
+{
+	IDS = frenchwestafrica_village01
+	editor_name = "#nafrica_villagecenter_01_frenchwestafrica_village01_editor_name"
+	name_list_ids = namelist_frenchwestafrica
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_frenchwestafrica
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCNorthAfrica01]
+
+		[Layout Template=LayoutRMCNorthAfrica02]
+
+		[Layout Template=LayoutRMCNorthAfrica03]
+
+		[Layout Template=LayoutRMCNorthAfrica04]
+
+		[Layout Template=LayoutRMCNorthAfrica05]
+
+		[Layout Template=LayoutRMCNorthAfrica06]
+
+		[Layout Template=LayoutRMCNorthAfrica07]
+
+		[Layout Template=LayoutRMCNorthAfrica08]
+
+		[Layout Template=LayoutRMCNorthAfrica09]
+	}
+}
+
+[Thing Template=NorthAfricaCityCenter]
+{
+	IDS = eastafrica_village01
+	editor_name = "#nafrica_villagecenter_01_eastafrica_village01_editor_name"
+	name_list_ids = namelist_eastafrica
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_eastafrica
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCNorthAfrica01]
+
+		[Layout Template=LayoutRMCNorthAfrica02]
+
+		[Layout Template=LayoutRMCNorthAfrica03]
+
+		[Layout Template=LayoutRMCNorthAfrica04]
+
+		[Layout Template=LayoutRMCNorthAfrica05]
+
+		[Layout Template=LayoutRMCNorthAfrica06]
+
+		[Layout Template=LayoutRMCNorthAfrica07]
+
+		[Layout Template=LayoutRMCNorthAfrica08]
+
+		[Layout Template=LayoutRMCNorthAfrica09]
+	}
+}
+
+/********************    CAMPAIGN MAP CENTERS    ********************/
+
+[Thing Template=NorthAfricaCityCenter]
+{
+	IDS = north_africa_city_center01_large
+	editor_name = "#north_africa_city_center01_large_editor_name"
+
+	[EconomyComponent Template=EconomyComponentCityLarge]
+	
+	[CityComponent]
+	{
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = desert_treespalm
+			offset = -3.18, -3.27
+			orientation = 0, 1
+		
+			[Object Template=CityObject]
+			object_ids = desert_treespalm
+			offset = 2.97, -3.27
+			orientation = 0, 1
+		
+			[Object Template=CityObject]
+			object_ids = desert_treespalm
+			offset = 2.97, 3.19
+			orientation = 0, 1
+			
+			[Object Template=CityObject]
+			object_ids = desert_treespalm
+			offset = -3.18, 3.19
+			orientation = 0, 1	
+		}
+	}
+}
+
+[Thing Template=NorthAfricaCityCenter]
+{
+	IDS = north_africa_city_center01_small
+	editor_name = "#north_africa_city_center01_small_editor_name"
+
+	[EconomyComponent Template=EconomyComponentCitySmall]
+	
+	[CityComponent]
+	{
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = desert_treespalm
+			offset = -3.18, -3.27
+			orientation = 0, 1
+		
+			[Object Template=CityObject]
+			object_ids = desert_treespalm
+			offset = 2.97, -3.27
+			orientation = 0, 1
+		
+			[Object Template=CityObject]
+			object_ids = desert_treespalm
+			offset = 2.97, 3.19
+			orientation = 0, 1
+			
+			[Object Template=CityObject]
+			object_ids = desert_treespalm
+			offset = -3.18, 3.19
+			orientation = 0, 1	
+		}
+	}
+}

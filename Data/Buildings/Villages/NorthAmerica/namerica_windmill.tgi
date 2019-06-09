@@ -1,0 +1,17 @@
+[Thing Template=AAFarmNorthAmerica]
+{
+	IDS = namerica_windmill
+	name = "#namerica_windmill_name"
+	editor_name = "#namerica_windmill_editor_name"
+	
+	[Flags]
+	targetable = false
+
+	[Size]
+	height = 2
+	blocking_shape = SQUARE
+	square_size = 2
+
+	[View]
+	resource_prefix = NorthAmericaWindmill01/NorthAmericaWindmill01
+}

@@ -1,0 +1,37 @@
+[Terrain template=MountainTerrain]
+{
+	IDS = temperate_mountain
+	name = "#temperate_mountain_name"
+
+	base_priority = 7000
+	terrain_group = dirt
+
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.00
+
+/********************	MOUNTAIN PARAMETERS		********************/
+
+	noise_min 	= 0.25
+	noise_max 	= 0.75
+	paint_slope = 0.45
+	max_slope 	= 0.85
+	paint_max_step 	= 12.5
+	
+/********************	MOUNTAIN VARIATIONS		********************/
+
+	[Variation]
+	IDS = temperate_mountain01
+	name = "#temperate_mountain_01_name"
+	texture = TemperateMountain/TemperateMountain01.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.310, 0.298, 0.282
+
+	[Variation]
+	IDS = temperate_mountain02
+	name = "#temperate_mountain_02_name"
+	texture = TemperateMountain/TemperateMountain02.tga
+	texture_width = 4
+	texture_height = 4
+	terrain_color = 0.300, 0.278, 0.292
+}

@@ -1,0 +1,364 @@
+/**************************************************************************
+
+template_fx.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: 	template classes for the FX system.
+		An FXC (FX system command) can be used to create VFX (visual effects) and
+		do other non-simulation related things such as SFX (sound effects) and changing
+		a character's equipment.  Animations, abilities, and objects have
+		event lists that define a series of FXC to perform when an event occurs.
+
+REVISION HISTORY:
+drp090602 - created
+pcb093002 - updated instructions
+
+USAGE:
+
+	[EventName template=FXC]
+	This node goes inside an FXC list for an animation, ability or object to define
+	FX system commands to perform when "EventName" occurs.  The "FXC" template should not
+	actually be used.  There are more specific ones.
+	
+	[EventName template=FXC_CreateVFX]
+	[EventName template=FXC_StopVFX]
+	[EventName template=FXC_Equipment]
+	[EventName template=FXC_SFX]
+	[EventName template=FXC_PlaySFX]
+	[EventName template=FXC_StopSFX]
+
+	
+FIELDS:
+	
+	FXC_CreateVFX:
+	--------------
+	
+		vfx_ids = ids of the vfx to create
+		
+		duration = the new duration. 0 means use the duration specified by the vfx
+		
+		at = which object or position to create the vfx at.  Valid choices are...
+		
+			SELF				the object creating the vfx (such as the caster)  [Default]
+			TARGET_THING		the target of a spell or attack
+			SOURCE_GROUND		position at the self's feet    [always detached]
+			TARGET_GROUND		position at the target's feet  [always detached]
+			SOURCE_ABILITY_POSITION	position in front of the attacker where melee weapons
+							strike and where projectiles get created  [always detached]
+			TARGET_HIT_POSITION	position on the target of where it was hit from an attack [always detached]
+			MAP_CENTER			the center of the map [always detached]
+
+			Only SELF and TARGET_THING can be attached and use a location.  The others are simply positions.
+
+		location = a location (usually body part) of the SELF or TARGET_THING.  Valid choices are
+				BASE [Default], SPINE, HEAD, LHAND, RHAND, LFOOT, and RFOOT.
+
+		attached =  true if the vfx should be attached to the object and follow it when the object moves [Default].
+				false if the vfx should be created in the word and not move with the object.
+
+		translation, orientation = setting these will override the default translation and/or orientation
+
+	FXC_StopVFX:
+	------------
+
+		vfx_ids = ids of the vfx to stop
+		
+	FXC_Equipment:
+	--------------
+	
+		action = choices are:  HIDE, UNHIDE, FLIP, ADD, REMOVE, REPLACE.
+				 replacing equipment will keep the same flipped/hidden status of the equipment it replaced.
+
+		location =  csee bones.tgi:  base, spine, head, rhand, lfoot, etc.
+				the equipment must be located directly under the given bone in the scene graph to work.
+
+		equipment_type_ids = the type of equipment to hide/flip/add/etc.  This is optional if the unit only
+					has one piece of equipment at the location.  Valid equipment types are specified in 
+					another TGI file.
+
+		equipment_IDS = ids of equipment to add.  Only use with ADD or REPLACE.
+
+	CHAINING (for all FXC):
+	-----------------------
+
+		The "Chain" and "ChainImmediate" lists allow chaining multiple FXC's together.  "Chain" FXC's will 
+		execute after the original finishes (when the created vfx goes away), but only if the original 
+		executes properly.  "ChainImmediate" FXC's execute the same time as the original.  Any chained FXC
+		will execute with the same event parameters as the original (the caster object, its target, etc.).
+
+EXAMPLES:
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = blessing_effect
+		
+		;; where
+		at = TARGET_THING
+		attached = false
+		location = base	; the default
+
+		frequency = 1
+		delay = 0.3
+	}
+	
+	[WhenCreated Template=FXC_CreateVFX]
+	{
+		VFX_IDS = specter_head_fire_vfx
+
+		;; where
+		location = HEAD
+	}
+
+	[WhenStart Template=FXC_CreateVFX]
+	{
+		VFX_IDS = lich_fidget
+	
+		;; where
+		at = SELF		; the default
+		attached = true		; the default
+		location = rhand
+		translation = (-.09, -.305, .884)
+	}
+
+	[WhenEnd Template=FXC_StopVFX]
+	{
+		VFX_IDS = lich_fidget
+	}
+
+	[WhenCreated Template=FXC_Equipment]
+	{
+		action = HIDE
+		location = rhand
+		equipment_type_ids = Arrow
+	}
+
+	[WhenHealth Template=FXC_CreateVFX]
+	{
+		VFX_IDS = bleed_profusely
+		location = rhand
+
+		health = .5
+		health_trigger_type = BELOW
+	}
+
+FILTER EXAMPLES:
+	[WhenStart template=FXC_CreateVFX]
+	{
+		VFX_IDS = snow_explosion
+		terrain_group_filter = snow
+		
+		at = TARGET_GROUND
+	}
+
+	[WhenStart template=FXC_CreateVFX]
+	{
+		VFX_IDS = sand_explosion
+		terrain_group_filter = sand
+		
+		at = TARGET_GROUND
+	}
+	
+;; THE FOLLOWING ARE NOT IMPLEMENTED
+
+;; IDEA: we could investigate implementing a "VFXSelector" which is the same as CreateVFX except
+;;  you define sub-nodes and a filter per sub-node. The disadvantage is you cannot configure per VFX
+;;  (duration, translation, etc). 
+
+	[WhenStart template=FXC_VFXSelector]
+	{
+		at = TARGET_GROUND
+		
+		[VFX]
+		terrain_group_filter = sand
+		VFX_IDS = sand_explosion
+
+		[VFX]
+		terrain_group_filter = snow
+		VFX_IDS = snow_explosion
+	}
+
+;; IDEA: allow grouping FXCs based on a filter
+
+	[WhenStart template=FXC_Filter]
+	{
+		terrain_group_filter = sand
+		
+		[FXC template=FXC_CreateVFX]
+		{
+			...
+		}
+		
+		[FXC template=FXC_PlaySFX]
+		{
+			...
+		}
+	}
+
+;; END NOT IMPLEMENTED
+	
+**************************************************************************/
+
+[Template FXC]
+{
+	;; hidden field - defined by appropriate template
+	string	type
+	
+	;; time: this is only used for timed fx (WhenDoAtTime)
+	fixed time = 0
+
+	;; target_flags: allow filtering based on the FX target
+	string	target_flags = null
+	
+	;; terrain_group: allow filtering based on the terrain group at the triggered position
+	string	terrain_group_filter = null
+
+	;; frequency - every how many times we try to should the effect actually be created (0 means never,
+	;;				1 means every time, 2 means every second time, etc...)
+	int		frequency = 1
+
+	;; delay - how many seconds after effect is tripped should it actually be executed (0 means immediately)
+	float	delay = 0
+		
+	;; for use with effects that are tripped by an actor's health dropping below/climbin over a certain mark (default of -1 means health ignored)
+	float	health = -1
+
+	;; For Construction FXCs (WhenConstructed) that should stop on WhenDestructed.
+	flag	stop_on_destructed = true
+
+	;; (associated with 'health' item) whether falling below or climbing over
+	;; the specified health tripps the effect (ABSOLUTE_BELOW, ABSOLUTE_ABOVE, RELATIVE_DECREASE or RELATIVE_INCREASE)
+	string health_trigger_type = ABSOLUTE_BELOW
+
+	;; actor aspect this FX command is associated with (right now used only with WhenEnter
+	;; and WhenLeave events for actor states)
+	string	actor_state = NULL
+	
+	;; Chaining - define other FX commands to process following this one
+	;; Chain nodes should use "Template=FXC"
+	[list Chain]
+	
+	;; Chaining Immediately - define other FX commands to process with this one
+	;; Chain nodes should use "Template=FXC"
+	[list ChainImmediate]
+			
+} ; end [Template FXC]
+
+;; location = hard-coded FX system location
+
+[Template FXC_CreateVFX inherit=FXC]
+{
+	type = CREATE_VFX
+	string	VFX_IDS
+	
+	;; duration = 0 means use duration defined by the VFX
+	float	duration = 0			
+
+	;; WHERE
+	string	at = SELF
+	flag	attached = true
+
+	;; location = the IDS of the [Bone]. The empty string means the first bone
+	;;  listed (should be "position")
+	string	location = null		
+
+	point3	translation = 0,0,0
+	point3	orientation = 0,-1,0
+} ; end [Template FXC_CreateVFX]
+
+;; Scans previous FXCLists in the same unit or ability for a CreateVFX that uses the VFX_IDS and stops it.
+
+[Template FXC_StopVFX inherit=FXC]
+{
+	type = STOP_VFX
+	string	VFX_IDS
+} ; end [Template FXC_StopVFX]
+
+[Template FXC_Equipment inherit=FXC]
+{
+	type = EQUIPMENT
+	string	action
+	string	location
+	string	equipment_type_IDS = null
+	string	equipment_IDS = null
+} ; end [Template FXC_Equipment]
+
+[Template FXC_PlaySFX inherit=FXC]
+{
+	type = PLAY_SFX
+	string	audio_ids
+
+	string	at = SELF
+	flag	looping = false
+}
+
+[Template FXC_GameEventSFX inherit=FXC_PlaySFX]
+{
+	string	at = SOURCE_GROUND
+}
+
+[Template FXC_PlayLoopSFX inherit=FXC_PLAYSFX]
+{
+	flag	looping = true
+}
+
+[Template FXC_StopSFX inherit=FXC]
+{
+	type = STOP_SFX
+	string	audio_ids
+}
+
+[Template FXC_ChangeAspect Inherit=FXC]
+{
+	type = CHANGE_ASPECT
+
+	string	aspect_ids
+}
+
+[Template FXC_ChangeSkin Inherit=FXC]
+{
+	type = CHANGE_SKIN
+
+	string	skin
+}
+
+[Template FXC_CreateRFX Inherit=FXC]
+{
+	type = CREATE_RFX
+	
+	string radar_icon
+	
+	;; WHERE
+	string  at = SOURCE_GROUND
+	
+	Point3 src_color	= 1, 1, 0
+	Point3 dst_color	= 1, 1, 1
+	int blink_count		= 3
+}
+
+[Template FXC_PlayObjectAnimation Inherit=FXC]
+{
+	type = PLAY_OBJECT_ANIMATION
+	string object_animation_IDS
+}
+
+[Template FXC_PlayHitEffect Inherit=FXC]
+{
+	type = PLAY_HIT_EFFECT
+
+	;; hit params
+    fixed max_impulse = 0     ;; maximum impulse to apply (degrees/sec)
+	fixed max_damage = 0.10	  ;; max damage to reach max impulse (in percent health)
+    fixed stiffness = 1       ;; stiffness of spring that returns target to original orientation
+    fixed vel_decay = 1       ;; how much to reduce the speed (fraction of speed/sec)
+    fixed vel_falloff = 1	  ;; falloff for decay (0 - constant, 1 - linear, 2 - quadratic)
+
+    ;; where to apply the hit (the bone IDS)
+    string pivot
+
+    ;; specify the axis to bend (in local coordinates)
+    point3 axis = 1,0,0
+
+    ;; max angle allowed (degrees)
+    fixed max_angle = 30
+}
+

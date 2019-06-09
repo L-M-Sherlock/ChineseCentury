@@ -1,0 +1,8 @@
+[Thing Template=Road]
+{
+	IDS = paved_road_intersection
+	name = "#paved_road_intersection_name"
+	
+	[View]
+	resource_prefix = PavedRoadIntersection/PavedRoadIntersection
+}

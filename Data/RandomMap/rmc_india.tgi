@@ -1,0 +1,83 @@
+
+[RMC template=AAAllRMC]
+{
+	IDS = rmc_india
+	name = "#rmc_india_name"
+	description = "#rmc_india_description"
+	biome = tropical_savannah
+
+/********************    TERRAIN    ********************/
+
+	[TerrainBlob Template=SavDirtTerrainBlob]
+
+	[TerrainBlob Template=SavScrubTerrainBlob]
+
+	[TerrainBlob Template=SavGrasslandTerrainBlob]
+
+	[TerrainBlob Template=SavGrasslandTerrainBlob02]
+
+	[TerrainBlob Template=SavScrubTerrainBlob02]
+
+	[TerrainStreak Template=SavForestTerrainStreak]
+
+	[TerrainBlob Template=SavDirtTerrainBlob02]
+
+	[TerrainBlob Template=SavForestTerrainBlob]
+
+/********************    BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=SavMountainTerrainBlob]
+
+	[TerrainBlob Template=SavMountainTerrainBlob02]
+
+	[TerrainBlob Template=SavMountainTerrainBlob03]
+
+	[TerrainBlob Template=SavMountainTerrainBlob04]
+
+	[TerrainBlob Template=SavMountainTerrainBlob05]
+
+	[TerrainBlob Template=SavOceanTerrainBlob]
+
+/********************   TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=SavNoisePhase01]
+	
+	[TerrainNoise Template=SavNoisePhase02]
+	
+	[TerrainNoise Template=SavNoisePhase03]
+	
+	[TerrainNoise Template=SavNoisePhase04]
+
+/********************    VILLAGES    ********************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_india
+		name = "#rmc_india_village_india_name"
+
+		[Object]
+		object_ids = random_village_india
+		weight = 1
+	}
+
+/********************    KINGDOM ACTOR GROUPS    ********************/
+
+	[ActorGroup Template=StartCorps]
+	{
+		apply_to_all_major_kingdoms = true
+	
+		[GroupRestriction]
+		group_ids = village_india
+		proximity_min = 96
+		proximity_desired = 0
+	}
+
+	[ActorGroup Template=MachineGunBunkers]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=AntiAirBatteries]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=ArtilleryBatteries]
+	apply_to_all_major_kingdoms = true
+}

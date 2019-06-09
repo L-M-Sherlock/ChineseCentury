@@ -1,0 +1,63 @@
+# AUTOEXEC.TXT (runs before application is initialized)
+#
+# Use this file to initialize the depots and other application initialization settings.
+# Most systems are not initialized at this point so most steps don't work.  
+# Vars set in this file will be clobbered by the TGIs and command line.
+
+#log 99
+
+# LocalizationTest will replace displayed strings with "x", anything that is not "x" will
+# not be properly localized.
+# LocalizationTest
+
+# EngineData reference for running from the debugger
+adddepot ../RTSE/EngineData/
+
+# EngineData reference for running from data copied from the build folders (with the EXEs)
+adddepot EngineData/
+
+# Game-specific data: in WAD file
+adddepot Data.rwd
+
+# Game-specific data: in folder
+adddepot data/ 
+
+# Music, in both WAD file and folder
+adddepot Music.rwd
+adddepot Music/
+
+# Video, in both WAD file and folder
+addlocaledepot Video.rwd
+addlocaledepot Video/
+
+# English-specific video
+addlocaledepot Video_En.rwd
+
+# Speech, in both WAD file and folder
+addlocaledepot Speech.rwd
+addlocaledepot Speech/
+
+# Work Depot: "My Documents/Axis&Allies/Data"
+adddepot %USERDATA%/data/ 1
+adddepot Userdata/ 1
+
+# note that autorunpath and installerpath are commented out since TimeGate isn't
+# doing those tools for A&A.
+
+# addautorunpath exists only to tell the localization system
+# where to find the autorun strings.
+#addautorunpath ../Tools/Autorun/
+
+# addinstallerpath exists only to tell the localization system
+# where to find the installer strings.
+#addinstallerpath ../Tools/Installer/
+
+# addpatcherpath exists only to tell the localization system
+# where to find the patcher strings.
+addpatcherpath ../Tools/Patcher/
+
+# this is an example of how to add a localized depot.
+#addlocaledepot localized/DE/Data/
+#addlocaledepot localized/DE/Speech/
+#addlocaledepot localized/DE/Video/
+

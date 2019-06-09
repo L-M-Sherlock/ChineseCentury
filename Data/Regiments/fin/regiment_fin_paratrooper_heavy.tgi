@@ -1,0 +1,82 @@
+[Template AAFINRegimentParatrooper Template=AAFINOrganizationParatrooper]
+{
+	name = "#regiment_fin_paratrooper_heavy_AAFINRegimentParatrooper_name"
+	editor_name = "#regiment_fin_paratrooper_heavy_AAFINRegimentParatrooper_editor_name"
+	
+	[EconomyComponent]
+	{
+		[Upkeep]
+		ammo = 15
+	}		
+	
+	[View]
+	{
+		resource_prefix = /Units/FIN/FINParatrooper/FINParatrooper
+		icon = /UI/Game/RegimentButtons/IconHeavyParatrooper.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = fin_paratrooper_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = fin_paratrooper_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = fin_paratrooper_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{
+		layout_ids = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = fin_paratrooper
+		
+		[Slot]	;; rear guard 1
+		element_IDS = fin_paratrooper
+
+		[Slot]	;; rear guard 2
+		element_IDS = fin_paratrooper
+		
+		[Slot]	;; rear guard 3
+		element_IDS = fin_paratrooper_mortar
+	
+		[Slot]	;; support
+		element_IDS = fin_paratrooper_mg
+		
+		[Slot]	;; captain
+		element_IDS = fin_paratrooper_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = paratrooper_company
+	}
+}
+
+[Thing Template=AAFINRegimentParatrooper]
+{
+	IDS = regiment_fin_paratrooper_heavy
+
+	transport_actor = fin_transport_air
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 90
+	}
+
+	[Placement]
+	placement_group_ids = null
+}
+
+[Thing Template=AAFINRegimentParatrooper]
+{
+	IDS = regiment_fin_paratrooper_heavy_ground
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 60
+	}
+}

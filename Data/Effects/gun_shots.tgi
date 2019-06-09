@@ -1,0 +1,156 @@
+
+;-----------------------------------Rifle effects
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = Rifle_shot
+	name = "#gun_shots_Rifle_shot_name"
+	model = Gunshot/RifleShot.NIF
+	gyroscope = false
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = Rifle_shot_explosion
+	name = "#gun_shots_Rifle_shot_explosion_name"
+	model = Gunshot/RifleShotExplosion1.NIF
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = Rifle_shot_explosion_hard
+	name = "#gun_shots_Rifle_shot_explosion_hard_name"
+	model = Gunshot/RifleShotExplosion3.NIF
+}
+
+[VFX Template=VFXTracer]
+{
+	IDS = rifle_shot_tracer
+	name = "#gun_shots_rifle_shot_tracer_name"
+
+	color = .7,.7,.4
+	speed = 100
+	length = 2
+}
+
+
+;------------------------------------- Machine Gun effects
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = mg_shot
+	name = "#gun_shots_mg_shot_name"
+	model = Gunshot/TommyShot.NIF
+	gyroscope = false
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = mg_heavy_shot
+	name = "#gun_shots_mg_heavy_shot_name"
+	model = Gunshot/MGHeavyShot.NIF
+	gyroscope = false
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = mg_shells
+	name = "#gun_shots_mg_shells_name"
+	model = Gunshot/MGShells.NIF
+	gyroscope = false
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = aa_shot1
+	name = "#gun_shots_aa_shot1_name"
+	model = Gunshot/AAShot1.NIF
+	gyroscope = false
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = aa_shot2
+	name = "#gun_shots_aa_shot2_name"
+	model = Gunshot/AAShot2.NIF
+	gyroscope = false
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = aircraft_shot
+	name = "#gun_shots_aircraft_shot_name"
+	model = Gunshot/AircraftShot.NIF
+	gyroscope = false
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = mg_shot_explosion
+	name = "#gun_shots_mg_shot_explosion_name"
+	model = Gunshot/TommyShotExplosion1.NIF
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = mg_shot_explosion_hard
+	name = "#gun_shots_mg_shot_explosion_hard_name"
+	model = Gunshot/TommyShotExplosion3.NIF
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = mg_shot_explosion_ground01
+	name = "#gun_shots_mg_shot_explosion_ground01_name"
+	model = Gunshot/MGExplosionGround01.NIF
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = mg_shot_explosion_ground02
+	name = "#gun_shots_mg_shot_explosion_ground02_name"
+	model = Gunshot/MGExplosionGround02.NIF
+	
+	[Flags]
+	{
+		random_orientation = true
+	}
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = sand_shot
+	name = "#gun_shots_sand_shot_name"
+	model = Gunshot/sandshot.NIF
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = sand_shot_strafe
+	name = "#gun_shots_sand_shot_strafe_name"
+	model = Gunshot/sandshotstrafe.NIF
+}
+
+[VFX Template=VFXTracer]
+{
+	IDS = mg_shot_tracer
+	name = "#gun_shots_mg_shot_tracer_name"
+
+	color = .7,.7,.4
+	speed = 100
+	length = 2
+}
+
+[VFX Template=VFXTracer]
+{
+	IDS = aircraft_shot_tracer
+	name = "#gun_shots_aircraft_shot_tracer_name"
+
+	color = .7,.7,.4
+	speed = 200
+	length = 5
+	match_orientation = true
+}

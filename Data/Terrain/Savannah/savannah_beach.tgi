@@ -1,0 +1,19 @@
+[Terrain template=Terrain]
+{
+	IDS = savannah_beach
+	name = "#savannah_beach_name"
+
+	base_priority = 25
+	terrain_group = dirt
+	terrain_color = 0.839, 0.710, 0.545
+	
+	doodad_frequency = 0.10
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = savannah_beach01
+	name = "#savannah_beach_01_name"
+	texture = SavannahBeach/SavannahBeach01.tga
+	texture_width = 8
+	texture_height = 8
+}

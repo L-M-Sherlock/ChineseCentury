@@ -1,0 +1,164 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_ukraine
+	name = "#mg_rmc_ukraine_name"
+	description = "#mg_rmc_ukraine_description"
+	biome = boreal_forest
+
+	sun = SUN_DEFAULT,SUN_DUSK,SUN_MORNING,SUN_NIGHT
+	weather = NONE,NONE,NONE,NONE,SNOW_LIGHT,SNOW_HEAVY,RAIN_LIGHT,RAIN_HEAVY
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 384
+	height = 384
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	Belarus
+	starting_pos = 20,300
+	
+	[Kingdom Template = KingdomDefender]
+	;;	Ukraine
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	Eastern Europe
+	starting_pos = 20,20
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	Russia
+	starting_pos = 160,300
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	Caucasus
+	starting_pos = 300,160
+	
+	[Kingdom Template = KingdomAttacker5]
+	;;	Turkey
+	starting_pos = 200,20
+        type = water
+	
+/********************    TERRAIN    ********************/
+
+	[TerrainBlob Template=BorGrassDryTerrainBlob]
+
+	[TerrainBlob Template=BorTundraTerrainBlob]
+
+	[TerrainBlob Template=BorDirtTerrainBlob]
+
+	[TerrainBlob Template=BorTundraTerrainBlob02]
+
+	[TerrainBlob Template=BorDirtTerrainBlob02]
+
+	[TerrainStreak Template=BorForestTerrainStreak]
+
+	[TerrainBlob Template=BorForestTerrainBlob]
+
+	[TerrainBlob Template=BorGrassDryTerrainBlob02]
+
+/********************    BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=BorMountainTerrainBlob]
+
+	[TerrainBlob Template=BorMountainTerrainBlob02]
+	
+	[TerrainBlob Template=BorMountainTerrainBlob03]
+	
+	[TerrainBlob Template=BorMountainTerrainBlob04]
+	
+	[TerrainBlob Template=BorMountainTerrainBlob05]
+	
+/********************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = boreal_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = boreal_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = boreal_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = boreal_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = boreal_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = boreal_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = boreal_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = boreal_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = boreal_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = boreal_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = boreal_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = boreal_ocean
+	
+/********************    TERRAIN NOISE   ********************/
+
+	[TerrainNoise Template=BorNoisePhase01]
+	
+	[TerrainNoise Template=BorNoisePhase02]
+	
+	[TerrainNoise Template=BorNoisePhase03]
+	
+	[TerrainNoise Template=BorNoisePhase04]
+	
+	[TerrainNoise Template=BorNoisePhase05]
+
+/*************************    ACTOR GROUPS    **************************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_ukraine
+		name = "#mg_rmc_ukraine_village_ukraine_name"
+
+		[Object]
+		object_ids = random_city_ukraine
+		weight = 1
+	}
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_5
+		name = "#mg_rmc_france_bunkers_coastline_5_name"
+		search_relative_kingdom_ids = kingdom_attacker_5
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 128		
+		proximity_desired = 384
+	}
+}

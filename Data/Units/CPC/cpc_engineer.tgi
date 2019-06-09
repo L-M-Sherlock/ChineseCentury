@@ -1,0 +1,115 @@
+[Thing Template=AAUnitCPCProne]
+{
+	IDS = cpc_engineer
+	name = "#cpc_engineer_name"
+	editor_name = "#cpc_engineer_editor_name"
+
+	hide_if_missing_properties = false
+	
+	[View]
+	{
+		resource_prefix = CPCEngineer/CPCEngineer
+		
+		[WhenCreated Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = hammer
+		}
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[BodyComponent]
+	health = 200
+	defense = 1
+	
+	[BuilderComponent]
+	{
+		[BuildActor]
+		actor_ids = cpc_bunker
+		
+		[BuildActor]
+		actor_ids = cpc_bunker_aa
+		
+		[BuildActor]
+		actor_ids = cpc_bunker_artillery
+
+		[BuildActor]
+		actor_ids = chinese_minefield
+
+		[BuildActor]
+		actor_ids = bank_asian1
+
+		[BuildActor]
+		actor_ids = factory_asian1
+
+		[BuildActor]
+		actor_ids = refinery_asian1
+	}
+	
+	[CharacterComponent Template=AAEngineerCharacterComponent]
+
+	[ElementComponent]
+	required_structures = cpc_brigade_engineer
+
+	[MoverComponent]
+	speed_max = 3
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = engineer			
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				name = "#cpc_engineer_AbilityDefinition_name"
+				recharge_time = 3
+				range = 10
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+			
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_rifle
+			
+			}
+		}
+		
+		[Ability Template=AARepairLocal]
+		{			
+			animation1 = build1
+			
+			[AbilityDefinition Template=AARepairAction]
+			{
+				[Effect Template=RepairEffect]
+				amount = 8
+			}
+		}
+		
+		[Ability Template=AAConstructLocal]
+		{
+			animation1 = build1
+			
+			[AbilityDefinition Template=AAConstructAction]
+			{
+				[Effect Template=RepairEffect]
+				amount = 8
+			}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+[Thing Template=AAUnitCPCAirplaneFighter]
+{
+	IDS = cpc_fighter1
+	name = "#cpc_fighter1_name"
+	editor_name = "#cpc_fighter1_editor_name"
+
+	[View]
+	resource_prefix = CPCFighter/CPCFighter1
+
+	[PerformerComponent]
+	{
+		[Ability Template=AAAttackLocal]
+		{
+			idle_animation = idle  ;; Temporary fix
+						
+			[AbilityDefinition Template=AAAirplaneAttackMG]
+			{
+				name = "#cpc_fighter_AbilityDefinition_name"
+				mana_cost = 1
+				recharge_time = 1
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 110
+			
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = jpn_mg_heavy
+			
+			}
+		}
+
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAAttackAntiAirMG]
+			{
+				name = "#cpc_halftrack_aa_AbilityDefinition_name"
+				recharge_time = 2
+				range = 20
+								
+				[Effect Template=PierceDamageEffect]
+				amount = 40
+				
+				[WhenDo Template=FXC_PlaySFX]
+				audio_ids = jpn_aa
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+			}
+		}
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = mg
+		
+		[Property]
+		property_IDS = combat_unit
+
+		[Property]
+		property_IDS = fighter
+
+		[Property]
+		property_IDS = front
+
+		[Property]
+		property_IDS = captain
+	}
+}

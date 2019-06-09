@@ -1,0 +1,9 @@
+
+[Sun Template=Sun]
+{
+	IDS = sun_desert
+	name = "#sun_desert_name"
+	diffuse = 0.75, 0.75, 0.70
+	ambient = 0.65, 0.65, 0.55
+	specular = 0.1, 0.1, 0.15
+}
