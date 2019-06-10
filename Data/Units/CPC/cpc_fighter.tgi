@@ -24,19 +24,19 @@
 				name = "#cpc_fighter_AbilityDefinition_name"
 				mana_cost = 1
 				recharge_time = 0.5
-				range = 42
+				range = 45
 				
 				area = 4
 				attenuation_range_min = 2.5
 				attenuation_factor_max = 0.5
 
 				[Effect Template=BlastDamageEffect]
-				amount = 33
+				amount = 66
 
 				[Effect Template=AddDamageEffect]
 				damage_type_IDS = flame
 				targets = infantry
-				amount = 66
+				amount = 33
 
 				[Effect Template=AddDamageEffect]
 				damage_type_IDS = armor_piercing

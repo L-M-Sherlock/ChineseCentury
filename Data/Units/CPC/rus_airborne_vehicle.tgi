@@ -20,9 +20,9 @@
 	}
 
 	[ElementComponent]
-        {
-	        morale_value = 15
-         }
+    {
+        morale_value = 12
+     }
 	
 	[PropertiesComponent]
 	{
@@ -42,8 +42,8 @@
 
         [DenizenComponent]
 	{
-		guard_range = 20
-		guard_operational_range = 40
+		guard_range = 30
+		guard_operational_range = 45
 
 
 		[Organization]
@@ -85,13 +85,12 @@
 				area = 1.5
 				attenuation_range_min = 0.5
 				attenuation_factor_max = 0.5
-				max_targets = 9
 				
 				recharge_time = 1
-				range = 15
+				range = 16
 				
 				[Effect Template=PierceDamageEffect]
-				amount = 8
+				amount = 12
 				
 				[WhenDo Template=FXC_PlaySFX]
 				audio_ids = rus_mg_heavy
@@ -107,11 +106,11 @@
 				icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
 				
 				recharge_time = 3
-				range = 15
-				area = 2.5
+				range = 16
+				area = 3
 				
 				[Effect Template=BlastDamageEffect]
-				amount = 25
+				amount = 30
 				
 				[WhenDo Template=FXC_PlayObjectAnimation]
 				object_animation_IDS = Recoil1

@@ -41,7 +41,7 @@
 		element_IDS = cpc_tank_heavy
 	
 		[Slot]	;; support
-		element_IDS = cpc_rocket_truck
+		element_IDS = cpc_rocket_truck_co
 		
 		[Slot]	;; captain
 		element_IDS = cpc_tank_co

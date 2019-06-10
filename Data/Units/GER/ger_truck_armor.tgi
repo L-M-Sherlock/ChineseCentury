@@ -13,7 +13,7 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 350
+		money = 325
 
 		[Production]
 		money = 15

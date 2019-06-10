@@ -17,6 +17,8 @@
 
 	[EconomyComponent]
 	{
+    
+	    supply_required = true
 		[Cost]
 		money = 100
 		

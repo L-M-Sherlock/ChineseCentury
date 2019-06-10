@@ -47,16 +47,16 @@
 		element_IDS = cpc_tank_light
 		
 		[Slot]	;; rear guard 1
-		element_IDS = cpc_rocket_truck
+		element_IDS = cpc_tank_spa
 
 		[Slot]	;; rear guard 2
-		element_IDS = cpc_rocket_truck
+		element_IDS = cpc_tank_spa
 		
 		[Slot]	;; rear guard 3
-		element_IDS = cpc_rocket_truck
+		element_IDS = cpc_tank_spa
 	
 		[Slot]	;; flank
-		element_IDS = cpc_tank_spa
+		element_IDS = cpc_rocket_truck_co
 		
 		[Slot]	;; captain
 		element_IDS = cpc_tank_co

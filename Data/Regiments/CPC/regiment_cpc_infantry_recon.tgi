@@ -65,16 +65,16 @@
 		element_IDS = cpc_recon_QB1
 
 		[Slot]	;; front
-		element_IDS = null
+		element_IDS = cpc_recon_QB1
 
 		[Slot]	;; front
-		element_IDS = null
+		element_IDS = cpc_recon_QB1
 
 		[Slot]	;; front
-		element_IDS = null
+		element_IDS = cpc_recon_QB1
 
 		[Slot]	;; front
-		element_IDS = null
+		element_IDS = cpc_recon_QB1
 
 		[Slot]	;; captain
 		element_IDS = cpc_recon_QB

@@ -294,7 +294,7 @@
 		{
 			actor_IDS					= regiment_chn_infantry
 			value							= 4000
-			repeat_penalty					= 500
+			repeat_penalty					= 50
 		}
 
 		;;default_max_recruited_per_think		= 0
@@ -302,14 +302,14 @@
 		{
 			actor_IDS					= regiment_chn_paratrooper_MP_ground
 			value							= 3000
-			repeat_penalty					= 600
+			repeat_penalty					= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_chn_halftrack_artillery_ger
 			value							= 3200
-			repeat_penalty					= 400
+			repeat_penalty					= 200
 		}
 
 		/*[ActorPriority]
@@ -323,14 +323,14 @@
 		{
 			property_IDS					= mechanized_company
 			value							= 1000
-			;;repeat_penalty					= 150				
+			repeat_penalty					= 150				
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= artillery_company
 			value							= 1000
-			;;repeat_penalty					= 40				
+			repeat_penalty					= 40				
 		}
 
 		[ActorPriority]
@@ -899,7 +899,7 @@
 		{
 			stat								= building_limit_consumption
 			min									= -99
-			max									= -15
+			max									= -15.5
 		}
 	}
 
@@ -924,7 +924,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 24
 			cv_exponent_under_target = 1 
-			min_cv_to_assign = 100
+			min_cv_to_assign = 59
 		}
 
 		[DefensiveCV]
@@ -960,10 +960,20 @@
 			}
 		} ;; Exploration
 
+		[Unpacking]
+		{
+			base_priority							= 800
+			enemy_static_influence_mult			= -20
+			enemy_dynamic_influence_mult			= -10
+			max_friendly_building_bonus				= -5
+			max_friendly_building_bonus_per_building	= -5
+			fuzzy_factor					= 50
+		}
+
 		[Recruiting]
 		{
 			max_goals_per_think				= -1
-			num_military_goals				= 36
+			num_military_goals				= 10
 			insufficient_income_level		= 10
 
 			[SpecificRecruitRequest]
@@ -1073,8 +1083,7 @@
 			{
 				recruit_ids				= regiment_chn_paratrooper_MP
 				number_to_request			= 24
-				base_priority				= 1200
-				repeat_penalty				= -10
+				base_priority				= 9999
 			}
 
 		} ;; Recruiting
@@ -1116,7 +1125,6 @@
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_chn_paratrooper_MP_ground
-			max_recruited_per_think			= 12
 			value							= 1200
 		}
 
@@ -1129,8 +1137,8 @@
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_chn_paratrooper_MP
-			max_recruited_per_think			= 24
-			value							= 1250
+			value							= 2000
+			repeat_penalty				= -10
 		}
 
 		[ActorPriority]

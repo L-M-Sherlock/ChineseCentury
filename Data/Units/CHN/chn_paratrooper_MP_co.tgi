@@ -67,7 +67,7 @@
 			{
 				name = "#chn_infantry_AbilityDefinition_name"
 				recharge_time = 2
-				range = 16
+				range = 22
 			
 				[Effect Template=PierceDamageEffect]
 				amount = 20
@@ -91,7 +91,7 @@
 
 				recharge_time = 10
                 area = 1.5
-				range = 16
+				range = 18
 				
 				[Effect Template=BlastDamageEffect]
 				amount = 30
@@ -102,9 +102,14 @@
 				amount = 50
 
                 [Effect Template=AddDamageEffect]
-				damage_type_IDS = explosive
+				damage_type_IDS = flame
 				targets = vehicle
-				amount = 25
+				amount = 35
+
+                [Effect Template=AddDamageEffect]
+				damage_type_IDS = flame
+				targets = tank
+				amount = 20
 
 				[Effect Template=MoraleLossEffect]
 				amount = .5
@@ -112,21 +117,6 @@
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = usa_rocket
 				
-			}
-		}
-
-		[Ability Template=AAGrenadeLocal]
-		{		
-			[AbilityDefinition Template=AAThrownGrenade]
-			{
-				name = "#ger_infantry_AbilityDefinition_name_2"
-				projectile_ids = grenade02
-				
-				[Effect Template=BlastDamageEffect]
-				amount = 35
-
-				[Effect Template=MoraleLossEffect]
-				amount = .25
 			}
 		}
 	}

@@ -38,7 +38,7 @@
 			}
 		}
 
-                [Ability Template=AAGrenadeLocal]
+        [Ability Template=AAGrenadeLocal]
 		{
 		        turret_ids = Turret
 
@@ -103,10 +103,9 @@
 							attached = true
 						}	
 					}	
-                                }		
-                        }
-                }
-
+                }		
+            }
+        }
 	}
 	
 	[DenizenComponent]
