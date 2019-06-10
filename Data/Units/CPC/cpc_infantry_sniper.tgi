@@ -30,7 +30,7 @@
 		location = neck
 	}
 	[BodyComponent]
-	health = 125
+	health = 150
 	defense = 1
 
 	[CharacterComponent Template=AAInfantryCharacterComponent]
@@ -42,7 +42,7 @@
 	[ElementComponent]
 	{
            required_properties = tech_sniper_rifle
-	       morale_value = 5
+	       morale_value = 2
 	}
 		
 	[PropertiesComponent]
@@ -59,7 +59,7 @@
 		[Property]
 		property_IDS = combat_unit
  
-                [Property]
+        [Property]
 		property_IDS = captain
 	}
 	

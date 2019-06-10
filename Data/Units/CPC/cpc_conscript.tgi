@@ -29,8 +29,8 @@
 	[CharacterComponent Template=AAInfantryMeleeCharacterComponent]
 
 	[BodyComponent]
-	health = 175
-	defense = 0
+	health = 225
+	defense = 1
 
 	[ElementComponent]
 	{
@@ -55,6 +55,9 @@
 		
 		[Property]
 		property_IDS = combat_unit
+		
+		[Property]
+		property_IDS = captain
 	}
 	
 	[PerformerComponent]
@@ -74,76 +77,12 @@
 				[Effect Template=AddDamageEffect]
 				damage_type_IDS = gunfire
 				targets = infantry
-				amount = 40
+				amount = 50
 				[Effect Template=MoraleLossEffect]
-				amount = 1
+				amount = 2
 				;[WhenDo template=FXC_PlaySFX]
 				;audio_ids = metal_swing1
 			}
-		}
-	       
-		[Ability Template=AAAttackLocal]
-		{
-			move_bonus = 1314
-			use_bonus = 1314
-
-			[AbilityDefinition Template=AAAttack]
-			{	
-				IDS = banzai4
-				name = "#jpn_infantry_banzai_AbilityDefinition_name_2"
-				icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
-				
-				ability_type = null
-				range = 0.4
-				recharge_time = 1
-				
-				area = 1.2
-				attenuation_range_min = 0.5
-				attenuation_factor_max = 0.5
-				
-				impact_impulse = 2000
-				targets = +ENEMY, -INFANTRY -AIR
-
-				[Flags]
-				{
-					center_on_source = true
-				}
-
-				[Effect Template=BlastDamageEffect]
-				{
-					amount = 200
-				}
-
-                [Effect Template=AddDamageEffect]
-				{
-					damage_type_ids = armor_piercing
-					targets = vehicle
-					amount = 100
-				}
-
-				[Effect Template=AddDamageEffect]
-				{
-					damage_type_ids = flame
-					targets = SELF
-					amount = 666
-					hide_from_tooltip = true
-				}
-				
-				[Effect Template=MoraleLossEffect]
-				{
-				amount = 5
-				}
-				
-				[WhenDo template=FXC_CreateVFX]
-				{
-					VFX_IDS = temperate_medium_explosion_1
-			
-					at = SELF
-					attached = false
-				}
-	
-			}
-
 		}
 	}
 }

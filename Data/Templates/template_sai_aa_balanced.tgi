@@ -20,7 +20,7 @@
 		[ActorPriority]
 		{
 			property_IDS					= property_bunker_aa
-			repeat_penalty					= 200
+			repeat_penalty					= 500
 			value							= 10000
 		}
 		
@@ -30,34 +30,18 @@
 			repeat_penalty					= 1000
 			value							= 6000
 		}
-
-		[ActorPriority]
-		{
-			actor_IDS						= bank_asian1
-			value							= 60000
-            repeat_penalty				    = 2000
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS						= factory_asian1
-			value							= 40000
-            repeat_penalty				    = 1000
-		}
-
-
-		[ActorPriority]
-		{
-			actor_IDS						= refinery_asian1
-			value							= 40000
-            repeat_penalty				    = 1000
-		}
 		
 		[ActorPriority]
 		{
+			actor_ids                       = bank_asian1
+			repeat_penalty					= 1000
+			value							= 20000
+		}
+
+		[ActorPriority]
+		{
 			property_IDS					= property_city
-			value							= 7500
-            repeat_penalty				    = 7500
+			value							= 1500
 		}
 
 		[ActorPriority]
@@ -115,7 +99,7 @@
 		{
 			stat								= money_rate
 			min									= -999999
-			max									= 180
+			max									= 200
 		}		
 		
 		[Item]
@@ -140,7 +124,7 @@
 		[GoalPriority]
 		{
 			goal_IDS						= RESEARCH
-			multiplier						= 1
+			multiplier						= 2
 			fuzziness						= 10
 		}
 
@@ -231,7 +215,7 @@
 			{
 				recruit_ids			        = cpc_truck_infantry
 				base_priority				= 1500
-			    number_to_request			= 6
+			    number_to_request			= 8
 			}
 			
 			[SpecificRecruitRequest]
@@ -240,10 +224,6 @@
 				base_priority				= 500
 			}
 			
-			[SpecificRecruitRequest]
-			{
-				recruit_ids			        = cpc_truck_mechanized
-			}
 			
 			[SpecificRecruitRequest]
 			{
@@ -267,63 +247,57 @@
 		[ActorPriority]
 		{
 			property_IDS					= infhq
-			value							= 12000
-			repeat_penalty					= 2000
+			value							= 18000
+			repeat_penalty					= 1000
 		}
 		
 		[ActorPriority]
 		{
 			property_IDS					= airhq
-			value							= 8000
-			repeat_penalty					= 5000
+			value							= 15000
+			repeat_penalty					= 3000
 		}
         
-		[ActorPriority]
-		{
-			property_IDS					= mechhq
-			value							= 500
-			repeat_penalty					= 250
-		}
 
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_cpc_infantry_recon
-			value							= 9000
-            repeat_penalty			        = 1500
+			value							= 15000
+            repeat_penalty			        = 50
 		}
 		
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_cpc_conscript
-			value							= 18000
-            repeat_penalty			        = 3000
+			value							= 10000
+            repeat_penalty			        = 300
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_cpc_infantry_sniper1
-			value							= 12000
-            repeat_penalty				    = 1500
+			value							= 15000
+            repeat_penalty				    = 500
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_rus_airborne_vehicle_ground
-			value							= 10000
-			repeat_penalty					= 1000		
+			value							= 15000
+			repeat_penalty					= 1000	
 		}
 		
 		[ActorPriority]
 		{
 			property_IDS					= motor_pool
-			value							= 1000
+			value							= 8000
 			repeat_penalty					= 10000		
 		}		
         
 		[ActorPriority]
 		{
 			property_IDS					= engineer_brigade
-			value							= 800
+			value							= 7000
 			repeat_penalty					= 10000		
 		}
 		
@@ -370,7 +344,7 @@
 		[Item]
 		{
 			stat								= money_rate
-			min									= 180
+			min									= 200
 			max									= 360
 		}		
 		
@@ -400,7 +374,7 @@
 		[GoalPriority]
 		{
 			goal_IDS						= RESEARCH
-			multiplier						= 7.5
+			multiplier						= 2.5
 			fuzziness						= 100
 		}
 
@@ -509,7 +483,7 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_rus_airborne_vehicle_ground
-			    number_to_request			= 6
+			    number_to_request			= 12
 			}
 
 			[SpecificRecruitRequest]
@@ -521,17 +495,20 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_conscript
+			    number_to_request			= 6
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_infantry_sniper1
+			    number_to_request			= 6
 			}			
 		} ;; Recruiting
 		
 		[ActorPriority]
 		{
 			property_IDS					= engineer
+			value							= 10000
 			one_time_bonus					= 10000
 			repeat_penalty					= 10000
 		}
@@ -546,35 +523,45 @@
 		[ActorPriority]
 		{
 			property_IDS					= airhq
-			value							= 7000
+			value							= 15000
 			repeat_penalty					= 1000
 		}
 		
 		[ActorPriority]
 		{
 			property_IDS					= mechhq
-			value							= 8000
+			value							= 15000
 			repeat_penalty					= 500
 		}
 				
 		[ActorPriority]
 		{
 			property_IDS					= armorhq
-			value							= 9000
-			repeat_penalty					= 750
+			value							= 15000
+			repeat_penalty					= 300
 		}
 		
 		[ActorPriority]
 		{
 			property_IDS					= motor_pool
 			one_time_bonus					= 9000
+			value							= 9000
+			repeat_penalty					= 10000
+		}	
+		
+		[ActorPriority]
+		{
+			property_IDS					= artillery_brigade
+			one_time_bonus					= 8000
+			value							= 9000
 			repeat_penalty					= 10000
 		}		
 		
 		[ActorPriority]
 		{
 			property_IDS					= engineer_brigade
-			one_time_bonus					= 5000
+			one_time_bonus					= 7000
+			value							= 9000
 			repeat_penalty					= 9000
 		}		
 	
@@ -582,31 +569,46 @@
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_rus_airborne_vehicle_ground
-			value							= 8000
-			repeat_penalty					= 300
+			value							= 18000
+			repeat_penalty					= 750
 		}		
 		
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_cpc_infantry_mechanized
-			value							= 7500
-			max_recruited_per_think			= 5
-			repeat_penalty					= 150	
+			value							= 18000
+			repeat_penalty					= 1000	
 		}				
 		
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_cpc_rocket_truck
-			value							= 10000
+			value							= 11000
 			repeat_penalty					= 500	
 		}		
 
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_cpc_infantry_sniper1
-			value							= 12000
-            repeat_penalty				    = 1500
+			value							= 13000
+            repeat_penalty				    = 400
 		}		
+
+		[ActorPriority]
+		{
+			actor_IDS						= regiment_cpc_conscript
+			value							= 10000
+            repeat_penalty				    = 250
+		}		
+        
+		[ActorPriority]
+		{
+			property_IDS					= airfield
+			one_time_bonus					= 12000
+			value							= 12000
+			repeat_penalty					= 5000
+		}
+        
 		[Combat]
 		{
 			[AirAttacks]
@@ -990,8 +992,8 @@
 		[GoalPriority]
 		{
 			goal_IDS						= RESEARCH
-			multiplier						= 25
-			fuzziness						= 250
+			multiplier						= 5
+			fuzziness						= 150
 		}
 
 		[Research template = BalancedMainGameEgoResearch]
@@ -1042,8 +1044,8 @@
 
 		[Recruiting]
 		{
-			max_goals_per_think				= 16
-			num_military_goals				= 16
+			max_goals_per_think				= 10
+			num_military_goals				= 10
 			insufficient_income_level		= 10
 
 			[SpecificRecruitRequest]
@@ -1064,10 +1066,6 @@
 				one_time_bonus				= 2000
 			}
 
-			[SpecificRecruitRequest]
-			{
-				property_ids				= supplydepot
-			}
 			
 			[SpecificRecruitRequest]
 			{
@@ -1092,7 +1090,7 @@
 			{
 				property_ids				= engineer_brigade
 				base_priority				= 7000
-				one_time_bonus					= 8000
+				one_time_bonus					= 18000
 				repeat_penalty				= 10000
 			}
 
@@ -1100,7 +1098,7 @@
 			{
 				property_ids				= motor_pool
 				base_priority				= 8000
-				one_time_bonus					= 10000
+				one_time_bonus					= 20000
 				repeat_penalty				= 10000
 			}
 
@@ -1108,7 +1106,7 @@
 			{
 				property_ids				= artillery_brigade
 				base_priority				= 10000
-				one_time_bonus					= 10000
+				one_time_bonus					= 20000
 				repeat_penalty				= 10000
 			}
 
@@ -1138,44 +1136,45 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= airfield
-				one_time_bonus				= 12000
-				base_priority				= 7000
+				one_time_bonus				= 32000
+				base_priority				= 10000
 				repeat_penalty				= 5000
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_infantry_sniper1
+				number_to_request			= 6
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_rus_airborne_vehicle_ground
-				number_to_request			= 4
+				number_to_request			= 12
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_rus_airborne_vehicle
-			    number_to_request			= 6
+			    number_to_request			= 4
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_tank_artillery
-				number_to_request			= 4
+				number_to_request			= 6
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_tank_special
-				number_to_request			= 4
+				number_to_request			= 6
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_rocket_truck
-				number_to_request			= 4
+				number_to_request			= 6
 			}	
 			
 
@@ -1184,7 +1183,9 @@
 		[ActorPriority]
 		{
 			property_IDS					= engineer
+			value							= 20000
 			one_time_bonus					= 10000
+			repeat_penalty					= 10000
 		}
 
 		[ActorPriority]
@@ -1196,87 +1197,87 @@
 
 		[ActorPriority]
 		{
-			actor_IDS					= regiment_cpc_tank_artillery
-			value							= 8000
-			repeat_penalty					= 400
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_cpc_tank_special
-			value							= 10000
-			repeat_penalty					= 500
-		}
-		
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_cpc_rocket_truck
-			value							= 12000
-			repeat_penalty					= 750
-		}
-
-		[ActorPriority]
-		{
 			actor_IDS					= regiment_rus_airborne_vehicle_ground
-			value							= 10000
-			repeat_penalty					= 600
-		}
-		
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_rus_airborne_vehicle
-			value							= 8000
+			value							= 12000
 			repeat_penalty					= 600
 		}
 		
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_cpc_infantry_sniper1
-			value							= 12000
+			value							= 15000
             repeat_penalty				    = 1500
 		}
-		
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_cpc_tank_special
+			value							= 18000
+			repeat_penalty					= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_rus_airborne_vehicle
+			value							= 20000
+			repeat_penalty					= 250
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_cpc_rocket_truck
+			value							= 18000
+			repeat_penalty					= 150
+		}
+        
 		[ActorPriority]
 		{
 			property_IDS					= engineer_brigade
-			value							= 10000
+			value							= 20000
+			repeat_penalty					= 10000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= motor_pool
-			value							= 10000
+			value							= 20000
+			repeat_penalty					= 10000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= artillery_brigade
-			value							= 10000
+			value							= 20000
+			repeat_penalty					= 10000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= airhq
-			value							= 7000
+			value							= 15000
+			repeat_penalty					= 1000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= mechhq
-			value							= 8000
+			value							= 14000
+			repeat_penalty					= 500
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= armorhq
-			value							= 10000
+			value							= 15000
+			repeat_penalty					= 250
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= airfield
 			one_time_bonus					= 12000
-			repeat_penalty					= 10000
+			value							= 15000
+			repeat_penalty					= 5000
 		}
 
 
@@ -1291,7 +1292,7 @@
 				target_damage_ceiling					= 0.8
 				target_damage_bonus					= 2
 				
-				support_ground_attack_bonus			= 2
+				support_ground_attack_bonus			= 5
 				
 				no_bonus_penalty						= 0
 				
@@ -1330,7 +1331,7 @@
 		[Item]
 		{
 			stat								= money_rate
-			min									= 361
+			min									= 360
 			max									= 99999
 		}
 		
@@ -1345,21 +1346,21 @@
 		{
 			stat								= building_limit_consumption
 			min									= -99
-			max									= -15
+			max									= -15.5
 		}
 	}
 
 	[GoalEngine]
 	{
 
-		build_queue_max_items				= 16
+		build_queue_max_items				= 5
 
 
 		[GoalPriority]
 		{
 			goal_IDS						= RESEARCH
-			multiplier						= 50
-			fuzziness						= 500
+			multiplier						= 15
+			fuzziness						= 200
 		}
 
 		[Research template = BalancedMainGameEgoResearch]
@@ -1409,19 +1410,18 @@
 		[Unpacking] ;;wwzz
 		{
 			base_priority							= 800
-			enemy_static_influence_mult			= -10
+			enemy_static_influence_mult			= -100
 			enemy_dynamic_influence_mult			= -10
 			max_friendly_building_bonus				= -200
 			max_friendly_building_bonus_per_building	= -20
-			travel_distance_mult			= 0
 			fuzzy_factor					= 20
 		}
 
 		[Recruiting]
 		{
-			max_goals_per_think				= 36
+			max_goals_per_think				= 10
 			num_military_goals				= 24
-			insufficient_income_level		= -50
+			insufficient_income_level		= 10
 
 			[SpecificRecruitRequest]
 			{
@@ -1438,19 +1438,16 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= airhq
-				hq_type_not_available_bonus	= -2500
 			}
             
 			[SpecificRecruitRequest]
 			{
 				property_ids				= mechhq
-				hq_type_not_available_bonus	= -2500
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids				= armorhq
-				hq_type_not_available_bonus	= -2000
 			}
 
 			[SpecificRecruitRequest]
@@ -1482,6 +1479,7 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_infantry_sniper1
+				number_to_request			= 6
 			}
 			
 			[SpecificRecruitRequest]
@@ -1493,29 +1491,25 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_rus_airborne_vehicle
-				base_priority				= 3000
 				number_to_request			= 6
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_tank_artillery
-				base_priority				= 3500
 				number_to_request			= 6
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_tank_special
-				base_priority				= 3600
 				number_to_request			= 6
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_rocket_truck
-				base_priority				= 4000
-				number_to_request			= 12
+				number_to_request			= 6
 			}	
 			
 
@@ -1524,52 +1518,49 @@
 		[ActorPriority]
 		{
 			property_IDS					= supplydepot
-			value							= 4000
+			value							= 25000
             repeat_penalty				    = 50
 		}	
 		
 		[ActorPriority]
 		{
-			actor_IDS						= chinese_minefield
-			value							= 7200
-            repeat_penalty				    = 200
-		}
-		
-		[ActorPriority]
-		{
 			property_IDS					= engineer
 			value							= 10000
-			repeat_penalty					= 5000
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_cpc_tank_artillery
-			value							= 55000
-			repeat_penalty					= 1250
+			repeat_penalty					= 10000
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_cpc_tank_special
-			value							= 55000
-			repeat_penalty					= 750
+			value							= 18000
+			repeat_penalty					= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_rus_airborne_vehicle
-			value							= 50000
-			repeat_penalty					= 1000
+			value							= 19000
+			repeat_penalty					= 250
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_cpc_rocket_truck
-			value							= 55000
-			repeat_penalty					= 1000
+			value							= 18000
+			repeat_penalty					= 150
+		}
+        
+		[ActorPriority]
+		{
+			property_IDS		= tank_company
+			value			= 18000
 		}
 
+		[ActorPriority]
+		{
+			property_IDS		= artillery_company
+			value			= 18000
+		}
 		
 		[ActorPriority]
 		{
@@ -1601,7 +1592,7 @@
 				target_damage_ceiling					= 0.8
 				target_damage_bonus					= 2
 				
-				support_ground_attack_bonus			= 2
+				support_ground_attack_bonus			= 10
 				
 				no_bonus_penalty						= 0
 				
@@ -1611,7 +1602,7 @@
 				
 				resupplying_mult						= 0
 				
-				min_time_between_attacks				= 60
+				min_time_between_attacks				= 30
 				
 				extra_planes_multiplier_max			= 2
 				extra_planes_multiplier_per_plane		= 0.5

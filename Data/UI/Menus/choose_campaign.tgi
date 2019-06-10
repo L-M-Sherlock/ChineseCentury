@@ -219,14 +219,14 @@
 	}
 }
 
-[CampaignButtonsViewport Template=SharedViewportScrollWidget]
+[CampaignButtonsViewport Template=SharedViewportScrollWidget];;这是滑动条
 {
 	[View]
 	{
 		L = 28
 		T = 88
 		R = +287
-		B = +387
+		B = +607;;hr 387
 	}
 }
 

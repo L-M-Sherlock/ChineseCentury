@@ -3,7 +3,7 @@
 	name = "#ger_infantry_name"
 		
 	[BodyComponent]
-	health = 175
+	health = 150
 	defense = 1
 	
 	[CharacterComponent Template=AAInfantryCharacterComponent]

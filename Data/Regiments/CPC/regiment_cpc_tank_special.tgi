@@ -12,7 +12,7 @@
 		[Upkeep]
 		ammo = 30
 		oil = 30
-                unit_limit_consumed = 1
+        unit_limit_consumed = 1
 	}
 
 	[View]
@@ -34,7 +34,7 @@
 		audio_ids = cpc_tank_heavy_attack
 	}		
 	
-	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	[OrganizationComponent Template=AAArmorOrganizationComponent]
 	{	
 		layout_IDS = regiment_mechanized
 		operational_range = 40
@@ -62,5 +62,8 @@
 	{	
 		[Property]
 		property_ids = tank_company
+        
+		[Property]
+		property_ids = artillery_company
 	}
 }

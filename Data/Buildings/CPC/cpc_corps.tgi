@@ -121,11 +121,11 @@
 		{
 			property_IDS = tech_nosupply
 			type = GLOBAL	
-			research_time = 90
+			research_time = 60
 		
 			[ResearchCost Template=CostList]
 			{
-				money = 150
+				money = 125
 			}
 		}
 

@@ -7,17 +7,16 @@
 	area = 6
 	attenuation_range_min = 1
 	attenuation_factor_max = 0.25
-	max_targets = 8
 
 	range = 50
 	recharge_time = 9
 	reload_time = 0.0
 									
 	[Effect Template=BlastDamageEffect]
-	amount = 20
+	amount = 30
 
 	[Effect Template=MoraleLossEffect]
-	amount = 1
+	amount = 2
 	
 	[WhenDo template=FXC_PlaySFX]
 	audio_ids = rus_rocket_truck
