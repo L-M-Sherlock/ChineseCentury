@@ -58,6 +58,9 @@
 		property_IDS = captain
 
 		[Property]
+		property_IDS = front
+
+		[Property]
 		property_IDS = artillery
 	}
 

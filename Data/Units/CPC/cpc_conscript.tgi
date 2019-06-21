@@ -29,12 +29,9 @@
 	[CharacterComponent Template=AAInfantryMeleeCharacterComponent]
 
 	[BodyComponent]
-	health = 225
-<<<<<<< HEAD
-	defense = 0
-=======
+
+	health = 250
 	defense = 1
->>>>>>> df775833ab24204316fe2de60423295929c2c8ec
 
 	[ElementComponent]
 	{
@@ -44,7 +41,6 @@
 
 	[MoverComponent]
 		speed_max = 5
-        acceleration = 2.5
 	
 	[PropertiesComponent]
 	{
@@ -91,8 +87,12 @@
 =======
 				amount = 50
 				[Effect Template=MoraleLossEffect]
+<<<<<<< HEAD
 				amount = 2
 >>>>>>> df775833ab24204316fe2de60423295929c2c8ec
+=======
+				amount = 5
+>>>>>>> 47523fba7ee8abea5a3bcc25789433ff1f4d1f2f
 				;[WhenDo template=FXC_PlaySFX]
 				;audio_ids = metal_swing1
 			}

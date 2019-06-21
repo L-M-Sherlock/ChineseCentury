@@ -71,7 +71,7 @@
 			{				
 				name = "#cpc_infantry_sniper_AbilityDefinition_name"
 				recharge_time = 3
-				range = 18
+				range = 24
 				
 				[Effect Template=PierceDamageEffect]
 				amount = 5

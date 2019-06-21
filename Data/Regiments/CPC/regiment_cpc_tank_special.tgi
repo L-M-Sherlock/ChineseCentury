@@ -46,7 +46,7 @@
 		element_IDS = cpc_tank_destroyer
 
 		[Slot]	;; rear guard 2
-		element_IDS = cpc_rocket_truck
+		element_IDS = cpc_rocket_truck_co
 	
 		[Slot]	;; rear guard 3
 		element_IDS = cpc_tank_destroyer

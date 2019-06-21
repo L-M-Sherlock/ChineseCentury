@@ -7,11 +7,19 @@
 	[EconomyComponent]
 	{
 		[Cost]
+<<<<<<< HEAD
 
 		money = 25
 		
 		[Upkeep]
 	    ammo = 3
+=======
+		money = 20
+		
+		[Upkeep]
+	    ammo = 1
+        unit_limit_consumed = 0.5
+>>>>>>> 47523fba7ee8abea5a3bcc25789433ff1f4d1f2f
 	}
 
 	[View]
@@ -32,29 +40,45 @@
 	
 	[OrganizationComponent Template=AAInfantryOrganizationComponent]
 	{	
+<<<<<<< HEAD
 		layout_IDS = regiment_infantry
 <<<<<<< HEAD
         recruit_time = 10
 =======
+=======
+		layout_IDS = regiment_saodang
+>>>>>>> 47523fba7ee8abea5a3bcc25789433ff1f4d1f2f
         recruit_time = 5
 >>>>>>> df775833ab24204316fe2de60423295929c2c8ec
 		recruit_full = true
 		
 		[Slot]	;; front
 		element_IDS = cpc_conscript
-		
-		[Slot]	;; rear guard 1
+
+		[Slot]	;; front
 		element_IDS = cpc_conscript
 
-		[Slot]	;; rear guard 2
+		[Slot]	;; front
 		element_IDS = cpc_conscript
-		
-		[Slot]	;; rear guard 3
+
+		[Slot]	;; front
 		element_IDS = cpc_conscript
-	
-		[Slot]	;; flank
+
+		[Slot]	;; front
 		element_IDS = cpc_conscript
-		
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
 		[Slot]	;; captain
 <<<<<<< HEAD
 		element_IDS = cpc_paratrooper_co

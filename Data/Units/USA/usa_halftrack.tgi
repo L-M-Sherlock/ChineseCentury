@@ -32,7 +32,8 @@
 		[Property]
 		property_IDS = halftrack_unit
 	}
-        [DenizenComponent]
+/*    
+    [DenizenComponent]
 	{
 		guard_range = 15
 		guard_operational_range = 30
@@ -51,12 +52,8 @@
 		[Inventory]
 		actor_ids = usa_infantry_co
 		count = 1
-
-
-
-
 	}
-	
+*/	
 	[PerformerComponent]
 	
 	[View]

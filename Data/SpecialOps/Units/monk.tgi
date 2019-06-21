@@ -24,7 +24,7 @@
 	[ElementComponent]
 	{
 	       morale_value = 10	
-               required_properties = tech_special_forces
+           required_properties = tech_special_forces
 	}
 
 		
@@ -96,9 +96,9 @@
 				
 				ability_type = null
 				range = 0.5
-				recharge_time = 50
+				recharge_time = 30
 				
-				area = 5
+				area = 6
 				attenuation_range_min = 2
 				attenuation_factor_max = 0.33
 				

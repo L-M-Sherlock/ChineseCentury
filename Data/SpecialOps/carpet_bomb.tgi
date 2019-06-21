@@ -17,7 +17,7 @@
 	icon = /UI/%s/Game/SpecialOps/IconCarpetBomb.png
 
 	[Effect Template=BlastDamageEffect]
-	amount = 600
+	amount = 400
 
 	[Effect Template=AddDamageEffect]
 	damage_type_IDS = explosive

@@ -1174,7 +1174,7 @@ USAGE:
 		
 	[BodyComponent]
 	{ 
-		health = 300
+		health = 360
 		defense = 0
 		
 		[OnDeathAbility Template=AAAttackLocal]
@@ -1183,7 +1183,7 @@ USAGE:
 			{
 				name = "#template_unit_aa_BodyComponent_OnDeathAbility_AbilityDefinition_name"
 				area = 5
-				recharge_time = 10
+				recharge_time = 5
 				targets = +ACTOR -ORGANIZATION -AIR -MINE
 									
 				[Effect Template=BlastDamageEffect]
@@ -4692,8 +4692,8 @@ USAGE:
 	actor_state = falling
     [MoverComponent]
 	{
-		speed_max = 9
-		turn_radius = 15
+		speed_max = 12
+		turn_radius = 10
 	}	
 
 }

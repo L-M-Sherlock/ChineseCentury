@@ -6,7 +6,7 @@
 	[EconomyComponent]
 	{
 		[Upkeep]
-		ammo = 20
+		ammo = 10
 		oil = 15
 	}		
 	
@@ -33,13 +33,13 @@
 		element_IDS = rus_airborne_vehicle
 		
 		[Slot]	;; rear guard 1
-		element_IDS = cpc_Antitank_gun
+		element_IDS = rus_airborne_vehicle
 
 		[Slot]	;; rear guard 2
-		element_IDS = cpc_Antitank_gun
+		element_IDS = rus_airborne_vehicle
 	
 		[Slot]	;; rear guard 3
-		element_IDS = cpc_Antitank_gun
+		element_IDS = rus_airborne_vehicle
 	
 		[Slot]	;; flank
 		element_IDS = rus_airborne_vehicle
@@ -64,7 +64,7 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 250
+		money = 175
 	}
 
 	[Placement]
@@ -78,6 +78,6 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 175
+		money = 125
 	}
 }
