@@ -30,7 +30,11 @@
 
 	[BodyComponent]
 	health = 225
+<<<<<<< HEAD
 	defense = 0
+=======
+	defense = 1
+>>>>>>> df775833ab24204316fe2de60423295929c2c8ec
 
 	[ElementComponent]
 	{
@@ -55,6 +59,12 @@
 		
 		[Property]
 		property_IDS = combat_unit
+<<<<<<< HEAD
+=======
+		
+		[Property]
+		property_IDS = captain
+>>>>>>> df775833ab24204316fe2de60423295929c2c8ec
 	}
 	
 	[PerformerComponent]
@@ -74,13 +84,20 @@
 				[Effect Template=AddDamageEffect]
 				damage_type_IDS = gunfire
 				targets = infantry
+<<<<<<< HEAD
 				amount = 40
 				[Effect Template=MoraleLossEffect]
 				amount = 1
+=======
+				amount = 50
+				[Effect Template=MoraleLossEffect]
+				amount = 2
+>>>>>>> df775833ab24204316fe2de60423295929c2c8ec
 				;[WhenDo template=FXC_PlaySFX]
 				;audio_ids = metal_swing1
 			}
 		}
+<<<<<<< HEAD
 	       
 		[Ability Template=AAAttackLocal]
 		{
@@ -145,5 +162,7 @@
 			}
 
 		}
+=======
+>>>>>>> df775833ab24204316fe2de60423295929c2c8ec
 	}
 }
