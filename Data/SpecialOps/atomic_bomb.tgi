@@ -7,7 +7,7 @@
 	name = "#atomic_bomb_name"
 	description = "#atomic_bomb_description"
 	targets = +ACTOR -ORGANIZATION
-	recharge_time = 360
+	recharge_time = 300
 	area = 18
 	attenuation_range_min = 4
 	attenuation_factor_max = 0.25
@@ -16,7 +16,7 @@
 	icon = /UI/%s/Game/SpecialOps/IconAtomicBomb.png
 
 	[Effect Template=FireDamageEffect]
-	amount = 500
+	amount = 400
 
 	[Effect Template=SummonEffect]
 	hide_from_tooltip = true

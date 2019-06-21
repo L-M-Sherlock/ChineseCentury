@@ -3,7 +3,7 @@
 	mana_cost = 5
 	range = 15
 	area = 12
-	recharge_time = 5
+	recharge_time = 2
 }
 
 [Thing Template=AAUnitCPCAirplaneBomber]

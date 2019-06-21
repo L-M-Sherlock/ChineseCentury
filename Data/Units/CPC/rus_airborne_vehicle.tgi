@@ -15,13 +15,14 @@
 	
 	[MoverComponent]
 	{
-		speed_max = 5
-		acceleration = 5
+		speed_max = 6
+		acceleration = 6
 	}
 
 	[ElementComponent]
     {
-        morale_value = 12
+        morale_value = 8
+		required_structures = cpc_motor_pool
      }
 	
 	[PropertiesComponent]
@@ -40,7 +41,7 @@
 
 	}
 
-        [DenizenComponent]
+/*    [DenizenComponent]
 	{
 		guard_range = 30
 		guard_operational_range = 45
@@ -63,7 +64,7 @@
 
 
 	}
-	
+*/	
 	[PerformerComponent]
 	{
 		[Turret]

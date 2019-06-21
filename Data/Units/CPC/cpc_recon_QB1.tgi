@@ -67,15 +67,17 @@
 			[AbilityDefinition Template=AAInfantrySMG]
 			{
 				name = "#cpc_reconQB_AbilityDefinition_name"
-				area = 1
+				area = 3
 				attenuation_range_min = 0.5
 				attenuation_factor_max = 0.5
-				max_targets = 5
 				recharge_time = 0.2
-				range = 5
+				range = 6
 				
 				[Effect Template=PierceDamageEffect]
 				amount = 2
+                
+                [Effect Template=MoraleLossEffect]
+                amount = 1
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = usa_mg_light

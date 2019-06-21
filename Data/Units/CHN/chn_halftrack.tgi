@@ -35,7 +35,7 @@
 		[Property]
 		property_IDS = halftrack_unit
 	} 
-
+/*
         [DenizenComponent]
 	{
 		guard_range = 15
@@ -59,7 +59,7 @@
 
 
 	}
-
+*/
 	
 	[PerformerComponent]
 	

@@ -75,7 +75,7 @@
                 [Effect Template=AddDamageEffect]
 				damage_type_IDS = gunfire
 				targets = infantry
-				amount = 40
+				amount = 15
 
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = chn_mg_light

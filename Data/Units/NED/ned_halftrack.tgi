@@ -32,7 +32,8 @@
 		[Property]
 		property_IDS = halftrack_unit
 	}
-        [DenizenComponent]
+/*
+    [DenizenComponent]
 	{
 		guard_range = 15
 		guard_operational_range = 30
@@ -55,7 +56,7 @@
 
 
 	}
-	
+*/	
 	[View]
 	{
 		resource_prefix = nedHalftrack/nedHalftrack

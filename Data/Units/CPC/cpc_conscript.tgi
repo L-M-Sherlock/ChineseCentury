@@ -29,7 +29,7 @@
 	[CharacterComponent Template=AAInfantryMeleeCharacterComponent]
 
 	[BodyComponent]
-	health = 225
+	health = 250
 	defense = 1
 
 	[ElementComponent]
@@ -40,7 +40,6 @@
 
 	[MoverComponent]
 		speed_max = 5
-        acceleration = 2.5
 	
 	[PropertiesComponent]
 	{
@@ -79,7 +78,7 @@
 				targets = infantry
 				amount = 50
 				[Effect Template=MoraleLossEffect]
-				amount = 2
+				amount = 5
 				;[WhenDo template=FXC_PlaySFX]
 				;audio_ids = metal_swing1
 			}

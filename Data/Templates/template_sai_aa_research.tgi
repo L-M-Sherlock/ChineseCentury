@@ -662,7 +662,7 @@
 	[TechPriority]
 	{
 		tech						= tech_rocket_truck
-		priority					= 0
+		priority					= 500
 	}
 
 	;; access to tankettes

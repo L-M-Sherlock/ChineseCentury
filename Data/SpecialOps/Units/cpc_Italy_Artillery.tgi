@@ -20,8 +20,8 @@
 	
 	[MoverComponent]
 	{
-		speed_max = 4
-        acceleration = 1.5
+		speed_max = 5
+        acceleration = 2.5
 	}
 	
 	[PropertiesComponent]

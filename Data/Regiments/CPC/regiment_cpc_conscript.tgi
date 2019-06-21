@@ -7,10 +7,11 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 25
+		money = 20
 		
 		[Upkeep]
-	    ammo = 3
+	    ammo = 1
+        unit_limit_consumed = 0.5
 	}
 
 	[View]
@@ -31,25 +32,37 @@
 	
 	[OrganizationComponent Template=AAInfantryOrganizationComponent]
 	{	
-		layout_IDS = regiment_infantry
+		layout_IDS = regiment_saodang
         recruit_time = 5
 		recruit_full = true
 		
 		[Slot]	;; front
 		element_IDS = cpc_conscript
-		
-		[Slot]	;; rear guard 1
+
+		[Slot]	;; front
 		element_IDS = cpc_conscript
 
-		[Slot]	;; rear guard 2
+		[Slot]	;; front
 		element_IDS = cpc_conscript
-		
-		[Slot]	;; rear guard 3
+
+		[Slot]	;; front
 		element_IDS = cpc_conscript
-	
-		[Slot]	;; flank
+
+		[Slot]	;; front
 		element_IDS = cpc_conscript
-		
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
 		[Slot]	;; captain
 		element_IDS = cpc_conscript
 	}

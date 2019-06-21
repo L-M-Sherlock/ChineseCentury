@@ -71,82 +71,17 @@
 				area = 1
 				attenuation_range_min = 0.5
 				attenuation_factor_max = 0.5
-				max_targets = 5
-				recharge_time = 0.2
-				range = 5
+				recharge_time = 1
+				range = 12
 				
 				[Effect Template=PierceDamageEffect]
-				amount = 2
+				amount = 3
+
+                [Effect Template=MoraleLossEffect]
+                amount = 3
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = usa_mg_light
-            }
-        }
-        
-        [Ability Template=AAGrenadeLocal]
-		{
-            [AbilityDefinition Template=AAThrownGrenade]
-            {
-                name = "#rus_conscript_AbilityDefinition_name_2"
-                icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
-                projectile_ids = grenade01
-                range = 30
-                area = 5
-                recharge_time = 60
-                
-                [Effect Template=FireDamageEffect]
-                amount = 10
-
-                [Effect Template=MoraleLossEffect]
-                amount = 1
-                
-                [Flags]
-                 spell = true	       	
-
-                [Effect Template=EnchantmentEffect]
-                {
-                    [EnchantmentProperty]
-                    {
-                        IDS = radiation5
-                        name = "#Molotov_cocktail_Effect_EnchantmentProperty_name"
-                        enchantment_type = ench_type_radiation
-                        duration = 180
-                        icon = /Properties/PropertyIcons/IconPropertyHealth.png
-                
-                        [Modifier template=PeriodicDamageModifier]
-                        damage_type = flame
-                        amount = 1
-
-                        [WhenAdded Template=FXC_CreateVFX]
-                        {
-                            VFX_IDS = atomic_radiation
-                        }
-            
-                        [WhenAdded Template=FXC_CreateVFX]
-                        {
-                            VFX_IDS = atomic_sparks_large
-                            target_flags = +tank
-                            location = position
-                            attached = true
-                        }
-            
-                        [WhenAdded Template=FXC_CreateVFX]
-                        {
-                            VFX_IDS = atomic_sparks_large
-                            target_flags = +vehicle
-                            location = position
-                            attached = true
-                        }
-            
-                        [WhenAdded Template=FXC_CreateVFX]
-                        {
-                            VFX_IDS = atomic_sparks_small
-                            target_flags = +infantry
-                            location = position
-                            attached = true
-                        }	
-                    }	
-                }		
             }
         }
 	}
