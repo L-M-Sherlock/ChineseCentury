@@ -55,12 +55,10 @@
 		
 		[Property]
 		property_IDS = combat_unit
-<<<<<<< HEAD
-=======
 		
 		[Property]
 		property_IDS = captain
->>>>>>> df775833ab24204316fe2de60423295929c2c8ec
+
 	}
 	
 	[PerformerComponent]
@@ -80,24 +78,17 @@
 				[Effect Template=AddDamageEffect]
 				damage_type_IDS = gunfire
 				targets = infantry
-<<<<<<< HEAD
-				amount = 40
-				[Effect Template=MoraleLossEffect]
-				amount = 1
-=======
+
 				amount = 50
 				[Effect Template=MoraleLossEffect]
-<<<<<<< HEAD
-				amount = 2
->>>>>>> df775833ab24204316fe2de60423295929c2c8ec
-=======
+
 				amount = 5
->>>>>>> 47523fba7ee8abea5a3bcc25789433ff1f4d1f2f
+
 				;[WhenDo template=FXC_PlaySFX]
 				;audio_ids = metal_swing1
 			}
 		}
-<<<<<<< HEAD
+
 	       
 		[Ability Template=AAAttackLocal]
 		{
@@ -162,7 +153,6 @@
 			}
 
 		}
-=======
->>>>>>> df775833ab24204316fe2de60423295929c2c8ec
+
 	}
 }
