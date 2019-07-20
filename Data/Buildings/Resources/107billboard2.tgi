@@ -1,0 +1,24 @@
+[Thing Template=AASharedDoodad]
+{
+	IDS = 107billboard2
+	name = "Billboard"
+	
+	[Flags]
+	random_orientation = false	
+	blocking = true
+	axis_locked = false
+	
+	[Size]
+	scale_min = 2.00
+	scale_max = 2.00
+
+	blocking_shape = SQUARE
+	blocking_radius = 2
+	
+	[View]
+	{
+		aspects_as_variations = false
+		resource_prefix = 1072/107
+		shadow_type = none
+	}
+}

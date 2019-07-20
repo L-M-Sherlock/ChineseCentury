@@ -986,7 +986,7 @@
 				fixed target_damage_ceiling					= 0.8
 				fixed target_damage_bonus					= 2
 				
-				fixed support_ground_attack_bonus			= 5
+				fixed support_ground_attack_bonus			= 2
 				
 				fixed no_bonus_penalty						= 0
 				

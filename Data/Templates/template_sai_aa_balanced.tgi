@@ -1351,8 +1351,8 @@
 		[Unpacking] ;;wwzz
 		{
 			base_priority							= 800
-			enemy_static_influence_mult			= -150
-			enemy_dynamic_influence_mult			= -50
+			enemy_static_influence_mult			= -100
+			enemy_dynamic_influence_mult			= -20
 			max_friendly_building_bonus				= -200
 			max_friendly_building_bonus_per_building	= -25
 			fuzzy_factor					= 50
@@ -1461,6 +1461,7 @@
 		{
 			property_IDS					= supplydepot
 			value							= 25000
+            repeat_penalty				    = 50
 		}	
 		
 		[ActorPriority]

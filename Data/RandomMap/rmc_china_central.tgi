@@ -87,4 +87,6 @@
 
 	[ActorGroup Template=ArtilleryBatteries]
 	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=HRTankFactory]
 }

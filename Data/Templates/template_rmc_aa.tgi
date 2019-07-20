@@ -166,6 +166,12 @@ USAGE:
 	recommended_kingdoms_min = 10
 	recommended_kingdoms_max = 12
 
+	[MapSize]
+	width = 960
+	height = 960
+	recommended_kingdoms_min = 10
+	recommended_kingdoms_max = 12
+
 /*	KINGDOMS			*/
 
 	[Kingdom Template=RMCKingdomMajor]
@@ -450,4 +456,29 @@ USAGE:
 	group_ids = start_corps*
 	proximity_min = 12
 	proximity_desired = 12
+}
+
+[Template HRTankFactory Template=RMCActorGroup]
+{
+	ids = start_hr_tank_factory
+	name = "Tank Factory"
+
+	kingdom_ids = side_enemy
+	show_ui = true
+
+	range = 0,2
+	area_factor = 1.75
+
+	intraproximity_min = 64
+
+	properties = tech_noupkeep
+
+	[Object]
+	object_ids = TankFactory
+	weight = 1
+
+	[GroupRestriction]
+	group_ids = start_corps*
+	proximity_min = 24
+	proximity_desired = 24
 }

@@ -1124,3 +1124,18 @@
 	}
 }
 
+;; -------- HR DLC ------------- ;;
+
+[Property Template=AATechnology]
+{
+	IDS = HR_TankFactory_Technology
+	name = "#properties_technologies_tech_rus_tankproduction_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	action_button_icon = TechIcons/IconTankProduction.png
+	
+	required_properties = armorhq
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = RECRUIT_COST
+	amount = 0.25
+}
