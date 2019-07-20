@@ -482,3 +482,101 @@ USAGE:
 	proximity_min = 24
 	proximity_desired = 24
 }
+
+[Template HRGERBerlinCity Template=RMCActorGroup]
+{
+	ids = hr_ger_berlin_city
+	name = "berlin city 20"
+
+	kingdom_ids = side_enemy
+	show_ui = false
+
+	range = 20,20
+
+	intraproximity_min = 32
+
+	[RequiredObject]
+	object_ids = berlin_city_center
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[GroupRestriction]
+	group_ids = start_corps*
+	proximity_min = 64
+	proximity_desired = 128
+}

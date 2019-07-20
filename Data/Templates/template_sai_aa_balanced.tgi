@@ -1040,14 +1040,12 @@
 			{
 				recruit_ids			        = cpc_truck_armor
 			    number_to_request			= 5
-				base_priority				= 8000
 			}	
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = cpc_truck_mechanized
 			    number_to_request			= 6
-				base_priority				= 7000
 			}	
 			
 			[SpecificRecruitRequest]
@@ -1202,15 +1200,15 @@
 		[ActorPriority]
 		{
 			property_IDS					= mechhq
-			value							= 14000
-			repeat_penalty					= 500
+			value							= 15000
+			repeat_penalty					= 300
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= armorhq
-			value							= 15000
-			repeat_penalty					= 250
+			value							= 15500
+			repeat_penalty					= 150
 		}
 
 		[ActorPriority]
