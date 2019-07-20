@@ -8,13 +8,14 @@
 
 	[BodyComponent]
 	{
-		health = 800
-		defense = 30
+		health = 1000
+		defense = 40
 	}
 	
 	[MoverComponent]
 	{
-		speed_max = 2
+		speed_max = 2.5
+		acceleration = 1
 		
 		[WhenStartMoving template=FXC_CreateVFX]
 		{
@@ -40,7 +41,7 @@
 	{
 		required_structures = ger_motor_pool
 		required_properties = tech_heavy_tank
-		morale_value = 50
+		morale_value = 100
 	}
 		
 	[PropertiesComponent]
@@ -69,15 +70,33 @@
 			{				
 				name = "#ger_tank_heavy_17cmPaK46_name"
 				recharge_time = 8
-				range = 32
-				area = 3
+				range = 36
 
-				[Effect Template=BlastDamageEffect]
-				amount = 200
+				[Effect Template=APDamageEffect]
+				amount = 400
 
 				[Effect Template=MoraleLossEffect]
-				amount = 5
-					
+				amount = 10
+                
+                [Effect Template=EnchantmentEffect]
+				{
+                    targets = Vehicle
+					[EnchantmentProperty Template=EnchantmentProperty]
+					{
+					IDS = at_stun_ger3
+					name = "#gbr_tank_destroyer_AbilityDefinition_Effect_EnchantmentProperty_name"
+					duration = 4
+					enchantment_type = ench_type_generic
+					icon = /properties/PropertyIcons/IconPropertyMovement.png
+			
+						[Modifier Template=FlagModifier]
+						modifier_flag = PARALYZE			
+		
+						[WhenAdded template=FXC_CreateVFX]
+						VFX_IDS = smoke_tint
+					}
+				}
+                
 				[WhenDo Template=FXC_PlayObjectAnimation]
 				object_animation_IDS = Recoil1
 				

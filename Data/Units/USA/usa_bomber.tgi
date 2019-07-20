@@ -99,12 +99,12 @@
 				IDS = usa_bomb5
 				mana_cost = 0		
 				name = "#usa_bomber_AbilityDefinition_name_5"
-				area = 6
+				area = 9
 				projectile_ids = napalm_bomb
 				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
 			
 				[Effect Template=FireDamageEffect]
-				amount = 60
+				amount = 100
 				
 				[Effect Template=MoraleLossEffect]
 				amount = 2

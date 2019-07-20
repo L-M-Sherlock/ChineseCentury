@@ -82,16 +82,16 @@
 				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
 				range = 12
 				recharge_time = 3
-				area = 3
+				area = 4
 				
 				[Effect Template=FireDamageEffect]
-				amount = 35
+				amount = 75
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = gbr_flame_tank
 				
 				[Effect Template=MoraleLossEffect]
-				amount = .5
+				amount = 1
 				
 			}
 		}

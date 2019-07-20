@@ -48,14 +48,13 @@
 				name = "#ita_tank_spa_AbilityDefinition_name"
 				recharge_time = 12
 				range = 50
-				area = 5
-				max_targets = 18
+				area = 6
 					
 				[Flags] 
 				bombard = true
 				
 				[Effect Template=BlastDamageEffect]
-				amount = 100
+				amount = 200
 
 				[Effect Template=MoraleLossEffect]
 				amount = 5
