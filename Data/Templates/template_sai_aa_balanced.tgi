@@ -1152,7 +1152,7 @@
 		{
 			actor_IDS					= regiment_cpc_tank_special
 			value							= 18000
-			repeat_penalty					= 100
+			repeat_penalty					= 400
 		}
 
 		[ActorPriority]
@@ -1166,7 +1166,7 @@
 		{
 			actor_IDS					= regiment_cpc_rocket_truck
 			value							= 20000
-			repeat_penalty					= 150
+			repeat_penalty					= 400
 		}
         
 		[ActorPriority]
@@ -1200,14 +1200,14 @@
 		[ActorPriority]
 		{
 			property_IDS					= mechhq
-			value							= 15000
-			repeat_penalty					= 300
+			value							= 16500
+			repeat_penalty					= 200
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= armorhq
-			value							= 15500
+			value							= 17000
 			repeat_penalty					= 150
 		}
 
