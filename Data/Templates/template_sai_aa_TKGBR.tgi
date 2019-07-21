@@ -291,13 +291,6 @@
 
 		[ActorPriority]
 		{
-			property_IDS		= paratrooper_company
-			value			= 9500
-			repeat_penalty		= 50
-		}
-
-		[ActorPriority]
-		{
 			property_IDS		= special_company
 			value			= 9999
 			repeat_penalty		= 50
@@ -463,9 +456,9 @@
 
 		[ActorPriority]
 		{
-			property_IDS		= paratrooper_company
-			value			= 8501
-			repeat_penalty		= 300
+			property_IDS		= special_company
+			value			= 8997
+			repeat_penalty		= 50
 		}
 
 		[ActorPriority]

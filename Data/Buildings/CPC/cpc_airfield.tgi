@@ -78,7 +78,7 @@
 		}
 
 		[AirAttackCost]
-		money = 150
+		money = 125
 	
 		[AirReconCost]
 		money = 50
@@ -97,7 +97,7 @@
 		[Upkeep]
 		ammo = 20
 		oil = 20
-		building_limit_consumed = 0
+		building_limit_consumed = 1
 	}
 
 	[MobileDeploymentComponent]

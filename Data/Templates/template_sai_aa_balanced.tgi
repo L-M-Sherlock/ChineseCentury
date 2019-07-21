@@ -34,7 +34,7 @@
 		[ActorPriority]
 		{
 			actor_ids                       = bank_asian1
-			repeat_penalty					= 1000
+			repeat_penalty					= 500
 			value							= 20000
 		}
 
@@ -186,7 +186,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= infhq
-			    number_to_request			= 8
+			    number_to_request			= 10
 			}		
 		
 			[SpecificRecruitRequest]
@@ -215,7 +215,7 @@
 			{
 				recruit_ids			        = cpc_truck_infantry
 				base_priority				= 1500
-			    number_to_request			= 8
+			    number_to_request			= 10
 			}			
 			
 			[SpecificRecruitRequest]
@@ -240,7 +240,7 @@
 		[ActorPriority]
 		{
 			property_IDS					= infhq
-			value							= 18000
+			value							= 20000
 			repeat_penalty					= 1000
 		}
 		
@@ -1091,13 +1091,6 @@
 			{
 				property_ids				= armorhq
 			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= airfield
-				one_time_bonus				= 5000
-				repeat_penalty				= 1000
-			}
 			
 			[SpecificRecruitRequest]
 			{
@@ -1214,8 +1207,7 @@
 		[ActorPriority]
 		{
 			property_IDS					= airfield
-			one_time_bonus					= 12000
-			value							= 15000
+			value							= 14500
 			repeat_penalty					= 5000
 		}
 
