@@ -293,7 +293,7 @@
 		{
 			property_IDS		= special_company
 			value			= 9999
-			repeat_penalty		= 50
+			repeat_penalty		= 150
 		}
 
 		[ActorPriority]

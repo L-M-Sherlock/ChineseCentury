@@ -72,13 +72,13 @@
 				attenuation_range_min = 0.5
 				attenuation_factor_max = 0.5
 				recharge_time = 1
-				range = 12
+				range = 10
 				
 				[Effect Template=PierceDamageEffect]
 				amount = 3
 
                 [Effect Template=MoraleLossEffect]
-                amount = 3
+                amount = 1
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = usa_mg_light

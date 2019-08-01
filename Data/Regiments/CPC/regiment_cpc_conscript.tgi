@@ -8,7 +8,7 @@
 	{
 		[Cost]
 
-		money = 20
+		money = 15
 		
 		[Upkeep]
 	    ammo = 1

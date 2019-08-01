@@ -376,7 +376,7 @@
 		{
 			cv_advantage_target = 0.1
 			cv_advantage_max = 24
-			cv_exponent_under_target = 1 
+			cv_exponent_under_target = 4 
 			min_cv_to_assign = 50
 		}
 
@@ -457,7 +457,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= engineer_brigade
-				base_priority				= 2250
+				base_priority				= 8000
 				repeat_penalty				= 10000
 			}
 			
@@ -469,7 +469,6 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_rocket_truck
-			    number_to_request			= 6
 			}
 			
 			[SpecificRecruitRequest]
@@ -562,14 +561,14 @@
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_cpc_infantry_sniper1
-			value							= 16000
+			value							= 18000
             repeat_penalty				    = 400
 		}		
 
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_cpc_conscript
-			value							= 15000
+			value							= 18000
             repeat_penalty				    = 250
 		}		
         
@@ -693,6 +692,17 @@
 			}
 		} ;; Exploration
 
+		[Unpacking]
+		{
+			base_priority                            = 500
+			enemy_static_influence_mult              = 10
+			enemy_dynamic_influence_mult             = 10
+			max_friendly_building_bonus              = 500
+			max_friendly_building_bonus_per_building = 200
+			travel_distance_mult                     = 3
+			fuzzy_factor                             = 150
+		}
+
 
 		[Recruiting]
 		{
@@ -726,6 +736,13 @@
 			property_IDS					= supplydepot
 			value							= 50000
 			repeat_penalty					= -1000
+		}
+		
+		[ActorPriority]
+		{
+			actor_ids                       = factory_asian1
+			value							= 60000
+			repeat_penalty					= 1000
 		}
 
 		[Combat]
@@ -872,12 +889,30 @@
 			}
 
 		} ;; Recruiting
+
+		[Unpacking]
+		{
+			base_priority                            = 500
+			enemy_static_influence_mult              = 10
+			enemy_dynamic_influence_mult             = 10
+			max_friendly_building_bonus              = 500
+			max_friendly_building_bonus_per_building = 200
+			travel_distance_mult                     = 3
+			fuzzy_factor                             = 150
+		}
 		
 		[ActorPriority]
 		{
 			property_IDS					= supplydepot
 			value							= 50000
-			repeat_penalty					= -100
+			repeat_penalty					= -1000
+		}
+		
+		[ActorPriority]
+		{
+			actor_ids                       = refinery_asian1
+			repeat_penalty					= 1000
+			value							= 60000
 		}
 		
 		[Combat]
@@ -966,7 +1001,7 @@
 		{
 			cv_advantage_target = 0.1
 			cv_advantage_max = 24
-			cv_exponent_under_target = 1 
+			cv_exponent_under_target = 6
 			min_cv_to_assign = 50
 		}
 
@@ -1039,7 +1074,7 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = cpc_truck_armor
-			    number_to_request			= 5
+			    number_to_request			= 6
 			}	
 			
 			[SpecificRecruitRequest]
@@ -1074,6 +1109,11 @@
 
 			[SpecificRecruitRequest]
 			{
+				property_ids		= airfield
+			}
+
+			[SpecificRecruitRequest]
+			{
 				property_ids				= engineer
 			}
 
@@ -1101,19 +1141,16 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_tank_artillery
-				number_to_request			= 6
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_tank_special
-				number_to_request			= 6
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_rocket_truck
-				number_to_request			= 12
 			}	
 			
 
@@ -1137,15 +1174,15 @@
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_cpc_infantry_sniper1
-			value							= 15000
-            repeat_penalty				    = 1500
+			value							= 36000
+            repeat_penalty				    = 2000
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_cpc_tank_special
-			value							= 18000
-			repeat_penalty					= 400
+			value							= 20000
+			repeat_penalty					= 800
 		}
 
 		[ActorPriority]
@@ -1158,8 +1195,8 @@
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_cpc_rocket_truck
-			value							= 20000
-			repeat_penalty					= 400
+			value							= 30000
+			repeat_penalty					= 1000
 		}
         
 		[ActorPriority]
@@ -1207,7 +1244,7 @@
 		[ActorPriority]
 		{
 			property_IDS					= airfield
-			value							= 14500
+			value							= 18000
 			repeat_penalty					= 5000
 		}
 
@@ -1300,7 +1337,7 @@
 		{
 			cv_advantage_target = 0.1
 			cv_advantage_max = 24
-			cv_exponent_under_target = 1 
+			cv_exponent_under_target = 8 
 			min_cv_to_assign = 50
 		}
 

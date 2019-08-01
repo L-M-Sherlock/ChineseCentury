@@ -10,14 +10,27 @@
 	name									= "#china_sai_chn_main_game_ego_unit_limit_max_needed_name"
 } ;; MainGameEgo
 
-[Ego template = InfantryEndGameEgo]
+[Ego template = InfantryAmmoEndGameEgo]
 {
-	IDS										= chn_end_game_ego
+	IDS										= chn_ammo_end_game_ego
 	name									= "#china_sai_chn_end_game_ego_unit_limit_max_needed_name"
 } ;; EndGameEgo
+
+[Ego template = InfantryOilEndGameEgo]
+{
+	IDS										= chn_oil_end_game_ego
+	name									= "#china_sai_chn_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
 [Ego template = InfantryWarGameEgo]
 {
 	IDS										= chn_war_game_ego
+	name									= "#china_sai_chn_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = InfantryFightGameEgo]
+{
+	IDS										= chn_fight_game_ego
 	name									= "#china_sai_chn_end_game_ego_unit_limit_max_needed_name"
 } ;; EndGameEgo
 
@@ -35,10 +48,16 @@
 	IDS										= chn_main_game_ego
 
 	[Ego]
-	IDS										= chn_end_game_ego
+	IDS										= chn_ammo_end_game_ego
+
+	[Ego]
+	IDS										= chn_oil_end_game_ego
 
 	[Ego]
 	IDS										= chn_war_game_ego
+
+	[Ego]
+	IDS										= chn_fight_game_ego
 
 	[Nation]
 	IDS										= nation_chn

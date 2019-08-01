@@ -7,35 +7,35 @@
 		{
 			property_IDS					= corpshq
 			value							= 10000
-			repeat_penalty					= 3000
+			repeat_penalty					= 10000
+		}
 
+		[ActorPriority]
+		{
+			property_IDS					= property_bunker
+			repeat_penalty					= -50
+			value							= 10000
 		}
 		
 		[ActorPriority]
 		{
-			property_IDS					= supplydepot
-			value							= 1500
-			max_recruited_per_think			= 10
+			property_IDS					= property_bunker_aa
+			repeat_penalty					= 200
+			value							= 12000
 		}
-
 		
-
 		[ActorPriority]
 		{
-			property_IDS					= airfield
-			value							= 1000
+			property_IDS					= property_bunker_artillery
+			repeat_penalty					= -50
+			value							= 10000
 		}
-
-		
 
 		[ActorPriority]
 		{
 			property_IDS					= property_city
-			value							= -5000
+			value							= 1500
 		}
-
-		
-
 
 	} ;; GoalEngine
 } ;; AAInfantryBaseEgo
@@ -47,38 +47,53 @@
 	[Filters]
 	{
 		[Item]
-		stat								= ammo_rate
-		min									= 0
-		max									= 130
+		{
+			stat								= money_rate
+			min									= -999999
+			max									= 200
+		}		
+		
+		[Item]
+		{
+			stat								= ammo_rate
+			min									= 20
+			max									= 999999
+		}
+		
+		[Item]
+		{
+			stat								= oil_rate
+			min									= 5
+			max									= 999999
+		}
 	}
+
 
 	[GoalEngine]
 	{
-
-		build_queue_max_items				= 3
-		
+		build_queue_max_items	= 3
 		[GoalPriority]
 		{
 			goal_IDS						= RESEARCH
-			multiplier						= 1
-			fuzziness						= 50
+			multiplier						= 3
+			fuzziness						= 100
 		}
 
 		[Research template = InfantryLowIncomeEgoResearch]
 
-		[OffensiveCV] 
+		[OffensiveCV]
 		{
-			cv_advantage_target = 0.1 
-			cv_advantage_max = 20
+			cv_advantage_target = 0.1
+			cv_advantage_max = 24
 			cv_exponent_under_target = 1 
-			min_cv_to_assign = 50  
+			min_cv_to_assign = 50
 		}
 
 		[DefensiveCV]
 		{
-			cv_advantage_target = 0.1 
-			cv_advantage_max = 1  
-			min_cv_to_assign = 1 
+			cv_advantage_target = 0.1
+			cv_advantage_max = 1
+			min_cv_to_assign = 1
 			count_static_cv = false
 		}
 
@@ -86,7 +101,7 @@
 		{
 			[DeepGoals]
 			{
-				num_goals					= 2
+				num_goals					= 6
 				base_priority				= 500
 				min_priority				= 500
 				black_fog_priority			= 200
@@ -97,7 +112,7 @@
 
 			[AirReconGoals]
 			{
-				num_goals					= 1
+				num_goals					= 3
 				base_priority				= 100
 				min_priority				= 100
 				black_fog_priority			= 100
@@ -106,57 +121,34 @@
 				use_time_since_last_scouted	= true
 			}
 		} ;; Exploration
-
-                
-
 		[Recruiting]
 		{
-			max_goals_per_think				= -1
-			num_military_goals				= 20
-			insufficient_income_level		= 30
+			max_goals_per_think				= 10
+			num_military_goals				= 10
+			insufficient_income_level		= 10
 
 			
 
 			[SpecificRecruitRequest]
 			{
 				property_ids				= corpshq 
-			}			
-
+			}							
+	
 			[SpecificRecruitRequest]
 			{
-				recruit_ids				= chn_truck_infantry
-				base_priority				= 600
-			    number_to_request			= 3
-				repeat_penalty				= 100
-			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= chn_truck_airborne
-				base_priority				= 1000
-				repeat_penalty				= 50		
-			}
-
+				property_ids				= infhq
+			}		
+		
 			[SpecificRecruitRequest]
 			{
 				property_ids				= airhq
-			}	
-
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= mechhq
-			}
+			    number_to_request			= 5
+			}				
 
 			[SpecificRecruitRequest]
 			{
-				property_ids				= armorhq
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= airfield
-				base_priority				= 0
+				property_ids				= motor_pool
+				repeat_penalty				= 10000
 			}
 
 			[SpecificRecruitRequest]
@@ -164,227 +156,70 @@
 				property_ids				= engineer_brigade
 				repeat_penalty				= 10000
 			}
-
+						
 			[SpecificRecruitRequest]
 			{
-				property_ids				= motor_pool
-				base_priority				= 150
-				repeat_penalty				= 10000
-			}
-
+				recruit_ids			        = chn_truck_airborne
+				base_priority				= 1500
+			    number_to_request			= 10
+			}			
+			
 			[SpecificRecruitRequest]
 			{
-				property_ids				= artillery_brigade
-				base_priority				= 200
-				repeat_penalty				= 10000
-			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= regiment_chn_infantry
-				base_priority				= 150
+				recruit_ids					= regiment_chn_infantry
 			    number_to_request			= 6
 			}
 
 			[SpecificRecruitRequest]
 			{
-				property_ids				= engineer
+				recruit_ids					= regiment_chn_paratrooper_MP_ground
+			    number_to_request			= 4
 			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= regiment_chn_paratrooper_MP_ground
-				base_priority				= 100
-			    number_to_request			= 2
-			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= regiment_chn_halftrack_artillery_ger
-				base_priority				= 200
-				number_to_request			= 3
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= recon
-			}
-			
-			[SpecificRecruitRequest]
-			{
-				property_ids				= infantry_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= paratrooper_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= artillery_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= antitank_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= mechanized_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= tank_company
-			}
-
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= engineer
-			value							= 1000
-			repeat_penalty					= 10000
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= property_bunker_artillery
-			value							= 750
-			repeat_penalty					= 75
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= engineer_brigade
-			value							= 900
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= motor_pool
-			value							= 950
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= artillery_brigade
-			value							= 1000
-		}
-
-
-		/*[ActorPriority]
-		{
-			property_IDS					= tank_company
-			value							= 1000
-			repeat_penalty					= 40
-		}*/
-
-		[ActorPriority]
-		{
-			property_IDS					= infantry_company
-			value							= 1200
-			repeat_penalty					= 100
-		}
-
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_chn_infantry
-			value							= 4000
-			repeat_penalty					= 50
-		}
-
-		;;default_max_recruited_per_think		= 0
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_chn_paratrooper_MP_ground
-			value							= 3000
-			repeat_penalty					= 100
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_chn_halftrack_artillery_ger
-			value							= 3200
-			repeat_penalty					= 200
-		}
-
-		/*[ActorPriority]
-		{
-			property_IDS					= paratrooper_company
-			value							= 1200
-			repeat_penalty					= 50
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= mechanized_company
-			value							= 1000
-			repeat_penalty					= 150				
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= artillery_company
-			value							= 1000
-			repeat_penalty					= 40				
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= antiaircraft_company
-			value							= 100
-			repeat_penalty					= 2000				
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= antitank_company
-			value							= 400
-			repeat_penalty					= 40				
-		}*/
-
-		[ActorPriority]
-		{
-			property_IDS					= infhq
-			value							= 1000
-			one_time_bonus				= 50
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= airhq
-			value							= 3000
+			value							= 15000
+			repeat_penalty					= 1000
 		}
+		
+		[ActorPriority]
+		{
+			property_IDS					= infhq
+			value							= 15000
+			repeat_penalty					= 1500
+		}
+        
 
 		[ActorPriority]
 		{
-			actor_IDS					= chn_truck_airborne
-			value							= 2500
+			actor_IDS						= regiment_chn_infantry
+			value							= 14500
+            repeat_penalty			        = 250
 		}
-
+		
 		[ActorPriority]
 		{
-			property_IDS					= mechhq
-			value							= 1500
-		}
-
+			actor_IDS						= regiment_chn_paratrooper_MP_ground
+			value							= 12000
+            repeat_penalty			        = 300
+		}	
+        
 		[ActorPriority]
 		{
-			property_IDS					= armorhq
-			value							= 1000
+			property_IDS					= engineer_brigade
+			value							= 7000
+			repeat_penalty					= 10000		
 		}
-
+		
+		
 
 		[Combat]
 		{
 			[AirAttacks]
 			{
-				engaged_bonus							= 2
-				
+				engaged_bonus							= 0
 				target_damage_floor					= 0.5
 				target_damage_ceiling					= 0.8
 				target_damage_bonus					= 2
@@ -399,7 +234,7 @@
 				
 				resupplying_mult						= 0
 				
-				min_time_between_attacks				= 120
+				min_time_between_attacks				= 0
 				
 				extra_planes_multiplier_max			= 2
 				extra_planes_multiplier_per_plane		= 0.5
@@ -410,7 +245,7 @@
 
 	[ReactiveAI]
 	{
-			region_retreat_cv_ratio				= 0.25
+		unit_retreat_max_health				= 0.5
 	}
 } ;; InfantryMainGameEgo
 
@@ -419,44 +254,63 @@
 	[Filters]
 	{
 		[Item]
-		stat								= ammo_rate
-		min									= -9999
-		max									= 1
+		{
+			stat								= money_rate
+			min									= 200
+			max									= 360
+		}		
+		
+		[Item]
+		{
+			stat								= ammo_rate
+			min									= 20
+			max									= 999999
+		}
+		
+		[Item]
+		{
+			stat								= oil_rate
+			min									= 5
+			max									= 999999
+		}
+
 	}
 
 
 	[GoalEngine]
 	{
-		build_queue_max_items				= 5
+
+		build_queue_max_items				= 4
 
 
 		[GoalPriority]
 		{
 			goal_IDS						= RESEARCH
-			multiplier						= 0.01
-			fuzziness						= 50
+			multiplier						= 5
+			fuzziness						= 100
 		}
 
-		[Research template = InfantryMainGameEgoResearch]
+
+		[Research template = InfantryEndGameEgoResearch]
 
 		[ResourceManagement]
 		{
 			other_plenty_value				= 15
 		}
 
-		[OffensiveCV] 
+		[OffensiveCV]
 		{
-			cv_advantage_target = 0.1 
-			cv_advantage_max = 20
+			cv_advantage_target = 0.1
+			cv_advantage_max = 24
 			cv_exponent_under_target = 1 
-			min_cv_to_assign = 50  
+			min_cv_to_assign = 50
 		}
 
 		[DefensiveCV]
 		{
-			cv_advantage_target = 0.1 
-			cv_advantage_max = 1  
-			min_cv_to_assign = 1 
+			cv_advantage_target = 0.1
+			cv_advantage_max = 1
+			min_cv_to_assign = 1
 			count_static_cv = false
 		}
 
@@ -464,7 +318,7 @@
 		{
 			[DeepGoals]
 			{
-				num_goals					= 1
+				num_goals					= 6
 				base_priority				= 500
 				min_priority				= 500
 				black_fog_priority			= 200
@@ -479,40 +333,112 @@
 				use_time_since_last_scouted	= true
 			}
 		}
-
-
+		
 		[Recruiting]
 		{
-			max_goals_per_think				= -1
-			num_military_goals				= 2
-			insufficient_income_level		= -500							
+			max_goals_per_think				= 12
+			num_military_goals				= 12
+			insufficient_income_level		= 10				
 
 			[SpecificRecruitRequest]
 			{
-				property_ids				= supplydepot
-				number_to_request			= 15
-				base_priority				= 2000
+				property_IDS				= corpshq
+			}
+						
+			[SpecificRecruitRequest]
+			{
+				recruit_ids			        = chn_truck_airborne
+				base_priority				= 1500
+			}			
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= airhq
+				base_priority				= 2500
 			}
 
+			
 			[SpecificRecruitRequest]
 			{
-				property_ids				= corpshq
+				property_ids				= motor_pool
+				base_priority				= 10000
+				repeat_penalty				= 10000
+			}			
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= engineer_brigade
+				base_priority				= 2250
+				repeat_penalty				= 10000
 			}
-
+			
 			[SpecificRecruitRequest]
 			{
-				recruit_ids				= chn_truck_airborne
-				base_priority				= 1000
-				repeat_penalty				= 50		
-			}	
+				property_IDS				= engineer
+			}
+			
+			
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_chn_paratrooper_MP_ground
+			    number_to_request			= 6
+			}		
 		} ;; Recruiting
+		
+		[ActorPriority]
+		{
+			property_IDS					= engineer
+			value							= 10000
+			one_time_bonus					= 10000
+			repeat_penalty					= 10000
+		}
+
 
 		[ActorPriority]
 		{
-			actor_IDS					= chn_truck_supply
-			value							= 2000
-			max_recruited_per_think			= 10
+			property_IDS					= airhq
+			value							= 15000
+			repeat_penalty					= 1000
 		}
+		
+		
+		[ActorPriority]
+		{
+			property_IDS					= motor_pool
+			one_time_bonus					= 9000
+			value							= 9000
+			repeat_penalty					= 10000
+		}	
+		
+		[ActorPriority]
+		{
+			property_IDS					= artillery_brigade
+			one_time_bonus					= 8000
+			value							= 9000
+			repeat_penalty					= 10000
+		}		
+		
+		[ActorPriority]
+		{
+			property_IDS					= engineer_brigade
+			one_time_bonus					= 7000
+			value							= 9000
+			repeat_penalty					= 9000
+		}			
+		
+		[ActorPriority]
+		{
+			actor_IDS						= regiment_chn_infantry
+			value							= 17500
+			repeat_penalty					= 750
+		}				
+		
+		[ActorPriority]
+		{
+			actor_IDS						= regiment_chn_paratrooper_MP_ground
+			value							= 18000
+			repeat_penalty					= 250	
+		}		
 
 		[Combat]
 		{
@@ -545,26 +471,34 @@
 
 	[ReactiveAI]
 	{
-			region_retreat_cv_ratio				= 0.01
+			think_frequency					= 1
+			region_retreat_cv_ratio				= 0.25
 	}
 } ;; InfantryLowIncomeEgo
 
 
-[template InfantryEndGameEgo template = AAInfantryBaseEgo]
+[template InfantryAmmoEndGameEgo template = AAInfantryBaseEgo]
 {
 	[Filters]
 	{
 		[Item]
 		{
 			stat								= ammo_rate
-			min									= 130
-			max									= 9999
+			min									= -99999
+			max									= 20
+		}
+
+		[Item]
+		{
+			stat								= money_rate
+			min									= -99999
+			max									= 99999
 		}
 
 		[Item]
 		{
 			stat								= building_limit_consumption
-			min									= -15.5
+			min									= -99
 			max									= 0
 		}
 	}
@@ -572,24 +506,24 @@
 	[GoalEngine]
 	{
 
-		build_queue_max_items				= 2
+		build_queue_max_items				= 10
 
 
 		[GoalPriority]
 		{
 			goal_IDS						= RESEARCH
-			multiplier						= 20
-			fuzziness						= 150
+			multiplier						= 0.01
+			fuzziness						= 25
 		}
 
-		[Research template = InfantryEndGameEgoResearch]
+		[Research template = InfantryMainGameEgoResearch]
 
 		[OffensiveCV]
 		{
-			cv_advantage_target = 0.1 
-			cv_advantage_max = 24 
+			cv_advantage_target = 0.1
+			cv_advantage_max = 24
 			cv_exponent_under_target = 1 
-			min_cv_to_assign = 50 
+			min_cv_to_assign = 10
 		}
 
 		[DefensiveCV]
@@ -599,6 +533,7 @@
 			min_cv_to_assign = 1
 			count_static_cv = false
 		}
+
 
 		[Exploration]
 		{
@@ -628,233 +563,43 @@
 
 		[Recruiting]
 		{
-			max_goals_per_think				= -1
-			num_military_goals				= 20
+			max_goals_per_think				= 6
+			num_military_goals				= 6
 			insufficient_income_level		= 10
 
 			[SpecificRecruitRequest]
 			{
 				property_ids				= corpshq 
 			}
-
+			
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= engineer_brigade
-				base_priority				= 900
-				repeat_penalty				= 10000
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= motor_pool
-				base_priority				= 1000
-				repeat_penalty				= 10000
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= artillery_brigade
-				base_priority				= 1000
-				repeat_penalty				= 10000
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= engineer
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= mechanized_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= tank_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= artillery_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= antitank_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= infhq  
-				base_priority				= 100
-			}	
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= mechhq
-				base_priority				= 0
-				hq_type_not_available_bonus	= 20
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= armorhq
-				base_priority				= 0
-				hq_type_not_available_bonus	= 20
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= airfield
-			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= regiment_chn_paratrooper_MP_ground
-				number_to_request			= 12
-			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= regiment_chn_halftrack_artillery_ger
-				number_to_request			= 3
-			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= regiment_chn_tank_destroyer
-			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= regiment_chn_tank_artillery
-			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= regiment_chn_paratrooper_MP
-				number_to_request			= 12
+			    number_to_request			= 6
 				base_priority				= 1200
-				repeat_penalty				= 100
+			}
+						
+			[SpecificRecruitRequest]
+			{
+				recruit_ids			        = chn_truck_supply
+			    number_to_request			= 6
+				base_priority				= 1500
 			}
 
 		} ;; Recruiting
 
 		[ActorPriority]
 		{
-			property_IDS					= engineer
-			value							= 7500
-			repeat_penalty					= 10000
+			property_IDS					= supplydepot
+			value							= 50000
+			repeat_penalty					= -1000
 		}
-
-		[ActorPriority]
-		{
-			property_IDS					= property_bunker_aa
-			value							= 600
-			repeat_penalty					= 0
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= property_bunker
-			value							= 1250
-			repeat_penalty					= 25
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= property_bunker_artillery
-			value							= 750
-			repeat_penalty					= 75
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_CHN_engineer
-			value							= 1100
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_chn_paratrooper_MP_ground
-			max_recruited_per_think			= 12
-			value							= 1200
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_chn_tank_destroyer
-			value							= 1200
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_chn_paratrooper_MP
-			max_recruited_per_think			= 12
-			value							= 1250
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_chn_tank_artillery
-			value							= 1200
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_chn_halftrack_artillery_ger
-			value							= 1200
-		}
-
-		
-		[ActorPriority]
-		{
-			property_IDS					= engineer_brigade
-			value							= 2000
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= motor_pool
-			value							= 2000
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= artillery_brigade
-			value							= 2000
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= infhq
-			value							= 550
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= mechhq
-			value							= 650
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= armorhq
-			value							= 700
-		}
-
-
 
 		[Combat]
 		{
 			[AirAttacks]
 			{
-				engaged_bonus							= 1
+				engaged_bonus							= 0
 				
 				target_damage_floor					= 0.5
 				target_damage_ceiling					= 0.8
@@ -870,9 +615,161 @@
 				
 				resupplying_mult						= 0
 				
-				min_time_between_attacks				= 300
+				min_time_between_attacks				= 600
 				
-				extra_planes_multiplier_max			= 1
+				extra_planes_multiplier_max			= 2
+				extra_planes_multiplier_per_plane		= 0.5
+			}
+		}
+	} ;; GoalEngine
+
+	[ReactiveAI]
+	{
+			region_retreat_cv_ratio				= 0.1
+	}
+} ;; InfantryEndGameEgo
+
+[template InfantryOilEndGameEgo template = AAInfantryBaseEgo]
+{
+	[Filters]
+	{
+		[Item]
+		{
+			stat								= oil_rate
+			min									= -99999
+			max									= 5
+		}
+
+		[Item]
+		{
+			stat								= money_rate
+			min									= -99999
+			max									= 99999
+		}
+
+		[Item]
+		{
+			stat								= building_limit_consumption
+			min									= -99
+			max									= 0
+		}
+	}
+
+	[GoalEngine]
+	{
+
+		build_queue_max_items				= 12
+
+
+		[GoalPriority]
+		{
+			goal_IDS						= RESEARCH
+			multiplier						= 0.01
+			fuzziness						= 25
+		}
+
+		[Research template = InfantryMainGameEgoResearch]
+
+		[OffensiveCV]
+		{
+			cv_advantage_target = 0.1
+			cv_advantage_max = 24
+			cv_exponent_under_target = 1 
+			min_cv_to_assign = 10
+		}
+
+		[DefensiveCV]
+		{
+			cv_advantage_target = 0.1
+			cv_advantage_max = 1
+			min_cv_to_assign = 1
+			count_static_cv = false
+		}
+
+
+		[Exploration]
+		{
+			[DeepGoals]
+			{
+				num_goals					= 1
+				base_priority				= 500
+				min_priority				= 500
+				black_fog_priority			= 200
+				grey_fog_priority			= 200
+				fog_search_depth			= -1
+				use_time_since_last_scouted	= true
+			}
+
+			[AirReconGoals]
+			{
+				num_goals					= 1
+				base_priority				= 250
+				min_priority				= 250
+				black_fog_priority			= 250
+				grey_fog_priority			= 250
+				fog_search_depth			= -1
+				use_time_since_last_scouted	= true
+			}
+		} ;; Exploration
+
+
+		[Recruiting]
+		{
+			max_goals_per_think				= 6
+			num_military_goals				= 6
+			insufficient_income_level		= 10
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= corpshq 
+			}
+						
+			[SpecificRecruitRequest]
+			{
+				property_ids				= supplydepot
+			    number_to_request			= 6
+				base_priority				= 1500
+			}
+						
+			[SpecificRecruitRequest]
+			{
+				recruit_ids			        = chn_truck_supply
+			    number_to_request			= 6
+				base_priority				= 1500
+			}
+
+		} ;; Recruiting
+		
+		[ActorPriority]
+		{
+			property_IDS					= supplydepot
+			value							= 50000
+			repeat_penalty					= -100
+		}
+		
+		[Combat]
+		{
+			[AirAttacks]
+			{
+				engaged_bonus							= 0
+				
+				target_damage_floor					= 0.5
+				target_damage_ceiling					= 0.8
+				target_damage_bonus					= 2
+				
+				support_ground_attack_bonus			= 2
+				
+				no_bonus_penalty						= 0
+				
+				absolute_min_health					= 0.3
+				absolute_min_health_engaged_mult		= 0
+				absolute_min_health_unengaged_mult	= 5
+				
+				resupplying_mult						= 0
+				
+				min_time_between_attacks				= 600
+				
+				extra_planes_multiplier_max			= 2
 				extra_planes_multiplier_per_plane		= 0.5
 			}
 		}
@@ -891,8 +788,292 @@
 		[Item]
 		{
 			stat								= ammo_rate
-			min									= 99
-			max									= 9999
+			min									= 20
+			max									= 99999
+		}
+		
+		[Item]
+		{
+			stat								= oil_rate
+			min									= 5
+			max									= 99999
+		}
+
+		[Item]
+		{
+			stat								= money_rate
+			min									= 361
+			max									= 99999
+		}
+
+		[Item]
+		{
+			stat								= building_limit_consumption
+			min									= -15.5
+			max									= 0
+		}
+	}
+
+	[GoalEngine]
+	{
+
+		build_queue_max_items				= 4
+
+
+		[GoalPriority]
+		{
+			goal_IDS						= RESEARCH
+			multiplier						= 10
+			fuzziness						= 150
+		}
+
+		[Research template = InfantryEndGameEgoResearch]
+
+		[OffensiveCV]
+		{
+			cv_advantage_target = 0.5
+			cv_advantage_max = 24
+			cv_exponent_under_target = 1
+			min_cv_to_assign = 50
+		}
+
+		[DefensiveCV]
+		{
+			cv_advantage_target = 0.1
+			cv_advantage_max = 1
+			min_cv_to_assign = 1
+			count_static_cv = false
+		}
+
+
+		[Exploration]
+		{
+			[DeepGoals]
+			{
+				num_goals					= 10
+				base_priority				= 500
+				min_priority				= 500
+				black_fog_priority			= 200
+				grey_fog_priority			= 200
+				fog_search_depth			= -1
+				use_time_since_last_scouted	= true
+			}
+
+			[AirReconGoals]
+			{
+				num_goals					= 5
+				base_priority				= 250
+				min_priority				= 250
+				black_fog_priority			= 250
+				grey_fog_priority			= 250
+				fog_search_depth			= -1
+				use_time_since_last_scouted	= true
+			}
+		} ;; Exploration
+
+
+
+		[Recruiting]
+		{
+			max_goals_per_think				= 10
+			num_military_goals				= 10
+			insufficient_income_level		= 10
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= corpshq 
+			}
+						
+			[SpecificRecruitRequest]
+			{
+				recruit_ids			        = chn_truck_supply
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= engineer_brigade
+				base_priority				= 7000
+				one_time_bonus					= 18000
+				repeat_penalty				= 10000
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= motor_pool
+				base_priority				= 8000
+				one_time_bonus					= 20000
+				repeat_penalty				= 10000
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= artillery_brigade
+				base_priority				= 10000
+				one_time_bonus					= 20000
+				repeat_penalty				= 10000
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= airfield
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= engineer
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= airhq
+				number_to_request			= 6
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= mechhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= armorhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_chn_paratrooper_MP
+				base_priority				= 2000
+				number_to_request			= 6
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_chn_paratrooper_MP_ground
+				base_priority				= 2000
+				number_to_request			= 12
+			}	
+			
+
+		} ;; Recruiting
+		
+		[ActorPriority]
+		{
+			property_IDS					= engineer
+			value							= 20000
+			one_time_bonus					= 10000
+			repeat_penalty					= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS					= airhq
+			value							= 25000
+			repeat_penalty					= 250
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_chn_paratrooper_MP
+			value							= 22500
+			repeat_penalty					= 800
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_chn_paratrooper_MP_ground
+			value							= 27500
+			repeat_penalty					= 1000
+		}
+        
+		[ActorPriority]
+		{
+			property_IDS					= engineer_brigade
+			value							= 20000
+			repeat_penalty					= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS					= motor_pool
+			value							= 20000
+			repeat_penalty					= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS					= artillery_brigade
+			value							= 20000
+			repeat_penalty					= 10000
+		}
+
+
+		[ActorPriority]
+		{
+			property_IDS					= airfield
+			value							= 26000
+			repeat_penalty					= 5000
+		}
+
+
+
+		[Combat]
+		{
+			[AirAttacks]
+			{
+				engaged_bonus							= 1
+				
+				target_damage_floor					= 0.4
+				target_damage_ceiling					= 0.8
+				target_damage_bonus					= 2
+				
+				support_ground_attack_bonus			= 5
+				
+				no_bonus_penalty						= 0
+				
+				absolute_min_health					= 0.3
+				absolute_min_health_engaged_mult		= 0
+				absolute_min_health_unengaged_mult	= 5
+				
+				resupplying_mult						= 0
+				
+				min_time_between_attacks				= 600
+				
+				extra_planes_multiplier_max			= 2
+				extra_planes_multiplier_per_plane		= 0.5
+			}
+		}
+	} ;; GoalEngine
+
+	[ReactiveAI]
+	{
+			think_frequency					= 2
+			region_retreat_cv_ratio				= 0.1
+	}
+} ;; InfantryWarGameEgo
+
+[template InfantryFightGameEgo template = AAInfantryBaseEgo]
+{
+	[Filters]
+	{
+		[Item]
+		{
+			stat								= ammo_rate
+			min									= 20
+			max									= 99999
+		}
+
+		[Item]
+		{
+			stat								= money_rate
+			min									= 360
+			max									= 99999
+		}
+		
+		[Item]
+		{
+			stat								= oil_rate
+			min									= 5
+			max									= 999999
 		}
 
 		[Item]
@@ -913,9 +1094,8 @@
 		{
 			goal_IDS						= RESEARCH
 			multiplier						= 25
-			fuzziness						= 400
+			fuzziness						= 200
 		}
-
 
 		[Research template = InfantryEndGameEgoResearch]
 
@@ -923,8 +1103,8 @@
 		{
 			cv_advantage_target = 0.1
 			cv_advantage_max = 24
-			cv_exponent_under_target = 1 
-			min_cv_to_assign = 59
+			cv_exponent_under_target = 1
+			min_cv_to_assign = 50
 		}
 
 		[DefensiveCV]
@@ -935,11 +1115,12 @@
 			count_static_cv = false
 		}
 
+
 		[Exploration]
 		{
 			[DeepGoals]
 			{
-				num_goals					= 1
+				num_goals					= 10
 				base_priority				= 500
 				min_priority				= 500
 				black_fog_priority			= 200
@@ -950,7 +1131,7 @@
 
 			[AirReconGoals]
 			{
-				num_goals					= 1
+				num_goals					= 5
 				base_priority				= 250
 				min_priority				= 250
 				black_fog_priority			= 250
@@ -959,51 +1140,67 @@
 				use_time_since_last_scouted	= true
 			}
 		} ;; Exploration
-
-		[Unpacking]
+        
+		[Unpacking] ;;wwzz
 		{
 			base_priority							= 800
-			enemy_static_influence_mult			= -20
-			enemy_dynamic_influence_mult			= -10
-			max_friendly_building_bonus				= -5
-			max_friendly_building_bonus_per_building	= -5
+			enemy_static_influence_mult			= -100
+			enemy_dynamic_influence_mult			= -20
+			max_friendly_building_bonus				= -200
+			max_friendly_building_bonus_per_building	= -25
 			fuzzy_factor					= 50
 		}
 
 		[Recruiting]
 		{
-			max_goals_per_think				= -1
-			num_military_goals				= 10
+			max_goals_per_think				= 10
+			num_military_goals				= 24
 			insufficient_income_level		= 10
 
 			[SpecificRecruitRequest]
 			{
 				property_ids				= corpshq 
 			}
-
+						
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
+			    number_to_request			= 12
+			}
+            
+			[SpecificRecruitRequest]
+			{
+				property_ids				= airhq
+			}
+            
+			[SpecificRecruitRequest]
+			{
+				property_ids				= mechhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= armorhq
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids				= engineer_brigade
-				base_priority				= 1000
+				base_priority				= 10000
 				repeat_penalty				= 10000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids				= motor_pool
-				base_priority				= 1000
+				base_priority				= 10000
 				repeat_penalty				= 10000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids				= artillery_brigade
-				base_priority				= 1000
+				base_priority				= 10000
 				repeat_penalty				= 10000
 			}
 
@@ -1014,208 +1211,77 @@
 
 			[SpecificRecruitRequest]
 			{
-				property_ids				= mechanized_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= tank_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= artillery_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= antitank_company
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= infhq  
-				base_priority				= 100
-			}	
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= chn_truck_airborne
-				base_priority				= 100
-			}							
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= mechhq
-				base_priority				= 0
-				hq_type_not_available_bonus	= 20
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= armorhq
-				base_priority				= 0
-				hq_type_not_available_bonus	= 20
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= airfield
-			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= regiment_chn_paratrooper_MP_ground
+				recruit_ids					= regiment_chn_paratrooper_MP
+				base_priority				= 5000
 				number_to_request			= 12
 			}
-
+			
 			[SpecificRecruitRequest]
 			{
-				recruit_ids				= regiment_chn_tank_destroyer
-			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= regiment_chn_tank_artillery
-			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids				= regiment_chn_paratrooper_MP
-				number_to_request			= 24
-				base_priority				= 9999
-			}
+				recruit_ids					= regiment_chn_paratrooper_MP_ground
+				base_priority				= 5000
+				number_to_request			= 12
+			}	
+			
 
 		} ;; Recruiting
-
+		
+		[ActorPriority]
+		{
+			property_IDS					= supplydepot
+			value							= 25000
+            repeat_penalty				    = 50
+		}	
+		
 		[ActorPriority]
 		{
 			property_IDS					= engineer
-			value							= 7500
+			value							= 10000
 			repeat_penalty					= 10000
 		}
 
 		[ActorPriority]
 		{
-			property_IDS					= property_bunker_aa
-			value							= 600
-			repeat_penalty					= 0
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= property_bunker
-			value							= 1250
-			repeat_penalty					= 25
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= property_bunker_artillery
-			value							= 750
-			repeat_penalty					= 75
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_CHN_engineer
-			value							= 1100
+			actor_IDS					= regiment_chn_paratrooper_MP
+			value							= 25000
+			repeat_penalty					= 300
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_chn_paratrooper_MP_ground
-			value							= 1200
+			value							= 25000
+			repeat_penalty					= 150
 		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_chn_tank_destroyer
-			value							= 1200
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_chn_paratrooper_MP
-			value							= 2000
-			repeat_penalty				= -10
-		}
-
-		[ActorPriority]
-		{
-			actor_IDS					= regiment_chn_tank_artillery
-			value							= 1200
-		}
-
 		
 		[ActorPriority]
 		{
 			property_IDS					= engineer_brigade
-			value							= 2000
+			one_time_bonus					= 10000
+			repeat_penalty					= 10000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= motor_pool
-			value							= 2000
+			one_time_bonus					= 10000
+			repeat_penalty					= 10000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= artillery_brigade
-			value							= 2000
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= infhq
-			value							= 550
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= mechhq
-			value							= 650
-		}
-
-		[ActorPriority]
-		{
-			property_IDS					= armorhq
-			value							= 700
+			one_time_bonus					= 10000
+			repeat_penalty					= 10000
 		}
 
 
-
-		[Combat]
-		{
-			[AirAttacks]
-			{
-				engaged_bonus							= 1
-				
-				target_damage_floor					= 0.5
-				target_damage_ceiling					= 0.8
-				target_damage_bonus					= 2
-				
-				support_ground_attack_bonus			= 2
-				
-				no_bonus_penalty						= 0
-				
-				absolute_min_health					= 0.3
-				absolute_min_health_engaged_mult		= 0
-				absolute_min_health_unengaged_mult	= 5
-				
-				resupplying_mult						= 0
-				
-				min_time_between_attacks				= 300
-				
-				extra_planes_multiplier_max			= 2
-				extra_planes_multiplier_per_plane		= 0.5
-			}
-		}
 	} ;; GoalEngine
 
 	[ReactiveAI]
 	{
+			think_frequency					= 2
 			region_retreat_cv_ratio				= 0.1
 	}
 } ;; InfantryWarGameEgo
+

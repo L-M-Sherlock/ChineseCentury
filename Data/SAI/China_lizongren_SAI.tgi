@@ -10,15 +10,27 @@
 	name									= "#China_lizongren_SAI_lizongren_main_game_ego_name"
 } ;; InfantryMainGameEgo
 
-[Ego template = InfantryEndGameEgo]
+[Ego template = InfantryAmmoEndGameEgo]
 {
-	IDS										= lizongren_end_game_ego
+	IDS										= lizongren_ammo_end_game_ego
 	name									= "#China_lizongren_SAI_lizongren_end_game_ego_name"
 } ;; InfantryEndGameEgo
+
+[Ego template = InfantryOilEndGameEgo]
+{
+	IDS										= lizongren_oil_end_game_ego
+	name									= "#China_lizongren_SAI_lizongren_end_game_ego_name"
+} ;; InfantryWarGameEgo
 
 [Ego template = InfantryWarGameEgo]
 {
 	IDS										= lizongren_war_game_ego
+	name									= "#China_lizongren_SAI_lizongren_end_game_ego_name"
+} ;; InfantryWarGameEgo
+
+[Ego template = InfantryFightGameEgo]
+{
+	IDS										= lizongren_fight_game_ego
 	name									= "#China_lizongren_SAI_lizongren_end_game_ego_name"
 } ;; InfantryWarGameEgo
 
@@ -35,10 +47,16 @@
 	IDS										= lizongren_main_game_ego
 
 	[Ego]
-	IDS										= lizongren_end_game_ego
+	IDS										= lizongren_ammo_end_game_ego
+
+	[Ego]
+	IDS										= lizongren_oil_end_game_ego
 
 	[Ego]
 	IDS										= lizongren_war_game_ego
+
+	[Ego]
+	IDS										= lizongren_fight_game_ego
 
 	[Nation]
 	IDS										= nation_chn

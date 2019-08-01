@@ -526,7 +526,7 @@
 		[GoalPriority]
 		{
 			goal_IDS	= RESEARCH
-			multiplier	= 3.0
+			multiplier	= 4.0
 			fuzziness	= 100
 		}
 
@@ -652,7 +652,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= mechhq
-			value			= 1500
+			value			= 1600
 			repeat_penalty		= 200
 		}
 
@@ -694,7 +694,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= armorhq
-			value			= 9500
+			value			= 10000
 			repeat_penalty		= 100
 		}
 
@@ -1098,7 +1098,7 @@
 		[GoalPriority]
 		{
 			goal_IDS	= RESEARCH
-			multiplier	= 10.0
+			multiplier	= 20.0
 			fuzziness	= 100
 		}
 
@@ -1207,19 +1207,20 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-				base_priority				= 1000
 			    number_to_request			= 10
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_tank_artillery
+                base_priority       = 100
 				number_to_request			= 15
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_tank_heavy
+                base_priority       = 100
 				number_to_request			= 15
 			}
 
@@ -1232,6 +1233,7 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_GER_tank_SuperTiger
+                base_priority       = 100
 				number_to_request			= 15
 			}
 
@@ -1244,7 +1246,8 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_ita_tank_artillery
-				number_to_request			= 24
+                base_priority       = 100
+				number_to_request			= 15
 			}
 
 			[SpecificRecruitRequest]
@@ -1256,12 +1259,14 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_usa_tank_Mixed
+                base_priority       = 100
 				number_to_request			= 15
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_jpn_tank_artillery
+                base_priority       = 100
 				number_to_request			= 15
 			}
 
@@ -1444,7 +1449,7 @@
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_GER_tank_SuperTiger
-			value							= 1400
+			value							= 2000
 		}
 
 		[ActorPriority]
@@ -1462,7 +1467,7 @@
         [ActorPriority]
 		{
 			actor_IDS					= regiment_ita_tank_artillery
-			value							= 1300
+			value							= 1800
 		}
 
 		[ActorPriority]
@@ -1474,7 +1479,7 @@
 		[ActorPriority]
 		{
 			actor_IDS					=  regiment_usa_tank_Mixed
-			value							= 1350
+			value							= 1750
 		}
 
 		[ActorPriority]

@@ -87,7 +87,7 @@
 				range = 14
 				
 				[Effect Template=PierceDamageEffect]
-				amount = 12
+				amount = 16
 
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = fin_mg_heavy

@@ -2534,7 +2534,7 @@
 	[TechPriority]
 	{
 		tech						= tech_paratrooper_MP
-		priority					= 1300
+		priority					= 1000
 	}
 } ;; LowIncomeEgoResearch
 
@@ -2991,14 +2991,14 @@
 	[TechPriority]
 	{
 		tech						= tech_ammo_production
-		priority					= 200
+		priority					= 500
 	}
 
 	;; +5 oil rate
 	[TechPriority]
 	{
 		tech						= tech_oil_production
-		priority					= 200
+		priority					= 500
 	}
 
 	;; +5 money rate
@@ -3166,7 +3166,7 @@
 	[TechPriority]
 	{
 		tech						= tech_usa_assistance
-		priority					= 750
+		priority					= 1500
 	}
 
 	;; 
@@ -3180,7 +3180,7 @@
 	[TechPriority]
 	{
 		tech						= tech_rus_assistance
-		priority					= 750
+		priority					= 1500
 	}
 } ;; EndGameEgoResearch
 

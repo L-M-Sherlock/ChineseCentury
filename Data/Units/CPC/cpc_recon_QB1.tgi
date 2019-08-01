@@ -77,7 +77,7 @@
 				amount = 2
                 
                 [Effect Template=MoraleLossEffect]
-                amount = 1
+                amount = 0.5
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = usa_mg_light

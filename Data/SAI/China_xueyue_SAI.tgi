@@ -10,15 +10,27 @@
 	name									= "#China_xueyue_SAI_xueyue_main_game_ego_name"
 } ;; BalancedMainGameEgo
 
-[Ego template = InfantryEndGameEgo]
+[Ego template = InfantryAmmoEndGameEgo]
 {
-	IDS										= xueyue_end_game_ego
+	IDS										= xueyue_ammo_end_game_ego
+	name									= "#China_xueyue_SAI_xueyue_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = InfantryOilEndGameEgo]
+{
+	IDS										= xueyue_oil_end_game_ego
 	name									= "#China_xueyue_SAI_xueyue_end_game_ego_name"
 } ;; BalancedEndGameEgo
 
 [Ego template = InfantryWarGameEgo]
 {
 	IDS										= xueyue_war_game_ego
+	name									= "#China_xueyue_SAI_xueyue_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = InfantryFightGameEgo]
+{
+	IDS										= xueyue_fight_game_ego
 	name									= "#China_xueyue_SAI_xueyue_end_game_ego_name"
 } ;; BalancedEndGameEgo
 
@@ -35,10 +47,16 @@
 	IDS										= xueyue_main_game_ego
 
 	[Ego]
-	IDS										= xueyue_end_game_ego
+	IDS										= xueyue_ammo_end_game_ego
+
+	[Ego]
+	IDS										= xueyue_oil_end_game_ego
 
 	[Ego]
 	IDS										= xueyue_war_game_ego
+
+	[Ego]
+	IDS										= xueyue_fight_game_ego
 
 	[Nation]
 	IDS										= nation_chn

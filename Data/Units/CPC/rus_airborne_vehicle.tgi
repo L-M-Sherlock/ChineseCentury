@@ -91,7 +91,7 @@
 				range = 16
 				
 				[Effect Template=PierceDamageEffect]
-				amount = 12
+				amount = 16
 				
 				[WhenDo Template=FXC_PlaySFX]
 				audio_ids = rus_mg_heavy
@@ -111,7 +111,7 @@
 				area = 3
 				
 				[Effect Template=BlastDamageEffect]
-				amount = 30
+				amount = 36
 				
 				[WhenDo Template=FXC_PlayObjectAnimation]
 				object_animation_IDS = Recoil1

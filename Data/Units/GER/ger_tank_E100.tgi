@@ -70,7 +70,8 @@
 			{				
 				name = "#ger_tank_heavy_17cmPaK46_name"
 				recharge_time = 8
-				range = 36
+				range = 40
+				area = 1
 
 				[Effect Template=APDamageEffect]
 				amount = 400

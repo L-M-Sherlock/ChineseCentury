@@ -574,7 +574,7 @@
 		[ResourceManagement]
 		{
 			;; how long will we save up resources to fill a big goal
-			fixed saving_time_limit						= 180
+			fixed saving_time_limit						= 120
 
 			;; How much do we reserve for building settlements, and how long into the game to we
 			;;	continue to do so?  This will only hurt A&A, so turning it off here.
@@ -642,9 +642,9 @@
 			;;	high.  The minimum is applied before the exponent, to prevent sign changing or
 			;;	imaginary numbers.  For actors with a negative economic value, we take 1 / this 
 			;;	factor in order to get an appropriate result.
-			fixed enemy_influence_mult			= 0.5	;; smaller number means more aggressive - we value actors higher in areas of enemy influence more
-			fixed min_influence_factor			= 0.5
-			fixed influence_exponent			= 2
+			fixed enemy_influence_mult			= 0.001	;; smaller number means more aggressive - we value actors higher in areas of enemy influence more
+			fixed min_influence_factor			= 0.01
+			fixed influence_exponent			= 3
 
 			;; Military value is based on CV.  For static actors, there's a complicated formula
 			;;	based on what they protect and how well they protect it.  For dynamic actors,
@@ -654,7 +654,7 @@
 
 			;; All military values have this multiplier applied to them, to let us scale this 
 			;;	this portion of the actor value as appropriate.
-			fixed military_value_scaling_mult	= 1
+			fixed military_value_scaling_mult	= 1.2
 
 			;; When computing the value of a static military actor (such as an outpost) we look at
 			;;	the following factors, in the order listed.
@@ -668,16 +668,16 @@
 			;;	building already exists, then we set it to the max in order to keep the final
 			;;	values from becoming too great.  Finally, after we've applied min and max we apply
 			;;	an exponent to make the multiplier more (or less) extreme.
-			fixed military_value_influence_ratio_min			= 0.5
-			fixed military_value_influence_ratio_max			= 2
-			fixed military_value_influence_ratio_exponent		= 2
+			fixed military_value_influence_ratio_min			= 0.8
+			fixed military_value_influence_ratio_max			= 1.2
+			fixed military_value_influence_ratio_exponent		= 3
 
 			;; Next we determine how far away a defensive structure can be and still be considered
 			;;	to be defending a building.  In general this should be between 0 and 1, and is a 
 			;;	percentage of the structures guard radius.
 			;; Once we've determined that a building is within range of the defender, the value
 			;;	added on is equal to the economic value of the building times the influence ratio.
-			fixed military_value_radius_mult					= 0.6
+			fixed military_value_radius_mult					= 1
 
 			;; Another consideration that gets added on to a defensive structure's military value is
 			;;	whether it defends an unused marker.  In principal we might want to distinguish 
@@ -692,12 +692,12 @@
 			;;	not for the ones currently there) we add on the following value.  The influence
 			;;	ratio is not applied in this case.  I'm not totally sure this is a good idea, but 
 			;;	it's easy to turn it off by setting it to 0.
-			fixed military_value_enemy_traffic_value			= 20
+			fixed military_value_enemy_traffic_value			= 500
 
 			;; Finally, we look for bottlenecks.  Bottlenecks are regions which have to be traversed
 			;;	in order to move between two of their adjacent regions.  If the region we are in is
 			;;	a bottleneck, we add this value multiplied by the influence ratio.
-			fixed military_value_bottleneck_value				= 200
+			fixed military_value_bottleneck_value				= 500
 
 			;; Putting military value aside, actor value can also be affected by the distance from
 			;;	the actor to the kingdom center.  For actors where this is applied, we take the
@@ -723,10 +723,10 @@
 		[OffensiveCV]
 		{
 			;; effect of cv
-			fixed cv_advantage_target			= 1		;; priority drops exponentially if we're below this, goes up linearly if above (was 2)
+			fixed cv_advantage_target			= 0.8		;; priority drops exponentially if we're below this, goes up linearly if above (was 2)
 			fixed cv_advantage_max				= 5			;; CV over this is irrelevant
 			fixed cv_exponent_under_target		= 4			;; the exponent used if under target cv
-			fixed cv_max_mult_over_target		= 15		;; the maximum bonus to priority if over target cv
+			fixed cv_max_mult_over_target		= 0.5		;; the maximum bonus to priority if over target cv
 
 			;; the minimum cv we should assign to any defense or offense (regardless of enemy strength)
 			fixed min_cv_to_assign				= 50		;; this should NEVER NEVER be zero (or less than zero).
@@ -734,22 +734,22 @@
 			;; if our kingdom has no primary supply anyway, all of a sudden attacking even under 
 			;;	strength makes a lot more sense.  In order to make that happen, we apply this bonus 
 			;;	AFTER THE CURVE in that situation
-			fixed no_primary_supply_bonus		= 500
+			fixed no_primary_supply_bonus		= 1000
 		} ;; OffensiveCV
 
 		[DefensiveCV]
 		{
 			;; effect of cv
-			fixed cv_advantage_target			= 2			;; priority drops exponentially if we're below this, goes up linearly if above
-			fixed cv_advantage_max				= 10		;; CV over this is irrelevant
+			fixed cv_advantage_target			= 0.1			;; priority drops exponentially if we're below this, goes up linearly if above
+			fixed cv_advantage_max				= 3 		;; CV over this is irrelevant
 			fixed cv_exponent_under_target		= 1.5		;; the exponent used if under target cv
-			fixed cv_max_mult_over_target		= 4			;; the maximum bonus to priority if over target cv
+			fixed cv_max_mult_over_target		= 1			;; the maximum bonus to priority if over target cv
 
 			;; the minimum cv we should assign to any defense or offense (regardless of enemy strength)
-			fixed min_cv_to_assign				= 75		;; this should NEVER NEVER be zero (or less than zero).
+			fixed min_cv_to_assign				= 1		;; this should NEVER NEVER be zero (or less than zero).
 			
 			;; should we cound CV from buildings
-			bool count_static_cv				= true
+			bool count_static_cv				= false
 		} ;; DefensiveCV
 
 		;; TODO: put in values for a CV curve for assigning defenders to a construct goal.  For now
@@ -763,7 +763,7 @@
 		;; This is applied as a modifier to the value of every goal that involved travel
 		[TravelTime]
 		{
-			fixed max_travel_time				= 300
+			fixed max_travel_time				= 600
 			fixed travel_time_exponent			= 2		;; should be >= 1, if it is 1 it'll be linear
 		} ;; TravelTime
 
@@ -814,10 +814,10 @@
 			[DefendPriority]
 			{
 				fixed economic_value_exponent				= 0.5
-				fixed economic_value_multiplier				= 2
+				fixed economic_value_multiplier				= 1
 
 				fixed enemy_influence_exponent				= 1
-				fixed enemy_influence_multiplier			= .5
+				fixed enemy_influence_multiplier			= 1.5
 
 				fixed friendly_border_influence_exponent	= 1		;; this is probably a bad idea.
 				fixed friendly_border_influence_multiplier	= 0		;; negative so it will decrease priority
@@ -864,7 +864,7 @@
 			;;	link the attack and defend goals for regions that are close to each other - 
 			;;	that is, ubits assigned to one count for both.  This parameter tells us how 
 			;;	many regions away two regions can be and still have their combat goals linked.
-			int	linked_region_distance			= 2
+			int	linked_region_distance			= 100
 
 			;; we need a way to determine how many static defenses to build around any economic 
 			;;	structure (settlement, mine, etc.).  The total static defensive cv we will want
@@ -873,16 +873,16 @@
 			;;	priority the same as we would for a defend region goal (by using cv_advantage_max, 
 			;;	cv_exponent_under_target, and cv_max_mult_over_target).
 			;; NOTE: this is not currently supported.
-			fixed static_defensive_cv_mult		= 0.5
+			fixed static_defensive_cv_mult		= 0.1
 
 			;; If we select a defend goal for a particular region, this specified how many
 			;;	regions away we will allow defenders assigned to that goal to be placed.
-			int max_defense_depth				= 3
+			int max_defense_depth				= 30
 			
 			;; Actors need to be able to commit to and lock on to attack goals.  However, this 
 			;;	is only appropriate when we are reasonably close to the target.  So we commit
 			;;	to an attack goal if we are no more than this many regions away
-			int attack_commit_distance			= 3 ;; regions
+			int attack_commit_distance			= 30 ;; regions
 
 			;; For offensive goals, we give a penalty to the goal's priority based on the congruency
 			;;	of the assigned actors.  First we compute the avg dot product between the vector 
@@ -1804,7 +1804,7 @@
 	fixed command_max_delay						= 0.05	;; the longest we will wait to send a single command (after the previous is sent)
 	fixed command_max_total_delay				= 5		;; the longest we will wait to send an entire set of commands from a think
 	int max_ge_commands							= 100	;; the most commands the goal engine will send at once
-	int max_rai_commands						= 40	;; the most commands the RAI will send at once.
+	int max_rai_commands						= 60	;; the most commands the RAI will send at once.
 
 	;; This is used to select between egos.  There isn't any AI to selecting an ego, we just
 	;;	select randomly from among the ones that match the current filters.  We can weight egos

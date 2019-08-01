@@ -10,15 +10,27 @@
 	name									= "#China_zhangzizhong_SAI_zhangzizhong_main_game_ego_name"
 } ;; BalancedMainGameEgo
 
-[Ego template = InfantryEndGameEgo]
+[Ego template = InfantryAmmoEndGameEgo]
 {
-	IDS										= zhangzizhong_end_game_ego
+	IDS										= zhangzizhong_ammo_end_game_ego
 	name									= "#China_zhangzizhong_SAI_zhangzizhong_end_game_ego_name"
 } ;; BalancedEndGameEgo
+
+[Ego template = InfantryOilEndGameEgo]
+{
+	IDS										= zhangzizhong_oil_end_game_ego
+	name									= "#China_zhangzizhong_SAI_zhangzizhong_end_game_ego_name"
+} ;; BalancedWarGameEgo
 
 [Ego template = InfantryWarGameEgo]
 {
 	IDS										= zhangzizhong_war_game_ego
+	name									= "#China_zhangzizhong_SAI_zhangzizhong_end_game_ego_name"
+} ;; BalancedWarGameEgo
+
+[Ego template = InfantryFightGameEgo]
+{
+	IDS										= zhangzizhong_fight_game_ego
 	name									= "#China_zhangzizhong_SAI_zhangzizhong_end_game_ego_name"
 } ;; BalancedWarGameEgo
 
@@ -35,10 +47,16 @@
 	IDS										= zhangzizhong_main_game_ego
 
 	[Ego]
-	IDS										= zhangzizhong_end_game_ego
+	IDS										= zhangzizhong_ammo_end_game_ego
+
+	[Ego]
+	IDS										= zhangzizhong_oil_end_game_ego
 
 	[Ego]
 	IDS										= zhangzizhong_war_game_ego
+
+	[Ego]
+	IDS										= zhangzizhong_fight_game_ego
 
 
 	[Nation]
