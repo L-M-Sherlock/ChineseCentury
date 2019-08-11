@@ -24,6 +24,9 @@
 
 		[Property]
 		property_ids = tank_company
+
+		[Property]
+		property_ids = special_company
 	}
 
 	[View]

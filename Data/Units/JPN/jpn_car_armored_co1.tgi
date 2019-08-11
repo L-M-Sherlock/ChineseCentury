@@ -80,7 +80,7 @@
 		[Property]
 		property_IDS = front
 	}
-
+/*
     [DenizenComponent]
 	{
 		guard_range = 15
@@ -101,7 +101,7 @@
 		actor_ids = jpn_infantry_co
 		count = 1
 	}
-	
+*/	
 	[PerformerComponent]
 	{
 		[Ability Template=AAGunLocal]

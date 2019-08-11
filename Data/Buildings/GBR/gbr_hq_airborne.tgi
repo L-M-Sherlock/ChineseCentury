@@ -58,7 +58,7 @@
 		money = 225
 
 		[Production]
-		money = 30
+		money = 25
 		ammo = 15
 		oil = 0
 		unit_limit_provided = 3

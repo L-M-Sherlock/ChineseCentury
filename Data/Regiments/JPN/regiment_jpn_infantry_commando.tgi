@@ -22,9 +22,15 @@
 	{
 		[Property]
 		property_IDS = recon
+        
+		[Property]
+		property_IDS = infantry_company
 		
 		[Property]
-		property_IDS = trailblazing		
+		property_IDS = trailblazing	
+		
+		[Property]
+		property_IDS = special_company		
 	}
 
 	[View]

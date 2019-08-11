@@ -7,7 +7,7 @@
 	operational_range = 30
 	morale_breakpoint = 1
 
-	recruit_time = 30
+	recruit_time = 20
 	recruit_full = true
 
 	in_supply_detached = true
@@ -74,7 +74,7 @@ but also can cause CRASH!!!!!!!!!!!!
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 150
+		money = 100
 		
 		[Upkeep]
 		ammo = 10
@@ -139,6 +139,9 @@ but also can cause CRASH!!!!!!!!!!!!
 	
 	[PropertiesComponent]
 	{	
+		[Property]
+		property_IDS = org_mechanized
+        
 		[Property]
 		property_ids = artillery_company
 

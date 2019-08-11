@@ -4,16 +4,16 @@
 	impact_impulse = 6000
 	icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
 	
-	area = 4
+	area = 6
 	attenuation_range_min = 1
 	attenuation_factor_max = 0.25
 
-	range = 44
+	range = 50
 	recharge_time = 9
 	reload_time = 0.0
 									
 	[Effect Template=BlastDamageEffect]
-	amount = 25
+	amount = 30
 
 	[Effect Template=MoraleLossEffect]
 	amount = 1

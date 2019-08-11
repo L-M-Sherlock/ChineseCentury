@@ -7,7 +7,7 @@
 	operational_range = 30
 	morale_breakpoint = 1
 
-	recruit_time = 100
+	recruit_time = 25
 	recruit_full = true
 
 	in_supply_detached = true

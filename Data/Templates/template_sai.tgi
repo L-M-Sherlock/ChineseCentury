@@ -723,10 +723,10 @@
 		[OffensiveCV]
 		{
 			;; effect of cv
-			fixed cv_advantage_target			= 0.8		;; priority drops exponentially if we're below this, goes up linearly if above (was 2)
+			fixed cv_advantage_target			= 0.1		;; priority drops exponentially if we're below this, goes up linearly if above (was 2)
 			fixed cv_advantage_max				= 5			;; CV over this is irrelevant
 			fixed cv_exponent_under_target		= 4			;; the exponent used if under target cv
-			fixed cv_max_mult_over_target		= 0.5		;; the maximum bonus to priority if over target cv
+			fixed cv_max_mult_over_target		= 12		;; the maximum bonus to priority if over target cv
 
 			;; the minimum cv we should assign to any defense or offense (regardless of enemy strength)
 			fixed min_cv_to_assign				= 50		;; this should NEVER NEVER be zero (or less than zero).
@@ -749,7 +749,7 @@
 			fixed min_cv_to_assign				= 1		;; this should NEVER NEVER be zero (or less than zero).
 			
 			;; should we cound CV from buildings
-			bool count_static_cv				= false
+			bool count_static_cv				= true
 		} ;; DefensiveCV
 
 		;; TODO: put in values for a CV curve for assigning defenders to a construct goal.  For now
@@ -864,7 +864,7 @@
 			;;	link the attack and defend goals for regions that are close to each other - 
 			;;	that is, ubits assigned to one count for both.  This parameter tells us how 
 			;;	many regions away two regions can be and still have their combat goals linked.
-			int	linked_region_distance			= 100
+			int	linked_region_distance			= 50
 
 			;; we need a way to determine how many static defenses to build around any economic 
 			;;	structure (settlement, mine, etc.).  The total static defensive cv we will want
@@ -986,7 +986,7 @@
 				fixed target_damage_ceiling					= 0.8
 				fixed target_damage_bonus					= 2
 				
-				fixed support_ground_attack_bonus			= 2
+				fixed support_ground_attack_bonus			= 5
 				
 				fixed no_bonus_penalty						= 0
 				
@@ -996,7 +996,7 @@
 				
 				fixed resupplying_mult						= 0
 				
-				fixed min_time_between_attacks				= 150
+				fixed min_time_between_attacks				= 120
 				
 				fixed extra_planes_multiplier_max			= 2
 				fixed extra_planes_multiplier_per_plane		= 0.5
@@ -1289,7 +1289,7 @@
 			} ;; RecruitPreference
 
 			fixed economic_value_multiplier		= 0.2	;; multiply the economic value by this to balance it
-			fixed decreased_income_penalty		= 20	;; if we would decrease the economy, apply this
+			fixed decreased_income_penalty		= 10	;; if we would decrease the economy, apply this
 			fixed insufficient_income_level		= 40	;; if recruiting would drive our economy below this level, apply the following penalty
 			fixed insufficient_income_penalty	= 350
 
@@ -1721,9 +1721,9 @@
 		;;	- min_attack_advantage - the minimum CV advantage I will try to attain on each target.
 		;;	- max_attack_advantage - if I achieve this advantage, I won't add any more units to a 
 		;;		target.
-		int attack_distance						= 2
-		fixed min_attack_advantage				= 1
-		fixed max_attack_advantage				= 1.5
+		int attack_distance						= 3
+		fixed min_attack_advantage				= 0.8
+		fixed max_attack_advantage				= 2
 
 		;; data for selecting formations
 		;;	- threatened_region_influence_ratio - if the ratio of enemy influence to our influence

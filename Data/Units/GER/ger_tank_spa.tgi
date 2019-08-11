@@ -76,13 +76,12 @@
 				recharge_time = 9
 				range = 44
 				area = 4
-				max_targets = 8
 					
 				[Flags] 
 				bombard = true
 				
 				[Effect Template=BlastDamageEffect]
-				amount = 55
+				amount = 80
 
 				[Effect Template=MoraleLossEffect]
 				amount = 1

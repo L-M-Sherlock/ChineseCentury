@@ -68,10 +68,9 @@
 				range = 44
 				recharge_time = 9
 				area = 3
-				max_targets = 8
 	
 				[Effect Template=BlastDamageEffect]
-				amount = 40
+				amount = 60
 				
 				[Effect Template=MoraleLossEffect]
 				amount = .75

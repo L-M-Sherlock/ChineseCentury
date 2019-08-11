@@ -24,12 +24,12 @@
 
 		[Item]
 		stat	= ammo_rate
-		min	= 15
+		min	= 5
 		max	= 99999
 
 		[Item]
 		stat	= oil_rate
-		min	= 15
+		min	= 5
 		max	= 99999
 	}
 
@@ -144,7 +144,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
-			value			= 2000
+			value			= 1500
 			repeat_penalty		= 100
 		}
 
@@ -173,12 +173,12 @@
 
 		[Item]
 		stat	= ammo_rate
-		min	= 15
+		min	= 5
 		max	= 99999
 
 		[Item]
 		stat	= oil_rate
-		min	= 15
+		min	= 5
 		max	= 99999
 	}
 
@@ -259,6 +259,12 @@
 			{
 				property_ids		= motor_pool
 			}
+			
+			[SpecificRecruitRequest]
+			{
+				recruit_ids			        = ger_truck_mechanized			
+				base_priority				= 600
+			}	
 		}
 
 		[ActorPriority]
@@ -321,12 +327,12 @@
 
 		[Item]
 		stat	= ammo_rate
-		min	= 15
+		min	= 5
 		max	= 99999
 
 		[Item]
 		stat	= oil_rate
-		min	= 15
+		min	= 5
 		max	= 99999
 
 		[Item]
@@ -505,12 +511,12 @@
 
 		[Item]
 		stat	= ammo_rate
-		min	= 15
+		min	= 5
 		max	= 99999
 
 		[Item]
 		stat	= oil_rate
-		min	= 15
+		min	= 5
 		max	= 99999
 
 		[Item]
@@ -666,7 +672,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= mechanized_company
-			value			= 6000
+			value			= 8000
 			repeat_penalty		= 100
 		}
 
@@ -680,7 +686,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= tank_company
-			value			= 7000
+			value			= 9000
 			repeat_penalty		= 100
 		}
 
@@ -746,12 +752,12 @@
 		[Item]
 		stat		= ammo_rate
 		min		= -99999
-		max		= 14
+		max		= 4
 	}
 
 	[GoalEngine]
 	{
-		build_queue_max_items	= 6
+		build_queue_max_items	= 12
 
 		[GoalPriority]
 		{
@@ -834,37 +840,37 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request			= 6
+			    number_to_request           = 12
 				base_priority				= 1200
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = ger_truck_supply
-				number_to_request			= 5
+			    number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = usa_truck_supply
-				number_to_request			= 5
+			    number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = jpn_truck_supply
-				number_to_request			= 5
+			    number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = gbr_truck_supply
-				number_to_request			= 5
+			    number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = rus_truck_supply
-				number_to_request			= 5
+			    number_to_request           = 12				
 				base_priority				= 15000
 			}
 		}
@@ -873,7 +879,6 @@
 		{
 			property_IDS		= supplydepot
 			value			= 10000
-            max_recruited_per_think			= 0
 			repeat_penalty		= -100
 		}
 
@@ -912,12 +917,12 @@
 		[Item]
 		stat		= oil_rate
 		min		= -99999
-		max		= 14
+		max		= 4
 	}
 
 	[GoalEngine]
 	{
-		build_queue_max_items	= 6
+		build_queue_max_items	= 12
 
 		[GoalPriority]
 		{
@@ -1000,37 +1005,37 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request			= 6
+			    number_to_request           = 12			    
 				base_priority				= 1200
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = ger_truck_supply
-				number_to_request			= 5
+			    number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = usa_truck_supply
-				number_to_request			= 5
+			    number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = jpn_truck_supply
-				number_to_request			= 5
+			    number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = gbr_truck_supply
-				number_to_request			= 5
+			    number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = rus_truck_supply
-				number_to_request			= 5
+			    number_to_request           = 12				
 				base_priority				= 15000
 			}
 		}
@@ -1039,7 +1044,6 @@
 		{
 			property_IDS		= supplydepot
 			value			= 10000
-            max_recruited_per_think			= 0
 			repeat_penalty		= -100
 		}
 
@@ -1077,12 +1081,12 @@
 
 		[Item]
 		stat	= ammo_rate
-		min	= 15
+		min	= 5
 		max	= 99999
 
 		[Item]
 		stat	= oil_rate
-		min	= 15
+		min	= 5
 		max	= 99999
 
 		[Item]
@@ -1207,98 +1211,122 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request			= 10
+			    
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_tank_artillery
+				number_to_request		= 24
                 base_priority       = 100
-				number_to_request			= 15
+				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_tank_heavy
-                base_priority       = 100
-				number_to_request			= 15
+				number_to_request		= 24
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_rus_halftrack_at
+				number_to_request		= 24
+				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_ger_tank_artillery
-				number_to_request			= 15
+				number_to_request		= 24
+				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_GER_tank_SuperTiger
+				number_to_request		= 24
                 base_priority       = 100
-				number_to_request			= 15
+				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_ita_halftrack_at
-				number_to_request			= 12
+				number_to_request		= 24
+				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_ita_tank_artillery
+				number_to_request		= 24
                 base_priority       = 100
-				number_to_request			= 15
+				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_usa_halftrack_PromotionDelegation
-				number_to_request			= 15
+				number_to_request		= 24
+				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_usa_tank_Mixed
+				number_to_request		= 24
                 base_priority       = 100
-				number_to_request			= 15
+				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_jpn_tank_artillery
-                base_priority       = 100
-				number_to_request			= 15
+				number_to_request		= 24
+				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_jpn_tksaodang
-				number_to_request			= 10
+				number_to_request		= 24
+                base_priority       = 100
+				
 			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_jpn_saodangmotuo
+				number_to_request		= 24
+				
+			}
+            
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = ger_truck_supply
-				number_to_request			= 5
+				
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = usa_truck_supply
-				number_to_request			= 5
+				
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = jpn_truck_supply
-				number_to_request			= 5
+				
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = gbr_truck_supply
-				number_to_request			= 5
+				
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = rus_truck_supply
-				number_to_request			= 5
+				
 			}
 		}
 
@@ -1383,14 +1411,14 @@
 		{
 			property_IDS		= tank_company
 			value			= 8000
-			repeat_penalty		= 100
+			repeat_penalty		= 75
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= artillery_company
 			value			= 9900
-			repeat_penalty		= 100
+			repeat_penalty		= 75
 		}
 
 		[ActorPriority]
@@ -1436,68 +1464,93 @@
 
 		[ActorPriority]
 		{
+			actor_IDS					= regiment_rus_halftrack_at
+			value							= 12000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
 			actor_IDS					= regiment_rus_tank_artillery
-			value							= 1300
+			value							= 13000
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_rus_tank_heavy
-			value							= 1350
+			value							= 13500
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_GER_tank_SuperTiger
-			value							= 2000
+			value							= 20000
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_GBR_tank_Tankkiller
-			value							= 1300
+			value							= 13000
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_GBR_tank_Airbornetankgun
-			value							= 1300
+			value							= 13000
+			repeat_penalty		= 100
 		}
         
         [ActorPriority]
 		{
 			actor_IDS					= regiment_ita_tank_artillery
-			value							= 1800
+			value							= 18000
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_ita_halftrack_at
-			value							= 1200
+			value							= 12000
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					=  regiment_usa_tank_Mixed
-			value							= 1750
+			value							= 17500
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_usa_halftrack_PromotionDelegation
-			value							= 1350
+			value							= 13500
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_jpn_saodangmotuo
+			value							= 13000
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_jpn_tank_artillery
-			value							= 1350
+			value							= 13500
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_jpn_tksaodang
-			value							= 1200
+			value							= 13000
+			repeat_penalty		= 100
 		}
 
 	}

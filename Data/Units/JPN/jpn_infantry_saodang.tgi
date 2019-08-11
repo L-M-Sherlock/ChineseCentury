@@ -37,9 +37,6 @@
 		
 		[Property]
 		property_IDS = combat_unit
-
-		[Property]
-		property_IDS = captain
 	}
 	
 	[PerformerComponent]
