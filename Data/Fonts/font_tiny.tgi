@@ -30,7 +30,7 @@ EXAMPLES:
 {
 	ids = tiny
 	name = "#font_tiny_name"
-	size = 9
+	size = 7
 
 	[CharacterSet]
 	{

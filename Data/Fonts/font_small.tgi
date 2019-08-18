@@ -29,7 +29,7 @@ EXAMPLES:
 {
 	ids = small
 	name = "#font_small_small_name"
-	size = 9 ;; this is the Windows font size, not the actual pixel height of glyphs.
+	size = 7 ;; this is the Windows font size, not the actual pixel height of glyphs.
 
 	[CharacterSet]
 	{
