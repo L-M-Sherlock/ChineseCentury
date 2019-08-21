@@ -116,6 +116,12 @@
 
 			[SpecificRecruitRequest]
 			{
+				property_ids		= recon
+			    number_to_request           = 3
+			}
+
+			[SpecificRecruitRequest]
+			{
 				property_ids		= supplydepot
 			}
 		}
@@ -253,6 +259,12 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= mechhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= special_company
+			    number_to_request           = 5
 			}
 
 			[SpecificRecruitRequest]
@@ -417,6 +429,18 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= armorhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= special_company
+			    number_to_request           = 6
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= antitank_company
+			    number_to_request           = 6
 			}
 
 			[SpecificRecruitRequest]
@@ -603,6 +627,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= armorhq
+			    number_to_request           = 3
 			}
 
 			[SpecificRecruitRequest]
@@ -631,6 +656,18 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= tank_company
+			    number_to_request           = 6
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= artillery_company
+			    number_to_request           = 6
 			}
 		}
 
@@ -1327,6 +1364,18 @@
 			{
 				recruit_ids			        = rus_truck_supply
 				
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= tank_company
+			    number_to_request           = 6
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= artillery_company
+			    number_to_request           = 6
 			}
 		}
 
