@@ -668,8 +668,8 @@
 			;;	building already exists, then we set it to the max in order to keep the final
 			;;	values from becoming too great.  Finally, after we've applied min and max we apply
 			;;	an exponent to make the multiplier more (or less) extreme.
-			fixed military_value_influence_ratio_min			= 0.8
-			fixed military_value_influence_ratio_max			= 1.2
+			fixed military_value_influence_ratio_min			= 0.5
+			fixed military_value_influence_ratio_max			= 1.5
 			fixed military_value_influence_ratio_exponent		= 3
 
 			;; Next we determine how far away a defensive structure can be and still be considered

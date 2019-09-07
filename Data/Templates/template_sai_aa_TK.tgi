@@ -434,13 +434,13 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= special_company
-			    number_to_request           = 6
+			    number_to_request           = 4
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= antitank_company
-			    number_to_request           = 6
+			    number_to_request           = 4
 			}
 
 			[SpecificRecruitRequest]
@@ -469,14 +469,14 @@
 		[ActorPriority]
 		{
 			property_IDS		= mechhq
-			value			= 8000
+			value			= 8500
 			repeat_penalty		= 800
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= armorhq
-			value			= 5000
+			value			= 5500
 			repeat_penalty		= 1500
 		}
 
@@ -519,6 +519,7 @@
 		{
 			property_IDS		= property_city
 			value			= 1000
+			repeat_penalty	= 10000
 		}
 	}
 }
@@ -661,13 +662,13 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= tank_company
-			    number_to_request           = 6
+			    number_to_request           = 4
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				property_ids				= artillery_company
-			    number_to_request           = 6
+			    number_to_request           = 4
 			}
 		}
 
@@ -716,7 +717,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= airfield
-			value			= 12000
+			value			= 11000
 			repeat_penalty		= 10000
 		}
 
@@ -737,7 +738,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= armorhq
-			value			= 10000
+			value			= 12000
 			repeat_penalty		= 100
 		}
 
@@ -772,7 +773,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= property_city
-			value			= 1000
+			value			= 100
+			repeat_penalty	= 10000
 		}
 	}
 }
@@ -1508,7 +1510,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= property_city
-			value			= 1000
+			value			= 10
+			repeat_penalty	= 10000
 		}
 
 		[ActorPriority]
