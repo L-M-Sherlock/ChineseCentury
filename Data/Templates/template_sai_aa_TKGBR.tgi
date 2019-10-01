@@ -143,7 +143,7 @@
 		{
 			property_IDS		= special_company
 			value			= 8997
-			repeat_penalty		= 50
+			repeat_penalty		= 25
 		}
 
 		[ActorPriority]
@@ -279,7 +279,7 @@
 		{
 			property_IDS		= airhq
 			value			= 8001
-			repeat_penalty		= 100
+			repeat_penalty		= 150
 		}
 
 		[ActorPriority]
@@ -293,7 +293,7 @@
 		{
 			property_IDS		= special_company
 			value			= 9999
-			repeat_penalty		= 150
+			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
@@ -430,7 +430,7 @@
 		{
 			property_IDS		= airhq
 			value			= 5000
-			repeat_penalty		= 100
+			repeat_penalty		= 200
 		}
 
 		[ActorPriority]
@@ -444,7 +444,7 @@
 		{
 			property_IDS		= mechhq
 			value			= 8000
-			repeat_penalty		= 800
+			repeat_penalty		= 500
 		}
 
 		[ActorPriority]
@@ -641,13 +641,6 @@
 
 		[ActorPriority]
 		{
-			property_IDS		= infhq
-			value			= 1200
-			repeat_penalty		= 100
-		}
-
-		[ActorPriority]
-		{
 			property_IDS		= recon
 			value			= 1000
 			repeat_penalty		= 100
@@ -670,7 +663,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= mechhq
-			value			= 1500
+			value			= 1600
 			repeat_penalty		= 100
 		}
 
@@ -705,7 +698,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= airfield
-			value			= 9800
+			value			= 12000
 			repeat_penalty		= 10000
 		}
 
@@ -727,7 +720,7 @@
 		{
 			property_IDS		= armorhq
 			value			= 9500
-			repeat_penalty		= 100
+			repeat_penalty		= 75
 		}
 
 		[ActorPriority]
@@ -866,7 +859,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request		= 12
+			    ;;number_to_request		= 12
 				base_priority				= 1200
 			}
 		}
@@ -994,7 +987,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request		= 24
+			    ;;number_to_request		= 24
 				base_priority				= 1200
 			}
 		}
@@ -1104,10 +1097,10 @@
 		[Unpacking]
 		{
 			base_priority							= 800
-			enemy_static_influence_mult			= -10
-			enemy_dynamic_influence_mult			= -5
-			max_friendly_building_bonus				= 100
-			max_friendly_building_bonus_per_building	= 50
+			enemy_static_influence_mult			= -20
+			enemy_dynamic_influence_mult			= -20
+			max_friendly_building_bonus				= -10
+			max_friendly_building_bonus_per_building	= -10
 			fuzzy_factor					= 50
 		}
 
@@ -1120,16 +1113,6 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= corpshq
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids		= infhq
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids		= airhq
 			}
 
 			[SpecificRecruitRequest]
@@ -1169,79 +1152,91 @@
 			{
 				property_ids				= supplydepot
 				base_priority				= 1000
-			    number_to_request		= 24
+			    ;;number_to_request		= 24
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_tank_artillery
-				number_to_request		= 24
+				;;number_to_request		= 24
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_tank_rocket_truck
-				number_to_request		= 24
+				;;number_to_request		= 24
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_tank_heavy
-				number_to_request		= 24
+				;;number_to_request		= 24
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_GBR_tank_Tankkiller
-				number_to_request		= 24
+				;;number_to_request		= 24
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_GBR_tank_Airbornetankgun
-				number_to_request		= 24
+				;;number_to_request		= 24
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_ger_tank_artillery
-				number_to_request		= 24
+				;;number_to_request		= 24
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_GER_tank_SuperTiger
-				number_to_request		= 24
+				;;number_to_request		= 24
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_usa_halftrack_at
-				number_to_request		= 24
+				;;number_to_request		= 24
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_usa_tank_artillery
-				number_to_request		= 24
+				;;number_to_request		= 24
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_usa_tank_heavy
-				number_to_request		= 24
+				;;number_to_request		= 24
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_jpn_tank_artillery
-				number_to_request		= 24
+				;;number_to_request		= 24
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_jpn_tksaodang
-				number_to_request		= 24
+				;;number_to_request		= 24
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= tank_company
+			    ;;number_to_request           = 6
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= artillery_company
+			    ;;number_to_request           = 6
 			}
 		}
 
@@ -1249,7 +1244,7 @@
 		{
 			property_IDS		= supplydepot
 			value			= 15000
-			repeat_penalty	= 50
+			repeat_penalty	= 5
 		}
         
 		[ActorPriority]
@@ -1275,13 +1270,6 @@
 
 		[ActorPriority]
 		{
-			property_IDS		= infhq
-			value			= 1200
-			repeat_penalty		= 100
-		}
-
-		[ActorPriority]
-		{
 			property_IDS		= recon
 			value			= 1000
 			repeat_penalty		= 100
@@ -1303,30 +1291,9 @@
 
 		[ActorPriority]
 		{
-			property_IDS		= mechhq
-			value			= 2000
-			repeat_penalty		= 100
-		}
-
-		[ActorPriority]
-		{
 			property_IDS		= antitank_company
 			value			= 9900
 			repeat_penalty		= 200
-		}
-
-		[ActorPriority]
-		{
-			property_IDS		= airhq
-			value			= 5000
-			repeat_penalty		= 100
-		}
-
-		[ActorPriority]
-		{
-			property_IDS		= airfield
-			value			= 9200
-			repeat_penalty		= 10000
 		}
 
 		[ActorPriority]
@@ -1374,8 +1341,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= engineer
-			value			= 20000
-			repeat_penalty		= 10000
+			value			= 30000
+			repeat_penalty		= 15000
 		}
 
 		[ActorPriority]
@@ -1415,14 +1382,14 @@
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_GBR_tank_Tankkiller
-			value							= 13000
+			value							= 16000
 			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_GBR_tank_Airbornetankgun
-			value							= 13000
+			value							= 15800
 			repeat_penalty		= 100
 		}
 

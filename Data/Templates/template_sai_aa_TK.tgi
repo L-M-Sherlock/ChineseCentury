@@ -116,8 +116,48 @@
 
 			[SpecificRecruitRequest]
 			{
+				recruit_ids				= ger_truck_infantry
+            }
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= ger_truck_mechanized
+            }
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= usa_truck_infantry
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= usa_truck_mechanized
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= rus_truck_infantry
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= jpn_truck_infantry
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= gbr_truck_airborne
+			}	
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= gbr_truck_infantry
+			}	
+            
+			[SpecificRecruitRequest]
+			{
 				property_ids		= recon
-			    number_to_request           = 3
+			    ;;number_to_request           = 3
 			}
 
 			[SpecificRecruitRequest]
@@ -264,7 +304,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= special_company
-			    number_to_request           = 5
+			    ;;number_to_request           = 5
 			}
 
 			[SpecificRecruitRequest]
@@ -275,7 +315,7 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = ger_truck_mechanized			
-				base_priority				= 600
+				base_priority				= 800
 			}	
 		}
 
@@ -433,14 +473,39 @@
 
 			[SpecificRecruitRequest]
 			{
+				recruit_ids				= ger_truck_mechanized
+            }
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= usa_truck_mechanized
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= rus_truck_mechanized
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= jpn_truck_mechanized
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= gbr_truck_mechanized
+			}	
+
+			[SpecificRecruitRequest]
+			{
 				property_ids		= special_company
-			    number_to_request           = 4
+			    ;;number_to_request           = 4
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= antitank_company
-			    number_to_request           = 4
+			    ;;number_to_request           = 4
 			}
 
 			[SpecificRecruitRequest]
@@ -628,8 +693,33 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= armorhq
-			    number_to_request           = 3
+			    ;;number_to_request           = 4
 			}
+            
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= ger_truck_armor
+            }
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= usa_truck_armor
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= rus_truck_armor
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= jpn_truck_armor
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= gbr_truck_armor
+			}	
 
 			[SpecificRecruitRequest]
 			{
@@ -662,13 +752,13 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= tank_company
-			    number_to_request           = 4
+			    ;;number_to_request           = 4
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				property_ids				= artillery_company
-			    number_to_request           = 4
+			    ;;number_to_request           = 4
 			}
 		}
 
@@ -717,7 +807,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= airfield
-			value			= 11000
+			value			= 12550
 			repeat_penalty		= 10000
 		}
 
@@ -738,8 +828,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= armorhq
-			value			= 12000
-			repeat_penalty		= 100
+			value			= 12500
+			repeat_penalty		= 75
 		}
 
 		[ActorPriority]
@@ -879,37 +969,37 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request           = 12
+			    ;;number_to_request           = 12
 				base_priority				= 1200
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = ger_truck_supply
-			    number_to_request           = 12				
+			    ;;number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = usa_truck_supply
-			    number_to_request           = 12				
+			    ;;number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = jpn_truck_supply
-			    number_to_request           = 12				
+			    ;;number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = gbr_truck_supply
-			    number_to_request           = 12				
+			    ;;number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = rus_truck_supply
-			    number_to_request           = 12				
+			    ;;number_to_request           = 12				
 				base_priority				= 15000
 			}
 		}
@@ -1044,37 +1134,37 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request           = 12			    
+			    ;;number_to_request           = 12			    
 				base_priority				= 1200
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = ger_truck_supply
-			    number_to_request           = 12				
+			    ;;number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = usa_truck_supply
-			    number_to_request           = 12				
+			    ;;number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = jpn_truck_supply
-			    number_to_request           = 12				
+			    ;;number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = gbr_truck_supply
-			    number_to_request           = 12				
+			    ;;number_to_request           = 12				
 				base_priority				= 15000
 			}
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = rus_truck_supply
-			    number_to_request           = 12				
+			    ;;number_to_request           = 12				
 				base_priority				= 15000
 			}
 		}
@@ -1192,9 +1282,9 @@
 		{
 			base_priority							= 800
 			enemy_static_influence_mult			= -20
-			enemy_dynamic_influence_mult			= -10
-			max_friendly_building_bonus				= -5
-			max_friendly_building_bonus_per_building	= -5
+			enemy_dynamic_influence_mult			= -20
+			max_friendly_building_bonus				= -10
+			max_friendly_building_bonus_per_building	= -10
 			fuzzy_factor					= 50
 		}
         
@@ -1256,7 +1346,7 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_tank_artillery
-				number_to_request		= 24
+				;;number_to_request		= 24
                 base_priority       = 100
 				
 			}
@@ -1264,28 +1354,28 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_tank_heavy
-				number_to_request		= 24
+				;;number_to_request		= 24
 				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_halftrack_at
-				number_to_request		= 24
+				;;number_to_request		= 24
 				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_ger_tank_artillery
-				number_to_request		= 24
+				;;number_to_request		= 24
 				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_GER_tank_SuperTiger
-				number_to_request		= 24
+				;;number_to_request		= 24
                 base_priority       = 100
 				
 			}
@@ -1293,14 +1383,14 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_ita_halftrack_at
-				number_to_request		= 24
+				;;number_to_request		= 24
 				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_ita_tank_artillery
-				number_to_request		= 24
+				;;number_to_request		= 24
                 base_priority       = 100
 				
 			}
@@ -1308,14 +1398,14 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_usa_halftrack_PromotionDelegation
-				number_to_request		= 24
+				;;number_to_request		= 24
 				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_usa_tank_Mixed
-				number_to_request		= 24
+				;;number_to_request		= 24
                 base_priority       = 100
 				
 			}
@@ -1323,14 +1413,14 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_jpn_tank_artillery
-				number_to_request		= 24
+				;;number_to_request		= 24
 				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_jpn_tksaodang
-				number_to_request		= 24
+				;;number_to_request		= 24
                 base_priority       = 100
 				
 			}
@@ -1338,7 +1428,7 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_jpn_saodangmotuo
-				number_to_request		= 24
+				;;number_to_request		= 24
 				
 			}
             
@@ -1371,13 +1461,13 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= tank_company
-			    number_to_request           = 6
+			    ;;number_to_request           = 6
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				property_ids				= artillery_company
-			    number_to_request           = 6
+			    ;;number_to_request           = 6
 			}
 		}
 
@@ -1385,7 +1475,7 @@
 		{
 			property_IDS		= supplydepot
 			value			= 15000
-			repeat_penalty	= 50
+			repeat_penalty	=       5
 		}
         
 		[ActorPriority]
@@ -1503,8 +1593,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= engineer
-			value			= 20000
-			repeat_penalty		= 10000
+			value			= 30000
+			repeat_penalty		= 15000
 		}
 
 		[ActorPriority]
@@ -1580,7 +1670,7 @@
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_usa_halftrack_PromotionDelegation
-			value							= 13500
+			value							= 15500
 			repeat_penalty		= 100
 		}
 

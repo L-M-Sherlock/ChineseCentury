@@ -642,19 +642,19 @@
 			;;	high.  The minimum is applied before the exponent, to prevent sign changing or
 			;;	imaginary numbers.  For actors with a negative economic value, we take 1 / this 
 			;;	factor in order to get an appropriate result.
-			fixed enemy_influence_mult			= 0.001	;; smaller number means more aggressive - we value actors higher in areas of enemy influence more
+			fixed enemy_influence_mult			= 0.01	;; smaller number means more aggressive - we value actors higher in areas of enemy influence more
 			fixed min_influence_factor			= 0.01
-			fixed influence_exponent			= 3
+			fixed influence_exponent			= 2
 
 			;; Military value is based on CV.  For static actors, there's a complicated formula
 			;;	based on what they protect and how well they protect it.  For dynamic actors,
 			;;	we just use a multiplier (given below) times the CV, and then apply the military
 			;;	value scaling multiplier (below)
-			fixed military_cv_mult				= 5
+			fixed military_cv_mult				= 10
 
 			;; All military values have this multiplier applied to them, to let us scale this 
 			;;	this portion of the actor value as appropriate.
-			fixed military_value_scaling_mult	= 1.2
+			fixed military_value_scaling_mult	= 2
 
 			;; When computing the value of a static military actor (such as an outpost) we look at
 			;;	the following factors, in the order listed.
@@ -668,9 +668,9 @@
 			;;	building already exists, then we set it to the max in order to keep the final
 			;;	values from becoming too great.  Finally, after we've applied min and max we apply
 			;;	an exponent to make the multiplier more (or less) extreme.
-			fixed military_value_influence_ratio_min			= 0.5
-			fixed military_value_influence_ratio_max			= 1.5
-			fixed military_value_influence_ratio_exponent		= 3
+			fixed military_value_influence_ratio_min			= 0.3
+			fixed military_value_influence_ratio_max			= 3
+			fixed military_value_influence_ratio_exponent		= 2
 
 			;; Next we determine how far away a defensive structure can be and still be considered
 			;;	to be defending a building.  In general this should be between 0 and 1, and is a 
@@ -685,7 +685,7 @@
 			;;	settlement markers), but in practice I'm not currently doing that.  For each marker
 			;;	that is not currently built on, and is within the radius I computed in the last 
 			;;	step, we add on the marker value times the influence ratio.
-			fixed military_value_marker_value					= 200
+			fixed military_value_marker_value					= 500
 
 			;; We also might want to build defensive structures in areas with high enemy traffic.
 			;;	For each enemy unit that has LEFT the region we are considering building in (but
@@ -697,7 +697,7 @@
 			;; Finally, we look for bottlenecks.  Bottlenecks are regions which have to be traversed
 			;;	in order to move between two of their adjacent regions.  If the region we are in is
 			;;	a bottleneck, we add this value multiplied by the influence ratio.
-			fixed military_value_bottleneck_value				= 500
+			fixed military_value_bottleneck_value				= 300
 
 			;; Putting military value aside, actor value can also be affected by the distance from
 			;;	the actor to the kingdom center.  For actors where this is applied, we take the
@@ -1154,7 +1154,7 @@
 			;; Military buildings in city zones get a bonus.  That based on the total number of 
 			;;	friendly military buildings in the zone (including the one to be built):
 			;;		priority += max_bonus * ((1 / num_buildings) ^ exponent)
-			fixed construct_city_defense_max_bonus		= 200
+			fixed construct_city_defense_max_bonus		= 20
 			fixed construct_city_defense_exponent		= 1
 
 			;; We like to build military buildings in supply zones, because those are indicative
