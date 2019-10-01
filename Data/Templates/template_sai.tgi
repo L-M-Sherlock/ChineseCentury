@@ -677,7 +677,7 @@
 			;;	percentage of the structures guard radius.
 			;; Once we've determined that a building is within range of the defender, the value
 			;;	added on is equal to the economic value of the building times the influence ratio.
-			fixed military_value_radius_mult					= 1
+			fixed military_value_radius_mult					= 0.5
 
 			;; Another consideration that gets added on to a defensive structure's military value is
 			;;	whether it defends an unused marker.  In principal we might want to distinguish 
@@ -685,14 +685,14 @@
 			;;	settlement markers), but in practice I'm not currently doing that.  For each marker
 			;;	that is not currently built on, and is within the radius I computed in the last 
 			;;	step, we add on the marker value times the influence ratio.
-			fixed military_value_marker_value					= 500
+			fixed military_value_marker_value					= 1000
 
 			;; We also might want to build defensive structures in areas with high enemy traffic.
 			;;	For each enemy unit that has LEFT the region we are considering building in (but
 			;;	not for the ones currently there) we add on the following value.  The influence
 			;;	ratio is not applied in this case.  I'm not totally sure this is a good idea, but 
 			;;	it's easy to turn it off by setting it to 0.
-			fixed military_value_enemy_traffic_value			= 500
+			fixed military_value_enemy_traffic_value			= 750
 
 			;; Finally, we look for bottlenecks.  Bottlenecks are regions which have to be traversed
 			;;	in order to move between two of their adjacent regions.  If the region we are in is

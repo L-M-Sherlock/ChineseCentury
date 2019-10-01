@@ -807,7 +807,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= airfield
-			value			= 12550
+			value			= 12750
 			repeat_penalty		= 10000
 		}
 
