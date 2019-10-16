@@ -143,7 +143,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			count_static_cv = false
+			;;count_static_cv = false
 		}
 
 		[Exploration]
@@ -186,7 +186,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= infhq
-			    number_to_request			= 10
+			    ;;number_to_request			= 10
 			}		
 		
 			[SpecificRecruitRequest]
@@ -215,25 +215,25 @@
 			{
 				recruit_ids			        = cpc_truck_infantry
 				base_priority				= 1500
-			    number_to_request			= 10
+			    ;;number_to_request			= 10
 			}			
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_infantry_recon
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_conscript
-			    number_to_request			= 4
+			    ;;number_to_request			= 4
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_infantry_sniper1
-			    number_to_request			= 3
+			    ;;number_to_request			= 3
 			}
 		}
 
@@ -385,7 +385,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			count_static_cv = false
+			;;count_static_cv = false
 		}
 
 		[Exploration]
@@ -474,13 +474,13 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_conscript
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_infantry_sniper1
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 			}			
 		} ;; Recruiting
 		
@@ -663,7 +663,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			count_static_cv = false
+			;;count_static_cv = false
 		}
 
 
@@ -718,14 +718,14 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 				base_priority				= 1200
 			}
 						
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = cpc_truck_supply
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 				base_priority				= 1500
 			}
 
@@ -833,7 +833,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			count_static_cv = false
+			;;count_static_cv = false
 		}
 
 
@@ -877,14 +877,14 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 				base_priority				= 1500
 			}
 						
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = cpc_truck_supply
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 				base_priority				= 1500
 			}
 
@@ -1010,7 +1010,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			count_static_cv = false
+			;;count_static_cv = false
 		}
 
 
@@ -1074,13 +1074,13 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = cpc_truck_armor
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 			}	
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = cpc_truck_mechanized
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 			}	
 			
 			[SpecificRecruitRequest]
@@ -1135,7 +1135,7 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_infantry_sniper1
-				number_to_request			= 6
+				;;number_to_request			= 6
 			}
 
 			[SpecificRecruitRequest]
@@ -1346,7 +1346,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			count_static_cv = false
+			;;count_static_cv = false
 		}
 
 
@@ -1399,7 +1399,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request			= 12
+			    ;;number_to_request			= 12
 			}
             
 			[SpecificRecruitRequest]
@@ -1446,39 +1446,39 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_infantry_sniper1
-				number_to_request			= 3
+				;;number_to_request			= 3
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_infantry_mechanized
-				number_to_request			= 6
+				;;number_to_request			= 6
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_rus_airborne_vehicle
-				number_to_request			= 3
+				;;number_to_request			= 3
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_tank_artillery
-				number_to_request			= 6
+				;;number_to_request			= 6
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_tank_special
 				base_priority				= 5000
-				number_to_request			= 6
+				;;number_to_request			= 6
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_rocket_truck
 				base_priority				= 5000
-				number_to_request			= 6
+				;;number_to_request			= 6
 			}	
 			
 

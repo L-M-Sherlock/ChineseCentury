@@ -59,7 +59,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			count_static_cv			= false
+			;;count_static_cv			= false
 		}
 
 		[Exploration]
@@ -218,7 +218,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			count_static_cv			= false
+			;;count_static_cv			= false
 		}
 
 		[Exploration]
@@ -354,7 +354,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			count_static_cv			= false
+			;;count_static_cv			= false
 		}
 
 		[Exploration]
@@ -535,7 +535,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			count_static_cv			= false
+			;;count_static_cv			= false
 		}
 
 		[Exploration]
@@ -806,7 +806,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			count_static_cv			= false
+			;;count_static_cv			= false
 		}
 
 		[Exploration]
@@ -934,7 +934,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			count_static_cv			= false
+			;;count_static_cv			= false
 		}
 
 		[Exploration]
@@ -1066,7 +1066,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			count_static_cv			= false
+			;;count_static_cv			= false
 		}
 
 		[Exploration]

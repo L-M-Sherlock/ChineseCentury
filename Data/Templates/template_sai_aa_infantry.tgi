@@ -87,14 +87,14 @@
 			cv_advantage_max = 24
 			cv_exponent_under_target = 1 
 			min_cv_to_assign = 50
-		}
+		} 
 
 		[DefensiveCV]
 		{
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			count_static_cv = false
+			;;count_static_cv = false
 		}
 
 		[Exploration]
@@ -142,7 +142,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= airhq
-			    number_to_request			= 5
+			    ;;number_to_request			= 5
 			}				
 
 			[SpecificRecruitRequest]
@@ -161,19 +161,19 @@
 			{
 				recruit_ids			        = chn_truck_airborne
 				base_priority				= 1500
-			    number_to_request			= 10
+			    ;;number_to_request			= 10
 			}			
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_chn_infantry
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_chn_paratrooper_MP_ground
-			    number_to_request			= 4
+			    ;;number_to_request			= 4
 			}
 		}
 
@@ -311,7 +311,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			count_static_cv = false
+			;;count_static_cv = false
 		}
 
 		[Exploration]
@@ -381,7 +381,7 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_chn_paratrooper_MP_ground
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 			}		
 		} ;; Recruiting
 		
@@ -531,7 +531,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			count_static_cv = false
+			;;count_static_cv = false
 		}
 
 
@@ -575,14 +575,14 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 				base_priority				= 1200
 			}
 						
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = chn_truck_supply
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 				base_priority				= 1500
 			}
 
@@ -683,7 +683,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			count_static_cv = false
+			;;count_static_cv = false
 		}
 
 
@@ -727,14 +727,14 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 				base_priority				= 1500
 			}
 						
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = chn_truck_supply
-			    number_to_request			= 6
+			    ;;number_to_request			= 6
 				base_priority				= 1500
 			}
 
@@ -842,7 +842,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			count_static_cv = false
+			;;count_static_cv = false
 		}
 
 
@@ -926,7 +926,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= airhq
-				number_to_request			= 6
+				;;number_to_request			= 6
 			}
 
 			[SpecificRecruitRequest]
@@ -943,14 +943,14 @@
 			{
 				recruit_ids					= regiment_chn_paratrooper_MP
 				base_priority				= 2000
-				number_to_request			= 6
+				;;number_to_request			= 6
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_chn_paratrooper_MP_ground
 				base_priority				= 2000
-				number_to_request			= 12
+				;;number_to_request			= 12
 			}	
 			
 
@@ -1112,7 +1112,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			count_static_cv = false
+			;;count_static_cv = false
 		}
 
 
@@ -1165,7 +1165,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    number_to_request			= 12
+			    ;;number_to_request			= 12
 			}
             
 			[SpecificRecruitRequest]
@@ -1213,14 +1213,14 @@
 			{
 				recruit_ids					= regiment_chn_paratrooper_MP
 				base_priority				= 5000
-				number_to_request			= 12
+				;;number_to_request			= 12
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_chn_paratrooper_MP_ground
 				base_priority				= 5000
-				number_to_request			= 12
+				;;number_to_request			= 12
 			}	
 			
 

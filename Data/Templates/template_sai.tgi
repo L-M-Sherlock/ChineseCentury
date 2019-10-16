@@ -654,7 +654,7 @@
 
 			;; All military values have this multiplier applied to them, to let us scale this 
 			;;	this portion of the actor value as appropriate.
-			fixed military_value_scaling_mult	= 2
+			fixed military_value_scaling_mult	= 5
 
 			;; When computing the value of a static military actor (such as an outpost) we look at
 			;;	the following factors, in the order listed.
@@ -677,7 +677,7 @@
 			;;	percentage of the structures guard radius.
 			;; Once we've determined that a building is within range of the defender, the value
 			;;	added on is equal to the economic value of the building times the influence ratio.
-			fixed military_value_radius_mult					= 0.5
+			fixed military_value_radius_mult					= 0
 
 			;; Another consideration that gets added on to a defensive structure's military value is
 			;;	whether it defends an unused marker.  In principal we might want to distinguish 
@@ -685,7 +685,7 @@
 			;;	settlement markers), but in practice I'm not currently doing that.  For each marker
 			;;	that is not currently built on, and is within the radius I computed in the last 
 			;;	step, we add on the marker value times the influence ratio.
-			fixed military_value_marker_value					= 1000
+			fixed military_value_marker_value					= 100
 
 			;; We also might want to build defensive structures in areas with high enemy traffic.
 			;;	For each enemy unit that has LEFT the region we are considering building in (but
@@ -703,8 +703,8 @@
 			;;	the actor to the kingdom center.  For actors where this is applied, we take the
 			;;	ratio of this straight line distance to the max straight line distance on the map.
 			;;	We then normalize this value to lie between the following min and max.
-			fixed distance_mult_min								= 0.01
-			fixed distance_mult_max								= 1.0
+			fixed distance_mult_min								= 0.1
+			fixed distance_mult_max								= 10
 		} ;; ActorValue
 
 		;; This is used to determine how much CV we will apply to an attack or defend goal.  
@@ -741,9 +741,9 @@
 		{
 			;; effect of cv
 			fixed cv_advantage_target			= 0.1			;; priority drops exponentially if we're below this, goes up linearly if above
-			fixed cv_advantage_max				= 3 		;; CV over this is irrelevant
-			fixed cv_exponent_under_target		= 1.5		;; the exponent used if under target cv
-			fixed cv_max_mult_over_target		= 1			;; the maximum bonus to priority if over target cv
+			fixed cv_advantage_max				= 2 		;; CV over this is irrelevant
+			fixed cv_exponent_under_target		= 1		;; the exponent used if under target cv
+			fixed cv_max_mult_over_target		= 4			;; the maximum bonus to priority if over target cv
 
 			;; the minimum cv we should assign to any defense or offense (regardless of enemy strength)
 			fixed min_cv_to_assign				= 1		;; this should NEVER NEVER be zero (or less than zero).
@@ -1175,7 +1175,7 @@
 			bool construct_in_all_regions				= true
 			bool construct_to_defend_research			= true
 			bool construct_to_defend_recruiters			= true
-			bool construct_to_defend_cities				= false
+			bool construct_to_defend_cities				= true
 		} ;; Construction
 
 		[Unpacking]
@@ -1721,9 +1721,9 @@
 		;;	- min_attack_advantage - the minimum CV advantage I will try to attain on each target.
 		;;	- max_attack_advantage - if I achieve this advantage, I won't add any more units to a 
 		;;		target.
-		int attack_distance						= 3
-		fixed min_attack_advantage				= 0.8
-		fixed max_attack_advantage				= 2
+		int attack_distance						= 4
+		fixed min_attack_advantage				= 0.75
+		fixed max_attack_advantage				= 2.5
 
 		;; data for selecting formations
 		;;	- threatened_region_influence_ratio - if the ratio of enemy influence to our influence
@@ -1777,7 +1777,7 @@
 		;;	only the local region).  When extending the search, we take the highest value found.
 		;; kad062103 - in order to make this more reasonable, we subtract friendly CV in the 
 		;;	region before doing any of that fancy math stuff.
-		fixed defend_duration					= 300
+		fixed defend_duration					= 120
 		fixed defend_multiplier					= 0.02
 		fixed defend_exponent					= 0.5
 		fixed defend_ceiling					= 2
