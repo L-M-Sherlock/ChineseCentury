@@ -10,8 +10,8 @@
 
 	[DenizenComponent]
 	{
-		guard_range = 80
-		guard_operational_range = 100
+		guard_range = 100
+		guard_operational_range = 120
 
 		[DenizenGroup]
 		{
@@ -86,7 +86,7 @@
 
 	[DetectionComponent]
 	{
-		detection_range = 125
+		detection_range = 144
 	}
 	
 	[EconomyComponent]

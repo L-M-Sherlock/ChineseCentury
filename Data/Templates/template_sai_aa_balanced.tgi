@@ -35,13 +35,13 @@
 		{
 			actor_ids                       = bank_asian1
 			repeat_penalty					= 500
-			value							= 20000
+			value							= 22500
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= property_city
-			value							= 1500
+			value							= 100
 		}
 
 		[ActorPriority]
@@ -1501,28 +1501,28 @@
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_cpc_tank_special
-			value							= 18000
+			value							= 21000
 			repeat_penalty					= 300
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_rus_airborne_vehicle
-			value							= 17500
+			value							= 20500
 			repeat_penalty					= 250
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_cpc_infantry_mechanized
-			value							= 18000
+			value							= 21000
 			repeat_penalty					= 250
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_cpc_rocket_truck
-			value							= 18000
+			value							= 21000
 			repeat_penalty					= 150
 		}
         

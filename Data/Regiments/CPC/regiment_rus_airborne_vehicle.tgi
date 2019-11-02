@@ -45,7 +45,7 @@
 		element_IDS = rus_airborne_vehicle
 		
 		[Slot]	;; captain
-		element_IDS = rus_airborne_vehicle
+		element_IDS = cpc_Antitank_gun
 	}
 	
 	[PropertiesComponent]

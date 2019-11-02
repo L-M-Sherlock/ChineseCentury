@@ -574,7 +574,7 @@
 		[ResourceManagement]
 		{
 			;; how long will we save up resources to fill a big goal
-			fixed saving_time_limit						= 120
+			fixed saving_time_limit						= 180
 
 			;; How much do we reserve for building settlements, and how long into the game to we
 			;;	continue to do so?  This will only hurt A&A, so turning it off here.
@@ -685,7 +685,7 @@
 			;;	settlement markers), but in practice I'm not currently doing that.  For each marker
 			;;	that is not currently built on, and is within the radius I computed in the last 
 			;;	step, we add on the marker value times the influence ratio.
-			fixed military_value_marker_value					= 100
+			fixed military_value_marker_value					= 500
 
 			;; We also might want to build defensive structures in areas with high enemy traffic.
 			;;	For each enemy unit that has LEFT the region we are considering building in (but
@@ -703,8 +703,8 @@
 			;;	the actor to the kingdom center.  For actors where this is applied, we take the
 			;;	ratio of this straight line distance to the max straight line distance on the map.
 			;;	We then normalize this value to lie between the following min and max.
-			fixed distance_mult_min								= 0.1
-			fixed distance_mult_max								= 10
+			fixed distance_mult_min								= 0.01
+			fixed distance_mult_max								= 1
 		} ;; ActorValue
 
 		;; This is used to determine how much CV we will apply to an attack or defend goal.  
@@ -726,7 +726,7 @@
 			fixed cv_advantage_target			= 0.1		;; priority drops exponentially if we're below this, goes up linearly if above (was 2)
 			fixed cv_advantage_max				= 5			;; CV over this is irrelevant
 			fixed cv_exponent_under_target		= 4			;; the exponent used if under target cv
-			fixed cv_max_mult_over_target		= 12		;; the maximum bonus to priority if over target cv
+			fixed cv_max_mult_over_target		= 24		;; the maximum bonus to priority if over target cv
 
 			;; the minimum cv we should assign to any defense or offense (regardless of enemy strength)
 			fixed min_cv_to_assign				= 50		;; this should NEVER NEVER be zero (or less than zero).
@@ -749,7 +749,7 @@
 			fixed min_cv_to_assign				= 1		;; this should NEVER NEVER be zero (or less than zero).
 			
 			;; should we cound CV from buildings
-			bool count_static_cv				= true
+			bool count_static_cv				= false
 		} ;; DefensiveCV
 
 		;; TODO: put in values for a CV curve for assigning defenders to a construct goal.  For now
@@ -757,7 +757,7 @@
 		[DefendConstructGoalCV]
 		{
 			;; turn this feature on or off completely
-			bool disable_construct_goal_defense	= false
+			bool disable_construct_goal_defense	= true
 		}
 
 		;; This is applied as a modifier to the value of every goal that involved travel
