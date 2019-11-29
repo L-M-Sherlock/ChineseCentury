@@ -1007,7 +1007,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
-			value			= 10000
+			value			= 30000
 			repeat_penalty		= -100
 		}
 
@@ -1172,7 +1172,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
-			value			= 10000
+			value			= 30000
 			repeat_penalty		= -100
 		}
 

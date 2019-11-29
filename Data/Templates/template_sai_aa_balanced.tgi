@@ -41,7 +41,8 @@
 		[ActorPriority]
 		{
 			property_IDS					= property_city
-			value							= 100
+			value							= 10
+			repeat_penalty					= 500
 		}
 
 		[ActorPriority]
@@ -741,7 +742,7 @@
 		[ActorPriority]
 		{
 			actor_ids                       = factory_asian1
-			value							= 60000
+			value							= 80000
 			repeat_penalty					= 1000
 		}
 
@@ -911,8 +912,8 @@
 		[ActorPriority]
 		{
 			actor_ids                       = refinery_asian1
+			value							= 80000
 			repeat_penalty					= 1000
-			value							= 60000
 		}
 		
 		[Combat]
@@ -1223,28 +1224,28 @@
 		[ActorPriority]
 		{
 			property_IDS					= airhq
-			value							= 15000
+			value							= 16000
 			repeat_penalty					= 1000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= mechhq
-			value							= 16500
+			value							= 17000
 			repeat_penalty					= 200
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= armorhq
-			value							= 17000
+			value							= 17500
 			repeat_penalty					= 150
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= airfield
-			value							= 18000
+			value							= 20000
 			repeat_penalty					= 5000
 		}
 
@@ -1488,41 +1489,41 @@
 		{
 			property_IDS					= supplydepot
 			value							= 25000
-            repeat_penalty				    = 50
+            repeat_penalty				    = 25
 		}	
 		
 		[ActorPriority]
 		{
 			property_IDS					= engineer
-			value							= 10000
-			repeat_penalty					= 10000
+			value							= 25000
+			repeat_penalty					= 25000
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_cpc_tank_special
-			value							= 21000
+			value							= 25000
 			repeat_penalty					= 300
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_rus_airborne_vehicle
-			value							= 20500
+			value							= 24500
 			repeat_penalty					= 250
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_cpc_infantry_mechanized
-			value							= 21000
+			value							= 25000
 			repeat_penalty					= 250
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_cpc_rocket_truck
-			value							= 21000
+			value							= 25000
 			repeat_penalty					= 150
 		}
         

@@ -34,7 +34,8 @@
 		[ActorPriority]
 		{
 			property_IDS					= property_city
-			value							= 1500
+			value							= 10
+			repeat_penalty					= 500
 		}
 
 	} ;; GoalEngine
@@ -943,7 +944,7 @@
 			{
 				recruit_ids					= regiment_chn_paratrooper_MP
 				base_priority				= 2000
-				;;number_to_request			= 6
+				number_to_request			= 6
 			}
 			
 			[SpecificRecruitRequest]
@@ -968,14 +969,14 @@
 		{
 			property_IDS					= airhq
 			value							= 25000
-			repeat_penalty					= 250
+			repeat_penalty					= 200
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_chn_paratrooper_MP
 			value							= 22500
-			repeat_penalty					= 800
+			repeat_penalty					= 750
 		}
 
 		[ActorPriority]
@@ -1011,7 +1012,7 @@
 		{
 			property_IDS					= airfield
 			value							= 26000
-			repeat_penalty					= 5000
+			repeat_penalty					= 3000
 		}
 
 
@@ -1213,7 +1214,7 @@
 			{
 				recruit_ids					= regiment_chn_paratrooper_MP
 				base_priority				= 5000
-				;;number_to_request			= 12
+				number_to_request			= 12
 			}
 			
 			[SpecificRecruitRequest]
