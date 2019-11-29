@@ -84,7 +84,7 @@ but also can cause CRASH!!!!!!!!!!!!
 
 	[View]
 	{
-                resource_prefix = /Units/jpn/jpnInfantry/jpnInfantry
+        resource_prefix = /Units/jpn/jpnInfantry/jpnInfantry
 		icon = /UI/Game/RegimentButtons/IconInfantry.png
 		banner_icon = /Organizations/Banners/Icons/IconInfantry.png
 
@@ -106,28 +106,28 @@ but also can cause CRASH!!!!!!!!!!!!
 		layout_IDS = regiment_saodang
 
 		[Slot]	;; front
-		element_IDS = jpn_tankette
-
-		[Slot]	;; front
-		element_IDS = jpn_halftrack
-
-		[Slot]	;; front
-		element_IDS = jpn_halftrack
-
-		[Slot]	;; front
-		element_IDS = jpn_halftrack
+		element_IDS = jpn_tank_light
 
 		[Slot]	;; front
 		element_IDS = jpn_tankette
+
+		[Slot]	;; front
+		element_IDS = jpn_halftrack
+
+		[Slot]	;; front
+		element_IDS = jpn_tankette
+
+		[Slot]	;; front
+		element_IDS = jpn_tank_light
 
 		[Slot]	;; front
 		element_IDS = jpn_tank_medium
 
 		[Slot]	;; front
-		element_IDS = jpn_tank_light
+		element_IDS = jpn_tank_spa
 
 		[Slot]	;; front
-		element_IDS = jpn_tank_light
+		element_IDS = jpn_tank_spa
 
 		[Slot]	;; front
 		element_IDS = jpn_tank_medium

@@ -11,7 +11,7 @@
 		
 		[Upkeep]
 		ammo = 30
-		oil = 30
+		oil = 40
 	}
 
 	[View]

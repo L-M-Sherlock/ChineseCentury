@@ -8,7 +8,7 @@
 
 	[BodyComponent]
 	{
-		health = 756
+		health = 792
 		defense = 15
 	}
 
@@ -67,7 +67,30 @@
 				object_animation_IDS = Recoil1
 
 				[WhenDo template=FXC_PlaySFX]
-				audio_ids = rus_cannon_heavy
+				audio_ids = rus_cannon_heavy		
+
+                [Effect Template=EnchantmentEffect]
+				{
+                    targets = Vehicle
+					[EnchantmentProperty Template=EnchantmentProperty]
+					{
+                        IDS = at_stun_cpc3
+                        name = "#gbr_infantry_at_AbilityDefinition_Effect_EnchantmentProperty_name"
+                        duration = 3
+                        enchantment_type = ench_type_generic
+                        icon = /properties/PropertyIcons/IconPropertyMovement.png
+			
+						[Modifier Template=FlagModifier]
+						modifier_flag = PARALYZE			
+
+                        [Modifier Template=AddModifier]
+                        attribute = DV
+                        amount = -30     
+		
+						[WhenAdded template=FXC_CreateVFX]
+						VFX_IDS = smoke_tint
+					}
+				}
 			
 			}
 		}

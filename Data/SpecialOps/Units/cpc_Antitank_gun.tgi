@@ -58,7 +58,7 @@
 			{				
 				name = "#cpc_infantry_at_AbilityDefinition_name"
 				recharge_time = 5
-				range = 27
+				range = 25
 				
 				[Effect Template=APDamageEffect]
 				amount = 105
@@ -68,14 +68,18 @@
                     targets = Vehicle
 					[EnchantmentProperty Template=EnchantmentProperty]
 					{
-					IDS = cpc_Antitank_gun
-					name = "#cpc_Antitank_gun_AbilityDefinition_Effect_EnchantmentProperty_name"
-					duration = 3
-					enchantment_type = ench_type_generic
-					icon = /properties/PropertyIcons/IconPropertyMovement.png
+                        IDS = cpc_Antitank_gun
+                        name = "#cpc_Antitank_gun_AbilityDefinition_Effect_EnchantmentProperty_name"
+                        duration = 3
+                        enchantment_type = ench_type_generic
+                        icon = /properties/PropertyIcons/IconPropertyMovement.png
 			
 						[Modifier Template=FlagModifier]
-						modifier_flag = PARALYZE			
+						modifier_flag = PARALYZE		
+                        
+                        [Modifier Template=AddModifier]
+                        attribute = DV
+                        amount = -10
 		
 						[WhenAdded template=FXC_CreateVFX]
 						VFX_IDS = smoke_tint
