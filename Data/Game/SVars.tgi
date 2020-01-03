@@ -47,8 +47,8 @@
 	int StaticMapBottleneckDetectionDepth	= 5
 	
 	;; parameters to control dynamic map analysis
-	fixed dynamic_map_analysis_think_frequency	= 10	;; seconds
-	fixed DynamicMapAnalysisSpeedCap			= 10	;; meters / second
+	fixed dynamic_map_analysis_think_frequency	= 60	;; seconds
+	fixed DynamicMapAnalysisSpeedCap			= 60	;; meters / second
 	fixed min_cv_propogation_factor				= 0.2
 	fixed settlement_cv_range_fudge_factor		= 1.7
 

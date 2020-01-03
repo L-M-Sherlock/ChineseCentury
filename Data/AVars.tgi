@@ -38,7 +38,7 @@ drp012903 - moved game-specific AVars out
 
 	;; Renderer
 	point3	RendererDefaultOrientation = 0,-1,0
-	string	RendererDefaultFont = Courier
+	string	RendererDefaultFont = simsun
 	;;			number of megs at which we are not considered a low memory video card
 	int		RendererLowMemoryCutoff = 33
 	

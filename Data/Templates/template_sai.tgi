@@ -377,7 +377,7 @@
 	bool	intuition_count_settlement_spots	= true
 	bool	intuition_count_settlements			= true
 	bool	intuition_count_other_buildings		= false
-	int		num_random_candidates				= 10	;; be very careful increasing this, it uses a lot of CPU and can make it less likely to pick one of our good candidates.
+	int		num_random_candidates				= 16	;; be very careful increasing this, it uses a lot of CPU and can make it less likely to pick one of our good candidates.
 
 	;; Step 4: compute the priority for each candidate.  Start by looking for the closest region
 	;;	with black fog.  We will search out to the specified depth.  The base priority is determined
