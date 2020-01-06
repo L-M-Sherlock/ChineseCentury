@@ -14,7 +14,7 @@ drp033104 - created
 {
 	ids = medium
 	name = "#font_medium_name"
-	size = 8 ;; this is the Windows font size, not the actual pixel height of glyphs.
+	size = 9 ;; this is the Windows font size, not the actual pixel height of glyphs.
 
 	[CharacterSet]
 	{

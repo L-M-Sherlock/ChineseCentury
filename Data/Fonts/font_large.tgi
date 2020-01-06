@@ -28,7 +28,7 @@ EXAMPLES:
 {
 	ids = large ;;putting large here cause the K2 and AA share the main menu font setting which is a font named large. Need to seperate the TGI for the games. 
 	name = "#font_large_large_name"
-	size = 9 ;; this is the Windows font size, not the actual pixel height of glyphs.
+	size = 10 ;; this is the Windows font size, not the actual pixel height of glyphs.
 
 	[CharacterSet]
 	{
