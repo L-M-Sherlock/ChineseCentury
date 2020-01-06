@@ -1,0 +1,32 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "sunyinchen2_Teng_Chong"
+
+	name_2653 = "Teng Chong"
+	kingdom_7 = "Japan South Army"
+	restriction_group_0003 = "JPN"
+	kingdom_6 = "Japan West Army"
+	kingdom_5 = "Japan East Army"
+	team_1 = "JAP"
+	kingdom_4 = "Teng Chong Defence"
+	team_0 = "ROC"
+	kingdom_3 = "Allied Air Force"
+	map_name = "<color=0.8,0.8,0.8>(Teng Chong)"
+	restriction_group_0000 = "ROC"
+	kingdom_2 = "ROC Support Army"
+	kingdom_1 = "ROC North East Army"
+	kingdom_0 = "ROC North West Army"
+	objective_5 = "6 Kill the leader of Japan in a BT"
+	objective_4 = "5 Contact your support army in the west"
+	trigger_49_element_20 = "You have receieved 200 dollars"
+	objective_3 = "4 Defeat the force of Japan South Army"
+	trigger_49_element_19 = "You have receieved 200 dollars"
+	objective_2 = "3 Defeat the force of Japan West Army"
+	name_2753 = "Leader"
+	objective_1 = "2 Defeat the force of Japan East Army"
+	objective_0 = "1 Capture and hold Teng Chong"
+	independent_9 = "Crazy Enemy"
+	map_description = "BY:sunyinchen2"
+	independent_8 = "Observe"
+}

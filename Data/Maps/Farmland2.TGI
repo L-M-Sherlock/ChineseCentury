@@ -1,0 +1,10 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Farmland 2"
+
+	kingdom_1 = "1"
+	kingdom_0 = "0"
+	map_name = "<color=0.7,1.0,0.7>Map Pack:Farmland 2"
+	map_description = "BY:xiaoming"
+}

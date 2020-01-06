@@ -1,12 +1,12 @@
 [Text language=Default]
 {
 	ids = map_strings_table
-	name = "02"
+	name = "China's rise 02"
 
 	kingdom_2 = " 2"
 	independent_3 = " 3"
 	kingdom_1 = " 1"
 	kingdom_0 = " 0"
-	map_name = "02"
+	map_name = "China's rise 02"
 	map_description = ""
 }
