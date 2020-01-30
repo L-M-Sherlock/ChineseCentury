@@ -322,7 +322,7 @@
 
 	[Modifier Template=AddModifier]
 	attribute = AV
-	amount = 10
+	amount = 15
 }
 
 [Property Template=AATechnology]
@@ -659,7 +659,7 @@
 
 	[Modifier Template=AddModifier]
 	attribute = AV
-	amount = 6
+	amount = 8
 }
 
 [Property Template=AATechnology]
@@ -671,7 +671,7 @@
 	
 	[Modifier Template=AddModifier]
 	attribute = MORALE
-	amount = +3	
+	amount = +3
 }
 
 [Property Template=AATechnologyInfantry]

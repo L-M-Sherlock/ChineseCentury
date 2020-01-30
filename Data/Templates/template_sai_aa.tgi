@@ -541,21 +541,21 @@
 			[ActorPreference]
 			{
 				property_IDS				= property_infantry_unit
-				value						= -25
+				value						= -250
 				count_value_once_per_company = false
 			}		
 
 			[ActorPreference]
 			{
 				property_IDS				= vehicle
-				value						= -50
+				value						= -200
 				count_value_once_per_company = false
 			}
 
 			[ActorPreference]
 			{
 				property_IDS				= tank
-				value						= -100
+				value						= -150
 				count_value_once_per_company = false
 			}
 

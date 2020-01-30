@@ -144,7 +144,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			;;count_static_cv = false
+			count_static_cv = false
 		}
 
 		[Exploration]
@@ -211,13 +211,13 @@
 				property_ids				= engineer_brigade
 				repeat_penalty				= 10000
 			}
-						
+			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = cpc_truck_infantry
 				base_priority				= 1500
 			    ;;number_to_request			= 10
-			}			
+			}
 			
 			[SpecificRecruitRequest]
 			{
@@ -252,7 +252,6 @@
 			repeat_penalty					= 3000
 		}
         
-
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_cpc_infantry_recon
@@ -386,7 +385,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			;;count_static_cv = false
+			count_static_cv = false
 		}
 
 		[Exploration]
@@ -664,7 +663,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			;;count_static_cv = false
+			count_static_cv = false
 		}
 
 
@@ -788,7 +787,7 @@
 		{
 			stat								= oil_rate
 			min									= -99999
-			max									= 5
+			max									= 10
 		}
 
 		[Item]
@@ -834,7 +833,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			;;count_static_cv = false
+			count_static_cv = false
 		}
 
 
@@ -879,14 +878,14 @@
 			{
 				property_ids				= supplydepot
 			    ;;number_to_request			= 6
-				base_priority				= 1500
+				base_priority				= 2500
 			}
 						
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = cpc_truck_supply
 			    ;;number_to_request			= 6
-				base_priority				= 1500
+				base_priority				= 2500
 			}
 
 		} ;; Recruiting
@@ -964,7 +963,7 @@
 		[Item]
 		{
 			stat								= oil_rate
-			min									= 5
+			min									= 10
 			max									= 99999
 		}
 
@@ -1011,7 +1010,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			;;count_static_cv = false
+			count_static_cv = false
 		}
 
 
@@ -1347,7 +1346,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			;;count_static_cv = false
+			count_static_cv = false
 		}
 
 
@@ -1480,7 +1479,7 @@
 				recruit_ids					= regiment_cpc_rocket_truck
 				base_priority				= 5000
 				;;number_to_request			= 6
-			}	
+			}
 			
 
 		} ;; Recruiting
@@ -1489,7 +1488,7 @@
 		{
 			property_IDS					= supplydepot
 			value							= 25000
-            repeat_penalty				    = 25
+            repeat_penalty				    = 20
 		}	
 		
 		[ActorPriority]

@@ -49,7 +49,7 @@
 		[OffensiveCV]
 		{
 			cv_advantage_target		= 0.1
-			cv_advantage_max		= 20
+			cv_advantage_max		= 24
 			cv_exponent_under_target	= 1
 			min_cv_to_assign		= 50
 		}
@@ -59,7 +59,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			;;count_static_cv			= false
+			count_static_cv			= false
 		}
 
 		[Exploration]
@@ -208,7 +208,7 @@
 		[OffensiveCV]
 		{
 			cv_advantage_target		= 0.1
-			cv_advantage_max		= 20
+			cv_advantage_max		= 24
 			cv_exponent_under_target	= 1
 			min_cv_to_assign		= 50
 		}
@@ -218,7 +218,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			;;count_static_cv			= false
+			count_static_cv			= false
 		}
 
 		[Exploration]
@@ -344,7 +344,7 @@
 		[OffensiveCV]
 		{
 			cv_advantage_target		= 0.1
-			cv_advantage_max		= 20
+			cv_advantage_max		= 24
 			cv_exponent_under_target	= 1
 			min_cv_to_assign		= 50
 		}
@@ -354,7 +354,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			;;count_static_cv			= false
+			count_static_cv			= false
 		}
 
 		[Exploration]
@@ -525,7 +525,7 @@
 		[OffensiveCV]
 		{
 			cv_advantage_target		= 0.1
-			cv_advantage_max		= 20
+			cv_advantage_max		= 24
 			cv_exponent_under_target	= 1
 			min_cv_to_assign		= 50
 		}
@@ -535,7 +535,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			;;count_static_cv			= false
+			count_static_cv			= false
 		}
 
 		[Exploration]
@@ -796,7 +796,7 @@
 		[OffensiveCV]
 		{
 			cv_advantage_target		= 0.1
-			cv_advantage_max		= 20
+			cv_advantage_max		= 24
 			cv_exponent_under_target	= 1
 			min_cv_to_assign		= 50
 		}
@@ -806,7 +806,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			;;count_static_cv			= false
+			count_static_cv			= false
 		}
 
 		[Exploration]
@@ -924,7 +924,7 @@
 		[OffensiveCV]
 		{
 			cv_advantage_target		= 0.1
-			cv_advantage_max		= 20
+			cv_advantage_max		= 24
 			cv_exponent_under_target	= 1
 			min_cv_to_assign		= 50
 		}
@@ -934,7 +934,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			;;count_static_cv			= false
+			count_static_cv			= false
 		}
 
 		[Exploration]
@@ -1056,7 +1056,7 @@
 		[OffensiveCV]
 		{
 			cv_advantage_target		= 0.1
-			cv_advantage_max		= 20
+			cv_advantage_max		= 24
 			cv_exponent_under_target	= 1
 			min_cv_to_assign		= 50
 		}
@@ -1066,7 +1066,7 @@
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 3
 			min_cv_to_assign		= 10
-			;;count_static_cv			= false
+			count_static_cv			= false
 		}
 
 		[Exploration]

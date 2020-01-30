@@ -863,7 +863,7 @@
 	[TechPriority]
 	{
 		tech						= tech_nuclear_weapons
-		priority					= 500
+		priority					= 5000
 	}
 
 	[TechPriority]
@@ -2279,7 +2279,7 @@
 	[TechPriority]
 	{
 		tech						= tech_conscription
-		priority					= 300
+		priority					= 150
 	}
 
 	;; +20% entrenchment rate
@@ -2513,13 +2513,13 @@
 		priority					= 0
 	}
 
-        [TechPriority]
+    [TechPriority]
 	{
 		tech						= tech_rus_assistance
 		priority					= 50
 	}
 
-        [TechPriority]
+    [TechPriority]
 	{
 		tech						= tech_usa_assistance
 		priority					= 50
@@ -2534,7 +2534,7 @@
 	[TechPriority]
 	{
 		tech						= tech_paratrooper_MP
-		priority					= 1000
+		priority					= 200
 	}
 } ;; LowIncomeEgoResearch
 

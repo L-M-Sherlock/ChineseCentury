@@ -51,7 +51,7 @@
 		{
 			stat								= money_rate
 			min									= -999999
-			max									= 200
+			max									= 250
 		}		
 		
 		[Item]
@@ -76,8 +76,8 @@
 		[GoalPriority]
 		{
 			goal_IDS						= RESEARCH
-			multiplier						= 3
-			fuzziness						= 100
+			multiplier						= 0.5
+			fuzziness						= 10
 		}
 
 		[Research template = InfantryLowIncomeEgoResearch]
@@ -95,7 +95,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			;;count_static_cv = false
+			count_static_cv = false
 		}
 
 		[Exploration]
@@ -138,6 +138,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= infhq
+			    number_to_request			= 2
 			}		
 		
 			[SpecificRecruitRequest]
@@ -145,18 +146,6 @@
 				property_ids				= airhq
 			    ;;number_to_request			= 5
 			}				
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= motor_pool
-				repeat_penalty				= 10000
-			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids				= engineer_brigade
-				repeat_penalty				= 10000
-			}
 						
 			[SpecificRecruitRequest]
 			{
@@ -182,7 +171,7 @@
 		{
 			property_IDS					= airhq
 			value							= 15000
-			repeat_penalty					= 1000
+			repeat_penalty					= 750
 		}
 		
 		[ActorPriority]
@@ -196,22 +185,15 @@
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_chn_infantry
-			value							= 14500
-            repeat_penalty			        = 250
+			value							= 16000
+            repeat_penalty			        = 300
 		}
 		
 		[ActorPriority]
 		{
 			actor_IDS						= regiment_chn_paratrooper_MP_ground
 			value							= 12000
-            repeat_penalty			        = 300
-		}	
-        
-		[ActorPriority]
-		{
-			property_IDS					= engineer_brigade
-			value							= 7000
-			repeat_penalty					= 10000		
+            repeat_penalty			        = 400
 		}
 		
 		
@@ -257,7 +239,7 @@
 		[Item]
 		{
 			stat								= money_rate
-			min									= 200
+			min									= 240
 			max									= 360
 		}		
 		
@@ -287,8 +269,8 @@
 		[GoalPriority]
 		{
 			goal_IDS						= RESEARCH
-			multiplier						= 5
-			fuzziness						= 100
+			multiplier						= 2.5
+			fuzziness						= 50
 		}
 
 
@@ -312,7 +294,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			;;count_static_cv = false
+			count_static_cv = false
 		}
 
 		[Exploration]
@@ -349,7 +331,7 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = chn_truck_airborne
-				base_priority				= 1500
+				base_priority				= 2500
 			}			
 			
 			[SpecificRecruitRequest]
@@ -524,15 +506,15 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 24
 			cv_exponent_under_target = 1 
-			min_cv_to_assign = 10
+			min_cv_to_assign = 50
 		}
 
 		[DefensiveCV]
 		{
 			cv_advantage_target = 0.1
-			cv_advantage_max = 1
+			cv_advantage_max = 3
 			min_cv_to_assign = 1
-			;;count_static_cv = false
+			count_static_cv = false
 		}
 
 
@@ -676,7 +658,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 24
 			cv_exponent_under_target = 1 
-			min_cv_to_assign = 10
+			min_cv_to_assign = 50
 		}
 
 		[DefensiveCV]
@@ -684,7 +666,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			;;count_static_cv = false
+			count_static_cv = false
 		}
 
 
@@ -843,7 +825,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			;;count_static_cv = false
+			count_static_cv = false
 		}
 
 
@@ -1113,7 +1095,7 @@
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
 			min_cv_to_assign = 1
-			;;count_static_cv = false
+			count_static_cv = false
 		}
 
 
