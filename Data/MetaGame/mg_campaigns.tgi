@@ -73,6 +73,10 @@
 	[Technology]
 	ids = tech_ammo_production
 	cost = 50
+	
+	[Technology]
+	ids = tech_paratrooper_MP
+	cost = 50
 		
 	[Technology]
 	ids = tech_construction_battalions
@@ -1058,15 +1062,15 @@
 
 	[Technology]
 	ids = tech_nosupply
-	cost = 250
+	cost = 75
+    
+	[Technology]
+	ids = tech_military_surplus
+	cost = 75
 
 	[Technology]
 	ids = tech_construction_battalions
 	cost = 25
-
-	[Technology]
-	ids = tech_nuclear_weapons
-	cost = 500
 		
 	[Technology]
 	ids = tech_proximity_fuses
@@ -1074,7 +1078,7 @@
 			
 	[Technology]
 	ids = tech_increased_height
-	cost = 100
+	cost = 50
 	
 	[Technology]
 	ids = tech_sniper_rifle
@@ -1095,6 +1099,10 @@
 	[Technology]
 	ids = tech_foraging
 	cost = 25
+			
+	[Technology]
+	ids = tech_plentiful_ammunition
+	cost = 25
 		
 	[Technology]
 	ids = tech_ammo_production
@@ -1114,10 +1122,6 @@
 				
 	[Technology]
 	ids = tech_advanced_infantry_training
-	cost = 50
-		
-	[Technology]
-	ids = tech_diesel_engines
 	cost = 50
 	
 	[Technology]
@@ -1563,7 +1567,7 @@
 	[Team Template=DynamicCampaignTeamTemplate]
 	{
 		ids = communism_team
-		name = "#mg_campaigns_axis_team_name"
+		name = "#mg_campaigns_communist_team_name"
 
 		[Kingdom]
 		ids = kingdom_cpc
