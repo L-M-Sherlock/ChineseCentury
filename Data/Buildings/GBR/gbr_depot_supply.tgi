@@ -13,11 +13,11 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 45
+		money = 68
 		
 		[Production]
 		ammo = 15
-		oil = 10
+		oil = 15
 	}
 	
 	[PropertiesComponent]
