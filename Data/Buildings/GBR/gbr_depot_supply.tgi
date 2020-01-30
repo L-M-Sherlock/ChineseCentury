@@ -23,7 +23,13 @@
 	[PropertiesComponent]
 	{	
 		[Property]
-		property_IDS = supplydepot	
+		property_IDS = supplydepot
+
+		[Property]
+		property_ids = ammo
+
+		[Property]
+		property_ids = oil
 
 		[Property]
 		property_IDS = economic_building
