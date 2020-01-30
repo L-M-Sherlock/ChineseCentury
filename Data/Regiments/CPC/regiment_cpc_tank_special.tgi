@@ -11,7 +11,7 @@
 		
 		[Upkeep]
 		ammo = 30
-		oil = 30
+		oil = 35
         unit_limit_consumed = 1
 	}
 
