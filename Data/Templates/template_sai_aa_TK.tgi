@@ -215,8 +215,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
-			value			= 1500
-			repeat_penalty		= 100
+			value			= 1250
+			repeat_penalty		= 150
 		}
 
 		[ActorPriority]
@@ -1079,8 +1079,8 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-				;;number_to_request		   = 12
-				base_priority				= 1200
+				number_to_request		   = 6
+				base_priority				= 5000
 			}
 		}
 
@@ -1088,7 +1088,7 @@
 		{
 			property_IDS		= supplydepot
 			value			= 30000
-			repeat_penalty		= -100
+			repeat_penalty		= -10
 		}
 
 		[ActorPriority]
@@ -1214,8 +1214,8 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-				;;number_to_request		   = 12
-				base_priority				= 1200
+				number_to_request		   = 6
+				base_priority				= 5000
 			}
 		}
 
@@ -1223,7 +1223,7 @@
 		{
 			property_IDS		= supplydepot
 			value			= 30000
-			repeat_penalty		= -100
+			repeat_penalty		= -10
 		}
 
 		[ActorPriority]
@@ -1390,6 +1390,8 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
+				number_to_request		   = 6
+				base_priority	   = 999
 				
 			}
 
@@ -1533,36 +1535,6 @@
 				base_priority				= 5000
 				;;number_to_request			= 6
 			}
-			
-			[SpecificRecruitRequest]
-			{
-				recruit_ids					= ger_truck_supply
-				
-			}
-            
-			[SpecificRecruitRequest]
-			{
-				recruit_ids					= usa_truck_supply
-				
-			}
-            
-			[SpecificRecruitRequest]
-			{
-				recruit_ids					= jpn_truck_supply
-				
-			}
-            
-			[SpecificRecruitRequest]
-			{
-				recruit_ids					= gbr_truck_supply
-				
-			}
-            
-			[SpecificRecruitRequest]
-			{
-				recruit_ids					= rus_truck_supply
-				
-			}
 
 			[SpecificRecruitRequest]
 			{
@@ -1580,8 +1552,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
-			value			= 15000
-			repeat_penalty	=	   5
+			value			= 20000
+			repeat_penalty	=	5
 		}
 
 		[ActorPriority]

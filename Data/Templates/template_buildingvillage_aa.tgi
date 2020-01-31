@@ -274,7 +274,7 @@
 	[SupplyComponent]
 	is_relay = true
 	supply_range = 64
-    stockpile_max = 300	
+    stockpile_max = 300
 }	
 
 ;; jjw091004 Added to make capitals a little more valuable.	

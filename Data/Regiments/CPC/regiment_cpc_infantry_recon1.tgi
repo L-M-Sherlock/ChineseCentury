@@ -17,7 +17,7 @@
 		money = 56
 		
 		[Upkeep]
-		ammo = 5
+		ammo = 3
 	}	
 
 	[PropertiesComponent]

@@ -10,8 +10,8 @@
 		money = 60
 		
 		[Upkeep]
-		ammo = 15
-		oil = 5
+		ammo = 9
+		oil = 3
 	}
 
 	[View]

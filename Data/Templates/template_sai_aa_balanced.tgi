@@ -718,15 +718,15 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    ;;number_to_request			= 6
-				base_priority				= 1200
+			    number_to_request			= 6
+				base_priority				= 5000
 			}
 						
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = cpc_truck_supply
-			    ;;number_to_request			= 6
-				base_priority				= 1500
+			    number_to_request			= 6
+				base_priority				= 5000
 			}
 
 		} ;; Recruiting
@@ -735,13 +735,13 @@
 		{
 			property_IDS					= supplydepot
 			value							= 50000
-			repeat_penalty					= -1000
+			repeat_penalty					= -100
 		}
 		
 		[ActorPriority]
 		{
 			actor_ids                       = factory_asian1
-			value							= 80000
+			value							= 60000
 			repeat_penalty					= 1000
 		}
 
@@ -877,15 +877,15 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    ;;number_to_request			= 6
-				base_priority				= 2500
+			    number_to_request			= 6
+				base_priority				= 5000
 			}
 						
 			[SpecificRecruitRequest]
 			{
 				recruit_ids			        = cpc_truck_supply
-			    ;;number_to_request			= 6
-				base_priority				= 2500
+			    number_to_request			= 6
+				base_priority				= 5000
 			}
 
 		} ;; Recruiting
@@ -905,13 +905,13 @@
 		{
 			property_IDS					= supplydepot
 			value							= 50000
-			repeat_penalty					= -1000
+			repeat_penalty					= -100
 		}
 		
 		[ActorPriority]
 		{
 			actor_ids                       = refinery_asian1
-			value							= 80000
+			value							= 60000
 			repeat_penalty					= 1000
 		}
 		
@@ -1399,7 +1399,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-			    ;;number_to_request			= 12
+			    number_to_request			= 6
 			}
             
 			[SpecificRecruitRequest]

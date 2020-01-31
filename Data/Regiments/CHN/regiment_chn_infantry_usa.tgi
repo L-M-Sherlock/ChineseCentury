@@ -8,7 +8,7 @@
 		money = 55
 		
 		[Upkeep]
-		ammo = 10
+		ammo = 6
 	}
 
 	[View]
