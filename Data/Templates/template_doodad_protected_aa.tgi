@@ -1,0 +1,52 @@
+/*
+template_roads.tgi
+Copyright © 2004 TimeGate Studios
+
+DESCRIPTION: 
+
+REVISION HISTORY:
+ick100303 - created
+*/
+
+; ---------- INFANTRY & PARATROOPER & ENGINEER ENTRENCHMENT --------------- 
+[Template Road Inherit=Actor]
+{
+	category = UNIT
+	
+	;;[BodyComponent]
+	;;health = 1
+	;;defense = 0
+
+	[Flags]
+	random_orientation = false
+	targetable = false
+	invulnerable = true
+	blocking = false
+	radar = false
+	ownable = false
+	revealed = true
+
+	[Placement]
+	placement_group_IDS = group_roads
+}
+
+[Template Bridge Inherit=Actor]
+{
+	category = UNIT
+	
+	;;[BodyComponent]
+	;;health = 1
+	;;defense = 0
+
+	[Flags]
+	random_orientation = false
+	targetable = false
+	invulnerable = true
+	blocking = false
+	radar = false
+	ownable = false
+	revealed = true
+
+	[Placement]
+	placement_group_IDS = group_bridges
+}

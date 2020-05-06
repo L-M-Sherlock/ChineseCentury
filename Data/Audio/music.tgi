@@ -1,0 +1,12 @@
+;; Common music entries, specifically the "silent" entry
+
+[Audio Template=AudioMusic]
+{
+	IDS = music_silent
+	name = "#music_name"
+	
+	control_flags = INTERRUPT
+	who_flags = LOCAL
+	simultaneous_limit = 1
+	volume = 0%
+}

@@ -1,0 +1,29 @@
+/**************************************************************************
+
+template_handicap.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: Handicap profiles
+
+REVISION HISTORY:
+pcb121803 - created
+
+USAGE:
+
+	[Handicap Template=Handicap]
+	This node goes at the root level to define a handicap
+
+**************************************************************************/
+
+[Template Handicap]
+{
+	string		IDS
+	localized	name
+	localized	description = ""
+
+	;; technology given on startup (can be null)
+	string		property_ids = null
+
+	;; extra stockpiled resources on startup
+	[optional ExtraResources template=CostList]
+}

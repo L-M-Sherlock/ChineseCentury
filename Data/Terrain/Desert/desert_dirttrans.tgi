@@ -1,0 +1,54 @@
+[Terrain template=Terrain]
+{
+	IDS = desert_dirttrans
+	name = "#desert_dirttrans_name"
+	
+	base_priority = 300
+	terrain_group = desert
+	terrain_color =  0.800, 0.647, 0.412
+
+	doodad_frequency = 0.01
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = desert_dirtbeachtrans01
+	name = "#desert_dirttrans_desert_dirtbeachtrans01_name"
+	texture = DesertDirtTrans/DesertDirtBeachTrans01.tga
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = desert_dirtgrasslandtrans01
+	name = "#desert_dirttrans_desert_dirtgrasslandtrans01_name"
+	texture = DesertDirtTrans/DesertDirtGrasslandTrans01.tga
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = desert_dirtsavannahtrans01
+	name = "#desert_dirttrans_desert_dirtsavannahtrans01_name"
+	texture = DesertDirtTrans/DesertDirtSavannahTrans01.tga
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = desert_dirtsandtrans01
+	name = "#desert_dirttrans_desert_dirtsandtrans01_name"
+	texture = DesertDirtTrans/DesertDirtSandTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = desert_dirttrans01
+	name = "#desert_dirttrans_01_name"
+	texture = DesertDirt/DesertDirt01.tga
+	texture_width = 16
+	texture_height = 16
+	
+	[Variation]
+	IDS = desert_dirttrans02
+	name = "#desert_dirttrans_02_name"
+	texture = DesertDirt/DesertDirt02.tga
+	texture_width = 8
+	texture_height = 8
+}

@@ -1,0 +1,2102 @@
+;; Default SAI profile
+;;
+;; KAD082603 - created
+
+[template BlankFormationData template = FormationData]
+{
+	;; NOTE: goal_IDS must be null if and only if this 
+	;;	is the default formation.	
+	goal_IDS								= null
+	unthreatened_formation					= regiment_defensive
+	threatened_formation					= regiment_defensive
+	combat_formation						= regiment_aggressive
+}
+
+[Template Resupply template = GeneralPower]
+{
+	[Location]
+	{
+		type							= NEAR_ACTOR
+
+		[Placement]
+		{		
+			radius						= 5
+			num_candidates				= 2
+		}
+
+		[ActorRequirements]
+		{
+			max_percent_health			= 60%
+
+			must_not_be_engaged			= true
+			must_be_friendly				= true
+
+			;; FILL IN REQUIRED PROPERTIES
+		}
+	}
+
+	[Priority]
+	{
+		base							= 400
+		minimum							= 0
+		fuzzy_factor					= 50
+
+		[EnemyInfluence]
+		{
+			minimum						= 20
+			multiplier					= .2
+			maximum						= 200
+
+			exponent					= 1
+		}
+	}
+} ;; Sabotage
+
+[Template Sabotage template = GeneralPower]
+{
+	[Location]
+	{
+		type							= FOG
+
+		[ActorRequirements]
+		{
+			must_be_enemy				= true
+			
+			[RequiredProperty]
+			{
+				ids						= economic_building
+			}
+
+			[RequiredProperty]
+			{
+				ids						= combat_unit
+			}
+		}
+	}
+
+	[Priority]
+	{
+		base							= 400
+		minimum							= 500
+		fuzzy_factor					= 50
+
+		[CV]
+		{
+			minimum						= 0
+			multiplier					= 1
+			maximum						= -1
+
+			consider_enemy				= true
+
+			[Category]
+			{
+				must_be_enemy			= true
+				multiplier				= .2
+
+				[RequiredProperty]
+				{
+					ids						= combat_unit
+				}
+			}
+		}
+
+		[ActorValue]
+		{
+			minimum						= 0
+			multiplier					= 1
+			maximum						= -1
+
+			consider_enemy				= true
+
+			[Category]
+			{
+				must_be_enemy			= true
+
+
+				[RequiredProperty]
+				{
+					ids						= combat_unit
+				}
+
+				multiplier				= 1
+			}
+		}
+
+		[InfluenceRatio]						;; friendly / enemy
+		{
+			minimum						= 0
+			multiplier					= 1
+			maximum						= 100	;; negative indicates none
+						
+			count_owned_only			= false	;; otherwise, count all friendly
+
+			exponent_over_one			= -1	;; before multiplier or max
+			exponent_under_one			= -1	;; before multiplier or max
+		}
+
+		[TimeSinceExplored]
+		{
+			fixed minimum				= 180
+			fixed multiplier			= 1
+			fixed maximum				= 300	;; negative indicates none
+		}
+	}
+
+	[Followup]
+	{
+		attack_flare_priority			= 250
+	}
+} ;; Sabotage
+
+
+[template Bomb template = GeneralPower]
+{
+	[Location]
+	{
+		type							= NEAR_ACTOR
+
+		[Placement]
+		{		
+			radius						= 3
+			num_candidates				= 3
+		}
+
+		[GeneralRequirements]
+		{
+			no_friendly_actors			= true
+		}
+
+		[ActorRequirements]
+		{
+			must_be_enemy				= true
+			
+
+			[RequiredProperty]
+			{
+				ids						= combat_unit
+			}
+		}
+	}
+
+	[Priority]
+	{
+		base							= 400
+		minimum							= 1000
+		fuzzy_factor					= 75
+
+		[CV]
+		{
+			minimum						= 0
+			multiplier					= 0
+			maximum						= -1
+
+			consider_enemy				= true
+
+			[Category]
+			{
+				must_be_enemy			= true
+				multiplier				= .2
+
+
+				[RequiredProperty]
+				{
+					ids						= combat_unit
+				}
+			}
+		}
+
+		[ActorValue]
+		{
+			minimum						= 500
+			multiplier					= .2
+			maximum						= -1
+
+			consider_enemy				= true
+
+			[Category]
+			{
+				must_be_enemy			= true
+
+
+				[RequiredProperty]
+				{
+					ids						= combat_unit
+				}
+
+				multiplier				=1
+			}
+		}
+	}
+
+	[Followup]
+	{
+		attack_flare_priority			= 1000
+	}
+} ;; Bomb
+
+[template BuffDebuff template = GeneralPower]
+{
+	[Location]
+	{
+		type							= NEAR_ACTOR
+
+		[Placement]
+		{		
+			radius						= 5
+			num_candidates				= 2
+		}
+
+		;; FILL IN ACTOR REQUIREMENTS
+	}
+
+	[Priority]
+	{
+		base							= 400
+		minimum							= 0
+		fuzzy_factor					= 50
+
+		[CV]
+		{
+			minimum						= 100
+			multiplier					= 0
+			maximum						= 400
+
+			;; SPECIFY FRIENDLY OR ENEMY
+
+			;; FILL IN CATEGORY
+		}
+
+		[EnemyInfluence]
+		{
+			minimum						= 0
+			multiplier					= .2
+			maximum						= 200
+
+			exponent					= 1
+		}
+
+		[InfluenceRatio]						;; friendly / enemy
+		{
+			minimum						= 100
+			multiplier					= 200
+			maximum						= -1
+			
+			count_owned_only			= false
+
+			exponent_over_one			= 1
+			exponent_under_one			= 2
+		}
+	}
+
+	[Followup]
+	{
+		attack_flare_priority			= 250
+	}
+} ;; BuffDebuff
+
+[template Reorganization template = GeneralPower]
+{
+	[Location]
+	{
+		type							= NEAR_ACTOR
+
+		[Placement]
+		{		
+			radius						= 10
+			num_candidates				= 1
+		}
+
+		[ActorRequirements]
+		{
+			must_be_friendly			= true
+			must_not_be_engaged			= true
+
+			[RequiredProperty]
+			{
+				ids						= infhq
+			}
+
+			[RequiredProperty]
+			{
+				ids						= mechhq
+			}
+
+			[RequiredProperty]
+			{
+				ids						= armorhq
+			}
+
+			[RequiredProperty]
+			{
+				ids						= airhq
+			}
+
+			[RequiredProperty]
+			{
+				ids						= airfield
+			}
+
+			[RequiredProperty]
+			{
+				ids						= engineer_brigade
+			}
+
+			[RequiredProperty]
+			{
+				ids						= motor_pool
+			}
+
+			[RequiredProperty]
+			{
+				ids						= artillery_brigade
+			}
+
+		}
+	}
+
+	[Priority]
+	{
+		base							= 1000
+		minimum							= 0
+		fuzzy_factor					= 0
+
+		[ActorValue]
+		{
+			minimum						= 0
+			multiplier					= .1
+			maximum						= -1
+
+			consider_owned				= true
+		}
+
+		[InfluenceRatio]						;; friendly / enemy
+		{
+			minimum						= 0
+			multiplier					= 20
+			maximum						= 100
+
+			count_owned_only			= false
+
+			exponent_over_one			= 1
+			exponent_under_one			= 1
+		}
+	}
+} ;; Reorganization
+
+[template EconomicAid template = GeneralPower]
+{
+	[Location]
+	{
+		type							= NEAR_ACTOR
+
+		[Placement]
+		{		
+			radius						= 10
+			num_candidates				= 1
+		}
+
+		[GeneralRequirements]
+		{
+			requires_supply				= true
+		}
+
+		[ActorRequirements]
+		{
+			must_be_friendly			= true
+
+			[RequiredProperty]
+			{
+				ids						= economic_building
+			}
+		}
+	}
+
+	[Priority]
+	{
+		base							= 400
+		minimum							= 0
+		fuzzy_factor					= 50
+
+		[InfluenceRatio]						;; friendly / enemy
+		{
+			minimum						= 0
+			multiplier					= 20
+			maximum						= 100
+
+			count_owned_only			= true
+
+			exponent_over_one			= 1
+			exponent_under_one			= 1
+		}
+
+		[EconomyGenerated]
+		{
+			minimum						= 0
+			multiplier					= .2
+
+			[Resource]
+			{
+				ids						= ammo
+				amount					= 15
+			}
+
+			[Resource]
+			{
+				ids						= oil
+				amount					= 15
+			}
+		}
+	}
+} ;; EconomicAid
+
+[template EconomicAidMoney template = GeneralPower]
+{
+	[Location]
+	{
+		type							= NEAR_ACTOR
+
+		[Placement]
+		{		
+			radius						= 10
+			num_candidates				= 1
+		}
+
+		[GeneralRequirements]
+		{
+			requires_supply				= true
+		}
+
+		[ActorRequirements]
+		{
+			must_be_friendly			= true
+			
+			[RequiredProperty]
+			{
+				ids						= economic_building
+			}
+		}
+	}
+
+	[Priority]
+	{
+		base							= 400
+		minimum							= 0
+		fuzzy_factor					= 50
+
+		[InfluenceRatio]						;; friendly / enemy
+		{
+			minimum						= 0
+			multiplier					= 20
+			maximum						= 100
+
+			count_owned_only			= true
+
+			exponent_over_one			= 1
+			exponent_under_one			= 1
+		}
+	}
+} ;; EconomicAidMoney
+
+[template AABaseEgo template = Ego]
+{
+	priority								= 2000
+
+	[GoalEngine]
+	{
+
+		[GoalPriority]
+		{
+			goal_IDS						= EXPLORE
+
+			[ActorPreference]
+			{
+				property_IDS				= recon
+				value						= 500
+			}
+
+			[ActorPreference]
+			{
+				property_IDS				= engineer
+				value						= -9999
+			}
+
+			[ActorPreference]
+			{
+				property_IDS				= economic_truck
+				value						= -99999
+			}
+
+			[ActorPreference]
+			{
+				property_IDS				= money
+				value						= -99999
+			}
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS						= DEFEND_REGION
+			bonus		                    = 500
+            
+			[ActorPreference]
+			{
+				property_IDS				= property_infantry_unit
+				value						= -250
+				count_value_once_per_company = false
+			}		
+
+			[ActorPreference]
+			{
+				property_IDS				= vehicle
+				value						= -200
+				count_value_once_per_company = false
+			}
+
+			[ActorPreference]
+			{
+				property_IDS				= tank
+				value						= -150
+				count_value_once_per_company = false
+			}
+
+			[ActorPreference]
+			{
+				property_IDS				= engineer
+				value						= -9999
+			}
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS						= DEFEND_ACTOR
+
+			[ActorPreference]
+			{
+				property_IDS				= engineer
+				value						= -5000
+			}
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS						= ATTACK_REGION
+			bonus							= 750
+
+			[ActorPreference]
+			{
+				property_IDS				= property_infantry_unit
+				value						= 1000
+				count_value_once_per_company = false
+			}
+
+			[ActorPreference]
+			{
+				property_IDS				= engineer
+				value						= -9999
+			}
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS						= ATTACK_ACTOR
+			bonus							= 750
+
+			[ActorPreference]
+			{
+				property_IDS				= property_infantry_unit
+				value						= 1000
+				count_value_once_per_company = false
+			}
+
+			[ActorPreference]
+			{
+				property_IDS				= engineer
+				value						= -99999
+			}
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS						= RECRUIT
+			multiplier						= 0.4
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS						= ATTACH
+			multiplier						= 30
+			bonus							= 10000
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS						= REPAIR
+			multiplier						= 50
+			bonus							= 10000
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS						= UNPACK
+			multiplier						= 5
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS						= PACK
+			multiplier						= 1
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS						= RECOVER
+			multiplier						= 5
+		}
+
+;;		;; Place research in each ego, so we can tweak the multiplier and fuzziness
+;;		[GoalPriority]
+;;		{
+;;			goal_IDS						= RESEARCH
+;;			multiplier						= 1.5
+;;			fuzziness						= 100
+;;		}
+
+		[ResourceManagement]
+		{
+			saving_time_limit				= 300
+
+			other_short_need				= 20	
+			other_enough_need				= 20
+			other_plenty_value				= 50
+			other_plenty_need				= 0
+
+			[ResourceNeed]
+			{
+				;; NOTE: unit limit consumed will have a positive value for something you are using
+				;;	up, so need should be <= 0 here.
+				resource_IDS				= unit_limit_consumed
+				short_need					= 0
+				enough_need					= 0
+				plenty_value				= 0
+				plenty_need					= 0
+			} ;; ResourceNeed
+
+			[ResourceNeed]
+			{
+				;; We handle this with actor priorities and specific recruit requests.
+				resource_IDS				= unit_limit_provided
+				short_need					= 0
+				enough_need					= 0
+				plenty_value				= 0
+				plenty_need					= 0
+			} ;; ResourceNeed
+		} ;; ResourceManagement
+
+		[Construction]
+		{
+			construct_in_supply_only		= true  ;;wwzz
+			construct_in_all_regions		= false   ;;wwzz
+			construct_to_defend_research	= true
+			construct_to_defend_recruiters	= true
+			construct_to_defend_cities		= true
+		}
+
+		[Exploration]
+		{
+			[CloseGoals]
+			{
+				num_goals					= 0
+				use_time_since_last_scouted	= true
+			}
+
+			[DeepGoals]
+			{
+				intuition_region_bonus					= 200
+				intuition_count_mines					= true
+				intuition_count_other_buildings			= true
+			}
+
+			[AirReconGoals]
+			{
+				intuition_region_bonus					= 200
+				intuition_count_mines					= true
+				intuition_count_other_buildings			= true
+			}
+		}
+
+		[Combat]
+		{
+			penalty_to_builder_cv			= 0.01
+		}
+
+		[GeneralPowers]
+		{
+			[Power template = Reorganization]
+			{
+				ability_ids							= gbr_reorganization
+			}
+
+			[Power template = Reorganization]
+			{
+				ability_ids							= ger_reorganization
+			}
+
+			[Power template = Reorganization]
+			{
+				ability_ids							= jpn_reorganization
+			}
+
+			[Power template = Reorganization]
+			{
+				ability_ids							= rus_reorganization
+			}
+
+			[Power template = Reorganization]
+			{
+				ability_ids							= usa_reorganization
+			}
+
+			[Power template = Reorganization]
+			{
+				ability_ids							= fin_reorganization
+			}
+
+			[Power template = Reorganization]
+			{
+				ability_ids							= ned_reorganization
+			}
+
+			[Power template = Reorganization]
+			{
+				ability_ids							= chn_reorganization
+			}
+
+			[Power template = Reorganization]
+			{
+				ability_ids							= cpc_reorganization
+			}
+
+			[Power template = Reorganization]
+			{
+				ability_ids							= ita_reorganization
+			}
+
+
+			[Power template = Bomb]
+			{
+				ability_ids							= atomic_bomb
+
+				[Priority]
+				{
+					minimum							= 600
+				}
+			} ;; atomic_bomb
+
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= banzai_charge
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_friendly				= true
+						
+						[RequiredProperty]
+						{
+							ids						= combat_unit
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly			= true
+						
+						[Category]
+						{
+							must_be_friendly		= true
+							
+							[RequiredProperty]
+							{
+								ids					= combat_unit
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} ;; banzai_charge
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= kangzhan_charge
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_owned				= true
+						
+						[RequiredProperty]
+						{
+							ids						= combat_unit
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly			= true
+						
+						[Category]
+						{
+							must_be_friendly		= true
+							
+							[RequiredProperty]
+							{
+								ids					= combat_unit
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} ;; kangzhan_charge
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= blitzkrieg
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_friendly				= true
+						
+						[RequiredProperty]
+						{
+							ids						= tank
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly			= true
+						
+						[Category]
+						{
+							must_be_friendly		= true
+							
+							[RequiredProperty]
+							{
+								ids					= tank
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} ;; blitzkrieg
+
+			[Power]
+			{
+				ability_ids							= code_breaker
+
+				;; This tells me to pick 3 random locations in the general vicinity of each engaged enemy actor
+				;;	to consider as candidates.
+				[Location]
+				{
+					type							= FOG
+				}
+
+				[Priority]
+				{
+					base							= 400
+					minimum							= 0		;; the minimums are handled in the subsections
+					fuzzy_factor					= 50
+
+					[InfluenceRatio]						;; friendly / enemy
+					{
+						minimum						= 0
+						multiplier					= 1
+						maximum						= 100	;; negative indicates none
+						
+						count_owned_only			= false	;; otherwise, count all friendly
+
+						exponent_over_one			= -1	;; before multiplier or max
+						exponent_under_one			= -1	;; before multiplier or max
+					}
+
+					[TimeSinceExplored]
+					{
+						fixed minimum				= 180
+						fixed multiplier			= 1
+						fixed maximum				= 300	;; negative indicates none
+					}
+				}
+			} ;; code_breaker
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= communist_zeal
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_friendly				= true
+						
+						[RequiredProperty]
+						{
+							ids						= infantry
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly			= true
+						
+						[Category]
+						{
+							must_be_friendly		= true
+							
+							[RequiredProperty]
+							{
+								ids					= infantry
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} ;; communist_zeal
+
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= infantry_advance
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_owned				= true
+						
+						[RequiredProperty]
+						{
+							ids						= infantry
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly			= true
+						
+						[Category]
+						{
+							must_be_friendly		= true
+							
+							[RequiredProperty]
+							{
+								ids					= infantry
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} ;; infantry_advance
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= purge
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_friendly				= true
+						
+						[RequiredProperty]
+						{
+							ids						= infantry
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly			= true
+						
+						[Category]
+						{
+							must_be_friendly		= true
+							
+							[RequiredProperty]
+							{
+								ids					= infantry
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} ;; purge
+
+			[Power template = EconomicAid]
+			{
+				ability_ids							= ger_military_gear_up
+				
+				[Priority]
+				{
+					[EconomyGenerated]
+					{
+						minimum							= 0
+					}
+				}
+			} ;; military_gear_up
+
+			[Power template = EconomicAid]
+			{
+				ability_ids							= rus_military_gear_up
+				
+				[Priority]
+				{
+					[EconomyGenerated]
+					{
+						minimum							= 0
+					}
+				}
+			} ;; military_gear_up
+
+			[Power template = EconomicAid]
+			{
+				ability_ids							= assembly_line
+				
+				[Priority]
+				{
+					[EconomyGenerated]
+					{
+						minimum							= 0
+					}
+				}
+			} ;; assembly_line
+
+			[Power template = EconomicAid]
+			{
+				ability_ids							= rapid_deployment
+				
+				[Priority]
+				{
+					[EconomyGenerated]
+					{
+						minimum							= 0
+					}
+				}
+			} ;; assembly_line
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= courage ;; AKA "fighting spirit"
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_friendly				= true
+						
+						[RequiredProperty]
+						{
+							ids						= combat_unit
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly			= true
+						
+						[Category]
+						{
+							must_be_friendly		= true
+							
+							[RequiredProperty]
+							{
+								ids					= combat_unit
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} ;; courage ;; AKA "fighting spirit"
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= forced_march
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_not_be_engaged				= true
+						must_be_friendly				= true
+						
+						[RequiredProperty]
+						{
+							ids						= combat_unit
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly			= true
+						
+						[Category]
+						{
+							must_be_friendly		= true
+							
+							[RequiredProperty]
+							{
+								ids					= combat_unit
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} 
+
+	
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= yundongzhan
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= false
+						must_be_owned				= true
+						
+						[RequiredProperty]
+						{
+							ids						= combat_unit
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly			= true
+						
+						[Category]
+						{
+							must_be_friendly		= true
+							
+							[RequiredProperty]
+							{
+								ids					= combat_unit
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} 
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= mao_thought_learning
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_owned				= true
+						
+						[RequiredProperty]
+						{
+							ids						= combat_unit
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly			= true
+						
+						[Category]
+						{
+							must_be_friendly		= true
+							
+							[RequiredProperty]
+							{
+								ids					= combat_unit
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} 
+
+
+
+			[Power template = EconomicAid]
+			{
+				ability_ids = gbr_economic_aid
+			}
+
+			[Power template = EconomicAid]
+			{
+				ability_ids = ger_economic_aid
+			}
+
+			[Power template = EconomicAid]
+			{
+				ability_ids = jpn_economic_aid
+			}
+
+			[Power template = EconomicAid]
+			{
+				ability_ids = rus_economic_aid
+			}
+
+			[Power template = EconomicAid]
+			{
+				ability_ids = usa_economic_aid
+			}
+
+			[Power template = EconomicAidMoney]
+			{
+				ability_ids = economic_aid_money
+			}
+
+			[Power]
+			{
+				ability_ids							= espionage
+
+				[Location]
+				{
+					type							= ON_ACTOR
+
+					[ActorRequirements]
+					{
+						must_be_enemy				= true
+						
+						[RequiredProperty]
+						{
+							ids						= building
+						}
+					}
+				}
+
+				[Priority]
+				{
+					base							= 400
+					minimum							= 0
+					fuzzy_factor					= 0
+				}
+			} ;; espionage
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= fear
+				
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_enemy				= true	
+						
+						[RequiredProperty]
+						{
+							ids						= combat_unit
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_enemy				= true
+						
+						[Category]
+						{
+							must_be_enemy			= true
+							
+							[RequiredProperty]
+							{
+								ids					= combat_unit
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} ;; fear
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= smoke_barrage
+				
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_enemy				= true	
+						
+						[RequiredProperty]
+						{
+							ids						= combat_unit
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_enemy				= true
+						
+						[Category]
+						{
+							must_be_enemy			= true
+							
+							[RequiredProperty]
+							{
+								ids					= combat_unit
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} ;; smoke_barrage
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= ambush
+				
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_enemy				= true	
+						
+						[RequiredProperty]
+						{
+							ids						= combat_unit
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_enemy				= true
+						
+						[Category]
+						{
+							must_be_enemy			= true
+							
+							[RequiredProperty]
+							{
+								ids					= combat_unit
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} 
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= gbr_sabotage
+			} ;; gbr_sabotage
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= maskirovka
+			} 
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= gbr_secret_agent
+			} 
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= usa_secret_agent
+			} 
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= panzer_hohle
+			} 
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= independent_regiment
+			} 
+			
+			[Power template = Sabotage]
+			{
+				ability_ids							= ned_sabotage
+			} ;; ned_sabotage
+			[Power template = Sabotage]
+			{
+				ability_ids							= gbr_supply_drop
+			}
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= gEr_supply_drop
+			}
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= jpn_supply_drop
+			}
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= rus_supply_drop
+			}
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= usa_supply_drop
+			}
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= rus_supply_drop_tutorial
+			}
+
+	
+			[Power]
+			{
+				ability_ids							= industrial_sabotage
+
+				[Location]
+				{
+					type							= ON_ACTOR
+
+					[ActorRequirements]
+					{
+						must_be_enemy				= true
+						
+						[RequiredProperty]
+						{
+							ids						= building
+						}
+					}
+				}
+
+				[Priority]
+				{
+					base							= 400
+					minimum							= 0
+					fuzzy_factor					= 0
+
+					[ActorEconomy]
+					{
+						fixed minimum				= 250
+						fixed multiplier			= 1
+						fixed maximum				= -1
+					}
+				}
+			} ;; industrial_sabotage
+
+
+			[Power]
+			{
+				ability_ids							= capture
+
+				[Location]
+				{
+					type							= ON_ACTOR
+
+					[ActorRequirements]
+					{
+						must_be_enemy				= true
+						
+						[RequiredProperty]
+						{
+							ids						= building
+						}
+					}
+				}
+
+				[Priority]
+				{
+					base							= 600
+					minimum							= 0
+					fuzzy_factor					= 0
+
+					[ActorEconomy]
+					{
+						fixed minimum				= 250
+						fixed multiplier			= 1
+						fixed maximum				= -1
+					}
+				}
+			} 
+
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= mechanized_advance
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_friendly				= true
+						
+						[RequiredProperty]
+						{
+							ids						= halftrack_unit
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly			= true
+
+						[Category]
+						{
+							must_be_friendly		= true
+
+							[RequiredProperty]
+							{
+								ids					= combat_unit
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} ;; mechanized_advance
+			
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= double_guard
+
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_friendly			= true
+
+						[RequiredProperty]
+						{
+							ids					= property_bunker
+						}
+
+						[RequiredProperty]
+						{
+							ids					= property_bunker_artillery
+						}
+
+						[RequiredProperty]
+						{
+							ids					= property_bunker_aa
+						}
+
+						[RequiredProperty]
+						{
+							ids					= corpshq
+						}
+
+						[RequiredProperty]
+						{
+							ids					= airhq
+						}
+
+						[RequiredProperty]
+						{
+							ids					= infhq
+						}
+
+						[RequiredProperty]
+						{
+							ids					= armorhq
+						}
+
+						[RequiredProperty]
+						{
+							ids					= mechhq
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly				= true
+
+						[Category]
+						{
+							must_be_engaged				= true
+							must_be_friendly			= true
+
+							[RequiredProperty]
+							{
+								ids					= property_bunker
+							}
+
+							[RequiredProperty]
+							{
+								ids					= property_bunker_artillery
+							}
+
+							[RequiredProperty]
+							{
+								ids					= property_bunker_aa
+							}
+
+							[RequiredProperty]
+							{
+								ids					= corpshq
+							}
+
+							[RequiredProperty]
+							{
+								ids					= airhq
+							}
+
+							[RequiredProperty]
+							{
+								ids					= infhq
+							}
+
+							[RequiredProperty]
+							{
+								ids					= armorhq
+							}
+
+							[RequiredProperty]
+							{
+								ids					= mechhq
+							}
+
+							multiplier				= 5
+						}
+					}
+
+					[ActorValue]
+					{
+						consider_friendly				= true
+
+						[Category]
+						{
+							must_be_engaged				= true
+							must_be_friendly			= true
+
+							[RequiredProperty]
+							{
+								ids					= property_bunker
+							}
+
+							[RequiredProperty]
+							{
+								ids					= property_bunker_artillery
+							}
+
+							[RequiredProperty]
+							{
+								ids					= property_bunker_aa
+							}
+
+							[RequiredProperty]
+							{
+								ids					= corpshq
+							}
+
+							[RequiredProperty]
+							{
+								ids					= airhq
+							}
+
+							[RequiredProperty]
+							{
+								ids					= infhq
+							}
+
+							[RequiredProperty]
+							{
+								ids					= armorhq
+							}
+
+							[RequiredProperty]
+							{
+								ids					= mechhq
+							}
+
+							multiplier				= 5
+						}
+					}
+
+
+					[EnemyInfluence]
+					{
+						minimum						= 0
+						multiplier					= 2
+						maximum						= -1
+
+						exponent					= 1
+					}
+
+					[InfluenceRatio]						;; friendly / enemy
+					{
+						minimum						= 0
+						multiplier					= 2
+						maximum						= -1
+			
+						count_owned_only			= false
+
+						exponent_over_one			= 2
+						exponent_under_one			= 2
+					}
+				}
+			} ;; double_guard
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= sand_bagging
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_friendly				= true
+
+						[RequiredProperty]
+						{
+							ids					= economic_building
+						}
+
+						[RequiredProperty]
+						{
+							ids					= military_building
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_friendly				= true
+
+						[Category]
+						{
+							must_be_engaged				= true
+							must_be_friendly			= true
+
+							[RequiredProperty]
+							{
+								ids					= economic_building
+							}
+
+							[RequiredProperty]
+							{
+								ids					= military_building
+							}
+
+							multiplier				= .5
+						}
+					}
+
+					[EnemyInfluence]
+					{
+						minimum						= 0
+						multiplier					= 2
+						maximum						= -1
+
+						exponent					= 1
+					}
+
+					[InfluenceRatio]						;; friendly / enemy
+					{
+						minimum						= 0
+						multiplier					= 2
+						maximum						= -1
+			
+						count_owned_only			= false
+
+						exponent_over_one			= 2
+						exponent_under_one			= 2
+					}
+				}
+			} ;; sand_bagging		
+			
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= propaganda_war_usa
+				
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_enemy				= true	
+
+						[RequiredProperty]
+						{
+							ids						= combat_unit
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_enemy				= true
+
+						[Category]
+						{
+							must_be_enemy			= true
+
+							[RequiredProperty]
+							{
+								ids					= combat_unit
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} ;; propaganda_war
+
+			[Power template = BuffDebuff]
+			{
+				ability_ids							= propaganda_war_ger
+				
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						must_be_engaged				= true
+						must_be_enemy				= true	
+
+						[RequiredProperty]
+						{
+							ids						= combat_unit
+						}
+					}
+				}
+
+				[Priority]
+				{
+					[CV]
+					{
+						consider_enemy				= true
+
+						[Category]
+						{
+							must_be_enemy			= true
+
+							[RequiredProperty]
+							{
+								ids					= combat_unit
+							}
+
+							multiplier				= .5
+						}
+					}
+				}
+			} ;; propaganda_war
+
+			[Power template = Resupply]
+			{
+				ability_ids							= resupply
+
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						[RequiredProperty]
+						{
+							ids						= infantry
+						}
+					}
+				}
+			} ;; resupply
+
+			[Power template = Resupply]
+			{
+				ability_ids							= resupply_tank
+
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						[RequiredProperty]
+						{
+							ids						= tank
+						}
+					}
+				}
+			} ;; resupply_tank
+
+			[Power template = Resupply]
+			{
+				ability_ids							= resupply_mech
+
+				[Location]
+				{
+					[ActorRequirements]
+					{
+						[RequiredProperty]
+						{
+							ids						= halftrack_unit
+						}
+					}
+				}
+			} ;; resupply
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= rus_sabotage
+			} ;; rus_sabotage
+
+			[Power template = Sabotage]
+			{
+				ability_ids							= knil_conscript
+			} ;; rus_sabotage
+
+
+			[Power template = Bomb]
+			{
+				ability_ids							= v_weapons
+			} ;; v_weapons
+
+			[Power template = Bomb]
+			{
+				ability_ids							= gbr_carpet_bomb
+			} ;; v_weapons
+
+			[Power template = Bomb]
+			{
+				ability_ids							= usa_carpet_bomb
+			} ;; v_weapons
+
+			[Power template = Bomb]
+			{
+				ability_ids							= rus_carpet_bomb
+			} ;; v_weapons
+
+			[Power template = Bomb]
+			{
+				ability_ids							= ned_carpet_bomb
+			} ;; v_weapons
+
+			[Power template = Bomb]
+			{
+				ability_ids							= artillery_barrage
+			} ;; v_weapons
+
+			[Power template = Bomb]
+			{
+				ability_ids							= kamikaze
+			} ;; v_weapons
+
+
+			[Power]
+			{
+				ability_ids							= radar_scan
+
+				[Location]
+				{
+					type							= FOG
+				}
+
+				[Priority]
+				{
+					base							= 300
+					minimum							= 0		;; the minimums are handled in the subsections
+					fuzzy_factor					= 50
+				}
+			}
+		} ;; GeneralPowers
+
+	} ;; GoalEngine
+
+	[ReactiveAI]
+	{
+		[DefaultFormation template = BlankFormationData]
+		{}
+		
+		[GoalFormation]
+		{
+			goal_IDS								= DEFEND_REGION
+			unthreatened_formation					= regiment_defensive
+			threatened_formation					= regiment_defensive
+			combat_formation						= regiment_aggressive
+		}
+
+		[GoalFormation]
+		{
+			goal_IDS								= DEFEND_ACTOR
+			unthreatened_formation					= regiment_defensive
+			threatened_formation					= regiment_defensive
+			combat_formation						= regiment_aggressive
+		}
+
+		[GoalFormation]
+		{
+			goal_IDS								= ATTACK_REGION
+			unthreatened_formation					= regiment_defensive
+			threatened_formation					= regiment_defensive
+			combat_formation						= regiment_aggressive
+		}
+
+		[GoalFormation]
+		{
+			goal_IDS								= ATTACK_ACTOR
+			unthreatened_formation					= regiment_defensive
+			threatened_formation					= regiment_defensive
+			combat_formation						= regiment_aggressive
+		}
+	}
+} ;; AABaseEgo

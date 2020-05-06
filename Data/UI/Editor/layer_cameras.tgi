@@ -1,0 +1,190 @@
+;; --------------------------- Editor Layer - Cameras -----------------------
+
+[EditorLayerCameras Inherit=EditorPanel]
+{
+
+	[LayerCloseButton]
+	{
+		[View Template = EditorLayerCloseButtonVE]
+	}
+	
+	[CameraListbox Template=EditorSharedListBoxWidget]
+	{
+		num_visible_items = 25
+		resize_to_fit = false
+
+		[View Template=GameListboxEditorArtworkGroupVE]
+		{
+			L = 13
+			T = 44
+			R = +196
+			B = +316
+		}
+
+	}
+
+	[CameraAddCameraButton Template=EditorMenuButton]
+	{
+		ToolTip = "#layer_cameras_CameraAddCameraButton_ToolTip"
+		
+		[Client]
+		{
+			[View]
+			text = "#layer_cameras_CameraAddCameraButton_Client_View_text"
+		}
+		[View]
+		{
+			L = 32
+			T = 359
+			R = +158
+			B = +35
+		}
+	}
+
+	[CameraDeleteCameraButton Template=EditorMenuButton]
+	{
+		ToolTip = "#layer_cameras_CameraDeleteCameraButton_ToolTip"
+	
+		[Client]
+		{
+			[View]
+			text = "#layer_cameras_CameraDeleteCameraButton_Client_View_text"
+		}
+		[View]
+		{
+			L = 32
+			T = 398
+			R = +158
+			B = +35
+		}
+	}
+
+	[CameraParameterPanel Inherit=SharedSmallPanelWidget]
+	{
+		[View]
+		{
+			L = 22
+			T = 442
+			R = +188
+			B = +140
+							
+			[Child Template=SharedSmallLeftLabelVE]
+			L = 17
+			T = 49
+			B = +15
+			text = "#layer_cameras_Child_text"
+
+			[Child Template=SharedSmallLeftLabelVE]
+			L = 17
+			T = 85
+			B = +15
+			text = "#layer_cameras_Child_text_2"
+		}	
+	
+		[CameraNameEditBox Template=EditorEditBoxWidget]
+		{
+			[View]
+			{
+				L = 7
+				T = 5
+				R = +169
+				B = +35
+			}
+		}
+
+		[CameraPitchEditBox Template=EditorEditBoxWidget]
+		{
+			[View]
+			{
+				L = 62
+				T = 42
+				R = +98
+				B = +33
+			}
+		}
+
+		[CameraZoomEditBox Template=EditorEditBoxWidget]
+		{
+			[View]
+			{
+				L = 62
+				T = 76
+				R = +98
+				B = +33
+			}
+		}
+	}
+
+	[CameraPreviewMotionButton Template=EditorMenuButton]
+	{
+		ToolTip = "#layer_cameras_CameraPreviewMotionButton_ToolTip"
+	
+		[Client]
+		{
+			[View]
+			text = "#layer_cameras_CameraPreviewMotionButton_Client_View_text"
+		}
+		[View]
+		{
+			L = 32
+			T = 580
+			R = +158
+			B = +35
+		}
+	}
+
+	[CameraCenterOnCameraButton Template=EditorMenuButton]
+	{
+		ToolTip = "#layer_cameras_CameraCenterOnCameraButton_ToolTip"
+		
+		[Client]
+		{
+			[View]
+			text = "#layer_cameras_CameraCenterOnCameraButton_Client_View_text"
+		}
+		[View]
+		{
+			L = 32
+			T = 619
+			R = +158
+			B = +35
+		}
+	}
+	
+	[CameraLookThroughButton Template=EditorMenuButton]
+	{
+		ToolTip = "#layer_cameras_CameraLookThroughButton_ToolTip"
+	
+		[Client]
+		{
+			[View]
+			text = "#layer_cameras_CameraLookThroughButton_Client_View_text"
+		}
+		[View]
+		{
+			L = 32
+			T = 658
+			R = +158
+			B = +35
+		}
+	}
+
+	[CameraDefaultViewButton Template=EditorMenuButton]
+	{
+		ToolTip = "#layer_cameras_CameraDefaultViewButton_ToolTip"
+	
+		[Client]
+		{
+			[View]
+			text = "#layer_cameras_CameraDefaultViewButton_Client_View_text"
+		}
+		[View]
+		{
+			L = 32
+			T = 697
+			R = +158
+			B = +35
+		}
+	}
+
+}

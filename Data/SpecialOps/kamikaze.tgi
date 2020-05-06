@@ -1,0 +1,52 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = kamikaze
+	name = "#kamikaze_name"
+	description = "#kamikaze_description"
+	targets = +ACTOR -ORGANIZATION -AIR
+	recharge_time = 150
+	area = 12
+	attenuation_range_min = 2
+	attenuation_factor_max = 0.5
+	impact_impulse = 10000
+	;; the projectile's life determines when the effect of the ability takes place.
+	projectile_ids = kamikaze_projectile
+
+	icon = /UI/%s/Game/SpecialOps/IconKamikaze.png
+
+	[Effect Template=APDamageEffect]
+	amount = 500
+
+	[Effect Template=AddDamageEffect]
+	damage_type_IDS = flame
+	targets = building
+	amount = 1000
+
+	[Effect Template=SummonEffect]
+	hide_from_tooltip = true
+	targets = +SELF	
+	object_ids = thing_visibilityactormedium_decay
+	
+	[Flags]
+	bombard = true
+	target_location = true
+	
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = kamikaze_zero
+		at = TARGET_GROUND
+		attached = false
+	}
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = kamikaze_sfx
+	at = TARGET_GROUND
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = explosion_bomb_heavy
+	at = TARGET_GROUND
+	delay = 3
+}

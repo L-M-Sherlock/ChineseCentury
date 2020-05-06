@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = overakker_portrait
+	name = "#overakker_portrait_name"
+
+	[View]
+	{
+		resource_prefix = overakker/overakkerPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = ned_overakker_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = overakker
+	name = "#overakker_name"
+	description = "#overakker_description"
+	staging_name = "#overakker_staging_name"
+	icon_texture_ids = overakker/overakkerPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/NED/overakker.bik
+	portrait_ids = overakker_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpInfantryAdvance]
+	
+	[Ability Template=AASpecialOpSabotageNED]
+	
+	[Ability Template=AASpecialOpEspionage]
+		
+	[Ability Template=AASpecialOpCorpsNED]
+}

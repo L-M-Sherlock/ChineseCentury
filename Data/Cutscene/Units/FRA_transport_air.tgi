@@ -1,0 +1,14 @@
+[Thing Template=AAUnitGBRAirplaneBomber]
+{
+	;;IDS = FRA_air_transport
+	IDS = FRA_transport_air
+	name = "#FRA_transport_air_name"
+	editor_name = "#FRA_transport_air_editor_name"
+
+	[View]
+	resource_prefix = FRATransportAir/GBRTransportAir
+	
+	[BodyComponent]
+	health = 500
+	defense = 0
+}

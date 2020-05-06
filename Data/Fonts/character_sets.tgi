@@ -1,0 +1,87 @@
+/**************************************************************************
+
+fontinfo.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: Information for generating fonts.
+
+REVISION HISTORY:
+bat112602 - created
+
+USAGE:
+
+FIELDS:
+		   
+	[SetInfo] ; enclosing node for the sets
+
+		[Set] ; describes a range of glyphs
+		ids = internal name of this set
+		name = display name of this set
+		range_min = beginning Unicode index of a range of glyphs
+		range_max = ending Unicode index of a range of glyphs
+		undisplayable_character = glyph to show when actual glyph not available
+		spacing_standin = glyph whose width will be used to space between words
+
+		  
+EXAMPLES:
+	
+**************************************************************************/
+
+[Set template = CharacterSet] ; this set is required to be present and be the first in every font
+{	
+	ids = base
+	name = "#character_sets_base_name"
+	range_min = 32
+	range_max = 383
+	undisplayable_character = 149 
+	spacing_standin = 116
+}
+
+[Set template = CharacterSet]
+{
+	ids = hangul_jamo ; for writing Korean words phonetically
+	name = "#character_sets_hangul_jamo_name"
+	range_min = 4352 ;0x1100
+	range_max = 4607 ;0x11ff
+	undisplayable_character = 150 ; if this is changed, it must match its corresponding
+						; definition in the [SpecialGlyphInfo] section
+	spacing_standin = 116
+}
+
+[Set template = CharacterSet]
+{
+	ids = hiragana_katakana 
+	; Hiragana is for writing Japanese words phonetically
+	; Katakana is for writing non-Japanese words phonetically
+	name = "#character_sets_hiragana_katakana_name"
+	range_min = 12352 ;0x3040
+	range_max = 12543 ;0x30ff
+	undisplayable_character = 151 ; if this is changed, it must match its corresponding
+						; definition in the [SpecialGlyphInfo] section
+	spacing_standin = 116
+}
+
+[Set template = CharacterSet]
+{
+	ids = han ; for writing CJK (Chinese,Japanese,Korean) ideographically
+	; aka "hanzi" in Chinese
+	; aka "kanji" in Japanese
+	; aka "hanja" in Korean
+	name = "#character_sets_han_name"
+	range_min = 19968 ;0x4e00
+	range_max = 40959 ;0x9fff
+	undisplayable_character = 152 ; if this is changed, it must match its corresponding
+						; definition in the [SpecialGlyphInfo] section
+	spacing_standin = 116
+}
+
+[Set template = CharacterSet]
+{
+	ids = hangul_johab ; for writing Korean, not sure if this set is required (need to check with Korean localization team)
+	name = "#character_sets_hangul_johab_name"
+	range_min = 44032 ;0xac00
+	range_max = 55215 ;0xd7af
+	undisplayable_character = 150 ; if this is changed, it must match its corresponding
+						; definition in the [SpecialGlyphInfo] section
+	spacing_standin = 116
+}

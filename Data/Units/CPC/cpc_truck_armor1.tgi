@@ -1,0 +1,71 @@
+[Thing Template=AAUnitCPCVehicleHQTruck]
+{
+	IDS = cpc_truck_armor1
+	name = "#cpc_truck_armor_name"
+	editor_name = "#cpc_truck_armor_editor_name"
+
+	hide_if_missing_properties = false
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 350
+
+		[Production]
+		money = 12
+		ammo = 5
+		oil = 8
+		unit_limit_provided = 3
+	}
+	
+	[ElementComponent]
+	{
+		required_structures = cpc_hq_mechanized1
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = cpc_hq_armor1
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+
+		trailer_actor = rus_trailer_armor
+
+		[TrailerHitch]
+		{		
+			node_ids = hitch
+			node_offset = 0, -.9, .8
+		}
+	}
+
+	[Placement]
+	placement_group_ids = null
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = captain	
+		
+		[Property]
+		property_IDS = armorhq			
+	}
+
+	[View]
+	{
+		resource_prefix = CPCTruckBedless/CPCTruckBedless
+		icon = /UI/Game/BuildingButtons/IconHQArmor.png
+	}
+}

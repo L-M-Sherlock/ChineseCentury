@@ -1,0 +1,38 @@
+/**************************************************************************
+
+hotkey_configuration_data.tgi
+Copyright © 2002-2004 TimeGate Studios
+
+DESCRIPTION: File for different hotkey configurations.
+	 
+REVISION HISTORY:
+cwp012204 - created
+**************************************************************************/
+
+[HotkeyConfigurationData Template = HotkeyConfigurationData]
+{
+	IDS = classic_hotkey_config
+	name = "#hotkey_configuration_data_classic_hotkey_config_name"
+	hotkey_file_location = Localization/Hotkeys/Actions/hotkeys_standard_aa.txt
+}
+
+[HotkeyConfigurationData Template = HotkeyConfigurationData]
+{
+	IDS = visual_hotkey_config
+	name = "#hotkey_configuration_data_visual_hotkey_config_name"
+	hotkey_file_location = Localization/Hotkeys/Actions/hotkeys_visual_aa.txt
+}
+
+[HotkeyConfigurationData Template = HotkeyConfigurationData]
+{
+	IDS = visual_dvorak_config
+	name = "#hotkey_configuration_data_visual_dvorak_config_name"
+	hotkey_file_location = Localization/Hotkeys/Actions/hotkeys_visual_dvorak_aa.txt
+}
+
+[HotkeyConfigurationData Template = HotkeyConfigurationData]
+{
+	IDS = visual_left_handed_config
+	name = "#hotkey_configuration_data_visual_left_handed_config_name"
+	hotkey_file_location = Localization/Hotkeys/Actions/hotkeys_visual_left_handed_aa.txt
+}

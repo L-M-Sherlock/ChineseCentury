@@ -1,0 +1,65 @@
+[Thing Template=AAUnitGBRVehicleHQTruck]
+{
+	IDS = gbr_truck_motor
+	name = "#gbr_truck_motor_name"
+	editor_name = "#gbr_truck_motor_editor_name"
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 115
+		
+		[Production]
+		oil = 10
+
+		[Upkeep]
+		building_limit_consumed = 0
+	}
+
+	[ElementComponent]
+	
+	[MobileDeploymentComponent]
+	{
+		unpack_to_actor_ids = gbr_motor_pool
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 3
+		acceleration = 2
+		trailer_actor = gbr_trailer_motor
+
+		[TrailerHitch]
+		{
+			node_ids = hitch
+			node_offset = 0, -.7, .8
+		}
+	}
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = motor_pool
+	}
+	
+	[View]
+	{
+		resource_prefix = GBRTruckBedless/GBRTruckBedless
+		icon = /UI/Game/BuildingButtons/IconMotorPool.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = motor_pool_select
+	}
+}

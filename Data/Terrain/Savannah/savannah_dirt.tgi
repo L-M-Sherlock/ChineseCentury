@@ -1,0 +1,43 @@
+[Terrain template=Terrain]
+{
+	IDS = savannah_dirt
+	name = "#savannah_dirt_name"
+
+	base_priority = 2000	
+	terrain_group = dirt
+	
+	doodad_frequency = 0.01
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = savannah_dirt01
+	name = "#savannah_dirt_01_name"
+	texture = SavannahDirt/SavannahDirt01.tga
+	texture_width = 16
+	texture_height = 16
+	terrain_color = 0.798, 0.584, 0.392
+
+	[Variation]
+	IDS = savannah_dirt02
+	name = "#savannah_dirt_02_name"
+	texture = SavannahDirt/SavannahDirt02.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.788, 0.574, 0.392
+
+	[Variation]
+	IDS = savannah_dirt03
+	name = "#savannah_dirt_03_name"
+	texture = SavannahDirt/SavannahDirt03.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.778, 0.594, 0.382
+
+	[Variation]
+	IDS = savannah_dirt04
+	name = "#savannah_dirt_04_name"
+	texture = SavannahDirt/SavannahDirt04.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.788, 0.574, 0.372
+}

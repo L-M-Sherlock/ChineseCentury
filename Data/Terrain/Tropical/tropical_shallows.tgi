@@ -1,0 +1,35 @@
+[Terrain template=WaterTerrain]
+{
+	IDS = tropical_shallows
+	name = "#tropical_watershallow_name"
+	
+	base_priority = 10000
+	terrain_group = water
+	terrain_color = 0.298, 0.428, 0.396
+
+	doodad_frequency = 0.001
+	primary_doodad_frequency = 0.10
+
+/********************	WATER PARAMETERS		********************/
+
+	paint_slope = 0.1
+	max_slope = 0.35
+	paint_max_step = 2
+	max_depth = 3.5
+	anim_textures_path_prefix= TropicalWater/WaterFrames%04d.dds
+	anim_fps = 10
+	color = 0.010, 0.900, 0.755
+	
+ 	water_doodad_IDS = waves
+ 	water_doodad_offset_perpendicular = 0.25
+ 	water_doodad_offset_parallel = 2.0
+
+/********************	WATER VARIATIONS		********************/
+
+	[Variation]
+	IDS = tropical_shallows01
+	name = "#tropical_watershallow_01_name"
+	texture = TropicalWater/TropicalWater01.tga
+	texture_width = 8
+	texture_height = 8
+}

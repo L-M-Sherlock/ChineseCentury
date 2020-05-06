@@ -1,0 +1,146 @@
+;;---------------------------------------------- USATankCO Portrait --------
+[Thing Template=Portrait]
+{
+	ids = usa_tank_co_portrait
+	name = "#usa_tank_co_portrait_name"
+
+	[View]
+	{
+		resource_prefix = USATankCo/USATankCOPortrait
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+
+		[AspectNormal]
+		{
+			[Animation Template=ObjectAnimationIdle]
+			{
+				ids = idle
+			}
+
+			[Animation Template=ObjectAnimationFidget]
+			{
+				ids = fidget1
+			}
+			
+			[Animation Template=ObjectAnimationFidget]
+			{
+				ids = fidget2
+			}
+			[Animation Template=ObjectAnimationFidget]
+			{
+				ids = talk1
+			}
+
+		}
+	}
+}
+
+
+;;---------------------------------------------- USATankCO Unit --------
+
+
+[Thing Template=AAUnitUSAVehicleMediumTank]
+{
+	IDS = usa_tank_co
+	name = "#usa_tank_co_Thing_name"
+	editor_name = "#usa_tank_co_Thing_editor_name"
+
+	[BodyComponent]
+	{
+		health = 600
+		defense = 8
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3.5
+		acceleration = 3
+		turn_radians_per_sec = 2
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_02
+			location = exhaust_point_01	
+	  	}
+	  	
+	  	[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_02
+			location = exhaust_point_02	
+	  	}
+	}
+	
+	[ElementComponent]
+		morale_value = 0
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = captain
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		check_damage_resistance = true
+
+		[Ability template=AATurretAttackLocal]
+		{
+			
+			[AbilityDefinition Template=AAMediumTankGun]
+			{				
+				name = "#usa_tank_co_AbilityDefinition_name"
+				recharge_time = 6
+				range = 18
+				area = 1
+								
+				[Effect Template=APDamageEffect]
+				amount = 65
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1	
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = usa_cannon_medium
+			}
+		}
+		[Ability Template=AAGunLocal]
+		{	
+			[AbilityDefinition Template=AAVehicleMG]
+			{
+				name = "#usa_halftrack_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 2
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 25
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = usa_mg_heavy
+			}
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = USATankCO/USATankCO
+
+		portrait_ids = usa_tank_co_portrait
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = USATankCO/USATankCORecoil1.kf
+		}
+	}
+}

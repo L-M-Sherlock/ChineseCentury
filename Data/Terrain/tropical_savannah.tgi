@@ -1,0 +1,459 @@
+
+[Biome template=Biome]
+{
+	IDS = tropical_savannah
+	name = "#tropical_savannah_name"
+	texture_subfolder_name = Tropical
+	
+	[CloudInfo]
+	{
+		cloud_texture = /Textures/clouds/CloudMapMedium.tga
+		cloud_scale = 128.0, 128.0
+
+		cloud_movement_direction = 1, 0.5
+		
+		cloud_max_delta_velocity_per_sec = 0.02
+		cloud_min_velocity = 0.3
+		cloud_max_velocity = 0.6
+	}
+
+/*********************    TERRAINS    *********************/
+
+	[Terrain]
+	terrain_IDS = savannah_dirt
+
+	[Terrain]
+	terrain_IDS = savannah_dirttrans
+
+	[Terrain]
+	terrain_IDS = savannah_beach
+
+	[Terrain]
+	terrain_IDS = savannah_city
+
+	[Terrain]
+	terrain_IDS = savannah_citytrans
+
+	[Terrain]
+	terrain_IDS = savannah_forest
+	
+	[Terrain]
+	terrain_IDS = savannah_foresttrans
+	
+	[Terrain]
+	terrain_IDS = savannah_grassland
+
+	[Terrain]
+	terrain_IDS = savannah_grasslandtrans
+
+	[Terrain]
+	terrain_IDS = savannah_mountain
+	
+	[Terrain]
+	terrain_IDS = savannah_mountaintrans
+	
+	[Terrain]
+	terrain_IDS = savannah_oasistrans
+	
+	[Terrain]
+	terrain_IDS = savannah_scrub
+	
+/*********************    WATER TERRAINS    *********************/
+
+	[Terrain]
+	terrain_IDS = savannah_oasis
+	
+	[Terrain]
+	terrain_IDS = savannah_ocean
+
+	[Terrain]
+	terrain_IDS = savannah_river
+
+	[Terrain]
+	terrain_IDS = savannah_riverfordable
+
+	[Terrain]
+	terrain_IDS = savannah_shallows
+
+/*********************    TRANSITION SETS    *********************/
+
+	[TransitionSet]
+	set_IDS = transition_set_global_01
+
+/*************************	    CITY TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = savannah_city
+	terrain2_IDS = savannah_beach
+	variation_IDS = savannah_citybeachtrans01
+
+	[Transition]
+	terrain1_IDS = savannah_city
+	terrain2_IDS = savannah_dirt
+	variation_IDS = savannah_citydirttrans01
+
+	[Transition]
+	terrain1_IDS = savannah_city
+	terrain2_IDS = savannah_forest
+	variation_IDS = savannah_cityforesttrans01
+
+	[Transition]
+	terrain1_IDS = savannah_city
+	terrain2_IDS = savannah_grassland
+	variation_IDS = savannah_citygrasslandtrans01
+
+	[Transition]
+	terrain1_IDS = savannah_city
+	terrain2_IDS = savannah_scrub
+	variation_IDS = savannah_cityscrubtrans01
+
+/*************************	    DIRT TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = savannah_dirt
+	terrain2_IDS = savannah_beach
+	variation_IDS = savannah_dirtbeachtrans01
+
+	[Transition]
+	terrain1_IDS = savannah_dirt
+	terrain2_IDS = savannah_forest
+	variation_IDS = savannah_dirtforesttrans01
+
+	[Transition]
+	terrain1_IDS = savannah_dirt
+	terrain2_IDS = savannah_grassland
+	variation_IDS = savannah_dirtgrasslandtrans01
+
+	[Transition]
+	terrain1_IDS = savannah_dirt
+	terrain2_IDS = savannah_scrub
+	variation_IDS = savannah_dirtscrubtrans01
+
+/*************************	    FOREST TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = savannah_forest
+	terrain2_IDS = savannah_beach
+	variation_IDS = savannah_forestbeachtrans01
+
+	[Transition]
+	terrain1_IDS = savannah_forest
+	terrain2_IDS = savannah_grassland
+	variation_IDS = savannah_forestgrasslandtrans01
+
+	[Transition]
+	terrain1_IDS = savannah_forest
+	terrain2_IDS = savannah_scrub
+	variation_IDS = savannah_forestscrubtrans01
+
+/*************************	    GRASSLAND TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = savannah_grassland
+	terrain2_IDS = savannah_beach
+	variation_IDS = savannah_grasslandbeachtrans01
+
+	[Transition]
+	terrain1_IDS = savannah_grassland
+	terrain2_IDS = savannah_scrub
+	variation_IDS = savannah_grasslandscrubtrans01
+
+/*************************	    MOUNTAIN TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = savannah_mountain
+	terrain2_IDS = savannah_beach
+	variation_IDS = savannah_mountainbeachtrans01
+
+	[Transition]
+	terrain1_IDS = savannah_mountain
+	terrain2_IDS = savannah_dirt
+	variation_IDS = savannah_mountaindirttrans01
+
+	[Transition]
+	terrain1_IDS = savannah_mountain
+	terrain2_IDS = savannah_forest
+	variation_IDS = savannah_mountainforesttrans01
+
+	[Transition]
+	terrain1_IDS = savannah_mountain
+	terrain2_IDS = savannah_grassland
+	variation_IDS = savannah_mountaingrasslandtrans01
+
+	[Transition]
+	terrain1_IDS = savannah_mountain
+	terrain2_IDS = savannah_scrub
+	variation_IDS = savannah_mountainscrubtrans01
+
+/*************************	    OASIS TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = savannah_oasis
+	terrain2_IDS = savannah_city
+	variation_IDS = savannah_oasistrans01
+
+	[Transition]
+	terrain1_IDS = savannah_oasis
+	terrain2_IDS = savannah_citytrans
+	variation_IDS = savannah_oasistrans01
+
+	[Transition]
+	terrain1_IDS = savannah_oasis
+	terrain2_IDS = savannah_dirt
+	variation_IDS = savannah_oasistrans01
+
+	[Transition]
+	terrain1_IDS = savannah_oasis
+	terrain2_IDS = savannah_dirttrans
+	variation_IDS = savannah_oasistrans01
+
+	[Transition]
+	terrain1_IDS = savannah_oasis
+	terrain2_IDS = savannah_forest
+	variation_IDS = savannah_oasistrans01
+
+	[Transition]
+	terrain1_IDS = savannah_oasis
+	terrain2_IDS = savannah_foresttrans
+	variation_IDS = savannah_oasistrans01
+
+	[Transition]
+	terrain1_IDS = savannah_oasis
+	terrain2_IDS = savannah_grassland
+	variation_IDS = savannah_oasistrans01
+
+	[Transition]
+	terrain1_IDS = savannah_oasis
+	terrain2_IDS = savannah_grasslandtrans
+	variation_IDS = savannah_oasistrans01
+
+	[Transition]
+	terrain1_IDS = savannah_oasis
+	terrain2_IDS = savannah_scrub
+	variation_IDS = savannah_oasistrans01
+
+/*************************	    OCEAN TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = savannah_ocean
+	terrain2_IDS = savannah_city
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_ocean
+	terrain2_IDS = savannah_citytrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_ocean
+	terrain2_IDS = savannah_dirt
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_ocean
+	terrain2_IDS = savannah_dirttrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_ocean
+	terrain2_IDS = savannah_forest
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_ocean
+	terrain2_IDS = savannah_foresttrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_ocean
+	terrain2_IDS = savannah_grassland
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_ocean
+	terrain2_IDS = savannah_grasslandtrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_ocean
+	terrain2_IDS = savannah_oasis
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_ocean
+	terrain2_IDS = savannah_scrub
+	variation_IDS = savannah_beach01
+
+/*************************	    RIVER TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = savannah_river
+	terrain2_IDS = savannah_city
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_river
+	terrain2_IDS = savannah_citytrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_river
+	terrain2_IDS = savannah_dirt
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_river
+	terrain2_IDS = savannah_dirttrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_river
+	terrain2_IDS = savannah_forest
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_river
+	terrain2_IDS = savannah_foresttrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_river
+	terrain2_IDS = savannah_grassland
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_river
+	terrain2_IDS = savannah_grasslandtrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_river
+	terrain2_IDS = savannah_oasis
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_river
+	terrain2_IDS = savannah_scrub
+	variation_IDS = savannah_beach01
+
+/*************************	    FORDABLE RIVER TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = savannah_riverfordable
+	terrain2_IDS = savannah_city
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_riverfordable
+	terrain2_IDS = savannah_citytrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_riverfordable
+	terrain2_IDS = savannah_dirt
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_riverfordable
+	terrain2_IDS = savannah_dirttrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_riverfordable
+	terrain2_IDS = savannah_forest
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_riverfordable
+	terrain2_IDS = savannah_foresttrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_riverfordable
+	terrain2_IDS = savannah_grassland
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_riverfordable
+	terrain2_IDS = savannah_grasslandtrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_riverfordable
+	terrain2_IDS = savannah_oasis
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_riverfordable
+	terrain2_IDS = savannah_scrub
+	variation_IDS = savannah_beach01
+
+/*************************	    SHALLOWS TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = savannah_shallows
+	terrain2_IDS = savannah_city
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_shallows
+	terrain2_IDS = savannah_citytrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_shallows
+	terrain2_IDS = savannah_dirt
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_shallows
+	terrain2_IDS = savannah_dirttrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_shallows
+	terrain2_IDS = savannah_forest
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_shallows
+	terrain2_IDS = savannah_foresttrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_shallows
+	terrain2_IDS = savannah_grassland
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_shallows
+	terrain2_IDS = savannah_grasslandtrans
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_shallows
+	terrain2_IDS = savannah_oasis
+	variation_IDS = savannah_beach01
+
+	[Transition]
+	terrain1_IDS = savannah_shallows
+	terrain2_IDS = savannah_scrub
+	variation_IDS = savannah_beach01
+
+/*********************    WATER INFORMATION    *********************/
+
+	[WaterInfo Template=AASavannahWaterInfo]
+	terrain_ids = savannah_ocean
+	
+	[WaterInfo Template=AASavannahWaterInfo]
+	terrain_ids = savannah_shallows
+
+	[WaterInfo Template=AASavannahWaterInfo]
+	terrain_ids = savannah_river
+
+	[WaterInfo Template=AASavannahWaterInfo]
+	terrain_IDS = savannah_riverfordable
+	
+	[WaterInfo Template=AASavannahWaterInfo]
+	terrain_IDS = savannah_oasis
+}

@@ -1,0 +1,54 @@
+[Thing Template=AACPCOrganizationMobile]
+{	
+	IDS = regiment_cpc_halftrack
+	name = "#regiment_cpc_halftrack_name"
+	editor_name = "#regiment_cpc_halftrack_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 100
+		
+		[Upkeep]
+		ammo = 0
+		oil = 15
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CPC/CPCHalftrack/CPCHalftrack
+		icon = /UI/Game/RegimentButtons/IconHalftrack.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = rus_vehicle_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_halftrack_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_halftrack_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_halftrack_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_heavy
+		
+		[Slot]	;; front
+		element_IDS = rus_airborne_vehicle
+	
+		[Slot]	;; support
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = rus_airborne_vehicle
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = mechanized_company
+	}
+}

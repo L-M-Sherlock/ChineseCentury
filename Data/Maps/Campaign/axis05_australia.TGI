@@ -1,0 +1,14 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "axis05_australia"
+
+	name_3915 = ""
+	objective_0 = "1.           "
+	kingdom_2 = ""
+	kingdom_0 = ""
+	map_name = "axis05_australia"
+	name_3905 = ""
+	map_description = ",         .            ,              .                   ."
+	independent_1 = ""
+}

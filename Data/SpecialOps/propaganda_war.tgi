@@ -1,0 +1,86 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[Template PropagandaWarProperty Template=EnchantmentProperty]
+{
+	name = "#propaganda_war_Effect_EnchantmentProperty_name"
+	enchantment_type = ench_type_fear
+	duration = 20
+	icon = /Properties/PropertyIcons/IconPropertyMorale.png
+				
+	[Modifier Template=AddModifier]
+	{
+		attribute = DV
+		amount = -2
+	}
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = SPEED_MAX
+	amount = -0.2
+		
+	[WhenAdded Template=FXC_CreateVFX]
+	{
+		VFX_IDS = cowardice_glow
+	}
+}
+
+[Template PropagandaWarAbilityDef Template=AASpecialOp]
+{
+	name = "#propaganda_war_name"
+	description = "#propaganda_war_description"
+	targets = +ENEMY -ORGANIZATION -BUILDING
+	recharge_time = 300
+	area = 15
+	projectile_ids = propaganda_war_projectile
+
+	icon = /UI/%s/Game/SpecialOps/IconPropagandaWar.png
+	
+	[Effect Template=MoraleLossEffect]
+	{
+		amount = 4
+	}
+	
+	[Flags]
+	enchantment = true
+	target_location = true
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = propaganda_war_sfx
+	at = TARGET_GROUND
+}
+
+[AbilityDefinition Template=PropagandaWarAbilityDef]
+{
+	IDS = propaganda_war_ger
+
+	[Effect Template=EnchantmentEffect]
+	{
+		[EnchantmentProperty Template=PropagandaWarProperty]
+		IDS = property_propaganda_war_ger
+	}
+	
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = bomber_drop_ger
+		at = TARGET_GROUND
+		attached = false
+	}
+}
+
+[AbilityDefinition Template=PropagandaWarAbilityDef]
+{
+	IDS = propaganda_war_usa
+	
+	[Effect Template=EnchantmentEffect]
+	{
+		[EnchantmentProperty Template=PropagandaWarProperty]
+		IDS = property_propaganda_war_usa
+	}
+		
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = bomber_drop_usa
+		at = TARGET_GROUND
+		attached = false
+	}
+}

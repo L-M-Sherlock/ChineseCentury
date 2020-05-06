@@ -1,0 +1,11 @@
+
+
+[VWorld Template=Widget]
+{
+	[RenderThreshold]
+	render_threshold = 15
+
+	;; Use a "DummyVE" so we can "pick" the world (pass it input) when
+	;; clicking on the VE even though it doesn't display anything.
+	[View Template=DummyVE]
+}

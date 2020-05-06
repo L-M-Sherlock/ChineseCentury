@@ -1,0 +1,58 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = patton_portrait
+	name = "#patton_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Patton/PattonPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = usa_patton_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = patton
+	name = "#patton_name"
+	description = "#patton_description"
+	staging_name = "#patton_staging_name"
+	icon_texture_ids = Patton/PattonPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/USA/Patton.bik
+	portrait_ids = patton_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpMechanizedAdvance]
+	
+	[Ability Template=AASpecialOpUSASupplyDrop]
+	
+	[Ability Template=AASpecialOpCourage]
+
+	[Ability Template=AASpecialOpCorpsUSA]
+}
+
+
+[Faction template=AAGeneral]
+{
+	ids = patton_tutorial
+	name = "#patton_name"
+	description = "#patton_description"
+	staging_name = "#patton_staging_name"
+	icon_texture_ids = Patton/PattonPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/USA/Patton.bik
+	portrait_ids = patton_portrait
+	public = false
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	;; None for the tutorial
+}

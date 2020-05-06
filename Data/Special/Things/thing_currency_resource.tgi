@@ -1,0 +1,32 @@
+[Thing template=Actor]
+{
+	IDS = thing_currency_resource
+	name = "#thing_currency_resource_name"
+	category = UNIT
+	
+	[EconomyComponent]
+	{
+		[Production]
+		money = 20
+	}
+	
+	[Flags]
+	invulnerable = true
+	invisible = true
+	blocking = false
+	targetable = false
+	ethereal = true
+	
+	[Placement]
+	placement_group_IDS = group_special
+
+	[View]
+	{
+		resource_prefix = ThingCurrencyResource/ThingCurrencyResource
+		shadow_type = none
+		shadow_texture = null
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+	}
+}

@@ -1,0 +1,582 @@
+/**************************************************************************
+
+template_randommap_aa.tgi
+Copyright ?2004 TimeGate Studios
+
+DESCRIPTION:  Core templates for A&A random map system
+
+REVISION HISTORY:
+ick 02.26.04 - created
+ick 04.22.04 - major revisions
+
+USAGE:
+
+
+**************************************************************************/
+
+[Template AARMC template=RMC]
+{
+	reference_size = 320
+
+/*	RULES				*/
+
+	[Rules]
+	{
+		game_type = PLAYABLE
+		
+		[Rule]
+		ids = difficultylevel
+		default = MEDIUM
+		show_ui = false
+	}
+
+/*	KINGDOMS			*/
+
+	[Kingdom Template=RMCKingdomMajor]
+	{
+		IDS = side01
+		name = "#template_rmc_aa_side01_name"
+		color = blue
+		team = null
+		playable = true
+		required = false
+		SAI_default_ids = null
+	}
+
+	[Kingdom Template=RMCKingdomMajor]
+	{
+		IDS = side02
+		name = "#template_rmc_aa_side02_name"
+		color = red
+		team = null
+		playable = true
+		required = false
+		SAI_default_ids = null
+	}
+
+/*	INDEPENDENT KINGDOMS		*/
+
+	[Kingdom Template=RMCKingdomMinor]
+	{
+		IDS = side_herd
+		name = "#template_rmc_aa_side_herd_name"
+
+		[Relation]
+		kingdom_ids = side*
+		relation = NEUTRAL
+	}
+
+	[Kingdom Template=RMCKingdomMinor]
+	{
+		IDS = side_indie
+		name = "#template_rmc_aa_side_indie_name"
+		
+		[Relation]
+		kingdom_ids = side*
+		relation = NEUTRAL
+	}	
+
+	[Kingdom Template=RMCKingdomMinor]
+	{
+		IDS = side_enemy
+		name = "#template_rmc_aa_side_enemy_name"
+
+		[Relation]
+		kingdom_ids = side*
+		relation = ENEMY
+	}	
+
+/*	TEAMS				*/
+
+	[Team]
+	IDS = team01
+	name = "#template_rmc_aa_team01_name"
+
+	[Team]
+	IDS = team02
+	name = "#template_rmc_aa_team02_name"
+
+/*	HEROES				*/
+
+	[Heroes]
+	show_ui = false
+}
+
+[Template AAAllRMC template=AARMC]
+{
+/*	AVAILABLE MAP SIZES		*/
+
+	[MapSize]
+	width = 320
+	height = 320
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 4
+
+	[MapSize]
+	width = 384
+	height = 384
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 4
+
+	[MapSize]
+	width = 448
+	height = 448
+	recommended_kingdoms_min = 4
+	recommended_kingdoms_max = 6
+	
+	[MapSize]
+	width = 512
+	height = 512
+	recommended_kingdoms_min = 4
+	recommended_kingdoms_max = 6
+
+	[MapSize]
+	width = 576
+	height = 576
+	recommended_kingdoms_min = 6
+	recommended_kingdoms_max = 8
+
+	[MapSize]
+	width = 640
+	height = 640
+	recommended_kingdoms_min = 6
+	recommended_kingdoms_max = 8
+
+	[MapSize]
+	width = 704
+	height = 704
+	recommended_kingdoms_min = 8
+	recommended_kingdoms_max = 10
+
+	[MapSize]
+	width = 768
+	height = 768
+	recommended_kingdoms_min = 8
+	recommended_kingdoms_max = 10
+
+	[MapSize]
+	width = 832
+	height = 832
+	recommended_kingdoms_min = 10
+	recommended_kingdoms_max = 12
+
+	[MapSize]
+	width = 896
+	height = 896
+	recommended_kingdoms_min = 10
+	recommended_kingdoms_max = 12
+
+	[MapSize]
+	width = 960
+	height = 960
+	recommended_kingdoms_min = 10
+	recommended_kingdoms_max = 12
+
+/*	KINGDOMS			*/
+
+	[Kingdom Template=RMCKingdomMajor]
+	{
+		IDS = side03
+		name = "#template_rmc_aa_side03_name_4"
+		color = green
+		team = null
+		playable = true
+		required = false
+		SAI_default_ids = null
+	}
+	
+	[Kingdom Template=RMCKingdomMajor]
+	{
+		IDS = side04
+		name = "#template_rmc_aa_side04_name_4"
+		color = black
+		team = null
+		playable = true
+		required = false
+		SAI_default_ids = null
+	}
+	
+	[Kingdom Template=RMCKingdomMajor]
+	{
+		IDS = side05
+		name = "#template_rmc_aa_side05_name_3"
+		color = cyan
+		team = null
+		playable = true
+		required = false
+		SAI_default_ids = null
+	}
+	
+	[Kingdom Template=RMCKingdomMajor]
+	{
+		IDS = side06
+		name = "#template_rmc_aa_side06_name_3"
+		color = brown
+		team = null
+		playable = true
+		required = false
+		SAI_default_ids = null
+	}
+	
+	[Kingdom Template=RMCKingdomMajor]
+	{
+		IDS = side07
+		name = "#template_rmc_aa_side07_name_2"
+		color = yellow
+		team = null
+		playable = true
+		required = false
+		SAI_default_ids = null
+	}
+	
+	[Kingdom Template=RMCKingdomMajor]
+	{
+		IDS = side08
+		name = "#template_rmc_aa_side08_name_2"
+		color = pink
+		team = null
+		playable = true
+		required = false
+		SAI_default_ids = null
+	}
+
+	[Kingdom Template=RMCKingdomMajor]
+	{
+		IDS = side09
+		name = "Side 9"
+		color = gray
+		team = null
+		playable = true
+		required = false
+		SAI_default_ids = null
+	}
+
+	[Kingdom Template=RMCKingdomMajor]
+	{
+		IDS = side10
+		name = "Side 10"
+		color = maroon
+		team = null
+		playable = true
+		required = false
+		SAI_default_ids = null
+	}
+
+	[Kingdom Template=RMCKingdomMajor]
+	{
+		IDS = side11
+		name = "Side 11"
+		color = lime
+		team = null
+		playable = true
+		required = false
+		SAI_default_ids = null
+	}
+
+	[Kingdom Template=RMCKingdomMajor]
+	{
+		IDS = side12
+		name = "Side 12"
+		color = brownish_maroon
+		team = null
+		playable = true
+		required = false
+		SAI_default_ids = null
+	}
+	
+/*	TEAMS				*/
+
+	[Team]
+	IDS = team03
+	name = "#template_rmc_aa_team03_name_3"
+
+	[Team]
+	IDS = team04
+	name = "#template_rmc_aa_team04_name_2"
+}
+
+/********************    RANDOM MAP VILLAGES    ********************/
+
+[Template RMCVillageActorGroups Template=RMCActorGroup]
+{
+	kingdom_ids = side_enemy
+	show_ui = true
+
+	range = 0,5
+	area_factor = 1.75
+
+	balanced_placement = true
+
+	intraproximity_min = 64
+}
+
+[Template RMCVillageActorGroupsHR Template=RMCActorGroup]
+{
+	kingdom_ids = side_enemy
+	show_ui = true
+
+	range = 0,10
+	area_factor = 1.75
+
+	balanced_placement = true
+
+	intraproximity_min = 32
+}
+
+[Template StartCorps Template=RMCActorGroup]
+{
+	ids = start_corps
+	name = "#template_rmc_aa_start_corps_name"
+
+	kingdom_ids = null
+	show_ui = false
+
+	range = 1,1
+	area_factor = 0
+	
+	search_relative_group_ids = this
+	search_radius = 16
+
+	intraproximity_min = 12
+	intraproximity_desired = 12
+	starting_location_weight = 10000
+
+	[RequiredObject]
+	object_ids = placeholder_corpsunpacked
+	position = 0,0
+	
+	[RequiredObject]
+	object_ids = placeholder_depot_supply
+	position = 0,0
+
+	[GroupRestriction]
+	group_ids = start_corps*
+	proximity_min = 96
+	proximity_desired = 128
+}
+
+[Template MachineGunBunkers Template=RMCActorGroup]
+{
+	ids = start_bunkers
+	name = "#template_rmc_aa_start_bunkers_name"
+
+	kingdom_ids = null
+	show_ui = false
+
+	range = 1,1
+	area_factor = 0
+	
+	search_relative_kingdom_ids = this
+	search_radius = 12
+
+	intraproximity_min = 10
+	intraproximity_desired = 10
+	starting_location_weight = 10000
+	
+	properties = tech_noupkeep
+
+	[RequiredObject]
+	object_ids = placeholder_bunker
+	position = 0,0
+	
+	;; this will prevent these bunkers from going anywhere near 12m of any corps HQ (one of
+	;; which happens to be corps paired with this bunker). However this also means that the
+	;; desired distance will be applied with every corps (not what we want). The problem
+	;; is the bunker group is applied to all kingdoms and you can't specify a group
+	;; restriction with the corps that goes with this group. Fortunately, the desired
+	;; proximity of the restriction is negated due to the large starting_location_weight
+	;; which still puts these with the appropriate corps.
+	[GroupRestriction]
+	group_ids = start_corps*
+	proximity_min = 12
+	proximity_desired = 12
+}
+
+[Template AntiairBatteries Template=RMCActorGroup]
+{
+	ids = start_antiair
+	name = "#template_rmc_aa_start_antiair_name"
+
+	kingdom_ids = null
+	show_ui = false
+
+	range = 1,1
+	area_factor = 0
+	
+	search_relative_kingdom_ids = this
+	search_radius = 12
+
+	intraproximity_min = 10
+	intraproximity_desired = 10
+	starting_location_weight = 10000
+	
+	properties = tech_noupkeep
+
+	[RequiredObject]
+	object_ids = placeholder_bunker_antiaircraft
+	position = 0,0
+	
+	[RequiredObject]
+	object_ids = placeholder_bunker_antiaircraft
+	position = 0,0
+	
+	;; see comment in [MachineGunBunkers]
+	[GroupRestriction]
+	group_ids = start_corps*
+	proximity_min = 12
+	proximity_desired = 12
+}
+
+[Template ArtilleryBatteries Template=RMCActorGroup]
+{
+	ids = start_artillery
+	name = "#template_rmc_aa_start_artillery_name"
+
+	kingdom_ids = null
+	show_ui = false
+
+	range = 1,1
+	area_factor = 0
+	
+	search_relative_kingdom_ids = this
+	search_radius = 12
+
+	intraproximity_min = 10
+	intraproximity_desired = 10
+	starting_location_weight = 10000
+	
+	properties = tech_noupkeep
+
+	[RequiredObject]
+	object_ids = placeholder_bunker_artillery
+	position = 0,0
+	
+	;; see comment in [MachineGunBunkers]
+	[GroupRestriction]
+	group_ids = start_corps*
+	proximity_min = 12
+	proximity_desired = 12
+}
+
+[Template HRTankFactory Template=RMCActorGroup]
+{
+	ids = start_hr_tank_factory
+	name = "Tank Factory"
+
+	kingdom_ids = side_enemy
+	show_ui = true
+
+	range = 0,2
+	area_factor = 1.75
+
+	intraproximity_min = 64
+
+	properties = tech_noupkeep
+
+	[Object]
+	object_ids = TankFactory
+	weight = 1
+
+	[GroupRestriction]
+	group_ids = start_corps*
+	proximity_min = 24
+	proximity_desired = 24
+}
+
+[Template HRGERBerlinCity Template=RMCActorGroup]
+{
+	ids = hr_ger_berlin_city
+	name = "berlin city 20"
+
+	kingdom_ids = side_enemy
+	show_ui = false
+
+	range = 20,20
+
+	intraproximity_min = 32
+
+	[RequiredObject]
+	object_ids = berlin_city_center
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[RequiredObject]
+	object_ids = random_village_germany
+	position = 0,0
+
+	[GroupRestriction]
+	group_ids = start_corps*
+	proximity_min = 64
+	proximity_desired = 128
+}

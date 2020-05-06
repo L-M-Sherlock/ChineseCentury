@@ -1,0 +1,127 @@
+[Thing Template=AAUnitJPNProne]
+{
+	IDS = jpn_infantry_banzai
+	name = "#jpn_infantry_banzai_name"
+	editor_name = "#jpn_infantry_banzai_editor_name"
+
+	hide_if_missing_properties = false
+	
+	[BodyComponent]
+	{
+		health = 175
+		defense = 1
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+	}
+
+	[ElementComponent]
+	{
+		required_properties = tech_infantry_banzai
+	}
+	
+	[PropertiesComponent]
+	{		
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = front
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		check_damage_resistance = true
+
+		[Ability Template=AAGunLocal]
+		{				
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				IDS = banzai1
+				name = "#jpn_infantry_banzai_AbilityDefinition_name"
+				recharge_time = 3
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+			
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = jpn_rifle
+			
+			}
+		}
+
+		[Ability Template=AAAttackLocal]
+		{
+			move_bonus = 110
+			use_bonus = 110
+
+			[AbilityDefinition Template=AAAttack]
+			{	
+				IDS = banzai2
+				name = "#jpn_infantry_banzai_AbilityDefinition_name_2"
+				icon = /Properties/AbilityIcons/IconAbilityDamageArmorPierce.png
+				
+				ability_type = null
+				range = 0.5
+				recharge_time = 50
+				
+				area = 1
+				attenuation_range_min = 1
+				attenuation_factor_max = 0.25
+				
+				impact_impulse = 2000
+				targets = +ENEMY, +VEHICLE
+
+				[Flags]
+				{
+					center_on_source = true
+				}
+
+				[Effect Template=APDamageEffect]
+				{
+					amount = 200
+				}
+
+				[Effect Template=AddDamageEffect]
+				{
+					damage_type_ids = explosive
+					targets = SELF
+					amount = 900
+					hide_from_tooltip = true
+				}
+
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = temperate_medium_explosion_1
+			
+					at = SELF
+					attached = false
+				}
+	
+			}
+
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = JPNInfantryBanzai/JPNInfantryBanzai
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[CharacterComponent Template=AAInfantryCharacterComponent]
+
+}

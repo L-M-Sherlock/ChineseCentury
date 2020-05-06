@@ -1,0 +1,117 @@
+;;--------------------------------------------- Flame Attack ---
+
+[Template AAVehicleFlame Inherit=AAProjectileAttack]
+{
+	projectile_ids = flame_vehicle_projectile
+	ability_type = null
+
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = flame_hit_effect_ground
+		at = TARGET_GROUND
+		attached = false
+		delay = 0.7
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = flame_hit_effect
+  		at = TARGET_HIT_POSITION
+  		attached = false
+  		delay = 0.7
+  	}
+
+	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = flame_ring
+  		at = TARGET_HIT_POSITION
+  		attached = false
+  		delay = 0.7
+  	}
+	
+}; end [Template AAInfantryFlame]
+
+;;------------------------------------------------------
+
+[Thing Template=AAUnitGBRVehicleMediumTank]
+{
+	IDS = FRA_tank_flame
+	name = "#FRA_tank_flame_name"
+	editor_name = "#FRA_tank_flame_editor_name"
+
+	hide_if_missing_properties = false
+
+	[BodyComponent]
+	{
+		health = 400
+		defense = 7
+	}
+
+	[ElementComponent]
+	{
+		required_structures = fra_motor_pool
+		required_properties = tech_tank_flame
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 3.5
+		acceleration = 2.5
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_02
+			location = exhaust_point_01	
+	  	}
+	  	
+	  	[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_02
+			location = exhaust_point_02	
+	  	}
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability template=AATurretAttackLocal]
+		{
+			[AbilityDefinition Template=AAVehicleFlame]
+			{				
+				
+				name = "#gbr_tank_flame_AbilityDefinition_name"
+				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
+				range = 6
+				recharge_time = 3
+				area = 2
+				max_targets = 4
+				
+				[Effect Template=FireDamageEffect]
+				amount = 30
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = gbr_flame_tank
+				
+				[Effect Template=MoraleLossEffect]
+				amount = .5
+				
+			}
+		}
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[View]
+	{
+		resource_prefix = FRATankFlame/GBRTankFlame
+	}
+}

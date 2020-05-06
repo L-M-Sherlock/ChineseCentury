@@ -1,0 +1,111 @@
+[Template AAUnitnedVehicleHQTruckCorp Template=AAUnitnedVehicleHQTruck]
+{
+	name = "#ned_truck_corps_AAUnitnedVehicleHQTruckCorp_name"
+	
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 400
+		
+		[Production]
+		money = 12
+		ammo = 10
+		oil = 5
+	}
+
+	[MobileDeploymentComponent]
+	{
+		unpack_to_actor_ids = ned_corps
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 3
+
+		;; ids of the trailer actor
+		trailer_actor = ned_trailer_corps
+
+		[TrailerHitch]
+		{		
+			;; node name and node offset of the truck's hitch
+			node_ids = hitch
+			node_offset = 0, -1.7, .5
+		}
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = corpshq	
+	}	
+	
+	[View]
+	{
+		resource_prefix = nedTruck/nedTruck
+		icon = /UI/Game/BuildingButtons/IconCorps.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ned_truck_deployed
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = corps_select
+		
+	}
+}
+
+
+[Thing Template=AAUnitnedVehicleHQTruckCorp]
+{
+	IDS = ned_truck_corps
+	editor_name = "#ned_truck_corps_Thing_editor_name"
+}
+
+[Thing Template=AAUnitnedVehicleHQTruckCorp]
+{
+	IDS = ned_truck_corps_dynamic
+	editor_name = "#ned_truck_corps_dynamic_editor_name"
+
+	[MobileDeploymentComponent]
+	{
+		unpack_to_actor_ids = ned_corps_dynamic
+	}
+
+	[Placement]
+	placement_group_ids = null
+}
+
+[Thing Template=AAUnitNEDVehicleHQTruckCorp ]
+{
+	IDS = ned_truck_corps_amphibious
+	editor_name = "#ned_truck_corps_amphibious_editor_name"
+		
+	transport_actor = ned_transport_water_hq
+
+	[Placement]
+	placement_group_IDS = null
+}
+
+[Thing Template=AAUnitNEDVehicleHQTruckCorp ]
+{
+	IDS = ned_truck_corps_amphibious_dynamic
+	editor_name = "#ned_truck_corps_amphibious_dynamic_editor_name"
+
+	transport_actor = ned_transport_water_hq
+
+	[Placement]
+	placement_group_IDS = null
+
+	[MobileDeploymentComponent]
+	{
+		unpack_to_actor_ids = ned_corps_dynamic
+	}
+}

@@ -1,0 +1,54 @@
+[OrganizationLayout template=AAOrganizationLayout]
+{
+	IDS = regiment_hq
+	name = "#regiment_hq_name"
+	
+	[Slot template=LayoutSlot]
+	property_IDS = front
+	required = false
+	name = "#regiment_hq_Slot_name"
+
+	[Slot template=LayoutSlot]
+	property_IDS = front
+	required = false
+	name = "#regiment_hq_Slot_name_2"
+
+	[Slot template=LayoutSlot]
+	property_IDS = front
+	required = false
+	name = "#regiment_hq_Slot_name_3"
+
+	[Slot template=LayoutSlot]
+	property_IDS = front
+	required = false
+	name = "#regiment_hq_Slot_name_4"
+	
+	[Slot template=PrimarySlot]
+	property_IDS = captain
+	name = "#regiment_hq_Slot_name_5"
+
+	[Formation]
+	{
+		formation_IDS = regiment_hq
+		
+		[Position template=FormationPosition]
+		property_IDS = front
+		offset = +8, +8
+
+		[Position template=FormationPosition]
+		property_IDS = front
+		offset = +8, -8
+		
+		[Position template=FormationPosition]
+		property_IDS = front
+		offset = -8, -8
+
+		[Position template=FormationPosition]
+		property_IDS = front
+		offset = -8, +8
+		
+		[Position template=FormationPosition]
+		property_IDS = captain
+		offset = 0,0
+	}
+}

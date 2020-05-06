@@ -1,0 +1,35 @@
+[Thing Template=Road]
+{
+	IDS = sand_road_straight
+	name = "#sand_roads_sand_road_straight_name"
+	
+	[View]
+	resource_prefix = SandRoad/SandRoadStraight
+}
+
+[Thing Template=Road]
+{
+	IDS = sand_road_curve
+	name = "#sand_roads_sand_road_curve_name"
+	
+	[View]
+	resource_prefix = SandRoad/SandRoadCurve
+}
+
+[Thing Template=Road]
+{
+	IDS = sand_road_bend
+	name = "#sand_roads_sand_road_bend_name"
+	
+	[View]
+	resource_prefix = SandRoad/SandRoadBend
+}
+
+[Thing Template=Road]
+{
+	IDS = sand_road_end
+	name = "#sand_roads_sand_road_end_name"
+	
+	[View]
+	resource_prefix = SandRoad/SandRoadEnd
+}

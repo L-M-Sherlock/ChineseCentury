@@ -1,0 +1,86 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= ita_low_income_ego
+	name									= "#italy_sai_ger_low_income_ego_unit_limit_max_needed_name"
+} ;; LowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= ita_main_game_ego
+	name									= "#italy_sai_ita_main_game_ego_unit_limit_max_needed_name"
+} ;; MainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= ita_end_game_ego
+	name									= "#italy_sai_ita_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= ita_end_game_ego_TK
+	name									= "#italy_sai_ita_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= ita_end_game_ego_END
+	name									= "#italy_sai_ita_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= ita_end_game_ego_TK_DS
+	name									= "#italy_sai_ita_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= ita_end_game_ego_TK_DS1
+	name									= "#italy_sai_ita_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= ita_sai
+	name									= "#italy_sai_ita_sai_name_2"
+	description								= "#italy_sai_ita_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+	public									= false
+
+	initial_ego								= ita_low_income_ego
+
+	[Ego]
+	IDS										= ita_main_game_ego
+
+	[Ego]
+	IDS										= ita_end_game_ego
+
+	[Ego]
+	IDS										= ita_end_game_ego_TK
+
+	[Ego]
+	IDS										= ita_end_game_ego_END
+
+	[Ego]
+	IDS										= ita_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= ita_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_ita
+	
+	[Faction]
+	ids										= badoglio
+	
+	[Faction]
+	ids										= balbo
+	
+	[Faction]
+	ids										= gariboldi
+	
+	[Faction]
+	ids										= graziani
+	
+} ;; ita SAI

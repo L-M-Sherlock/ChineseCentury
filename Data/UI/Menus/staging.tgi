@@ -1,0 +1,2242 @@
+;; ---------------------------- Map Preview Dialog ----------------------------
+[MapPreviewDialog Inherit=SharedNoArtPanelWidget]
+{
+	[View]
+	{
+		L = 176
+		T = 38
+		R = +673
+		B = +580
+
+		;; cwp041204 - Children no longer being defined in template
+		[Child Template = SharedMessageBoxPanelGroupVE]
+	}
+	
+	[MapPreviewPanel Inherit = SharedSmallPanelWidget]
+	{
+		[View]
+		{
+			L = 59
+			T = 62
+			R = +556
+			B = +407
+			
+			[Child Template = DecalVETiled]
+			{
+				corners_texture = /UI/Default/Listbox/ListboxCorners.tga
+	 			left_border_texture = /UI/Default/Listbox/ListboxLeft.tga
+	 			right_border_texture = /UI/Default/Listbox/ListboxRight.tga
+	 			top_border_texture = /UI/Default/Listbox/ListboxTop.tga
+	 			bottom_border_texture = /UI/Default/Listbox/ListboxBottom.tga
+	 			center_texture = /UI/Default/Listbox/ListboxCenter.tga
+			}
+		}
+		
+		[MapPreviewLabel Template=LabelWidget]
+		{
+			[View Template=NoVE]
+			{
+				L = 0
+				T = 0
+				R = 100%
+				B = 100%
+			}
+
+			[Label Template= SharedMediumLeftLabelVE]
+			{
+				text = ""
+				multiline = true
+			}
+		}
+		
+		[MapPreviewViewport Inherit=SharedViewportScrollWidget]
+		{
+			[View]
+			{
+				L = 7
+				T = 6
+				R = 97.9%
+				B = 96%
+			}
+		}
+	}
+	
+	[CancelButton Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#staging_CancelButton_Client_View_text"
+		}
+		
+		[View]
+		{
+			L = 440
+			T = 481
+		}
+	}
+}
+;; ---------------------------- Staging Menu ----------------------------
+
+[Template StagingTeamListTile Template = DecalVETiled]
+{
+	corners_texture = /UI/%s/Default/Menus/Staging/StagingTeamListCorners.png
+	left_border_texture = /UI/%s/Default/Menus/Staging/StagingTeamListTileLeft.png
+	right_border_texture = /UI/%s/Default/Menus/Staging/StagingTeamListTileRight.png
+	top_border_texture = /UI/%s/Default/Menus/Staging/StagingTeamListTileTop.png
+	bottom_border_texture = /UI/%s/Default/Menus/Staging/StagingTeamListTileBottom.png
+	center_texture = /UI/%s/Default/Menus/Staging/StagingTeamListTileCenter.png
+}
+
+[Template StagingPlayerListTile Template = DecalVETiled]
+{
+	corners_texture = /UI/%s/Default/Menus/Staging/StagingPlayerListCorners.png
+	left_border_texture = /UI/%s/Default/Menus/Staging/StagingPlayerListTileLeft.png
+	right_border_texture = /UI/%s/Default/Menus/Staging/StagingPlayerListTileRight.png
+	top_border_texture = /UI/%s/Default/Menus/Staging/StagingPlayerListTileTop.png
+	bottom_border_texture = /UI/%s/Default/Menus/Staging/StagingPlayerListTileBottom.png
+	center_texture = /UI/%s/Default/Menus/Staging/StagingPlayerListTileCenter.png
+}
+
+[Template StagingChatTile Template = DecalVETiled]
+{
+	corners_texture = /UI/%s/Default/Menus/Staging/StagingChatCorners.png
+	left_border_texture = /UI/%s/Default/Menus/Staging/StagingChatTileLeft.png
+	right_border_texture = /UI/%s/Default/Menus/Staging/StagingChatTileRight.png
+	top_border_texture = /UI/%s/Default/Menus/Staging/StagingChatTileTop.png
+	bottom_border_texture = /UI/%s/Default/Menus/Staging/StagingChatTileBottom.png
+	center_texture = /UI/%s/Default/Menus/Staging/StagingChatTileCenter.png
+}
+
+[StagingMenu Inherit = MenuInterface]
+{
+	[View]
+	{
+		L = 0
+		T = 0
+		R = 100%
+		B = 100%
+		
+		validate_decal_children = false
+		
+		[Child Template = LobbyBarTopColumnTile]
+ 		{
+   			L = 0
+   			T = 0
+   			B = +67
+ 		}
+ 		
+ 		[Child Template = LobbyBarTopColumn]
+		{
+			L = 0
+			T = 0
+			R = +102
+   			B = +67
+		}
+		
+		[Child Template = LobbyBarTopColumn]
+		{
+			L = 203
+			T = 0
+			R = +102
+   			B = +67
+		}
+		
+		[Child Template = LobbyBarTopColumn]
+		{
+			L = 743
+			T = 0
+			R = +102
+   			B = +67
+		}
+		
+		[Child Template = DecalVE]
+		{
+			L = 976
+			T = 0
+			R = +48
+			B = +67
+			
+			texture = /UI/%s/Default/Menus/Lobby/LobbyBarTopColumnRight.png
+		}
+ 		
+ 		[Child Template = DecalVETiledHorizontal]
+ 		{
+ 			L = 0
+ 			T = 750
+ 			R = 100%
+ 			B = 100%
+ 			
+ 			ends_texture = /UI/%s/Default/Menus/Staging/StagingBottomEdgeTile.png
+ 			center_texture = /UI/%s/Default/Menus/Staging/StagingBottomEdgeTile.png
+ 		}
+ 		
+ 		[Child Template = StagingTeamListTile]
+ 		{
+ 			L = 0
+ 			T = 68
+ 			R = +747
+ 			B = +364
+ 		}
+ 		
+ 		[Child Template = StagingPlayerListTile]
+ 		{
+ 			L = 562
+ 			T = 432
+ 			R = +185
+ 			B = +318
+ 		}
+ 		
+ 		[Child Template = StagingChatTile]
+ 		{
+ 			L = 0
+ 			T = 432
+ 			R = +562
+ 			B = +318
+ 		}
+ 		
+ 		[Child Template = DecalVE]
+ 		{
+ 			L = 747
+ 			T = 67
+ 			R = +277
+ 			B = +342
+ 			
+ 			texture = /UI/%s/Default/Menus/Staging/StagingRightSide01.png
+ 		}
+ 		
+ 		[Child Template = DecalVE]
+ 		{
+ 			L = 747
+ 			T = 409
+ 			R = +277
+ 			B = +341
+ 			
+ 			texture = /UI/%s/Default/Menus/Staging/StagingRightSide02.png
+ 		}
+	}
+
+	[InfoPanel Inherit = SharedNoArtPanelWidget]
+	{
+		[View]
+		{
+			L = 16
+			T = 17
+			R = +958
+			B = +24
+		}
+		
+		[GameNameLabel Template=LabelWidget]
+		{
+			[View Template=NoVE]
+			{	
+				L = 238
+				T = 0
+				R = +489
+				B = +23
+				
+				;;ends_texture = /UI/%s/Default/DropDown/TileEnds.tga
+				;;center_texture = /UI/%s/Default/DropDown/TileCenter.tga
+			}
+
+			[Label]
+			{	
+				L = 5
+				T = 4
+				R = +484
+				B = +20
+
+				text = "#staging_InfoPanel_GameNameLabel_Label_text"
+				font = Small
+				justify = LEFT
+			}
+		}
+
+		[NumPlayersLabel Template=LabelWidget]
+		{
+			[View Template=NoVE]
+			{	
+				L = 780
+				T = 0
+				R = +178
+				B = +23
+				
+				;;ends_texture = /UI/%s/Default/DropDown/TileEnds.tga
+				;;center_texture = /UI/%s/Default/DropDown/TileCenter.tga
+			}
+
+			[Label]
+			{	
+				L = 5
+				T = 4
+				R = +173
+				B = +20
+				
+				text = "#staging_InfoPanel_NumPlayersLabel_Label_text"
+				font = small
+				justify = LEFT
+			}
+		}
+		
+		;;[AutoReadyToggleButton Template=SharedToggleButtonWidget]
+		;;{
+		;;	[View]
+		;;	{
+		;;		L = 5%
+		;;		T = 35
+		;;	}
+		;;}
+
+		;;[AutoReadyLabel Template=LabelWidget]
+		;;{
+		;;	[View Template=NoVE]
+		;;	L = 10%
+		;;	R = 20%
+		;;	T = 35
+		;;	B = 55
+			
+		;;	[Label Template=SharedSmallLeftLabelVE]
+		;;	text = "AutoReady"
+		;;}
+		
+		;;should be replaced by glyph
+		[PasswordIndicatorDecal Template=DecalWidget]
+		{
+			tooltip = "#staging_InfoPanel_PasswordIndicatorDecal_tooltip"
+		
+			[View Template=NoVE]
+			{
+				L = 0
+				T =	3
+				R = +24
+				B = +19
+			}
+				
+			[Decal Template=DecalVE]
+			texture = /UI/Default/LobbyButtons/PasswordLock.png
+		}
+		
+		[TeamFormatDropdown Template=SharedDropDownWidget]
+		{
+			ToolTip = "#staging_InfoPanel_TeamFormatDropdown_ToolTip"
+			[View Template=GroupVE]
+			{
+				L = 31
+				T = 2
+				R = +155
+				B = +20
+			}
+		}
+		
+		[TeamFormatLabel Template=LabelWidget]
+		{
+			[View Template=NoVE]
+			{
+				L = 566
+				T = 9
+				R = +54
+				B = +15
+			}
+			[Label Template=SharedSmallRightLabelVE]
+			{
+				text = "#staging_InfoPanel_TeamFormatLabel_Label_text"
+			}
+		}
+		
+		[GameSettingsButton Template = PushButtonWidget]
+		{
+			[View Template = GroupVE]
+			{
+				L = 238
+				T = 0
+				R = +720
+				B = +23
+				
+				[Child Template = DecalVE]
+				texture = /UI/Game/SharedTextures/blank.tga
+			}
+		}
+	}
+	
+	[MapButton Template=MenuPushButtonWidget]
+	{
+		Tooltip = "#staging_MapButton_Tooltip"
+		
+		[Client]
+		{
+			[View]
+			{
+				text = "#staging_MapButton_Client_View_text"
+			}
+		}
+		
+		[View]
+		{
+			L = 794
+			T = 461
+			R = +181
+			B = +44
+		}
+	}
+	
+	[SaveButton Template=MenuPushButtonWidget]
+	{
+		Tooltip = "#staging_SaveButton_Tooltip"
+		
+		[Client]
+		{
+			[View]
+			{
+				text = "#staging_SaveButton_Client_View_text"
+			}
+		}
+		
+		[View]
+		{
+			L = 794
+			T = 512
+			R = +181
+			B = +44
+		}
+	}
+
+	[FilmButton Template=MenuPushButtonWidget]
+	{
+		Tooltip = "#staging_FilmButton_Tooltip"
+		
+		[Client]
+		{
+			[View]
+			{
+				text = "#staging_FilmButton_Client_View_text"
+			}
+		}
+		
+		[View]
+		{
+			L = 794
+			T = 564
+			R = +181
+			B = +44
+		}
+	}
+
+	[RMCButton Template=MenuPushButtonWidget]
+	{
+		Tooltip = "#staging_RMCButton_Tooltip"
+		
+		[Client]
+		{
+			[View]
+			{
+				text = "#staging_RMCButton_Client_View_text"
+			}
+		}
+
+		[View]
+		{
+			L = 794
+			T = 411
+			R = +181
+			B = +44
+		}
+	}
+
+	;;---------------------------------------------
+	;; begin action Panel
+	[ActionPanel Inherit=SharedNoArtPanelWidget]
+	{
+		[View]
+		{
+			L = 794
+			T = 343
+			R = +181
+			B = +390
+			
+			validate_decal_children = false
+			
+			[Child Template = DecalVE]
+			{
+				alpha_blending = true
+				
+				L = 0
+				T = 50
+				R = +181
+				B = +12
+				texture = /UI/%s/Default/PushButton/menubuttonSeparator.tga
+			}	
+			
+			[Child Template = DecalVE]
+			{
+				alpha_blending = true
+				
+				L = 0
+				T = 273
+				R = +181
+				B = +12
+				texture = /UI/%s/Default/PushButton/menubuttonSeparator.tga
+			}
+		}
+		
+		[DetailsButton Template=MenuPushButtonWidget]
+		{
+			visible = false
+			
+			[Client]
+			{
+				[View]
+				text = "#staging_ActionPanel_DetailsButton_Client_View_text"
+			}
+
+			[View]
+			{
+				L = 7
+				T = 6
+			}
+		}
+		
+		[ScoreButton Template=PushButtonWidget]
+		{
+			tooltip = "#staging_ActionPanel_ScoreButton_tooltip"
+			
+			[View Template = GroupVE]
+			{
+				L = 10
+				T = 0
+				R = +56
+				B = +43
+				
+				[Child Template = DecalVE]
+				alpha_blending = true
+				when = ENABLED + UNFOCUSED + UNPRESSED
+				texture = /UI/%s/Default/Staging/ButtonScoring.png
+				
+				[Child Template = DecalVE]
+				alpha_blending = true
+				when = ENABLED + FOCUSED + UNPRESSED
+				texture = /UI/%s/Default/Staging/ButtonScoringFocused.png
+				
+				[Child Template = DecalVE]
+				alpha_blending = true
+				when = ENABLED + PRESSED
+				texture = /UI/%s/Default/Staging/ButtonScoringPressed.png
+				
+				[Child Template = DecalVE]
+				alpha_blending = true
+				when = DISABLED
+				texture = /UI/%s/Default/Staging/ButtonScoringDisabled.png
+			}
+		}
+		
+		[GameOptionsButton Template=PushButtonWidget]
+		{
+			tooltip = "#staging_ActionPanel_GameOptionsButton_tooltip"
+			
+			[View Template = GroupVE]
+			{
+				L = 63
+				T = 0
+				R = +56
+				B = +43
+				
+				[Child Template = DecalVE]
+				alpha_blending = true
+				when = ENABLED + UNFOCUSED + UNPRESSED
+				texture = /UI/%s/Default/Staging/ButtonSettings.png
+				
+				[Child Template = DecalVE]
+				alpha_blending = true
+				when = ENABLED + FOCUSED + UNPRESSED
+				texture = /UI/%s/Default/Staging/ButtonSettingsFocused.png
+				
+				[Child Template = DecalVE]
+				alpha_blending = true
+				when = ENABLED + PRESSED
+				texture = /UI/%s/Default/Staging/ButtonSettingsPressed.png
+				
+				[Child Template = DecalVE]
+				alpha_blending = true
+				when = DISABLED
+				texture = /UI/%s/Default/Staging/ButtonSettingsDisabled.png
+			}
+		}
+		
+		[OptionsButton Template=PushButtonWidget]
+		{
+			tooltip = "#staging_ActionPanel_OptionsButton_tooltip"
+			
+			[View Template = GroupVE]
+			{
+				L = 116
+				T = 0
+				R = +56
+				B = +43
+				
+				[Child Template = DecalVE]
+				alpha_blending = true
+				when = ENABLED + UNFOCUSED + UNPRESSED
+				texture = /UI/%s/Default/Staging/ButtonOptions.png
+				
+				[Child Template = DecalVE]
+				alpha_blending = true
+				when = ENABLED + FOCUSED + UNPRESSED
+				texture = /UI/%s/Default/Staging/ButtonOptionsFocused.png
+				
+				[Child Template = DecalVE]
+				alpha_blending = true
+				when = ENABLED + PRESSED
+				texture = /UI/%s/Default/Staging/ButtonOptionsPressed.png
+				
+				[Child Template = DecalVE]
+				alpha_blending = true
+				when = DISABLED
+				texture = /UI/%s/Default/Staging/ButtonOptionsDisabled.png
+			}
+		}
+		
+		[LaunchButton Template=MenuPushButtonWidget]
+		{
+			[Client]
+			{
+				[View]
+				text = "#staging_ActionPanel_LaunchButton_Client_View_text"
+			}
+
+			[View]
+			{
+				L = 0
+				T = 294
+				R = +181
+				B = +44
+			}
+		}
+		
+		[AbortLaunchButton Template=MenuPushButtonWidget]
+		{
+			[Client]
+			{
+				[View]
+				text = "#staging_ActionPanel_AbortLaunchButton_Client_View_text"
+			}
+
+			[View]
+			{
+				L = 0
+				T = 294
+				R = +181
+				B = +44
+			}
+		}
+		
+		[ReadyToggle Template=ToggleButtonWidget]
+		{
+			ToolTip = "#staging_ActionPanel_ReadyToggle_ToolTip"
+			
+			pressed_client_L = 17
+			pressed_client_T = 14
+			pressed_client_R = 13r
+			pressed_client_B = 6b
+			
+			[View Template = GroupVE]
+			{
+				L = 0
+				T = 294
+				R = +181
+				B = +44
+								
+				[Child Template=DecalVE]
+				when = ENABLED + UNFOCUSED
+				alpha_blending = true
+				texture = /UI/Default/Pushbutton/menubuttonunfocused.tga
+
+				[Child Template=DecalVE]
+				when = ENABLED + FOCUSED + UNSELECTED
+				alpha_blending = true
+				texture = /UI/Default/Pushbutton/menubuttonfocused.tga
+
+				[Child Template=DecalVE]
+				when = ENABLED + FOCUSED + SELECTED
+				alpha_blending = true
+				texture = /UI/Default/Pushbutton/menubuttonpressed.tga
+				
+				[Child Template=DecalVE]
+				when = ENABLED + UNFOCUSED + SELECTED
+				alpha_blending = true
+				texture = /UI/Default/Pushbutton/menubuttonfocused.tga
+
+				[Child Template=DecalVE]
+				when = DISABLED
+				alpha_blending = true
+				texture = /UI/Default/Pushbutton/menubuttonunfocusedunpressed.tga
+				
+			}
+			
+			[Client Template = StaticLabelWidget]
+			{
+				[View Template = SharedLargeCenteredLabelVE]
+				{
+					L = 13
+					T = 12
+					R = 13r
+					B = 8b
+					
+					[Override]
+					{
+						when = DISABLED
+						attributes = COLOR
+						color = .6,.6,.6
+					}
+					text = "#staging_ActionPanel_ReadyToggle_Client_View_text" ;; also replaced with "NOT READY"	
+				}
+			}
+		}
+		
+		[ExitButton Template=MenuPushButtonWidget]
+		{
+			[Client]
+			{
+				[View]
+				text = "#staging_ActionPanel_ExitButton_Client_View_text"
+			}
+
+			[View]
+			{
+				L = 0
+				T = 346
+				R = +181
+				B = +44
+			}
+		}
+	}
+	;;---------------------------------------------
+	;; end action Panel
+
+	[WorldParamsPanel Inherit=SharedMediumPanelWidget]
+	{	
+		localized random_option_text			= "#staging_WorldParamsPanel_random_option_text"
+		localized team_option_none_text			= "#staging_WorldParamsPanel_team_option_none_text"
+		localized player_option_open_text		= "#staging_WorldParamsPanel_player_option_open_text"
+		localized player_option_open_required_text	= "#staging_WorldParamsPanel_player_option_open_required_text"
+		localized player_option_closed_text		= "#staging_WorldParamsPanel_player_option_closed_text"
+		localized player_option_closed_required_text	= "#staging_WorldParamsPanel_player_option_closed_required_text"
+		localized kingdom_option_observer_text		= "#staging_WorldParamsPanel_kingdom_option_observer_text"
+		/*
+		localized player_option_kick_text		= "Kick"
+		localized player_option_ban_text		= "Ban"
+		localized player_option_change_name		= "Name"
+		localized ronin_team_text			= "No Team"
+		localized observer_team_text			= "Observing"
+		*/
+		
+		;; these colors control the text color when the SAI does or doesn't conflict with nation or
+		;;	faction
+		point3 sai_conflict_color				= 0.5,0,0
+		point3 sai_no_conflict_color			= 1,1,1
+
+		[View]
+		{
+			L = 40
+			T = 74
+			R = +715
+			B = +376
+			
+			;; cwp041204 - Children no longer being defined in template
+			;;[Child Template = SharedChildMediumPanelVE]
+		}
+		
+		[TeamActionPanel Inherit=SharedNoArtPanelWidget]
+		{
+			[View]
+			{
+				L = 477
+				T = 0 ;; set in code.
+				R = +155
+				B = +24
+			}
+			
+			[ChangeTeamButton Template=PushButtonWidget]
+			{	
+				tooltip = "#staging_WorldParamsPanel_TeamActionPanel_ChangeTeamButton_tooltip"
+			
+				pressed_client_L = 4
+				pressed_client_T = 4
+				pressed_client_R = 2r
+				pressed_client_B = 2b
+	
+				[View Template = GroupVE]
+				{
+					L = 0
+					T = 0
+					R = +100%
+					B = +100%
+					
+					[Child Template = DecalVETiledHorizontal]
+					{
+						ends_texture = /UI/%s/Default/Staging/SlotButtonEnds.png
+						center_texture = /UI/%s/Default/Staging/SlotButtonCenter.png
+					}
+				}
+				
+				[Client Template = StaticLabelWidget]
+				{
+					[View Template = SharedMediumCenteredLabelVE]
+					{
+						L = 13
+						T = 3
+						R = 13r
+						B = 3b
+						
+						text = "#staging_WorldParamsPanel_TeamActionPanel_ChangeTeamButton_Client_View_text"
+						
+						[Override]
+						{
+							when = DISABLED
+							attributes = COLOR
+
+							color = .6,.6,.6
+						}
+					}
+				}
+			}
+		}
+		
+		[ActionPanelSeparation Inherit=Widget]
+		{
+			visible = false
+			type = DECAL
+			max_child_count = 1
+
+			[View Template = DecalVETiledHorizontal]
+			{
+				L = 10
+				T = 415
+				R = +761
+				B = +30
+			
+				ends_texture = /UI/%s/Default/Panel/DarkTileCorners.png
+				center_texture = /UI/%s/Default/Panel/DarkTileCenter.png
+			}
+		}	
+		
+		[KingdomActionPanel Inherit=SharedNoArtPanelWidget]
+		{
+			[View]
+			{
+				L = 476
+				T = 0 ;; set by code.
+				R = +156
+				B = +25
+			}
+			
+			[ChangeName Template=PushButtonWidget]
+			{	
+				tooltip = "#staging_WorldParamsPanel_KingdomActionPanel_ChangeName_tooltip"
+				
+				[View Template = GroupVE]
+				{
+					L = 0
+					T = 0
+					R = +31
+					B = +25
+					
+					[Child Template = DecalVE]
+					when = ENABLED + UNFOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonChangeName.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonChangeNameFocused.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + PRESSED
+					texture = /UI/%s/Default/Staging/ButtonChangeNamePressed.png
+				}
+			}
+			
+			[Kick Template=PushButtonWidget]
+			{	
+				tooltip = "#staging_WorldParamsPanel_KingdomActionPanel_Kick_tooltip"
+				[View Template = GroupVE]
+				{
+					L = 0
+					T = 0
+					R = +31
+					B = +25
+					
+					[Child Template = DecalVE]
+					when = ENABLED + UNFOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonKick.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonKickFocused.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + PRESSED
+					texture = /UI/%s/Default/Staging/ButtonKickPressed.png
+				}
+			}
+			
+			[Observer Template=PushButtonWidget]
+			{	
+				tooltip = "#staging_WorldParamsPanel_KingdomActionPanel_Observer_tooltip"
+				
+				[View Template = GroupVE]
+				{
+					L = 31
+					T = 0
+					R = +31
+					B = +25
+					
+					[Child Template = DecalVE]
+					when = ENABLED + UNFOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonObserver.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonObserverFocused.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + PRESSED
+					texture = /UI/%s/Default/Staging/ButtonObserverPressed.png
+					
+				}
+			}
+			
+			[Whisper Template=PushButtonWidget]
+			{	
+				tooltip = "#staging_WorldParamsPanel_KingdomActionPanel_Whisper_tooltip"
+				
+				[View Template = GroupVE]
+				{
+					L = 31
+					T = 0
+					R = +31
+					B = +25
+					
+					[Child Template = DecalVE]
+					when = ENABLED + UNFOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonWhisper.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonWhisperFocused.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + PRESSED
+					texture = /UI/%s/Default/Staging/ButtonWhisperPressed.png
+				}
+			}
+			
+			[MoveHere Template=PushButtonWidget]
+			{	
+				tooltip = "#staging_WorldParamsPanel_KingdomActionPanel_MoveHere_tooltip"
+				
+				[View Template = GroupVE]
+				{
+					L = 62
+					T = 0
+					R = +31
+					B = +25
+					
+					[Child Template = DecalVE]
+					when = ENABLED + UNFOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonMoveHere.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonMoveHereFocused.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + PRESSED
+					texture = /UI/%s/Default/Staging/ButtonMoveHerePressed.png
+				}
+			}
+			
+			[OfferSwap Template=PushButtonWidget]
+			{	
+				tooltip = "#staging_WorldParamsPanel_KingdomActionPanel_OfferSwap_tooltip"
+				
+				[View Template = GroupVE]
+				{
+					L = 62
+					T = 0
+					R = +31
+					B = +25
+					
+					[Child Template = DecalVE]
+					when = ENABLED + UNFOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonSwitch.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonSwitchFocused.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + PRESSED
+					texture = /UI/%s/Default/Staging/ButtonSwitchPressed.png
+				}
+			}
+			
+			[AcceptSwap Template=PushButtonWidget]
+			{	
+				tooltip = "#staging_WorldParamsPanel_KingdomActionPanel_AcceptSwap_tooltip"
+				
+				[View Template = GroupVE]
+				{
+					L = 62
+					T = 0
+					R = +31
+					B = +25
+					
+					[Child Template = DecalVE]
+					when = ENABLED + UNFOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonAccept.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonAcceptFocused.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + PRESSED
+					texture = /UI/%s/Default/Staging/ButtonAcceptPressed.png
+				}
+			}
+			
+			[CancelSwap Template=PushButtonWidget]
+			{	
+				tooltip = "#staging_WorldParamsPanel_KingdomActionPanel_CancelSwap_tooltip"
+				
+				[View Template = GroupVE]
+				{
+					L = 62
+					T = 0
+					R = +31
+					B = +25
+					
+					[Child Template = DecalVE]
+					when = ENABLED + UNFOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonDecline.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonDeclineFocused.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + PRESSED
+					texture = /UI/%s/Default/Staging/ButtonDeclinePressed.png
+				}
+			}
+			
+			[SwapWithAI Template=PushButtonWidget]
+			{	
+				tooltip = "#staging_WorldParamsPanel_KingdomActionPanel_SwapWithAI_tooltip"
+				
+				[View Template = GroupVE]
+				{
+					L = 62
+					T = 0
+					R = +31
+					B = +25
+					
+					[Child Template = DecalVE]
+					when = ENABLED + UNFOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonSwitchWithAI.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonSwitchWithAIFocused.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + PRESSED
+					texture = /UI/%s/Default/Staging/ButtonSwitchWithAIPressed.png
+				}
+			}
+			
+			[AddAI Template=SharedDropDownWidget]
+			{
+				ToolTip = "#staging_WorldParamsPanel_KingdomActionPanel_AddAI_ToolTip"
+
+				[View]
+				{
+					L = 93
+					T = 0
+					R = +31
+					B = +25
+				}
+
+				[Listbox]
+				{
+					[ItemLook]
+					ToolTip = "#staging_WorldParamsPanel_KingdomActionPanel_AddAI_Listbox_ItemLook_ToolTip"
+				}
+			}
+			
+			[RejectSwap Template=PushButtonWidget]
+			{	
+				tooltip = "#staging_WorldParamsPanel_KingdomActionPanel_RejectSwap_tooltip"
+				
+				[View Template = GroupVE]
+				{
+					L = 93
+					T = 0
+					R = +31
+					B = +25
+					
+					[Child Template = DecalVE]
+					when = ENABLED + UNFOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonDecline.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonDeclineFocused.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + PRESSED
+					texture = /UI/%s/Default/Staging/ButtonBanPressed.png
+				}
+			}
+			
+			[Ban Template=PushButtonWidget]
+			{	
+				tooltip = "#staging_WorldParamsPanel_KingdomActionPanel_Ban_tooltip"
+				
+				[View Template = GroupVE]
+				{
+					L = 124
+					T = 0
+					R = +31
+					B = +25
+					
+					[Child Template = DecalVE]
+					when = ENABLED + UNFOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonBan.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + FOCUSED + UNPRESSED
+					texture = /UI/%s/Default/Staging/ButtonBanFocused.png
+					
+					[Child Template = DecalVE]
+					when = ENABLED + PRESSED
+					texture = /UI/%s/Default/Staging/ButtonBanPressed.png
+				}
+			}	
+		}
+		
+		
+		[Slots Inherit=SharedViewportScrollWidget]
+		{
+			[View]
+			{
+				L = 0
+				T = 0
+				R = 100%
+				B = 100%
+				
+			}
+			
+		
+			[ItemPanel]
+			{
+				;; ---------------------------- Team Slot ----------------------------
+
+				[TeamSlot Inherit=SharedSelectablePanelWidget]
+				{
+					
+					[View Template=GroupVE]
+					{
+						L = 0
+						R = +695
+						B = +26
+						
+						[Child Template=DecalVE]
+						when = ENABLED + UNFOCUSED + SELECTED
+						texture = /UI/Default/Staging/LobbyTeamTitle.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + FOCUSED + UNPRESSED + SELECTED
+						texture = /UI/Default/Staging/LobbyTeamTitle.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + FOCUSED + PRESSED + SELECTED
+						texture = /UI/Default/Staging/LobbyTeamTitle.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + FOCUSED + PRESSED + UNSELECTED
+						texture = /UI/Default/Staging/LobbyTeamTitle.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + UNFOCUSED + UNSELECTED
+						texture = /UI/Default/Staging/LobbyTeamTitle.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + FOCUSED + UNPRESSED + UNSELECTED
+						texture = /UI/Default/Staging/LobbyTeamTitle.png
+					}
+					
+					[TeamName Template=LabelWidget]
+					{
+						[View Template=NoVE]
+						{
+							L = 5
+							R = 5r
+							T = 5
+							B = 5b
+						}
+						[Label Template=SharedSmallLeftLabelVE]
+					}
+				}
+		
+				;; ---------------------------- Player Slot ----------------------------
+
+				[PlayerSlot Inherit=PanelWidget]
+				{
+					;; sets sound to play upon pressing/depressing the button
+					string	set_sound = push_button
+					string	unset_sound = NULL	
+					
+					string default_flag_icon = /UI/%s/Default/Staging/FlagRandom.png
+					
+					[View Template=GroupVE]
+					{
+						L = 0
+						T = 0
+						R = +695
+						B = +26
+						
+						[Child Template=DecalVE]
+						when = ENABLED + UNFOCUSED + UNSELECTED
+						texture = /UI/Default/Staging/PlayerSlotBarUnfocusedUnselected.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + FOCUSED
+						texture = /UI/Default/Staging/PlayerSlotBarFocused.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + PRESSED
+						texture = /UI/Default/Staging/PlayerSlotBarPressed.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + SELECTED
+						texture = /UI/Default/Staging/PlayerSlotBarPressed.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + DISABLED
+						texture = /UI/Default/Staging/PlayerSlotBarDisabled.png
+					}
+					
+					[NationFlagDecalIcon Template = DecalWidget]
+					{
+						[View Template = GroupVE]
+						{
+							L = 195
+							T = 3
+							R = +39
+							B = +19
+							
+							;; cwp081904 - added so the flag is click-through
+							client_L = 0
+							client_T = 0
+							client_R = 0
+							client_B = 0
+						}
+						
+						[Decal Template = DecalVE]
+						{
+							client_L = 0
+							client_T = 0
+							client_R = 0
+							client_B = 0
+							
+							texture = NULL ;; set in code
+						}
+					}
+					
+					[KingdomColorIcon Template=LabelWidget]
+					{
+						[View Template=NoVE]
+						{
+							L = 2
+							T = 3
+							R = +20
+							B = +20
+						}
+						[Label Template=SharedSmallLeftLabelVE]
+						
+					}
+
+					[Name Template=LabelWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_Name_ToolTip"
+
+						[View Template=NoVE]
+						{
+							L = 19
+							T = 3
+							R = +172
+							B = +22
+						}
+
+						[Label Template=SharedSmallLeftLabelVE]
+					}
+
+					[AddAI Template=SharedDropDownWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_AddAI_ToolTip"
+
+						[View]
+						{
+							L = 19
+							T = 1
+							R = +172
+							B = +22
+						}
+
+						[Listbox]
+						{
+							[ItemLook]
+							ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_AddAI_Listbox_ItemLook_ToolTip"
+						}
+					}
+					
+					[Nation Inherit = DropDownWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_Nation_ToolTip"
+					
+						[View Template = GroupVE]
+						{
+							L = 194
+							T = 1
+							R = +137
+							B = +22
+							
+							[Child Template=DecalVE]
+							{
+								L = 41
+								R = +18
+								when = CLOSED
+								texture = /UI/%s/Default/DropDown/ArrowDownUnpressed.tga
+							}
+
+							[Child Template=DecalVE]
+							{
+								L = 41
+								R = +18
+								when = OPEN
+								texture = /UI/%s/Default/DropDown/ArrowDownPressed.tga
+							}	
+						}
+						
+						[OpenButton Template=PushButtonWidget]
+						{
+							[View Template=GroupVE]
+							{
+								L = 41
+								R = +18
+										
+								[Child Template=DecalVE]
+								when = UNPRESSED
+								texture = /UI/%s/Default/DropDown/ArrowDownUnpressed.tga
+
+								[Child Template=DecalVE]
+								when = PRESSED
+								texture = /UI/%s/Default/DropDown/ArrowDownPressed.tga
+							}
+						}
+						
+						[SelectedItem Template=SharedDropDownListBoxItemWidget]
+						{
+							[View Template=DecalVETiledHorizontal]
+							{
+								R = +41
+								
+								ends_texture = /UI/%s/Default/DropDown/TileEnds.tga
+								center_texture = /UI/%s/Default/DropDown/TileCenter.tga
+							}
+						}
+
+						[Listbox Template = SharedDropDownListboxWidget]
+						{
+							[ItemLook]
+							ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_Nation_Listbox_ItemLook_ToolTip"
+						}
+					}
+
+					[Faction Template=SharedDropDownWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_Faction_ToolTip"
+
+						[View]
+						{
+							L = 255
+							T = 1
+							R = +148
+							B = +22
+						}
+
+						[Listbox]
+						{
+							[ItemLook]
+							ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_Faction_Listbox_ItemLook_ToolTip"
+						}
+					}
+					
+					[NationLabel Template=LabelWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_NationLabel_ToolTip"
+
+						[View Template=NoVE]
+						{
+							L = 194
+							T = 1
+							R = +59
+							B = +22						
+						}
+
+						[Label Template=SharedSmallLeftLabelVE]
+					}
+
+					[FactionLabel Template=LabelWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_FactionLabel_ToolTip"
+
+						[View Template=NoVE]
+						{
+							L = 255
+							T = 1
+							R = +148
+							B = +22
+						}
+
+						[Label Template=SharedSmallLeftLabelVE]
+					}
+					
+					[Handicap Template=SharedDropDownWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_Handicap_ToolTip"
+
+						[View]
+						{
+							L = 406
+							T = 1
+							R = +68
+							B = +23
+						}
+
+						[Listbox]
+						{
+							[ItemLook]
+							ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_Handicap_Listbox_ItemLook_ToolTip"
+						}
+					}
+					
+					[SwapRequest Template=DecalWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_SwapRequest_ToolTip"
+
+						[View Template=NoVE]
+						{
+							L = 621
+							T = 3
+							R = +26
+							B = +23
+						}
+					
+						[Decal Template=DecalVE]
+						{
+							alpha_blending = true
+							texture = /UI/%s/Default/Staging/SwapPendingIcon.png
+						}
+					}
+					
+					[Ping Template=LabelWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_Ping_ToolTip"
+
+						[View Template=NoVE]
+						{
+							L = 675
+							T = 4
+							R = +8
+							B = +22
+						}
+
+						[Label Template=SharedSmallLeftLabelVE]
+					}
+
+
+					[Ready Template=SharedReadyStatusWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_Ready_ToolTip"
+						[View]
+						{
+							L = 655
+							T = 4
+							R = +18
+							B = +16
+						}
+					}
+					
+					[HostIcon Template = DecalWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_HostIcon_ToolTip"
+						[View Template=NoVE]
+						{
+							L = 654
+							T = 1
+							R = +20
+							B = +20
+						}
+					
+						[Decal Template=DecalVE]
+						{
+							texture = /UI/%s/Default/Staging/HostIcon.png
+						}	
+					}
+
+					[Progress Template=LabelWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_PlayerSlot_Progress_ToolTip"
+						[View Template=NoVE]
+						{
+							L = 642
+							T = 6
+							R = +42
+							B = +22
+						}
+
+						[Label Template=SharedSmallCenteredLabelVE]
+					}
+				} ;; end player slot
+				
+				;; ---------------------------- Observer Slot ----------------------------
+
+				[ObserverSlot Inherit=PanelWidget]
+				{
+					;; sets sound to play upon pressing/depressing the button
+					string	set_sound = push_button
+					string	unset_sound = NULL	
+					
+					string default_flag_icon = /UI/%s/Default/Staging/FlagRandom.png
+					
+					[View Template=GroupVE]
+					{
+						L = 0
+						T = 0
+						R = +695
+						B = +26
+						
+						[Child Template=DecalVE]
+						when = ENABLED + UNFOCUSED + UNSELECTED
+						texture = /UI/Default/Staging/ObserverSlotBarUnfocusedUnselected.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + FOCUSED
+						texture = /UI/Default/Staging/ObserverSlotBarFocused.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + PRESSED
+						texture = /UI/Default/Staging/ObserverSlotBarPressed.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + SELECTED
+						texture = /UI/Default/Staging/ObserverSlotBarPressed.png
+						
+						[Child Template=DecalVE]
+						when = ENABLED + DISABLED
+						texture = /UI/Default/Staging/ObserverSlotBarDisabled.png
+					}
+					
+					;; not visible
+					[NationFlagDecalIcon Template = DecalWidget]
+					{
+						[View Template = GroupVE]
+						{
+							L = 198
+							T = 3
+							R = +36
+							B = +19
+							
+							;; cwp081904 - added so the flag is click-through
+							client_L = 0
+							client_T = 0
+							client_R = 0
+							client_B = 0
+						}
+						
+						[Decal Template = DecalVE]
+						{
+							client_L = 0
+							client_T = 0
+							client_R = 0
+							client_B = 0
+							
+							texture = NULL ;; set in code
+						}
+					}
+					
+					[KingdomColorIcon Template=LabelWidget]
+					{
+						[View Template=NoVE]
+						{
+							L = 2
+							T = 2
+							R = +20
+							B = +20
+						}
+						[Label Template=SharedSmallLeftLabelVE]
+						
+					}
+
+					[Name Template=LabelWidget]
+					{
+						[View Template=NoVE]
+						{
+							L = 33
+							T = 6
+							R = +148
+							B = +17
+						}
+
+						[Label Template=SharedSmallLeftLabelVE]
+					}
+					
+					[AddAI Template=SharedDropDownWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_ObserverSlot_AddAI_ToolTip"
+
+						[View]
+						{
+							L = 33
+							T = 4
+							R = +148
+							B = +20
+						}
+
+						[Listbox]
+						{
+							[ItemLook]
+							ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_ObserverSlot_AddAI_Listbox_ItemLook_ToolTip"
+						}
+					}
+					
+					[Nation Template=SharedDropDownWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_ObserverSlot_Nation_ToolTip"
+
+						[View]
+						{
+							L = 183
+							T = 4
+							R = +136
+							B = +20
+						}
+
+						[Listbox]
+						{
+							[ItemLook]
+							ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_ObserverSlot_Nation_Listbox_ItemLook_ToolTip"
+						}
+					}
+
+					[NationLabel Template=LabelWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_ObserverSlot_NationLabel_ToolTip"
+
+						[View Template=NoVE]
+						{
+							L = 183
+							T = 6
+							R = +136
+							B = +17
+						}
+
+						[Label Template=SharedSmallLeftLabelVE]
+					}
+
+					[FactionLabel Template=LabelWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_ObserverSlot_FactionLabel_ToolTip"
+
+						[View Template=NoVE]
+						{
+							L = 328
+							T = 6
+							R = +138
+							B = +17
+						}
+
+						[Label Template=SharedSmallLeftLabelVE]
+					}
+					
+					[Faction Template=SharedDropDownWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_ObserverSlot_Faction_ToolTip"
+
+						[View]
+						{
+							L = 328
+							T = 4
+							R = +138
+							B = +20
+						}
+
+						[Listbox]
+						{
+							[ItemLook]
+							ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_ObserverSlot_Faction_Listbox_ItemLook_ToolTip"
+						}
+					}
+										
+					[Handicap Template=SharedDropDownWidget]
+					{
+						ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_ObserverSlot_Handicap_ToolTip"
+
+						[View]
+						{
+							L = 475
+							T = 4
+							R = +138
+							B = +20
+						}
+
+						[Listbox]
+						{
+							[ItemLook]
+							ToolTip = "#staging_WorldParamsPanel_Slots_ItemPanel_ObserverSlot_Handicap_Listbox_ItemLook_ToolTip"
+						}
+					}
+					
+					[SwapRequest Template=DecalWidget]
+					{
+						[View Template=NoVE]
+						{
+							L = 251
+							T = 3
+							R = +26
+							B = +23
+						}
+					
+						[Decal Template=DecalVE]
+						{
+							alpha_blending = true
+							texture = /UI/%s/Default/Staging/SwapPendingIcon.png
+						}
+					}
+					
+					[Ping Template=LabelWidget]
+					{
+						[View Template=NoVE]
+						{
+							L = 675
+							T = 4
+							R = +8
+							B = +22
+						}
+
+						[Label Template=SharedSmallLeftLabelVE]
+					}
+
+
+					[Ready Template=SharedReadyStatusWidget]
+					{
+						[View]
+						{
+							L = 655
+							T = 4
+							R = +18
+							B = +16
+						}
+					}
+					
+					[HostIcon Template = DecalWidget]
+					{
+						[View Template=NoVE]
+						{
+							L = 654
+							T = 1
+							R = +20
+							B = +20
+						}
+					
+						[Decal Template=DecalVE]
+						{
+							texture = /UI/%s/Default/Staging/HostIcon.png
+						}	
+					}
+
+					[Progress Template=LabelWidget]
+					{
+						[View Template=NoVE]
+						{
+							L = 642
+							T = 6
+							R = +42
+							B = +22
+						}
+
+						[Label Template=SharedSmallCenteredLabelVE]
+					}
+				} ;; end observer slot
+			}
+		}	
+	}
+
+	[MapPreviewPanel Inherit = SharedSmallPanelWidget]
+	{
+		[View]
+		{
+			L = 780
+			T = 74
+			R = +208
+			B = +267
+			
+			;; cwp041204 - Children no longer being defined in template
+			;;[Child Template = SharedChildSmallPanelVE]
+		}
+		
+		[MapPreviewViewport Inherit=SharedViewportScrollWidget]
+		{
+			[View]
+			{
+				L = 5
+				T = 1
+				R = +199
+				B = +263
+			}
+			
+			[ItemPanel]
+			{
+				[MapPreviewLabel Template=LabelWidget]
+				{
+					[View Template=NoVE]
+					{
+						L = 0
+						R = 100%
+						T = 0
+						B = 100%
+					}
+
+					[Label Template=LabelVE]
+					{
+						text = ""
+						font = small
+						Justify = LEFT
+						multiline = true
+					}
+				}
+			}
+		}
+		
+		[MapPreviewPanelSeparation Inherit = Widget]
+		{
+			visible = false
+			type = DECAL
+			max_child_count = 1
+			
+			[View Template = DecalVETiledHorizontal]
+			{
+				L = 7
+				T =	326
+				R = +166
+				B = +31	
+	
+				ends_texture = /UI/%s/Default/Panel/DarkTileCorners.png
+				center_texture = /UI/%s/Default/Panel/DarkTileCenter.png
+			}	
+		}	
+	}	
+
+	;;[RulesPreviewViewport Inherit=SharedViewportScrollWidget]
+	;;{
+	;;	[View]
+	;;	{
+	;;		L = 70%
+	;;		R = 95%
+	;;		T = 45%
+	;;		B = 80%
+	;;	}
+	;;	
+	;;	[ItemPanel]
+	;;	{
+	;;		[RulesPreviewLabel Template=LabelWidget]
+	;;		{
+	;;			[View Template=NoVE]
+	;;			{
+	;;				L = 0
+	;;				R = 100%
+	;;				T = 0
+	;;				B = 100%
+	;;			}
+;;
+;;				[Label Template=LabelVE]
+;;				{
+;;					text = ""
+;;					font = small
+;;					Justify = LEFT
+;;					multiline = true
+;;				}
+;;			}
+;;		}
+;;	}
+	
+	[StagingChatPanel Inherit=PanelWidget]
+	{
+		[View Template = NoVE]
+		{	
+			L = 39
+			T = 464
+			R = +716
+			B = +278
+		}
+
+		[MessageLogPanel Inherit = SharedSmallPanelWidget]
+		{
+			[View]
+			{
+				L = 0
+				T = 0
+				R = +510
+				B = +278
+				
+				;; cwp041204 - Children no longer being defined in template
+				;;[Child Template = SharedChildSmallPanelVE]
+			}	
+			
+			[MessageLog Inherit=SharedClickableMessageLog]
+			{
+				[View]
+				{
+					L = 4
+					T = 3
+					R = +502
+					B = +247
+				}
+				
+				[ItemPanel]
+				{
+					[View]
+					R = +482
+					B = +240
+					[MessageWidget]
+					{
+						[MessageWidgetBackground]
+						{
+							[Decal Template = DecalVE]
+							texture = /UI/%s/Default/MessageBkgnd.tga
+						}
+					}
+				}
+				
+				[Scrollbar Template=SharedScrollbarWidget]
+			}
+			
+			[MessageLogSeparation Inherit=Widget]
+			{
+				type = DECAL
+				max_child_count = 1
+	
+				[View Template = DecalVE]
+				{
+					L = 0
+					T = 248
+					R = +506
+					B = +24
+					alpha_blending = true
+					texture = /UI/%s/Default/Chat/ChatBarStaging.tga
+				}
+			}	
+
+			[MessageEditbox Template=SharedEditboxWidgetNoArt]
+			{
+				[View]
+				{
+					L = 7
+					T = 249
+					R = +445
+					B = +23
+				}
+				
+				max_characters = 512
+			}
+
+			[SendButton Template=SharedPushButtonWidget]
+			{	
+				[View]
+				L = 449
+				T = 251
+				R = +53
+				B = +22
+				
+				[Client]
+				{
+					[View]
+					L = 0
+					R = 100%
+					text = "#stagingChatPanel_MessageLogPanel_SendButton_Client_View_text"
+				}
+			}
+		}
+
+		[PlayersListboxPanel Inherit = SharedSmallPanelWidget]
+		{
+			[View]
+			{
+				L = 523
+				T = 0
+				R = 100%
+				B = 100%
+				
+				validate_decal_children = false				
+				
+				;;  Left header bar end decal
+				[Child Template=DecalVE]
+				alpha_blending = true
+				texture = /UI/%s/Default/HeaderBar/HeaderBarLeftEnd.tga
+				L = 0
+				T = 249
+				R = +12
+				B = +32
+
+				;;  Right header bar end decal
+				[Child Template=DecalVE]
+				alpha_blending = true
+				texture = /UI/%s/Default/HeaderBar/HeaderBarRightEnd.tga
+				L = 171
+				T = 249
+				R = +14
+				B = +32			
+				
+			}	
+			
+			[PlayersListbox Inherit=SharedListboxWidgetNoDecals]
+  			{
+  				multiselect = true
+  				sorted = true
+	  
+  				[View]
+  				{
+  					L = 1
+  					T = 3
+  					R = +208
+  					B = +181
+  				}
+  			}
+  			
+  			[PlayersListboxSeparation Inherit = Widget]
+			{
+				type = DECAL
+				max_child_count = 1
+				
+				[View Template = DecalVETiledHorizontal]
+				{
+					L = 12
+					T =	249
+					R = +159
+					B = +32
+					alpha_blending = true
+					ends_texture = /UI/%s/Default/HeaderBar/HeaderBarCenter.tga
+					center_texture = /UI/%s/Default/HeaderBar/HeaderBarCenter.tga
+				}	
+			}	
+
+			[FilterPanel Inherit=PanelWidget]
+			{
+				[View Template = NoVE]
+				L = 13
+				T = 253
+				R = +158
+				B = +22
+
+				[AllToggle Template=ToggleButtonWidget]
+				{
+					ToolTip = "#stagingChatPanel_PlayersListboxPanel_FilterPanel_AllToggle_ToolTip"
+					
+					[View Template=GroupVE]
+					{
+						L = 0
+						T = 0
+						R = +30
+						B = +22
+							
+						[Child Template=DecalVE]
+						when = UNSELECTED
+						texture = /UI/%s/Default/LobbyButtons/ChatAllUnselected.png
+
+						[Child Template=DecalVE]
+						when = SELECTED
+						texture = /UI/%s/Default/LobbyButtons/ChatAllSelected.png
+					}
+				}
+				
+				[WhisperToggle Template=ToggleButtonWidget]
+				{
+					ToolTip = "#stagingChatPanel_PlayersListboxPanel_FilterPanel_WhisperToggle_ToolTip"
+					
+					[View Template=GroupVE]
+					{
+						L = 40
+						T = 0
+						R = +30
+						B = +22
+							
+						[Child Template=DecalVE]
+						when = UNSELECTED
+						texture = /UI/%s/Default/LobbyButtons/WhisperUnselected.png
+
+						[Child Template=DecalVE]
+						when = SELECTED
+						texture = /UI/%s/Default/LobbyButtons/WhisperSelected.png
+					}
+				}
+				
+				[TeamToggle Template=ToggleButtonWidget]
+				{
+					ToolTip = "#stagingChatPanel_PlayersListboxPanel_FilterPanel_TeamToggle_ToolTip"
+					
+					[View Template=GroupVE]
+					{
+						L = 80
+						T = 0
+						R = +30
+						B = +22
+							
+						[Child Template=DecalVE]
+						when = UNSELECTED
+						texture = /UI/%s/Default/LobbyButtons/TeamsUnpressed.png
+
+						[Child Template=DecalVE]
+						when = SELECTED
+						texture = /UI/%s/Default/LobbyButtons/TeamsPressed.png
+					}
+				}
+				
+				[BuddyButton Template = PushButtonWidget]
+				{
+					ToolTip = "#stagingChatPanel_PlayersListboxPanel_FilterPanel_BuddyButton_ToolTip"
+					
+					[View Template = GroupVE]
+					{
+						L = 128
+						T = 0
+						R = +30
+						B = +22
+						
+						[Child Template = DecalVE]
+						when = UNPRESSED
+						texture = /UI/%s/Default/LobbyButtons/BuddiesUnselected.png
+						
+						[Child Template = DecalVE]
+						when = PRESSED
+						texture = /UI/%s/Default/LobbyButtons/BuddiesSelected.png
+					}
+				}
+			} ; end filter panel
+		} ; end players listbox panel
+	} ; end chat panel
+}
+
+/* Using lobby.tgi:LobbyChatPlayerPopup
+[ChatPlayerPopup Inherit=SharedPanelWidget]
+{
+	[View]
+	{
+		L = 30%
+		R = +200
+		T = 30%
+		B = +200
+		
+		;; cwp041204 - Children no longer being defined in template
+		[Child Template = SharedChildLargePanelVE]
+	}	
+
+	[BuddyToggle Template=SharedToggleButtonWidget]
+	{
+		;; cwp041204 - directly inherits children from the group ve
+		[View Template = SharedToggleButtonGroupVE]
+		L = 10
+		T = 10
+	}
+
+	[BuddyLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		L = 50
+		R = +100
+		T = 10
+		B = +20
+		
+		[Label]
+		text = "Add to Buddy List"
+		font = tiny
+		justify = LEFT
+	}
+
+	[IgnoreToggle Template=SharedToggleButtonWidget]
+	{
+		;; cwp041204 - directly inherits children from the group ve
+		[View Template = SharedToggleButtonGroupVE]
+		L = 10
+		T = 35
+	}
+	
+	[IgnoreLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		L = 50
+		R = +100
+		T = 35
+		B = +20
+		
+		[Label]
+		text = "Ignore Player"
+		font = tiny
+		justify = LEFT
+	}
+
+	[WhisperButton Template=SharedPushButtonWidget]
+	{
+		[View]
+		L = 10
+		R = +100
+		T = 60
+		B = +25
+		
+		[Client]
+		{
+			[View]
+			text = "Whisper"
+		}
+	}
+
+	[ProfileButton Template=SharedPushButtonWidget]
+	{
+		[View]
+		L = 10
+		R = +100
+		T = 90
+		B = +25
+		
+		[Client]
+		{
+			[View]
+			text = "Profile"
+		}
+	}
+	
+	[CloseButton Template=SharedPushButtonWidget]
+	{
+		[View]
+		L = 10
+		R = +100
+		T = 120
+		B = +25
+		
+		[Client]
+		{
+			[View]
+			text = "Close"
+		}
+	}
+}
+*/

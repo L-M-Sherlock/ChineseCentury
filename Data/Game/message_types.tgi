@@ -1,0 +1,392 @@
+[MessageType Template=MessageType]
+{
+	IDS = HERO_POSITIVE
+	name = "#message_types_HERO_POSITIVE_name"
+	;; description = "Positive hero events"
+
+	icon = MessageTypeIcons/IconGenericEvent.png
+	filter = UIMessageFilterHero
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = HERO_NEUTRAL
+	name = "#message_types_HERO_NEUTRAL_name"
+	;; description = "Neutral hero events"
+
+	icon = MessageTypeIcons/IconGenericEvent.png
+	filter = UIMessageFilterHero
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = HERO_KILLED
+	name = "#message_types_HERO_KILLED_name"
+	;; description = "Hero killed"
+
+	icon = MessageTypeIcons/IconGenericEvent.png
+	filter = UIMessageFilterHero
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = COMPANY_POSITIVE
+	;; description = "Positive company events"
+	name = "#message_types_COMPANY_POSITIVE_name"
+
+	icon = MessageTypeIcons/IconCompanyGeneric.png
+	filter = UIMessageFilterCompany
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = COMPANY_GENERIC
+	;; description = "Neutral company events"
+	name = "#message_types_COMPANY_GENERIC_name"
+
+	icon = MessageTypeIcons/IconCompanyGeneric.png
+	filter = UIMessageFilterCompany
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = COMPANY_NEGATIVE
+	;; description = "Company engaged, negative company events, combat messages"
+	name = "#message_types_COMPANY_NEGATIVE_name"
+
+	icon = MessageTypeIcons/IconCompanyNegative.png
+	filter = UIMessageFilterCompany
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = COMPANY_ROUTED
+	;; description = "Company routed"
+	name = "#message_types_COMPANY_ROUTED_name"
+
+	icon = MessageTypeIcons/IconCompanyRouted.png
+	filter = UIMessageFilterCompany
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = COMPANY_DESTROYED
+	;; description = "Company destroyed"
+	name = "#message_types_COMPANY_DESTROYED_name"
+
+	icon = MessageTypeIcons/IconCompanyDestroyed.png
+	filter = UIMessageFilterCompany
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = REGIMENT_GENERIC
+	;; description = "Positive regiment events"
+	name = "#message_types_REGIMENT_GENERIC_name"
+
+	icon = MessageTypeIcons/IconCompanyGeneric.png
+	filter = UIMessageFilterRegiment
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = REGIMENT_NEGATIVE
+	;; description = "Regiment engaged, negative regiment events"
+	name = "#message_types_REGIMENT_NEGATIVE_name"
+
+	icon = MessageTypeIcons/IconCompanyNegative.png
+	filter = UIMessageFilterRegiment
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = REGIMENT_DESTROYED
+	;; description = "Regiment destroyed"
+	name = "#message_types_REGIMENT_DESTROYED_name"
+
+	icon = MessageTypeIcons/IconCompanyDestroyed.png
+	filter = UIMessageFilterRegiment
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = BUILDING_GENERIC
+	;; description = "Build complete, building captured, positive and neutral building events"
+	name = "#message_types_BUILDING_GENERIC_name"
+
+	icon = MessageTypeIcons/IconBuildingGeneric.png
+	filter = UIMessageFilterBuilding
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = BUILDING_NEGATIVE
+	;; description = "Building under siege, negative building events"
+	name = "#message_types_BUILDING_NEGATIVE_name"
+
+	icon = MessageTypeIcons/IconBuildingNegative.png
+	filter = NULL
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = BUILDING_CAPTURED
+	;; description = "Building captured by enemy"
+	name = "#message_types_BUILDING_CAPTURED_name"
+
+	icon = MessageTypeIcons/IconBuildingCaptured.png
+	filter = NULL
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = BUILDING_DESTROYED
+	;; description = "Building destroyed"
+	name = "#message_types_BUILDING_DESTROYED_name"
+
+	icon = MessageTypeIcons/IconBuildingDestroyed.png
+	filter = NULL
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = GENERIC_EVENT
+	;; description = "Generic events"
+	name = "#message_types_GENERIC_EVENT_name"
+
+	icon = MessageTypeIcons/IconGenericEvent.png
+	filter = UIMessageFilterGeneric
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = GENERIC_WARNING
+	;; description = "Generic warning"
+	name = "#message_types_GENERIC_WARNING_name"
+
+	icon = MessageTypeIcons/IconGenericWarning.png
+	filter = NULL
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = GENERIC_ERROR
+	;; description = "Invalid build placement error, invalid purchase"
+	name = "#message_types_GENERIC_ERROR_name"
+
+	icon = MessageTypeIcons/IconGenericError.png
+	filter = NULL
+	message_sound = error
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = QUEST_POSITIVE
+	;; description = "Quest reward gained"
+	name = "#message_types_QUEST_POSITIVE_name"
+
+	icon = MessageTypeIcons/IconQuestPositive.png
+	filter = NULL
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = QUEST_NEGATIVE
+	;; description = "Quest negative"
+	name = "#message_types_QUEST_NEGATIVE_name"
+
+	icon = MessageTypeIcons/IconQuestNegative.png
+	filter = NULL
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = QUEST_MESSAGE
+	;; description = "Story and quest messages"
+	name = "#message_types_QUEST_MESSAGE_name"
+
+	icon = MessageTypeIcons/IconQuestMessage.png
+	filter = NULL
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = KINGDOM_DEFEATED
+	;; description = "Kingdom defeated"
+	name = "#message_types_KINGDOM_DEFEATED_name"
+
+	icon = MessageTypeIcons/IconKingdomDefeated.png
+	filter = NULL
+}
+
+;; generic events on the chat server
+[MessageType Template=MessageType]
+{
+	IDS = CHAT_SERVER
+	;; description = "Chat Server"
+	name = "#message_types_CHAT_SERVER_name"
+
+	icon = MessageTypeIcons/IconSystemMessage.png
+	filter = UIMessageFilterChat
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = CHAT_PUBLIC
+	;; description = "Chat Public"
+	name = "#message_types_CHAT_PUBLIC_name"
+
+	icon = MessageTypeIcons/IconChat.png
+	filter = UIMessageFilterChat
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = CHAT_PRIVATE
+	;; description = "Chat Private"
+	name = "#message_types_CHAT_PRIVATE_name"
+
+	icon = MessageTypeIcons/IconChat.png
+	filter = UIMessageFilterChat
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = LAN_CHAT_PUBLIC
+	;; description = "LAN Chat Public"
+	name = "#message_types_LAN_CHAT_PUBLIC_name"
+
+	icon = MessageTypeIcons/IconChat.png
+	filter = UIMessageFilterChat
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = LAN_CHAT_PRIVATE
+	;; description = "LAN Chat Private"
+	name = "#message_types_LAN_CHAT_PRIVATE_name"
+
+	icon = MessageTypeIcons/IconChat.png
+	filter = UIMessageFilterChat
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = IM_SERVER
+	;; description = "IM Server"
+	name = "#message_types_IM_SERVER_name"
+
+	icon = MessageTypeIcons/IconSystemMessage.png
+	filter = NULL
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = BUDDY_MESSAGE
+	;; description = "Buddy Message"
+	name = "#message_types_BUDDY_MESSAGE_name"
+
+	icon = MessageTypeIcons/IconChat.png
+	filter = UIMessageFilterBuddy
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = AFK_MESSAGE
+	;; description = "AFK Message"
+	name = "#message_types_AFK_MESSAGE_name"
+
+	icon = MessageTypeIcons/IconSystemMessage.png
+	filter = UIMessageFilterAFK
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = PLAYER_JOINLEAVE
+	;; description = "PLayer join/leave/kick message"
+	name = "#message_types_PLAYER_JOINLEAVE_name"
+
+	icon = MessageTypeIcons/IconSystemMessage.png
+	filter = UIMessageFilterPlayerJoinLeave
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = METAGAME_EVENT
+	name = "#message_types_METAGAME_EVENT_name"
+	;; color = 1,0,1
+	
+	icon = MessageTypeIcons/IconGenericEvent.png
+	filter = UIMessageFilterMetaGameGeneric
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = METAGAME_BATTLE
+	name = "#message_types_METAGAME_BATTLE_name"
+	;; color = 1,0,1
+	
+	icon = MessageTypeIcons/IconMetaGameBattle.png
+	filter = UIMessageFilterMetaGameBattles
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = METAGAME_PURCHASE
+	name = "#message_types_METAGAME_PURCHASE_name"
+	;; color = 1,0,1
+	
+	icon = MessageTypeIcons/IconMetaGamePurchase.png
+	filter = UIMessageFilterMetaGamePurchases
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = METAGAME_MOVEMENT
+	name = "#message_types_METAGAME_MOVEMENT_name"
+	;; color = 1,0,1
+	
+	icon = MessageTypeIcons/IconMetaGameMovement.png
+	filter = UIMessageFilterMetaGameMovement
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = METAGAME_WARNING
+	name = "#message_types_METAGAME_WARNING_name"
+	;; color = 1,0,1
+	
+	icon = MessageTypeIcons/IconGenericWarning.png
+	filter = UIMessageFilterMetaGameGeneric
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = METAGAME_ERROR
+	name = "#message_types_METAGAME_ERROR_name"
+	;; color = 1,0,1
+	
+	icon = MessageTypeIcons/IconGenericError.png
+	filter = UIMessageFilterMetaGameGeneric
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = BANNED
+	;; description = "Banned"
+	name = "#message_types_BANNED_name"
+	color = 1,0,1
+
+	icon = MessageTypeIcons/IconGenericEvent.png
+	filter = NULL
+}
+
+[MessageType Template=MessageType]
+{
+	IDS = TUTORIAL
+	name = "#message_types_TUTORIAL_name"
+	color = 1,1,1
+	
+	icon = MessageTypeIcons/IconGenericEvent.png
+	filter = UIMessageFilterTutorial
+}

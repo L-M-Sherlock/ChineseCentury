@@ -1,0 +1,105 @@
+/**************************************************************************
+
+template_building.tgi
+Copyright © 2002-2004 TimeGate Studios
+
+DESCRIPTION:  stationary buildings.  Includes walls and other objects which
+		can be destroyed.
+
+REVISION HISTORY:
+pcb100202 - created
+
+USAGE:
+
+	[Thing Template=Building]
+	This node goes at the root level and defines a building that can be 
+	instantiated in the game.
+	
+**************************************************************************/
+
+[Template Building Inherit=Actor]
+{
+	category = BUILDING
+	
+	;; Enable unit fog for Buildings.
+	disable_unit_fog = false
+
+	[WhenEnter Template=FXC_CreateVFX]
+	{
+		vfx_ids = out_of_supply_vfx
+
+		actor_state = out_of_supply
+		attached = true
+	}
+
+	[WhenLeave Template=FXC_StopVFX]
+	{
+		vfx_ids = out_of_supply_vfx
+		
+		actor_state = out_of_supply
+	}
+
+	[WhenEnter Template=FXC_CreateVFX]
+	{
+		vfx_ids = under_siege_vfx
+
+		actor_state = under_siege
+		attached = true
+	}
+
+	[WhenLeave Template=FXC_StopVFX]
+	{
+		vfx_ids = under_siege_vfx
+
+		actor_state = under_siege
+	}
+	
+	[Flags]
+	{
+		axis_locked = true
+		targetable = true
+		tile_locked = true
+		tributable = true
+	}
+	
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 4
+
+	[DetectionComponent]	
+	{
+		detection_range = 10
+		remote_detection_range = 8
+	}
+
+	[PropertiesComponent]
+	;;	properties
+
+	[BodyComponent]
+	;;	health
+	;;	defense
+
+	[EconomicComponent]
+	;;	[Cost]
+	;;	[Upkeep]
+	;;	[Production]
+
+	[ConstructionComponent]
+
+
+	;; buildings may implement [StructureComponent], [SupplyComponent], and others
+
+	[View]
+	{
+		shadow_type = projected
+		shadow_texture = null
+
+		;; cwk062404 [bug 4018] - there are no default building icons
+		;;icon = %sIcon.tga
+
+		;; selection vfx
+		selected_vfx = selected_square_vfx
+		focused_vfx = focused_square_vfx
+	}
+	
+} ; end [Template Building]

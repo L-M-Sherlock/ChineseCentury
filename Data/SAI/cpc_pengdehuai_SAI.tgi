@@ -1,0 +1,66 @@
+[Ego template = BalancedLowIncomeEgo]
+{
+	IDS										= pengdehuai_low_income_ego
+	name									= "#cpc_pengdehuai_SAI_pengdehuai_low_income_ego_name"
+} ;; BalancedLowIncomeEgo
+
+[Ego template = BalancedMainGameEgo]
+{
+	IDS										= pengdehuai_main_game_ego
+	name									= "#cpc_pengdehuai_SAI_pengdehuai_main_game_ego_name"
+} ;; BalancedMainGameEgo
+
+[Ego template = BalancedAmmoEndGameEgo]
+{
+	IDS										= pengdehuai_ammo_end_game_ego
+	name									= "#cpc_pengdehuai_SAI_pengdehuai_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = BalancedOilEndGameEgo]
+{
+	IDS										= pengdehuai_oil_end_game_ego
+	name									= "#cpc_pengdehuai_SAI_pengdehuai_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = BalancedWarGameEgo]
+{
+	IDS										= pengdehuai_war_game_ego
+	name									= "#cpc_pengdehuai_SAI_pengdehuai_end_game_ego_name"
+} ;; BalancedWarGameEgo
+
+[Ego template = BalancedFightGameEgo]
+{
+	IDS										= pengdehuai_fight_game_ego
+	name									= "#cpc_pengdehuai_SAI_pengdehuai_end_game_ego_name"
+} ;; BalancedWarGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= pengdehuai_sai
+	name									= "#cpc_pengdehuai_SAI_pengdehuai_sai_name"
+	description								= "#cpc_pengdehuai_SAI_pengdehuai_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= pengdehuai_low_income_ego
+	
+	[Ego]
+	IDS										= pengdehuai_main_game_ego
+
+	[Ego]
+	IDS										= pengdehuai_ammo_end_game_ego
+
+	[Ego]
+	IDS										= pengdehuai_oil_end_game_ego
+
+	[Ego]
+	IDS										= pengdehuai_war_game_ego
+
+	[Ego]
+	IDS										= pengdehuai_fight_game_ego
+
+	[Nation]
+	IDS										= nation_cpc
+	
+	[Faction]
+	ids										= pengdehuai
+} ;; von_manstein SAI

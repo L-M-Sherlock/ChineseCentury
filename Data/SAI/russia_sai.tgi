@@ -1,0 +1,86 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= rus_low_income_ego
+	name									= "#russia_sai_rus_low_income_ego_unit_limit_max_needed_name"
+} ;; LowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= rus_main_game_ego
+	name									= "#russia_sai_rus_main_game_ego_unit_limit_max_needed_name"
+} ;; MainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= rus_end_game_ego
+	name									= "#russia_sai_rus_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= rus_end_game_ego_TK
+	name									= "#russia_sai_rus_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= rus_end_game_ego_END
+	name									= "#russia_sai_rus_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= rus_end_game_ego_TK_DS
+	name									= "#russia_sai_rus_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= rus_end_game_ego_TK_DS1
+	name									= "#russia_sai_rus_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= rus_sai
+	name									= "#russia_sai_rus_sai_name_2"
+	description								= "#russia_sai_rus_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+	public									= false
+
+	initial_ego								= rus_low_income_ego
+
+	[Ego]
+	IDS										= rus_main_game_ego
+
+	[Ego]
+	IDS										= rus_end_game_ego
+
+	[Ego]
+	IDS										= rus_end_game_ego_TK
+
+	[Ego]
+	IDS										= rus_end_game_ego_END
+
+	[Ego]
+	IDS										= rus_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= rus_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_rus
+	
+	[Faction]
+	ids										= chuikov
+	
+	[Faction]
+	ids										= konev
+	
+	[Faction]
+	ids										= rokossovski
+	
+	[Faction]
+	ids										= zhukov
+	
+} ;; rus SAI

@@ -1,0 +1,158 @@
+[Template AAUSAAttackBattleShipBombard Template=AAAttackBattleshipBombard]
+{
+	name = "#hires_cpc_battleship_texas__name"
+	range = 150
+	recharge_time = 6
+
+	[Effect Template=BlastDamageEffect]
+	{
+		amount = 200
+	}
+	
+	[WhenDo template=FXC_PlaySFX]
+	audio_ids = usa_artillery_heavy
+}
+
+[Thing Template=AAUnitHiRes]
+{
+	IDS = cpc_battleship_jianshe
+	name = "#cpc_battleship_jianshe_name"
+	editor_name = "#cpc_battleship_jianshe_editor_name"
+
+	[BodyComponent]
+	{
+		health = 400
+		defense = 3
+	}
+
+	[BuilderComponent]
+	{
+		[BuildActor]
+		actor_ids = beach_mine_pole
+	}
+
+	[Flags]
+	water_based = true
+	
+	[MoverComponent]
+	{
+		speed_max = 5
+		acceleration = 0.5
+		turn_radius = 50
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+
+		[Property]
+		property_IDS = captain
+	}
+	
+	[ElementComponent]
+	{
+		morale_value = 130
+	}
+	
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				name = "#cpc_engineer_AbilityDefinition_name"
+				recharge_time = 3
+				range = 10
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+			
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_rifle
+			
+			}
+		}
+		
+		[Ability Template=AARepairLocal]
+		{			
+			animation1 = build1
+			
+			[AbilityDefinition Template=AARepairAction]
+			{
+				[Effect Template=RepairEffect]
+				amount = 5
+			}
+		}
+		
+		[Ability Template=AAConstructLocal]
+		{
+			animation1 = build1
+			
+			[AbilityDefinition Template=AAConstructAction]
+			{
+				[Effect Template=RepairEffect]
+				amount = 5
+			}
+		}
+	}
+
+	[Placement]
+	placement_group_IDS = group_cutscene
+
+
+	[Size]
+	{
+		height = 2
+
+		blocking_shape = CIRCLE
+		blocking_radius = 2
+
+		soft_shape = CIRCLE
+		soft_radius = 10.1
+	}
+	
+	[View]
+	{
+		resource_prefix = cpcBattleShip/GBRTransportWater
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			{
+				ids = Recoil1
+				length = 1
+				kf = HiResUSABattleShipTexas/HiResUSABattleShipTexasRecoil1.kf
+			}
+			
+			[Animation Template=ObjectAnimationCustomPlay]
+			{
+				ids = Recoil2
+				length = 1
+				kf = HiResUSABattleShipTexas/HiResUSABattleShipTexasRecoil2.kf
+			}
+			
+			[Animation Template=ObjectAnimationCustomPlay]
+			{
+				ids = Recoil3
+				length = 1
+				kf = HiResUSABattleShipTexas/HiResUSABattleShipTexasRecoil3.kf
+			}
+			
+			[Animation Template=ObjectAnimationCustomPlay]
+			{
+				ids = Recoil4
+				length = 1
+				kf = HiResUSABattleShipTexas/HiResUSABattleShipTexasRecoil4.kf
+			}
+			
+			[Animation Template=ObjectAnimationCustomPlay]
+			{
+				ids = Recoil5
+				length = 1
+				kf = HiResUSABattleShipTexas/HiResUSABattleShipTexasRecoil5.kf
+			}
+		}
+	}
+}

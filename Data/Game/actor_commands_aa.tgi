@@ -1,0 +1,82 @@
+;; SEE RTSE actor_commands.tgi for the full list
+
+[ActorCommand Template=ActorCommand]
+{
+	;; general info
+	IDS = research
+	name = "#actor_commands_aa_research_name"
+	tooltip = "#actor_commands_aa_research_tooltip"
+	icon = /UI/%s/Game/ActionButtons/IconResearch.png
+	cursor_ids = NULL
+
+	high_importance = false
+	preferred_position = 6
+}
+
+;; NOTE: this command only shows up for saved groups (mutually exclusive with behavior disable)
+[ActorCommand Template=ActorCommand]
+{
+	;; general info
+	IDS = group_behavior_enable
+	name = "#actor_commands_aa_group_behavior_enable_name"
+	tooltip = "#actor_commands_aa_group_behavior_enable_tooltip"
+	icon = /UI/%s/Game/ActionButtons/IconGroupBehaviorEnable.png
+	cursor_ids = NULL
+
+	high_importance = false
+	preferred_position = 4
+}
+
+;; NOTE: this command only shows up for saved groups (mutually exclusive with behavior enable)
+[ActorCommand Template=ActorCommand]
+{
+	;; general info
+	IDS = group_behavior_disable
+	name = "#actor_commands_aa_group_behavior_disable_name"
+	tooltip = "#actor_commands_aa_group_behavior_disable_tooltip"
+	icon = /UI/%s/Game/ActionButtons/IconGroupBehaviorDisable.png
+	cursor_ids = NULL
+
+	high_importance = false
+	preferred_position = 4
+}
+
+[ActorCommand Template=ActorCommand]
+{
+	;; general info
+	IDS = retreat
+	name = "#actor_commands_retreat_name"
+	tooltip = "#actor_commands_retreat_tooltip"
+	icon = /UI/%s/Game/ActionButtons/IconRetreat.png
+	cursor_ids = retreat
+	command_vfx_ids_actor = waypoint_run_actor
+	command_vfx_ids_location = waypoint_run_location
+
+	;; hot command info
+	can_hot_command_actor = false
+	can_hot_command_location = false
+
+	high_importance = false
+	preferred_position = 2
+}
+
+[ActorCommand Template=ActorCommand]
+{
+	;; general info
+	IDS = explore
+	name = "#actor_commands_explore_name"
+	tooltip = "#actor_commands_explore_tooltip"
+	icon = /UI/%s/Game/ActionButtons/IconExplore.png
+	cursor_ids = explore
+	command_vfx_ids_actor = waypoint_explore_actor
+	command_vfx_ids_location = waypoint_explore_location
+	
+	non_group_command = false
+	
+	;; hot command info
+	can_hot_command_actor = false
+	can_hot_command_location = false
+
+	high_importance = false
+	preferred_position = 7
+}

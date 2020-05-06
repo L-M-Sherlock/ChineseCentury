@@ -1,0 +1,59 @@
+[Terrain template=Terrain]
+{
+	IDS = chaparral_crops
+	name = "#chaparral_crops_name"
+	
+	base_priority = 6000
+	terrain_group = dirt
+	
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.00
+	
+	[Variation]
+	IDS = chaparral_crops01
+	name = "#chaparral_crops_01_name"
+	texture = ChaparralCrops/ChaparralCrops01.tga
+	terrain_color = 0.406, 0.543, 0.379
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = chaparral_crops02
+	name = "#chaparral_crops_transition01_name"
+	texture = ChaparralCrops/ChaparralCrops02.tga
+	terrain_color = 0.426, 0.543, 0.359
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = chaparral_cropsdry01
+	name = "#chaparral_crops_dry_01_name"
+	texture = ChaparralCrops/ChaparralCropsDry01.tga
+	terrain_color = 0.406, 0.543, 0.359
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = chaparral_cropsdry02
+	name = "#chaparral_crops_dry_transition01_name"
+	texture = ChaparralCrops/ChaparralCropsDry02.tga
+	terrain_color = 0.406, 0.523, 0.359
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = chaparral_cropswet01
+	name = "#chaparral_crops_wet_01_name"
+	texture = ChaparralCrops/ChaparralCropsWet01.tga
+	terrain_color = 0.416, 0.533, 0.369
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = chaparral_cropswet02
+	name = "#chaparral_crops_wet_transition01_name"
+	texture = ChaparralCrops/ChaparralCropsWet02.tga
+	terrain_color = 0.426, 0.523, 0.379
+	texture_width = 8
+	texture_height = 8
+}

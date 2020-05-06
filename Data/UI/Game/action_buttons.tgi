@@ -1,0 +1,182 @@
+
+;; ---------------------------- Action Buttons ----------------------------
+
+[ActionButtons Inherit=PanelWidget]
+{
+	[View Template=GroupVE]
+	{
+		L = 831
+		T = 108
+		R = +185
+		B = +138
+	}
+
+	[ActionButtonsButton Inherit=ToggleButtonWidget]
+	{
+		/* cwp063004 - no longer used.
+		pressed_client_L = 2
+		pressed_client_T = 2
+		pressed_client_R = 2r
+		pressed_client_B = 2b
+		*/
+		
+		;; cwp063004 - must be in pixel bounds.
+		int action_button_pressed_client_L = 3
+		int action_button_pressed_client_T = 3
+		int action_button_pressed_client_R = 3
+		int action_button_pressed_client_B = 3
+		
+		int action_button_unpressed_client_L = 1
+		int action_button_unpressed_client_T = 1
+		int action_button_unpressed_client_R = 1
+		int action_button_unpressed_client_B = 1
+	
+		;; Note that buttons are placed by the code, so all this
+		;; is specifying is the size.
+		[View Template=GroupVE]
+		{
+			L = 0%
+			T = 0%
+			R = 42
+			B = 42
+
+			[Child Template=DecalVE]
+			when = ENABLED + UNFOCUSED
+			texture = /UI/%s/Game/SharedTextures/ButtonUnfocused.png
+
+			[Child Template=DecalVE]
+			when = ENABLED + FOCUSED
+			texture = /UI/%s/Game/SharedTextures/ButtonFocused.png
+			
+			[Child Template = DecalVE]
+			alpha_blending = true
+			when = TARGETED
+			texture = /UI/%s/Game/SharedTextures/ActionButtonBorderTargeted.tga
+		}
+		
+		[ActionButtonsButtonDecal Template = DecalVE]
+		{
+			/* cwp063004 - set by code.
+			L = 2
+			T = 2
+			R = 2r
+			B = 2b
+			*/
+			
+			texture = NULL
+		}
+
+		/*
+		[ActionButtonsButtonDecal Template=DecalWidget]
+		{
+			[View Template=NoVE]
+			L = 5%
+			T = 5%
+			R = 95%
+			B = 95%
+		
+			[Decal Template=DecalVE]
+			;; texture will be set based on action type
+			texture = NULL
+		}
+		*/
+
+	}
+
+	[ActorCommandCancel Template = ActionButtonInfo]
+	{
+		name = "#action_buttons_ActorCommandCancel_name"
+		tooltip = "#action_buttons_ActorCommandCancel_tooltip"
+		index = 8
+		texture = /UI/%s/Game/ActionButtons/IconCancel.png
+	}
+	[CancelRecruit Template = ActionButtonInfo]
+	{
+		tooltip = "#action_buttons_CancelRecruit_tooltip"
+		index = 8
+		texture = /UI/%s/Game/ActionButtons/IconCancel.png
+	}
+	[ResetFavorites Template = ActionButtonInfo]
+	{	
+		tooltip = "#action_buttons_ConfirmResetFavorites_tooltip"
+		index = 6
+		texture = /UI/%s/Game/ActionButtons/IconResetFavorites.png
+	}
+	[LastCreated Template = ActionButtonInfo]
+	{	
+		tooltip = "#action_buttons_LastCreated_tooltip"
+		index = 1
+		texture = /UI/%s/Game/ActionButtons/IconLastCreated.png
+	}
+	[SaveToFavoriteActivate Template = ActionButtonInfo]
+	{
+		tooltip = "#action_buttons_SaveToFavoriteActivate_tooltip"
+		index = 2
+		texture = /UI/%s/Game/ActionButtons/IconSaveToFavorite.png
+	}
+
+	[CustomCompany Template = ActionButtonInfo]
+	{	
+		tooltip = "#action_buttons_CustomCompany_tooltip"
+		index = 0
+		texture = /UI/%s/Game/ActionButtons/IconCustomCompany.png
+	}
+
+	[GoToTeamCommands Template = ActionButtonInfo]
+	{
+		name = "#action_buttons_GoToTeamCommands_name"
+		tooltip = "#action_buttons_GoToTeamCommands_tooltip"
+		index = 8
+		texture = /UI/%s/Game/ActionButtons/IconTeamCommands.png
+	}
+
+	[CancelTeamCommands Template = ActionButtonInfo]
+	{
+		tooltip = "#action_buttons_CancelTeamCommands_tooltip"
+		index = 11	;; should be set by code, but this is where it goes anyway.
+		texture = /UI/%s/Game/ActionButtons/IconCancel.png
+	}
+
+	[SelectTeamKingdom Template = ActionButtonInfo]
+	{
+		tooltip = "#action_buttons_SelectTeamKingdom_tooltip" ;; The TT for the all allies button - others will be set in code
+		index = 0				;; The index for the all allies button - others will be set in code
+		texture = /UI/%s/Game/ActionButtons/IconSelectTeam.tga
+	}
+	[SelectTeamKingdomAlly Template = ActionButtonInfo]
+	{
+		name = "#action_buttons_SelectTeamKingdomAlly_name"
+		tooltip = "#action_buttons_SelectTeamKingdomAlly_tooltip"	;; The TT for the all allies button - others will be set in code
+		index = 0				;; The index for the all allies button - others will be set in code
+		texture = /UI/%s/Game/ActionButtons/IconAlliedTeamCommand.png
+	}
+	[SelectObservingKingdomDefault Template = ActionButtonInfo]
+	{
+		tooltip = "#action_buttons_SelectObservingKingdomDefault_tooltip"	;; The TT will be set in code
+		index = 0				;; will be set in code
+		texture = /UI/%s/Game/ActionButtons/IconKingdomView.tga
+	}
+	
+	[SelectObservingKingdom Template = ActionButtonInfo]
+	{
+		tooltip = "#action_buttons_SelectObservingKingdom_tooltip"	;; The TT for returning to the Observer View- others will be set in code
+		index = 11				;; The index for the Observer Viewbutton - others will be set in code
+		texture = /UI/%s/Game/ActionButtons/IconObserverView.png
+	}
+	
+	[SelectObservingKingdomPage Template = ActionButtonInfo]
+	{
+		tooltip = "#action_buttons_SelectObservingKingdomPage_tooltip"	;; The TT for returning to the Observer View- others will be set in code
+		index = 10			;; The index for the Observer Viewbutton - others will be set in code
+		texture = /UI/%s/Game/ActionButtons/IconNextPage.png
+	}
+	
+	[CommandAll Template=ActionButtonInfo]
+	{
+		name = "#action_buttons_CommandAll_name"
+		tooltip = "#action_buttons_CommandAll_tooltip"
+		index = 4
+		texture = /UI/%s/Game/ActionButtons/IconCommandAll.png
+	}
+
+}

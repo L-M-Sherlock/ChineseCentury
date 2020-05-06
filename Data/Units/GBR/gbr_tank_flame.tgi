@@ -1,0 +1,136 @@
+;;--------------------------------------------- Flame Attack ---
+
+[Template AAVehicleFlame Inherit=AAProjectileAttack]
+{
+	projectile_ids = flame_vehicle_projectile
+	ability_type = null
+
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = flame_hit_effect_ground
+		at = TARGET_GROUND
+		attached = false
+		delay = 0.7
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = flame_hit_effect
+  		at = TARGET_HIT_POSITION
+  		attached = false
+  		delay = 0.7
+  	}
+
+	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = flame_ring
+  		at = TARGET_HIT_POSITION
+  		attached = false
+  		delay = 0.7
+  	}
+	
+}; end [Template AAInfantryFlame]
+
+;;------------------------------------------------------
+
+[Thing Template=AAUnitGBRVehicleMediumTank]
+{
+	IDS = gbr_tank_flame
+	name = "#gbr_tank_flame_name"
+	editor_name = "#gbr_tank_flame_editor_name"
+
+	hide_if_missing_properties = false
+
+	[BodyComponent]
+	{
+		health = 600
+		defense = 12
+	}
+
+	[ElementComponent]
+	{
+		required_structures = gbr_motor_pool
+		required_properties = tech_tank_flame
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 3.5
+		acceleration = 2.5
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_02
+			location = exhaust_point_01	
+	  	}
+	  	
+	  	[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_02
+			location = exhaust_point_02	
+	  	}
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability template=AATurretAttackLocal]
+		{
+			[AbilityDefinition Template=AAVehicleFlame]
+			{				
+				
+				name = "#gbr_tank_flame_AbilityDefinition_name"
+				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
+				range = 12
+				recharge_time = 3
+				area = 4
+				
+				[Effect Template=FireDamageEffect]
+				amount = 75
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = gbr_flame_tank
+				
+				[Effect Template=MoraleLossEffect]
+				amount = 1
+				
+			}
+		}
+		[Ability Template=AATurretAttackLocal]
+		{	
+			[AbilityDefinition Template=AAVehicleMG]
+			{
+				name = "#gbr_halftrack_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 2
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 25
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = gbr_mg_heavy
+			}
+		}
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[View]
+	{
+		resource_prefix = GBRTankFlame/GBRTankFlame
+	}
+}

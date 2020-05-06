@@ -1,0 +1,157 @@
+[Thing Template=Building]
+{
+	IDS = beach_mine_pole
+	name = "#beach_mine_pole_name"
+	editor_name ="#beach_mine_pole_name"
+
+	[BodyComponent]
+	{
+		rot_time = 0
+		sink_time = 0
+		health = 1
+		defense = 0
+
+		defense_icon = /Properties/AbilityIcons/IconAbilityDefense.png
+	}
+	
+	[ConstructionComponent]
+	{
+		;; TODO: are construction nodes necessary?
+		construction_node_name_prefix = Stage
+		finished_node_name = Final
+	}
+
+	[DefenderComponent]
+	{
+		control_range = 5	
+			
+		[Ability Template=AAAttackLocal]
+		{
+			reload_time = 0
+			priority = 20
+
+			move_weight = 0
+			use_weight = 1
+			wait_weight = 0
+		
+			move_bonus = 1
+			use_bonus = 1
+			wait_bonus = 1
+
+			[AbilityDefinition Template=AABunkerAttack]
+			{	
+				IDS = mine_attack
+				name = "#beach_mine_pole_DefenderComponent_AbilityDefinition_name"
+				ability_type = null
+				range = 5
+				recharge_time = 10
+				targets = +enemy, -air, -mine
+
+				[Effect Template=BlastDamageEffect]
+				{
+					targets = SELF
+					amount = 25
+				}
+	
+			}
+		}
+
+		[Ability Template=AAAttackLocal]
+		{
+			reload_time = 0
+			priority = 20
+
+			move_weight = 0
+			use_weight = 1
+			wait_weight = 0
+		
+			move_bonus = 1
+			use_bonus = 2
+			wait_bonus = 1
+
+			[AbilityDefinition Template=AABunkerAttack]
+			{	
+				IDS = mine_attack2
+				name = "#beach_mine_pole_DefenderComponent_AbilityDefinition_name_2"
+				ability_type = null
+				range = 5
+				recharge_time = 50
+				area = 10
+				impact_impulse = 2000
+				targets = +enemy, -air, -mine
+
+				[Flags]
+				{
+					center_on_source = true
+				}
+
+				[Effect Template=BlastDamageEffect]
+				{
+					amount = 300
+				}
+			
+				;;explosion on target
+				[WhenDo template=FXC_CreateVFX]
+				{
+					VFX_IDS = water_explosion_2
+			
+					at = SOURCE_GROUND
+					attached = false
+				}
+	
+			}
+
+		}
+	}
+
+	[DetectionComponent]
+	{
+		detection_range = 0
+		remote_detection_range = 0
+	}
+
+	[EconomyComponent]
+
+	[Flags]
+	{
+		blocking = false
+		invulnerable = true
+		axis_locked = false
+		radar = false
+		water_based = true
+	}
+
+	;; Needed to make the Defender Component work.
+	[PerformerComponent]
+
+	[PropertiesComponent]
+	{
+		[Property]
+		{
+			property_ids = minefield
+		}
+
+	}
+
+	
+	[Placement]
+	{
+		placement_group_IDS = group_campaign
+	}
+
+	[Size]
+	{
+		height = 2
+		scale_min = 0.5
+		scale_max = 0.5
+	}
+
+	[StructureComponent]
+	
+	[View]
+	{
+		resource_prefix = BeachMinePole/BeachMinePole
+		shadow_type = NONE
+		shadow_texture = null
+	}
+}

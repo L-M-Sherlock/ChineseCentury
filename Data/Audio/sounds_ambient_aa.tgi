@@ -1,0 +1,859 @@
+[Audio Template=AudioAmbient]
+{
+	IDS = didaozhan
+	name = "#sounds_ambient_aa_am_birds_name"
+	
+	files = Sounds/Feedback/RegimentRecruited.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_artillery
+	name = "#sounds_ambient_aa_am_artillery_name"
+	
+	files = Sounds/General/Ambient/AMArtillery.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_branches
+	name = "#sounds_ambient_aa_am_branches_name"
+
+	files = Sounds/General/Ambient/AMBranchesCracking.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_burning
+	name = "#sounds_ambient_aa_am_burning_name"
+	
+	simultaneous_limit = 1
+
+	files = Sounds/General/Ambient/AMBurning.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_birds
+	name = "#sounds_ambient_aa_am_birds_name"
+
+	files = Sounds/General/Ambient/AMChirpBirds.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_birds_temperate
+	name = "#sounds_ambient_aa_am_birds_temperate_name"
+
+	files = Sounds/General/Ambient/AMChirpBirdsTemperate.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_cicada
+	name = "#sounds_ambient_aa_am_cicada_name"
+
+	files = Sounds/General/Ambient/AMChirpCicada.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_crickets
+	name = "#sounds_ambient_aa_am_crickets_name"
+
+	files = Sounds/General/Ambient/AMChirpCrickets.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_city_noise
+	name = "#sounds_ambient_aa_am_city_noise_name"
+
+	files = Sounds/General/Ambient/AMCityNoise.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_crows
+	name = "#sounds_ambient_aa_am_crows_name"
+
+	files = Sounds/General/Ambient/AMCrows.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = dynamic_hedge_crush
+	name = "#sounds_ambient_aa_dynamic_hedge_crush_name"
+
+	files = Sounds/General/Ambient/AMDynamicHedgeCrushed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = dynamic_tree_fall
+	name = "#sounds_ambient_aa_dynamic_tree_fall_name"
+
+	files = Sounds/General/Ambient/AMDynamicTreeFall.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = dynamic_wall_crush
+	name = "#sounds_ambient_aa_dynamic_wall_crush_name"
+
+	files = Sounds/General/Ambient/AMDynamicWallCrushed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_farm
+	name = "#sounds_ambient_aa_am_farm_name"
+
+	files = Sounds/General/Ambient/AMFarm.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_frogs
+	name = "#sounds_ambient_aa_am_frogs_name"
+
+	files = Sounds/General/Ambient/AMFrogs.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_grass_rustle
+	name = "#sounds_ambient_aa_am_grass_rustle_name"
+
+	files = Sounds/General/Ambient/AMGrassRustle.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_gunshots
+	name = "#sounds_ambient_aa_am_gunshots_name"
+
+	files = Sounds/General/Ambient/AMGunshots.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_insect_buzz
+	name = "#sounds_ambient_aa_am_insect_buzz_name"
+
+	files = Sounds/General/Ambient/AMInsectBuzz.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_insect_tropical
+	name = "#sounds_ambient_aa_am_insect_tropical_name"
+
+	files = Sounds/General/Ambient/AMInsectTropical.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_machine_gun
+	name = "#sounds_ambient_aa_am_mg_name"
+
+	files = Sounds/General/Ambient/AMMG.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_monkeys
+	name = "#sounds_ambient_aa_am_monkeys_name"
+
+	files = Sounds/General/Ambient/AMMonkeys.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_owl
+	name = "#sounds_ambient_aa_am_owl_name"
+
+	files = Sounds/General/Ambient/AMOwlHoot.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_parrots
+	name = "#sounds_ambient_aa_am_parrots_name"
+
+	files = Sounds/General/Ambient/AMParrots.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_peacock
+	name = "#sounds_ambient_aa_am_peacock_name"
+
+	files = Sounds/General/Ambient/AMPeacock.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_rain
+	name = "#sounds_ambient_aa_am_rain_name"
+
+	volume = 25%
+
+	files = Sounds/General/Ambient/AMRain.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_seagulls
+	name = "#sounds_ambient_aa_am_seagulls_name"
+
+	files = Sounds/General/Ambient/AMSeagulls.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_thunder
+	name = "#sounds_ambient_aa_am_thunder_name"
+
+	files = Sounds/General/Ambient/AMThunder01.wav, Sounds/General/Ambient/AMThunder02.wav, Sounds/General/Ambient/AMThunder03.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_waves
+	name = "#sounds_ambient_aa_am_waves_name"
+
+	files = Sounds/General/Ambient/AMWaves01.wav, Sounds/General/Ambient/AMWaves02.wav, Sounds/General/Ambient/AMWaves03.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_wind_arctic
+	name = "#sounds_ambient_aa_am_wind_arctic_name"
+	
+	volume = 50%
+
+	files = Sounds/General/Ambient/AMWindArctic01.wav, Sounds/General/Ambient/AMWindArctic02.wav, Sounds/General/Ambient/AMWindArctic03.wav, Sounds/General/Ambient/AMWindArctic04.wav, Sounds/General/Ambient/AMWindArctic05.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_wind_blizzard
+	name = "#sounds_ambient_aa_am_wind_blizzard_name"
+	
+	volume = 50%
+
+	files = Sounds/General/Ambient/AMWindBlizzard.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_wind_desert
+	name = "#sounds_ambient_aa_am_wind_desert_name"
+
+	volume = 50%
+
+	files = Sounds/General/Ambient/AMWindDesert01.wav, Sounds/General/Ambient/AMWindDesert02.wav, Sounds/General/Ambient/AMWindDesert03.wav, Sounds/General/Ambient/AMWindDesert04.wav, Sounds/General/Ambient/AMWindDesert05.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_wind_sandstorm
+	name = "#sounds_ambient_aa_am_wind_sandstorm_name"
+	
+	volume = 50%
+
+	files = Sounds/General/Ambient/AMWindSandstorm.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_wind_temperate
+	name = "#sounds_ambient_aa_am_wind_temperate_name"
+
+	volume = 50%
+
+	files = Sounds/General/Ambient/AMWindTemperate01.wav, Sounds/General/Ambient/AMWindTemperate02.wav, Sounds/General/Ambient/AMWindTemperate03.wav, Sounds/General/Ambient/AMWindTemperate04.wav, Sounds/General/Ambient/AMWindTemperate05.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_wind_tropical
+	name = "#sounds_ambient_aa_am_wind_tropical_name"
+
+	volume = 50%
+
+	files = Sounds/General/Ambient/AMWindTropical01.wav, Sounds/General/Ambient/AMWindTropical02.wav, Sounds/General/Ambient/AMWindTropical03.wav, Sounds/General/Ambient/AMWindTropical04.wav, Sounds/General/Ambient/AMWindTropical05.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_windmill
+	name = "#sounds_ambient_aa_am_windmill_name"
+
+	files = Sounds/General/Ambient/AMWindmill.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = am_yelling
+	name = "#sounds_ambient_aa_am_yelling_name"
+
+	files = Sounds/General/Ambient/AMYelling.wav
+}
+
+
+;; ===================== DEPLOYMENT ===================== ;;
+
+[Audio Template=AudioAmbient]
+{
+	IDS = gbr_tank_deployed
+	name = "#sounds_ambient_aa_gbr_tank_deployed_name"
+
+	files = Sounds/GBR/Deploy/GBRTankDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = gbr_vehicle_deployed
+	name = "#sounds_ambient_aa_gbr_vehicle_deployed_name"
+
+	files = Sounds/GBR/Deploy/GBRVehicleDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = gbr_truck_deployed
+	name = "#sounds_ambient_aa_gbr_truck_deployed_name"
+
+	files = Sounds/GBR/Deploy/GBRTruckDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = gbr_fighter_deployed
+	name = "#sounds_ambient_aa_gbr_fighter_deployed_name"
+
+	files = Sounds/GBR/Deploy/GBRFighterDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = gbr_bomber_deployed
+	name = "#sounds_ambient_aa_gbr_bomber_deployed_name"
+
+	files = Sounds/GBR/Deploy/GBRBomberDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ger_fighter_deployed
+	name = "#sounds_ambient_aa_ger_fighter_deployed_name"
+
+	files = Sounds/GER/Deploy/GERFighterDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ger_bomber_deployed
+	name = "#sounds_ambient_aa_ger_bomber_deployed_name"
+
+	files = Sounds/GER/Deploy/GERBomberDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ger_tank_deployed
+	name = "#sounds_ambient_aa_ger_tank_deployed_name"
+
+	files = Sounds/GER/Deploy/GERTankDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ger_vehicle_deployed
+	name = "#sounds_ambient_aa_ger_vehicle_deployed_name"
+
+	files = Sounds/GER/Deploy/GERVehicleDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ger_truck_deployed
+	name = "#sounds_ambient_aa_ger_truck_deployed_name"
+
+	files = Sounds/GER/Deploy/GERTruckDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = jpn_bomber_deployed
+	name = "#sounds_ambient_aa_jpn_bomber_deployed_name"
+
+	files = Sounds/JPN/Deploy/JPNBomberDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = jpn_fighter_deployed
+	name = "#sounds_ambient_aa_jpn_fighter_deployed_name"
+
+	files = Sounds/JPN/Deploy/JPNFighterDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = jpn_tank_deployed
+	name = "#sounds_ambient_aa_jpn_tank_deployed_name"
+
+	files = Sounds/JPN/Deploy/JPNTankDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = jpn_vehicle_deployed
+	name = "#sounds_ambient_aa_jpn_vehicle_deployed_name"
+
+	files = Sounds/JPN/Deploy/JPNVehicleDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = jpn_truck_deployed
+	name = "#sounds_ambient_aa_jpn_truck_deployed_name"
+
+	files = Sounds/JPN/Deploy/JPNTruckDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = rus_bomber_deployed
+	name = "#sounds_ambient_aa_rus_bomber_deployed_name"
+
+	files = Sounds/RUS/Deploy/RUSBomberDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = rus_fighter_deployed
+	name = "#sounds_ambient_aa_rus_fighter_deployed_name"
+
+	files = Sounds/RUS/Deploy/RUSFighterDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = rus_tank_deployed
+	name = "#sounds_ambient_aa_rus_tank_deployed_name"
+
+	files = Sounds/RUS/Deploy/RUSTankDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = rus_vehicle_deployed
+	name = "#sounds_ambient_aa_rus_vehicle_deployed_name"
+
+	files = Sounds/RUS/Deploy/RUSVehicleDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = rus_truck_deployed
+	name = "#sounds_ambient_aa_rus_truck_deployed_name"
+
+	files = Sounds/RUS/Deploy/RUSTruckDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = usa_tank_deployed
+	name = "#sounds_ambient_aa_usa_tank_deployed_name"
+
+	files = Sounds/USA/Deploy/USATankDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = usa_vehicle_deployed
+	name = "#sounds_ambient_aa_usa_vehicle_deployed_name"
+
+	files = Sounds/USA/Deploy/USAVehicleDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = usa_truck_deployed
+	name = "#sounds_ambient_aa_usa_truck_deployed_name"
+
+	files = Sounds/USA/Deploy/USATruckDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = usa_bomber_deployed
+	name = "#sounds_ambient_aa_usa_bomber_deployed_name"
+
+	files = Sounds/USA/Deploy/USABomberDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = usa_fighter_deployed
+	name = "#sounds_ambient_aa_usa_fighter_deployed_name"
+
+	files = Sounds/USA/Deploy/USAFighterDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = fin_tank_deployed
+	name = "#sounds_ambient_aa_fin_tank_deployed_name"
+
+	files = Sounds/fin/Deploy/finTankDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = fin_vehicle_deployed
+	name = "#sounds_ambient_aa_fin_vehicle_deployed_name"
+
+	files = Sounds/fin/Deploy/finVehicleDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = fin_truck_deployed
+	name = "#sounds_ambient_aa_fin_truck_deployed_name"
+
+	files = Sounds/fin/Deploy/finTruckDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = fin_bomber_deployed
+	name = "#sounds_ambient_aa_fin_bomber_deployed_name"
+
+	files = Sounds/fin/Deploy/finBomberDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = fin_fighter_deployed
+	name = "#sounds_ambient_aa_fin_fighter_deployed_name"
+
+	files = Sounds/fin/Deploy/finFighterDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ned_tank_deployed
+	name = "#sounds_ambient_aa_ned_tank_deployed_name"
+
+	files = Sounds/ned/Deploy/nedTankDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ned_vehicle_deployed
+	name = "#sounds_ambient_aa_ned_vehicle_deployed_name"
+
+	files = Sounds/ned/Deploy/nedVehicleDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ned_truck_deployed
+	name = "#sounds_ambient_aa_ned_truck_deployed_name"
+
+	files = Sounds/ned/Deploy/nedTruckDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ned_bomber_deployed
+	name = "#sounds_ambient_aa_ned_bomber_deployed_name"
+
+	files = Sounds/ned/Deploy/nedBomberDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ned_fighter_deployed
+	name = "#sounds_ambient_aa_ned_fighter_deployed_name"
+
+	files = Sounds/ned/Deploy/nedFighterDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = chn_tank_deployed
+	name = "#sounds_ambient_aa_chn_tank_deployed_name"
+
+	files = Sounds/chn/Deploy/chnTankDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = chn_vehicle_deployed
+	name = "#sounds_ambient_aa_chn_vehicle_deployed_name"
+
+	files = Sounds/chn/Deploy/chnVehicleDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = chn_truck_deployed
+	name = "#sounds_ambient_aa_chn_truck_deployed_name"
+
+	files = Sounds/chn/Deploy/chnTruckDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = chn_bomber_deployed
+	name = "#sounds_ambient_aa_chn_bomber_deployed_name"
+
+	files = Sounds/chn/Deploy/chnBomberDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = chn_fighter_deployed
+	name = "#sounds_ambient_aa_chn_fighter_deployed_name"
+
+	files = Sounds/chn/Deploy/chnFighterDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = cpc_tank_deployed
+	name = "#sounds_ambient_aa_cpc_tank_deployed_name"
+
+	files = Sounds/cpc/Deploy/cpcTankDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = cpc_vehicle_deployed
+	name = "#sounds_ambient_aa_cpc_vehicle_deployed_name"
+
+	files = Sounds/cpc/Deploy/cpcVehicleDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = cpc_truck_deployed
+	name = "#sounds_ambient_aa_cpc_truck_deployed_name"
+
+	files = Sounds/cpc/Deploy/cpcTruckDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = cpc_bomber_deployed
+	name = "#sounds_ambient_aa_cpc_bomber_deployed_name"
+
+	files = Sounds/cpc/Deploy/cpcBomberDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = cpc_fighter_deployed
+	name = "#sounds_ambient_aa_cpc_fighter_deployed_name"
+
+	files = Sounds/cpc/Deploy/cpcFighterDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ita_tank_deployed
+	name = "#sounds_ambient_aa_ita_tank_deployed_name"
+
+	files = Sounds/ita/Deploy/itaTankDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ita_vehicle_deployed
+	name = "#sounds_ambient_aa_ita_vehicle_deployed_name"
+
+	files = Sounds/ita/Deploy/itaVehicleDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ita_truck_deployed
+	name = "#sounds_ambient_aa_ita_truck_deployed_name"
+
+	files = Sounds/ita/Deploy/itaTruckDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ita_bomber_deployed
+	name = "#sounds_ambient_aa_ita_bomber_deployed_name"
+
+	files = Sounds/ita/Deploy/itaBomberDeployed.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = ita_fighter_deployed
+	name = "#sounds_ambient_aa_ita_fighter_deployed_name"
+
+	files = Sounds/ita/Deploy/itaFighterDeployed.wav
+}
+
+;; ===================== PACK & UNPACK ===================== ;;
+
+[Audio Template=AudioAmbient]
+{
+	IDS = pack_5s_sfx
+	name = "#sounds_ambient_aa_pack_5s_sfx_name"
+
+	files = Sounds/General/Ambient/BuildingPack5s.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = pack_7s_sfx
+	name = "#sounds_ambient_aa_pack_7s_sfx_name"
+
+	files = Sounds/General/Ambient/BuildingPack7s.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = pack_8s_sfx
+	name = "#sounds_ambient_aa_pack_8s_sfx_name"
+
+	files = Sounds/General/Ambient/BuildingPack8s.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = pack_10s_sfx
+	name = "#sounds_ambient_aa_pack_10s_sfx_name"
+
+	files = Sounds/General/Ambient/BuildingPack10s.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = unpack_5s_sfx
+	name = "#sounds_ambient_aa_unpack_5s_sfx_name"
+
+	files = Sounds/General/Ambient/BuildingUnpack5s.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = unpack_7s_sfx
+	name = "#sounds_ambient_aa_unpack_7s_sfx_name"
+
+	files = Sounds/General/Ambient/BuildingUnpack7s.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = unpack_8s_sfx
+	name = "#sounds_ambient_aa_unpack_8s_sfx_name"
+
+	files = Sounds/General/Ambient/BuildingUnpack8s.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = unpack_10s_sfx
+	name = "#sounds_ambient_aa_unpack_10s_sfx_name"
+
+	files = Sounds/General/Ambient/BuildingUnpack10s.wav
+}
+
+;; ===================== VEHICLES STARTING STOPPING ===================== ;;
+
+[Audio Template=AudioAmbient]
+{
+	IDS = truck_start
+	name = "#sounds_ambient_aa_truck_start_name"
+
+	simultaneous_limit = 1
+	files = Sounds/General/Ambient/TruckStart.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = truck_stop
+	name = "#sounds_ambient_aa_truck_stop_name"
+
+	simultaneous_limit = 1
+	files = Sounds/General/Ambient/TruckStop.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = tank_start
+	name = "#sounds_ambient_aa_tank_start_name"
+	
+	simultaneous_limit = 1
+	files = Sounds/General/Ambient/TankStart.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = tank_stop
+	name = "#sounds_ambient_aa_tank_stop_name"
+	
+	simultaneous_limit = 1
+	files = Sounds/General/Ambient/TankStop.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = jeep_start
+	name = "#sounds_ambient_aa_jeep_start_name"
+	
+	simultaneous_limit = 1
+	files = Sounds/General/Ambient/JeepStart.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = jeep_stop
+	name = "#sounds_ambient_aa_jeep_stop_name"
+	
+	simultaneous_limit = 1
+	files = Sounds/General/Ambient/JeepStop.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = large_boat_stop
+	name = "#sounds_ambient_aa_large_boat_stop_name"
+
+	simultaneous_limit = 1
+	files = Sounds/General/Ambient/LargeBoatStop.wav
+}
+
+[Audio Template=AudioAmbient]
+{
+	IDS = small_boat_start
+	name = "#sounds_ambient_aa_small_boat_start_name"
+
+	simultaneous_limit = 1
+	files = Sounds/General/Ambient/SmallBoatStart.wav
+}
+
+;; METAGAME
+
+[Audio Template=AudioAmbient]
+{
+	IDS = mg_army_move
+	name = "#sounds_ambient_aa_mg_army_move_name"
+	
+	who_flags = EVERYONE
+	simultaneous_limit = 1
+
+	files = Sounds/Metagame/ArmyMove.wav
+}

@@ -1,0 +1,196 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_egypt
+	name = "#mg_rmc_egypt_name"
+	description = "#mg_rmc_egypt_description"
+	biome = desert
+
+	sun = SUN_DEFAULT,SUN_DEFAULT,SUN_DEFAULT,SUN_DEFAULT,SUN_DUSK,SUN_MORNING,SUN_NIGHT
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 448
+	height = 448
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	Libya
+	starting_pos = 20,20
+	
+	[Kingdom Template = KingdomDefender]
+	;;	Egypt
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	Palestine
+	starting_pos = 160,300
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	French West Africa
+	starting_pos = 160,20
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	East Africa
+	starting_pos = 300,20
+	
+	[Kingdom Template = KingdomAttacker5]
+	;;	Turkey
+	starting_pos = 20,300
+        type = water
+	
+/********************   TERRAIN    ********************/
+
+	[TerrainBlob Template=DesScrubTerrainBlob]
+	
+	[TerrainStreak Template=DesSavannahTerrainStreak]
+
+	[TerrainStreak Template=DesSandTerrainStreak]
+
+	[TerrainBlob Template=DesSavannahTerrainBlob]
+	
+	[TerrainBlob Template=DesSandTerrainBlob]
+	
+	[TerrainBlob Template=DesDirtTerrainBlob]
+	
+	[TerrainBlob Template=DesSandTerrainBlob02]
+	
+	[TerrainBlob Template=DesSavannahTerrainBlob02]
+	
+	[TerrainBlob Template=DesDirtTerrainBlob02]
+	
+	[TerrainBlob Template=DesScrubTerrainBlob02]
+
+/********************   BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=DesMountainTerrainBlob]
+
+	[TerrainBlob Template=DesMountainTerrainBlob02]
+	
+	[TerrainBlob Template=DesMountainTerrainBlob03]
+	
+	[TerrainBlob Template=DesOceanTerrainBlob]
+
+/********************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = NORTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = desert_ocean
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = desert_ocean
+	
+/********************   TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=DesNoisePhase01]
+	
+	[TerrainNoise Template=DesNoisePhase02]
+	
+	[TerrainNoise Template=DesNoisePhase03]
+	
+	[TerrainNoise Template=DesNoisePhase04]
+
+
+/*************************    ACTOR GROUPS    **************************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_egypt
+		name = "#mg_rmc_egypt_village_egypt_name"
+
+		[Object]
+		object_ids = random_village_egypt
+		weight = 1
+	}	
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_5
+		name = "#mg_rmc_libya_bunkers_coastline_5_name"
+		search_relative_kingdom_ids = kingdom_attacker_5
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+}

@@ -1,0 +1,350 @@
+/*************************************************************************
+							VIEW ELEMENTS
+*************************************************************************/
+
+[Template SharedToggleButtonGroupVE Template=GroupVE]
+{
+	L = 0
+	T = 0
+	R = +20
+	B = +20
+
+	[Child Template=DecalVE]
+	when = ENABLED + UNSELECTED
+	texture = /UI/%s/Default/ToggleButton/Unselected.png
+
+	[Child Template=DecalVE]	
+	when = ENABLED + SELECTED
+	alpha_blending = true
+	texture = /UI/%s/Default/ToggleButton/Selected.png
+
+	[Child Template=DecalVE]
+	when = DISABLED
+	texture = /UI/%s/Default/ToggleButton/Disabled.png
+}
+
+[Template EditorPasswordToggleButtonGroupVE Template=GroupVE]
+{
+	L = 0
+	T = 0
+	R = +20
+	B = +20
+
+	[Child Template=DecalVE]
+	when = SELECTED
+	texture = /UI/%s/Editor/Buttons/PasswordIconOn.png
+	[Child Template=DecalVE]
+	when = UNSELECTED
+	texture = /UI/%s/Editor/Buttons/PasswordIconOff.png						
+}
+
+[Template SharedLockedToggleButtonGroupVE Template = GroupVE]
+{
+	L = 0
+	T = 0
+	R = +20
+	B = +20
+	
+	[Child Template=DecalVE]
+	when = ENABLED + UNSELECTED
+	texture = /UI/%s/Default/ToggleButton/UnlockToggle.png
+
+	[Child Template=DecalVE]
+	when = ENABLED + SELECTED
+	texture = /UI/%s/Default/ToggleButton/LockToggle.png
+
+	[Child Template=DecalVE]
+	when = DISABLED
+	texture = /UI/%s/Default/ToggleButton/Disabled.tga ;; TODO: change art	
+	
+}
+
+;;  New Button
+[Template SwitchSharedToggleButtonGroupVE Template=GroupVE]
+{
+	L = 0
+	T = 0
+	R = +47
+	B = +28
+
+	[Child Template=DecalVE]
+	when = ENABLED + UNSELECTED
+	alpha_blending = true
+	texture = /UI/%s/Menus/Options/SwitchOff.png
+
+	[Child Template=DecalVE]
+	when = ENABLED + SELECTED
+	alpha_blending = true
+	texture = /UI/%s/Menus/Options/SwitchOn.png
+
+	[Child Template=DecalVE]
+	when = DISABLED
+	alpha_blending = true
+	texture = /UI/%s/Menus/Options/SwitchOver.png
+}
+
+[Template SharedTabButtonGroupVE Template=GroupVE]
+{
+	/*
+	L = 0
+	T = 0
+	R = +154
+	B = +43
+	*/
+
+	[Child Template=DecalVE]
+	alpha_blending = true
+	when = ENABLED + UNSELECTED
+	texture = MetaGame/UI/%s/Tabs/TabPanelTabUnselected.png
+
+	[Child Template=DecalVE]
+	alpha_blending = true
+	when = ENABLED + SELECTED
+	texture = MetaGame/UI/%s/Tabs/TabPanelTabSelected.png
+
+	[Child Template=DecalVE]
+	alpha_blending = true
+	when = DISABLED
+	texture = MetaGame/UI/%s/Tabs/ToggleButton/Disabled.tga ;; TODO: change art
+}
+
+[Template SharedSmallLeftLabelVE Template=LabelVE]
+{
+	text = ""
+	font = small
+	justify = left
+}
+
+[Template SharedSmallRightLabelVE Template=LabelVE]
+{
+	text = ""
+	font = small
+	justify = right
+}
+
+[Template SharedSmallCenteredLabelVE Template=LabelVE]
+{
+	text = ""
+	font = small
+	justify = center
+}
+
+[Template SharedTinyCenteredLabelVE Template=LabelVE]
+{
+	text = ""
+	font = tiny
+	justify = center
+}
+
+[Template SharedTinyLeftLabelVE Template=LabelVE]
+{
+	text = ""
+	font = tiny
+	justify = Left
+}
+ 
+[Template SharedTinyRightLabelVE Template=LabelVE]
+{
+	text = ""
+	font = tiny
+	justify = Right
+}
+
+[Template SharedMediumCenteredLabelVE Template=LabelVE]
+{
+	text = ""
+	font = medium
+	justify = center
+}
+
+[Template SharedMediumLeftLabelVE Template=LabelVE]
+{
+	text = ""
+	font = medium
+	justify = Left
+}
+ 
+[Template SharedMediumRightLabelVE Template=LabelVE]
+{
+	text = ""
+	font = medium
+	justify = Right
+}
+
+[Template SharedLargeCenteredLabelVE Template=LabelVE]
+{
+	text = ""
+	font = large
+	justify = center
+}
+
+[Template SharedLargeLeftLabelVE Template=LabelVE]
+{
+	text = ""
+	font = large
+	justify = Left
+}
+ 
+[Template SharedLargeRightLabelVE Template=LabelVE]
+{
+	text = ""
+	font = large
+	justify = Right
+}
+
+[Template SharedPanelGroupVE Template=GroupVE]
+{
+}
+
+[Template SharedEditBoxPanelGroupVE Template=GroupVE]
+{
+	[Child Template=DecalVETiled]
+	{
+		corners_texture = /UI/%s/Default/EditBox/TileCorners.tga
+		left_border_texture = /UI/%s/Default/EditBox/TileLeft.tga
+		right_border_texture = /UI/%s/Default/EditBox/TileRight.tga
+		top_border_texture = /UI/%s/Default/EditBox/TileTop.tga
+		bottom_border_texture = /UI/%s/Default/EditBox/TileBottom.tga
+		center_texture = /UI/%s/Default/EditBox/TileCenter.tga
+	}
+}
+
+
+[Template SharedChildEditboxPanelVE Template=DecalVETiled]
+{
+
+	corners_texture = /UI/%s/Default/EditBox/TileCorners.tga
+	left_border_texture = /UI/%s/Default/EditBox/TileLeft.tga
+	right_border_texture = /UI/%s/Default/EditBox/TileRight.tga
+	top_border_texture = /UI/%s/Default/EditBox/TileTop.tga
+	bottom_border_texture = /UI/%s/Default/EditBox/TileBottom.tga
+	center_texture = /UI/%s/Default/EditBox/TileCenter.tga
+
+}
+
+[Template SharedChildLargePanelVE Template = DecalVETiled]
+{
+	alpha_blending = true
+	
+	corners_texture = /UI/%s/Default/Panel/TileCorners.tga
+	left_border_texture = /UI/%s/Default/Panel/TileLeft.tga
+	right_border_texture = /UI/%s/Default/Panel/TileRight.tga
+	top_border_texture = /UI/%s/Default/Panel/TileTop.tga
+	bottom_border_texture = /UI/%s/Default/Panel/TileBottom.tga
+	center_texture = /UI/%s/Default/Panel/TileCenter.tga
+}
+
+[Template SharedChildMediumPanelVE Template = DecalVETiled]
+{
+	alpha_blending = true
+	
+	corners_texture = /UI/%s/Default/Listbox/TileCorners.tga
+	left_border_texture = /UI/%s/Default/Listbox/TileLeft.tga
+	right_border_texture = /UI/%s/Default/Listbox/TileRight.tga
+	top_border_texture = /UI/%s/Default/Listbox/TileTop.tga
+	bottom_border_texture = /UI/%s/Default/Listbox/TileBottom.tga
+	center_texture = /UI/%s/Default/Listbox/TileCenter.tga
+}
+
+[Template SharedChildSmallPanelVE Template = DecalVETiled]
+{
+	alpha_blending = true
+	
+	corners_texture = /UI/%s/Default/Panel/SmallTileCorners.tga
+	left_border_texture = /UI/%s/Default/Panel/SmallTileLeft.tga
+	right_border_texture = /UI/%s/Default/Panel/SmallTileRight.tga
+	top_border_texture = /UI/%s/Default/Panel/SmallTileTop.tga
+	bottom_border_texture = /UI/%s/Default/Panel/SmallTileBottom.tga
+	center_texture = /UI/%s/Default/Panel/SmallTileCenter.tga
+}
+
+[Template SharedPanelVE Template = DecalVETiled]
+{
+	alpha_blending = true
+	
+	corners_texture = /UI/%s/Default/Panel/MessageBoxTileCorners.tga
+	left_border_texture = /UI/%s/Default/Panel/MessageBoxTileLeft.tga
+	right_border_texture = /UI/%s/Default/Panel/MessageBoxTileRight.tga
+	top_border_texture = /UI/%s/Default/Panel/MessageBoxTileTop.tga
+	bottom_border_texture = /UI/%s/Default/Panel/MessageBoxTileBottom.tga
+	center_texture = /UI/%s/Default/Panel/MessageBoxTileCenter.tga
+}
+
+[Template SharedMetaGameChildTabPanelVE Template = DecalVETiled]
+{
+	alpha_blending = true
+	
+	corners_texture = MetaGame/UI/%s/Tabs/TabPanelBorderCorners.png
+	left_border_texture = MetaGame/UI/%s/Tabs/TabPanelBorderLeft.png
+	right_border_texture = MetaGame/UI/%s/Tabs/TabPanelBorderRight.png
+	top_border_texture = MetaGame/UI/%s/Tabs/TabPanelBorderTop.png
+	bottom_border_texture = MetaGame/UI/%s/Tabs/TabPanelBorderBottom.png
+	center_texture = MetaGame/UI/%s/Tabs/TabPanelBorderCenter.png
+}
+
+[Template SharedTooltipChildPanelVE Template = DecalVETiled]
+{
+	alpha_blending = true
+	
+	corners_texture = /UI/%s/Default/Tooltip/TooltipCorners.png
+	left_border_texture = /UI/%s/Default/Tooltip/TooltipTileLeft.png
+	right_border_texture = /UI/%s/Default/Tooltip/TooltipTileRight.png
+	top_border_texture = /UI/%s/Default/Tooltip/TooltipTileTop.png
+	bottom_border_texture = /UI/%s/Default/Tooltip/TooltipTileBottom.png
+	center_texture = /UI/%s/Default/Tooltip/TooltipTileCenter.png
+}
+
+[Template SharedBriefingChildPanelVE Template = DecalVETiled]
+{
+	alpha_blending = true
+	
+	corners_texture = /UI/%s/Game/Briefing/BriefingPanelCorners.png
+	left_border_texture = /UI/%s/Game/Briefing/BriefingPanelLeft.png
+	right_border_texture = /UI/%s/Game/Briefing/BriefingPanelRight.png
+	top_border_texture = /UI/%s/Game/Briefing/BriefingPanelTop.png
+	bottom_border_texture = /UI/%s/Game/Briefing/BriefingPanelBottom.png
+	center_texture = /UI/%s/Game/Briefing/BriefingPanelCenter.png
+}
+
+[Template SharedEditorEditboxPanelVE Template = DecalVETiledHorizontal]
+{
+	alpha_blending = true
+	ends_texture = /UI/%s/Default/EditBox/EditBoxEnds.tga
+	center_texture = /UI/%s/Default/EditBox/EditBoxCenter.tga
+}
+
+[Template SharedScoringButtonsGroupVE Template = GroupVE]
+{
+	L = 0
+	T = 0
+	R = +124
+	B = +31	
+	
+	[Child Template=DecalVE]
+	alpha_blending = true
+	when = ENABLED + UNSELECTED
+	texture = /UI/%s/Default/Tabs/ScoringButtonUnpressed.png
+
+	[Child Template=DecalVE]
+	alpha_blending = true
+	when = ENABLED + SELECTED
+	texture = /UI/%s/Default/Tabs/ScoringButtonPressed.png
+}
+
+[Template SharedScoringTabsGroupVE Template = GroupVE]
+{
+	L = 0
+	T = 0
+	R = +128
+	B = +32	
+	
+	[Child Template=DecalVE]
+	alpha_blending = true
+	when = ENABLED + UNSELECTED
+	texture = /UI/%s/Default/Tabs/ScoringTabUnpressed.png
+
+	[Child Template=DecalVE]
+	alpha_blending = true
+	when = ENABLED + SELECTED
+	texture = /UI/%s/Default/Tabs/ScoringTabPressed.png
+}

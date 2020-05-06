@@ -1,0 +1,99 @@
+[Template GERHalftrack Inherit=AAUnitGERVehicleHalftrack]
+{
+
+	[BodyComponent]
+	{
+		health = 250
+		defense = 6
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 4.5
+		turn_radius = 1.5
+	}
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = mg		
+		
+		[Property]
+		property_IDS = combat_unit
+		
+		[Property]
+		property_IDS = halftrack_unit
+	}
+/*
+    [DenizenComponent]
+	{
+		guard_range = 15
+		guard_operational_range = 30
+
+
+		[Organization]
+		organization_ids = regiment_ger_infantry_halftrack
+			
+		behavior = MILITIA_OFFENSIVE
+		
+
+		[Inventory]
+		actor_ids = ger_infantryt
+		count = 3
+
+		[Inventory]
+		actor_ids = ger_infantry_co
+		count = 1
+
+
+
+	}
+*/
+	[PerformerComponent]
+	
+	[View]
+	{
+		resource_prefix = GERHalftrack/GERHalftrack
+	}
+}
+
+;;----------------------------- UNITS ------------------------ ;;
+
+[Thing Template=GERHalftrack]
+{
+	IDS = ger_halftrack
+	name = "#ger_halftrack_Thing_name"
+	editor_name = "#ger_halftrack_Thing_editor_name"
+
+	[PerformerComponent]
+	{
+		
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAVehicleMG]
+			{
+				name = "#ger_halftrack_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 5
+
+				recharge_time = 2
+				range = 16
+				
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 20
+			
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ger_mg_heavy
+			}
+		}
+	}
+}

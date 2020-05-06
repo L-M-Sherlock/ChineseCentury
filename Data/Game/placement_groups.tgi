@@ -1,0 +1,176 @@
+;; DESC: these are used by the editor in classifying actors for placement
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; NATIONS: this mirrors the nation list
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_nation_usa
+	name = "#placement_groups_group_nation_usa_name"
+}
+
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_nation_ger
+	name = "#placement_groups_group_nation_ger_name"
+}
+
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_nation_jpn
+	name = "#placement_groups_group_nation_jpn_name"
+}
+
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_nation_gbr
+	name = "#placement_groups_group_nation_gbr_name"
+}
+
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_nation_rus
+	name = "#placement_groups_group_nation_rus_name"
+}
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_nation_fin
+	name = "#placement_groups_group_nation_fin_name"
+}
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_nation_ned
+	name = "#placement_groups_group_nation_ned_name"
+}
+
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_nation_chn
+	name = "#placement_groups_group_nation_chn_name"
+}
+
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_nation_cpc
+	name = "#placement_groups_group_nation_cpc_name"
+}
+
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_nation_ita
+	name = "#placement_groups_group_nation_ita_name"
+}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; SPECIAL PLACEMENT GROUPS:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_native
+	name = "#placement_groups_group_native_name"
+}
+
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_ambient
+	name = "#placement_groups_group_ambient_name"
+}
+
+[PlacementGroup template=PlacementGroup]
+{
+	ids = group_special
+	name = "#placement_groups_group_special_name"
+}
+
+[PlacementGroup Template=PlacementGroup]
+{
+	IDS = group_campaign
+	name = "#placement_groups_group_campaign_name"	
+}
+
+[PlacementGroup Template=PlacementGroup]
+{
+	
+	IDS = group_cutscene
+	name = "#placement_groups_group_cutscene_name"
+}
+
+[PlacementGroup Template=PlacementGroup]
+{
+	
+	IDS = group_resource
+	name = "#placement_groups_group_resource_name"
+}
+
+[PlacementGroup Template=PlacementGroup]
+{
+	IDS = group_roads
+	name = "#placement_groups_group_roads_name"
+}
+
+[PlacementGroup Template=PlacementGroup]
+{
+	IDS = group_bridges
+	name = "#placement_groups_group_bridges_name"
+}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; CITIES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[PlacementGroup Template=PlacementGroup]
+{
+	
+	IDS = group_western_europe
+	name = "#placement_groups_group_western_europe_name"
+}
+
+[PlacementGroup Template=PlacementGroup]
+{
+	
+	IDS = group_south_pacific
+	name = "#placement_groups_group_south_pacific_name"
+}
+
+[PlacementGroup Template=PlacementGroup]
+{
+	
+	IDS = group_south_america
+	name = "#placement_groups_group_south_america_name"
+}
+
+[PlacementGroup Template=PlacementGroup]
+{
+	
+	IDS = group_far_east
+	name = "#placement_groups_group_far_east_name"
+}
+
+[PlacementGroup Template=PlacementGroup]
+{
+	
+	IDS = group_mediterranean
+	name = "#placement_groups_group_mediterranean_name"
+}
+
+[PlacementGroup Template=PlacementGroup]
+{
+	
+	IDS = group_north_africa
+	name = "#placement_groups_group_north_africa_name"
+}
+
+[PlacementGroup Template=PlacementGroup]
+{
+	
+	IDS = group_eastern_europe
+	name = "#placement_groups_group_eastern_europe_name"
+}
+
+[PlacementGroup Template=PlacementGroup]
+{
+	
+	IDS = group_north_america
+	name = "#placement_groups_group_north_america_name"
+}

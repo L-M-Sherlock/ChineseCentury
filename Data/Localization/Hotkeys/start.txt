@@ -1,0 +1,6 @@
+exechere Localization/Hotkeys/hotkeys_core.txt
+exechere Localization/Hotkeys/hotkeys_ui.txt
+exechere Localization/Hotkeys/hotkeys_groups.txt
+exechere Localization/Hotkeys/hotkeys_favorites.txt
+exechere Localization/Hotkeys/hotkeys_glyphs.txt
+exechere Localization/Hotkeys/hotkeys_custom.txt

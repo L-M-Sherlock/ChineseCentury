@@ -1,0 +1,647 @@
+	
+;; --------------------------- Restriction Group Dialog ---------------------------
+
+[RestrictionGroupDialog Inherit=SharedPanelWidget]
+{
+	[View]
+	{
+		L = 0
+		T = 110
+		R = 100%
+		B = +590
+		
+		;; cwp040804 - Children are no longer defined in templates, so must be defined here
+		[Child Template = EditorBackgroundPanelGroupVE]
+				
+		;;  "Restriction Groups"  top left
+		[Child Template=SharedSmallLeftLabelVE]
+		{
+			L = 39
+			T = 27
+			R = +228
+			B = +25
+			text = "#restriction_groups_Child_text_2"
+		}		
+	}
+	
+	;;  "New" button
+	[CreateRGPushButton Template=EditorMenuButton]
+	{
+		ToolTip = "#restriction_groups_CreateRGPushButton_ToolTip"
+
+		[Client]
+		{
+			[View]
+			text = "#restriction_groups_CreateRGPushButton_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 30
+			T = 477
+			R = +221
+			B = +35
+		}
+	}
+
+	;;  "Delete" button
+	[RemoveSelRGPushButton Template=EditorMenuButton]
+	{
+		ToolTip = "#restriction_groups_RemoveSelRGPushButton_ToolTip"
+
+		[Client]
+		{
+			[View]
+			text = "#restriction_groups_RemoveSelRGPushButton_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 30
+			T = 517
+			R = +221
+			B = +35
+		}
+	}
+
+	[RGListboxPanel Inherit=/*Shared*/PanelWidget]
+	{
+		[View Template=/*SharedPanel*/GroupVE]
+		{
+			L = 30
+			T = 53
+			R = +229
+			B = +381
+			
+			[Child Template=DecalVETiled]
+			{
+				alpha_blending = true
+				corners_texture = UI/%s/Editor/EditorListbox/EditorListboxCorners.tga
+				left_border_texture = UI/%s/Editor/EditorListbox/EditorListboxLeft.tga
+				right_border_texture = UI/%s/Editor/EditorListbox/EditorListboxRight.tga
+				top_border_texture = UI/%s/Editor/EditorListbox/EditorListboxTop.tga
+				bottom_border_texture = UI/%s/Editor/EditorListbox/EditorListboxBottom.tga
+				center_texture = UI/%s/Editor/EditorListbox/EditorListboxCenter.tga
+			}
+		}
+
+		[RestrictionGroupListbox Template=EditorScreenSharedListBoxWidgetNoDecals]
+		{
+			num_visible_items = 24
+
+			[View]
+		}
+		
+		[Scrollbar]
+		{
+			[View Template=NoVE]
+			L = 28r
+			T = 8
+			R = 8r
+			B = 8b		
+		}		
+	}
+
+	[SelRGPanel Inherit=/*Shared*/PanelWidget]
+	{
+		[View Template=/*SharedPanel*/GroupVE]
+		{
+			L = 267
+			T = 0
+			R = 100%
+			B = 100%
+		}
+
+		;;  EVERYTHING IN THE MIDDLE
+		[SelRGIntPanel1 Inherit=/*Shared*/PanelWidget]
+		{
+			[View Template=/*SharedPanel*/GroupVE]
+			{
+				L = 0
+				T = 0
+				R = 100%
+				B = 100%				
+			}	
+		
+			[RestrictionGroupNamePanel Inherit=PanelWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 0
+					T = 26
+					R = +505
+					B = +80
+
+					/*
+					;; srp091304 - This label was not in the mockup
+					;;  "Restrictions Group Name" label
+					[Child Template=SharedSmallLeftLabelVE]
+					{
+						L = 7
+						T = 0
+						R = +505
+						B = +22
+						text = "#restriction_groups_Child_text_3"
+					}
+					*/
+				}
+
+				[RestrictionGroupNameEditBox Template = EditorSharedEditBoxWidget]
+				{
+					[View]
+					{
+						L = 0
+						T = 27
+						R = +469
+						B = +30
+					}
+				}
+			}
+
+			[AddRemoveRestrictionPanel Inherit=PanelWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 0
+					T = 88
+					R = +505
+					B = +444
+							
+					;;  "Available Restrictions:"
+					[Child Template=SharedSmallLeftLabelVE]
+					{
+						L = 5
+						T = 50
+						text = "#restriction_groups_Child_text_4"
+					}
+
+					;;  "Selected Restrictions:"
+					[Child Template=SharedSmallLeftLabelVE]
+					{
+						L = 270
+						T = 50
+						text = "#restriction_groups_Child_text_5"
+					}
+				
+					[Child Template=DecalVETiledHorizontal]
+					{
+						L = 5
+						T = 9
+						R = 35r
+						B = +38
+						ends_texture = /UI/%s/Default/Tabs/BottomTabbarEnds.png
+						center_texture = /UI/%s/Default/Tabs/BottomTabbarCenter.png
+					}
+				}
+
+				[UnitsToggleButton Template=PushButtonWidget]
+				{
+					tooltip = "#restriction_groups_SelRGPanel_SelRGIntPanel1_AddRemoveRestrictionPanel_UnitsToggleButton_tooltip"
+
+					[View Template=GroupVE]
+					{
+						L = 10						
+						R = +110
+						
+						
+						;;  regular
+						[Child Template=DecalVETiledHorizontal]
+						{
+							T = 12
+							B = +33
+							when = UNSELECTED
+							ends_texture = /UI/%s/Editor/Buttons/EditorTabEnds.png
+							center_texture = /UI/%s/Editor/Buttons/EditorTabCenter.PNG
+						}
+												
+						;;  mouse over
+						[Child Template=DecalVETiledHorizontal]
+						{
+							T = 12
+							B = +33
+							when = UNSELECTED + FOCUSED
+							ends_texture = /UI/%s/Editor/Buttons/EditorTabEndsFocused.PNG
+							center_texture = /UI/%s/Editor/Buttons/EditorTabCenterFocused.PNG
+						}
+													
+						[Child Template=DecalVETiledHorizontal]
+						{
+							T = 7
+							B = +39
+							when = SELECTED
+							ends_texture = /UI/%s/Editor/Buttons/EditorTabEndsPressed.PNG
+							center_texture = /UI/%s/Editor/Buttons/EditorTabCenterPressed.PNG
+						}
+					
+						;; "Units" label
+						[Child Template=SharedSmallCenteredLabelVE]
+						{
+							L = 0
+							T = 17
+							R = +110
+							B = +25
+							
+							text = "#restriction_groups_Child_text_6"
+						}
+					}
+				}
+			
+				[BuildingsToggleButton Template=PushButtonWidget]
+				{
+					tooltip = "#restriction_groups_SelRGPanel_SelRGIntPanel1_AddRemoveRestrictionPanel_BuildingsToggleButton_tooltip"
+
+					[View Template=GroupVE]
+					{
+						L = 186						
+						R = +110
+														
+						;;  regular
+						[Child Template=DecalVETiledHorizontal]
+						{
+							T = 12
+							B = +33
+							when = UNSELECTED
+							ends_texture = /UI/%s/Editor/Buttons/EditorTabEnds.png
+							center_texture = /UI/%s/Editor/Buttons/EditorTabCenter.PNG
+						}
+						
+						;;  mouse over
+						[Child Template=DecalVETiledHorizontal]
+						{
+							T = 12
+							B = +33
+							when = FOCUSED
+							ends_texture = /UI/%s/Editor/Buttons/EditorTabEndsFocused.PNG
+							center_texture = /UI/%s/Editor/Buttons/EditorTabCenterFocused.PNG
+						}
+							
+						[Child Template=DecalVETiledHorizontal]
+						{
+							T = 7
+							B = +39
+							when = SELECTED
+							ends_texture = /UI/%s/Editor/Buttons/EditorTabEndsPressed.PNG
+							center_texture = /UI/%s/Editor/Buttons/EditorTabCenterPressed.PNG
+						}
+						
+						[Child Template = SharedSmallCenteredLabelVE]
+						{
+							L = 0
+							T = 17
+							R = +110
+							B = +25
+							
+							;;  "Buildings" label
+							text = "#restriction_groups_Child_text_7"
+						}						
+					}
+				}
+
+				[TechsToggleButton Template=ToggleButtonWidget]
+				{
+					tooltip = "#restriction_groups_SelRGPanel_SelRGIntPanel1_AddRemoveRestrictionPanel_TechsToggleButton_tooltip"
+
+					[View Template=GroupVE]
+					{
+						L = 354						
+						R = +110
+																			
+						;;  regular
+						[Child Template=DecalVETiledHorizontal]
+						{
+							T = 12
+							B = +33
+							when = UNSELECTED
+							ends_texture = /UI/%s/Editor/Buttons/EditorTabEnds.png
+							center_texture = /UI/%s/Editor/Buttons/EditorTabCenter.PNG
+						}
+												
+						;;  mouse over
+						[Child Template=DecalVETiledHorizontal]
+						{
+							T = 12
+							B = +33
+							when = FOCUSED
+							ends_texture = /UI/%s/Editor/Buttons/EditorTabEndsFocused.PNG
+							center_texture = /UI/%s/Editor/Buttons/EditorTabCenterFocused.PNG
+						}
+													
+						[Child Template=DecalVETiledHorizontal]
+						{
+							T = 7
+							B = +39
+							when = SELECTED
+							ends_texture = /UI/%s/Editor/Buttons/EditorTabEndsPressed.PNG
+							center_texture = /UI/%s/Editor/Buttons/EditorTabCenterPressed.PNG
+						}
+
+						[Child Template = SharedSmallCenteredLabelVE]
+						{
+							L = 0
+							T = 17
+							R = +110
+							B = +25
+						
+							;;  Techs label	
+							text = "#restriction_groups_Child_text_8"
+						}						
+					}
+				}
+	
+				[AvailableRestrictionsPanel Inherit = SharedPanelWidget]
+   				{
+   					[View]
+   					{
+						L = 5
+						T = 70
+						R = +200
+						B = +570						
+ 					}
+ 					
+					[AvailableRestrictionsListbox Template=EditorScreenSharedListBoxWidget]
+					{
+						num_visible_items = 32
+
+						[View]
+						
+						[Scrollbar]
+						{
+							[View Template=NoVE]
+							L = 28r
+							T = 8
+							R = 8r
+							B = 8b		
+						}						
+					}
+				}	
+
+				[SelectedRestrictionsPanel Inherit = SharedPanelWidget]
+				{
+					[View]
+					{
+						L = 270
+						T = 70
+						R = +200
+						B = +570						
+					}
+					
+					[SelectedRestrictionsListbox Template=EditorScreenSharedListBoxWidget]
+					{
+						num_visible_items = 32
+						
+						[Scrollbar]
+						{
+							[View Template=NoVE]
+							L = 28r
+							T = 8
+							R = 8r
+							B = 8b		
+						}						
+					}
+				}	
+	
+				[AddRestrictionPB Template=SharedPushButtonWidgetNoArt]
+				{
+					tooltip = "#restriction_groups_SelRGPanel_SelRGIntPanel1_AddRemoveRestrictionPanel_AddRestrictionPB_tooltip"
+
+					[Client Inherit=StaticLabelWidget]
+					{
+						[View Template=SharedMediumCenteredLabelVE]
+						text = ""
+					}
+
+					[View]
+					{
+						L = 210
+						T = 100
+						R = 265
+						
+						
+						[Child Template=DecalVE]
+						when = ENABLED + UNFOCUSED + UNSELECTED
+						alpha_blending = true
+						texture = /UI/%s/Editor/Buttons/EditorArrowButtonRight.PNG
+
+						[Child Template=DecalVE]
+						when = ENABLED + PRESSED
+						alpha_blending = true
+						texture = /UI/%s/Editor/Buttons/EditorArrowButtonRightPressed.PNG
+
+						[Child Template=DecalVE]
+						when = ENABLED + FOCUSED + UNPRESSED
+						alpha_blending = true
+						texture = /UI/%s/Editor/Buttons/EditorArrowButtonRightFocused.PNG
+						
+						[Child Template=DecalVE]
+						when = DISABLED
+						alpha_blending = true
+						texture = /UI/%s/Editor/Buttons/EditorArrowButtonRightDisabled.PNG
+					}
+				}
+	
+				[RemoveRestrictionPB Template=SharedPushButtonWidgetNoArt]
+				{
+					tooltip = "#restriction_groups_SelRGPanel_SelRGIntPanel1_AddRemoveRestrictionPanel_RemoveRestrictionPB_tooltip"
+
+					[Client Inherit=StaticLabelWidget]
+					{
+						[View Template=SharedMediumCenteredLabelVE]
+						text = ""
+					}
+
+					[View]
+					{
+						L = 210
+						T = 141
+						R = 265
+						
+						
+						[Child Template=DecalVE]
+						when = ENABLED + UNFOCUSED + UNSELECTED
+						alpha_blending = true
+						texture = /UI/%s/Editor/Buttons/EditorArrowButtonLeft.PNG
+
+						[Child Template=DecalVE]
+						when = ENABLED + PRESSED
+						alpha_blending = true
+						texture = /UI/%s/Editor/Buttons/EditorArrowButtonLeftPressed.PNG
+
+						[Child Template=DecalVE]
+						when = ENABLED + FOCUSED + UNPRESSED
+						alpha_blending = true
+						texture = /UI/%s/Editor/Buttons/EditorArrowButtonLeftFocused.PNG
+						
+						[Child Template=DecalVE]
+						when = DISABLED
+						alpha_blending = true
+						texture = /UI/%s/Editor/Buttons/EditorArrowButtonLeftDisabled.PNG					
+					}
+				}
+			}
+		}
+
+
+		[SelRGIntPanel2 Inherit=/*Shared*/PanelWidget]
+		{
+			[View Template=/*SharedPanel*/GroupVE]
+			{
+				L = 485
+				T = 0
+				R = +240
+				B = 100%
+
+				;;  "Apply restriction to"
+				[Child Template=SharedSmallLeftLabelVE]
+				{
+					L = 5
+					T = 27
+					R = 100%
+					B = +25
+					text = "#restriction_groups_Child_text_9"
+				}				
+			}	
+
+			[RestrictionGroupAppliesToPanel Inherit = SharedPanelWidget]
+   			{
+   				[View]
+   				{
+   					L = 0
+					T = 53
+					R = +229
+					B = 100%		
+					
+					[Child Template=DecalVETiled]
+					{
+						B = +380
+						
+						alpha_blending = true
+						corners_texture = UI/%s/Editor/EditorListbox/EditorListboxCorners.tga
+						left_border_texture = UI/%s/Editor/EditorListbox/EditorListboxLeft.tga
+						right_border_texture = UI/%s/Editor/EditorListbox/EditorListboxRight.tga
+						top_border_texture = UI/%s/Editor/EditorListbox/EditorListboxTop.tga
+						bottom_border_texture = UI/%s/Editor/EditorListbox/EditorListboxBottom.tga
+						center_texture = UI/%s/Editor/EditorListbox/EditorListboxCenter.tga
+					}															
+   				}
+   				
+				[RestrictionGroupAppliesToViewport Inherit=EditorViewportScrollWidget]
+				{
+					[View]
+					{
+						L = 10
+						T = 10
+						R = 4r
+						B = +360				
+					}
+					
+					[Scrollbar]
+					{
+						[View Template=NoVE]
+						L = 28r
+						T = 1
+						R = 8r
+						B = 1b	
+					}							
+				}
+				
+				[SelectAllPB Template=EditorMenuButton]
+				{
+					tooltip = "#restriction_groups_SelRGPanel_SelRGIntPanel2_RestrictionGroupAppliesToPanel_SelectAllPB_tooltip"
+
+					[Client]
+					{
+						[View]
+						text = "#restriction_groups_SelRGPanel_SelRGIntPanel2_RestrictionGroupAppliesToPanel_SelectAllPB_Client_View_text"
+					}
+
+					[View]
+					{
+						L = 3
+						T = 417
+						R = +100
+						B = +35
+					}
+				}
+
+				[DeselectAllPB Template=EditorMenuButton]
+				{
+					tooltip = "#restriction_groups_SelRGPanel_SelRGIntPanel2_RestrictionGroupAppliesToPanel_DeselectAllPB_tooltip"
+
+					[Client]
+					{
+						[View]
+						text = "#restriction_groups_SelRGPanel_SelRGIntPanel2_RestrictionGroupAppliesToPanel_DeselectAllPB_Client_View_text_2"
+					}
+
+					[View]
+					{
+						L = 124
+						T = 417
+						R = +100
+						B = +35
+					}
+				}
+			}	
+		}
+	}
+	
+	;;  "OK" button
+	[RestrictionGroupsClosePushButton Template=EditorMenuButton]
+	{
+		ToolTip = "#restriction_groups_RestrictionGroupsClosePushButton_ToolTip"
+		
+		[Client]
+		{
+			[View]
+			text = "#restriction_groups_RestrictionGroupsClosePushButton_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 875
+			T = 519
+			R = +100
+			B = +35
+		}
+	}	
+
+	[TeamOrKingdomPanel Inherit=/*Shared*/PanelWidget]
+	{
+		[View Template = NoVE]
+		{
+			L = 2
+			T = 0
+			R = 2r
+			B = +20
+		}
+		
+		[TeamOrKingdomName Template=LabelWidget]
+		{
+			[View Template=NoVE]
+
+			[Label]
+			{
+				L = 0
+				T = 0
+				R = 89%
+
+				text = ""
+				font = small
+				justify = LEFT
+			}
+		}
+
+		[SelectedToggleButton Template=ToggleButtonWidget]
+		{
+			[View Template=GroupVE]
+			{
+				L = 90%
+				T = 0
+				R = 99%
+				B = +25
+					
+				[Child Template=SharedToggleButtonGroupVE]
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = chuikov_portrait
+	name = "#chuikov_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Chuikov/ChuikovPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = rus_chuikov_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = chuikov
+	name = "#chuikov_name"
+	description = "#chuikov_description"
+	staging_name = "#chuikov_staging_name"
+	icon_texture_ids = Chuikov/ChuikovPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/RUS/Chuikov.bik
+	portrait_ids = chuikov_portrait
+	
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpCarpetBombRUS]
+		
+	[Ability Template=AASpecialOpMaskirovka]
+	
+	[Ability Template=AASpecialOpAssemblyLine]
+
+	[Ability Template=AASpecialOpCorpsRUS]
+}

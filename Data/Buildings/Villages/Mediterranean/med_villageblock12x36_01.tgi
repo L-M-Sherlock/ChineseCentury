@@ -1,0 +1,106 @@
+[Thing Template=AACityMediterranean]
+{
+	IDS = med_villageblock12x36_01
+	name = "#mediterranean_village09_name"
+	editor_name = "#mediterranean_village09_editor_name"
+				
+	[Size]
+	blocking_shape = RECT
+	rect_height = 36
+	rect_width = 12
+
+	[View]
+	{
+		resource_prefix = MediterraneanVillage09/MediterraneanVillage09
+		
+		[AspectNormal]
+    ground_size = 6,26
+    visual_radius_estimate = 20
+   
+		[TextureSearchPath]
+		path = /Shared/SharedTextures/Buildings/Mediterranean
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_03
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_04
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_05
+		attached = true
+	
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_06
+		attached = true
+
+
+	}
+
+	[CityComponent]
+	{
+		zone_radius = 0
+				
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = -5.91, -17.85
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = -5.91, -6.67
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = -5.91, 6.67
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = -5.91, 17.85
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 5.91, -17.85
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 5.91, -6.67
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 5.91, 6.67
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 5.91, 17.85
+			orientation = 0, 1
+
+			
+		}
+	}
+}

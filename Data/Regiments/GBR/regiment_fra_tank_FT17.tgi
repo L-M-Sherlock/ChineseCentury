@@ -1,0 +1,54 @@
+[Thing Template=AAGBROrganizationArmor]
+{	
+	IDS = regiment_fra_tank_FT17
+	name = "FT17"
+	editor_name = "FT17"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 95
+		
+		[Upkeep]
+		ammo = 15
+		oil = 20
+	}
+
+	[View]
+	{
+		resource_prefix = Organizations/Banners/Icons/IconArmorLight.png
+		icon = /UI/Game/RegimentButtons/RenaultFT.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_vehicle_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_halftrack_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_halftrack_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_halftrack_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = FRA_tank_FT17
+	
+		[Slot]	;; support
+		element_IDS = FRA_tank_FT17
+		
+		[Slot]	;; captain
+		element_IDS = fra_tank_FT17
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = mechanized_company
+	}
+}

@@ -1,0 +1,60 @@
+[Thing Template=AAGEROrganizationInfantry]
+{
+	IDS = regiment_ita_infantry_halftrack
+	name = "#ita_Truckborne_Infantry_Regiment_name"
+	editor_name = "#ita_Truckborne_Infantry_Regiment_name"
+		
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 50
+		
+		[Upkeep]
+		ammo = 2
+		unit_limit_consumed = 0
+	}
+
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = ita_infantryt
+		
+		[Slot]	;; rear guard 1
+		element_IDS = null
+
+		[Slot]	;; rear guard 2
+		element_IDS = null
+		
+		[Slot]	;; rear guard 3
+		element_IDS = null
+	
+		[Slot]	;; flank
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = ita_infantry_co
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/ita/itaInfantry/itaInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantry.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ita_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ita_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ita_infantry_attack
+	}		
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = infantry_company
+	}
+}

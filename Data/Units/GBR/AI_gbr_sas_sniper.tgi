@@ -1,0 +1,86 @@
+[Thing Template=AAUnitGBRProne]
+{
+	IDS = AI_sas_sniper
+	name = "#gbr_sas_sniper_name"
+	editor_name = "#gbr_sas_sniper_editor_name"
+	
+	[Stance template = StanceFalling]
+	
+	[View]
+	{
+		resource_prefix = GBRSASSniper/GBRSASSniper
+
+		[Aspect Template=AspectFalling]
+		{
+			IDS = falling
+			model = GBRParatrooper/GBRParatrooperFalling.nif
+			disable_animations = true
+		}
+
+		[TextureSearchPath]
+		{
+			path = /effects/parachute/GBR
+		}
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+	
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		vfx_ids = parachute_close_gbr
+		actor_state = falling
+		location = neck
+	}
+
+	[BodyComponent]
+	health = 200
+	defense = 2
+
+	[CharacterComponent Template=AAInfantryCharacterComponent]
+	
+	[EconomyComponent]
+	
+	[ElementComponent]
+	required_properties = property_handicap_hard
+
+	[MoverComponent]
+	speed_max = 3
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			idle_animation = idleattack
+									
+			[AbilityDefinition Template=AAInfantrySMG]
+			{
+				name = "#gbr_sas_sniper_AbilityDefinition_name"
+				recharge_time = 10
+				range = 18
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = infantry
+				amount = 250
+			}
+		}
+	}
+}

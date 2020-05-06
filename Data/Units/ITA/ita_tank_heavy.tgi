@@ -1,0 +1,106 @@
+[Thing Template=AAUnititaVehicleHeavyTank]
+{
+	IDS = ita_tank_heavy
+	name = "#ita_tank_heavy_name"
+	editor_name = "#ita_tank_heavy_editor_name"
+
+	hide_if_missing_properties = false
+
+	[BodyComponent]
+	{
+		health = 660
+		defense = 15
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 3
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_01
+			location = exhaust_point_01	
+	  	}
+	  	
+	  	[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_01
+			location = exhaust_point_02	
+	  	}
+	}
+
+	[ElementComponent]
+	{
+		required_structures = ita_motor_pool
+		required_properties = tech_heavy_tank
+	}
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		check_damage_resistance = true
+
+		[Ability template=AATurretAttackLocal]
+		{
+			
+			[AbilityDefinition Template=AAMediumTankGun]
+			{				
+				name = "#ita_tank_heavy_AbilityDefinition_name"
+				recharge_time = 6
+				range = 20
+				area = 1
+
+				[Effect Template=APDamageEffect]
+				amount = 70
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ita_cannon_heavy
+			
+			}
+		}
+		[Ability Template=AATurretAttackLocal]
+		{	
+			[AbilityDefinition Template=AAVehicleMG]
+			{
+				name = "#ita_halftrack_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 2
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 25
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ita_mg_heavy
+			}
+		}
+	}
+
+	[View]
+	{
+		resource_prefix = itaTankHeavy/itaTankHeavy
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = itaTankHeavy/itaTankHeavyRecoil1.kf
+		}
+	}
+}

@@ -1,0 +1,159 @@
+[Thing Template=AAGERBuildingConstructed]
+{
+	IDS = ger_bunker_artillery
+	name = "#ger_bunker_artillery_Thing_name"
+	editor_name = "#ger_bunker_artillery_Thing_editor_name"
+	
+	[Flags]
+	{
+		axis_locked = false
+	}
+
+	[BodyComponent]
+	{
+		health = 1500
+		defense = 20
+	}
+
+	[DefenderComponent]
+	{
+		control_range = 30
+
+		[Ability Template=AAAttackLocal]
+		{
+			turret_ids = Turret 
+			
+			[AbilityDefinition Template=AABunkerAttackArtilleryDefender]
+			{
+				name = "#ger_bunker_artillery_DefenderComponent_AbilityDefinition_name"
+				recharge_time = 9
+				range = 30
+				area = 4
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 55
+
+				[Effect Template=MoraleLossEffect]
+				amount = 1.25
+
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ger_artillery_heavy
+			}
+		}
+	}
+	
+	[DetectionComponent]
+	{
+		detection_range = 30
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 40
+		
+		[Production]
+		
+		[Upkeep]
+		ammo = 7
+	}
+
+	[ElementComponent]
+	{
+		morale_value = 10
+		required_structures = ger_brigade_artillery
+	}
+
+	[PerformerComponent]
+	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 30
+			yaw_rotation_range_degrees = 360
+			yaw_start_degrees = 0
+			offset = 0.016,0.446
+		}
+	}
+
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = artillery		
+
+		[Property]
+		property_IDS = property_bunker_artillery
+
+		[Property]
+		property_IDS = military_building
+	}
+	
+	[Size]
+	{
+		blocking_shape = CIRCLE
+		blocking_radius = 2
+		
+		soft_shape = CIRCLE
+		soft_radius = 2.1
+	}
+
+	[Stance Template=StanceDisabled]
+	
+	[Stance Template=StanceDeath]
+	
+	[View]
+	{
+		resource_prefix = GERBunkerArtillery/GERBunkerArtillery
+		icon = /UI/Game/BuildingButtons/IconBunkerArtillery.png
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_bunker_dirt
+			terrain_group_filter = dirt
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_bunker_desert
+			terrain_group_filter = desert
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_bunker_snow
+			terrain_group_filter = snow
+		}
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = GERBunkerArtillery/GERBunkerArtilleryRecoil1.kf
+		}
+		
+		[Aspect Template=AAAspectDisabled]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = GERBunkerArtillery/GERBunkerArtilleryDisabledRecoil1.kf
+		}
+		
+		[Aspect Template=AAAspectDeath]
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		{
+			audio_ids = bunker_artillery_select
+		}
+	}
+
+	[WhenLeave Template=FXC_PlaySFX]
+	{
+		audio_ids = bunker_artillery_construction_complete
+		actor_state = construction
+	}
+}

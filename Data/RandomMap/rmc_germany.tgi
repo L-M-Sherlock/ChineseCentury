@@ -1,0 +1,91 @@
+
+[RMC template=AAAllRMC]
+{
+	IDS = rmc_germany
+	name = "#rmc_germany_name"
+	description = "#rmc_germany_description"
+	biome = temperate_forest
+
+/********************    TERRAIN    ********************/
+
+	[TerrainBlob Template=TempGrassTerrainBlob]
+	
+	[TerrainStreak Template=TempGrassDryTerrainStreak]
+
+	[TerrainBlob Template=TempDirtDarkTerrainBlob]
+	
+	[TerrainBlob Template=TempGrassDryTerrainBlob]
+	
+	[TerrainBlob Template=TempDirtDarkTerrainBlob02]
+	
+	[TerrainBlob Template=TempGrassDryTerrainBlob02]
+	
+	[TerrainStreak Template=TempForestConiferousTerrainStreak]
+
+	[TerrainBlob Template=TempForestConiferousTerrainBlob]
+	
+	[TerrainBlob Template=TempGrassTerrainBlob02]
+
+/********************    BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=TempMountainTerrainBlob]
+
+	[TerrainBlob Template=TempMountainTerrainBlob02]
+	
+	[TerrainBlob Template=TempMountainTerrainBlob03]
+	
+	[TerrainBlob Template=TempMountainTerrainBlob04]
+	
+	[TerrainBlob Template=TempMountainTerrainBlob05]
+	
+	[TerrainBlob Template=TempOceanTerrainBlob]
+
+/********************    TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=TempNoisePhase01]
+	
+	[TerrainNoise Template=TempNoisePhase02]
+	
+	[TerrainNoise Template=TempNoisePhase03]
+	
+	[TerrainNoise Template=TempNoisePhase04]
+
+	[TerrainNoise Template=TempNoisePhase05]
+
+	[TerrainNoise Template=TempNoisePhase06]
+
+/********************    VILLAGES    ********************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_germany
+		name = "#rmc_germany_village_germany_name"
+
+		[Object]
+		object_ids = random_village_germany
+		weight = 1
+	}
+
+/********************    KINGDOM ACTOR GROUPS    ********************/
+
+	[ActorGroup Template=StartCorps]
+	{
+		apply_to_all_major_kingdoms = true
+	
+		[GroupRestriction]
+		group_ids = village_germany
+		proximity_min = 96
+		proximity_desired = 0
+	}
+
+	[ActorGroup Template=MachineGunBunkers]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=AntiAirBatteries]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=ArtilleryBatteries]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=HRTankFactory]
+}

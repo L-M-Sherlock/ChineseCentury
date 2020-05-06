@@ -1,0 +1,66 @@
+[Template AAITARegimentInfantry Template=AAITAOrganizationInfantry]
+{
+	name = "#regiment_ita_infantry_bersaglieri_name"
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 65
+		
+		[Upkeep]
+		ammo = 9
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/ITA/ITAInfantryBersaglieri/ITAInfantryBersaglieri
+		icon = /UI/Game/RegimentButtons/Iconbersaglieri.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ita_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ita_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ita_infantry_attack
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = infantry_company
+        
+		[Property]
+		property_ids = special_company
+	}
+}
+
+[Thing Template=AAITARegimentInfantry]
+{
+	IDS = regiment_ita_infantry_bersaglieri
+	editor_name = "#regiment_ita_infantry_bersaglieri_Thing_editor_name"
+
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = ita_infantry_bersaglieri
+		
+		[Slot]	;; rear guard 1
+		element_IDS = ita_infantry_bersaglieri
+
+		[Slot]	;; rear guard 2
+		element_IDS = ita_infantry_bersaglieri
+		
+		[Slot]	;; rear guard 3
+		element_IDS = ita_infantry_bersaglieri
+	
+		[Slot]	;; flank
+		element_IDS = ita_infantry_bersaglieri_sniper
+		
+		[Slot]	;; captain
+		element_IDS = ita_infantry_co
+	}
+}

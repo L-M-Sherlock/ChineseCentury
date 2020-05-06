@@ -1,0 +1,132 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_westerncanada
+	name = "#mg_rmc_westerncanada_name"
+	description = "#mg_rmc_westerncanada_description"
+	biome = boreal_forest
+
+	sun = SUN_DEFAULT,SUN_DUSK,SUN_MORNING,SUN_NIGHT
+	weather = NONE,NONE,NONE,NONE,SNOW_LIGHT,SNOW_HEAVY,RAIN_LIGHT,RAIN_HEAVY
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 640
+	height = 640
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	Alaska
+	starting_pos = 20,20
+	
+	[Kingdom Template = KingdomDefender]
+	;;	Western Canada
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	Hawaii
+	starting_pos = 160,20
+	type = water
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	Western United States
+	starting_pos = 300,20
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	Eastern Canada
+	starting_pos = 300,300
+	
+/********************    TERRAIN    ********************/
+
+	[TerrainBlob Template=BorGrassDryTerrainBlob]
+
+	[TerrainBlob Template=BorTundraTerrainBlob]
+
+	[TerrainBlob Template=BorDirtTerrainBlob]
+
+	[TerrainBlob Template=BorTundraTerrainBlob02]
+
+	[TerrainBlob Template=BorDirtTerrainBlob02]
+
+	[TerrainStreak Template=BorForestTerrainStreak]
+
+	[TerrainBlob Template=BorForestTerrainBlob]
+
+	[TerrainBlob Template=BorGrassDryTerrainBlob02]
+
+/********************    BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=BorMountainTerrainBlob]
+
+	[TerrainBlob Template=BorMountainTerrainBlob02]
+	
+	[TerrainBlob Template=BorMountainTerrainBlob03]
+	
+	[TerrainBlob Template=BorMountainTerrainBlob04]
+	
+	[TerrainBlob Template=BorMountainTerrainBlob05]
+	
+/********************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = boreal_ocean
+		
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = boreal_ocean
+		
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = boreal_ocean
+		
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = boreal_ocean
+		
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = boreal_ocean
+		
+/********************    TERRAIN NOISE   ********************/
+
+	[TerrainNoise Template=BorNoisePhase01]
+	
+	[TerrainNoise Template=BorNoisePhase02]
+	
+	[TerrainNoise Template=BorNoisePhase03]
+	
+	[TerrainNoise Template=BorNoisePhase04]
+	
+	[TerrainNoise Template=BorNoisePhase05]
+
+/*************************    ACTOR GROUPS    **************************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_westerncanada
+		name = "Villages"
+
+		[Object]
+		object_ids = random_village_westerncanada
+		weight = 1
+	}
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_2
+		name = "#mg_rmc_westerncanada_bunkers_coastline_2_name"
+		search_relative_kingdom_ids = kingdom_attacker_2
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 192		
+		proximity_desired = 512
+	}
+}

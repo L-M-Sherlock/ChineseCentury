@@ -1,0 +1,94 @@
+;; Scoring template
+;; KAD090503 - created
+
+;; There are five kinds of statistics:
+;;	- variables: one of the simple variables the game keeps track of, such as the number of 
+;;		settlements built or the number of enemies defeated)
+;;	- favorites: currently the engine supports favorite unit, hero, building, or enemy.  These can
+;;		*not* be used in a score (obviously), and display as a string.
+;;	- resource production: the total amount of resource production of a specific resource
+;;	- resource rate: the current rate of production (production - expenses) of a specific resource
+;;	- score: a composite score formed of a number of other statistics (of any type), each of which
+;;		is multiplied by a weight and then added together.
+;;
+;; It is important to pay attention to the order in which these are defined.  It is mandatory to
+;;	define a production and a rate for each resource.  These must be defined in the same order as
+;;	the resources themselves, and the production stats must be defined before the rates.  All scores
+;;	must be defined after the resources.  Also, if score A is used in score B then A must be 
+;;	defined before B.  So if Overall Score = Military Score + Economic Score, then the military and
+;;	economic scores must be defined before the overall score.  Variables can be defined at any time,
+;;	and don't need to be defined at all unless they are going to be used in a score.
+;;
+;; Note that the game has a hard limit on the number of scores that can be used, which is defined in
+;;	the code.  It is currently set to 10.
+
+[template Statistic]
+{
+	string ids
+	localized name
+	
+	string display_type		= INT				;; INT, FIXED, or STRING.  STRING is for favorites
+	
+	string stat_type		= VARIABLE			;; defined by the template you choose
+} ;; Statistic
+
+[template FavoriteStatistic inherit = Statistic]
+{
+	display_type			= STRING
+	stat_type				= FAVORITE
+}
+
+[template ResourceProductionStatistic inherit = Statistic]
+{
+	stat_type				= PRODUCTION
+	
+	string resource_ids
+} ;; ResourceProductionStatistic
+
+[template ResourceRateStatistic inherit = Statistic]
+{
+	stat_type				= RATE
+	
+	string resource_ids
+} ;; ResourceRateStatistic
+
+[template ScoreStatistic inherit = Statistic]
+{
+	stat_type = SCORE
+
+	[list Statistic]
+	string stat_ids
+	fixed factor			= 1
+} ;; ScoreStatistic
+
+;; A scoring tab can contain one or more statistics.  It must contain at least one, which is the
+;;	default one to display in the graph.  Any additional ones will be displayed to the right of the
+;;	default graphed statistic.
+;; All scoring tabs must be defined before the scoring panel.
+
+[template ScoringTab]
+{
+	string ids
+	localized name
+
+	string default_graphed_stat
+
+	[list Statistic]
+	string stat_ids
+} ;; ScoringTab
+
+;; The scoring panel tells us which scoring tabs to display.  The default tab is the one that will
+;;	be displayed when the panel is first opened, and is required.  Additional panels will be
+;;	displayed to its right.
+;; There should only ever be one of these.
+
+[template ScoringPanel]
+{
+	string ids
+	localized name
+	
+	string default_tab
+	
+	[list Tab]
+	string tab_ids
+} ;; ScoringPanel

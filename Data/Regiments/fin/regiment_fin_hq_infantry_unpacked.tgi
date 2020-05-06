@@ -1,0 +1,55 @@
+[Thing Template=AAFINOrganizationHQ]
+{
+	IDS = regiment_fin_hq_infantry_unpacked
+	name = "#regiment_fin_hq_infantry_unpacked_name"
+	editor_name = "#regiment_fin_hq_infantry_unpacked_editor_name"
+
+	[EconomyComponent]
+
+	[HQComponent]
+	max_attachments = 6
+
+	[Placement]
+	placement_category = BUILDING
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = conscription
+
+		[Property]
+		property_ids = money
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/FIN/FINHQTruck/FINHQTruck
+		icon = /UI/Game/BuildingButtons/IconHQInfantry.png
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		{
+			audio_ids = hq_infantry_select
+		}
+	}
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{
+		layout_ids = regiment_hq
+		supply_used = false
+		
+		[Slot]	;; front
+		element_IDS = null
+
+		[Slot]	;; front
+		element_IDS = null
+
+		[Slot]	;; front
+		element_IDS = null
+
+		[Slot]	;; front
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = fin_hq_infantry
+	}	
+}

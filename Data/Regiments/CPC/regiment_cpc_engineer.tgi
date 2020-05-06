@@ -1,0 +1,80 @@
+[Template AACPCRegimentEngineer Template=AACPCOrganizationEngineer]
+{
+	name = "#regiment_cpc_engineer_AACPCRegimentEngineer_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 75
+		
+		[Upkeep]
+		ammo = 5
+		oil = 5
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CPC/CPCEngineer/CPCEngineer
+		icon = /UI/Game/RegimentButtons/IconEngineer.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_engineer_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		recruit_full = true
+		
+		[Slot]	;; front
+		element_IDS = cpc_engineer
+		
+		[Slot]	;; rear guard 1
+		element_IDS = cpc_engineer
+
+		[Slot]	;; rear guard 2
+		element_IDS = cpc_engineer
+		
+		[Slot]	;; rear guard 3
+		element_IDS = cpc_engineer
+	
+		[Slot]	;; flank
+		element_IDS = cpc_engineer
+		
+		[Slot]	;; captain
+		element_IDS = cpc_recon_QB
+	}
+}
+
+
+[Thing Template=AACPCRegimentEngineer]
+{
+	IDS = regiment_cpc_engineer
+	editor_name = "#regiment_cpc_engineer_editor_name"
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = engineer
+	}
+}
+
+/*
+[Thing Template=AACPCRegimentEngineer]
+{
+	IDS = regiment_cpc_engineer_amphibious
+	name = "Engineer Regiment"
+	editor_name = "CPC Engineer Regiment - Water Recruit"
+	
+	transport_actor = cpc_transport_water
+
+	[Placement]
+	placement_group_ids = null
+}
+*/

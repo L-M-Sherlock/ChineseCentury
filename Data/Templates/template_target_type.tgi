@@ -1,0 +1,29 @@
+/**************************************************************************
+
+template_target_type.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: templates for target types
+
+REVISION HISTORY:
+drp090502 - created
+
+USAGE:
+
+	[TargetType]
+	This node represents a target type that a property can assigned to an actor.
+	It can then be referred to by the targeting specification of an ability.
+	
+[TargetType Template=TargetType]
+{
+	IDS = mechanical
+	name = "Mechanical"
+}
+
+**************************************************************************/
+
+[template TargetType]
+{
+	string	IDS
+	localized	name
+}

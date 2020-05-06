@@ -1,0 +1,131 @@
+[Thing Template=AACityNorthAmerica]
+{
+	IDS = namerica_villageblock10x24_01
+	editor_name = "#north_america_city07_editor_name"
+	
+	[Size]
+	blocking_shape = RECT
+	rect_width = 24
+	rect_height = 10
+
+	
+	[CityComponent]
+	{
+		zone_radius = 0
+				
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 0.18, 4.78
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 11.61, 3.48
+			orientation = 0, 1
+			
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 11.61, -3.12
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 9.19, -4.82
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = 2.07, -4.83
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = -4.85, -4.83
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = -9.78, -4.83
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = street_lights
+			offset = -11.51, 2.26
+			orientation = 0, 1
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = NorthAmericaCity07/NorthAmericaCity07
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures/Buildings/NorthAmerica
+	
+		[AspectNormal]
+		ground_size = 16,5
+		visual_radius_estimate = 14
+			
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_03
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_04
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_05
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_06
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_07
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_08
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_09
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_10
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_11
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_12
+		attached = true
+	}
+}

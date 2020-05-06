@@ -1,0 +1,55 @@
+[Thing Template=AAchnOrganizationMobile]
+{	
+	IDS = regiment_chn_tank_mechanized
+	name = "#regiment_chn_tank_mechanized_name"
+	editor_name = "#regiment_chn_tank_mechanized_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 100
+		
+		[Upkeep]
+		ammo = 15
+		oil = 15
+	}
+	
+	[View]
+	{
+		resource_prefix = /Units/chn/chnTankat/chnTankat
+		icon = /UI/Game/RegimentButtons/IconTankMechanized.png
+		banner_icon = /Organizations/Banners/Icons/IconArmor.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = chn_tank_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = chn_tank_light_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = chn_tank_light_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = chn_tank_light_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_heavy
+		
+		[Slot]	;; front
+		element_IDS = chn_car_armored_co
+	
+		[Slot]	;; support
+		element_IDS = chn_tank_light
+		
+		[Slot]	;; captain
+		element_IDS = chn_car_armored_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = tank_company
+	}
+}

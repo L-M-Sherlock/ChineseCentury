@@ -1,0 +1,65 @@
+[Thing Template=AAUnitGERVehicleHQTruck]
+{
+	IDS = ger_truck_artillery
+	name = "#ger_truck_artillery_name"
+	editor_name = "#ger_truck_artillery_editor_name"
+	
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 150
+
+		[Production]
+		ammo = 15
+
+		[Upkeep]
+		building_limit_consumed = 0
+	}
+	
+	[ElementComponent]
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = ger_brigade_artillery
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+		trailer_actor = ger_trailer_artillery
+
+		[TrailerHitch]
+		{
+			node_ids = hitch
+			node_offset = 0, -1.8, .5
+		}
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = artillery_brigade	
+	}
+		
+	[View]
+	{
+		resource_prefix = GERTruck/GERTruck
+		icon = /UI/Game/BuildingButtons/IconBrigadeArtillery.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ger_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = brigade_artillery_select
+	}
+}

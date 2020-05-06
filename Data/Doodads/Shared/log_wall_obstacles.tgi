@@ -1,0 +1,55 @@
+[Thing Template=AATemperateDoodad]
+{
+	IDS = log_wall_temperate
+	name = "#log_wall_obstacles_log_wall_temperate_name"
+	
+	[Flags]
+	random_orientation = false
+	revealed = false
+	
+	[Size]
+	{
+		scale_min = 1
+		scale_max = 1
+			
+		blocking_shape = RECT
+		rect_width = 2.5
+		rect_height = 1.75
+	}
+	
+	[View]
+	{
+		resource_prefix = LogWallObstacle/LogWallTemperate
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		shadow_type = Stencil
+		aspects_as_variations = false
+	}
+}
+
+[Thing Template=AATropicalDoodad]
+{
+	IDS = log_wall_tropical
+	name = "#log_wall_obstacles_log_wall_tropical_name"
+	
+	[Flags]
+	random_orientation = false
+	revealed = false
+	
+	[Size]
+	{
+		scale_min = 1
+		scale_max = 1
+			
+		blocking_shape = RECT
+		rect_width = 2.5
+		rect_height = 1.75
+	}
+	
+	[View]
+	{
+		resource_prefix = LogWallObstacle/LogWallTropical
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		shadow_type = Stencil
+		aspects_as_variations = false
+	}
+}

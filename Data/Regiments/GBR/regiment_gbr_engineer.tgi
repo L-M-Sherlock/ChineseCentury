@@ -1,0 +1,78 @@
+[Template AAGBRRegimentEngineer Template=AAGBROrganizationEngineer]
+{
+	name = "#regiment_gbr_engineer_AAGBRRegimentEngineer_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 75
+		
+		[Upkeep]
+		ammo = 5
+		oil = 5
+	}
+	
+	[View]
+	{
+		resource_prefix = /Units/GBR/GBREngineer/GBREngineer
+		icon = /UI/Game/RegimentButtons/IconEngineer.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_engineer_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = gbr_engineer
+		
+		[Slot]	;; rear guard 1
+		element_IDS = gbr_engineer
+
+		[Slot]	;; rear guard 2
+		element_IDS = gbr_engineer
+		
+		[Slot]	;; rear guard 3
+		element_IDS = gbr_engineer
+	
+		[Slot]	;; flank
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = gbr_infantry_co
+	}
+}
+
+[Thing Template=AAGBRRegimentEngineer]
+{
+	IDS = regiment_gbr_engineer
+	editor_name = "#regiment_gbr_engineer_editor_name"
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = engineer
+	}
+}
+
+/*
+;; brw051904- Removing because with the current build path you can't recruit them.
+[Thing Template=AAGBRRegimentEngineer]
+{
+	IDS = regiment_gbr_engineer_amphibious
+	editor_name = "GBR Engineer Regiment - Water"
+	
+	transport_actor = gbr_transport_water
+
+	[Placement]
+	placement_group_ids = null
+}
+*/

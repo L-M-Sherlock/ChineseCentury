@@ -1,0 +1,7 @@
+[TransitionSet template=TransitionSet]
+{
+	IDS = transition_set_global_01
+	name = "#transition_sets_name"
+	path_prefix = Global01/Trans-
+}
+

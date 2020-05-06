@@ -1,0 +1,90 @@
+[Template AAGBRHalftrackArtillery Inherit=AAUnitGBRVehicleHalftrack]
+{
+	[BodyComponent]
+	{
+		health = 200
+		defense = 5
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 4.5
+		acceleration = 3.5
+	}
+	
+	[PerformerComponent]	
+
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = artillery
+		
+		[Property]
+		property_IDS = combat_unit
+		
+		[Property]
+		property_IDS = halftrack_unit
+	}
+	
+	[View]
+	{
+		resource_prefix = GBRHalftrackArtillery/GBRHalftrackArtillery
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = GBRHalftrackArtillery/GBRHalftrackArtilleryRecoil1.kf
+		}
+	}
+}
+
+;;----------------------------- UNITS ------------------------ ;;
+
+[Thing Template=AAGBRHalftrackArtillery]
+{
+	IDS = gbr_halftrack_artillery
+	name = "#gbr_halftrack_artillery_Thing_name"
+	editor_name = "#gbr_halftrack_artillery_Thing_editor_name"
+
+	[ElementComponent]
+	{
+		required_structures = gbr_brigade_artillery
+	}
+
+	[PerformerComponent]
+	{		
+		[Ability Template=AAProjectileLocal]
+		{	
+			[AbilityDefinition Template=AASPAShot]
+			{
+				name = "#gbr_halftrack_artillery_AbilityDefinition_name"
+				range = 44
+				area = 3
+				recharge_time = 9
+	
+				[Effect Template=BlastDamageEffect]
+				amount = 60
+				
+				[Effect Template=MoraleLossEffect]
+				amount = .75
+				
+				[Flags] 
+				bombard = true
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = gbr_artillery_light
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+			}
+		}
+	}
+}

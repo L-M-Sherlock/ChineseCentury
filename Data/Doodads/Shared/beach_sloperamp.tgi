@@ -1,0 +1,34 @@
+[Thing Inherit=VFXProjectedTextureLit]
+{
+	IDS = beach_slope_ramp_vfx
+	name = "#beach_sloperamp_beach_slope_ramp_vfx_name"
+	texture = BeachSlopeRamp/BeachSlopeRamp01Ground.DDS	
+	attached_scale = 0
+	texture_size = 3
+}
+
+[Thing Template=AASharedDoodad]
+{
+	IDS = beach_sloperamp
+	name = "#beach_sloperamp_Thing_name"
+	
+	[Flags]
+	random_orientation = false
+	
+	[Size]
+	scale_min = 1.00
+	scale_max = 1.00
+
+	[View]
+	{
+		resource_prefix = BeachSlopeRamp/BeachSlopeRamp
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		shadow_type = Stencil
+
+		[Aspect Template=Aspect]
+		IDS = beach_sloperamp01
+		model = %s01.nif
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = beach_slope_ramp_vfx
+	}
+}

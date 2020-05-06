@@ -1,0 +1,55 @@
+[Thing Template=AACHNOrganizationArmor]
+{	
+	IDS = regiment_chn_tank_light
+	name = "#regiment_chn_tank_light_name"
+	editor_name = "#regiment_chn_tank_light_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 100
+		
+		[Upkeep]
+		ammo = 15
+		oil = 10
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CHN/CHNTankLight/CHNTankLight
+		icon = /UI/Game/RegimentButtons/IconTankLight.png
+		banner_icon = /Organizations/Banners/Icons/IconArmorLight.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = chn_tank_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = chn_tank_light_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = chn_tank_light_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = chn_tank_light_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = chn_tank_light
+	
+		[Slot]	;; support
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = chn_tank_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = tank_company
+	}
+}

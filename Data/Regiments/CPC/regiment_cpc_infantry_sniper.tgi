@@ -1,0 +1,65 @@
+[Thing Template=AACPCOrganizationParatrooper]
+{
+	IDS = regiment_cpc_infantry_sniper
+	editor_name = "#regiment_cpc_infantry_sniper_editor_name"
+	name = "#regiment_cpc_infantry_sniper_name"
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 60
+		
+		[Upkeep]
+		ammo = 9
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CPC/CPCInfantry/CPCInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantrySniper.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_infantry_sniper_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_infantry_sniper_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_infantry_sniper_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		recruit_full = true
+		
+		[Slot]	;; front
+		element_IDS = cpc_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = cpc_infantry
+
+		[Slot]	;; rear guard 2
+		element_IDS = cpc_infantry
+		
+		[Slot]	;; rear guard 3
+		element_IDS = cpc_infantry
+	
+		[Slot]	;; flank
+		element_IDS = cpc_infantry_sniper
+		
+		[Slot]	;; captain
+		element_IDS = cpc_paratrooper_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = infantry1_company
+
+		[Property]
+		property_IDS = trailblazing
+	}
+}
+
+

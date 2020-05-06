@@ -1,0 +1,92 @@
+[Thing Template=AAUnitcpcBiped]
+{
+	IDS = cpc_conscript
+	name = "#cpc_conscript_name"
+	editor_name = "#cpc_conscript_editor_name"
+
+	[View]
+	{	resource_prefix = cpcconscript/cpcconscript
+
+		[Aspect Template=AspectFalling]
+		
+		[TextureSearchPath]
+		{
+			path = /effects/parachute/CPC
+		}
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		vfx_ids = parachute_close_cpc
+		actor_state = falling
+		location = neck
+	}		
+	[CharacterComponent Template=AAInfantryMeleeCharacterComponent]
+
+	[BodyComponent]
+
+	health = 250
+	defense = 1
+
+	[ElementComponent]
+	{
+        required_properties = tech_conscription
+		morale_value = 15
+	}
+
+	[MoverComponent]
+		speed_max = 5
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+		
+		[Property]
+		property_IDS = captain
+
+	}
+	
+	[PerformerComponent]
+	{	
+		[Ability Template=AAMeleeLocal]
+		{
+			move_bonus = 998
+			use_bonus = 998
+			
+			[AbilityDefinition Template=AAMeleeAttack]
+			{
+				name = "#usa_infantry_marine_AbilityDefinition_name_3"
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 1
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = infantry
+
+				amount = 50
+				[Effect Template=MoraleLossEffect]
+
+				amount = 5
+
+				;[WhenDo template=FXC_PlaySFX]
+				;audio_ids = metal_swing1
+			}
+		}
+	}
+}

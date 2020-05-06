@@ -1,0 +1,483 @@
+;; --------------------------- Editor Layer - Terrain -----------------------
+
+[EditorLayerTerrain Inherit=EditorPanel]
+{
+
+	[View]
+	{
+		[Child Template=GameListboxEditorArtworkGroupVE]
+		{
+			L = 38
+			T = 44
+			R = +146
+			B = +144			
+		}
+		
+		[Child Template=DecalVETiledHorizontal]
+		{
+			L = 13
+			T = 187
+			R = +196
+			B = +36
+		
+			alpha_blending = true
+			ends_texture = /UI/%s/Editor/EditorEditBox/EditorEditBoxEnds.tga
+			center_texture = /UI/%s/Editor/EditorEditBox/EditorEditBoxCenter.tga		
+		}
+	}
+
+	[LayerCloseButton]
+	{
+		[View Template = EditorLayerCloseButtonVE]
+	}
+
+  	[PreviewWindow Template=DecalWidget]
+   	{
+  		[View template=DecalVE]
+		{
+			L = 46
+			T = 52
+			R = +128
+			B = +128
+		}
+		
+		[Decal Template = DecalVE]
+	}
+	
+	[RandomDecal Template=DecalWidget]
+	{
+		[View template=NoVE]
+		
+		[Decal template=DecalVE]
+		{
+			L = 46
+			T = 52
+			R = +128
+			B = +128
+
+			texture = /UI/%s/Editor/LayerTerrain/question.tga
+			alpha_blending = true
+		}
+	}
+
+	[AutoDoodadCheckbox Template=ToggleButtonWidget]
+	{
+		[View Template=SharedToggleButtonGroupVE]
+		L = 172
+		T = 222
+	}
+
+	[AutoDoodadLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		L = 33
+		T = 223
+		R = 70r
+		B = +20
+
+		[Label]
+		text = "#layer_terrain_AutoDoodadLabel_Label_text"
+		font = SMALL
+		justify = LEFT
+	}
+
+
+
+	[VariationLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		{
+			L = 14
+			T = 183
+			R = +196
+			B = +36
+
+		}
+
+		[Label]
+		{
+			L = 11
+			T = 9
+			R = +123
+		
+			text = ""
+			font = small
+			justify = LEFT
+		}
+	}
+
+	[PrevVariationButton Template=PushButtonWidget]
+	{
+		ToolTip = "#layer_terrain_PrevVariationButton_ToolTip"
+	
+		[View Template=GroupVE]
+		{
+			L = 160
+			T = 195
+			R = +20
+			B = +20
+		
+			[Child Template=DecalVE]
+			when = ENABLED + PRESSED
+			texture = /UI/%s/Default/Arrows/LeftPressed.png
+		
+			[Child Template=DecalVE]
+			when = ENABLED + UNPRESSED
+			texture = /UI/%s/Default/Arrows/LeftUnpressed.png
+		
+			[Child Template=DecalVE]
+			when = DISABLED
+			texture = /UI/%s/Default/Arrows/LeftDisabled.png
+		}
+	}
+
+	[NextVariationButton Template=PushButtonWidget]
+	{
+		ToolTip = "#layer_terrain_NextVariationButton_ToolTip"
+	
+		[View Template=GroupVE]
+		{
+			L = 180
+			T = 195
+			R = +20
+			B = +20
+		
+			[Child Template=DecalVE]
+			when = ENABLED + PRESSED
+			texture = /UI/%s/Default/Arrows/RightPressed.png
+		
+			[Child Template=DecalVE]
+			when = ENABLED + UNPRESSED
+			texture = /UI/%s/Default/Arrows/RightUnpressed.png
+		
+			[Child Template=DecalVE]
+			when = DISABLED
+			texture = /UI/%s/Default/Arrows/RightDisabled.png
+		}
+	}
+	
+	[TerrainListbox Template=EditorSharedListBoxWidget]
+	{	
+		num_visible_items = 25
+		resize_to_fit = false
+
+		[View Template=GameListboxEditorArtworkGroupVE]
+		{
+			L = 13
+			T = 243
+			R = +196
+			B = +284
+		}
+		
+	}
+	
+	[BrushShapeWidget Inherit=PanelWidget]
+	{
+		[View Template=GroupVE]
+		{
+			L = 8
+			T = 530
+			R = +190
+			B = +41
+
+			[Child Template=SharedSmallLeftLabelVE]
+			L = 26
+			T = 10
+			text = "#layer_terrain_Child_text"
+		}
+
+			
+		[CircleBrushButton Template=ToggleButtonWidget]
+		{
+			ToolTip = "#layer_terrain_BrushShapeWidget_CircleBrushButton_ToolTip"
+			
+			[View Template=GroupVE]
+			{
+				L = 118
+				T = 6
+				R = +32
+				B = +32
+					
+				[Child Template=DecalVE]
+				when = UNSELECTED
+				texture = /UI/%s/Editor/buttons/BrushCircleUnselected.tga
+
+				[Child Template=DecalVE]
+				when = SELECTED
+				texture = /UI/%s/Editor/Buttons/BrushCircleSelected.tga
+
+			}
+		}
+
+		[SquareBrushButton Template=ToggleButtonWidget]
+		{
+			ToolTip = "#layer_terrain_BrushShapeWidget_SquareBrushButton_ToolTip"
+			
+			[View Template=GroupVE]
+			{
+				L = 157
+				T = 6
+				R = +32
+				B = +32
+					
+				[Child Template=DecalVE]
+				when = UNSELECTED
+				texture = /UI/%s/Editor/Buttons/BrushSquareUnselected.tga
+
+				[Child Template=DecalVE]
+				when = SELECTED
+				texture = /UI/%s/Editor/Buttons/BrushSquareSelected.tga
+
+			}
+		}
+	}
+
+	[PaintModeWidget Inherit=PanelWidget]
+	{
+		[View Template=GroupVE]
+		{
+			L = 9
+			T = 572
+			R = +189
+			B = +36
+		}
+
+		[PaintTerrainButton Template=ToggleButtonWidget]
+		{
+			ToolTip = "#layer_terrain_PaintModeWidget_PaintTerrainButton_ToolTip"
+		
+			[View Template=GroupVE]
+			{
+				L = 16
+				T = 0
+				R = +32
+				B = +32
+					
+				[Child Template=DecalVE]
+				when = UNSELECTED
+				texture = /UI/%s/Editor/Buttons/BrushPaintUnselected.tga
+
+				[Child Template=DecalVE]
+				when = SELECTED
+				texture = /UI/%s/Editor/Buttons/BrushPaintSelected.tga
+
+			}
+		}
+
+		[RaiseHeightmapButton Template=ToggleButtonWidget]
+		{
+			ToolTip = "#layer_terrain_PaintModeWidget_RaiseHeightmapButton_ToolTip"
+		
+			[View Template=GroupVE]
+			{
+				L = 50
+				T = 0
+				R = +32
+				B = +32
+					
+				[Child Template=DecalVE]
+				when = UNSELECTED
+				texture = /UI/%s/Editor/Buttons/BrushRaiseUnselected.tga
+
+				[Child Template=DecalVE]
+				when = SELECTED
+				texture = /UI/%s/Editor/Buttons/BrushRaiseSelected.tga
+
+			}
+		}
+
+		[LowerHeightmapButton Template=ToggleButtonWidget]
+		{
+			ToolTip = "#layer_terrain_PaintModeWidget_LowerHeightmapButton_ToolTip"
+		
+			[View Template=GroupVE]
+			{
+				L = 88
+				T = 0
+				R = +32
+				B = +32
+					
+				[Child Template=DecalVE]
+				when = UNSELECTED
+				texture = /UI/%s/Editor/Buttons/BrushLowerUnselected.tga
+
+				[Child Template=DecalVE]
+				when = SELECTED
+				texture = /UI/%s/Editor/Buttons/BrushLowerSelected.tga
+
+			}
+		}
+
+		[PlateauHeightmapButton Template=ToggleButtonWidget]
+		{
+			ToolTip = "#layer_terrain_PaintModeWidget_PlateauHeightmapButton_ToolTip"
+			
+			[View Template=GroupVE]
+			{
+				L = 121
+				T = 0
+				R = +32
+				B = +32
+					
+				[Child Template=DecalVE]
+				when = UNSELECTED
+				texture = /UI/%s/Editor/Buttons/BrushPlateauUnselected.tga
+
+				[Child Template=DecalVE]
+				when = SELECTED
+				texture = /UI/%s/Editor/Buttons/BrushPlateauSelected.tga
+
+			}
+		}
+
+		[SmoothHeightmapButton Template=ToggleButtonWidget]
+		{
+			ToolTip = "#layer_terrain_PaintModeWidget_SmoothHeightmapButton_ToolTip"
+		
+			[View Template=GroupVE]
+			{
+				L = 156
+				T = 0
+				R = +32
+				B = +32
+					
+				[Child Template=DecalVE]
+				when = UNSELECTED
+				texture = /UI/%s/Editor/Buttons/BrushSmoothUnselected.tga
+
+				[Child Template=DecalVE]
+				when = SELECTED
+				texture = /UI/%s/Editor/Buttons/BrushSmoothSelected.tga
+			}
+		}
+	}
+
+	[BrushSizeLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label]
+		{
+			L = 34
+			T = 622
+
+			text = "#layer_terrain_BrushSizeLabel_Label_text"
+			font = small
+			justify = LEFT
+		}
+	}
+
+	[BrushSizeSlider  Template=OptionsMenuSliderAdvancedWidget]
+	{				
+		[View]
+		{
+			L = 91
+			T = 619
+			R = +104
+			B = +30
+		}
+		
+  		min_value = 0.25
+  		max_value = 8
+  		step_size = 2
+  		page_size = 4
+
+		show_minmax = false
+		show_current_val = false
+		usage_area_absolute = 0, 0
+		
+		[Background]
+		{
+			[Child template=DecalVETiledHorizontal]
+			ends_texture = /UI/%s/Default/SliderBar/TileEnds.png
+			center_texture = /UI/%s/Default/sliderBar/TileCenter.png
+		}
+	}
+
+	[BrushStrengthLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label]
+		{
+			L = 34
+			T = 654
+
+			text = "#layer_terrain_BrushStrengthLabel_Label_text"
+			font = small
+			justify = LEFT
+		}
+	}
+
+	[BrushStrengthSlider Template=OptionsMenuSliderAdvancedWidget]
+	{				
+		[View]
+		{
+			L = 91
+			T = 650
+			R = +104
+			B = +30
+		}
+		
+		min_value = 0.2
+		max_value = 1
+		step_size = 0.1
+		page_size = 10
+
+		show_minmax = false
+		show_current_val = false
+		usage_area_absolute = 0, 0
+		
+		[Background]
+		{
+			[Child template=DecalVETiledHorizontal]
+			ends_texture = /UI/%s/Default/SliderBar/TileEnds.png
+			center_texture = /UI/%s/Default/sliderBar/TileCenter.png
+		}
+	}
+
+	[SlopeFalloffLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label]
+		{
+			L = 38
+			T = 683
+
+			text = "#layer_terrain_SlopeFalloffLabel_Label_text"
+			font = small
+			justify = LEFT
+		}
+	}
+
+	
+	[SlopeFalloffSlider Template=OptionsMenuSliderAdvancedWidget]
+	{				
+		[View]
+		{
+			L = 91
+			T = 685
+			R = +104
+			B = +30
+		}
+		
+  		min_value = 4
+  		max_value = 32
+ 		step_size = 4
+  		page_size = 8
+
+		show_minmax = false
+		show_current_val = false
+		usage_area_absolute = 0, 0
+		
+		[Background]
+		{
+			[Child template=DecalVETiledHorizontal]
+			ends_texture = /UI/%s/Default/SliderBar/TileEnds.png
+			center_texture = /UI/%s/Default/sliderBar/TileCenter.png
+		}
+	}
+	
+
+}

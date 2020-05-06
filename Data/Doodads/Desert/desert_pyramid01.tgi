@@ -1,0 +1,50 @@
+[Thing Inherit=VFXProjectedTextureLit]
+{
+	name = "#desert_pyramid01_pyramid_ground_01_name"
+	texture = DesertPyramid01/DesertPyramid01GroundPlane.dds	
+	IDS = pyramid_ground_01
+	attached_scale = 0
+	texture_size = 20	
+}
+
+[Thing Template=AADesertDoodad]
+{
+	IDS = desert_pyramid01
+	name = "#desert_pyramid01_Thing_name"
+
+	[Flags]
+	{
+		random_orientation = false	
+		blocking = true
+	}
+
+	[Placement]
+	{
+		[Biome]
+		IDS = desert
+		weight = 0
+	}
+	
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 12
+
+		scale_min = 1.0
+		scale_max = 1.0
+	}
+
+	[View]
+	{
+		aspects_as_variations = false
+		resource_prefix = DesertPyramid01/DesertPyramid01
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		shadow_type = STENCIL
+
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = pyramid_ground_01
+		}
+
+	}
+}

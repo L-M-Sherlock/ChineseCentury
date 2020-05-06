@@ -1,0 +1,22 @@
+[Thing Template=AAVillageBuilding]
+{
+	IDS = building_destroyed_02
+	editor_name = "#buildings_destroyed2_editor_name"
+	
+	[Placement]
+	{
+		placement_group_IDS = group_campaign	
+	}
+
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 10
+	}
+
+	[View]
+	{
+		resource_prefix = DestroyedBuilding02/WesternEuropeRuins02
+		
+	}
+}

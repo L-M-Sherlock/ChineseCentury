@@ -1,0 +1,55 @@
+[Thing Template=AARUSOrganizationHQ]
+{
+	IDS = regiment_rus_hq_mechanized
+	name = "#regiment_rus_hq_mechanized_name"
+	editor_name = "#regiment_rus_hq_mechanized_editor_name"
+
+	[EconomyComponent]
+
+	[HQComponent]
+	max_attachments = 4
+
+	[Placement]
+	placement_category = TRUCK
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = money
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/RUS/RUSTruck/RUSTruck
+		icon = /UI/Game/BuildingButtons/IconHQMechanized.png
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		{
+			audio_ids = hq_mechanized_select
+		}
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = rus_truck_deployed
+	}
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{
+		layout_ids = regiment_hq_mobile
+		supply_used = false
+		
+		[Slot]	;; front
+		element_IDS = null
+
+		[Slot]	;; front
+		element_IDS = null
+
+		[Slot]	;; front
+		element_IDS = null
+
+		[Slot]	;; front
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = rus_truck_mechanized
+	}	
+}

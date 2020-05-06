@@ -1,0 +1,59 @@
+[Thing Template=AAGEROrganizationArmor]
+{	
+	IDS = regiment_ger_tank_hohle
+	name = "#regiment_ger_tank_medium_name"
+	editor_name = "#regiment_ger_tank_medium_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 5
+		
+		[Upkeep]
+		ammo = 5
+		oil = 0
+	}
+
+	[Placement]
+	placement_group_ids = null
+
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = tank_company
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/GER/GERTankMedium/GERTankMedium
+		icon = /UI/Game/RegimentButtons/IconTankMedium.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ger_tank_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ger_tank_medium_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ger_tank_medium_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ger_tank_medium_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = ger_tank_hohle
+	
+		[Slot]	;; support
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = ger_tank_co_hohle
+	}
+	
+
+}

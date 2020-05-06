@@ -1,0 +1,12 @@
+[Thing Template=Bridge]
+{
+	IDS = london_bridge
+	name = "#london_bridge_name"
+	
+	[View]
+	{
+		resource_prefix = LondonBridge/LondonBridge
+		shadow_type = STENCIL
+		shadow_texture = /effects/shadows/UnitShadow.dds
+	}
+}

@@ -1,0 +1,83 @@
+[Thing Template=AACPCOrganizationParatrooper]
+{
+	IDS = regiment_cpc_infantry_recon
+	name = "#regiment_cpc_infantry_recon_name"
+	editor_name = "#regiment_cpc_infantry_recon_editor_name"
+	
+	[DetectionComponent]
+	{
+		detection_range = 30
+	}
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 15
+		
+		[Upkeep]
+		ammo = 3
+	}	
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = recon	
+		
+		[Property]
+		property_IDS = trailblazing
+	}
+	
+	[View]
+	{
+		resource_prefix = /Units/CPC/CPCInfantry/CPCInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantryRecon.png
+		banner_icon = /Organizations/Banners/Icons/youji.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_recon_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_recon_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_recon_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_saodang
+        recruit_time = 5
+        recruit_full = true
+
+		[Slot]	;; front
+		element_IDS = cpc_recon_QB1
+
+		[Slot]	;; front
+		element_IDS = cpc_recon_QB1
+
+		[Slot]	;; front
+		element_IDS = cpc_recon_QB1
+
+		[Slot]	;; front
+		element_IDS = cpc_recon_QB1
+
+		[Slot]	;; front
+		element_IDS = cpc_recon_QB1
+
+		[Slot]	;; front
+		element_IDS = cpc_recon_QB1
+
+		[Slot]	;; front
+		element_IDS = cpc_recon_QB1
+
+		[Slot]	;; front
+		element_IDS = cpc_recon_QB1
+
+		[Slot]	;; front
+		element_IDS = cpc_recon_QB1
+
+		[Slot]	;; captain
+		element_IDS = cpc_recon_QB
+
+	}
+}

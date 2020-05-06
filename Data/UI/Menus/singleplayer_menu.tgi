@@ -1,0 +1,135 @@
+
+;; ---------------------------- SinglePlayer Menu ----------------------------
+
+[SinglePlayerMenu Inherit=PanelWidget]
+{
+	;; uncomment this code once main menu art gets put in
+	[View Template = GroupVE]
+	{
+		L = 783
+		T = 8
+		R = +237
+		B = +758
+		
+		validate_decal_children = false
+		
+		[Child Template = DecalVETiledHorizontal]
+		{
+			L = 22
+			T = 198
+			R = +191
+			B = +488
+			
+			alpha_blending = true
+			ends_texture = /UI/%s/Default/Menus/MainMenu/MainMenuGrayTile.tga
+			center_texture = /UI/%s/Default/Menus/MainMenu/MainMenuGrayTile.tga
+		}
+		
+		;;axis and allies logo
+		[Child Template = DecalVE]
+		{
+			L = 0
+			T = 0
+			R = 100%
+			B = +198
+			
+			alpha_blending = true
+			texture /UI/%s/Default/Menus/MainMenu/MainMenuTop.tga
+		}
+		
+		;;button seperator
+		[Child Template = DecalVE]
+		{
+			L = 0
+			T = 361
+			R = 100%
+			B = +19
+			
+			alpha_blending = true
+			texture = /UI/%s/Default/Menus/MainMenu/MainMenuButtonSeperator.tga
+		}
+		
+		[Child Template = DecalVE]
+		{
+			L = 0
+			T = 601
+			R = 100%
+			B = +19
+			
+			alpha_blending = true
+			texture = /UI/%s/Default/Menus/MainMenu/MainMenuButtonSeperator.tga
+		}
+		
+		;; timegate logo
+		[Child Template = DecalVE]
+		{
+			L = 0
+			T = 686
+			R = 100%
+			B = +72
+			
+			alpha_blending = true
+			texture = /UI/%s/Default/Menus/MainMenu/MainMenuBottom.tga
+		}
+	}
+	
+	[SinglePlayerMenuButtonCampaign Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#singleplayer_menu_SinglePlayerMenuButtonCampaign_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 26
+			T = 204
+		}
+	}
+
+	[SinglePlayerMenuButtonCustom Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#singleplayer_menu_SinglePlayerMenuButtonCustom_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 26
+			T = 252
+		}
+	}
+
+	[SinglePlayerMenuButtonMetagame Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#singleplayer_menu_SinglePlayerMenuButtonMetagame_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 26
+			T = 301
+		}
+	}
+
+	[SinglePlayerMenuButtonMain Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#singleplayer_menu_SinglePlayerMenuButtonMain_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 26
+			T = 630
+		}
+	}
+}

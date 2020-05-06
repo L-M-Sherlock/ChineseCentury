@@ -1,0 +1,76 @@
+[Thing Template=AAUnititaProne]
+{
+	IDS = ita_infantry_bersaglieri_sniper
+	name = "#ita_infantry_bersaglieri_sniper_name"
+	editor_name = "#ita_infantry_bersaglieri_sniper_editor_name"
+
+	hide_if_missing_properties = false
+		
+	[View]
+	{
+		resource_prefix = itaInfantrySniper/finInfantrySniper
+	
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+
+	[BodyComponent]
+	health = 200
+	defense = 2
+
+	[CharacterComponent Template=AAInfantryCharacterComponent]
+
+	[MoverComponent]
+	speed_max = 3
+
+	[ElementComponent]
+	{
+		required_properties = tech_bersaglieri
+	}
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				name = "#ita_infantry_bersaglieri_sniper_AbilityDefinition_name"
+				recharge_time = 10
+				range = 20
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = infantry
+				amount = 250
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_rifle
+			}
+		}
+	}
+	
+	
+	
+	
+}

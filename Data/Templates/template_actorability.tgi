@@ -1,0 +1,125 @@
+/**************************************************************************
+
+template_actor_ability.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: defines an ability that an actor may use, and how the actor uses it.
+
+REVISION HISTORY:
+drp090602 - created
+
+USAGE:
+
+	[Ability Template=Ability]
+	This node goes in an actor's [PerformerComponent] and defines an ability the actor can use.
+	Instead of using "Template=Ability" use a more specialized version.  An "AbilityShared" means
+	the actor uses an "AbilityDefinition" object declared at the root level (such as a spell).
+	An "AbilityLocal" means the actor defines the ability there (such as a melee attack) - these
+	obviously cannot be shared.
+	
+	[Ability Template=AbilityShared]
+	[Ability Template=AbilityLocal]
+
+FIELDS:	
+	
+	reload_time = game seconds after using ability before can act again (plays idle animation).
+				Note that the total ability time is "animation length + reload_time"
+	
+	animation2/3 = optional alternate animations randomly selected for the ability
+	
+EXAMPLES:
+
+[Ability template=AbilityShared]
+{
+	ability_IDS = adrenaline_shot
+	animation1 = heal
+	idle_animation = idleheal
+	reload_time = 3
+}
+
+[Ability template=AbilityLocal]
+{
+	animation1 = fire1
+	idle_animation = idlefire
+	reload_time = 0.5
+	
+	[AbilityDefinition template=GunAttack]
+	{
+		[Effect Template=MainDamageEffect]
+		damage_type_IDS = piercing
+		amount = 10
+	}
+}
+
+**************************************************************************/
+
+
+[Template Ability]
+{
+	string	animation1 = null
+	string	animation2 = null
+	string	animation3 = null
+	string	animation4 = null
+	string	animation5 = null
+	string	idle_animation = NULL
+	fixed	reload_time
+		
+	;; spawn_position = any projectiles from this ability appear here.  "Forward" is along negative y (the default orientation).
+	;; 0,0,0 defaults to "0, -soft_radius, +attack_height"
+	point3	spawn_position = 0,0,0
+	
+	;; spawn_bone_ids - the bone from which to spawn probjectiles
+	;; used instead of spawn_position
+	string	spawn_bone_ids = null
+	
+	;; ABILITY PRIORITIZATION:
+	;; when there are more than one ability that can be used at a point in time the actor decides
+	;; which ability to use based on the following three checks:
+	;; 1) chooses the highest priority ability; if tied
+	;; 2) chooses the shortest ranged ability; if tied
+	;; 3) chooses randomly between abilities (fair for 2 abilities, skewed for 3+ abilities)
+	fixed	priority = 0
+
+	;; The ability priority is multiplied by the action weight.
+	fixed	move_weight = 1
+	fixed	use_weight = 1
+	fixed	wait_weight = 1
+
+	;; The action bonus is added at the end.
+	fixed	move_bonus = 0
+	fixed	use_bonus = 0
+	fixed	wait_bonus = 0
+
+	;; Range may change by up to this amount in either direction.
+	fixed	fuzzy_range = 0
+
+	;; name of turret (bone name) to be used to perform ability
+	string	turret_ids = NULL
+
+	;; (optional) comma-delimited lists of properties the actor must have to be able to use the
+	;; ability
+	string	required_properties = NULL
+
+	;; (optional) experience level the actor must have to be able to use the ability (a value of
+	;; negative indicates filter is not used)
+	int		required_experience_min = -1
+	int		required_experience_max = -1	
+
+	;; (optional) per use ability costs (faction experience and resource)
+	int		cost_faction_experience = 0
+
+	[Cost Template=CostList]
+}
+
+[Template AbilityShared inherit=Ability]
+{
+	string	ability_IDS
+}
+
+[Template AbilityLocal inherit=Ability]
+{
+	[AbilityDefinition Template=AbilityDefinition]
+	{
+		IDS = null
+	}
+}

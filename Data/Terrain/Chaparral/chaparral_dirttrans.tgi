@@ -1,0 +1,19 @@
+[Terrain template=Terrain]
+{
+	IDS = chaparral_dirttrans
+	name = "#chaparral_dirt_transition_name"
+	
+	terrain_group = dirt
+	base_priority = 550
+	terrain_color = 0.729, 0.639, 0.482
+
+	doodad_frequency = 0.01
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = chaparral_dirtforesttrans01
+	name = "#chaparral_dirttrans_chaparral_dirtforesttrans01_name"
+	texture = ChaparralDirtTrans/ChaparralDirtForestTrans01.tga
+	texture_width = 8
+	texture_height = 8
+}

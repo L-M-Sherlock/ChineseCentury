@@ -1,0 +1,67 @@
+[Thing Template=AAUnitRUSVehicleHQTruck]
+{
+	IDS = rus_truck_supply
+	name = "#rus_truck_supply_name"
+	editor_name = "#rus_truck_supply_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 25
+
+		[Production]
+		oil = 10
+		ammo = 10
+
+   		[Upkeep]
+		building_limit_consumed = 0
+	}
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = rus_depot_supply
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+
+		;; ids of the trailer actor
+		trailer_actor = rus_trailer_supply
+
+		[TrailerHitch]
+		{		
+			;; node name and node offset of the truck's hitch
+			node_ids = hitch
+			node_offset = 0, -1.7, .5
+		}
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = supplydepot
+	}
+	
+	[View]
+	{
+		resource_prefix = RUSTruck/RUSTruck
+		icon = /UI/Game/BuildingButtons/IconDepotSupply.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = rus_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = depot_supply_select
+	}
+}

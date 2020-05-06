@@ -1,0 +1,22 @@
+;; MobileDeploymentComponent: allows the actor to pack/unpack
+[template MobileDeploymentComponent]
+{
+	;;;;;; for actors unpacking into other actors (normally vehicles)
+
+	;; IDS of actor this actor unpacks to (if NULL, actor is packed from some other actor)
+	string	unpack_to_actor_ids = NULL
+
+	;; position offset (from unpacked actor) and orientation packed actor should have
+	;; right after being packed
+	point2	packed_position_offset = 0,0
+	point2	packed_orientation = 0,-1
+
+	;;;;;; for actors packing into other actors (normally buildings)
+
+	;; if actor health falls below or equals this ratio, packing is no longer
+	;; possible
+	fixed	pack_health_min = 0.5
+
+	fixed	packing_length = 7
+	fixed	unpacking_length = 7
+}

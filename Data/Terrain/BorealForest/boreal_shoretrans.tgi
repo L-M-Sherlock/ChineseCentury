@@ -1,0 +1,47 @@
+[Terrain template=Terrain]
+{
+	IDS = boreal_shoretrans
+	name = "#boreal_shoretrans_name"
+	
+	base_priority = 0
+	terrain_group = snow
+	terrain_color = 0.651, 0.663, 0.698
+	
+	doodad_frequency = 0.01
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = boreal_shoredirttrans01
+	name = "#boreal_shoretrans_boreal_shoredirttrans01_name"
+	texture = BorealShoreTrans/BorealShoreDirtTrans01.tga
+	texture_width = 8	
+	texture_height = 8
+
+	[Variation]
+	IDS = boreal_shoreforesttrans01
+	name = "#boreal_shoretrans_boreal_shoreforesttrans01_name"
+	texture = BorealShoreTrans/BorealShoreForestTrans01.tga
+	texture_width = 8	
+	texture_height = 8
+
+	[Variation]
+	IDS = boreal_shoregrassdrytrans01
+	name = "#boreal_shoretrans_boreal_shoregrassdrytrans01_name"
+	texture = BorealShoreTrans/BorealShoreGrassDryTrans01.tga
+	texture_width = 8	
+	texture_height = 8
+
+	[Variation]
+	IDS = boreal_shoregrasstrans01
+	name = "#boreal_shoretrans_boreal_shoregrasstrans01_name"
+	texture = BorealShoreTrans/BorealShoreGrassTrans01.tga
+	texture_width = 8	
+	texture_height = 8
+
+	[Variation]
+	IDS = boreal_shoretundratrans01
+	name = "#boreal_shoretrans_boreal_shoretundratrans01_name"
+	texture = BorealShoreTrans/BorealShoreTundraTrans01.tga
+	texture_width = 8	
+	texture_height = 8
+}

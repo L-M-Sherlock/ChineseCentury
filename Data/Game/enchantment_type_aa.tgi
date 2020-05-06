@@ -1,0 +1,39 @@
+/**************************************************************************
+
+template_enchantment_type.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: Types of enchantments used in the game
+
+REVISION HISTORY:
+smm091503 - created
+
+**************************************************************************/
+
+[EnchantmentType Template=EnchantmentType]
+{
+	IDS = ench_type_generic
+	name = "#template_enchantment_type_aa_ench_type_generic_name"
+	description = "#enchantment_type_aa_ench_type_generic_description"
+}
+
+[EnchantmentType Template=EnchantmentType]
+{
+	IDS = ench_type_radiation
+	name = "#template_enchantment_type_aa_ench_type_radiation_name"
+	description = "#enchantment_type_aa_ench_type_radiation_description"
+}
+
+[EnchantmentType Template=EnchantmentType]
+{
+	IDS = ench_type_courage
+	name = "#template_enchantment_type_aa_ench_type_courage_name"
+	description = "#enchantment_type_aa_ench_type_courage_description"
+}
+
+[EnchantmentType Template=EnchantmentType]
+{
+	IDS = ench_type_fear
+	name = "#template_enchantment_type_aa_ench_type_fear_name"
+	description = "#enchantment_type_aa_ench_type_fear_description"
+}

@@ -1,0 +1,24 @@
+[Thing Template=Placeholder]
+{
+	IDS = placeholder_airfield
+	name = "#placeholder_airfield_name"
+
+	[Flags]
+	axis_locked = false
+
+	[Placement]
+	placement_group_IDS = group_special
+	placement_category = building
+
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 12
+
+	[View]
+	{
+		resource_prefix = PlaceholderCorps/PlaceholderCorps
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+	}
+}

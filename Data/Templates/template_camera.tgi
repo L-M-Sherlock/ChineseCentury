@@ -1,0 +1,47 @@
+/**************************************************************************
+
+template_camera.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: object aspects
+
+REVISION HISTORY:
+smm082103 - created
+
+USAGE:
+
+**************************************************************************/
+
+[Template Camera Inherit=Object]
+{
+	category = CAMERA
+
+	;; the vfx (should normally be model) used to represent the camera
+	string	camera_vfx_ids
+
+	;; the distance the camera vfx is kept at from the lookat point
+	float	camera_distance
+
+	[Flags]
+	{
+		blocking	= false
+		targetable	= false
+		ethereal	= true
+		invisible	= true
+	}
+
+	[Size]
+	{
+		height = 2
+	}
+
+	[View]
+	{
+		[AspectNormal]
+		{
+			skin = NULL
+		}
+	
+		icon = NULL
+	}
+}

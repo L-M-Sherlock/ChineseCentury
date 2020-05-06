@@ -1,0 +1,77 @@
+[Template AAJPNRegimentInfantryAT Template=AAJPNOrganizationInfantry]
+{
+	name = "#regiment_jpn_infantry_at_AAJPNRegimentInfantryAT_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 48
+		
+		[Upkeep]
+		ammo = 9
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/JPN/JPNInfantryAT/JPNInfantryAT
+		icon = /UI/Game/RegimentButtons/IconInfantryAT.png
+		banner_icon = /Organizations/Banners/Icons/IconAntiTank.png
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = jpn_infantry_at_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = jpn_infantry_at_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = jpn_infantry_at_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = jpn_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = jpn_infantry_at
+
+		[Slot]	;; rear guard 2
+		element_IDS = jpn_infantry_at
+		
+		[Slot]	;; rear guard 3
+		element_IDS = jpn_infantry_mg
+	
+		[Slot]	;; flank
+		element_IDS = jpn_infantry_at
+		
+		[Slot]	;; captain
+		element_IDS = jpn_infantry_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = infantry1_company
+	}
+}
+
+[Thing Template=AAJPNRegimentInfantryAT]
+{
+	IDS = regiment_jpn_infantry_at
+	editor_name = "#regiment_jpn_infantry_at_editor_name"
+}
+
+/*
+[Thing Template=AAJPNRegimentInfantryAT]
+{
+	IDS = regiment_jpn_infantry_at_amphibious
+	editor_name = "JPN AT Infantry Regiment - Water Recruit"
+	
+	transport_actor = jpn_transport_water
+
+	[Placement]
+	placement_group_ids = null
+}
+*/

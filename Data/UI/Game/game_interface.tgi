@@ -1,0 +1,470 @@
+
+;; ---------------------------- Game Interface ----------------------------
+
+;; a0m070704 - don't use silent interface for in-game interface!!
+[Game Inherit=Interface]
+{
+	[View Template=NoVE]
+	
+	[ControlPanelTop Template=DecalWidget]
+	{
+		[View Template=NoVE]
+		L = 0
+		R = 0
+		T = 0
+		B = 0
+		
+		[Decal Template = DecalVE]
+	}
+	
+	[Subtitles Inherit=PanelWidget]
+	{
+		[View Template=NoVE]
+		{
+			L = 20%
+			T = 615
+			R = 80%
+			B = +110
+		}
+		
+		[RenderThreshold]
+		render_threshold = 20
+			
+		[Model Template=ModelWidget]
+		{
+			[View]
+			L = 0
+			R = 75
+			T = 0
+			B = 100%
+			
+			[Model]
+			{
+				color = 0,0,0
+
+				fit_model = FALSE
+
+				position = 0,-20,0
+				look_at = 0,0,0
+				zoom = 1
+			}
+		}
+
+		[Label Template=LabelWidget]
+		{
+			[View Template=NoVE]
+			L = 75
+			R = 100%
+			T = 0
+			B = 100%
+
+			[Label Template=SharedSmallCenteredLabelVE]
+			text = ""
+			multiline = true
+		}
+
+		[LabelNoModel Template=LabelWidget]
+		{
+			[View Template=NoVE]
+			L = 0
+			R = 100%
+			T = 0
+			B = 100%
+
+			[Label Template=SharedSmallCenteredLabelVE]
+			text = ""
+			multiline = true
+		}
+	}
+	
+	[SideMessageLogPanel Inherit = MenuGamePanelWidget]
+	{
+		[View]
+		{
+			L = 279
+			T = 53
+			R = +542
+			B = +514
+			
+			validate_decal_children = false
+			
+			[Child Template = SharedSmallCenteredLabelVE]
+			{
+				L = 0
+				T = 43
+				R = 100%
+				B = +20
+					
+				text = "#game_interface_Child_text"
+			}
+			
+			[Child Template = DecalVETiled]
+			{
+				L = 13
+				T = 61
+				R = +519
+				B = +398
+				
+				alpha_blending = true
+			
+				corners_texture = /UI/%s/Game/Listbox/ListboxCorners.tga
+   	 			left_border_texture = /UI/%s/Game/Listbox/ListboxLeft.tga
+   	 			right_border_texture = /UI/%s/Game/Listbox/ListboxRight.tga
+   	 			top_border_texture = /UI/%s/Game/Listbox/ListboxTop.tga
+   	 			bottom_border_texture = /UI/%s/Game/Listbox/ListboxBottom.tga
+   	 			center_texture = /UI/%s/Game/Listbox/ListboxCenter.tga
+			}
+		}
+		
+		[ButtonClose Template=GamePushButtonCloseWidget]
+		{
+			[View]
+			{
+				L = 473
+				R = +68
+				B = +44
+			}
+		}
+		
+		[SecondaryButtonClose Template=SecondaryCloseButtonWidget]
+		{
+			[View]
+			{
+				L = 367
+				T = 459
+			}
+		
+			[Client]
+			{
+				[View]
+					text = "#game_interface_SideMessageLogPanel_SecondaryButtonClose_Client_View_text"
+			}
+		}
+		
+		[SideMessageLog Inherit = SharedMessageLog]
+		{
+			[Scrollbar Template=SharedScrollbarWidget]
+			
+			[View Template = GroupVE]
+			{
+				L = 24
+				T = 74
+				R = 30r
+				B = +375
+			}
+			
+			[ItemPanel]
+			{
+				[View Template = GroupVE]
+				{
+					R = 38r
+				}
+				
+				[MessageWidget]
+				{
+					transparency = 0
+					
+					[MessageWidgetBackground]
+					{
+						[Decal Template = DecalVE]
+						{
+							texture = NULL
+						}
+					}
+				}
+			}
+		}
+	}
+
+	bool	anchored_tooltips = true
+	float anchored_tooltip_x = 1024
+	float anchored_tooltip_y = 521
+ 	float anchored_tooltip_width = 346
+ 	
+ 	[TutorialWidget]
+ 	{
+ 		command = GoToTeamCommands
+ 	}
+
+ 	[TutorialWidget]
+ 	{
+ 		command = ToggleShowZoneSupply
+ 	}
+ 	
+ 	[TutorialWidget]
+ 	{
+ 		command = BeginScrollRight
+ 	}
+ 	
+  	[TutorialWidget]
+ 	{
+ 		command = BeginScrollLeft
+ 	}
+ 
+   	[TutorialWidget]
+ 	{
+ 		command = MessageLogToggle
+ 	}
+ 
+ 	[TutorialWidget]
+ 	{
+ 		command = ActorCommand recruit
+ 	}
+
+ 	[TutorialWidget]
+ 	{
+ 		command = ActorCommand kill
+ 	}
+ 
+  	[TutorialWidget]
+ 	{
+ 		command = ActorCommand bombard
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = ActorCommand move
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = ActorCommand retreat
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = ActorCommand research
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = ActorCommand unpack
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = ActorCommand air_recon
+ 	}
+ 
+ 	[TutorialWidget]
+ 	{
+ 		command = ActorCommand air_attack
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = ActorCommand recruit_location
+ 	}
+ 
+ 	[TutorialWidget]
+ 	{
+ 		command = ActorCommand construct
+ 	}
+ 
+  	[TutorialWidget]
+ 	{
+ 		command = ActorCommand hq_attach
+ 	}
+ 	
+	[TutorialWidget]
+ 	{
+ 		command = ShowFloater 2
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand rus_truck_ammo
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand regiment_rus_hq_infantry
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand regiment_usa_infantry_amphib
+ 	}
+ 
+ 	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand regiment_rus_infantry_amphib
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand usa_truck_corps_amphibious
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand rus_truck_corps_amphibious
+ 	}
+	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand regiment_rus_infantry
+ 	}
+ 
+ 	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand regiment_usa_paratrooper
+ 	}
+ 
+  	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand regiment_rus_paratrooper
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = PropertyDataSelectCommand tech_rus_air_support
+ 	}
+ 
+ 	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand usa_truck_supply
+ 	}
+ 
+  	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand rus_truck_supply
+ 	}
+
+ 	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand usa_bunker
+ 	}
+ 
+  	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand rus_bunker
+ 	}
+ 
+ 	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand usa_bunker_aa
+ 	}
+ 
+  	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand rus_bunker_aa
+ 	}
+
+ 	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand usa_bunker_artillery
+ 	}
+ 
+  	[TutorialWidget]
+ 	{
+ 		command = ActorDataSelectCommand rus_bunker_artillery
+ 	}
+ 	
+	[TutorialWidget]
+ 	{
+ 		command = FormationChange 0 %i
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = FormationChange 1 %i
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = FormationChange 2 %i
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = FormationChange 0 1
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = FormationChange 1 1
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = FormationChange 2 1
+ 	}
+ 
+  	[TutorialWidget]
+ 	{
+ 		command = UseFactionAbility 0
+ 	}
+ 
+ 	[TutorialWidget]
+ 	{
+ 		command = UseFactionAbility 1
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = UseFactionAbility 2
+ 	}
+
+	[TutorialWidget]
+ 	{
+ 		command = UseFactionAbility 3
+ 	}
+}
+
+[KingdomDropDown Inherit=GameDropDownWidget]
+{
+	localized observer_text = "#game_interface_KingdomDropDown_observer_text"
+
+	[View]
+	{
+		L = 200r
+		T = 51
+		R = 0r
+	}
+
+	[Listbox]
+	{
+		num_visible_items = 5
+	}
+}
+
+[FactionExperience Inherit=LabelWidget]
+{
+	ToolTip_name = "#game_interface_FactionExperience_ToolTip"
+   	ToolTip = "#game_interface_FactionExperience_ToolTip_2"
+
+	[View Template=NoVE]
+	{
+  		L = 2
+  		T = 10
+  		R = +85
+  		B = +20
+	}
+
+	[Label Template=SharedTinyLeftLabelVE]
+	{
+  		L = 0
+
+  		text = ""
+  		color = 1,1,1
+	}
+}
+
+[UpkeepShortageIcon Template=DecalWidget]
+{
+	tooltip_name = "#game_interface_UpkeepShortageIcon_tooltip_name"
+	ToolTip = "#game_interface_UpkeepShortageIcon_ToolTip"
+
+	[View Template=NoVE]
+	{
+		L = 609
+		T = 2
+		R = +40
+		B = +40
+	}
+
+	[Decal Template=DecalVE]
+	{
+		texture = /UI/%s/Game/ControlPanel/BleedIcon.png
+	}
+}

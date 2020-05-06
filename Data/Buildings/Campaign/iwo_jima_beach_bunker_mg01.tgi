@@ -1,0 +1,145 @@
+[Thing Template=AABuildingGroundPlane]
+{
+	name = "#iwo_jima_beach_bunker_mg01_iwo_jima_beach_bunker_ground_name"
+	texture = IwoJimaBeachBunkerMG01/IwoJimaBeachBunkerMG01TemperateGround.dds
+	IDS = iwo_jima_beach_bunker_ground
+	attached_scale = 0
+	texture_size = 10	
+}
+
+;-------------
+
+[Thing Template=AABuilding]
+{
+	IDS = iwo_jima_beach_bunker_mg01
+	name = "#iwo_jima_beach_bunker_mg01_Thing_name"
+	editor_name = "#iwo_jima_beach_bunker_mg01_Thing_editor_name"
+
+	[ConstructionComponent]
+	{
+		construction_node_name_prefix = Stage
+		finished_node_name = Final
+		can_sell = false
+		can_raze = false
+	}
+
+	[BodyComponent]
+	{
+		captureable = true
+		health = 700
+		defense = 10
+	}
+	
+	[DefenderComponent]
+	{
+		control_range = 20
+			
+		[Ability template=AATurretMGAttackLocal]
+		{
+			turret_ids = Turret
+
+			[AbilityDefinition Template=AABunkerAttackMG]
+			{
+				name = "#iwo_jima_beach_bunker_mg01_DefenderComponent_AbilityDefinition_name"
+				range = 20
+				recharge_time = 2
+				
+				area = 2
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				targets = +enemy, -air, -mine, -building
+
+				[Effect Template=PierceDamageEffect]
+				amount = 20
+
+				[Flags]
+				{
+					spell = true
+				}
+			}
+		}
+
+		[Ability template=AATurretMGAttackLocal]
+		{
+			turret_ids = Turret2
+
+			[AbilityDefinition Template=AABunkerAttackMG]
+			{
+				name = "#iwo_jima_beach_bunker_mg01_DefenderComponent_AbilityDefinition_name_2"
+				range = 20
+				recharge_time = 2
+				
+				area = 2
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				targets = +enemy, -air, -mine, -building
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 20
+
+				[Flags]
+				{
+					spell = true
+				}
+			}
+		}
+	}
+	
+	[PerformerComponent]
+	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 60
+			yaw_rotation_range_degrees = 90
+			yaw_start_degrees = 0
+			offset = -0.841,-2.159
+		}
+
+		[Turret]
+		{
+			turret_ids = Turret2
+			yaw_rotation_per_sec_degrees = 60
+			yaw_rotation_range_degrees = 90
+			yaw_start_degrees = 0
+			offset = 0.792,-2.159
+		}
+	}
+
+	[EconomyComponent]
+	
+	[Flags]
+	{
+		axis_locked = false
+	}	
+	
+	[Placement]
+	{
+		placement_group_IDS = group_campaign
+	}
+	
+	[PropertiesComponent]
+	
+	[Size]
+	{
+		height = 2
+		blocking_shape = SQUARE
+		square_size = 8
+		fixed scale_min = 1
+		fixed scale_max = 1
+	}
+
+	[View]
+	{
+		resource_prefix = IwoJimaBeachBunkerMG01/IwoJimaBeachBunkerMG01
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = iwo_jima_beach_bunker_ground
+		}		
+	}
+}

@@ -1,0 +1,97 @@
+[Template AAGBRRegimentInfantry Template=AAGBROrganizationInfantry]
+{
+	name = "#regiment_fra_infantry_AAGBRRegimentInfantry_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 50
+		
+		[Upkeep]
+		ammo = 6
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/GBR/GBRInfantry/GBRInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantry.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_infantry_attack
+	}		
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = infantry_company
+	}
+}
+
+[Thing Template=AAGBRRegimentInfantry]
+{
+	IDS = regiment_fra_infantry
+	editor_name = "#regiment_fra_infantry_Thing_editor_name"
+
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = fra_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = fra_infantry
+
+		[Slot]	;; rear guard 2
+		element_IDS = fra_infantry
+		
+		[Slot]	;; rear guard 3
+		element_IDS = fra_infantry
+	
+		[Slot]	;; flank
+		element_IDS = fra_infantry_mg
+		
+		[Slot]	;; captain
+		element_IDS = fra_infantry_co
+	}
+}
+
+[Thing Template=AAGBRRegimentInfantry]
+{
+	IDS = regiment_fra_infantry_amphib
+	editor_name = "#regiment_fra_infantry_amphibious_editor_name"
+	
+	transport_actor = gbr_transport_water
+
+	[Placement]
+	placement_group_ids = null
+
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = fra_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = fra_infantry
+
+		[Slot]	;; rear guard 2
+		element_IDS = fra_infantry
+		
+		[Slot]	;; rear guard 3
+		element_IDS = fra_infantry_amphib
+	
+		[Slot]	;; flank
+		element_IDS = fra_infantry_mg
+		
+		[Slot]	;; captain
+		element_IDS = fra_infantry_co
+	}
+}

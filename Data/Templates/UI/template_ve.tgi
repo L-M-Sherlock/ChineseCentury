@@ -1,0 +1,330 @@
+/**************************************************************************
+
+template_ve.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION:	View elements for the user interface.  View Elements are the visual
+		side of the user interface.  The data has complete control of how 
+		the widgets are displayed, with some exceptions.
+
+REVISION HISTORY:
+pcb100702 - created
+
+USAGE:
+
+	[ViewName Template=GroupVE]
+	[ViewName Template=DecalVE]
+	[ViewName Template=LabelVE]
+
+EXAMPLE:
+
+	[View Template=GroupVE]
+	{
+		L = 50
+		T = 50
+		R = 50r			; 50 from the parent's right edge
+		B = 50b			; 50 from the parent's bottom edge
+
+		[Child Template=DecalVE]
+		texture = textures/background.tga
+		tiled_x = TRUE
+		tiled_y = TRUE
+
+		[Child Template=DecalVE]
+		when = FOCUSED
+		L = 10
+		T = 10
+		R = 30		;; (10,10) to (30,30)
+		B = 30
+		texture = textures/when_focused.tga
+
+		[Child Template=DecalVE]
+		B = 10
+		texture = textures/top_decal.tga
+
+		[Child Template=DecalVE]
+		T = 10b
+		texture = textures/bottom_decal.tga
+
+		[Child Template=LabelVE]
+		L = 20%
+		T = 20%
+		R = +50		;; start at (20%,20%) of parent, width of 50, height of 15
+		B = +15
+		text = "Here is some text."
+		font = Small Font
+		justify = LEFT
+	}
+
+**************************************************************************/
+
+[Template ViewElement]
+{
+	;; hidden field - defined by appropriate template
+	string type
+
+	;; when - determines when this should be displayed.
+	;;
+	;;	options:
+	;;		ENABLED, DISABLED
+	;;		FOCUSED, UNFOCUSED
+	;;		PRESSED, UNPRESSED	(for push buttons)
+	;;		SELECTED, UNSELECTED	(for toggle buttons)
+	;;
+	;;	examples:
+	;;		ENABLED + UNSELECTED
+	;;		ENABLED + SELECTED + FOCUSED
+	;;		DISABLED
+	;;
+	string	when = null
+
+	;; top/left/right/bottom coordinates are relative from parent.  examples:
+	;;
+	;;	10		(T/L) 10 from parent's top or left edge
+	;;	10t		(T/B) 10 from parent's top edge
+	;;	10b		(T/B) 10 from parent's bottom edge
+	;;	10r		(L/R) 10 from parent's right edge
+	;;	+10		(R/B) 10 width or height
+	;;	25%		25% from parent's top or left edge
+	;;	+25%	25% set as width or height
+	;;
+	string	L = 0
+	string	T = 0
+	string	R = 0r		;; same as 100%
+	string	B = 0b		;; same as 100%
+
+	string	client_L = 0
+	string	client_T = 0
+	string	client_R = 0r	;; same as 100%
+	string	client_B = 0b	;; same as 100%
+}
+
+;; This type only exists so it can be "picked" for the widget, but has no view.
+[Template DummyVE Inherit=ViewElement]
+{
+	type = DUMMY
+}
+
+;; Use this when no view elements are needed. Everything inherits from 'NoVE'
+;; so that templates can specify NoVE meaning "none required but any allowed"
+;; TODO: uses 'type GROUP' to ensure that it doesn't return 'true' to Pick() (an empty
+;;  group never does). Using 'type DUMMY' would return true to Pick(). Need a better way 
+;; (like a flag or special type) to indicate "NoVE".
+[Template NoVE inherit=ViewElement]
+{
+	type = GROUP
+	flag transparent = false
+}
+
+[Template GroupVE Inherit=NoVE]
+{
+	type = GROUP
+
+	;; if true, the all the ve's children, even those outside the client
+	;; bounds (but inside the actual bounds) may respond to clicks
+	;; (i.e. client bounds are esentially ignored as far as clicks are
+	;; concerned)
+	flag	transparent = false
+
+	;; when set, code will validate at load time that group VE does not contain multiple decal
+	;; children with the same when flags
+	flag	validate_decal_children = true
+	
+	;; Child list - initial children view elements of the group
+	[list Child Template=ViewElement]
+}
+
+[Template DecalVEBase Inherit=NoVE]
+{
+	type
+	
+	;; the background color
+	point3 color = 1,1,1
+
+	;; flags to enable/disable alpha testing/blending
+	flag	alpha_blending = false
+	flag	alpha_testing = false
+}
+
+[Template DecalVE Inherit=DecalVEBase]
+{
+	type = DECAL
+
+	;; the texture
+	string	texture = NULL
+	
+	[optional Animated]
+	{
+		string texture_prefix = NULL
+		string file_type = NULL
+	
+		float	fps = 0
+		bool	loops = FALSE
+		int		frame_count = 0
+	}
+
+	;; image can be tiled or stretched in both directions
+	bool	tiled_x = FALSE
+	bool	tiled_y = FALSE
+
+	;; texture is stretched if it's smaller than decal (will only
+	;; have effect if texture not tiled)
+	bool	stretch = TRUE
+}
+
+[Template DecalVETiled Inherit=DecalVEBase]
+{
+	type = DECAL_TILED
+
+	;; textures
+	string	corners_texture = NULL
+	string	left_border_texture = NULL
+	string	right_border_texture = NULL
+	string	top_border_texture = NULL
+	string	bottom_border_texture = NULL
+	string	center_texture = NULL
+}
+
+[Template DecalVETiledVertical Inherit=DecalVEBase]
+{
+	type = DECAL_TILED_DIRECTIONAL
+
+	;; textures
+	string 	ends_texture = NULL
+	string	center_texture = NULL
+
+	string direction = vertical
+}
+
+[Template DecalVETiledHorizontal Inherit=DecalVEBase]
+{
+	type = DECAL_TILED_DIRECTIONAL
+
+	;; textures
+	string 	ends_texture = NULL
+	string	center_texture = NULL
+
+	string direction = horizontal
+}
+
+[Template LabelVE Inherit=NoVE]
+{
+	type = LABEL
+
+	localized		text
+	string		font
+	string		justify			; LEFT, CENTER, or RIGHT
+	point3		color = 1,1,1
+	;; background color is used for highlighting, these values are for the
+	;; pretty blue Windows highlight look.
+	point3		background_color = .25,.5,.8
+	flag 		multiline = false
+
+	;; Override list - will override VE text, font, justification, color
+	;; and background color attributes if widget in appropriate state
+	[list Override]
+	{
+		string		when = NULL
+
+		;; which attributes are overrden: TEXT, FONT, JUSTIFY, COLOR,
+		;; BACKGROUND_COLOR (ex: attributes = TEXT + COLOR)
+		string		attributes = NULL
+
+		localized	text = ""
+		string		font = tiny
+		string		justify = left
+		point3		color = 0,0,0
+		point3		background_color = 0,0,0
+	}
+}
+
+[Template ModelVE Inherit=ViewElement]
+{
+	type = MODEL
+
+	;; Background color of the VE
+	point3 color = 0,0,0
+
+	;; Render model to VE just once (will not be animated) (i.e. snapshot)
+	bool render_once = FALSE
+
+	;; Automatically adjust camera so model fills VE as much as
+	;; possible
+	bool fit_model = FALSE
+
+	;; Camera position and loook at. Only used if fit_model is false.
+	point3 position = 1,-1,1
+	point3 look_at = 0,0,0
+
+	;; Zoom for the camera looking at the model. Only used if fit_model
+	;; is false.
+	float zoom = 1
+
+	;; if set, model VE will be updated using real time, not game time
+	bool real_time_update = false
+}
+
+[Template StatusBarVE Inherit=ViewElement]
+{
+	type = STATUS_BAR
+
+	string texture = NULL
+
+	;; The start (0 percent), middle and end (100 percent) colors of
+	;; the status bar.
+	point3 start_color = 1,1,1
+	point3 mid_color = .5,.5,.5
+	point3 end_color = 0,0,0
+
+	;; Percentage of status bar at which color will be mid_color.
+	float mid_percentage = .5
+
+	;; Does bar go left to right or bottom to top.
+	bool horizontal = TRUE
+}
+
+[Template MiniMapVE Inherit=ViewElement]
+{
+	type = MINIMAP
+	
+	;; 1,-1 means up and to the right is the facing orientation
+	point2 orientation = 1, -1
+	bool minimap_is_square = true
+}
+
+[Template ScoreGraph Inherit=GroupVE]
+{
+	type = SCORE_GRAPH
+
+	point3	color
+		
+	fixed	x_tick_length
+	int		x_max_ticks
+		
+	fixed	y_tick_length
+	int		y_max_ticks
+}
+
+[Template NifVE Inherit=ViewElement]
+{
+	type = NIF
+
+	;; if true, then this will be NIFVE that shows up on the menu background;
+	;; there can only be one
+	bool menu_background_nifve = false
+	
+	;; specify a list of NIFs to play; the VE will pick a random one at the start
+	;; and cycle through all in order
+	[list NIF]
+	{
+		string model
+		string camera
+	}
+}
+
+[Template VideoVE Inherit=ViewElement]
+{
+	type = VIDEO
+	
+	;; No additional data to specify
+}

@@ -1,0 +1,61 @@
+[Thing Template=AACityNorthAfrica]
+{
+	IDS = nafrica_villageblock14x14_02
+	name = "#north_africa_village02_name"
+	editor_name = "#north_africa_village02_editor_name"
+
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 12
+
+	[View]
+	{
+		resource_prefix = NorthAfricaVillage02/NorthAfricaVillage02
+		
+		[AspectNormal]
+		visual_radius_estimate = 8
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures/Buildings/NorthAfrica
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_01
+			attached = true
+		}
+                  
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_02
+			attached = true
+		}
+			
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_03
+			attached = true
+		}
+	}
+	
+	[CityComponent]
+	{
+		zone_radius = 0
+				
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = desert_treespalm
+			offset = -4.21, -4.04
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = desert_treespalm
+			offset = 5.31, 0.88
+			orientation = 0, 1
+		}
+			
+	}
+}

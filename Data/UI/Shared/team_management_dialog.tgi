@@ -1,0 +1,120 @@
+
+;; ---------------------------- Team Slot ----------------------------
+
+[Template TeamSlots Inherit=PanelWidget]
+{
+	[View Template=GroupVE]
+	{
+		L = 5
+		R = +310
+		B = +30
+		
+	}
+	
+
+	[NumKingdoms Template=SharedDropdownWidget]
+	{
+		[View]
+		{
+			L = 125
+			T = 0
+			R = +183
+			B = +20
+		}
+	}
+
+
+	[Name Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		{
+			L = 0
+			T = 0
+			R = 120
+			B = +27
+		}
+
+		[label Template=SharedSmallLeftLabelVE]
+	}
+}
+
+[TeamManagementDialog Inherit=SharedNoArtPanelWidget]
+{
+	[View]
+	{	
+		L = 285
+		T = 224
+		R = +475
+		B = +361
+		
+		;; cwp040804 - Children are no longer defined in templates, so must be defined here
+		[Child Template = SharedMessageBoxPanelGroupVE]
+	}
+
+
+	[TeamSlotsViewport Inherit=SharedViewportScrollWidget]
+	{
+		[View]
+		{
+			L = 68
+			T = 66
+			R = +338
+			B = +159
+		}
+		
+		[DataRowOdd Template=TeamSlots]
+		{
+			;;[View]
+			;;color = 0,0,0
+		}
+
+		[DataRowEven Template=TeamSlots]
+		{
+			;;[View]
+			;;color = .5,.5,.5
+		}
+	}
+		
+
+	[OkButton Template=MenuPushButtonWidget]
+	{	
+		[View]
+		L = 51
+		T = 264
+		
+		[Client]
+		{
+			[View]
+			text = "#team_management_dialog_OkButton_Client_View_text"
+		}
+	}
+
+	[CancelButton Template=MenuPushButtonWidget]
+	{	
+		[View]
+		L = 241
+		T = 264
+		
+		[Client]
+		{
+			[View]
+			text = "#team_management_dialog_CancelButton_Client_View_text"
+		}
+	}
+
+	[PlayableKingdomsLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label]
+		{
+			L = 68
+			T = 231
+			R = +331
+			B = +22		
+			text = "#team_management_dialog_PlayableKingdomsLabel_Label_text"
+			font = small
+			justify = LEFT
+		}
+	}	
+}

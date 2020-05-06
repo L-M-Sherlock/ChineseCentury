@@ -1,0 +1,30 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Battle of El Alamein"
+
+	independent_5 = "Ambient"
+	restriction_group_0004 = "German Restrictions"
+	restriction_group_0003 = "British Restrictions"
+	independent_2 = "Civilian"
+	kingdom_4 = "Italian Reserve"
+	team_0 = "Allies"
+	kingdom_3 = "Australian Reserve"
+	map_name = "Battle of El Alamein"
+	objective_8 = "3. Capture and hold the Italian oil refineries."
+	name_8692 = "El Alamein"
+	kingdom_1 = "Rommel's Afrika Korp"
+	objective_6 = "2. Destroy five artillery bunkers on the beach.  (5/5 destroyed)"
+	kingdom_0 = "Montgomery's Force"
+	objective_5 = "2. Destroy five artillery bunkers on the beach.  (4/5 destroyed)"
+	objective_4 = "2. Destroy five artillery bunkers on the beach.  (3/5 destroyed)"
+	objective_3 = "2. Destroy five artillery bunkers on the beach.  (2/5 destroyed)"
+	objective_2 = "2. Destroy five artillery bunkers on the beach.  (1/5 destroyed)"
+	objective_1 = "1. Destroy Rommel's Corps HQ."
+	objective_0 = "2. Destroy five artillery bunkers on the beach.  (0/5 destroyed)"
+	name_10273 = "1st Mechanized Division HQ "
+	trigger_184_element_2 = "HINT : The AI will attempt to complete your commands to the best of its abilities.  Sometimes, if the AI has a higher priority task, it will not be able to complete your requests."
+	map_description = "The Desert Fox, Erwin Rommel, has rolled through North Africa leading his Afrika Korps, forcing the British army in Egypt to their last defensive line before Cairo and the vital Suez canal.  Through a valiant defense, the British have stopped Rommel's advance, buying time for a counterattack that may change the momentum of the North African theater.  But the Desert Fox, ever cagey, has prepared a devastating minefield in advance of the British forces, taunting them and their attempt to avert the unstoppable flood of German forces."
+	trigger_179_element_2 = "HINT : A computer controlled ally has landed to help you.  You can give an ally commands at any time by left-clicking the Team Commands button on the bottom right of your screen."
+	trigger_183_element_3 = "HINT : From inside this menu you can give any of your allies a variety of commands including: attack, defend, build and explore.  You can also give and request resources and buildings."
+}

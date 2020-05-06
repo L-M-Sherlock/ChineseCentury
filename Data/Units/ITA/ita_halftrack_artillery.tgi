@@ -1,0 +1,88 @@
+[Template AAitaHalftrackArtillery Inherit=AAUnititaVehicleHalftrack]
+{
+	[BodyComponent]
+	{
+		health = 200
+		defense = 5
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = artillery		
+		
+		[Property]
+		property_IDS = combat_unit
+		
+		[Property]
+		property_IDS = halftrack_unit
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 4.5
+	}
+	
+	[PerformerComponent]
+	{		
+		[Ability Template=AAProjectileLocal]
+		{
+			[AbilityDefinition Template=AASPAShot]
+			{
+				name = "#ita_halftrack_artillery_AbilityDefinition_name"
+				range = 44
+				area = 3
+				recharge_time = 9
+					
+				[Effect Template=BlastDamageEffect]
+				amount = 60
+				
+				[Effect Template=MoraleLossEffect]
+				amount = .75
+				
+				[Flags] 
+				bombard = true
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ita_artillery_heavy
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+
+			}
+		}
+	}	
+	
+
+	
+	[View]
+	{
+		resource_prefix = itaHalftrackArtillery/itaHalftrackArtillery
+
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = itaHalftrackArtillery/itaHalftrackArtilleryRecoil1.kf
+		}
+	}
+}
+
+;;----------------------------- UNITS ------------------------ ;;
+
+[Thing Template=AAitaHalftrackArtillery]
+{
+	IDS = ita_halftrack_artillery
+	name = "#ita_halftrack_artillery_Thing_name"
+	editor_name = "#ita_halftrack_artillery_Thing_editor_name"
+
+	[ElementComponent]
+	required_structures = ita_brigade_artillery
+}

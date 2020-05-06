@@ -1,0 +1,53 @@
+[template MoverComponent]
+{
+	fixed	speed_max
+	
+	;; collision_impulse of 0 means it does not topple or trample any dynamic doodads
+	;; this values should be the speed_max times the mass (defined in the view swivel)
+	fixed	collision_impulse = 0
+	
+	;; acceleration of 0 means instantaneous acceleration
+	;; if acceleration is the same value as speed_max, it takes 1 second to reach speed_max
+	;; to acceleration twice as fast (half-a-second to speed_max), make this double speed_max
+	fixed	acceleration = 0
+	
+	;; by default, units will turn as they do now. (That is, instantly)
+	fixed	turn_radius = 0
+	
+	; This field is unused, but necessary for the app to start with the current data.
+	fixed	turn_radians_per_sec = 0
+	
+	;; Either INSTANT, IN_PLACE, or WHILE_MOVING
+	;; Note that IN_PLACE and WHILE_MOVING require turn_radius to be non-zero
+	string	turn_type = INSTANT
+
+	;; What is the circumference of the tires? IOW, How far does a tire go in one full 
+	;; rotation? 
+	;; (HINT: Equivalent to Walk Distance from the Character Component, which is 
+	;; non-existent for vehicles now).
+	fixed	tire_circumference = 1
+	[list Tire]
+	{
+		;; Identifies the bone that should be used for calculations.
+		string	tire_ids
+		
+		;; This should be either FRONT or REAR
+		string	type
+	}
+
+	;; tracks - requires MoverComponent
+	[list TrackInfo Template=Tracks]
+	
+	[optional TrailerHitch]
+	{
+		;; node name and node offset of the hitch
+		string	node_ids
+		point3	node_offset
+	}
+
+	;; (optional) ids of the trailer actor
+	string	trailer_actor = null
+		
+	[list WhenStartMoving Template=FXC]
+	[list WhenStopMoving Template=FXC]
+}

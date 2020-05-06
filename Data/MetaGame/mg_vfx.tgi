@@ -1,0 +1,185 @@
+[VFX Template=VFXTintModifier]
+{
+	IDS = territory_friendly_tint
+	name = "#mg_vfx_territory_friendly_tint_name"
+	color = .3,1,.3
+	fade_duration = 0
+	enhance_duration = 0.2
+	priority = 0
+}
+
+[VFX Template=VFXTintModifier]
+{
+	IDS = territory_enemy_tint
+	name = "#mg_vfx_territory_enemy_tint_name"
+	color = 1,.3,.3
+	fade_duration = 0
+	enhance_duration = 0.2
+	priority = 0
+}
+
+[VFX Template=VFXTintModifier]
+{
+	IDS = territory_focus_vfx
+	name = "#mg_vfx_territory_focus_vfx_name"
+	color = 1,1,1
+	fade_duration = 0
+	enhance_duration = 0.2
+	lirp = true                 ;; Not a multiplier tint, an absolute LIRP to the specified color
+	tint_max = 0.3    ;; But don't go to absolute white, just brighten a little there
+	priority = 1
+}
+
+[VFX template=VFXAlphaModifier]
+{
+	IDS = territory_select_vfx
+	name = "#mg_vfx_territory_select_vfx_name"
+	alpha = 1
+}
+
+
+[Template VFXArrowMG template=VFXArrow]
+{
+	permanent = true
+	
+	arrow_type = EXACT
+	arrow_start = 0,0,0
+	arrow_middle = 0, 5, 5
+	arrow_end   = 0, 10,0
+	repeating = false
+	move_duration = 0.5
+	required_update_duration = 0.025		;; Means there will be at least 20 points
+	
+	floating_ui_vfx = true
+
+	[Extrusion]
+	{
+		string ids = mg_arrow_extrusion_vfx
+
+		;; How many seconds does this thing delay after being triggered before it
+		;; actually starts placing down extruded geometry
+		start_delay = 0
+	
+		;; How long does each segment remain at full alpha before it begins to fade out
+		segment_lifetime = 1
+	
+		;; How long does each segment take to fade from full alpha to 0 alpha?
+		segment_fadetime = 1
+
+		two_sided = false		
+		
+		[Connectivity]
+		{
+			point_a = wing0
+			point_b = wing1
+		}
+
+		[Connectivity]
+		{
+			point_a = wing1
+			point_b = wing2
+		}
+
+		[Connectivity]
+		{
+			point_a = wing2
+			point_b = wing3
+		}
+
+		[Connectivity]
+		{
+			point_a = wing3
+			point_b = wing0
+		}
+	}
+}
+
+[VFX Template=VFXArrowMG]
+{
+	IDS = territory_friendly_arrow
+	name = "#mg_vfx_territory_friendly_arrow_name"
+	model = Arrows/MoveArrow.nif
+
+	[Extrusion]
+	{
+		[ExtrusionPoint]
+		{
+			extrusion_root = wing0
+			node_color = 0,1,0
+			node_alpha = 0.5
+		}
+
+		[ExtrusionPoint]
+		{
+			extrusion_root = wing1
+			node_color = 0,1,0
+			node_alpha = 0.5
+		}
+
+		[ExtrusionPoint]
+		{
+			extrusion_root = wing2
+			node_color = 0,1,0
+			node_alpha = 0.5
+		}
+
+		[ExtrusionPoint]
+		{
+			extrusion_root = wing3
+			node_color = 0,1,0
+			node_alpha = 0.5
+		}
+	}
+}
+
+[VFX Template=VFXArrowMG]
+{
+	IDS = territory_enemy_arrow
+	name = "#mg_vfx_territory_enemy_arrow_name"
+	model = Arrows/AttackArrow.nif
+
+	[Extrusion]
+	{
+		[ExtrusionPoint]
+		{
+			extrusion_root = wing0
+			node_color = 1,0,0
+			node_alpha = 0.5
+		}
+
+		[ExtrusionPoint]
+		{
+			extrusion_root = wing1
+			node_color = 1,0,0
+			node_alpha = 0.5
+		}
+
+		[ExtrusionPoint]
+		{
+			extrusion_root = wing2
+			node_color = 1,0,0
+			node_alpha = 0.5
+		}
+
+		[ExtrusionPoint]
+		{
+			extrusion_root = wing3
+			node_color = 1,0,0
+			node_alpha = 0.5
+		}
+	}
+}
+
+[VFX Template=VFXModelPermanent]
+{
+	IDS = selected_circle
+	name = "#mg_vfx_selected_circle_name"
+	model = Arrows/Select.nif
+}
+
+[VFX Template=VFXModelPermanent]
+{
+	IDS = selected_circle_stationary
+	name = "#mg_vfx_selected_circle_stationary_name"
+	model = Arrows/SelectStationary.nif
+}

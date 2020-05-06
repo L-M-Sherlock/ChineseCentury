@@ -1,0 +1,67 @@
+[Template AAGERAirplaneAttackBomb Template=AAAirplaneAttackBomb]
+{
+	mana_cost = 5
+	range = 15
+	area = 9
+	recharge_time = 5
+							
+	[Effect Template=BlastDamageEffect]
+	amount = 75
+
+	[Effect Template=MoraleLossEffect]
+	amount = 2
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = bomb_heavy
+	at = TARGET_GROUND
+}
+
+[Thing Template=AAUnitGERAirplaneBomber]
+{
+	IDS = ger_bomber
+	name = "#ger_bomber_name"	
+	editor_name = "#ger_bomber_editor_name"
+		
+	[View]
+	resource_prefix = GERBomber/GERBomber
+
+	[PerformerComponent]
+	{
+		[Ability Template=AAProjectileLocal]
+		{			
+			[AbilityDefinition Template=AAGERAirplaneAttackBomb]
+			IDS = ger_bomb1
+			name = "#ger_bomber_AbilityDefinition_name"
+		}
+
+		[Ability Template=AAProjectileLocal]
+		{			
+			[AbilityDefinition Template=AAGERAirplaneAttackBomb]
+			IDS = ger_bomb2
+			name = "#ger_bomber_AbilityDefinition_name_2"
+		}
+
+		[Ability Template=AAProjectileLocal]
+		{
+			[AbilityDefinition Template=AAGERAirplaneAttackBomb]
+			IDS = ger_bomb3
+			name = "#ger_bomber_AbilityDefinition_name_3"
+		}
+
+		[Ability Template=AAProjectileLocal]
+		{
+			[AbilityDefinition Template=AAGERAirplaneAttackBomb]
+			IDS = ger_bomb4
+			name = "#ger_bomber_AbilityDefinition_name_4"
+		}
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = bomber
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+}

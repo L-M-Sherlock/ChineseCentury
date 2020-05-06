@@ -1,0 +1,40 @@
+
+[SAIDebug Inherit=SharedPanelWidget]
+{
+	[View]
+	{
+		L = 0
+		T = 30
+		R = 30%
+		B = 67%
+		
+		;; cwp040804 - Children are no longer defined in templates, so must be defined here
+		[Child Template = SharedChildLargePanelVE]
+	}
+
+	[SAIDebugViewport Template=SharedViewportScrollWidget]
+	{
+		[View]
+		B = 0b
+	}
+
+	[SAIDebugItem Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		B = 50
+
+		[Label Template=SharedSmallLeftLabelVE]
+		color = 1,1,1
+	}
+
+;;	looks like I'll just use the one in the console for now
+;;	[Editbox Template=SharedEditboxWidget]
+;;	{
+;;		num_visible_lines = 1
+;;		max_lines = 1
+;;
+;;		[View]
+;;		T = 20b
+;;		; B = +20	; set by code
+;;	}
+}

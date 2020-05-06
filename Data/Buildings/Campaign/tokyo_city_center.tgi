@@ -1,0 +1,55 @@
+[Thing Inherit=VFXProjectedTextureLit]
+{
+	name = "#tokyo_city_center_ground_name"
+	texture = TokyoCityCenter/TokyoCityCenterGround.dds	
+	IDS = tokyo_city_center_ground
+	attached_scale = 0
+	texture_size = 14
+	decal_type = scorch
+}
+
+
+[Thing Template=AACapitalCenter]
+{
+	IDS = tokyo_city_center
+	name = "#tokyo_city_center_name"
+	editor_name = "#tokyo_city_center_editor_name"
+
+	[BodyComponent]
+	{
+		health = 700
+		defense = 12
+	}	
+	
+	[Placement]
+	placement_group_IDS = group_campaign	
+
+	[CityComponent]
+	{
+		[Layout Template=LayoutFarEastSpecial01]
+
+		[Layout Template=LayoutFarEastSpecial02]
+
+		[Layout Template=LayoutFarEastSpecial03]
+
+		[Layout Template=LayoutFarEastSpecial04]
+	}
+	
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 16
+	}
+
+	[View]
+	{
+		resource_prefix = TokyoCityCenter/TokyoCityCenter
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = tokyo_city_center_ground
+		}			
+		
+		
+				
+	}
+}

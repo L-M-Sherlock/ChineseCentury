@@ -1,0 +1,30 @@
+/**************************************************************************
+
+template_equipment.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: equipment used by the game.  The FX system uses this to
+	add/replace equipment on a character.
+	This is purely for the view (the art) and not the game.
+
+REVISION HISTORY:
+pbc091302 - created
+
+USAGE:
+
+	[Equipment template=Equipment]
+	This node goes at the root level to define equipment available for use in the game.
+
+	Equipment models without textures use the specified skin.  If no skin is specified,
+	it uses the unit's specified skin.
+
+**************************************************************************/
+
+[template Equipment]
+{
+	string IDS
+	localized name = null
+
+	string model
+	string skin = null
+}

@@ -1,0 +1,453 @@
+[Template itacorpsHQ Template=AAitaBuildingPackableCorpHQ]
+{
+	IDS = ita_corps
+	name = "#ita_corps_name"	
+	editor_name = "#ita_corps_editor_name"
+
+	show_faction_portrait = true
+
+	[BodyComponent]
+	health = 3500
+	defense = 25
+
+	[DefenderComponent]
+	{
+		control_range = 30
+	
+		[Ability Template=AAAttackLocal]
+		{		
+			turret_ids = Turret
+			
+			[AbilityDefinition Template=AABunkerAttackAntiAirMG]
+			{
+				name = "#ita_bunker_aa_DefenderComponent_AbilityDefinition_name"
+				recharge_time = 1
+				range = 30
+				area = 4
+				attenuation_range_min = 1
+				attenuation_factor_max = 0.5
+								
+				[Effect Template=PierceDamageEffect]
+				amount = 40
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ita_aa
+
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+			}
+		}
+	
+		[Ability Template=AATurretAttackLocal]
+		{
+			turret_ids = Turret
+			
+			[AbilityDefinition Template=AAInfantryMG]
+			{
+				name = "#ita_corps_DefenderComponent_AbilityDefinition_name"
+				area = 2
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+
+				recharge_time = 2
+				range = 20
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 22
+				
+				[WhenDo template=FXC_PlaySFX]	
+				audio_ids = ita_mg_heavy			
+				
+				[Flags]
+				spell = true
+			}
+		}
+	}
+	
+	[DenizenComponent]
+	{
+		[DeploymentInfo]
+		{
+			creation_offset = 0.0, 1.3
+			deployment_offset = -10.0, 1.3
+		}
+	}
+
+	[DetectionComponent Template=HQDetectionComponent]
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 500
+
+		[Upkeep]
+		building_limit_consumed = 1
+		
+		[Production]
+		money = 25
+		ammo = 35
+		oil = 20
+	}
+
+	[PerformerComponent]
+	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 60
+			yaw_rotation_range_degrees = 360
+			yaw_start_degrees = 0
+			;offset = -3.801, 3.472
+		}
+	}
+
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = corpshq	
+		
+		[Property]
+		property_ids = nation_ita
+
+		[Property]
+		property_IDS = economic_building
+
+		[Property]
+		property_ids = money
+		
+		[Property]
+		property_ids = mg	
+	
+		[Property]
+		property_IDS = ammo
+
+		[Property]
+		property_IDS = oil	
+	}
+
+	[ResearchComponent]
+	{		
+		[ResearchItem]
+		{
+			property_IDS = tech_advanced_infantry_training
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 75
+			}
+		}
+
+		[ResearchItem]
+		{
+			property_IDS = tech_facism
+			type = GLOBAL
+			research_time = 60
+		
+			required_properties = tech_advanced_infantry_training
+
+			[ResearchCost Template=CostList]
+			{
+				money = 125
+			}
+		}
+		
+		[ResearchItem]
+		{
+			property_IDS = tech_improved_machineguns
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 100
+			}
+		}
+
+		[ResearchItem]
+		{
+			property_IDS = tech_marksmanship
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 75
+			}
+		}
+
+		[ResearchItem]
+		{
+			property_IDS = tech_military_surplus
+			type = GLOBAL
+			research_time = 60
+
+			[ResearchCost Template=Costlist]
+			{
+				money = 150
+			}
+	
+		}
+
+		
+		[ResearchItem]
+		{
+			property_IDS = tech_bersaglieri
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 100
+			}
+		}						
+	}
+
+	[Size]
+	{
+		height = 2
+		blocking_shape = RECT
+		rect_width = 11
+		rect_height = 10
+	}
+
+	[SupplyComponent Template=HQSupplyComponent]
+	{
+		is_relay = false	
+	}
+
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconCorpsHQ.tga
+		resource_prefix = itaCorps/USACorps
+		icon = /UI/Game/BuildingButtons/IconCorps.png		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ita_waving_flag_pole
+			location = building_flag
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_corps_dirt
+			terrain_group_filter = dirt
+		}
+				
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_corps_desert
+			terrain_group_filter = desert
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_corps_snow
+			terrain_group_filter = snow
+		}
+
+		[WhenSelected Template=FXC_PlaySFX]
+		{
+			audio_ids = corps_select
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_01
+			location = spotlight_ae_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_01
+			location = spotlight_ae_03
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_03
+			location = spotlight_ae_04
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_02_bright
+			location = spotlight_ae_05
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_03
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_04
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_05
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_06
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_07
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_08
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_thin
+			location = window_09
+			attached = true
+		}
+	}
+
+
+}
+
+;; NORMAL
+
+[Thing Template=itacorpsHQ]
+{
+	IDS = ita_corps
+	name = "#ita_corps_Thing_name"
+	editor_name = "#ita_corps_Thing_editor_name"
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = mechhqproduction
+		
+		[Property]
+		property_ids = armorhqproduction
+
+		[Property]
+		property_ids = air_support
+	}
+
+	[RecruitComponent]
+	{
+		[RecruitActor]
+		actor_ids = regiment_ita_hq_infantry
+
+		[RecruitActor]
+		actor_ids = regiment_ita_hq_airborne
+
+		[RecruitActor]
+		actor_ids = regiment_ita_hq_mechanized
+
+		[RecruitActor]
+		actor_ids = regiment_ita_hq_armor
+
+		[RecruitActor]
+		actor_ids = ita_truck_engineer
+		
+		[RecruitActor]
+		actor_ids = ita_truck_motor
+
+		[RecruitActor]
+		actor_ids = ita_truck_artillery
+
+		[RecruitActor]
+		actor_ids = ita_truck_airfield
+
+		[RecruitActor]
+		actor_ids = ita_truck_supply
+
+		[RecruitActor]
+		actor_ids = ita_truck_ammo
+		
+		[RecruitActor]
+		actor_ids = ita_truck_oil
+	}
+}
+
+;; DYNAMIC CAMPAIGN
+
+[Thing Template=itacorpsHQ]
+{
+	IDS = ita_corps_dynamic
+	name = "#ita_corps_dynamic_name"
+	editor_name = "#ita_corps_dynamic_editor_name"
+
+	[Placement]
+	placement_group_ids = null
+
+	[RecruitComponent]
+	{
+		[RecruitActor]
+		actor_ids = regiment_ita_hq_infantry
+
+		[RecruitActor]
+		actor_ids = regiment_ita_hq_airborne
+
+		[RecruitActor]
+		actor_ids = regiment_ita_hq_mechanized
+
+		[RecruitActor]
+		actor_ids = regiment_ita_hq_armor
+
+		[RecruitActor]
+		actor_ids = ita_truck_engineer
+		
+		[RecruitActor]
+		actor_ids = ita_truck_motor
+
+		[RecruitActor]
+		actor_ids = ita_truck_artillery
+
+		[RecruitActor]
+		actor_ids = ita_truck_airfield
+
+		[RecruitActor]
+		actor_ids = ita_truck_supply
+
+		[RecruitActor]
+		actor_ids = ita_truck_ammo
+		
+		[RecruitActor]
+		actor_ids = ita_truck_oil
+	}	
+}

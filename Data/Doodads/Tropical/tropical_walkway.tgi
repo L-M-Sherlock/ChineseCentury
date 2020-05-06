@@ -1,0 +1,39 @@
+[Thing Template=AATropicalDoodad]
+{
+	IDS = tropical_walkway
+	name = "#tropical_walkway_name"
+
+	[Flags]
+	random_orientation = false	
+
+	[Placement]
+	{
+		[Biome]
+		IDS = tropical_savannah
+		weight = -1.00		
+	}
+
+	[Size]
+	scale_min = 1.00
+	scale_max = 1.00
+	
+	[View]
+	{
+		resource_prefix = TropicalWalkway/TropicalWalkway
+		shadow_type = STENCIL
+		shadow_texture = /effects/shadows/UnitShadow.dds
+		
+		[TextureSearchPath]
+		path = /Doodads/Tropical/TropicalBambooReeds		
+
+		[Aspect Template=Aspect]
+		IDS = tropical_walkway01
+		model = %s01.nif
+		ground_size = 1.0,7.0
+
+		[Aspect Template=Aspect]
+		IDS = tropical_walkway02
+		model = %s02.nif
+		ground_size = 1.0,7.0
+	}
+}

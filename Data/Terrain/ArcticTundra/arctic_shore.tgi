@@ -1,0 +1,19 @@
+[Terrain template=Terrain]
+{
+	IDS = arctic_shore
+	name = "#arctic_shore_name"
+	
+	base_priority = 10
+	terrain_group = snow
+	terrain_color = 0.773, 0.792, 0.816
+
+	doodad_frequency = 0.01
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = arctic_shore01
+	name = "#arctic_shore_01_name"
+	texture = ArcticShore/ArcticShore01.tga
+	texture_width = 8	
+	texture_height = 8
+}

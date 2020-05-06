@@ -1,0 +1,132 @@
+/**************************************************************************
+
+AVars_AA.tgi
+Copyright ?2012 China_red Studios
+
+DESCRIPTION: Game-specific AVars for A&A.
+
+REVISION HISTORY:
+drp012903 - created
+
+**************************************************************************/
+
+[Vars]
+{
+	string		ApplicationIDS = A&A
+	;; the app code is a two-letter identifier for this application, it's
+	;; used by the localization system to know what to name project_specific
+	;; string files, like strings_ui_aa.tgi
+	string		ApplicationCode = AA
+	
+	;; RegistryBase: should probably be "Software\Company\SKU"
+	string		RegistryBase = Software\TimeGate Studios\A&A
+
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; Game-Spy Stuff
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	string 	GameSpyGameName 			= aarts
+	string	GameSpySBName				= aarts
+  	int		GameSpyProductID			= 10318
+  	int		GameSpyPatchingProductID	= 10373
+  	int		GameSpyGameID				= 868
+	int		GameSpyNameSpace			= 1			;; this is the GameSpy Arcade value, may need to get the real value
+	string	GameSpyNamespaceExtension	= -gs
+	string	GameSpyRankURL 				= http://sdkdev.gamespy.com/games/aarts/web/ranks.txt
+	string	GameSpyRatedMapsURL 		= http://sdkdev.gamespy.com/games/aarts/web/maps.txt
+	string	GameSpyStatsURL				= sdkdev.gamespy.com
+
+	;; ports
+	int	GameSpyQueryPort		= 8850
+	int	HostPortDefault			= 7290
+	
+	;; meta-game dependent campaign - the UI will notify the user if he/she has
+	;; not completed the specified dependent campaign before entering the
+	;; the meta-game
+	string MetaGameDependentCampaignIDS = campaign_aa_tutorial
+
+	;; editor
+	string			EditorDefaultActorGroup = group_nation_usa
+
+	;; user interface
+	string 			UIDefenseValueGlyph = ch_shield
+	
+	;; camera
+	;; TODO: change engine-hardcoded value
+	float 			CameraHeight = 100
+
+	;; UI components disabling
+	flag	UIUseSidePanel = false
+	flag	UIUseEconomicImpact = true
+	flag	UIUseRecruitItemFloater = false
+	flag	UIUsePauseButton = true
+	flag	UIUseSupplyStockpile = true
+	flag	UIShouldResetGroupDisplayOffset = false
+	flag	UIShouldDisplayRMCHerosInMapPreview = false
+	flag	UIShouldUseStateLabel  = true
+	flag	UIGroupDisplayUseNameLabel  = true
+	flag	UIOptionsDialogShowFilterSiegeToggle = false
+	flag	UIStagingActionButtonsDynamicLocation = true
+	flag	UIStagingUseTeamFormatLabel = false
+	flag	UIStagingUseNationFlagDecal = true
+	flag	UIStagingUseAlternatePingIcon = true
+	flag	UIFloatersDisplayEndCap = true
+	flag	UIUseMiniMenuBackground = true
+	flag	UIShowFactionExperience = true
+	
+	flag	UIChooseCampaignUseBink = true
+	
+	;; water unit rolling avars
+	float			WaterUnitRollingHeightFrequency = 1
+	float			WaterUnitRollingHeightAmplitude = 0.1
+	float			WaterUnitRollingHeightOffset = 0
+	float			WaterUnitRollingPitchFrequency = 1
+	float			WaterUnitRollingPitchAmplitude = 0.02
+	float			WaterUnitRollingPitchOffset = 2.3562		;; PI * 0.75
+	float			WaterUnitRollingRollFrequency = 1
+	float			WaterUnitRollingRollAmplitude = 0.05
+	float			WaterUnitRollingRollOffset = 0.8
+
+	;; font
+	int				FontFactionExperienceGlyphIndex = 133
+	
+	;; Glyph Data
+	string KingdomGlyphInfo = ch_gem
+	string ObserverGlyphInfo = ch_observer	;; TODO: spyglass or eyeball
+	string PingIconGlyphInfo = ch_pingicon
+	string MetaGameMoneyGlyphInfo = ch_cash
+
+	;;don't display the customize button in the editor actor layer
+	flag EditorShowCustomizeButton = false
+	
+	;; How much scaling is applied to RWorldText, must be greater than 0, smaller makes the text larger
+	float TextWorldScaleFactor = 25
+	
+	;; Supply zone information
+	float ViewZoneFriendlySupplyWidth = 1.25
+	point3 ViewZoneFriendlySupplyColor = 0,1,0
+	
+	;; If the user has never entered Staging, then these defaults will be applied.  If these
+	;; defaults are not present, the game selects the first RMC available.
+	string StagingSinglePlayerDefaultRMCIds = rmc_southerneurope
+	string StagingMultiPlayerDefaultRMCIds = rmc_southerneurope
+	float StagingSinglePlayerDefaultRMCWidth = 384
+	float StagingMultiPlayerDefaultRMCWidth =  384
+	float StagingSinglePlayerDefaultRMCHeight = 384
+	float StagingMultiPlayerDefaultRMCHeight = 384
+	string StagingSinglePlayerDefaultRMCTeamConfig = 0v0v0v0v1v1
+	string StagingMultiPlayerDefaultRMCTeamConfig = 4v4
+	
+	StencilShadowColorMultiplier = 0.7,0.7,0.6
+
+	;; We don't have favorites in A&A.
+	int FavoritesMax = 0
+	int FavoritesRows = 0
+
+	;; Terrain map-edge things
+	flag TerrainSkirt = true
+	string TerrainSkirtTexture = Special/SkirtTexture.dds
+	
+	;; For A&A, consider 32 megs or less to be a low memory video card.
+	int		RendererLowMemoryCutoff = 33
+
+}

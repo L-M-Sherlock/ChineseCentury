@@ -1,0 +1,19 @@
+[Terrain template=Terrain]
+{
+	IDS = boreal_shore
+	name = "#boreal_shore_name"
+	
+	base_priority = 25
+	terrain_group = snow
+	terrain_color = 0.651, 0.663, 0.698
+
+	doodad_frequency = 0.01
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = boreal_shore01
+	name = "#boreal_shore_01_name"
+	texture = borealShore/borealShore01.tga
+	texture_width = 8	
+	texture_height = 8
+}

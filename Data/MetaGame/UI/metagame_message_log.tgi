@@ -1,0 +1,21 @@
+
+;; ---------------------------- Message Log ----------------------------
+
+[MetaGameMessageLog Template=SharedMessageLog]
+{
+	expands_down = true
+
+	[View]
+	L = 57
+	T = 45
+	R = +564
+	B = 70%
+	
+	[ItemPanel]
+	{
+		[MessageWidget]
+		{
+			transparency = 0.5f
+		}
+	}
+}

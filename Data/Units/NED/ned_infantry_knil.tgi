@@ -1,0 +1,76 @@
+[Template AAUnitnedInfantry Template=AAUnitnedProne]
+{
+	name = "#ned_infantry_knil_name"
+	editor_name = "#ned_infantry_knil_editor_name"
+		
+	[View]
+	{
+		resource_prefix = nedInfantryKNIL/nedInfantryKNIL
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+
+	[BodyComponent]
+	health = 210
+	defense = 1
+	
+	[CharacterComponent Template=AAInfantryCharacterComponent]
+
+	[MoverComponent]
+	speed_max = 2.75
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				name = "#ned_infantry_AbilityDefinition_name"
+				recharge_time = 3
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+		
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ned_rifle
+			}
+		}
+		
+		[Ability Template=AAGrenadeLocal]
+		{		
+			[AbilityDefinition Template=AAThrownGrenade]
+			{
+				name = "#ned_infantry_AbilityDefinition_name_2"
+				projectile_ids = grenade01
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 20
+			}
+		}
+	}	
+}
+
+[Thing Template=AAUnitnedInfantry]
+{
+	IDS = ned_infantry_knil
+}
+	

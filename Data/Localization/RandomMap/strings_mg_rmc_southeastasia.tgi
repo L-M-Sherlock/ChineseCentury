@@ -1,0 +1,12 @@
+﻿[Text language = default]
+{
+	ids = Localization/RandomMap/strings_mg_rmc_southeastasia.tgi
+	name = "@Localization/RandomMap/strings_mg_rmc_southeastasia.tgi"
+
+	mg_rmc_southeastasia_village_southeastasia_name = "Villages"
+
+
+;; Strings below added in ldf.txt
+
+	mg_rmc_southeastasia_village_southeastasia_name_2 = "Villages"
+}

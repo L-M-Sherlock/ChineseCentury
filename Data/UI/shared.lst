@@ -1,0 +1,36 @@
+
+;; Shared.LST - View elements and widgets for shared interfaces.
+
+
+;; load UI templates
+/Templates/ui_templates.lst
+
+;; load shared templates
+;;Shared/shared_templates.tgi	;; no more!
+Shared/shared_view_elements_template.tgi
+Shared/shared_widgets_template.tgi
+Shared/shared_panels_template.tgi
+Shared/shared_buttons_template.tgi
+Shared/shared_menus_template.tgi
+Shared/shared_scrollbars_template.tgi
+Shared/shared_editboxes_template.tgi
+Shared/shared_listboxes_template.tgi
+Shared/shared_dropdowns_template.tgi
+Shared/shared_viewports_template.tgi
+Shared/shared_messagebox_template.tgi
+Shared/shared_sliders_template.tgi
+Shared/shared_ready_template.tgi
+Shared/shared_message_log_template.tgi
+Shared/world_rules_panel.tgi
+Shared/world_preview_panel.tgi
+Shared/shared_org_editor_template.tgi
+Shared/shared_mini_map_template.tgi
+Shared/shared_multiplayer_panel.tgi
+Shared/shared_staging_template.tgi
+
+
+;; load game templates (some shared components need in-game specific widgets)
+Game/template_game.tgi
+
+;; cwp 040104 - needs to be loaded after template_game for GamePushButtonWidget
+Shared/file_dialog.tgi

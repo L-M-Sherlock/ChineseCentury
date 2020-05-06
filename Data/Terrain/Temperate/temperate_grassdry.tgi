@@ -1,0 +1,35 @@
+[Terrain template=Terrain]
+{
+	IDS = temperate_grassdry
+	name = "#temperate_grassdry_name"
+	
+	base_priority = 2000
+	terrain_group = dirt	
+	
+	doodad_frequency = 0.025
+	primary_doodad_frequency = 0.20
+
+	[Variation]
+	IDS = temperate_grassdry01
+	name = "#temperate_grassdry_01_name"
+	texture = TemperateGrassDry/TemperateGrassDry01.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.451, 0.604, 0.294
+
+	[Variation]
+	IDS = temperate_grassdry02
+	name = "#temperate_grassdry_02_name"
+	texture = TemperateGrassDry/TemperateGrassDry02.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.461, 0.624, 0.284
+	
+	[Variation]
+	IDS = temperate_grassdry03
+	name = "#temperate_grassdry_03_name"
+	texture = TemperateGrassDry/TemperateGrassDry03.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.431, 0.614, 0.274
+}

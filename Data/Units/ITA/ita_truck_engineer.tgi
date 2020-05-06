@@ -1,0 +1,72 @@
+[Thing Template=AAUnititaVehicleHQTruck]
+{
+	IDS = ita_truck_engineer
+	name = "#ita_truck_engineer_name"
+	editor_name = "#ita_truck_engineer_editor_name"
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 100
+
+		[Production]
+		ammo = 5
+		oil = 5
+
+		[Upkeep]
+		building_limit_consumed = 0
+	}
+	
+	[ElementComponent]
+	{
+		;required_structures = ita_hq_infantry	
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = ita_brigade_engineer
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+
+		;; ids of the trailer actor
+		trailer_actor = ita_trailer_engineer
+
+		[TrailerHitch]
+		{		
+			;; node name and node offset of the truck's hitch
+			node_ids = hitch
+			node_offset = 0, -1.7, .5
+		}
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = engineer_brigade	
+	}	
+		
+	[View]
+	{
+		resource_prefix = itaTruck/itaTruck
+		icon = /UI/Game/BuildingButtons/IconBrigadeEngineer.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ita_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = brigade_engineer_select
+	}
+}

@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = xueyue_portrait
+	name = "#xueyue_portrait_name"
+
+	[View]
+	{
+		resource_prefix = xueyue/xueyuePortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = chn_xueyue_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = xueyue
+	name = "#xueyue_name"
+	description = "#xueyue_description"
+	staging_name = "#xueyue_staging_name"
+	icon_texture_ids = xueyue/xueyuePortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/CHN/xueyue.bik
+	portrait_ids = xueyue_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpArtilleryBarrage]
+	
+	[Ability Template=AASpecialOpDoubleGuard]
+	
+	[Ability Template=AASpecialOpRapidDeployment]
+		
+	[Ability Template=AASpecialOpCorpsCHN]
+}

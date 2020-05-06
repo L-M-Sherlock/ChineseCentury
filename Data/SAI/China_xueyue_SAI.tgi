@@ -1,0 +1,66 @@
+[Ego template = InfantryLowIncomeEgo]
+{
+	IDS										= xueyue_low_income_ego
+	name									= "#China_xueyue_SAI_xueyue_low_income_ego_name"
+} ;; BalancedLowIncomeEgo
+
+[Ego template = InfantryMainGameEgo]
+{
+	IDS										= xueyue_main_game_ego
+	name									= "#China_xueyue_SAI_xueyue_main_game_ego_name"
+} ;; BalancedMainGameEgo
+
+[Ego template = InfantryAmmoEndGameEgo]
+{
+	IDS										= xueyue_ammo_end_game_ego
+	name									= "#China_xueyue_SAI_xueyue_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = InfantryOilEndGameEgo]
+{
+	IDS										= xueyue_oil_end_game_ego
+	name									= "#China_xueyue_SAI_xueyue_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = InfantryWarGameEgo]
+{
+	IDS										= xueyue_war_game_ego
+	name									= "#China_xueyue_SAI_xueyue_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = InfantryFightGameEgo]
+{
+	IDS										= xueyue_fight_game_ego
+	name									= "#China_xueyue_SAI_xueyue_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= xueyue_sai
+	name									= "#China_xueyue_SAI_xueyue_sai_name"
+	description								= "#China_xueyue_SAI_xueyue_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= xueyue_low_income_ego
+
+	[Ego]
+	IDS										= xueyue_main_game_ego
+
+	[Ego]
+	IDS										= xueyue_ammo_end_game_ego
+
+	[Ego]
+	IDS										= xueyue_oil_end_game_ego
+
+	[Ego]
+	IDS										= xueyue_war_game_ego
+
+	[Ego]
+	IDS										= xueyue_fight_game_ego
+
+	[Nation]
+	IDS										= nation_chn
+	
+	[Faction]
+	ids										= xueyue
+} ;; von_manstein SAI

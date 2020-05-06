@@ -1,0 +1,60 @@
+[Thing Template=AAUSAOrganizationMobile]
+{
+	IDS = regiment_usa_infantry_SuperAssault
+	name = "#regiment_usa_infantry_SuperAssault_name"
+	editor_name = "#regiment_usa_infantry_SuperAssault_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 120
+		
+		[Upkeep]
+		ammo = 9
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/USA/USAInfantry/USAInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantryAssaultArtillery.png
+		banner_icon = /Organizations/Banners/Icons/IconInfantryArtillery.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = usa_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = usa_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = usa_infantry_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_mechanized
+		
+		[Slot]	;; front
+		element_IDS = usa_infantry_assault
+		
+		[Slot]	;; rear guard 1
+		element_IDS = usa_infantry_mortar
+
+		[Slot]	;; rear guard 2
+		element_IDS = usa_infantry_mortar
+		
+		[Slot]	;; rear guard 3
+		element_IDS = usa_infantry_mortar
+	
+		[Slot]	;; flank
+		element_IDS = usa_infantry_assault
+		
+		[Slot]	;; captain
+		element_IDS = usa_infantry_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = tank1_company
+	}
+}

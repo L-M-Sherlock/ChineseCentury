@@ -1,0 +1,38 @@
+
+[Console Inherit=SharedPanelWidget]
+{
+	[RenderThreshold]
+	render_threshold = 20
+
+	[View]
+	{
+		R = +600
+		B = +400
+		
+		;; cwp040804 - Children are no longer defined in templates, so must be defined here
+		[Child Template = SharedChildLargePanelVE]
+	}
+
+	[HistoryViewport Template=SharedViewportScrollWidget]
+	{
+		[View]
+		B = 20b
+	}
+
+	[HistoryItemLook Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		B = +50
+
+		[Label Template=SharedSmallLeftLabelVE]
+		multiline = true
+		color = 1,1,1
+	}
+
+	[Editbox Template=SharedEditboxWidget]
+	{
+		[View]
+		T = 20b
+		B = +20	
+	}
+}

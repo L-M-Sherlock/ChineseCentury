@@ -1,0 +1,209 @@
+/**************************************************************************
+
+template_actor_ability_AA.tgi
+Copyright © 2002 TimeGate Studios
+
+DESCRIPTION: Defines a specific ability that an actor may use.
+
+REVISION HISTORY:
+smm021003 - created
+
+**************************************************************************/
+
+
+[template AAAttackLocal inherit=AbilityLocal]
+{
+	reload_time = 0
+	animation1 = attack1
+	idle_animation = idleattack
+	
+	priority = 1
+
+	move_weight = 1
+	use_weight = 1
+	wait_weight = 0
+
+	move_bonus = 3
+	use_bonus = 100
+	wait_bonus = 100
+
+	[AbilityDefinition template=AAAttack]
+	{
+		IDS = null
+		recharge_time = 0.5
+	}
+}
+
+[template AAGunLocal inherit=AbilityLocal]
+{
+	reload_time = 0
+	animation1 = attack1
+	idle_animation = idleattack
+	
+	priority = 1
+
+	move_weight = 1
+	use_weight = 1
+	wait_weight = 0
+
+	move_bonus = 3
+	use_bonus = 50
+	wait_bonus = 50
+	
+	fuzzy_range = 3
+
+	[AbilityDefinition template=AAAttack]
+	{
+		IDS = null
+		recharge_time = 0.5
+	}
+}
+
+[template AAGrenadeLocal inherit=AbilityLocal]
+{
+	reload_time = 0
+	animation1 = projectileattack1
+	idle_animation = idleprojectileattack
+	spawn_bone_ids = rhand	
+	
+	priority = 1
+
+	move_weight = 1
+	use_weight = 1
+	wait_weight = 0
+
+	move_bonus = 75
+	use_bonus = 75
+	wait_bonus = 1
+	
+	fuzzy_range = 3
+
+	[AbilityDefinition template=AAAttack]
+	{
+		IDS = null
+		recharge_time = 0.5
+	}
+}
+
+[template AAMeleeLocal inherit=AbilityLocal]
+{
+	reload_time = 0
+	animation1 = meleeattack1
+	idle_animation = idlemeleeattack
+	
+	priority = 1
+
+	move_weight = 1
+	use_weight = 1
+	wait_weight = 0
+
+	move_bonus = 0
+	use_bonus = 100
+	wait_bonus = 0
+
+	[AbilityDefinition template=AAMeleeAttack]
+	{
+		IDS = null
+		recharge_time = 1.5
+	}
+}
+
+[template AATurretAttackLocal inherit=AAAttackLocal]
+{
+	reload_time = 0
+	animation1 = null
+	idle_animation = null
+	turret_ids = turret
+	spawn_bone_ids = cannon_ae_01
+	
+	priority = 20
+
+	move_weight = 1
+	use_weight = 1
+	wait_weight = 0
+
+	move_bonus = 0
+	use_bonus = 1
+	wait_bonus = 4
+	
+	fuzzy_range = 3
+
+	[AbilityDefinition template=AAAttack]
+	{
+		IDS = null
+		recharge_time = 4
+	}
+}
+
+[template AATurretMGAttackLocal inherit=AAAttackLocal]
+{
+	reload_time = 0
+	animation1 = null
+	idle_animation = null
+	turret_ids = turret
+	spawn_bone_ids = gun_ae_01
+	
+	priority = 20
+
+	move_weight = 1
+	use_weight = 1
+	wait_weight = 0
+
+	move_bonus = 0
+	use_bonus = 1
+	wait_bonus = 4
+	
+	fuzzy_range = 3
+
+	[AbilityDefinition template=AAAttack]
+	{
+		IDS = null
+		recharge_time = 2
+	}
+}
+
+[template AAProjectileLocal inherit=AbilityLocal]
+{
+	reload_time = 0
+	animation1 = projectile1
+	idle_animation = idleprojectile
+	spawn_bone_ids = cannon_ae_01
+	
+	priority = 30
+
+	[AbilityDefinition template=AAProjectileAttack]
+	{
+		IDS = null
+		recharge_time = 1.5
+	}
+}
+
+[Template AARepairLocal inherit=AbilityLocal]
+{
+	reload_time = 0	
+	animation1 = null
+	idle_animation = idle
+	
+	priority = 0
+
+	[AbilityDefinition Template=AARepairAction]
+	{
+		IDS = null
+		recharge_time = 0.0
+	}
+}
+
+[Template AAConstructLocal Inherit=AbilityLocal]
+{
+	reload_time = 0
+	animation1 = null
+	idle_animation = idle
+
+	priority = 0
+
+	[AbilityDefinition Template=AAConstructAction]
+	{
+		IDS = null
+		recharge_time = 0.0
+	}
+}

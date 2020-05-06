@@ -1,0 +1,14 @@
+﻿[Text language = default]
+{
+	ids = Localization/RandomMap/strings_mg_rmc_spain.tgi
+	name = "@Localization/RandomMap/strings_mg_rmc_spain.tgi"
+
+	mg_rmc_spain_name = "Spain"
+	mg_rmc_spain_description = "Spain, as a neutral country in WWII, on the south, it borders Gibraltar (a British overseas territory). On the northeast, along the Pyrenees mountain range, it borders France. Hence this, Spain can be a very critical spot against Britain if controled by Germany."
+
+
+;; Strings below added in ldf.txt
+	mg_rmc_spain_bunkers_coastline_3_name = "Coastline Bunkers 3"
+	mg_rmc_spain_bunkers_coastline_5_name = "Coastline Bunkers 5"
+	mg_rmc_spain_village_spain_name = "Villages"
+}

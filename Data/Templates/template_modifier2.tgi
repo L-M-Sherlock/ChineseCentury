@@ -1,0 +1,29 @@
+/**************************************************************************
+
+template_modifier2.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: Provides the GivePropertyModifier template which must be defined
+		after template_property.tgi.
+
+REVISION HISTORY:
+pcb021103 - created
+
+USAGE:	(see template_modifier.tgi)
+
+	[Modifier Template=GivePropertyModifier]
+
+**************************************************************************/
+
+;; Gives the indicated property to created companies/units with the required_property_ids.
+;; (militia, commissioned companies, summoned companies)
+
+[Template GivePropertyModifier Inherit=Modifier]
+{
+	type = GIVE_PROPERTY
+	string	required_property_IDS
+
+	;; use one or the other
+	[optional PropertyReference template=PropertyReference]
+	[optional Property template=ModifierProperty]
+}

@@ -1,0 +1,87 @@
+
+[RMC template=AAAllRMC]
+{
+	IDS = rmc_northafrica
+	name = "#rmc_northafrica_name"
+	description = "#rmc_northafrica_description"
+	biome = desert
+
+/********************   TERRAIN    ********************/
+
+	[TerrainBlob Template=DesScrubTerrainBlob]
+	
+	[TerrainStreak Template=DesSavannahTerrainStreak]
+
+	[TerrainStreak Template=DesSandTerrainStreak]
+
+	[TerrainBlob Template=DesSavannahTerrainBlob]
+	
+	[TerrainBlob Template=DesSandTerrainBlob]
+	
+	[TerrainBlob Template=DesDirtTerrainBlob]
+	
+	[TerrainBlob Template=DesSandTerrainBlob02]
+	
+	[TerrainBlob Template=DesSavannahTerrainBlob02]
+	
+	[TerrainBlob Template=DesDirtTerrainBlob02]
+	
+	[TerrainBlob Template=DesScrubTerrainBlob02]
+
+/********************   BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=DesMountainTerrainBlob]
+
+	[TerrainBlob Template=DesMountainTerrainBlob02]
+	
+	[TerrainBlob Template=DesMountainTerrainBlob03]
+	
+	[TerrainBlob Template=DesOceanTerrainBlob]
+
+	[TerrainBlob Template=DesOceanTerrainBlob02]
+
+/********************   TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=DesNoisePhase01]
+	
+	[TerrainNoise Template=DesNoisePhase02]
+	
+	[TerrainNoise Template=DesNoisePhase03]
+	
+	[TerrainNoise Template=DesNoisePhase04]
+
+/********************   OTHER ACTOR GROUPS    ********************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_northafrica
+		name = "#rmc_northafrica_village_northafrica_name"
+
+		[Object]
+		object_ids = random_village_northafrica
+		weight = 1
+	}	
+
+/********************    KINGDOM ACTOR GROUPS    ********************/
+
+	[ActorGroup Template=StartCorps]
+	{
+		apply_to_all_major_kingdoms = true
+	
+		[GroupRestriction]
+		group_ids = village_northafrica
+		proximity_min = 96
+		proximity_desired = 0
+	}
+
+	[ActorGroup Template=MachineGunBunkers]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=AntiAirBatteries]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=ArtilleryBatteries]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=HRTankFactory]
+}

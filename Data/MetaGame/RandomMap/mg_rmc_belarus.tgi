@@ -1,0 +1,110 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_belarus
+	name = "#mg_rmc_belarus_name"
+	description = "#mg_rmc_belarus_description"
+	biome = boreal_forest
+
+	sun = SUN_DEFAULT,SUN_DUSK,SUN_MORNING,SUN_NIGHT
+	weather = NONE,NONE,NONE,NONE,SNOW_LIGHT,SNOW_HEAVY,RAIN_LIGHT,RAIN_HEAVY
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 512
+	height = 512
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	Scandanavia
+	starting_pos = 20,160
+	
+	[Kingdom Template = KingdomDefender]
+	;;	Belarus
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	Eastern Europe
+	starting_pos = 160,20
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	Russia
+	starting_pos = 300,300
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	Ukraine
+	starting_pos = 300,20
+
+	[Kingdom Template = KingdomAttacker5]
+	;;	Sweden
+	starting_pos = 20,80
+	type = water
+	
+/********************    TERRAIN    ********************/
+
+	[TerrainBlob Template=BorGrassDryTerrainBlob]
+
+	[TerrainBlob Template=BorTundraTerrainBlob]
+
+	[TerrainBlob Template=BorDirtTerrainBlob]
+
+	[TerrainBlob Template=BorTundraTerrainBlob02]
+
+	[TerrainBlob Template=BorDirtTerrainBlob02]
+
+	[TerrainStreak Template=BorForestTerrainStreak]
+
+	[TerrainBlob Template=BorForestTerrainBlob]
+
+	[TerrainBlob Template=BorGrassDryTerrainBlob02]
+
+/********************    BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=BorMountainTerrainBlob]
+
+	[TerrainBlob Template=BorMountainTerrainBlob02]
+	
+	[TerrainBlob Template=BorMountainTerrainBlob05]
+
+/********************    TERRAIN NOISE   ********************/
+
+	[TerrainNoise Template=BorNoisePhase01]
+	
+	[TerrainNoise Template=BorNoisePhase02]
+	
+	[TerrainNoise Template=BorNoisePhase03]
+	
+	[TerrainNoise Template=BorNoisePhase04]
+	
+	[TerrainNoise Template=BorNoisePhase05]
+
+/*************************    ACTOR GROUPS    **************************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_belarus
+		name = "#mg_rmc_belarus_village_belarus_name"
+
+		[Object]
+		object_ids = random_city_belarus
+		weight = 1
+	}
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_5
+		name = "#mg_rmc_norwayfinland_bunkers_coastline_2_name"
+		search_relative_kingdom_ids = kingdom_attacker_5
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+}

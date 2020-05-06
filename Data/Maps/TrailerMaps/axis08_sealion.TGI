@@ -1,0 +1,20 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Operation Sealion"
+
+	kingdom_1 = "Great Britain"
+	kingdom_0 = "Germany"
+	name_9464 = "Birmingham"
+	name_9471 = "Portsmouth"
+	name_9480 = "Southern London"
+	objective_4 = "Capture Manchester."
+	map_description = "The D-Day landing was a disaster for the Allies.  Their forces in Britain are decimated.  Operation Sea Lion, the invasion of Great Britain, can now commence in earnest.  Using landing craft captured at Normandy, under cover of massive Luftwaffe bombardment, the Germans have already begun their advance.  The Battle of London has begun. "
+	objective_3 = "Capture Birmingham."
+	name_8119 = "Northern London (Replace me with Parliament included in my city.)"
+	objective_2 = "Capture Northern London."
+	map_name = "Operation Sealion"
+	objective_1 = "Capture Southern London."
+	name_9457 = "Manchester"
+	objective_0 = "Capture Portsmouth."
+}

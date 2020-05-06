@@ -1,0 +1,125 @@
+[Thing Template=AAUnitUSAProne]
+{
+	IDS = usa_infantry_assault
+	name = "#usa_infantry_assault_name"
+	editor_name = "#usa_infantry_assault_editor_name"
+
+	hide_if_missing_properties = false
+		
+	[View]
+	{
+		resource_prefix = USAInfantryAssault/USAInfantryAssault
+		
+		[TextureSearchPath]
+		path = /Units/USA/USAInfantry
+		
+		[WhenCreated Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+		
+	[CharacterComponent Template=AAInfantryCharacterComponent]
+
+	[BodyComponent]
+	health = 225
+	defense = 2
+
+	[MoverComponent]
+	speed_max = 2.5
+
+	[ElementComponent]
+	{
+		required_properties = tech_rifle_grenade
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = garand_semi_automatic_rifle
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			use_bonus = 110
+			spawn_bone_ids = gun_ae_01
+						
+			[AbilityDefinition Template=AAInfantryRocket]
+			{				
+				IDS = usa_assault_rocket
+				name = "#usa_infantry_assault_AbilityDefinition_name"
+				icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
+
+				recharge_time = 30
+				range = 12
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 30
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = usa_rocket
+				
+			}
+		}
+
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				IDS = usa_assault_rifle
+				name = "#usa_infantry_AbilityDefinition_name"
+				recharge_time = 3
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 12
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = usa_rifle
+			}
+		}
+		
+		[Ability Template=AAGrenadeLocal]
+		{
+			[AbilityDefinition Template=AAThrownGrenade]
+			{
+				IDS = usa_assault_grenade
+				name = "#usa_infantry_AbilityDefinition_name_2"
+				projectile_ids = grenade01
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 20
+				
+				[WhenStart Template=FXC_Equipment]
+				{
+					action = HIDE
+					location = rhand
+					equipment_type_ids = rifle
+				}
+				
+				[WhenEnd Template=FXC_Equipment]
+				{
+					action = UNHIDE
+					location = rhand
+					equipment_type_ids = rifle
+				}
+			}
+		}
+	}
+}

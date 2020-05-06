@@ -1,0 +1,45 @@
+
+[NameList]
+{
+	IDS = namelist_congo
+	name = "#namelist_congo_name"
+
+	[Name] ;; 01
+	name = "#namelist_congo_Name_name"
+	
+	[Name] ;; 02
+	name = "#namelist_congo_Name_name_2"
+	
+	[Name] ;; 03
+	name = "#namelist_congo_Name_name_3"
+	
+	[Name] ;; 04
+	name = "#namelist_congo_Name_name_4"
+	
+	[Name] ;; 05
+	name = "#namelist_congo_Name_name_5"
+	
+	[Name] ;; 06
+	name = "#namelist_congo_Name_name_6"
+	
+	[Name] ;; 07
+	name = "#namelist_congo_Name_name_7"
+	
+	[Name] ;; 08
+	name = "#namelist_congo_Name_name_8"
+	
+	[Name] ;; 09
+	name = "#namelist_congo_Name_name_9"
+	
+	[Name] ;; 10
+	name = "#namelist_congo_Name_name_10"
+	
+	[Name] ;; 11
+	name = "#namelist_congo_Name_name_11"
+	
+	[Name] ;; 12
+	name = "#namelist_congo_Name_name_12"
+	
+	[Name] ;; 13
+	name = "#namelist_congo_Name_name_13"
+}

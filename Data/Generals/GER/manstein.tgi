@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = manstein_portrait
+	name = "#manstein_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Manstein/MansteinPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = ger_manstein_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = manstein
+	name = "#manstein_name"
+	description = "#manstein_description"
+	staging_name = "#manstein_staging_name"
+	icon_texture_ids = Manstein/MansteinPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/GER/Manstein.bik
+	portrait_ids = manstein_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpVWeapons]
+	
+	[Ability Template=AASpecialOpPropagandaWarGER]
+	
+	[Ability Template=AASpecialOpEspionage]
+	
+	[Ability Template=AASpecialOpCorpsGER]
+}

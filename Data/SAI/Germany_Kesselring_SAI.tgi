@@ -1,0 +1,75 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= kesselring_low_income_ego
+	name									= "#Germany_Kesselring_SAI_kesselring_low_income_ego_name"
+} ;; BalancedLowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= kesselring_main_game_ego
+	name									= "#Germany_Kesselring_SAI_kesselring_main_game_ego_name"
+} ;; BalancedMainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= kesselring_end_game_ego
+	name									= "#Germany_Kesselring_SAI_kesselring_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= kesselring_end_game_ego_TK
+	name									= "#Germany_Kesselring_SAI_kesselring_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= kesselring_end_game_ego_END
+	name									= "#Germany_Kesselring_SAI_kesselring_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= kesselring_end_game_ego_TK_DS
+	name									= "#Germany_Kesselring_SAI_kesselring_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= kesselring_end_game_ego_TK_DS1
+	name									= "#Germany_Kesselring_SAI_kesselring_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= kesselring_sai
+	name									= "#Germany_Kesselring_SAI_kesselring_sai_name"
+	description								= "#Germany_Kesselring_SAI_kesselring_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= kesselring_low_income_ego
+
+	[Ego]
+	IDS										= kesselring_main_game_ego
+
+	[Ego]
+	IDS										= kesselring_end_game_ego
+
+	[Ego]
+	IDS										= kesselring_end_game_ego_TK
+
+	[Ego]
+	IDS										= kesselring_end_game_ego_END
+
+	[Ego]
+	IDS										= kesselring_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= kesselring_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_ger
+	
+	[Faction]
+	ids										= kesselring
+} ;; von_manstein SAI

@@ -1,0 +1,198 @@
+[Thing Template=AAGBRBuildingPackable]
+{
+	IDS = gbr_motor_pool
+	name = "#gbr_motor_pool_Thing_name"
+	editor_name = "#gbr_motor_pool_Thing_editor_name"
+
+	[SupplyComponent]
+	{
+		supply_range = 50
+		is_relay = true
+		stockpile_max = 60
+	}
+
+	[BodyComponent]
+	health = 750
+	defense = 5
+
+	[EconomyComponent]
+	{
+    
+	    supply_required = true
+        
+		[Cost]	
+		money = 115
+
+		[Production]
+		oil = 40
+		
+		[Upkeep]
+		building_limit_consumed = 0
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = motor_pool
+
+		[Property]
+		property_IDS = economic_building	
+
+		[Property]
+		property_IDS = oil
+	}
+	
+	[ResearchComponent]
+	{
+		[ResearchItem]
+		{
+			property_IDS = tech_diesel_engines
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 100
+			}
+		}
+		
+		[ResearchItem]
+		{
+			property_IDS = tech_mechanical_reliability
+			type = GLOBAL
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 100
+			}
+		}	
+		
+		[ResearchItem]
+		{
+			property_IDS = tech_heavy_tank
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 100
+			}
+		}
+
+		[ResearchItem]
+		{
+			property_IDS = tech_tank_flame
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 150
+			}
+		}		
+
+		[ResearchItem]
+		{
+			property_IDS = tech_mechanized_production
+			type = GLOBAL	
+			research_time = 60
+		
+			[ResearchCost Template=CostList]
+			{
+				money = 100
+			}
+		}
+	}
+
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 8
+	}
+
+	[View]
+	{
+		resource_prefix = GBRMotorPool/GBRMotorPool
+		icon = /UI/Game/BuildingButtons/IconMotorPool.png
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_depot_dirt
+			terrain_group_filter = dirt
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_depot_desert
+			terrain_group_filter = desert
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = ground_depot_snow
+			terrain_group_filter = snow
+		}
+		
+		[WhenSelected Template=FXC_PlaySFX]
+		{
+			audio_ids = motor_pool_select
+		}
+		
+		;----- Lights -----
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_02
+			location = spotlight_ae_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = spotlight_03
+			location = spotlight_ae_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = door_large
+			location = door_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = door_large
+			location = door_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = door_large
+			location = door_03
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = door_large
+			location = door_04
+			attached = true
+		}
+	}
+
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_packing
+		audio_ids = pack_7s_sfx
+	}
+	
+	[WhenEnter Template=FXC_PlaySFX]
+	{
+		actor_state = structure_unpacking
+		audio_ids = unpack_7s_sfx
+	}
+}

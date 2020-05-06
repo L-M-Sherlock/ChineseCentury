@@ -1,0 +1,97 @@
+[Thing Template=AAResource]
+{
+	IDS = TankFactory
+	name = "<color=1.0,0.6,1.0>坦克工厂"
+	editor_name = "坦克工厂"
+	description = "<color=1.0,0.6,1.0>HR:占领坦克工厂，可以让坦克生产价格 -25%"
+
+	[DenizenComponent]
+	{
+		guard_range = 20
+		guard_operational_range = 32
+
+		[Organization]
+		organization_ids = regiment_cpc_infantry_halftrack
+
+		behavior = MILITIA_OFFENSIVE
+
+		[Inventory]
+		actor_ids = cpc_infantryt
+		count = 6
+
+		[Inventory]
+		actor_ids = cpc_infantry_cot
+		count = 1
+
+		[DeploymentInfo]
+		{
+			creation_offset = 2.5, 2.0
+			deployment_offset = 2.5, 6.0
+		}
+	}
+
+	[DetectionComponent]
+	{
+		detection_range = 40
+		remote_detection_range = 20
+	}
+
+	[View]
+	{
+		resource_prefix = TankFactory/AmmoFactory
+		minimap_icon = /Minimap/Icons/IconResourceAmmo.tga
+	}
+
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 12
+		scale_min = 1.0
+		scale_max = 1.0
+	}
+
+	[Flags]
+	{
+		;;tributable = true
+		;;tile_locked = false
+		;;ethereal = true
+		tile_locked = true
+		axis_locked = true
+		flatten_terrain = false
+	}
+
+	[Placement]
+	placement_group_IDS = group_resource
+	placement_category = building
+
+	[BodyComponent]
+	{
+		captureable = true
+		health = 1000
+		defense = 10
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 100
+		
+		[Upkeep]
+		building_limit_consumed = 0
+		
+		[Production]
+	}
+
+	[StructureComponent]
+	{
+		[TechnologyProperty]
+		property_ids = HR_TankFactory_Technology
+	}
+
+	[SupplyComponent]
+	{
+		is_relay = true
+		supply_range = 30
+        stockpile_max = 180
+	}
+}

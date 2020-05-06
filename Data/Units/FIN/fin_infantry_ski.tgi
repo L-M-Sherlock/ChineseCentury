@@ -1,0 +1,83 @@
+[Template AAUnitFINInfantry Template=AAUnitFINProne]
+{
+	name = "#fin_infantry_ski_name"
+
+	hide_if_missing_properties = false
+
+	[View]
+	{	
+		resource_prefix = FINInfantrySki/FINInfantrySki
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+	
+	[BodyComponent]
+	health = 250
+	defense = 1
+
+	[CharacterComponent Template=AAInfantryCharacterComponent]
+
+	[MoverComponent]
+	speed_max = 3.5
+
+	[ElementComponent]
+	{
+		required_properties = tech_ski
+	}
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				name = "#fin_infantry_ski_AbilityDefinition_name"
+				recharge_time = 2
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 14
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = fin_rifle
+			}
+		}
+		
+		[Ability Template=AAGrenadeLocal]
+		{
+			[AbilityDefinition Template=AAThrownGrenade]
+			{
+				name = "#fin_infantry_ski_AbilityDefinition_name_2"
+				projectile_ids = grenade01
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 25
+			}
+		}
+	}	
+}
+	
+
+[Thing Template=AAUnitFINInfantry]
+{
+	IDS = fin_infantry_ski
+	editor_name = "#fin_infantry_ski_editor_name"
+}

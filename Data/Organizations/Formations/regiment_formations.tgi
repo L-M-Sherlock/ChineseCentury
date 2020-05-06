@@ -1,0 +1,93 @@
+[Formation template=Formation]
+{
+	IDS = regiment_aggressive
+	name = "#regiment_formations_regiment_aggressive_name"
+	organized = true
+	aggressive = true
+	icon = FormationIcons/FormationIconAssault.png
+	
+	group_formation_ids = group_aggressive
+
+	[Property template=ModifierProperty]
+	{
+		name = "#regiment_formations_regiment_aggressive_Property_name"
+		icon = /Properties/PropertyIcons/IconPropertyFormationAssault.png
+
+		[Modifier template=MultiplyModifier]
+		attribute = SPEED_MAX
+		amount = -.25
+	}
+}
+
+[Formation template=Formation]
+{
+	IDS = regiment_defensive
+	name = "#regiment_formations_regiment_defensive_name"
+	organized = true
+	aggressive = true
+	icon = FormationIcons/FormationIconAggressive.png
+	
+	group_formation_ids = group_defensive
+
+	[Property template=ModifierProperty]
+	{
+		name = "#regiment_formations_regiment_defensive_Property_name"
+		icon =  /Properties/PropertyIcons/IconPropertyFormationAggressive.png
+		
+		[Modifier template=MultiplyModifier]
+		attribute = ATTACK_EFFICIENCY_DESIRED
+		amount = -.25
+	}
+}
+
+[Formation template=Formation]
+{
+	IDS = regiment_column
+	name = "#regiment_formations_regiment_column_name"
+	organized = true
+	aggressive = false
+	icon = FormationIcons/FormationIconColumn.png
+	
+	group_formation_ids = group_column
+	
+	[Property template=ModifierProperty]
+	{
+		name = "#regiment_formations_regiment_column_Property_name"
+		icon =  /Properties/PropertyIcons/IconPropertyFormationColumn.png
+		
+		[Modifier template=MultiplyModifier]
+		attribute = SPEED_MAX
+		amount = +.25
+		
+		[Modifier template=MultiplyModifier]
+		attribute = ATTACK_EFFICIENCY_DESIRED
+		amount = -.50
+	}
+}
+
+[Formation template=Formation]
+{
+	IDS = regiment_herding
+	name = "#regiment_formations_regiment_herding_name"
+	organized = false
+	aggressive = false
+	herding = true
+	icon = /Properties/PropertyIcons/IconPropertyRegrouping.png
+	
+	[Property template=ModifierProperty]
+	{
+		name = "#regiment_formations_regiment_herding_Property_name"
+		icon = null
+	}
+}
+
+[Formation template=Formation]
+{
+	IDS = regiment_hq
+	name = "#regiment_formations_regiment_defensive_name"
+	organized = true
+	aggressive = false
+	icon = FormationIcons/FormationIconAssault.png
+	
+	group_formation_ids = group_defensive
+}

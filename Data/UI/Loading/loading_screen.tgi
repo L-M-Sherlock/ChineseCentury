@@ -1,0 +1,207 @@
+
+;; ------------------------ Loading Screen  Interface ----------------------------
+
+[LoadingScreen Inherit=MenuInterface]
+{
+	;; no slash needed since we just load this as a string in the code then get the texture resource later.
+	string LoadingTextureLeft = UI/Loading/Textures/SplashScreenLeft.tga
+	string LoadingTextureRight = UI/Loading/Textures/SplashScreenRight.tga
+	
+	string DynamicCampaignLoadingTextureLeft = UI/Game/DynamicCampaignLoading/DynamicCampaignLoadingLeft.png
+	string DynamicCampaignLoadingTextureRight = UI/Game/DynamicCampaignLoading/DynamicCampaignLoadingRight.png
+	
+	[View]
+	{
+		L = 0
+		T = 0
+		R = 100%
+		B = 100%
+		
+		;;cwp040804 - children are not longer defined in template, but be added explicitly.
+		;;[Child Template=SharedChildLargePanelVE]
+	}
+}
+
+/*
+[CampaignLabel Template=LabelWidget]
+{
+	[View Template=NoVE]
+	{
+		L = 29
+		T = 21
+		R = 100%
+		B = +16
+
+	}
+
+	[Label Template=SharedSmallLeftLabelVE]
+	{
+		text = "Campaign Name Goes Here"
+		multiline = true
+	}
+}
+*/
+
+[MapNameLabel Template=LabelWidget]
+{
+	[View Template=NoVE]
+	{
+		L = 42
+		T = 85
+		R = 100%
+		B = +30
+
+	}
+
+	[Label Template=SharedSmallLeftLabelVE]
+	{
+		text = "#loading_screen_Label_text"
+		font = large
+		multiline = false
+	}
+}
+
+[MapDescriptionLabel Template=LabelWidget]
+{
+	[View Template=GroupVE]
+	{
+		L = 21
+		T = 140
+		R = +481
+		B = +313
+		
+		[Child Template = SharedBriefingChildPanelVE]
+	}
+
+	[Label Template=SharedSmallLeftLabelVE]
+	{
+		L = 23
+		T = 23
+		R = 23r
+		B = 23b
+		
+		text = "#loading_screen_Label_text_2"
+		multiline = true
+	}
+}
+
+[ObjectivesList inherit=SharedPanelWidget]
+{
+	icon_required = /UI/%s/Game/ObjectivesDisplay/IconObjectiveRequired.tga
+	icon_optional = /UI/%s/Game/ObjectivesDisplay/IconObjectiveOptional.tga
+	icon_completed = /UI/%s/Game/ObjectivesDisplay/IconObjectiveCompleted.tga
+	icon_failed = /UI/%s/Game/ObjectivesDisplay/IconObjectiveFailed.tga
+
+	[View]
+	{
+		L = 5%
+		R = 45%
+		T = 45%
+		B = 75%
+	}
+
+	[SlotViewport inherit=SharedViewportScrollWidget]
+	{
+		[View]
+		{
+			L = 0
+			R = 100%
+			T = 0
+			B = 100%
+		}
+	}
+	
+	[Slot inherit=SharedPanelWidget]
+	{
+		[NameLabel template=LabelWidget]
+		{
+			[View Template=NoVE]
+			{
+				L = 5%
+				R = 80%
+			}
+
+			[Label Template=LabelVE]
+			{
+				text = "#loading_screen_Slot_NameLabel_Label_text"
+				font = small
+				justify = LEFT
+			}
+		}
+
+		[StatusIcon Template=DecalWidget]
+		{
+			[View Template=NoVE]
+			{
+				L = 85%
+				R = 95%
+				B = +25
+			}
+		
+			[Decal Template=DecalVE]
+			;; texture will be set based on formation
+			texture = NULL;
+		}
+	}
+}
+
+[LoadingTextureLeft Template=DecalWidget]
+{
+	[View Template=NoVE]
+	{
+		L = 0
+		T = 128
+		R = 50%
+		B = +512
+	}
+		
+	[Decal Template=DecalVE]
+	;; texture will be set based on formation
+	texture = NULL
+}
+
+[LoadingTextureRight Template=DecalWidget]
+{
+	[View Template=NoVE]
+	{
+		L = 50%
+		T = 128
+		R = 100%
+		B = +512
+	}
+		
+	[Decal Template=DecalVE]
+	;; texture will be set based on formation
+	texture = NULL
+}
+
+[StatusLabel Template=LabelWidget]
+{
+	[View Template=NoVE]
+	{
+		L = 42
+		T = 705
+		R = 45%
+		B = +25
+	}
+
+	[Label Template=SharedSmallLeftLabelVE]
+	{
+		text = "#loading_screen_Label_text_3"
+	}
+}
+
+[ReadyButton Template = MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#loading_screen_Client_View_text_2"
+	}
+	
+	[View]
+	{
+		L = 802
+		T = 690
+	}
+}

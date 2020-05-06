@@ -1,0 +1,15 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Farmland"
+
+	team_1 = "Team 1"
+	team_0 = "Team 0"
+	kingdom_3 = "3"
+	independent_4 = "4"
+	kingdom_2 = "2"
+	kingdom_1 = "1"
+	kingdom_0 = "0"
+	map_name = "<color=0.7,1.0,0.7>Map Pack:Farmland"
+	map_description = "BY:xiaoming"
+}

@@ -1,0 +1,44 @@
+[Thing Template=AATemperateDoodad]
+{
+	IDS = temperate_logs
+	name = "#temperate_logs_name"
+
+	[Size]
+	scale_min = 1.15
+	scale_max = 1.6
+	
+	[View]
+	{
+		aspects_as_variations = true
+		resource_prefix = TemperateLogs/TemperateLog
+		shadow_type = NONE
+		shadow_texture = null
+		align_with_wind = false
+
+		[Aspect Template=Aspect]
+		IDS = temperate_logs_01
+		model = %s01.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = temperate_logs_02
+		model = %s02.nif
+		ground_size = 0.5,0.5			
+		
+		[Aspect Template=Aspect]
+		IDS = temperate_logs_03
+		model = %s03.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = temperate_logs_04
+		model = %s04.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = temperate_logs_05
+		model = %s05.nif
+		ground_size = 0.5,0.5
+	}
+}
+

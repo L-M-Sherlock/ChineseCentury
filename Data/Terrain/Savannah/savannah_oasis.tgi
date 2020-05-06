@@ -1,0 +1,40 @@
+[Terrain template=WaterTerrain]
+{
+	IDS = savannah_oasis
+	name = "#savannah_oasis_name"
+	
+	land = true
+	water = false
+	
+	base_priority = 14000	
+	terrain_group = water
+	terrain_color = 0.333, 0.475, 0.451
+	
+	doodad_frequency = 0.01
+	primary_doodad_frequency = 0.10
+
+/********************	WATER PARAMETERS		********************/
+
+ 	paint_slope = 0.23
+ 	max_slope = 0.20
+ 	paint_max_step = 1.00
+ 	max_depth = 0.75
+	anim_textures_path_prefix= SavannahWater/WaterFrames%04d.dds
+	anim_fps = 10
+
+/********************	WATER VARIATIONS		********************/
+
+	[Variation]
+	IDS = savannah_oasis01
+	name = "#savannah_oasis_01_name"
+	texture = SavannahWater/SavannahWater01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = savannah_oasis02
+	name = "#savannah_oasis_02_name"
+	texture = SavannahWater/SavannahWater01.tga
+	texture_width = 8
+	texture_height = 8
+}

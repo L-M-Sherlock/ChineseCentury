@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = kuribayashi_portrait
+	name = "#kuribayashi_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Kuribayashi/KuribayashiPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = jpn_kuribayashi_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = kuribayashi
+	name = "#kuribayashi_name"
+	description = "#kuribayashi_description"
+	staging_name = "#kuribayashi_staging_name"
+	icon_texture_ids = Kuribayashi/KuribayashiPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/JPN/Kuribayashi.bik
+	portrait_ids = kuribayashi_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpBanzaiCharge]
+		
+	[Ability Template=AASpecialOpEspionage]
+	
+	[Ability Template=AASpecialOpResupply2]
+
+	[Ability Template=AASpecialOpCorpsJPN]
+}

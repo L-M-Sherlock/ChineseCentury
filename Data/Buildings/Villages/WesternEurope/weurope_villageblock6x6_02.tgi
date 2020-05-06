@@ -1,0 +1,74 @@
+[Thing Template=AACityWesternEurope]
+{
+	IDS = weurope_villageblock6x6_02
+	name = "#western_europe_village02_name"
+	editor_name = "#western_europe_village02_editor_name"
+	
+
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 6
+
+	[View]
+	{
+		resource_prefix = WesternEuropeVillage02/WesternEuropeVillage02
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_03
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_04
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_05
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_06
+		attached = true
+	
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_07
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_08
+		attached = true
+	}
+	
+	[CityComponent]
+	{
+		zone_radius = 0
+				
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = Temperate_trees
+			offset = 2.519, -2.16
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = Temperate_trees
+			offset = -.868, 2.459
+			orientation = 0, 1
+		}
+	}
+}

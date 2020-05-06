@@ -1,0 +1,89 @@
+/**************************************************************************
+
+template_world_rule.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: a world rule
+
+REVISION HISTORY:
+pcb071003 - created
+
+USAGE:
+
+	[WorldRule Template=WorldRule]
+	This node goes at the root level to define a world rule available for use in the game.
+	
+
+EXAMPLES:
+
+	[WorldRule Template=WorldRule]
+	{
+		ids = difficulty_level
+		name = "Difficulty Level"
+		type = enum
+		default = EASY
+
+		[EnumValue]
+		ids = EASY
+		name = "Easy"
+
+		[EnumValue]
+		ids = HARD
+		name = "Hard"
+	}
+
+
+**************************************************************************/
+
+[Template WorldRule]
+{
+	string		IDS
+	localized	name
+
+	localized	description = ""
+	
+	;; used for Boolean world rules, the negative and positive name should follow
+	;; this example.  If the world rule is settlements, the false name should be
+	;; "No Settlements" and the true can be "Settlements." Another example would be
+	;; Rated, false "Not Rated" true "Rated." If the values are left as bools, they will
+	;; be populated with the name when loaded.
+	localized   true_name = NULL
+	localized   false_name = NULL
+	
+	;; type - one of bool, int, fixed, enum
+	string		type
+
+	;; use slider - as a slider can be used for ints, fixed, or enum, this option is a bool
+	;; if slider min and slider max are not defined, they will be set to the default value
+	;; if slider min and max are the same, then the slider will not display.
+	;; if a slider is declared for an enum, the min and max will be filled in
+	;; by code using first and last entrys in the enum table
+	;; Step_size is used if a step size wants to be added to the slider. use 0.0 for no step size
+	;; note, step size is only used for Floats.
+	flag		use_slider = false
+	string		slider_min = NULL
+	string		slider_max = NULL
+	float		step_size = 0.0
+
+	;; always_editable - true means this rule can always be changed from staging
+	flag		always_editable = false
+
+	;; hidden - true means can never be changed from staging (set by code)
+	flag		never_editable = false
+
+	;; default - default value.  examples:
+	;;	false
+	;;	3
+	;;	10.5
+	;;	SOME_ENUM_VALUE
+	string		default
+	
+	;; editbox_max_value - max value that can be entered into the editbox.
+	;; -1 means no cap.
+	int			editbox_max_value = -1
+
+	;; EnumValue - if type is enum this lists available options
+	[List EnumValue]
+	string		IDS
+	localized	name
+}

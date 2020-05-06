@@ -1,0 +1,28 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = industrial_sabotage
+	name = "#industrial_sabotage_name"
+	description = "#industrial_sabotage_description"
+	targets = +ENEMY +DEPOT
+	recharge_time = 180
+	projectile_ids = industrial_sabotage_projectile
+
+	icon = /UI/%s/Game/SpecialOps/IconIndustrialSabotage.png
+	
+	[Effect Template=BlastDamageEffect]
+	amount = 1200
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = industrial_sabotage_sfx
+	at = TARGET_GROUND
+
+	[WhenDo Template=FXC_CreateVFX]
+	{
+		VFX_IDS = industrial_sabatoge
+		at = TARGET_GROUND
+		attached = false
+	}
+}

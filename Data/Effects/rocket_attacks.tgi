@@ -1,0 +1,49 @@
+;Where do these two explosions get used and are they still needed? - SFU
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = rocket_explosion4
+	name = "#rocket_attacks_rocket_explosion4_name"
+	model = RocketShot/RocketExplosion.NIF
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = rocket_explosion3
+	name = "#rocket_attacks_rocket_explosion3_name"
+	model = RocketShot/RocketExplosion.NIF
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = rocket_explosion2
+	name = "#rocket_attacks_rocket_explosion2_name"
+	model = RocketShot/RocketExplosion.NIF
+}
+
+
+;-----------------------------------Bazooka Shot Effects
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = bazooka_shot
+	name = "#rocket_attacks_bazooka_shot_name"
+	model = RocketAttacks/BazookaShot.NIF
+	gyroscope = false
+}
+
+;-----------------------------------Bazooka Shot Effects
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = rpg_shot
+	name = "#rocket_attacks_rpg_shot_name"
+	model = RocketAttacks/RPGShot.NIF
+	gyroscope = false
+}
+
+;-----------------------------------Mortar Shot Effects
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = mortar_artillery_shot
+	name = "#rocket_attacks_mortar_artillery_shot_name"
+	model = RocketAttacks/MortarShot.NIF
+	gyroscope = false
+}

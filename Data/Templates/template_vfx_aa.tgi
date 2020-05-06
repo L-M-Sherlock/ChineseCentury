@@ -1,0 +1,72 @@
+/**************************************************************************
+
+template_vfx_aa.tgi
+Copyright © 2004 TimeGate Studios
+
+DESCRIPTION: a complex thing - a visual effect that can be instantiated in
+			the world view.  Does not affect the simulation (i.e. art only).
+			These can also be used to modify the appearance of a character
+			or object.
+
+REVISION HISTORY:
+ick - 02.26.04 - created
+
+
+
+**************************************************************************/
+
+[Template AAVFXModel Template=VFXModel]
+{
+	[TextureSearchPath]
+    path = /Shared/SharedTextures	
+} 
+
+[Template AAVFXModelTemporary Template=VFXModelTemporary]
+{
+	critical = false
+
+	[TextureSearchPath]
+    path = /Shared/SharedTextures	
+}
+
+[Template AAVFXModelPermanent Template=VFXModelPermanent]
+{
+	[TextureSearchPath]
+    path = /Shared/SharedTextures	
+}
+
+[Template AABuildingGroundPlane Template=VFXProjectedTextureLit]
+{
+	attached_scale = 0
+	;; TODO - Change this to be "lower" than scorch.
+	decal_type = terrain
+	decal_fade_time = 10, 1
+	critical = false
+}
+
+[Template AADepotGroundPlaneDirt Template=AABuildingGroundPlane]
+{
+	texture = /Shared/SharedTextures/DepotGroundTemperate.dds
+	attached_scale = 0
+	decal_type = terrain
+	decal_fade_time = 10, 1
+	critical = false
+}
+
+[Template AADepotGroundPlaneSnow Template=AABuildingGroundPlane]
+{
+	texture = /Shared/SharedTextures/DepotGroundArctic.dds
+	attached_scale = 0
+	decal_type = terrain
+	decal_fade_time = 10, 1
+	critical = false
+}
+
+[Template AADepotGroundPlaneDesert Template=AABuildingGroundPlane]
+{
+	texture = /Shared/SharedTextures/DepotGroundDesert.dds
+	attached_scale = 0
+	decal_type = terrain
+	decal_fade_time = 10, 1
+	critical = false
+}

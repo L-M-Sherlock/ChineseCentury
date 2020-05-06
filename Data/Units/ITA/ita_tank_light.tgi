@@ -1,0 +1,96 @@
+[Thing Template=AAUnititaVehicleLightTank]
+{
+	IDS = ita_tank_light
+	name = "#ita_tank_light_name"
+	editor_name = "#ita_tank_light_editor_name"
+	
+	[BodyComponent]
+	{
+		health = 420
+		defense = 8
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3.5
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_02
+			location = exhaust_point_01	
+	  	}
+	}
+
+	[ElementComponent]
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		check_damage_resistance = true
+
+		[Ability template=AATurretAttackLocal]
+		{
+			
+			[AbilityDefinition Template=AALightTankGun]
+			{				
+				name = "#ita_tank_light_AbilityDefinition_name"
+				recharge_time = 6
+				range = 18
+				area = 1
+
+				[Effect Template=APDamageEffect]
+				amount = 40
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ita_cannon_light
+			}
+		}
+		[Ability Template=AATurretAttackLocal]
+		{	
+			[AbilityDefinition Template=AAVehicleMG]
+			{
+				name = "#ita_halftrack_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 2
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 25
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ita_mg_heavy
+			}
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = itaTankLight/itaTankLight
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = itaTankLight/itaTankLightRecoil1.kf
+		}	
+	}
+}

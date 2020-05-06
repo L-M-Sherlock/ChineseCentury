@@ -1,0 +1,63 @@
+[Thing Template=AAChaparralDoodad]
+{
+	IDS = chaparral_cactus
+	name = "#chaparral_cactus_name"
+
+	[Placement]
+	{
+		[Biome]
+		{
+			ids = chaparral
+			weight = 0
+
+			[Terrain]
+			IDS = chaparral_forest
+			weight = 0.075
+			
+			[Terrain]
+			IDS = chaparral_grass
+			weight = 0.05
+
+			[Terrain]
+			IDS = chaparral_grassdry
+			weight = 0.05
+
+			[Terrain]
+			IDS = chaparral_dirt
+			weight = 0.05
+		}
+	}	
+
+	[Size]
+	{
+		scale_min = 0.85
+		scale_max = 1.35
+	}
+	
+	[View]
+	{
+		resource_prefix = ChaparralCactus/ChaparralCactus
+		shadow_type = STENCIL
+		shadow_texture = /effects/shadows/ShrubFullShadow.dds
+		
+		[Aspect Template=Aspect]
+		{
+			ids = chaparral_cactus01
+			model = %s01.nif
+		}
+
+		[Aspect Template=Aspect]	
+		{
+			ids = chaparral_cactus02
+			model = %s02.nif
+		}
+
+		[Aspect Template=Aspect]
+		{
+			ids = chaparral_cactus03
+			model = %s03.nif
+		}
+		
+	}
+
+}

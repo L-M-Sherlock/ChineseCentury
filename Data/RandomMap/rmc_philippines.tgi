@@ -1,0 +1,99 @@
+
+[RMC template=AAAllRMC]
+{
+	IDS = rmc_philippines
+	name = "#rmc_philippines_name"
+	description = "#rmc_philippines_description"
+	biome = tropical_forest
+
+/******************** 	TERRAIN    ********************/
+
+	[TerrainBlob Template=TropGrassTerrainBlob]
+	
+	[TerrainStreak Template=TropGrassDryTerrainStreak]
+
+	[TerrainBlob Template=TropGrassDryTerrainBlob]
+	
+	[TerrainStreak Template=TropDirtTerrainStreak]
+
+	[TerrainBlob Template=TropDirtTerrainBlob]
+	
+	[TerrainStreak Template=TropJungleTerrainStreak]
+
+	[TerrainBlob Template=TropJungleTerrainBlob]
+	
+	[TerrainStreak Template=TropJungleDenseTerrainStreak]
+
+	[TerrainBlob Template=TropJungleDenseTerrainBlob]
+	
+	[TerrainBlob Template=TropDirtTerrainBlob02]
+	
+	[TerrainBlob Template=TropGrassDryTerrainBlob02]
+	
+	[TerrainBlob Template=TropGrassTerrainBlob02]
+
+/******************** 	BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=TropMountainTerrainBlob]
+	
+	[TerrainBlob Template=TropMountainTerrainBlob02]
+	
+	[TerrainBlob Template=TropMountainTerrainBlob03]
+	
+	[TerrainBlob Template=TropMountainTerrainBlob04]
+	
+	[TerrainBlob Template=TropMountainTerrainBlob05]
+	
+	[TerrainBlob Template=TropWaterTerrainBlob]
+
+	[TerrainBlob Template=TropWaterTerrainBlob01]
+
+/******************** 	TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=TropNoisePhase01]
+	
+	[TerrainNoise Template=TropNoisePhase02]
+	
+	[TerrainNoise Template=TropNoisePhase03]
+	
+	[TerrainNoise Template=TropNoisePhase04]
+
+	[TerrainNoise Template=TropNoisePhase05]
+
+	[TerrainNoise Template=TropNoisePhase06]
+
+/********************    VILLAGES    ********************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_philippines
+		name = "#rmc_philippines_village_philippines_name"
+
+		[Object]
+		object_ids = random_village_philippines
+		weight = 1
+	}
+
+/********************    KINGDOM ACTOR GROUPS    ********************/
+
+	[ActorGroup Template=StartCorps]
+	{
+		apply_to_all_major_kingdoms = true
+	
+		[GroupRestriction]
+		group_ids = village_philippines
+		proximity_min = 96
+		proximity_desired = 0
+	}
+
+	[ActorGroup Template=MachineGunBunkers]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=AntiAirBatteries]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=ArtilleryBatteries]
+	apply_to_all_major_kingdoms = true
+
+	[ActorGroup Template=HRTankFactory]
+}

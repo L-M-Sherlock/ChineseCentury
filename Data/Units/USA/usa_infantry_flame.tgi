@@ -1,0 +1,612 @@
+;;--------------------------------------------- Flame Attack ---
+
+[Template AAInfantryFlame Inherit=AAProjectileAttack]
+{
+	projectile_ids = flame_projectile
+	ability_type = null
+	range = 6
+	recharge_time = 1
+	
+	area = 3
+	attenuation_range_min = 1
+	attenuation_factor_max = 0.25
+
+	;;Flames on ground
+	[WhenDo template=FXC_CreateVFX]
+	{
+		VFX_IDS = flame_hit_effect_ground
+		at = TARGET_GROUND
+		attached = false
+	}
+	
+	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = flame_hit_effect
+  		at = TARGET_HIT_POSITION
+  		attached = false
+  		delay = 0.5
+  	}
+			
+	[WhenDo template=FXC_CreateVFX]
+  	{
+  		VFX_IDS = flame_ring
+  		at = TARGET_HIT_POSITION
+  		attached = false
+  		delay = 0.5
+  	}
+} ;; end [Template AAInfantryFlame]
+
+;;------------------------------------------------------
+
+[Thing Template=AAUnitUSAKneel]
+{
+	IDS = usa_infantry_flame
+	name = "#usa_infantry_flame_name"
+	editor_name = "#usa_infantry_flame_editor_name"
+
+	hide_if_missing_properties = false
+		
+	[BodyComponent]
+	{
+		health = 150
+		defense = 1
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 2.5
+	}
+
+	[ElementComponent]
+	{
+		required_properties = tech_infantry_flame
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		
+		[Ability Template=AAAttackLocal]
+		{
+			idle_animation = idleattack
+			spawn_bone_ids = gun_ae_01
+				
+			[AbilityDefinition Template=AAInfantryFlame]
+			{				
+				name = "#usa_infantry_flame_AbilityDefinition_name"
+				range = 6
+				recharge_time = 6
+				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
+				
+				[Effect Template=FireDamageEffect]
+				amount = 40
+							
+				[Effect Template=MoraleLossEffect]
+				amount = 1
+			}
+			
+			
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = USAInfantryFlame/USAInfantryFlame
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+	
+;;----------------------------- Animation Files -------------------------
+	
+	[CharacterComponent]
+	{
+		[Animation Template=MoveAnimation]
+		IDS = walk
+		kf = USAInfantryFlame/USAInfantryFlameWalk.kf ;re-exported 4/9/04
+		walk_distance = 1.3
+				
+		[Animation Template=MoveAnimation]
+		IDS = jog
+		kf = USAInfantryFlame/USAInfantryFlameJog.kf ;re-exported 4/9/04
+		walk_distance = 2.0
+		
+		[Animation Template=IdleAnimation]
+		IDS = idle
+		kf = USAInfantryFlame/USAInfantryFlameIdle.kf ;re-exported 4/9/04
+
+		[Animation Template=IdleAnimation]
+		IDS = idleattack
+		kf = USAInfantryFlame/USAInfantryFlameIdleAttack.kf ;re-exported 4/9/04
+		
+		[Animation Template=FidgetAnimation]
+		IDS = fidget1
+		kf = USAInfantryFlame/USAInfantryFlameFidget1.kf ;re-exported 4/9/04
+				
+		[Animation Template=FidgetAnimation]
+		IDS = fidget2
+		kf = USAInfantryFlame/USAInfantryFlameFidget2.kf ;re-exported 4/9/04
+				
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = USAInfantryFlame/USAInfantryFlameDie1.kf ;re-exported 4/9/04
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die3
+		kf = /Shared/Animations/Units/Infantry/Die3.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die4
+		kf = /Shared/Animations/Units/Infantry/Die4.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die5
+		kf = /Shared/Animations/Units/Infantry/Die5.kf
+		damage_threshold = 25
+		length = 5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die6
+		kf = /Shared/Animations/Units/Infantry/Die6.kf
+		damage_threshold = 25
+		length = 3.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die7
+		kf = /Shared/Animations/Units/Infantry/Die7.kf
+		damage_threshold = 25
+		length = 3.3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die8
+		kf = /Shared/Animations/Units/Infantry/Die8.kf
+		damage_threshold = 5
+		length = 1.6
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die9
+		kf = /Shared/Animations/Units/Infantry/Die9.kf
+		damage_threshold = 5
+		length = 2
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die10
+		kf = /Shared/Animations/Units/Infantry/Die10.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die11
+		kf = /Shared/Animations/Units/Infantry/Die11.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die12
+		kf = /Shared/Animations/Units/Infantry/Die12.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die13
+		kf = /Shared/Animations/Units/Infantry/Die13.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die14
+		kf = /Shared/Animations/Units/Infantry/Die14.kf
+		damage_threshold = 25
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die15
+		kf = /Shared/Animations/Units/Infantry/Die15.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die16
+		kf = /Shared/Animations/Units/Infantry/Die16.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die17
+		kf = /Shared/Animations/Units/Infantry/Die17.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/Infantry/Die18.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die19
+		kf = /Shared/Animations/Units/Infantry/Die19.kf
+		damage_threshold = 0
+		length = 5
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die20
+		kf = /Shared/Animations/Units/Infantry/Die20.kf
+		damage_threshold = 0
+		length = 3
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/Infantry/Die1.kf
+		damage_threshold = 80
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die22
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 666
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+		[Animation Template=AttackAnimation]
+		IDS = attack1
+		kf = USAInfantryFlame/USAInfantryFlameAttack1.kf ;re-exported 4/9/04
+		key_ratio = 0.0
+		length = 3
+		
+		[AspectAnimationSet]
+		{
+			aspect_ids = kneel
+				
+			[Animation Template=MoveAnimation]
+			{
+				IDS = kneeljog
+				kf = USAInfantryFlame/USAInfantryFlameKneelJog.kf ;re-exported 4/9/04
+				walk_distance = 1
+			}
+		
+			[Animation Template=IdleAnimation]
+			{
+				IDS = idleattackkneel
+				kf = USAInfantryFlame/USAInfantryFlameKneelIdleAttack.kf ;re-exported 4/9/04
+			}	
+				
+			[Animation Template=AttackAnimation]
+			{
+				IDS = attack1kneel
+				kf = USAInfantryFlame/USAInfantryFlameKneelAttack1.kf ;re-exported 4/9/04
+				key_ratio = 0.0
+				length = 3
+			}
+		}
+						
+	}
+}

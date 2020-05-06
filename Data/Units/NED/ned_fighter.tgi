@@ -1,0 +1,53 @@
+[Thing Template=AAUnitnedAirplaneFighter]
+{
+	IDS = ned_fighter
+	name = "#ned_fighter_name"
+	editor_name = "#ned_fighter_editor_name"
+	
+	[View]
+	resource_prefix = nedFighter/nedFighter
+
+	[PerformerComponent]
+	{
+		[Ability Template=AAAttackLocal]
+		{
+			idle_animation = idle 
+						
+			[AbilityDefinition Template=AAAirplaneAttackMG]
+			{
+				name = "#ned_fighter_AbilityDefinition_name"
+				mana_cost = 1
+				recharge_time = 2
+				range = 40
+
+				area = 4
+				attenuation_range_min = 1
+				attenuation_factor_max = 0.5
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 50
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = armor_piercing
+				targets = air
+				amount = 40
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ned_mg_heavy
+			}
+		}
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = mg
+		
+		[Property]
+		property_IDS = combat_unit
+
+		[Property]
+		property_IDS = fighter
+	}
+		
+}

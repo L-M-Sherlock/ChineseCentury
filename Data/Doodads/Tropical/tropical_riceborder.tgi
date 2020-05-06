@@ -1,0 +1,33 @@
+[Thing Template=AATropicalDoodad]
+{
+	IDS = tropical_riceborder
+	name = "#tropical_rice_border_name"
+
+	[Flags]
+	random_orientation = false	
+
+	[Placement]
+	{
+		[Biome]
+		IDS = tropical_savannah
+		weight = -1.00		
+	}
+
+	[Size]
+	scale_min = 1.00
+	scale_max = 1.00
+	
+	[View]
+	{
+		resource_prefix = TropicalRiceBorder/TropicalRiceBorder
+		shadow_type = none
+		
+		[TextureSearchPath]
+		path = /Doodads/Tropical/TropicalBambooReeds
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_rice_border01
+		model = %s01.nif
+		ground_size = 2.0,0.5
+	}
+}

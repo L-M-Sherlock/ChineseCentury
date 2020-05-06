@@ -1,0 +1,75 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= Gariboldi_low_income_ego
+	name									= "#Italy_Gariboldi_SAI_Gariboldi_low_income_ego_name"
+} ;; BalancedLowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= Gariboldi_main_game_ego
+	name									= "#Italy_Gariboldi_SAI_Gariboldi_main_game_ego_name"
+} ;; BalancedMainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= Gariboldi_end_game_ego
+	name									= "#Italy_Gariboldi_SAI_Gariboldi_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= Gariboldi_end_game_ego_TK
+	name									= "#Italy_Gariboldi_SAI_Gariboldi_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= Gariboldi_end_game_ego_END
+	name									= "#Italy_Gariboldi_SAI_Gariboldi_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= Gariboldi_end_game_ego_TK_DS
+	name									= "#Italy_Gariboldi_SAI_Gariboldi_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= Gariboldi_end_game_ego_TK_DS1
+	name									= "#Italy_Gariboldi_SAI_Gariboldi_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= Gariboldi_sai
+	name									= "#Italy_Gariboldi_SAI_Gariboldi_sai_name"
+	description								= "#Italy_Gariboldi_SAI_Gariboldi_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= Gariboldi_low_income_ego
+
+	[Ego]
+	IDS										= Gariboldi_main_game_ego
+
+	[Ego]
+	IDS										= Gariboldi_end_game_ego
+
+	[Ego]
+	IDS										= Gariboldi_end_game_ego_TK
+
+	[Ego]
+	IDS										= Gariboldi_end_game_ego_END
+
+	[Ego]
+	IDS										= Gariboldi_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= Gariboldi_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_ita
+	
+	[Faction]
+	ids										= Gariboldi
+} ;; von_manstein SAI

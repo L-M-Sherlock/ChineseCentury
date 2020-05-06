@@ -1,0 +1,21 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Battle of Kursk"
+
+	kingdom_1 = "Kluge's Force"
+	kingdom_0 = "Rokossovski's Force"
+	objective_8 = "1. Kursk must not fall."
+	objective_7 = "3. Destroy Manstein's Corps HQ."
+	objective_6 = "2. Destroy Kluge's Corps HQ."
+	map_description = "With the Russian winter now safely behind them, the Germans are anxious to avenge their defeats at Moscow and Stalingrad.  Armed with their new Tiger tanks, they have launched their summer offensive.  Against them stand the Russian tank forces, drawn en masse for what will prove to be the largest tank battle in history."
+	name_11613 = "Kursk"
+	name_11542 = "Ponyri"
+	independent_2 = "Civilian"
+	name_11551 = "Prochorovka"
+	map_name = "Battle of Kursk"
+	restriction_group_0003 = "German Restriction"
+	kingdom_3 = "Manstein's Force"
+	name_11560 = "Belgorod"
+	restriction_group_0002 = "Russian Restriction"
+}

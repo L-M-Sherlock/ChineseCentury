@@ -1,0 +1,398 @@
+
+/********************    CITY CENTER    ********************/
+
+[Template EasternEuropeCity02 Template=AACityCenterEasternEurope]
+{
+	[BaseTerrain]
+	{
+		padding = 7
+
+		[BiomeBaseTerrain]
+		biome_IDS = chaparral
+		variation_IDS = chaparral_city02
+	}
+	
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 12
+
+	[View]
+	{
+		resource_prefix = EasternEuropeCityCenter02/EasternEuropeCityCenter02
+		
+		[AspectNormal]
+    	visual_radius_estimate = 9
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = city_name_vfx
+		location = base
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_03
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_04
+		attached = true	
+	}
+}
+
+/********************    RANDOM MAP CENTERS    ********************/
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = easterneurope_city02
+	name_list_ids = namelist_easterneurope
+
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_city_easterneurope
+	fixed weight = 1.0
+
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCEasternEuropeCity01]
+
+		[Layout Template=LayoutRMCEasternEuropeCity01]
+
+		[Layout Template=LayoutRMCEasternEuropeCity03]
+
+		[Layout Template=LayoutRMCEasternEuropeCity04]
+
+		[Layout Template=LayoutRMCEasternEuropeCity05]
+
+		[Layout Template=LayoutRMCEasternEuropeCity06]
+
+		[Layout Template=LayoutRMCEasternEuropeCity07]
+
+		[Layout Template=LayoutRMCEasternEuropeCity08]
+
+		[Layout Template=LayoutRMCEasternEuropeCity09]
+	}	
+}
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = ukraine_city02
+	name_list_ids = namelist_ukraine
+
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_city_ukraine
+	fixed weight = 1.0
+
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCEasternEuropeCity01]
+
+		[Layout Template=LayoutRMCEasternEuropeCity01]
+
+		[Layout Template=LayoutRMCEasternEuropeCity03]
+
+		[Layout Template=LayoutRMCEasternEuropeCity04]
+
+		[Layout Template=LayoutRMCEasternEuropeCity05]
+
+		[Layout Template=LayoutRMCEasternEuropeCity06]
+
+		[Layout Template=LayoutRMCEasternEuropeCity07]
+
+		[Layout Template=LayoutRMCEasternEuropeCity08]
+
+		[Layout Template=LayoutRMCEasternEuropeCity09]
+	}	
+}
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = belarus_city02
+	name_list_ids = namelist_belarus
+
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_city_belarus
+	fixed weight = 1.0
+
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCEasternEuropeCity01]
+
+		[Layout Template=LayoutRMCEasternEuropeCity01]
+
+		[Layout Template=LayoutRMCEasternEuropeCity03]
+
+		[Layout Template=LayoutRMCEasternEuropeCity04]
+
+		[Layout Template=LayoutRMCEasternEuropeCity05]
+
+		[Layout Template=LayoutRMCEasternEuropeCity06]
+
+		[Layout Template=LayoutRMCEasternEuropeCity07]
+
+		[Layout Template=LayoutRMCEasternEuropeCity08]
+
+		[Layout Template=LayoutRMCEasternEuropeCity09]
+	}	
+}
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = russia_city02
+	name_list_ids = namelist_russia
+
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_city_russia
+	fixed weight = 1.0
+
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCEasternEuropeCity01]
+
+		[Layout Template=LayoutRMCEasternEuropeCity01]
+
+		[Layout Template=LayoutRMCEasternEuropeCity03]
+
+		[Layout Template=LayoutRMCEasternEuropeCity04]
+
+		[Layout Template=LayoutRMCEasternEuropeCity05]
+
+		[Layout Template=LayoutRMCEasternEuropeCity06]
+
+		[Layout Template=LayoutRMCEasternEuropeCity07]
+
+		[Layout Template=LayoutRMCEasternEuropeCity08]
+
+		[Layout Template=LayoutRMCEasternEuropeCity09]
+	}	
+}
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = caucasus_village02
+	name_list_ids = namelist_caucasus
+
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_caucasus
+	fixed weight = 1.0
+
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCEasternEuropeVillage01]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage02]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage03]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage04]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage05]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage06]
+		
+		[Layout Template=LayoutRMCEasternEuropeVillage07]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage08]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage09]
+	}	
+}
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = uralmountains_village02
+	name_list_ids = namelist_uralmountains
+
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_uralmountains
+	fixed weight = 1.0
+
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCEasternEuropeVillage01]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage02]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage03]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage04]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage05]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage06]
+		
+		[Layout Template=LayoutRMCEasternEuropeVillage07]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage08]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage09]
+	}	
+}
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = siberia_village02
+	name_list_ids = namelist_siberia
+
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_siberia
+	fixed weight = 1.0
+
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCEasternEuropeVillage01]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage02]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage03]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage04]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage05]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage06]
+		
+		[Layout Template=LayoutRMCEasternEuropeVillage07]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage08]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage09]
+	}	
+}
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = easternsiberia_village02
+	name_list_ids = namelist_easternsiberia
+
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_easternsiberia
+	fixed weight = 1.0
+
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCEasternEuropeVillage01]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage02]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage03]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage04]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage05]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage06]
+		
+		[Layout Template=LayoutRMCEasternEuropeVillage07]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage08]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage09]
+	}	
+}
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = kazakhstan_village02
+	name_list_ids = namelist_kazakhstan
+
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_kazakhstan
+	fixed weight = 1.0
+
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCEasternEuropeVillage01]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage02]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage03]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage04]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage05]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage06]
+		
+		[Layout Template=LayoutRMCEasternEuropeVillage07]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage08]
+
+		[Layout Template=LayoutRMCEasternEuropeVillage09]
+	}	
+}
+
+/********************    CAMPAIGN MAP CENTERS    ********************/
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = eastern_europe_city_center02_large
+	editor_name = "#eastern_europe_city_center02_large_editor_name"
+
+	[EconomyComponent Template=EconomyComponentCityLarge]
+	
+	[CityComponent]
+	{
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = boreal_trees
+			offset = -6,-6
+			orientation = 0, -1
+		}
+	}
+}
+
+[Thing Template=EasternEuropeCity02]
+{
+	IDS = eastern_europe_city_center02_small
+	editor_name = "#eastern_europe_city_center02_small_editor_name"
+
+	[EconomyComponent Template=EconomyComponentCitySmall]
+	
+	[CityComponent]
+	{
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = boreal_trees
+			offset = -6,-6
+			orientation = 0, -1
+		}
+	}
+}

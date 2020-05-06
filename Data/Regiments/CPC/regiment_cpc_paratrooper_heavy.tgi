@@ -1,0 +1,83 @@
+[Template AACPCRegimentParatrooper Template=AACPCOrganizationParatrooper]
+{
+	name = "#regiment_cpc_paratrooper_heavy_AACPCRegimentParatrooper_name"
+	editor_name = "#regiment_cpc_paratrooper_heavy_AACPCRegimentParatrooper_editor_name"
+	
+	[EconomyComponent]
+	{
+		[Upkeep]
+		ammo = 9
+	}		
+	
+	[View]
+	{
+		resource_prefix = /Units/CPC/CPCParatrooper/CPCParatrooper
+		icon = /UI/Game/RegimentButtons/IconHeavyParatrooper.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_paratrooper_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_paratrooper_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_paratrooper_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{
+		layout_ids = regiment_infantry
+		recruit_full = true
+		
+		[Slot]	;; front
+		element_IDS = cpc_recon_QB
+		
+		[Slot]	;; rear guard 1
+		element_IDS = cpc_paratrooper
+
+		[Slot]	;; rear guard 2
+		element_IDS = cpc_paratrooper
+		
+		[Slot]	;; rear guard 3
+		element_IDS = cpc_paratrooper_mortar
+	
+		[Slot]	;; support
+		element_IDS = cpc_paratrooper_mg
+		
+		[Slot]	;; captain
+		element_IDS = cpc_Antitank_gun
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = paratrooper_company
+	}
+}
+
+[Thing Template=AACPCRegimentParatrooper]
+{
+	IDS = regiment_cpc_paratrooper_heavy
+
+	transport_actor = cpc_transport_air
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 90
+	}
+
+	[Placement]
+	placement_group_ids = null
+}
+
+[Thing Template=AACPCRegimentParatrooper]
+{
+	IDS = regiment_cpc_paratrooper_heavy_ground
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 60
+	}
+}

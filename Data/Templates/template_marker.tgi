@@ -1,0 +1,28 @@
+/**************************************************************************
+
+template_marker.tgi
+Copyright © 2002 TimeGate Studios
+
+DESCRIPTION:  templates for markers
+
+REVISION HISTORY:
+ick102403 - created
+
+USAGE:
+
+
+**************************************************************************/
+
+[template Marker template=Actor]
+{
+	category = MARKER
+
+	[Flags]
+	{
+		invulnerable = true
+		axis_locked = true
+		tile_locked = true
+		targetable = true
+		ownable = false
+	}
+}

@@ -1,0 +1,38 @@
+[DenizenType = Template=DenizenType]
+{
+	ids = denizen_type_bomber
+	name = "#denizen_types_denizen_type_bomber_name"
+	
+	description = "#denizen_types_denizen_type_bomber_description"
+	icon = /Properties/DenizenIcons/IconDenizenBomber.png
+}
+
+[DenizenType = Template=DenizenType]
+{
+	ids = denizen_type_fighter
+	name = "#denizen_types_denizen_type_fighter_name"
+	
+	description = "#denizen_types_denizen_type_fighter_description"
+	icon = /Properties/DenizenIcons/IconDenizenFighter.png
+}
+
+;; AA2.0 Added..
+[DenizenType = Template=DenizenType]
+{
+	ids = denizen_type_infantry
+	name = "Truck Borne Infantry"
+	
+	description = "The number of Infantry in the Halftrack"
+	;; Need a New Denizen Icon when avaiable..
+	icon = /Properties/DenizenIcons/IconDenizenInfantry.png
+}
+
+[DenizenType = Template=DenizenType]
+{
+	ids = denizen_type_engineer
+	name = "Military Engineer"
+	
+	description = "The number of Military Engineer Avaiable"
+	;; Need a New Denizen Icon when avaiable..
+	icon = /Properties/DenizenIcons/IconDenizenEngineer.png
+}

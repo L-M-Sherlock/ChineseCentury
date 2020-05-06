@@ -1,0 +1,69 @@
+[Thing Template=AAUnitJPNVehicleHQTruck]
+{
+	IDS = jpn_truck_airfield
+	name = "#jpn_truck_airfield_name"
+	editor_name = "#jpn_truck_airfield_editor_name"
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 400
+
+		[Upkeep]
+		ammo = 15
+		oil = 15
+		building_limit_consumed = 0.5
+	}
+
+	[ElementComponent]
+	{
+		required_structures = jpn_brigade_engineer, jpn_motor_pool, jpn_brigade_artillery
+		required_properties = air_support
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = jpn_airfield
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 3
+		acceleration = 2
+		trailer_actor = jpn_trailer_airfield
+
+		[TrailerHitch]
+		{
+			node_ids = hitch
+			node_offset = 0, -1.2, .8
+		}
+	}
+
+ 	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = airfield
+	}
+
+	[View]
+	{
+		resource_prefix = JPNTruckBedless/JPNTruckBedless
+		icon = /UI/Game/BuildingButtons/IconAirfield.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = jpn_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = airfield_select
+	}
+}

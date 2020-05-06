@@ -1,0 +1,22 @@
+
+;; ---------------------------- Minimap ----------------------------
+[MetaGameMiniMap Inherit=MiniMapWidget]
+{
+	visible = true
+	dynamic_position = false
+	minimap_size = 224, 112
+
+	[View Template=NoVE]
+	{
+		L = 61
+		T = 157b
+		R = +224
+		B = +112
+	}
+	
+	[MiniMapVE]	
+	{
+		orientation = 0, -1
+		minimap_is_square = false
+	}
+}

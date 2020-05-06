@@ -1,0 +1,78 @@
+[Template AARUSRegimentEngineer Template=AARUSOrganizationEngineer]
+{
+	name = "#regiment_rus_engineer_AARUSRegimentEngineer_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 75
+		
+		[Upkeep]
+		ammo = 5
+		oil = 5
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/RUS/RUSEngineer/RUSEngineer
+		icon = /UI/Game/RegimentButtons/IconEngineer.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = rus_engineer_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = rus_engineer_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = rus_engineer_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = rus_engineer
+		
+		[Slot]	;; rear guard 1
+		element_IDS = rus_engineer
+
+		[Slot]	;; rear guard 2
+		element_IDS = rus_engineer
+		
+		[Slot]	;; rear guard 3
+		element_IDS = rus_engineer
+	
+		[Slot]	;; flank
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = rus_infantry_co
+	}
+}
+
+[Thing Template=AARUSRegimentEngineer]
+{
+	IDS = regiment_rus_engineer
+	editor_name = "#regiment_rus_engineer_editor_name"
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = engineer
+	}
+}
+
+/*
+[Thing Template=AARUSRegimentEngineer]
+{
+	IDS = regiment_rus_engineer_amphibious
+	name = "Engineer Regiment"
+	editor_name = "RUS Engineer Regiment - Water Recruit"
+	
+	transport_actor = rus_transport_water
+
+	[Placement]
+	placement_group_ids = null
+}
+*/

@@ -1,0 +1,61 @@
+[Thing Template=AACHNOrganizationMobile]
+{
+	IDS = regiment_chn_infantry_armored
+	name = "#regiment_chn_infantry_armored_name"
+	editor_name = "#regiment_chn_infantry_armored_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 175
+		
+		[Upkeep]
+		ammo = 15
+		oil = 15
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CHN/CHNInfantry/CHNInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantryArmored.png
+		banner_icon = /Organizations/Banners/Icons/IconArmor.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = chn_tank_light_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = chn_tank_light_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = chn_tank_light_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_mechanized
+		
+		[Slot]	;; front
+		element_IDS = chn_infantry_usa
+		
+		[Slot]	;; rear guard 1
+		element_IDS = chn_infantry_smg
+
+		[Slot]	;; rear guard 2
+		element_IDS = chn_halftrack
+		
+		[Slot]	;; rear guard 3
+		element_IDS = chn_infantry_mg
+	
+		[Slot]	;; flank
+		element_IDS = chn_tank_medium
+		
+		[Slot]	;; captain
+		element_IDS = chn_tank_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = tank_company
+	}
+}

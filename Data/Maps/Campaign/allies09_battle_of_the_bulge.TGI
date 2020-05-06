@@ -1,0 +1,21 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Battle of the Bulge"
+
+	kingdom_1 = "Model's Force"
+	kingdom_0 = "101st Airborne"
+	trigger_50_element_2 = "UPDATE : A massive German force is approaching."
+	trigger_48_element_2 = "UPDATE : A small German force is approaching."
+	map_description = "Allied intelligence was wrong.  The bridges that were supposed to be lightly defended and easily seized in Operation Market Garden were instead heavily defended by German armored units.  As the allied offensive bogged down, the Germans used the opportunity to plan a desperate winter counterattack through the Ardenne Forest.  Their hope is to capture Antwerp and split the Allied armies.  A victory here could crush the unprepared British and American forces, who lack their usual air superiority due to bad winter weather.  Such a victory would leave the Russians isolated against a renewed German attack.  However, if the Allies can hold off the charge, the fuel-starved Germans will easily fall."
+	trigger_51_element_2 = "UPDATE : A massive German force accompanied by King Tiger Tanks is approaching."
+	kingdom_4 = "Brandenberger's Force"
+	trigger_49_element_3 = "UPDATE : A large German force is approaching."
+	independent_2 = "Civilian"
+	map_name = "Battle of the Bulge"
+	restriction_group_0003 = "AXIS"
+	kingdom_3 = "Patton's Force"
+	objective_0 = "Defend Bastogne until reinforcements arrive in 20 minutes."
+	restriction_group_0002 = "ALLIES"
+	name_3946 = "Bastogne"
+}

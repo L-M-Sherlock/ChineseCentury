@@ -1,0 +1,74 @@
+/**************************************************************************
+
+template_font.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: Contains template nodes for the font system and individual fonts.
+
+REVISION HISTORY:
+bat120602 - created
+
+USAGE:
+
+FIELDS: Fields commented below
+			  
+EXAMPLES:
+	
+**************************************************************************/
+
+[Template CharacterSet]
+{
+	string ids ; unique identifier for this set
+	localized name ;; display name
+	int range_min ;; lowest Unicode character contained in set
+	int range_max ;; highest Unicode character contained in set
+	int undisplayable_character = 35 ; "#" what to display when a glyph comes in
+					   ; that would have been in this set but
+					   ; is not available.
+	int spacing_standin = 116 ; "t" how wide a "space" is for this set.
+}
+
+[Template Font] ; for defining individual fonts
+{
+	string ids ; unique identifier
+	localized name ;; display name
+	int size ;; point size, the actual vertical space taken by glyphs may be different, usually larger
+
+	[list CharacterSet] ; fonts can list character sets they explicitly contain
+	{
+		string ids ; this is the name of the set, it must be predefined in character sets.tgi.
+		string font ; this is the name of the TrueType font this is based on
+
+		;; the backup font is used when, due to resolution resizing, the requested
+		;; font cannot be drawn at a size greater than or equal to use_backup_font_when_smaller_than 
+		;; this normally happens in 800x600 and below, so we just use a basic
+		;; font that we know will look good to prevent obvious visual artifacts
+		;; due to lack of antialiasing on the requested font.
+		string backup_font = null
+		int backup_font_size = 0
+		int use_backup_font_when_smaller_than = 0
+
+		flag antialias = true ;; these are flags passed to Windows' CreateFont()
+		flag bold = false
+		flag italic = false
+		
+		flag outline = false ;; RTSE code will draw a one pixel black outline around each glyph.
+		flag shadow = false ;; RTSE code will draw a one pixel translucent drop shadow for each glyph.
+
+		;; 0=transparent, .5 = 50% translucent, 1.0=opaque
+		float shadow_opacity = .5f
+
+		;; 0=black, 1.0=white
+		float shadow_brightness = .1f
+	}
+}
+
+[Template Glyph]
+{
+	string	ids
+	localized	name = null ;; glyphs are loaded before localization
+	string	display_name ;; so the name must be a string, not localized
+
+	int		index
+	flag		use_own_color = true
+}

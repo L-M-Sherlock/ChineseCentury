@@ -1,0 +1,83 @@
+[Property template=SharedProperty]
+{
+	ids = actor_state_exhausted
+	name = "#actor_states_mind_exhausted_Property_name"
+	icon = /properties/PropertyIcons/IconPropertyExhausted.png
+	
+	[Modifier template=MultiplyModifier]
+	attribute = control_range
+	amount = -.25						
+}
+
+[Property Template=SharedProperty]
+{
+	IDS = infantry_entrench
+	name = "#properties_stance_infantry_entrench_name"
+	icon = /properties/PropertyIcons/IconPropertyEntrenched.png
+	
+	required_properties = infantry
+
+	[Modifier Template=AddModifier]
+	attribute = DV
+	amount = 4
+
+	[Modifier Template=ResistDamageModifier]
+	damage_type = armor_piercing
+	amount = 0.40
+	
+	[Modifier Template=ResistDamageModifier]
+	damage_type = explosive
+	amount = 0.40
+	
+	[Modifier template=MultiplyModifier]
+	attribute = MORALE_LOSS_RATE
+	amount = 0.50
+}
+
+[Property Template=SharedProperty]
+{
+	IDS = vehicle_entrench
+	name = "#properties_actor_states_aa_vehicle_entrench_name"
+	icon = /properties/PropertyIcons/IconPropertyEntrenched.png
+	
+	required_properties = vehicle
+
+	[Modifier Template=AddModifier]
+	attribute = DV
+	amount = 4
+
+	[Modifier Template=ResistDamageModifier]
+	damage_type = armor_piercing
+	amount = 0.20
+	
+	[Modifier Template=ResistDamageModifier]
+	damage_type = explosive
+	amount = 0.20
+	
+	[Modifier template=MultiplyModifier]
+	attribute = MORALE_LOSS_RATE
+	amount = 0.50
+}
+
+[Property template=SharedProperty]
+{
+	ids = actor_state_targeted
+	name = "#properties_actor_states_actor_state_targeted_name"
+	icon = /properties/PropertyIcons/IconPropertyAttack.png
+	description = "#properties_actor_states_actor_state_targeted_description"
+
+	[Modifier Template=MultiplyModifier]
+	attribute = SPEED_MAX
+	amount = -.10			;; NOTE: should be opposite of "column" formation
+}
+
+[Property template=SharedProperty]
+{
+	ids = actor_state_contested
+	name = "#properties_actor_states_aa_actor_state_contested_name"
+	icon = /properties/PropertyIcons/IconPropertyUnderSiege.png
+	description = "#properties_actor_states_aa_actor_state_contested_description"
+
+	required_properties = property_city
+}
+

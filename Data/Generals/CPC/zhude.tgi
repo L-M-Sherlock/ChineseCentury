@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = zhude_portrait
+	name = "#zhude_portrait_name"
+
+	[View]
+	{
+		resource_prefix = zhude/zhudePortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = cpc_zhude_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = zhude
+	name = "#zhude_name"
+	description = "#zhude_description"
+	staging_name = "#zhude_staging_name"
+	icon_texture_ids = zhude/zhudePortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/CPC/zhude.bik
+	portrait_ids = zhude_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpCapture]
+	
+	[Ability Template=AASpecialOpCommunistZeal]
+	
+	[Ability Template=AASpecialOpRapidDeployment]
+		
+	[Ability Template=AASpecialOpCorpsCPC]
+}

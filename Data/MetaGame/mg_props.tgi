@@ -1,0 +1,2587 @@
+;;------------------------------------------------------------------
+;; Templates
+;;------------------------------------------------------------------
+
+[template AAMapProp template=Object]
+{
+	[View]
+	{
+		resource_prefix = Props
+		aspects_as_variations = true
+	}
+
+	;; by default AA doodads are not blocking
+	[Flags]
+	{
+		random_orientation = false
+		blocking = false
+		flying = false
+	}
+
+	[Placement]
+	{
+		; No biome for map props!
+	}
+
+	[Size]
+	{
+		height = 1
+		scale_min = 1.0
+		scale_max = 1.0
+	}
+	
+} ; end [template AAMapProp]
+
+;;------------------------------------------------------------------
+;; Props
+;;------------------------------------------------------------------
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Globe
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Globe.nif
+			skin = NULL
+			visual_radius_estimate = 21.654478
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Chair05
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Chair05.nif
+			skin = NULL
+			visual_radius_estimate = 46.599102
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Paper Orders01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Paper Orders01.nif
+			skin = NULL
+			visual_radius_estimate = 8.192647
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph04.nif
+			skin = NULL
+			visual_radius_estimate = 12.572050
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Chair06
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Chair06.nif
+			skin = NULL
+			visual_radius_estimate = 46.189339
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Paper Orders02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Paper Orders02.nif
+			skin = NULL
+			visual_radius_estimate = 8.709707
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Paper Orders03
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Paper Orders03.nif
+			skin = NULL
+			visual_radius_estimate = 8.894579
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph07
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph07.nif
+			skin = NULL
+			visual_radius_estimate = 13.697689
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph08
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph08.nif
+			skin = NULL
+			visual_radius_estimate = 12.850856
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LUGER 02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LUGER 02.nif
+			skin = NULL
+			visual_radius_estimate = 16.054037
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_BinocCase Strap
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/BinocCase Strap.nif
+			skin = NULL
+			visual_radius_estimate = 21.499332
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Whiskey Gl04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Whiskey Gl04.nif
+			skin = NULL
+			visual_radius_estimate = 22.300262
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Glass01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Glass01.nif
+			skin = NULL
+			visual_radius_estimate = 51.983173
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Whiskey Gl05
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Whiskey Gl05.nif
+			skin = NULL
+			visual_radius_estimate = 17.771629
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table01.nif
+			skin = NULL
+			visual_radius_estimate = 45.636944
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Whiskey Gl06
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Whiskey Gl06.nif
+			skin = NULL
+			visual_radius_estimate = 25.651861
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Glass03
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Glass03.nif
+			skin = NULL
+			visual_radius_estimate = 51.983170
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table02.nif
+			skin = NULL
+			visual_radius_estimate = 39.484287
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table03
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table03.nif
+			skin = NULL
+			visual_radius_estimate = 39.484283
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Binocs (Case)
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Binocs (Case).nif
+			skin = NULL
+			visual_radius_estimate = 19.491314
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Dollar10
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Dollar10.nif
+			skin = NULL
+			visual_radius_estimate = 11.275858
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table04.nif
+			skin = NULL
+			visual_radius_estimate = 34.233665
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table05
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table05.nif
+			skin = NULL
+			visual_radius_estimate = 22.190466
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Dollar12
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Dollar12.nif
+			skin = NULL
+			visual_radius_estimate = 11.718279
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table06
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table06.nif
+			skin = NULL
+			visual_radius_estimate = 34.233669
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table07
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table07.nif
+			skin = NULL
+			visual_radius_estimate = 22.190466
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table08
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table08.nif
+			skin = NULL
+			visual_radius_estimate = 34.233669
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table.nif
+			skin = NULL
+			visual_radius_estimate = 84.119370
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table09
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table09.nif
+			skin = NULL
+			visual_radius_estimate = 22.190466
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LampLight00
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LampLight00.nif
+			skin = NULL
+			visual_radius_estimate = 28.450611
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_BinocCase Strap01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/BinocCase Strap01.nif
+			skin = NULL
+			visual_radius_estimate = 18.848150
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Compass Base Bottom
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Compass Base Bottom.nif
+			skin = NULL
+			visual_radius_estimate = 3.636595
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LampLight01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LampLight01.nif
+			skin = NULL
+			visual_radius_estimate = 29.085575
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LampLight02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LampLight02.nif
+			skin = NULL
+			visual_radius_estimate = 28.852682
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Spoon01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Spoon01.nif
+			skin = NULL
+			visual_radius_estimate = 12.477961
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LampLight03
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LampLight03.nif
+			skin = NULL
+			visual_radius_estimate = 31.729872
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph  Men01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph  Men01.nif
+			skin = NULL
+			visual_radius_estimate = 16.294189
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LampLight04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LampLight04.nif
+			skin = NULL
+			visual_radius_estimate = 32.559418
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LampLight05
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LampLight05.nif
+			skin = NULL
+			visual_radius_estimate = 32.094059
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph  Men03
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph  Men03.nif
+			skin = NULL
+			visual_radius_estimate = 21.834900
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LampLight06
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LampLight06.nif
+			skin = NULL
+			visual_radius_estimate = 23.895916
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Compass02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Compass02.nif
+			skin = NULL
+			visual_radius_estimate = 25.045288
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph  Men04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph  Men04.nif
+			skin = NULL
+			visual_radius_estimate = 21.681280
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book01.nif
+			skin = NULL
+			visual_radius_estimate = 19.510990
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LampLight07
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LampLight07.nif
+			skin = NULL
+			visual_radius_estimate = 25.456732
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book02.nif
+			skin = NULL
+			visual_radius_estimate = 18.428360
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph10
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph10.nif
+			skin = NULL
+			visual_radius_estimate = 12.837899
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LampLight08
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LampLight08.nif
+			skin = NULL
+			visual_radius_estimate = 25.350550
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph11
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph11.nif
+			skin = NULL
+			visual_radius_estimate = 22.222218
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book03
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book03.nif
+			skin = NULL
+			visual_radius_estimate = 15.752469
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph12
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph12.nif
+			skin = NULL
+			visual_radius_estimate = 12.791959
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book04.nif
+			skin = NULL
+			visual_radius_estimate = 16.048491
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book05
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book05.nif
+			skin = NULL
+			visual_radius_estimate = 19.045366
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph14
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph14.nif
+			skin = NULL
+			visual_radius_estimate = 8.265594
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book06
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book06.nif
+			skin = NULL
+			visual_radius_estimate = 18.675381
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book07
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book07.nif
+			skin = NULL
+			visual_radius_estimate = 25.471298
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Compass
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Compass.nif
+			skin = NULL
+			visual_radius_estimate = 17.624449
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Lamp01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Lamp01.nif
+			skin = NULL
+			visual_radius_estimate = 38.905006
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph16
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph16.nif
+			skin = NULL
+			visual_radius_estimate = 14.514277
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book09
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book09.nif
+			skin = NULL
+			visual_radius_estimate = 19.887936
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Lamp04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Lamp04.nif
+			skin = NULL
+			visual_radius_estimate = 31.917511
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Lamp05
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Lamp05.nif
+			skin = NULL
+			visual_radius_estimate = 31.550150
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LugerClip
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LugerClip.nif
+			skin = NULL
+			visual_radius_estimate = 11.319267
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LampGlass01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LampGlass01.nif
+			skin = NULL
+			visual_radius_estimate = 20.536757
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LampGlass02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LampGlass02.nif
+			skin = NULL
+			visual_radius_estimate = 25.653982
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_BookOpen01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/BookOpen01.nif
+			skin = NULL
+			visual_radius_estimate = 24.283089
+		}
+	}
+}
+
+;; [Thing Template=AAMapProp]
+;; {
+;; 	IDS = mgprop_UnderTable
+;; 	name = null
+;; 	
+;; 	[View]
+;; 	{
+;; 		[Aspect Template=Aspect]
+;; 		{
+;; 			ids = default
+;; 			model = %s/UnderTable.nif
+;; 			skin = NULL
+;; 			visual_radius_estimate = 95.480148
+;; 		}
+;; 	}
+;; }
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_BookOpen02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/BookOpen02.nif
+			skin = NULL
+			visual_radius_estimate = 23.030310
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Pencil04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Pencil04.nif
+			skin = NULL
+			visual_radius_estimate = 14.671097
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Bullets
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Bullets.nif
+			skin = NULL
+			visual_radius_estimate = 9.037837
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Paper Orders
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Paper Orders.nif
+			skin = NULL
+			visual_radius_estimate = 8.477501
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_LampGlass04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/LampGlass04.nif
+			skin = NULL
+			visual_radius_estimate = 21.416828
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Pencil05
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Pencil05.nif
+			skin = NULL
+			visual_radius_estimate = 5.379027
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table10
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table10.nif
+			skin = NULL
+			visual_radius_estimate = 34.233673
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table11
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table11.nif
+			skin = NULL
+			visual_radius_estimate = 18.664795
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Magnifier Bottum01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Magnifier Bottum01.nif
+			skin = NULL
+			visual_radius_estimate = 15.205961
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Pencil07
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Pencil07.nif
+			skin = NULL
+			visual_radius_estimate = 11.596910
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table12
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table12.nif
+			skin = NULL
+			visual_radius_estimate = 25.460217
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Pencil08
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Pencil08.nif
+			skin = NULL
+			visual_radius_estimate = 7.731535
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table13
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table13.nif
+			skin = NULL
+			visual_radius_estimate = 51.557217
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document01.nif
+			skin = NULL
+			visual_radius_estimate = 15.392783
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table14
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table14.nif
+			skin = NULL
+			visual_radius_estimate = 46.199837
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document02.nif
+			skin = NULL
+			visual_radius_estimate = 15.594516
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Table15
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Table15.nif
+			skin = NULL
+			visual_radius_estimate = 46.199837
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document03
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document03.nif
+			skin = NULL
+			visual_radius_estimate = 13.022058
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document04.nif
+			skin = NULL
+			visual_radius_estimate = 13.267893
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document05
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document05.nif
+			skin = NULL
+			visual_radius_estimate = 13.424917
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_ClipBoard01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/ClipBoard01.nif
+			skin = NULL
+			visual_radius_estimate = 17.091709
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document06
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document06.nif
+			skin = NULL
+			visual_radius_estimate = 27.352949
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_ClipBoard02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/ClipBoard02.nif
+			skin = NULL
+			visual_radius_estimate = 28.296993
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document07
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document07.nif
+			skin = NULL
+			visual_radius_estimate = 18.873140
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_ClipBoard03
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/ClipBoard03.nif
+			skin = NULL
+			visual_radius_estimate = 22.758825
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document08
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document08.nif
+			skin = NULL
+			visual_radius_estimate = 22.113762
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_ClipBoard04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/ClipBoard04.nif
+			skin = NULL
+			visual_radius_estimate = 13.985137
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document09
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document09.nif
+			skin = NULL
+			visual_radius_estimate = 20.879787
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_ClipBoard05
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/ClipBoard05.nif
+			skin = NULL
+			visual_radius_estimate = 22.424730
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Note
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Note.nif
+			skin = NULL
+			visual_radius_estimate = 24.271984
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book11
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book11.nif
+			skin = NULL
+			visual_radius_estimate = 30.016874
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book12
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book12.nif
+			skin = NULL
+			visual_radius_estimate = 30.167847
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book13
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book13.nif
+			skin = NULL
+			visual_radius_estimate = 21.738216
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book14
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book14.nif
+			skin = NULL
+			visual_radius_estimate = 17.599705
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book15
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book15.nif
+			skin = NULL
+			visual_radius_estimate = 18.196861
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book16
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book16.nif
+			skin = NULL
+			visual_radius_estimate = 16.397026
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book17
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book17.nif
+			skin = NULL
+			visual_radius_estimate = 16.815174
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book18
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book18.nif
+			skin = NULL
+			visual_radius_estimate = 16.078642
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Book19
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Book19.nif
+			skin = NULL
+			visual_radius_estimate = 16.279762
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Coin04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Coin04.nif
+			skin = NULL
+			visual_radius_estimate = 8.900614
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Pencil10
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Pencil10.nif
+			skin = NULL
+			visual_radius_estimate = 13.046064
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Pencil11
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Pencil11.nif
+			skin = NULL
+			visual_radius_estimate = 20.321436
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Coffee01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Coffee01.nif
+			skin = NULL
+			visual_radius_estimate = 12.963610
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Pencil12
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Pencil12.nif
+			skin = NULL
+			visual_radius_estimate = 14.567927
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Coffee02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Coffee02.nif
+			skin = NULL
+			visual_radius_estimate = 12.162591
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Pencil13
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Pencil13.nif
+			skin = NULL
+			visual_radius_estimate = 11.558208
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_BinocCase
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/BinocCase.nif
+			skin = NULL
+			visual_radius_estimate = 19.988916
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Coffee03
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Coffee03.nif
+			skin = NULL
+			visual_radius_estimate = 12.647555
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Croupier02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Croupier02.nif
+			skin = NULL
+			visual_radius_estimate = 30.018532
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Coffee04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Coffee04.nif
+			skin = NULL
+			visual_radius_estimate = 19.676777
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Pencil14
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Pencil14.nif
+			skin = NULL
+			visual_radius_estimate = 12.611552
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Pencil15
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Pencil15.nif
+			skin = NULL
+			visual_radius_estimate = 15.452546
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Coffee05
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Coffee05.nif
+			skin = NULL
+			visual_radius_estimate = 15.385406
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Magnifier Top
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Magnifier Top.nif
+			skin = NULL
+			visual_radius_estimate = 1.509554
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Croupier04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Croupier04.nif
+			skin = NULL
+			visual_radius_estimate = 22.116781
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Pencil16
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Pencil16.nif
+			skin = NULL
+			visual_radius_estimate = 27.138079
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Coffee06
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Coffee06.nif
+			skin = NULL
+			visual_radius_estimate = 18.819704
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document10
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document10.nif
+			skin = NULL
+			visual_radius_estimate = 21.299856
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document11
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document11.nif
+			skin = NULL
+			visual_radius_estimate = 24.402037
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Telephone02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Telephone02.nif
+			skin = NULL
+			visual_radius_estimate = 31.329197
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document12
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document12.nif
+			skin = NULL
+			visual_radius_estimate = 10.839414
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Binocs
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Binocs.nif
+			skin = NULL
+			visual_radius_estimate = 13.115891
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document13
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document13.nif
+			skin = NULL
+			visual_radius_estimate = 14.161379
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document14
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document14.nif
+			skin = NULL
+			visual_radius_estimate = 31.201933
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document15
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document15.nif
+			skin = NULL
+			visual_radius_estimate = 31.332726
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Dollar03
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Dollar03.nif
+			skin = NULL
+			visual_radius_estimate = 9.429544
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document16
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document16.nif
+			skin = NULL
+			visual_radius_estimate = 20.776693
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Magnifier Top01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Magnifier Top01.nif
+			skin = NULL
+			visual_radius_estimate = 14.078959
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Dollar04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Dollar04.nif
+			skin = NULL
+			visual_radius_estimate = 11.163035
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document17
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document17.nif
+			skin = NULL
+			visual_radius_estimate = 20.783882
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Document18
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Document18.nif
+			skin = NULL
+			visual_radius_estimate = 26.488842
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Magnifier Bottum
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Magnifier Bottum.nif
+			skin = NULL
+			visual_radius_estimate = 2.426188
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Dollar07
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Dollar07.nif
+			skin = NULL
+			visual_radius_estimate = 8.957304
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Coins01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Coins01.nif
+			skin = NULL
+			visual_radius_estimate = 11.264664
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Dollar08
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Dollar08.nif
+			skin = NULL
+			visual_radius_estimate = 9.218251
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Coins02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Coins02.nif
+			skin = NULL
+			visual_radius_estimate = 9.865771
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Coins03
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Coins03.nif
+			skin = NULL
+			visual_radius_estimate = 7.946875
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Telephone
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Telephone.nif
+			skin = NULL
+			visual_radius_estimate = 45.125980
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Chair02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Chair02.nif
+			skin = NULL
+			visual_radius_estimate = 47.247826
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph01
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph01.nif
+			skin = NULL
+			visual_radius_estimate = 13.149940
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph02
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph02.nif
+			skin = NULL
+			visual_radius_estimate = 14.894982
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Chair04
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Chair04.nif
+			skin = NULL
+			visual_radius_estimate = 50.087646
+		}
+	}
+}
+
+[Thing Template=AAMapProp]
+{
+	IDS = mgprop_Photograph03
+	name = null
+	
+	[View]
+	{
+		[Aspect Template=Aspect]
+		{
+			ids = default
+			model = %s/Photograph03.nif
+			skin = NULL
+			visual_radius_estimate = 21.577383
+		}
+	}
+}

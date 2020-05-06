@@ -1,0 +1,282 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_southerneurope
+	name = "#mg_rmc_southerneurope_name"
+	description = "#mg_rmc_southerneurope_description"
+	biome = chaparral
+
+	sun = SUN_DEFAULT,SUN_DUSK,SUN_MORNING,SUN_NIGHT
+	weather = NONE,NONE,RAIN_LIGHT
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 448
+	height = 448
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	France
+	starting_pos = 20,160
+	
+	[Kingdom Template = KingdomDefender]
+	;;	Southern Europe
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	Germany
+	starting_pos = 20,300
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	Eastern Europe
+	starting_pos = 160,300
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	French North Africa
+	starting_pos = 160,20
+	type = water
+	
+	[Kingdom Template = KingdomAttacker5]
+	;;	Libya
+	starting_pos = 300,20
+	type = water
+	
+	[Kingdom Template = KingdomAttacker6]
+	;;	Switzerland
+	starting_pos = 20,160
+	
+	[Kingdom Template = KingdomAttacker7]
+	;;	Turkey
+	starting_pos = 300,300
+	type = water
+	
+/*************************    TERRAIN    **************************/
+
+	[TerrainBlob Template=ChapGrassTerrainBlob]
+	
+	[TerrainStreak Template=ChapGrassDryTerrainStreak]
+
+	[TerrainBlob Template=ChapGrassDryTerrainBlob]
+	
+	[TerrainStreak Template=ChapDirtTerrainStreak]
+
+	[TerrainBlob Template=ChapDirtTerrainBlob]
+	
+	[TerrainStreak Template=ChapForestTerrainStreak]
+
+	[TerrainBlob Template=ChapForestTerrainBlob]
+	
+	[TerrainBlob Template=ChapGrassDryTerrainBlob02]
+	
+	[TerrainBlob Template=ChapDirtTerrainBlob02]
+	
+	[TerrainBlob Template=ChapGrassTerrainBlob02]
+
+/*************************    BLOCKING TERRAIN    **************************/
+
+	[TerrainBlob Template=ChapMountainTerrainBlob]
+
+	[TerrainBlob Template=ChapMountainTerrainBlob02]
+	
+	[TerrainBlob Template=ChapMountainTerrainBlob02]
+	
+	[TerrainBlob Template=ChapMountainTerrainBlob03]
+	
+/*************************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = chaparral_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = chaparral_ocean
+	
+/*************************    TERRAIN NOISE    **************************/
+
+	[TerrainNoise Template=ChapNoisePhase01]
+	
+	[TerrainNoise Template=ChapNoisePhase02]
+	
+	[TerrainNoise Template=ChapNoisePhase03]
+	
+	[TerrainNoise Template=ChapNoisePhase04]
+
+	[TerrainNoise Template=ChapNoisePhase05]
+
+	[TerrainNoise Template=ChapNoisePhase06]
+
+/*************************    ACTOR GROUPS    **************************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_southerneurope
+		name = "#mg_rmc_southerneurope_village_southerneurope_name"
+
+		[Object]
+		object_ids = random_village_southerneurope
+		weight = 1
+	}	
+
+	[ActorGroup Template=HomeBunkers]
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_4
+		name = "#mg_rmc_southerneurope_bunkers_coastline_4_name"
+		search_relative_kingdom_ids = kingdom_attacker_4
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_5
+		name = "#mg_rmc_southerneurope_bunkers_coastline_5_name"
+		search_relative_kingdom_ids = kingdom_attacker_5
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+
+        [ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_7
+		name = "#mg_rmc_southerneurope_bunkers_coastline_7_name"
+		search_relative_kingdom_ids = kingdom_attacker_7
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 96		
+		proximity_desired = 320
+	}
+}

@@ -1,0 +1,106 @@
+[Thing Template=AAUnititaVehicleMediumTank]
+{
+	IDS = ita_tank_destroyer
+	name = "#ita_tank_destroyer_name"
+	editor_name = "#ita_tank_destroyer_editor_name"
+
+	[BodyComponent]
+	{
+		health = 600
+		defense = 13
+	}
+	
+	[MoverComponent]
+		
+	{
+		speed_max = 3.5
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_01
+			location = exhaust_point_01	
+	  	}
+	  	
+	  	[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_01
+			location = exhaust_point_02	
+	  	}
+	}
+
+	[ElementComponent]
+	{
+		required_structures = ita_motor_pool
+		morale_value = 10
+	}
+	
+	[PropertiesComponent]
+	{		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+		
+	[PerformerComponent]
+	{
+		check_damage_resistance = true
+
+		[Ability template=AAProjectileLocal]
+		{
+			
+			[AbilityDefinition Template=AAHeavyTankGun]
+			{				
+				name = "#ita_tank_destroyer_AbilityDefinition_name"
+				recharge_time = 6
+				range = 22
+				
+				[Effect Template=APDamageEffect]
+				amount = 75
+
+				[Effect Template=EnchantmentEffect]
+				{
+                    targets = Vehicle
+					[EnchantmentProperty Template=EnchantmentProperty]
+					{
+                        IDS = at_stun_ita2
+                        name = "#gbr_tank_destroyer_AbilityDefinition_Effect_EnchantmentProperty_name"
+                        duration = 3
+                        enchantment_type = ench_type_generic
+                        icon = /properties/PropertyIcons/IconPropertyMovement.png
+			
+						[Modifier Template=FlagModifier]
+						modifier_flag = PARALYZE	
+
+                        [Modifier Template=AddModifier]
+                        attribute = DV
+                        amount = -20       		
+		
+						[WhenAdded template=FXC_CreateVFX]
+						VFX_IDS = smoke_tint
+					}
+				}
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ita_cannon_heavy
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+			}
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = itaTankDestroyer/itaTankDestroyer
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = itaTankDestroyer/itaTankDestroyerRecoil1.kf
+		}
+	}
+}

@@ -1,0 +1,8 @@
+[Banner Template=AABanner]
+{
+	ids = ger_banner
+	name = "#ger_banner_name"
+	
+	model = Shared/Banner.nif
+	resource_prefix = GER/GER
+}

@@ -1,0 +1,35 @@
+[Template AAGeneralPortrait Template=Portrait]
+{
+	[View]
+	{
+  
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationIdle]
+  			{
+  				ids = idle
+  			}
+  
+  			[Animation Template=ObjectAnimationFidget]
+  			{
+  				ids = fidget1
+  			}
+ 			
+  			[Animation Template=ObjectAnimationFidget]
+  			{
+  				ids = fidget2
+  			}
+  		}
+	}
+}
+
+[Template AAGeneral template=Faction]
+{
+
+	placement_group_IDS = NULL
+	icon_texture_ids = NULL
+
+	properties = NULL
+
+	experience_max = 5000
+}

@@ -1,0 +1,41 @@
+[Terrain template=WaterTerrain]
+{
+	IDS = arctic_packice
+	name = "#arctic_packice_name"
+
+	land = true
+	water = false
+	
+	base_priority = 7000
+	terrain_group = snow
+
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.00
+	
+/********************	WATER PARAMETERS    ********************/
+
+	paint_slope = 0.35
+	max_slope = 0.85
+	paint_max_step = 0.35
+	max_depth = 0.65
+	anim_textures_path_prefix = ArcticWater/WaterFrames%04d.dds
+	anim_fps = 8
+
+/********************	WATER VARIATIONS    ********************/
+
+	[Variation]
+	IDS = arctic_packice01
+	name = "#arctic_packice_01_name"
+	texture = ArcticPackIce/ArcticPackIce01.tga
+	texture_width = 16
+	texture_height = 16
+	terrain_color = 0.596, 0.639, 0.690
+
+	[Variation]
+	IDS = arctic_packice02
+	name = "#arctic_packice_02_name"
+	texture = ArcticPackIce/ArcticPackIce02.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.586, 0.649, 0.680
+}

@@ -1,0 +1,21 @@
+/*************************************************************************
+							WIDGETS
+*************************************************************************/
+
+[Template SharedInterface Template=Interface]
+{
+	[View Template=GroupVE]
+	{
+		/*cwp040804 - Children removed, must be defined in any tgi that inherits from this file
+		[Child Template=DecalVETiled]
+		{
+			corners_texture = /UI/%s/Default/Panel/TileCorners.tga
+			left_border_texture = /UI/%s/Default/Panel/TileLeft.tga
+			right_border_texture = /UI/%s/Default/Panel/TileRight.tga
+			top_border_texture = /UI/%s/Default/Panel/TileTop.tga
+			bottom_border_texture = /UI/%s/Default/Panel/TileBottom.tga
+			center_texture = /UI/%s/Default/Panel/TileCenter.tga
+		}
+		*/
+	}
+}

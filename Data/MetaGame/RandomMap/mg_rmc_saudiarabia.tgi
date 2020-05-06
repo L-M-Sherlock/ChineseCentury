@@ -1,0 +1,203 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_saudiarabia
+	name = "#mg_rmc_saudiarabia_name"
+	description = "#mg_rmc_saudiarabia_description"
+	biome = desert
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 448
+	height = 448
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	Persia
+	starting_pos = 20,300
+	
+	[Kingdom Template = KingdomDefender]
+	;;	Saudi Arabia
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	Palestine
+	starting_pos = 20,160
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	East Africa
+	starting_pos = 160,20
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	India
+	starting_pos = 160,300
+	type = water
+	
+/********************   TERRAIN    ********************/
+
+	[TerrainBlob Template=DesScrubTerrainBlob]
+	
+	[TerrainStreak Template=DesSavannahTerrainStreak]
+
+	[TerrainStreak Template=DesSandTerrainStreak]
+
+	[TerrainBlob Template=DesSavannahTerrainBlob]
+	
+	[TerrainBlob Template=DesSandTerrainBlob]
+	
+	[TerrainBlob Template=DesDirtTerrainBlob]
+	
+	[TerrainBlob Template=DesSandTerrainBlob02]
+	
+	[TerrainBlob Template=DesSavannahTerrainBlob02]
+	
+	[TerrainBlob Template=DesDirtTerrainBlob02]
+	
+	[TerrainBlob Template=DesScrubTerrainBlob02]
+
+/********************   BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=DesMountainTerrainBlob]
+
+	[TerrainBlob Template=DesMountainTerrainBlob02]
+	
+	[TerrainBlob Template=DesMountainTerrainBlob03]
+	
+/********************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = EAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = NORTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = EAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTH
+	terrain_ids = desert_ocean
+	
+/********************   TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=DesNoisePhase01]
+	
+	[TerrainNoise Template=DesNoisePhase02]
+	
+	[TerrainNoise Template=DesNoisePhase03]
+	
+	[TerrainNoise Template=DesNoisePhase04]
+
+/********************   ACTOR GROUPS    ********************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_saudiarabia
+		name = "#mg_rmc_saudiarabia_village_saudiarabia_name"
+
+		[Object]
+		object_ids = random_village_saudiarabia
+		weight = 1
+	}	
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_4
+		name = "#mg_rmc_saudiarabia_bunkers_coastline_4_name"
+		search_relative_kingdom_ids = kingdom_attacker_4
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 64		
+		proximity_desired = 320
+	}
+}

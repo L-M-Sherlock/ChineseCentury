@@ -1,0 +1,84 @@
+/**************************************************************************
+
+template_rmc_ocean_aa.tgi
+Copyright © 2004 TimeGate Studios
+
+DESCRIPTION:  Water templates for amphibious assault maps for the RMC
+
+REVISION HISTORY:
+
+
+USAGE:
+
+
+**************************************************************************/
+
+/********************    OCEAN BLOB BLOCKING TERRAIN    ********************/
+
+[Template OceanSmallTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 5,10
+	area_factor = 2.0
+	show_ui = false
+	attach_range = 0
+	blob_size = 48,64
+	consistency = 0.9
+	proximity = 0.9
+	fuzzy_factor = 0.1
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 6,8
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+	}
+}
+
+[Template OceanLargeTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 15,20
+	area_factor = 2.0
+	show_ui = false
+	attach_range = 12
+	blob_size = 64,96
+	consistency = 0.9
+	proximity = 0.9
+	fuzzy_factor = 0.1
+	dir_bias = -1,+1
+	dir_bias_factor	= 2.5
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 6,8
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+	}
+}
+
+[Template OceanHugeTerrainBlob Template=RMCTerrainBlob]
+{
+	range = 25,30
+	area_factor = 2.0
+	show_ui = false
+	attach_range = 16
+	blob_size = 96,128
+	consistency = 0.9
+	proximity = 0.9
+	fuzzy_factor = 0.1
+	dir_bias = -1,+1
+	dir_bias_factor	= 5.0
+
+	[MicroBlobs]
+	{
+		ratio_range = 0.4,0.8
+		blob_size = 6,8
+		consistency = 0.9
+		proximity = 0.9
+		fuzzy_factor = 0.1
+	}
+}
+

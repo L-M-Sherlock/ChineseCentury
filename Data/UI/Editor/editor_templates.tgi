@@ -1,0 +1,426 @@
+
+;; Editor Templates - This file is for templates used only by widgets in UI/%s/Editor/.
+
+;; ------------------------------ Templates ------------------------------
+
+
+[Template EditorPushButtonWidgetBase Template=SharedPushButtonWidgetBase]
+{
+	[View]
+	R = +250
+}
+
+[Template EditorPushButtonWidget Template=SharedPushButtonWidget]
+{
+	[View]
+	R = +185
+	B = +25
+}		
+
+[Template EditorPushButtonWidgetNoArt Template=SharedPushButtonWidgetGeneric]
+{
+	[View]
+	R = +185
+	B = +25
+}		
+		
+[Template EditorSharedListboxWidget Inherit = SharedListBoxWidgetNoArt]
+{
+	[View]
+	{
+		alpha_blending = true
+		corners_texture = /UI/%s/Editor/EditorListBox/EditorListboxTileCorners.tga
+		left_border_texture = /UI/%s/Editor/EditorListBox/EditorListboxTileLeft.tga
+		right_border_texture = /UI/%s/Editor/EditorListBox/EditorListboxTileRight.tga
+		top_border_texture = /UI/%s/Editor/EditorListBox/EditorListboxTileTop.tga
+		bottom_border_texture = /UI/%s/Editor/EditorListBox/EditorListboxTileBottom.tga
+		center_texture = /UI/%s/Editor/EditorListBox/EditorListboxTileCenter.tga
+	}
+	
+	[Scrollbar Template=SharedEditorScrollbarWidget]	
+	
+}
+
+[Template EditorSectionPanelWidget Template=PanelWidget]
+{
+	[View Template=DecalVETiled]
+	{
+		corners_texture = /UI/%s/Default/SectionPanel/TileCorners.tga
+		left_border_texture = /UI/%s/Default/SectionPanel/TileLeft.tga
+		right_border_texture = /UI/%s/Default/SectionPanel/TileRight.tga
+		top_border_texture = /UI/%s/Default/SectionPanel/TileTop.tga
+		bottom_border_texture = /UI/%s/Default/SectionPanel/TileBottom.tga
+		center_texture = /UI/%s/Default/SectionPanel/TileCenter.tga
+	}
+}
+
+[Template EditorLayerCloseButtonVE Template = GroupVE]
+{
+	L = 148
+	T = 1
+	R = +68
+	B = +44
+			
+	[Child Template=DecalVE]
+	when = UNPRESSED
+	alpha_blending = true
+	texture = /UI/%s/Editor/Buttons/EditorButtonPanelClose.PNG
+
+	[Child Template=DecalVE]
+	when = PRESSED
+	alpha_blending = true
+	texture = /UI/%s/Editor/Buttons/EditorButtonPanelClosePressed.png
+	
+	[Child Template=DecalVE]
+	when = FOCUSED
+	alpha_blending = true
+	texture = /UI/%s/Editor/Buttons/EditorButtonPanelCloseFocused.png
+}
+
+[Template EditorBackgroundPanelGroupVE Template=GroupVE]
+{
+	[Child Template=DecalVETiled]
+	{
+		alpha_blending = true
+		corners_texture = /UI/%s/Editor/EditorPanel/EditorMessageBoxTileCorners.png
+		left_border_texture = /UI/%s/Editor/EditorPanel/EditorMessageBoxTileLeft.png
+		right_border_texture = /UI/%s/Editor/EditorPanel/EditorMessageBoxTileRight.png
+		top_border_texture = /UI/%s/Editor/EditorPanel/EditorMessageBoxTileTop.png
+		bottom_border_texture = /UI/%s/Editor/EditorPanel/EditorMessageBoxTileBottom.png
+		center_texture = /UI/%s/Editor/EditorPanel/EditorMessageBoxTileCenter.png
+	}
+}
+
+
+[Template EditorPanel Inherit=PanelWidget]
+{
+	[View Template=GroupVE]
+	{
+		L = 808
+		T = 0
+		R = 100%
+		B = 100%
+		
+		[Child Template=EditorBackgroundPanelGroupVE]
+	}
+
+	[LayerCloseButton Template=PushButtonWidget]
+	{
+		[View Template=GroupVE]
+		{
+			;; cwp041204 - most tgi's inherit from EditorLayerCloseButtonVE, so if you want to move the 
+			;; close button, either change it there, or move it explicitly in the inheriting tgi.
+			L = 178
+			T = 8
+			R = +20
+			B = +20
+
+			/*cwp040804 - children should not be defined in template
+			[Child Template=DecalVE]
+			when = UNPRESSED
+			texture = /UI/%s/Default/Panel/CloseUnpressed.tga
+
+			[Child Template=DecalVE]
+			when = PRESSED
+			texture = /UI/%s/Default/Panel/ClosePressed.tga
+			*/
+		}
+	}
+}
+
+[Template EditorPreviewWindow Template=ModelWidget]
+{
+	[View Template=GameListboxEditorArtworkGroupVE]
+	{
+		L = 46
+		T = 52
+		R = +128
+		B = +128
+	}
+
+	[Model]
+	{
+		L = 0
+		T = 0
+		R = 100%
+		B = 100%
+
+		color = 0,0,0
+
+		fit_model = TRUE
+		render_once = false
+	}
+}
+
+/**************************************************************************
+ 			Economy Bar Templates
+**************************************************************************/
+
+[Template EditorEconomyResourceWidget Inherit=PanelWidget]
+{
+	string resource_IDS
+
+	[View Template=GroupVE]
+	{
+		T = 5
+	}
+
+	[ResourceLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+	
+		[Label Template=LabelVE]
+		{
+			text = ""
+			font = tiny
+			justify = LEFT
+		}
+	}
+}
+
+
+[Template EditorPushButtonGroupVE Template=GroupVE]
+{	
+	;;  regular
+	[Child Template=DecalVETiledHorizontal]
+	when = UNSELECTED + UNFOCUSED
+	alpha_blending = true
+	ends_texture = /UI/%s/Editor/Buttons/EditorButtonEnds.png
+	center_texture = /UI/%s/Editor/Buttons/EditorButtonCenter.png
+	
+	;;  mouse over
+	[Child Template=DecalVETiledHorizontal]
+	when = UNSELECTED + FOCUSED
+	alpha_blending = true
+	ends_texture = /UI/%s/Editor/Buttons/EditorButtonEndsFocused.png
+	center_texture = /UI/%s/Editor/Buttons/EditorButtonCenterFocused.png
+		
+	[Child Template=DecalVETiledHorizontal]
+	when = UNSELECTED + FOCUSED + PRESSED
+	alpha_blending = true
+	ends_texture = /UI/%s/Editor/Buttons/EditorButtonEndsPressed.png
+	center_texture = /UI/%s/Editor/Buttons/EditorButtonCenterPressed.png
+	
+	[Child Template=DecalVETiledHorizontal]
+	when = DISABLED
+	alpha_blending = true
+	ends_texture = /UI/%s/Editor/Buttons/EditorButtonEndsDisabled.png
+	center_texture = /UI/%s/Editor/Buttons/EditorButtonCenterDisabled.png
+}
+
+
+
+
+
+
+;;  Editor Templates
+;;
+;;	MULTILINE EDIT BOX TEMPLATE
+[Template EditorSharedMultilineEditBoxWidget Inherit=EditBoxWidget]
+{
+	int max_lines = 12	; 0 for infinite
+	max_characters = 1024
+	
+	[View Template=DecalVETiled]
+	{
+		alpha_blending = true
+		corners_texture = UI/%s/Editor/EditorListbox/EditorListboxCorners.tga
+		left_border_texture = UI/%s/Editor/EditorListbox/EditorListboxLeft.tga
+		right_border_texture = UI/%s/Editor/EditorListbox/EditorListboxRight.tga
+		top_border_texture = UI/%s/Editor/EditorListbox/EditorListboxTop.tga
+		bottom_border_texture = UI/%s/Editor/EditorListbox/EditorListboxBottom.tga
+		center_texture = UI/%s/Editor/EditorListbox/EditorListboxCenter.tga
+	}
+	
+	[Label Template=LabelWidget]
+	{
+		[View Template=GroupVE]
+		{
+			T = 7
+			L = 13
+			B = 4b
+		}
+
+		[Label Template=LabelVE]
+		{
+			L = 0
+			T = 0
+			R = 26R ;; this reserves space for the scrollbar
+			B = 100%
+
+			text = ""
+			justify = left
+			font = medium
+			color = 1,1,1
+			multiline = true	
+		}
+
+	}
+
+	[Cursor]
+	{
+		[View Template=GroupVE]
+		{
+		}
+		
+		[Label Template=LabelVE]
+		{
+			;; bounds set by code
+			text = ""
+			justify = left
+			font = medium
+			color = 1,1,1
+		}
+	}
+	
+	[Scrollbar Template=SharedEditorScrollbarWidget]
+	{
+		[View Template=NoVE]
+		L = 28r
+		T = 8
+		R = 8r
+		B = 8b		
+	
+		[Slider]
+		grip_display_size = 15
+	}
+}
+
+;;  EDIT BOX TEMPLATE
+;;
+[Template EditorSharedEditBoxWidget Template=EditBoxWidget]
+{
+	max_characters = 512
+	
+	[View Template=DecalVETiledHorizontal]
+	{
+		alpha_blending = true
+		ends_texture = /UI/%s/Editor/EditorEditBox/EditorEditBoxEnds.tga
+		center_texture = /UI/%s/Editor/EditorEditBox/EditorEditBoxCenter.tga
+	}
+	
+	[Cursor]
+	{
+		[View Template=GroupVE]
+		{
+		}
+		
+		[Label Template=SharedMediumLeftLabelVE]
+		{		
+			;; bounds set by code
+			text = ""
+			color = 1,1,1
+		}
+	}
+
+	[Label Template=LabelWidget]
+	{
+		[View Template=GroupVE]
+		{
+			T = 7
+			L = 13
+		}
+
+		[Label Template=SharedMediumLeftLabelVE]
+		{
+			L = 0
+			T = 0
+			R = 9R
+			B = 100%
+
+			text = ""
+			color = 1,1,1
+		}
+	}
+}
+
+
+;;  EDITOR DROP DOWN
+;;
+[Template EditorSilverDropDownWidget Template=DropDownWidget]
+{
+	[View template=GroupVE]
+	{
+		;;L = 16
+		;;R = 16r
+		B = +35		; same as listbox's item_height (but doesn't have to be)
+		
+		[Child Template=DecalVE]
+		{
+			T = 0
+			L = 23r
+			B = 100%
+			when = CLOSED
+			alpha_blending = true
+			texture = /UI/%s/Editor/EditorDropDown/EditorDropDownArrowUnpressed.png
+		}
+
+		[Child Template=DecalVE]
+		{
+			T = 0
+			L = 23r
+			B = 100%
+			when = OPEN
+			alpha_blending = true
+			texture = /UI/%s/Editor/EditorDropDown/EditorDropDownArrowPressed.png
+		}			
+	}
+
+	[SelectedItem Template=SharedDropDownListBoxItemWidget]
+	{
+		[View Template=DecalVETiledHorizontal]
+		{
+			R = 16r
+			
+			alpha_blending = true
+			ends_texture = /UI/%s/Editor/EditorDropDown/EditorDropDownEnds.png
+			center_texture = /UI/%s/Editor/EditorDropDown/EditorDropDownCenter.png
+		}
+		
+		[Label Template=SharedSmallLeftLabelVE]
+		L = 15
+		T = 9
+
+	}
+
+	[OpenButton Template=PushButtonWidget]
+	{
+		[View Template=GroupVE]
+		{
+			T = 0
+			L = 23r
+			;;R = 5r
+			B = 100%
+
+			[Child Template=DecalVE]
+			when = UNPRESSED
+			texture = /UI/%s/Editor/EditorDropDown/EditorDropDownArrowUnpressed.png
+
+			[Child Template=DecalVE]
+			when = PRESSED
+			texture = /UI/%s/Editor/EditorDropDown/EditorDropDownArrowPressed.png
+		}
+	}
+	
+	[ListBox Template=EditorDropDownListBoxWidget]
+	{
+		[ItemLook Template=SharedDropDownListBoxItemWidget]
+		{
+			;; menu item background
+			[View Template=GroupVE]
+			{
+				L = 10	
+				R = 10r
+			}
+		}
+
+		[Scrollbar Template=SharedEditorScrollbarWidget]
+		{
+			[View Template=NoVE]
+			L = 20r
+			T = 4
+			R = 4r
+			B = 4b		
+		}		
+	}
+}

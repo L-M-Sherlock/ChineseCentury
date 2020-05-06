@@ -1,0 +1,165 @@
+[Template AudioAmbient Inherit=AudioSound]
+{
+	IDS = ambient_sample
+	name = "#template_audio_aa_ambient_sample_name"
+
+	files = sounds/borrowed/PLACEHOLDER.wav
+
+	priority = LOW
+	
+	control_flags = WORLD
+	world_flags = FOGGED
+
+	who_flags = EVERYONE
+
+	volume = 50%
+	pitch_adjust = -1%, 1%
+}
+
+[Template AudioAttack Inherit=AudioSound]
+{
+	IDS = attack_sample
+	name = "#template_audio_aa_attack_sample_name"
+
+	files = sounds/borrowed/PLACEHOLDER.wav
+
+	priority = HIGH
+	
+	control_flags = WORLD
+	world_flags = FOGGED
+
+	who_flags = EVERYONE
+
+	pitch_adjust = -1%, 1%
+}
+
+[Template AudioDeath Inherit=AudioSound]
+{
+	IDS = death_sample
+	name = "#template_audio_aa_death_sample_name"
+
+	files = sounds/borrowed/PLACEHOLDER.wav
+
+	priority = HIGH
+	
+	control_flags = WORLD
+	world_flags = FOGGED
+
+	who_flags = EVERYONE
+
+	pitch_adjust = -1%, 1%
+}
+
+[Template AudioCallout Inherit=AudioSound]
+{
+	IDS = callout_sample
+	name = "#template_audio_aa_callout_sample_name"
+
+	files = sounds/PLACEHOLDER.wav
+
+	priority = HIGH
+	
+	control_flags = VOICE
+
+	who_flags = PLAYER
+	
+	simultaneous_limit = 1
+	
+	volume = 70%
+	volume_adjust = 0%
+}
+
+[Template AudioCutscene Inherit=AudioSpeech]
+{
+	IDS = cutscene_sample
+	name = "#template_audio_aa_cutscene_sample_name"
+	
+	ldf_length = 12.617
+	
+	files = Speech/AlliesIntro00.mp3
+	priority = CRITICAL
+
+	control_flags = INTERRUPT, VOICE, CAUSEFADE
+
+	who_flags = EVERYONE
+	
+	simultaneous_limit = 1
+	
+	volume = 100%
+	delay_ms = 0, 0
+	pitch_adjust = 0%, 0%
+	volume_adjust = 0%
+
+}
+
+[Template AudioFeedback Inherit=AudioSound]
+{
+	IDS = feedback_sample
+	name = "#template_audio_aa_feedback_sample_name"
+
+	files = sounds/Feedback/PLACEHOLDER.wav
+
+	priority = HIGH
+
+	who_flags = LOCAL, PLAYER
+	simultaneous_limit = 1
+
+	volume = 90%
+	pitch_adjust = -1%, 1%
+}
+
+[Template AudioInterface Inherit=AudioInterfaceSound]
+{
+	IDS = interface_sample
+	name = "#template_audio_aa_interface_sample_name"
+	
+	files = sounds/Feedback/PLACEHOLDER.wav
+	priority = CRITICAL
+	
+	control_flags = INTERRUPT
+
+	who_flags = LOCAL
+	
+	simultaneous_limit = 2
+	
+	volume = 80%
+	delay_ms = 0, 0
+	pitch_adjust = -5%, 5%
+	volume_adjust = 0%
+}
+
+
+[Template AudioSpecialOp Inherit=AudioSound]
+{
+	IDS = special_op_sample
+	name = "#template_audio_aa_special_op_sample_name"
+	simultaneous_limit = 1
+	files = sounds/borrowed/PLACEHOLDER.wav
+
+	priority = HIGH
+	
+	control_flags = WORLD
+
+	who_flags = EVERYONE
+	
+	volume = 200%
+}
+
+[Template AudioCalloutGeneral Inherit=AudioSound]
+{
+	IDS = callout_sample
+	name = "#template_audio_aa_callout_sample_name_2"
+
+	files = sounds/PLACEHOLDER.wav
+
+	priority = LOW
+	
+	control_flags = VOICE, SEQUENTIAL
+
+	who_flags = LOCAL
+	
+	simultaneous_limit = 1
+	
+	volume = 90%
+	volume_adjust = 0%
+}

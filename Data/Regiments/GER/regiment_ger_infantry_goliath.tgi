@@ -1,0 +1,61 @@
+[Thing Template=AAGEROrganizationInfantry]
+{
+	IDS = regiment_ger_infantry_goliath
+	editor_name = "#regiment_ger_infantry_goliath_editor_name"
+	name = "#regiment_ger_infantry_goliath_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 60
+		
+		[Upkeep]
+		ammo = 9
+		oil = 3
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/GER/GERInfantry/GERInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantryGoliath.png
+		banner_icon = /Organizations/Banners/Icons/IconAntiTank.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ger_aa_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ger_aa_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ger_aa_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_mechanized
+		
+		[Slot]	;; front
+		element_IDS = ger_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = ger_infantry
+
+		[Slot]	;; rear guard 2
+		element_IDS = ger_infantry_mg
+		
+		[Slot]	;; rear guard 3
+		element_IDS = ger_infantry_mg
+	
+		[Slot]	;; flank
+		element_IDS = ger_goliath
+		
+		[Slot]	;; captain
+		element_IDS = ger_infantry_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = antiaircraft_company
+	}
+}

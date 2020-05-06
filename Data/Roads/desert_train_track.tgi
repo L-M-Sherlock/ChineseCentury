@@ -1,0 +1,26 @@
+[Thing Template=Road]
+{
+	IDS = desert_train_track_straight
+	name = "#desert_train_track_straight_name"
+	
+	[View]
+	resource_prefix = DesertTrainTrack/DesertTrainTrackStraight
+}
+
+[Thing Template=Road]
+{
+	IDS = desert_train_track_curve
+	name = "#desert_train_track_curve_name"
+	
+	[View]
+	resource_prefix = DesertTrainTrack/DesertTrainTrackCurve
+}
+
+[Thing Template=Road]
+{
+	IDS = desert_train_track_bend
+	name = "#desert_train_track_bend_name"
+	
+	[View]
+	resource_prefix = DesertTrainTrack/DesertTrainTrackBend
+}

@@ -1,0 +1,42 @@
+[Template Turret]
+{
+	string	turret_ids
+
+	;; how many degrees turret can rotate every second
+	;; NOTE: must be between 0 and 360 (value of 0 means turret will not rotate)
+	fixed	yaw_rotation_per_sec_degrees = 360
+	fixed	pitch_rotation_per_sec_degrees = 360
+	
+	;; over how many degree turret can rotate (this is from end to end, so half this value to the
+	;; left of the turret's start yaw, and half to the right)
+	;; NOTE: must be between 0 and 360 (value of 0 means turret will not rotate, value of 360 means
+	;; turret can rotate over entire range
+	fixed	yaw_rotation_range_degrees = 360
+	
+	;; specify the valid pitch range for the turret; start and end must fall between -90o and +90o and
+	;; start must be less than end (because range goes from start to end)
+	fixed	pitch_rotation_range_start_degrees = 0
+	fixed	pitch_rotation_range_end_degrees = 0
+	
+	;; initial orientation of turret
+	;; NOTE: must be between 0 and 360
+	fixed	yaw_start_degrees = 0
+	
+	;; turret start or default pitch - must be between pitch_rotation_range_start_degrees
+	;; and pitch_rotation_range_end_degrees
+	fixed	pitch_start_degrees = 0
+
+	;; offset of turret from center of actor
+	point2	offset = 0,0
+	
+	;; does the turret reset after its idle time reaches the below reset time?
+	flag	can_reset = true
+
+	;; idle time in seconds until the turret resets to its starting yaw
+	;; NOTE: Need to make sure this is longer than the recharge time of the ability which
+	;; uses this turret.  Otherwise, it will start resetting the turret and then re-aim again
+	fixed	reset_time = 10
+
+	;; can the turret start aiming at the target before we get to the target?
+	flag	can_preaim = true
+}

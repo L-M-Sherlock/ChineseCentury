@@ -1,0 +1,137 @@
+[Thing Template=AACityWesternEurope]
+{
+	IDS = weurope_villageblock8x10_01
+	name = "#western_europe_village05_name"
+	editor_name = "#western_europe_village05_editor_name"
+	
+	[Size]
+	blocking_shape = RECT
+	rect_width = 8
+	rect_height = 10
+
+	[View]
+	{
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_01
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_02
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_03
+			attached = true
+		}
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_04
+			attached = true
+		}
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_05
+			attached = true
+		}
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_06
+			attached = true
+		}
+	
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_07
+			attached = true
+		}
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_08
+			attached = true
+		}
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_09
+			attached = true
+		}
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_10
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_11
+			attached = true
+		}
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_12
+			attached = true
+		}
+		
+		resource_prefix = WesternEuropeVillage05/WesternEuropeVillage05
+		
+		[AspectNormal]
+    ground_size = 4,6.5
+	}
+	[CityComponent]
+	{
+		zone_radius = 0
+				
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = Temperate_trees
+			offset = 3.254, -4.196
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = Temperate_trees
+			offset = 3.161, -2.1
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = Temperate_trees
+			offset = .687, 3.746
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = Temperate_trees
+			offset = -.832, 4.797
+			orientation = 0, 1
+
+			[Object Template=CityObject]
+			object_ids = Temperate_Hedges
+			offset = 2.806, -.552
+			orientation = 0, 1
+		}
+	}
+
+}

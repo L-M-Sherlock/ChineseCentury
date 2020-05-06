@@ -1,0 +1,32 @@
+[Terrain template=Terrain]
+{
+	IDS = boreal_city
+	name = "#boreal_city_name"
+	
+	base_priority = 14000
+	terrain_group = snow
+	terrain_color = 0.533, 0.573, 0.388
+	
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.00
+	
+	[Property]
+	property_IDS = terrain_city_infantry
+	
+	[Property]
+	property_IDS = terrain_city_vehicles
+	
+	[Variation]
+	IDS = boreal_city01
+	name = "#boreal_city_01_name"
+	texture = BorealCity/BorealCity01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = boreal_city02
+	name = "#boreal_city_02_name"
+	texture = BorealCity/BorealCity02.tga
+	texture_width = 8
+	texture_height = 8
+}

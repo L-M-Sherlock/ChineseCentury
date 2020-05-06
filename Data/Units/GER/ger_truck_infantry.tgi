@@ -1,0 +1,63 @@
+[Thing Template=AAUnitGERVehicleHQTruck]
+{
+	IDS = ger_truck_infantry
+	name = "#ger_truck_infantry_name"
+	editor_name = "#ger_truck_infantry_editor_name"
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 250
+
+		[Production]
+		money = 18
+		ammo = 7
+		oil = 3
+		unit_limit_provided = 5
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = ger_hq_infantry
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+		trailer_actor = ger_trailer_infantry
+
+		[TrailerHitch]
+		{
+			node_ids = hitch
+			node_offset = 0, -1.8, .5
+		}
+	}
+
+	[Placement]
+	placement_group_ids = null
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = captain
+		
+		[Property]
+		property_ids = infhq		
+	}
+	
+	[View]
+	{
+		resource_prefix = GERTruck/GERTruck
+		icon = /UI/Game/BuildingButtons/IconHQInfantry.png
+	}
+}

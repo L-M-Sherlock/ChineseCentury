@@ -1,0 +1,19 @@
+[Thing Inherit=AATrailerTwoTires]
+{
+	IDS = ita_trailer_motor
+	name = "#ita_trailer_motor_name"
+	editor_name = "#ita_trailer_motor_editor_name"
+
+		[MoverComponent]
+	{
+		[TrailerHitch]		
+		;; node name and node offset of the truck's hitch
+		node_ids = hitch
+		node_offset = 0, 1.5, .8
+	}
+	
+	[View]
+	{
+		resource_prefix = itaTrailerMotor/itaTrailerMotor
+	}
+}

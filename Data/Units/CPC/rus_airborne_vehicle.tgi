@@ -1,0 +1,151 @@
+[Thing Template=AAUnitCPCVehicleJeep]
+{
+	IDS = rus_airborne_vehicle
+	name = "#cpc_car_armored_co_Thing_name"
+	editor_name = "#cpc_car_armored_co_Thing_editor_name"
+
+	[Flags]
+	conform_to_terrain = false
+
+	[BodyComponent]
+	{
+		health = 250
+		defense = 6
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 6
+		acceleration = 6
+	}
+
+	[ElementComponent]
+    {
+        morale_value = 8
+		required_structures = cpc_motor_pool
+     }
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = captain
+		
+		[Property]
+		property_IDS = combat_unit
+
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+	}
+
+/*    [DenizenComponent]
+	{
+		guard_range = 30
+		guard_operational_range = 45
+
+
+		[Organization]
+		organization_ids = regiment_cpc_infantry_halftrack
+			
+		behavior = MILITIA_OFFENSIVE
+		
+
+		[Inventory]
+		actor_ids = cpc_infantryt
+		count = 3
+
+		[Inventory]
+		actor_ids = cpc_infantry_cot
+		count = 1
+
+
+
+	}
+*/	
+	[PerformerComponent]
+	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 45
+			yaw_rotation_range_degrees = 360
+			yaw_start_degrees = 0
+			offset = -0.097,0.595
+		}
+		
+		[Ability Template=AAAttackLocal]
+		{
+			turret_ids = Turret
+						
+			[AbilityDefinition Template=AAInfantryMG]
+			{
+				name = "#cpc_car_armored_co_AbilityDefinition_name"
+				area = 1.5
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				
+				recharge_time = 1
+				range = 16
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 16
+				
+				[WhenDo Template=FXC_PlaySFX]
+				audio_ids = rus_mg_heavy
+			}
+		}
+
+		[Ability template=AATurretAttackLocal]
+		{
+			
+			[AbilityDefinition Template=AALightTankGun]
+			{				
+				name = "#jpn_tankette_AbilityDefinition_name"
+				icon = /Properties/AbilityIcons/IconAbilityDamageExplosive.png
+				
+				recharge_time = 3
+				range = 16
+				area = 3
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 36
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = jpn_cannon_light
+			}
+		}
+	}
+
+	[Stance template = StanceFalling]
+
+	[View]
+	{
+		resource_prefix = RUSAirborneVehicle/RUSAirborneVehicle
+
+		portrait_ids = cpc_car_armored_co_portrait
+
+		[Aspect Template=AspectFalling]
+
+		[TextureSearchPath]
+		{
+			path = /effects/parachute/CPC
+		}
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = parachute_drop_sfx
+
+
+	}
+
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		vfx_ids = parachute_close_cpc
+		actor_state = falling
+	}
+}

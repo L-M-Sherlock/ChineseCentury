@@ -1,0 +1,99 @@
+[Template AAUnititaSPA Inherit=AAUnititaVehicleSPA]
+{
+	[BodyComponent]
+	{
+		health = 540
+		defense = 8
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 2
+		
+		[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_01
+			location = exhaust_point_01	
+	  	}
+	  	
+	  	[WhenStartMoving template=FXC_CreateVFX]
+		{
+			VFX_IDS = start_exhaust_01
+			location = exhaust_point_02	
+	  	}
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support		
+		
+		[Property]
+		property_IDS = combat_unit
+
+		[Property]
+		property_IDS = captain
+	}
+	
+	[PerformerComponent]
+	{
+		
+		[Ability Template=AAProjectileLocal]
+		{
+			[AbilityDefinition Template=AASPAShot]
+			{				
+				name = "#ita_tank_spa_AbilityDefinition_name"
+				recharge_time = 12
+				range = 50
+				area = 6
+					
+				[Flags] 
+				bombard = true
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 250
+
+				[Effect Template=MoraleLossEffect]
+				amount = 5
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ita_artillery_heavy
+				
+				[WhenDo Template=FXC_PlayObjectAnimation]
+				object_animation_IDS = Recoil1
+			}
+
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = itaTankSPA/itaTankSPA1
+		
+		[AspectNormal]
+		{						
+			[Animation Template=ObjectAnimationCustomPlay]
+			ids = Recoil1
+			length = 1
+			kf = itaTankSPA/itaTankSPARecoil1.kf
+		}
+	}
+}
+
+;;----------------------------- UNITS ------------------------ ;;
+
+[Thing Template=AAUnititaSPA]
+{
+	IDS = ita_tank_spa_F
+	name = "#ita_tank_spa_F_Thing_name"
+	editor_name = "#ita_tank_spa_F_Thing_editor_name"
+
+	[ElementComponent]
+	{
+		required_structures = ita_brigade_artillery
+		morale_value = 0
+	}
+}

@@ -1,0 +1,64 @@
+[Thing Template=AARUSOrganizationMobile]
+{
+	IDS = regiment_rus_rocket_truck
+	name = "#regiment_rus_rocket_truck_name"
+	editor_name = "#regiment_rus_rocket_truck_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 125
+		
+		[Upkeep]
+		ammo = 15
+		oil = 10
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/RUS/RUSRocketTruck/RUSRocketTruck
+		icon = /UI/Game/RegimentButtons/IconRUSRocketTruck.png
+		banner_icon = /Organizations/Banners/Icons/IconArtillery.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = rus_vehicle_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = rus_rocket_truck_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = rus_rocket_truck_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = rus_rocket_truck_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_mechanized
+		
+		[Slot]	;; front
+		element_IDS = rus_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = rus_infantry_mg
+
+		[Slot]	;; rear guard 2
+		element_IDS = rus_tank_light
+		
+		[Slot]	;; rear guard 3
+		element_IDS = rus_infantry
+	
+		[Slot]	;; flank
+		element_IDS = rus_rocket_truck
+		
+		[Slot]	;; captain
+		element_IDS = rus_car_armored_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = tank_company
+	}
+}

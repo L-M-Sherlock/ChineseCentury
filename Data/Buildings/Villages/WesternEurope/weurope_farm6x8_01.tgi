@@ -1,0 +1,48 @@
+[Thing Inherit=AABuildingGroundPlane]
+{
+	name = "#western_europe_farm01_western_europe_farm_01_ground_name"
+	texture = WesternEuropeFarm01/WesternEuropeFarm01Ground.DDS	
+	IDS = western_europe_farm_01_ground
+	attached_scale = 0
+	texture_size = 8.675
+}
+
+[Thing Template=AAFarmWesternEurope]
+{
+	IDS = weurope_farm6x8_01
+	name = "#western_europe_farm01_name"
+	editor_name = "#western_europe_farm01_editor_name"
+	
+	[Size]
+	blocking_shape = RECT
+	rect_width = 6
+	rect_height = 8
+
+	[View]
+	{	
+		resource_prefix = WesternEuropeFarm01/WesternEuropeFarm01
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_01
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_02
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_03
+		attached = true
+
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = window_small
+		location = window_04
+		attached = true
+		
+		[WhenConstructed Template=FXC_CreateVFX]
+		vfx_ids = western_europe_farm_01_ground
+	}
+}

@@ -1,0 +1,193 @@
+
+[ServerInfoDialog Inherit=SharedPanelWidget]
+{
+	localized text_gamename = "#server_info_dialog_text_gamename"
+	localized text_ping = "#server_info_dialog_text_ping"
+	localized text_ms = "#server_info_dialog_text_ms"
+	localized text_status = "#server_info_dialog_text_status"
+	localized text_version = "#server_info_dialog_text_version"
+	localized text_elapsed_time = "#server_info_dialog_text_elapsed_time"
+	localized text_locale = "#server_info_dialog_text_locale"
+	localized text_language = "#server_info_dialog_text_language"
+	localized text_password = "#server_info_dialog_text_password"
+	localized text_mod = "#server_info_dialog_text_mod"
+	localized text_teammanagement = "#server_info_dialog_text_teammanagement"
+	localized text_observersallowed = "#server_info_dialog_text_observersallowed"
+	localized text_players = "#server_info_dialog_text_players"
+	localized text_mapsize = "#server_info_dialog_text_mapsize"
+
+	int column_width = 150
+
+	[View]
+	{
+		L = 114
+		T = 32
+		R = +796
+		B = +585
+		
+		;; cwp040804 - Children are no longer defined in templates, so must be defined here
+		[Child Template = SharedMessageBoxPanelGroupVE]
+	}
+	
+	[MainPanel Inherit = SharedPanelWidget]
+	{
+		[View]
+		{
+			L = 57
+			T = 58
+			R = +445
+			B = +291
+			
+			[Child Template = DecalVETiled]
+   			{
+   				corners_texture = /UI/%s/Default/Listbox/ListboxCorners.tga
+   	 			left_border_texture = /UI/%s/Default/Listbox/ListboxLeft.tga
+   	 			right_border_texture = /UI/%s/Default/Listbox/ListboxRight.tga
+   	 			top_border_texture = /UI/%s/Default/Listbox/ListboxTop.tga
+   	 			bottom_border_texture = /UI/%s/Default/Listbox/ListboxBottom.tga
+   	 			center_texture = /UI/%s/Default/Listbox/ListboxCenter.tga
+   			}
+		}	
+		
+		[MainInfoViewport Template=SharedViewportScrollWidget]
+		{
+			[View Template=NoVE]
+			L = 15
+			T = 15
+			R = +426
+			B = +295
+		}
+		
+		[MainInfoLabel Template=LabelWidget]
+		{
+			[View Template=NoVE]
+
+			[Label Template=SharedSmallLeftLabelVE]
+			multiline = false
+			color = 1,1,1
+			text = "#server_info_dialog_MainPanel_MainInfoLabel_Label_text"
+		}
+	}
+	
+	[WorldRulesPanel Inherit = SharedPanelWidget]
+	{
+		[View]
+		{
+			L = 57
+			T = 359
+			R = +445
+			B = +115
+			
+			[Child Template = DecalVETiled]
+   			{
+   				corners_texture = /UI/%s/Default/Listbox/ListboxCorners.tga
+   	 			left_border_texture = /UI/%s/Default/Listbox/ListboxLeft.tga
+   	 			right_border_texture = /UI/%s/Default/Listbox/ListboxRight.tga
+   	 			top_border_texture = /UI/%s/Default/Listbox/ListboxTop.tga
+   	 			bottom_border_texture = /UI/%s/Default/Listbox/ListboxBottom.tga
+   	 			center_texture = /UI/%s/Default/Listbox/ListboxCenter.tga
+   			}
+		}	
+		
+		[WorldRulesInfoViewport Template=SharedViewportScrollWidget]
+		{
+			[View Template=NoVE]
+			L = 15
+			T = 6
+			R = +410
+			B = +100
+		}
+		
+		[WorldRulesInfoLabel Template=LabelWidget]
+		{
+			[View Template=NoVE]
+
+			[Label Template=SharedSmallLeftLabelVE]
+			multiline = false
+			color = 1,1,1
+			text = "#server_info_dialog_WorldRulesPanel_WorldRulesInfoLabel_Label_text"
+		}
+		
+		[WorldRuleSlider Inherit = WorldRuleWidget]
+		{
+			[RangeSlider Template = SharedSliderAdvancedWidgetNoArt]
+			{
+				;;  NOTE:  Uses old slider art for grip
+				[Grip]
+				{
+					[View Template=GroupVE]
+					{
+						[Child Template=DecalVE]
+						when = ENABLED + UNPRESSED
+						texture = /UI/%s/Default/SliderBar/GripUnpressed.png
+
+						[Child Template=DecalVE]
+						when = ENABLED + PRESSED
+						texture = /UI/%s/Default/SliderBar/GripPressed.png				
+						
+						[Child Template=DecalVE]
+						when = DISABLED
+						texture = /UI/%s/Default/SliderBar/GripDisabled.png
+					}
+				}				
+			}
+		}
+	}
+	
+	[PlayersPanel Inherit = SharedPanelWidget]
+	{
+		[View]
+		{
+			L = 518
+			T = 58
+			R = +220
+			B = +416
+			
+			[Child Template = DecalVETiled]
+   			{
+   				corners_texture = /UI/%s/Default/Listbox/ListboxCorners.tga
+   	 			left_border_texture = /UI/%s/Default/Listbox/ListboxLeft.tga
+   	 			right_border_texture = /UI/%s/Default/Listbox/ListboxRight.tga
+   	 			top_border_texture = /UI/%s/Default/Listbox/ListboxTop.tga
+   	 			bottom_border_texture = /UI/%s/Default/Listbox/ListboxBottom.tga
+   	 			center_texture = /UI/%s/Default/Listbox/ListboxCenter.tga
+   			}
+		}
+		
+		[PlayersInfoViewport Template=SharedViewportScrollWidget]
+		{
+			[View Template=NoVE]
+			L = 15
+			T = 15
+			R = +201
+			B = +405
+		}
+		
+		[PlayersInfoLabel Template=LabelWidget]
+		{
+			[View Template=NoVE]
+
+			[Label Template=SharedSmallLeftLabelVE]
+			multiline = false
+			color = 1,1,1
+			text = "#server_info_dialog_PlayersPanel_PlayersInfoLabel_Label_text"
+		}
+	}
+	
+	[CloseButton Template=MenuPushButtonWidget]
+	{
+		ToolTip = "#server_info_dialog_CloseButton_ToolTip"
+		
+		[Client]
+		{
+			[View]	
+			text = "#server_info_dialog_CloseButton_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 563
+			T = 486
+		}
+	}
+}

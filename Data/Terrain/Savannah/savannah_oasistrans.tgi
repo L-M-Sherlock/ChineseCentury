@@ -1,0 +1,21 @@
+[Terrain template=Terrain]
+{
+	IDS = savannah_oasistrans
+	name = "#savannah_oasistrans_name"
+	
+	base_priority = 140
+	terrain_group = water
+	terrain_color = 0.333, 0.475, 0.451
+
+	doodad_frequency = 0.50
+	primary_doodad_frequency = 0.90
+	
+/********************	WATER VARIATIONS		********************/
+
+	[Variation]
+	IDS = savannah_oasistrans01
+	name = "#savannah_oasistrans_01_name"
+	texture = SavannahBeach/SavannahBeach01.tga
+	texture_width = 8
+	texture_height = 8
+}

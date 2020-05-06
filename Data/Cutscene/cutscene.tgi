@@ -1,0 +1,18 @@
+;; Common Cutscenes.
+
+[Thing Template=Cutscene]
+{
+	IDS = example_cutscene
+	name = "#cutscene_name"
+
+	[View]
+	{
+		[AspectNormal]
+		{
+			model = Demo1/Demo1.nif
+		}
+	}
+
+	camera_name = SceneCamera
+	duration_s = 40.000
+}

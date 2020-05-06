@@ -1,0 +1,64 @@
+[Thing Template=AAUnitGBRVehicleHQTruck]
+{
+	IDS = FRA_truck_oil
+	name = "#FRA_truck_oil_name"
+	editor_name = "#FRA_truck_oil_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 90
+
+		[Production]
+		oil = 12
+
+		[Upkeep]
+		building_limit_consumed = 1
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = oil
+	}
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = FRA_depot_oil
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+
+	[MoverComponent]
+	{
+		speed_max = 3
+		acceleration = 2
+		trailer_actor = gbr_trailer_oil
+
+		[TrailerHitch]
+		{
+			node_ids = hitch
+			node_offset = 0, -1.7, .5
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = FRATruck/GBRTruck
+		icon = /UI/Game/BuildingButtons/IconDepotOil.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = depot_oil_select
+	}
+}

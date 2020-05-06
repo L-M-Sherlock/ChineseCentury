@@ -1,0 +1,405 @@
+
+;; ---------------------------- Community Stats Dialog ---------------------------------
+
+[template PercentagePanelTitle inherit=SharedNoArtPanelWidget]
+{
+	[View]
+	L = 0%
+	R = 100%
+	B = +30
+
+	[Name Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		L = 10
+		T = 5
+		R = 70%
+		B = 100%
+		
+		[Label Template=SharedSmallLeftLabelVE]
+		{
+			text = "#community_stats_dialog_Name_Label_text"
+		}
+	}
+	[Percent Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		L = 70%
+		T = 5
+		R = 100%
+		B = 100%
+		
+		[Label Template=SharedSmallRightLabelVE]
+		{
+			text = "#community_stats_dialog_Percent_Label_text"
+		}
+	}
+}
+
+[template PercentagePanelItem inherit=SharedNoArtPanelWidget]
+{
+	[View]
+	L = 0%
+	R = 100%
+	B = +17
+
+	[Name Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		L = 10
+		T = 0
+		R = 70%
+		B = 100%
+		
+		[Label Template=SharedTinyLeftLabelVE]
+		{
+			text = ""
+		}
+	}
+	[Percent Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		L = 70%
+		T = 0
+		R = 100%
+		B = 100%
+		
+		[Label Template=SharedTinyRightLabelVE]
+		{
+			text = ""
+		}
+	}
+}
+
+
+[template PercentagePanel inherit=SharedSmallPanelWidget]
+{
+	[TitleViewport Inherit=SharedViewportScrollWidget]
+	{
+		[View]
+		{
+			L = 0%
+			R = 5r
+			T = 0%
+			B = 100%
+		}
+		
+		[ItemPanel]
+		{
+			[PercentagePanelTitle Template=PercentagePanelTitle]
+			{
+			}
+		}
+	}
+
+	[StatsPanel Inherit=SharedSmallPanelWidget]
+	{
+		[View]
+		{
+			L = 0%
+			R = 5r
+			T = 30
+			B = 100%
+
+			[Child Template = GameListboxGroupVE]
+		}
+
+		[StatsViewport Inherit=SharedViewportScrollWidget]
+		{
+			[View]
+			{
+				L = 0%
+				T = 5
+				R = 5r
+				B = 5b
+			}
+			
+			[PercentagePanelItem Template=PercentagePanelItem]
+		}
+	}
+}
+
+
+[CommunityStatsDialog Inherit=SharedPanelWidget]
+{
+	[View Template=SharedPanelGroupVE]
+	{
+		L = 63
+		T = 123
+		R = +901
+		B = +523
+
+		[Child Template = SharedMessageBoxPanelGroupVE]
+	}
+	
+	[CommunityStats Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		L = 50
+		T = 50
+		R = +280
+		B = +21
+				
+		[Label Template=SharedLargeLeftLabelVE]
+		{
+			text = "#community_stats_dialog_CommunityStats_Label_text"
+		}
+	}
+	
+	[CommunityStatsClose Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#community_stats_dialog_CommunityStatsClose_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 625
+			T = 434
+		}
+	}
+	
+	[UpdateTime Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		L = 50
+		T = 453
+		R = +312
+		B = +24
+				
+		[Label Template=SharedTinyLeftLabelVE]
+		{
+			text = ""
+		}
+	}
+	
+	[MapPanel Template=PercentagePanel]
+	{
+		[View]
+		{
+			L = 515
+			T = 73
+			R = +328
+			B = +357
+		}
+
+		[TitleViewport]
+		{
+			[ItemPanel]
+			{
+				[PercentagePanelTitle]
+				{
+					[Name]
+					{	
+						[Label Template=SharedSmallLeftLabelVE]
+						{
+							text = "#community_stats_dialog_MapPanel_TitleViewport_ItemPanel_PercentagePanelTitle_Name_Label_text"
+						}
+					}
+						
+					[Percent Template=LabelWidget]
+					{	
+						[Label Template=SharedSmallRightLabelVE]
+						{
+							text = "#community_stats_dialog_MapPanel_TitleViewport_ItemPanel_PercentagePanelTitle_Percent_Label_text"
+						}
+					}
+				}
+			}
+		}
+	}
+
+	[NationPlayPanel Template=PercentagePanel]
+	{
+		[View]
+		{
+			L = 54
+			T = 73
+			R = +175
+			B = +173
+		}
+
+		[TitleViewport]
+		{
+			[ItemPanel]
+			{
+				[PercentagePanelTitle]
+				{
+					[Name]
+					{	
+						[Label Template=SharedSmallLeftLabelVE]
+						{
+							text = "#community_stats_dialog_NationPlayPanel_TitleViewport_ItemPanel_PercentagePanelTitle_Name_Label_text"
+						}
+					}
+							
+					[Percent Template=LabelWidget]
+					{	
+						[Label Template=SharedSmallRightLabelVE]
+						{
+							text = "#community_stats_dialog_NationPlayPanel_TitleViewport_ItemPanel_PercentagePanelTitle_Percent_Label_text"
+						}
+					}
+				}
+			}
+		}
+	}
+
+	[FactionPlayPanel Template=PercentagePanel]
+	{
+		[View]
+		{
+			L = 240
+			T = 73
+			R = +265
+			B = +356
+		}
+
+		[TitleViewport]
+		{		
+			[ItemPanel]
+			{
+				[PercentagePanelTitle]
+				{
+					[Name]
+					{	
+						[Label]
+						{
+							text = "#community_stats_dialog_FactionPlayPanel_TitleViewport_ItemPanel_PercentagePanelTitle_Name_Label_text"
+						}
+					}
+						
+					[Percent]
+					{
+						[Label]
+						{
+							text = "#community_stats_dialog_FactionPlayPanel_TitleViewport_ItemPanel_PercentagePanelTitle_Percent_Label_text"
+						}
+					}
+				}
+			}
+		}
+		
+		[StatsPanel Inherit=SharedSmallPanelWidget]
+		{
+			[StatsViewport Inherit=SharedViewportScrollWidget]
+			{
+				[View]
+				{
+					L = 0%
+					T = 12
+					R = 5r
+					B = 10b
+				}
+				
+				[PercentagePanelItem Template = PercentagePanelItem]
+				{
+					[Name Template=LabelWidget]
+					{
+						[View Template=NoVE]
+						L = 10
+						T = 0
+						R = 75%
+						B = 100%
+						
+						[Label Template=SharedTinyLeftLabelVE]
+						{
+							text = ""
+						}
+					}
+					[Percent Template=LabelWidget]
+					{
+						[View Template=NoVE]
+						L = 75%
+						T = 0
+						R = 100%
+						B = 100%
+						
+						[Label Template=SharedTinyRightLabelVE]
+						{
+							text = ""
+						}
+					}
+				}
+			}		
+		}
+	}
+	
+	[NationWinPanel Template=PercentagePanel]
+	{
+		[View]
+		{
+			L = 53
+			T = 252
+			R = +175
+			B = +177
+		}
+
+		[TitleViewport]
+		{		
+			[ItemPanel]
+			{
+				[PercentagePanelTitle]
+				{
+					[Name]
+					{	
+						[Label Template=SharedSmallLeftLabelVE]
+						{
+							text = "#community_stats_dialog_NationWinPanel_TitleViewport_ItemPanel_PercentagePanelTitle_Name_Label_text"
+						}
+					}
+							
+					[Percent Template=LabelWidget]
+					{	
+						[Label Template=SharedSmallRightLabelVE]
+						{
+							text = "#community_stats_dialog_NationWinPanel_TitleViewport_ItemPanel_PercentagePanelTitle_Percent_Label_text"
+						}
+					}
+				}
+			}
+		}
+	}
+
+	;;  NOT IMPLEMENTED
+	[FactionWinPanel Template=PercentagePanel]
+	{
+		visible = false
+	
+		[View]
+		{
+			L = 0
+			R = 0
+			T = 0
+			B = 0
+		}
+
+		[TitleViewport]
+		{			
+			[ItemPanel]
+			{
+				[PercentagePanelTitle]
+				{
+					[Name]
+					{							
+						[Label Template=SharedSmallLeftLabelVE]
+						{
+							text = NULL;;"#community_stats_dialog_FactionWinPanel_TitleViewport_ItemPanel_PercentagePanelTitle_Name_Label_text"
+						}
+					}
+						
+					[Percent Template=LabelWidget]
+					{	
+						[Label Template=SharedSmallRightLabelVE]
+						{
+							text = NULL;;"#community_stats_dialog_FactionWinPanel_TitleViewport_ItemPanel_PercentagePanelTitle_Percent_Label_text"
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+

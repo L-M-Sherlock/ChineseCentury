@@ -1,0 +1,43 @@
+[Thing Template=Actor]
+{
+	IDS = explore_flare
+	name = "#explore_flare_name"
+	
+	category = SPECIAL
+	
+	[Size]
+	{
+		height = 0
+	}
+	
+	[View]
+	{
+		focused_vfx = flare_focus_vfx
+		selected_vfx = flare_selection_vfx
+		
+		resource_prefix = FlareExplore/FlareExplore
+		shadow_type = NONE
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+		
+		[AspectNormal]
+		{
+			model=%sLocation.nif
+		}
+	}
+
+	[Flags]
+	{
+		blocking = false
+		flying = false
+		invulnerable = true
+		targetable = true
+	}
+	
+	[FlareComponent]
+	{
+		target_location = true
+		command = explore
+	}
+}

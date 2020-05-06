@@ -1,0 +1,29 @@
+
+[Resolution]
+{
+	IDS = 0x0
+	name = "#resolution_0x0_name"
+	filtering_type = NEAREST
+
+}
+
+[Resolution]
+{
+	IDS = 800x600
+	name = "#resolution_800x600_name"
+	filtering_type = NEAREST
+}
+
+[Resolution]
+{
+	IDS = 1024x768
+	name = "#resolution_1024x768_name"
+	filtering_type = NEAREST
+}
+
+[Resolution]
+{
+	IDS = 1280x960
+	name = "#resolution_1280x960_name"
+	filtering_type = NEAREST
+}

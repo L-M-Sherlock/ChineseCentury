@@ -1,0 +1,540 @@
+
+[Template LayoutRMCNorthAfrica01 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, 3.19
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, 3.19
+	orientation = 0, 1	
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock10x12_01
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x12_01
+	offset = 16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = bank_african
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_01
+	offset = 0,17
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_03
+	offset = -17,-17
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_04
+	offset = 0,-17
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x24_01
+	offset = -16,10
+	orientation = 0,+1
+}
+
+[Template LayoutRMCNorthAfrica02 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, 3.19
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, 3.19
+	orientation = 0, 1	
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_04
+	offset = 17,-17
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_03
+	offset = 17,0
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x12_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_02
+	offset = 0,17
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = bank_african
+	offset = -16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock10x12_01
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_03
+	offset = -17,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x12_01
+	offset = -16,16
+	orientation = 0,+1
+}
+
+[Template LayoutRMCNorthAfrica03 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, 3.19
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, 3.19
+	orientation = 0, 1	
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x12_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = bank_african
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_02
+	offset = -17,17
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_04
+	offset = -17,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock10x12_01
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_01
+	offset = 0,-17
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x22_01
+	offset = 16,-10
+	orientation = 0,-1
+}
+
+
+[Template LayoutRMCNorthAfrica04 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, 3.19
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, 3.19
+	orientation = 0, 1	
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock10x12_01
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = factory_african
+	offset = 16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x12_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x12_01
+	offset = 0,16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_01
+	offset = -17,-17
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_02
+	offset = 0,-17
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x22_01
+	offset = -16,10
+	orientation = 0,+1
+}
+
+[Template LayoutRMCNorthAfrica05 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, 3.19
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, 3.19
+	orientation = 0, 1	
+
+	[Object Template=CityObject]
+	object_ids = factory_african
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = factory_african
+	offset = 17,0
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_03
+	offset = 17,17
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_02
+	offset = 0,17
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_01
+	offset = -17,-17
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x12_01
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock10x12_01
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_04
+	offset = -17,17
+	orientation = 0,+1
+}
+
+[Template LayoutRMCNorthAfrica06 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, 3.19
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, 3.19
+	orientation = 0, 1	
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x12_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock10x12_01
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = factory_african
+	offset = -16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_04
+	offset = -17,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_03
+	offset = -17,-17
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_02
+	offset = 0,-17
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x24_01
+	offset = 16,-10
+	orientation = 0,-1
+}
+
+[Template LayoutRMCNorthAfrica07 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, 3.19
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, 3.19
+	orientation = 0, 1	
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x12_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = refinery_african
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_02
+	offset = -17,17
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_04
+	offset = -17,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock10x12_01
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_01
+	offset = 0,-17
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x22_01
+	offset = 16,-10
+	orientation = 0,-1
+}
+
+
+[Template LayoutRMCNorthAfrica08 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, 3.19
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, 3.19
+	orientation = 0, 1	
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock10x12_01
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = refinery_african
+	offset = 16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x12_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x12_01
+	offset = 0,16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_01
+	offset = -17,-17
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_02
+	offset = 0,-17
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock12x22_01
+	offset = -16,10
+	orientation = 0,+1
+}
+
+[Template LayoutRMCNorthAfrica09 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, -3.27
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = 2.97, 3.19
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = desert_treespalm
+	offset = -3.18, 3.19
+	orientation = 0, 1	
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock10x12_01
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_04
+	offset = 17,0
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_03
+	offset = 17,17
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_02
+	offset = 0,17
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_01
+	offset = -17,-17
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = refinery_african
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock10x12_01
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = nafrica_villageblock14x14_04
+	offset = -17,17
+	orientation = 0,+1
+}
+

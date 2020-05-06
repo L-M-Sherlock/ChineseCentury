@@ -1,0 +1,358 @@
+[Template FloaterWidget Inherit=PanelWidget]
+{
+	;; cwp092004 - only used when the UI_FLOATERS_DISPLAY_END_CAP AVar is set to true.
+	float end_decal_offset = 0
+	
+	[View Template=GroupVE]
+
+	[ShowButton Template=ToggleButtonWidget]
+	{
+		[View Template = GroupVE]
+	}
+	
+	[EndDecal Template = DecalWidget]
+	{
+		[View Template = GroupVE]
+		{
+			L = 0
+			T = 0
+			R = 100%
+			B = 100%
+		}
+		
+		[Decal Template = DecalVE]
+		texture = NULL
+	}
+}
+
+[GroupFloater Inherit=FloaterWidget]
+{
+	[View]
+	{
+		L = 51
+		T = 0
+		R = +437
+		B = +40
+		
+		[Child Template = DecalVE]
+		{
+			L = 0
+			T = 0
+			R = +98
+			B = +40
+			
+			texture = /UI/%s/Game/Floaters/GroupsFloater.png
+		}
+	}
+	
+	[EndDecal]
+	{
+		[View]
+		{
+			L = 423
+			T = 3
+			R = +14
+			B = +32
+		}
+		
+		[Decal]
+		texture = /UI/%s/Game/Floaters/GroupsTab.png
+	}
+
+	[ShowButton]
+	{
+		tooltip_name = "#floaters_ShowButton_tooltip_name"
+		tooltip = "#floaters_ShowButton_tooltip"
+		
+		[View]
+		{
+			L = 41
+			T = 1
+			R = +32
+			B = +32
+
+			[Child Template=DecalVE]
+			when = UNSELECTED + UNFOCUSED
+			texture = /UI/%s/Game/Floaters/GroupsToggleUnselected.png
+			
+			[Child Template = DecalVE]
+			when = UNSELECTED + FOCUSED
+			texture = /UI/%s/Game/Floaters/GroupsToggleUnselectedFocused.png
+
+			[Child Template=DecalVE]
+			when = SELECTED + UNFOCUSED
+			texture = /UI/%s/Game/Floaters/GroupsToggleSelected.png
+			
+			[Child Template = DecalVE]
+			when = SELECTED + FOCUSED
+			texture = /UI/%s/Game/Floaters/GroupsToggleSelectedFocused.png
+		}
+	}
+
+	[Groups Inherit=PanelWidget]
+	{
+		;; ids's of groups that will be displayed
+		groups_shown = group_1, group_2, group_3, group_4, group_5, group_6, group_7, group_8, group_9, group_10
+
+		;; texture used for unassigned groups
+		empty_group_texture = UI/Game/Floaters/ButtonGroupUnassigned.tga
+
+		[View Template=NoVE]
+		{
+			L = 83
+			T = 3
+			R = +339
+		}
+
+		[GroupButton Inherit=PushButtonWidget]
+		{
+			ToolTip = "@Set by Code"
+		
+			[View Template=NoVE]
+			{
+				;; groups will be positioned by the code, so only the size matters
+				R = +32
+				B = +32
+			}
+
+			[GroupDecal Template=DecalWidget]
+			{
+				[View Template=NoVE]
+
+				[Decal Template=DecalVE]
+				;; texture will be set based on assigned group
+				texture = NULL
+			}
+		}
+	}
+}
+
+[FactionAbilitiesFloater Inherit=FloaterWidget]
+{
+	end_decal_offset = 2
+	
+	[View]
+	{
+		L = 0
+		T = 0
+		R = +51
+		B = +400
+		
+		[Child Template = DecalVE]
+		L = 0
+		T = 0
+		R = +51
+		B = +83
+		alpha_blending = true
+		texture = /UI/%s/Game/Floaters/GenPowersFloater.png
+	}
+	
+	[EndDecal]
+	{
+		[View]
+		{
+			L = 3
+			T = 243
+			R = +43
+			B = +18
+		}
+		
+		[Decal]
+		alpha_blending = true
+		texture = /UI/%s/Game/Floaters/GenPowersTab.png
+	}
+
+	[ShowButton]
+	{
+		
+		tooltip_name = "#floaters_ShowButton_tooltip_name_2"
+		tooltip = "#floaters_ShowButton_tooltip_2"
+		
+		[View]
+		{
+			L = 3
+			T = 30
+			R = +32
+			B = +32
+
+			[Child Template=DecalVE]
+			when = UNSELECTED + UNFOCUSED
+			texture = /UI/%s/Game/Floaters/GenPowersToggleUnselected.png
+			
+			[Child Template = DecalVE]
+			when = UNSELECTED + FOCUSED
+			texture = /UI/%s/Game/Floaters/GenPowersToggleUnselectedFocused.png
+
+			[Child Template=DecalVE]
+			when = SELECTED + UNFOCUSED
+			texture = /UI/%s/Game/Floaters/GenPowersToggleSelected.png
+			
+			[Child Template = DecalVE]
+			when = SELECTED + FOCUSED
+			texture = /UI/%s/Game/Floaters/GenPowersToggleSelectedFocused.png
+
+			[Child Template = DecalVE]
+			alpha_blending = true
+			when = TARGETED
+			texture = /UI/%s/Game/SharedTextures/MessageLogTargeted.tga
+		}
+	}
+
+	[Abilities Inherit=ViewportWidget]
+	{
+		[View]
+		{
+			L = 3
+			T = 65
+			B = +300
+		}
+	
+		[ItemPanel Template=PanelWidget]
+		{
+			[View Template=NoVE]
+			{
+				/*
+				L = 3
+				T = 65
+				B = +300
+				*/
+				
+				L = 0
+				T = 0
+				B = 100%
+			}
+		}
+
+		[Scrollbar Template=ScrollbarWidget]
+		{
+			[View Template=NoVE]
+
+			;; we don't really want a slider
+			[Slider Template=SliderWidget]
+			{
+				[View Template=NoVE]
+
+				[Grip Template=Widget]
+				{
+					[View Template=NoVE]
+				}
+			}
+			
+			[LessButton Template=PushButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					T = 50
+					L = 0
+					B = 70
+					R = 60
+
+					[Child Template=DecalVE]
+					when = UNPRESSED
+					texture = /UI/%s/Game/Floaters/ArrowUpUnpressed.png
+
+					[Child Template=DecalVE]
+					when = PRESSED
+					texture = /UI/%s/Game/Floaters/ArrowUpPressed.png
+				}
+			}
+
+			[MoreButton Template=PushButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					T = 550
+					L = 0
+					B = 570
+					R = 60
+
+					[Child Template=DecalVE]
+					when = UNPRESSED
+					texture = /UI/%s/Game/Floaters/ArrowDownUnpressed.png
+
+					[Child Template=DecalVE]
+					when = PRESSED
+					texture = /UI/%s/Game/Floaters/ArrowDownPressed.png
+				}
+			}
+		}
+
+		[Ability Inherit=PanelWidget]
+	 	{
+			[View Template=GroupVE]
+			{
+				R = +42
+				B = +44
+			}
+
+			[AbilityButton Inherit=PushButtonWidget]
+			{
+				tooltip = "#floaters_Abilities_AbilityButton_tooltip"
+				
+				pressed_client_L = 4
+				pressed_client_T = 4
+				pressed_client_R = 4r
+				pressed_client_B = 8b
+			
+				[View Template=GroupVE]
+				{
+					L = 0
+					T = 0
+					R = +42
+					B = +44
+					
+					[Child Template=DecalVE]
+					when = ENABLED + FOCUSED
+					texture = /UI/%s/Game/SharedTextures/BorderFocusedIcon.tga
+
+					[Child Template=DecalVE]
+					when = ENABLED + UNFOCUSED
+					texture = /UI/%s/Game/SharedTextures/BorderUnfocusedIcon.tga
+
+	 				[Child Template = DecalVE]
+	 				alpha_blending = true
+	 				when = TARGETED
+	 				texture = /UI/%s/Game/SharedTextures/ActionButtonBorderTargeted.tga
+				}
+
+				[AbilityButtonDecal Template=DecalWidget]
+				{
+					[View Template=NoVE]
+					{
+						L = 3
+						T = 3
+						R = +36
+						B = +34
+					}
+
+					[Decal Template=DecalVE]
+					;; texture will be set based on assigned ability
+					texture = NULL
+				}
+			}
+
+			[Recharge Template=StatusBarWidget]
+			{
+				tooltip = "#floaters_Abilities_Recharge_tooltip"
+			
+				[View]
+				{
+					L = 3
+					T = 40
+					R = +36
+					B = +2
+
+					color = 0,0.3,0
+				}
+
+				[StatusBar]
+				{
+					mid_percentage = 0
+					start_color = 1,0,0
+					mid_color = 1,0,0
+					end_color = 1,0,0
+				}
+			}
+		}
+	}
+}

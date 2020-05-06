@@ -1,0 +1,83 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= jpn_low_income_ego
+	name									= "#japan_sai_jpn_low_income_ego_unit_limit_max_needed_name"
+} ;; LowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= jpn_main_game_ego
+	name									= "#japan_sai_jpn_main_game_ego_unit_limit_max_needed_name"
+} ;; MainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= jpn_end_game_ego
+	name									= "#japan_sai_jpn_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= jpn_end_game_ego_TK
+	name									= "#japan_sai_jpn_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= jpn_end_game_ego_END
+	name									= "#japan_sai_jpn_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= jpn_end_game_ego_TK_DS
+	name									= "#japan_sai_jpn_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= jpn_end_game_ego_TK_DS1
+	name									= "#japan_sai_jpn_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= jpn_sai
+	name									= "#japan_sai_jpn_sai_name_2"
+	description								= "#japan_sai_jpn_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+	public									= false
+
+	initial_ego								= jpn_low_income_ego
+
+	[Ego]
+	IDS										= jpn_main_game_ego
+
+	[Ego]
+	IDS										= jpn_end_game_ego
+
+	[Ego]
+	IDS										= jpn_end_game_ego_TK
+
+	[Ego]
+	IDS										= jpn_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= jpn_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_jpn
+	
+	[Faction]
+	ids										= kuribayashi
+	
+	[Faction]
+	ids										= mikawa
+	
+	[Faction]
+	ids										= nagumo
+	
+	[Faction]
+	ids										= yamamoto
+	
+} ;; jpn SAI

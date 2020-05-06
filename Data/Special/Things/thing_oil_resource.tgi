@@ -1,0 +1,32 @@
+[Thing template=Actor]
+{
+	IDS = thing_oil_resource
+	name = "#thing_oil_resource_name"
+	category = UNIT
+	
+	[EconomyComponent]
+	{
+		[Production]
+		oil = 20
+	}
+	
+	[Flags]
+	invulnerable = true
+	invisible = true
+	blocking = false
+	targetable = false
+	ethereal = true
+	
+	[Placement]
+	placement_group_IDS = group_special
+
+	[View]
+	{
+		resource_prefix = ThingOilResource/ThingOilResource
+		shadow_type = none
+		shadow_texture = null
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+	}
+}

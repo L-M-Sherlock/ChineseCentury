@@ -1,0 +1,55 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = sand_bagging
+	name = "#sand_bagging_name"
+	description = "#sand_bagging_description"
+	targets = +FRIEND +BUILDING
+	recharge_time = 180
+	range = 10
+	area = 20
+	target_location_vfx = friendly_target_decal_vfx
+
+	icon = /UI/%s/Game/SpecialOps/IconSandBagging.png
+	
+	[Effect Template=EnchantmentEffect]
+	{
+		[EnchantmentProperty]
+		{
+			IDS = property_sandbag
+			name = "#sand_bagging_Effect_EnchantmentProperty_name"
+			enchantment_type = ench_type_generic
+			duration = 180
+			icon = /Properties/PropertyIcons/IconPropertyDefense.png
+			
+			[Modifier Template=ResistDamageModifier]
+			damage_type = gunfire
+			amount = 0.40
+
+			[Modifier Template=ResistDamageModifier]
+			damage_type = armor_piercing
+			amount = 0.40
+
+			[Modifier Template=ResistDamageModifier]
+			damage_type = explosive
+			amount = 0.40
+
+			[WhenAdded Template=FXC_CreateVFX]
+			VFX_IDS = sand_bagging_glow	
+		}
+	}
+		
+	[Flags]
+	enchantment = true
+	
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = sand_bagging_sfx
+	at = TARGET_GROUND
+
+	[WhenDo Template=FXC_CreateVFX]
+	VFX_IDS = sand_bagging
+	at = TARGET_GROUND
+}
+

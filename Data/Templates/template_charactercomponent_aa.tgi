@@ -1,0 +1,5346 @@
+/**************************************************************************
+
+template_charactercomponent_aa.tgi
+Copyright ?2004 TimeGate Studios
+
+DESCRIPTION:  Templates for AA Character Components
+
+REVISION HISTORY:
+ick040604 - created
+
+USAGE:
+
+**************************************************************************/
+
+/* 	CHARACTER COMPONENT TEMPLATES		*/
+
+;;------------------------------- INFANTRY --------------------------------
+
+[Template AAInfantryCharacterComponent Template=CharacterComponent]
+{
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	key_ratio = 0.1
+	kf = /Shared/Animations/Units/Infantry/Attack1.kf
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/Infantry/Die1.kf
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die3
+		kf = /Shared/Animations/Units/Infantry/Die3.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die4
+		kf = /Shared/Animations/Units/Infantry/Die4.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die5
+		kf = /Shared/Animations/Units/Infantry/Die5.kf
+		damage_threshold = 25
+		length = 5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die6
+		kf = /Shared/Animations/Units/Infantry/Die6.kf
+		damage_threshold = 25
+		length = 3.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die7
+		kf = /Shared/Animations/Units/Infantry/Die7.kf
+		damage_threshold = 25
+		length = 3.3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die8
+		kf = /Shared/Animations/Units/Infantry/Die8.kf
+		damage_threshold = 5
+		length = 1.6
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die9
+		kf = /Shared/Animations/Units/Infantry/Die9.kf
+		damage_threshold = 5
+		length = 2
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die10
+		kf = /Shared/Animations/Units/Infantry/Die10.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die11
+		kf = /Shared/Animations/Units/Infantry/Die11.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die12
+		kf = /Shared/Animations/Units/Infantry/Die12.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die13
+		kf = /Shared/Animations/Units/Infantry/Die13.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die14
+		kf = /Shared/Animations/Units/Infantry/Die14.kf
+		damage_threshold = 25
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die15
+		kf = /Shared/Animations/Units/Infantry/Die15.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die16
+		kf = /Shared/Animations/Units/Infantry/Die16.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die17
+		kf = /Shared/Animations/Units/Infantry/Die17.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/Infantry/Die18.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die19
+		kf = /Shared/Animations/Units/Infantry/Die19.kf
+		damage_threshold = 0
+		length = 5
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die20
+		kf = /Shared/Animations/Units/Infantry/Die20.kf
+		damage_threshold = 0
+		length = 3
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/Infantry/Die1.kf
+		damage_threshold = 80
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die22
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 666
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=FidgetAnimation]
+	IDS = fidget1
+	kf = /Shared/Animations/Units/Infantry/Fidget1.kf
+	weight = 5			
+
+	[Animation Template=FidgetAnimation]
+	IDS = fidget2
+	kf = /Shared/Animations/Units/Infantry/Fidget2.kf
+	weight = 4			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget3
+	kf = /Shared/Animations/Units/Infantry/Fidget3.kf
+	weight = 3			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget4
+	kf = /Shared/Animations/Units/Infantry/Fidget4.kf
+	weight = 2
+	length = 7			
+			
+	[Animation Template=FidgetAnimation]
+	{
+		IDS = fidget5
+		kf = /Shared/Animations/Units/Infantry/Fidget5.kf
+		weight = 1			
+		length = 10			
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+			
+	[Animation Template=IdleAnimation]
+	IDS = idle
+	kf = /Shared/Animations/Units/Infantry/Idle.kf
+
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/Infantry/IdleAttack.kf
+	
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleprojectileattack
+		kf = /Shared/Animations/Units/Infantry/IdleProjectileAttack.kf
+		
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+	
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	walk_distance = 1.5
+	kf = /Shared/Animations/Units/Infantry/Walk.kf
+	
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	walk_distance = 2.5
+	kf = /Shared/Animations/Units/Infantry/Jog.kf
+	
+	[Animation Template=AttackAnimation]
+	{
+		IDS = projectileattack1
+		key_ratio = 0.5
+		kf = /Shared/Animations/Units/Infantry/ProjectileAttack1.kf
+		
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+
+			
+	;; Paratroopers will apply this animation to AspectFalling instead of AspectNormal - contact Guy if any problems arise
+	[Animation Template=SummonAnimation] 
+	{
+		IDS = summon1
+		kf = /Shared/Animations/Units/Infantry/Landing.kf
+	}
+			
+	[AspectAnimationSet Template = AspectAnimationSetInfantryKneel]
+
+	[AspectAnimationSet Template = AspectAnimationSetInfantryProne]
+}
+
+;;------------------------------- MELEE INFANTRY --------------------------------
+
+[Template AAInfantryMeleeCharacterComponent Template=CharacterComponent]
+{
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	key_ratio = 0.1
+	kf = /Shared/Animations/Units/Infantry/Attack1.kf
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/Infantry/Die1.kf
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die3
+		kf = /Shared/Animations/Units/Infantry/Die3.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die4
+		kf = /Shared/Animations/Units/Infantry/Die4.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die5
+		kf = /Shared/Animations/Units/Infantry/Die5.kf
+		damage_threshold = 25
+		length = 5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die6
+		kf = /Shared/Animations/Units/Infantry/Die6.kf
+		damage_threshold = 25
+		length = 3.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die7
+		kf = /Shared/Animations/Units/Infantry/Die7.kf
+		damage_threshold = 25
+		length = 3.3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die8
+		kf = /Shared/Animations/Units/Infantry/Die8.kf
+		damage_threshold = 5
+		length = 1.6
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die9
+		kf = /Shared/Animations/Units/Infantry/Die9.kf
+		damage_threshold = 5
+		length = 2
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die10
+		kf = /Shared/Animations/Units/Infantry/Die10.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die11
+		kf = /Shared/Animations/Units/Infantry/Die11.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die12
+		kf = /Shared/Animations/Units/Infantry/Die12.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die13
+		kf = /Shared/Animations/Units/Infantry/Die13.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die14
+		kf = /Shared/Animations/Units/Infantry/Die14.kf
+		damage_threshold = 25
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die15
+		kf = /Shared/Animations/Units/Infantry/Die15.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die16
+		kf = /Shared/Animations/Units/Infantry/Die16.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die17
+		kf = /Shared/Animations/Units/Infantry/Die17.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/Infantry/Die18.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die19
+		kf = /Shared/Animations/Units/Infantry/Die19.kf
+		damage_threshold = 0
+		length = 5
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die20
+		kf = /Shared/Animations/Units/Infantry/Die20.kf
+		damage_threshold = 0
+		length = 3
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/Infantry/Die1.kf
+		damage_threshold = 80
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die22
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 666
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=FidgetAnimation]
+	IDS = fidget1
+	kf = /Shared/Animations/Units/Infantry/Fidget1.kf
+	weight = 5			
+
+	[Animation Template=FidgetAnimation]
+	IDS = fidget2
+	kf = /Shared/Animations/Units/Infantry/Fidget2.kf
+	weight = 4			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget3
+	kf = /Shared/Animations/Units/Infantry/Fidget3.kf
+	weight = 3			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget4
+	kf = /Shared/Animations/Units/Infantry/Fidget4.kf
+	weight = 2			
+	length = 7			
+			
+	[Animation Template=FidgetAnimation]
+	{
+		IDS = fidget5
+		kf = /Shared/Animations/Units/Infantry/Fidget5.kf
+		weight = 1			
+		length = 10			
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+			
+	[Animation Template=IdleAnimation]
+	IDS = idle
+	kf = /Shared/Animations/Units/Infantry/Idle.kf
+
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/Infantry/IdleAttack.kf
+	
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleprojectileattack
+		kf = /Shared/Animations/Units/Infantry/IdleProjectileAttack.kf
+		
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+	
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	walk_distance = 1.5
+	kf = /Shared/Animations/Units/Infantry/Walk.kf
+	
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	walk_distance = 2.5
+	kf = /Shared/Animations/Units/Infantry/Jog.kf
+	
+	[Animation Template=AttackAnimation]
+	{
+		IDS = projectileattack1
+		key_ratio = 0.5
+		kf = /Shared/Animations/Units/Infantry/ProjectileAttack1.kf
+		
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+	[Animation Template=AttackAnimation]
+	IDS = meleeattack1
+	key_ratio = 0.4
+	kf = /Shared/Animations/Units/Infantry/MeleeAttack1.kf
+	
+	[Animation Template=IdleAnimation]
+	IDS = idlemeleeattack
+	kf = /Shared/Animations/Units/Infantry/IdleMeleeAttack.kf
+
+	;; Paratroopers will apply this animation to AspectFalling instead of AspectNormal - contact Guy if any problems arise
+	[Animation Template=SummonAnimation] 
+	{
+		IDS = summon1
+		kf = /Shared/Animations/Units/InfantryMG/Landing.kf
+	}
+}
+
+
+;;---------------------------- MORTAR INFANTRY ------------------------------
+
+[Template AAInfantryMortarCharacterComponent Template=CharacterComponent]
+{
+	[Animation Template=AttackAnimation]
+	{
+		IDS = attack1
+		key_ratio = 0.5
+		kf = /Shared/Animations/Units/InfantryMortar/Attack1.kf
+		length = 3		
+	
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenStart Template=FXC_Equipment]
+		action = UNHIDE
+		location = base
+		equipment_type_ids = mortarup
+		
+		[WhenStart Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = shellup
+
+		[WhenDoAtTime Template=FXC_Equipment]
+		action = HIDE
+		time = 0.3
+		location = rhand
+		equipment_type_ids = shellup
+		
+		[WhenDoAtTime Template=FXC_Equipment]
+		action = UNHIDE
+		time = 2.4
+		location = rhand
+		equipment_type_ids = shellup
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = HIDE
+		location = base
+		equipment_type_ids = mortarup
+
+		[WhenEnd Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = shellup
+	}
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/InfantryMortar/Die1.kf
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/InfantryMortar/Die1.kf
+		damage_threshold = 0 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die3
+		kf = /Shared/Animations/Units/Infantry/Die4.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die4
+		kf = /Shared/Animations/Units/Infantry/Die4.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die5
+		kf = /Shared/Animations/Units/Infantry/Die5.kf
+		damage_threshold = 25
+		length = 5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die6
+		kf = /Shared/Animations/Units/Infantry/Die6.kf
+		damage_threshold = 25
+		length = 3.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die7
+		kf = /Shared/Animations/Units/Infantry/Die7.kf
+		damage_threshold = 25
+		length = 3.3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die8
+		kf = /Shared/Animations/Units/Infantry/Die8.kf
+		damage_threshold = 5
+		length = 1.6
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die9
+		kf = /Shared/Animations/Units/Infantry/Die9.kf
+		damage_threshold = 5
+		length = 2
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die10
+		kf = /Shared/Animations/Units/Infantry/Die10.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die11
+		kf = /Shared/Animations/Units/Infantry/Die11.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die12
+		kf = /Shared/Animations/Units/Infantry/Die12.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die13
+		kf = /Shared/Animations/Units/Infantry/Die5.kf
+		damage_threshold = 25
+		length = 5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die14
+		kf = /Shared/Animations/Units/Infantry/Die6.kf
+		damage_threshold = 25
+		length = 3.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die15
+		kf = /Shared/Animations/Units/Infantry/Die8.kf
+		damage_threshold = 5
+		length = 1.6
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die16
+		kf = /Shared/Animations/Units/Infantry/Die9.kf
+		damage_threshold = 5
+		length = 2
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die17
+		kf = /Shared/Animations/Units/InfantryMortar/Die1.kf
+		damage_threshold = 20
+		length = 1
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/InfantryMortar/Die1.kf
+		damage_threshold = 20
+		length = 1
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die19
+		kf = /Shared/Animations/Units/Infantry/Die19.kf
+		damage_threshold = 0
+		length = 5
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die20
+		kf = /Shared/Animations/Units/Infantry/Die20.kf
+		damage_threshold = 0
+		length = 3
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/InfantryMortar/Die1.kf
+		damage_threshold = 80
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die22
+		kf = /Shared/Animations/Units/InfantryMortar/Die1.kf
+		damage_threshold = 0
+		length = 1 
+		damage_filter = 666
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+	}
+		
+	[Animation Template=FidgetAnimation]
+	IDS = fidget1
+	kf = /Shared/Animations/Units/InfantryMortar/Fidget1.kf
+	weight = 5			
+
+	[Animation Template=FidgetAnimation]
+	IDS = fidget2
+	kf = /Shared/Animations/Units/InfantryMortar/Fidget2.kf
+	weight = 4			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget3
+	kf = /Shared/Animations/Units/InfantryMortar/Fidget3.kf
+	weight = 3			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget4
+	kf = /Shared/Animations/Units/InfantryMortar/Fidget4.kf
+	weight = 2
+	length = 7			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget5
+	kf = /Shared/Animations/Units/InfantryMortar/Fidget5.kf
+	weight = 1			
+	length = 10			
+			
+	[Animation Template=IdleAnimation]
+	IDS = idle
+	kf = /Shared/Animations/Units/InfantryMortar/Idle.kf
+
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleattack
+		kf = /Shared/Animations/Units/InfantryMortar/IdleAttack.kf
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenStart Template=FXC_Equipment]
+		action = UNHIDE
+		location = base
+		equipment_type_ids = mortarup
+
+		[WhenStart Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = shellup
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = mortardown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = HIDE
+		location = base
+		equipment_type_ids = mortarup
+
+		[WhenEnd Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = shellup
+	}
+	
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	walk_distance = 1.5
+	kf = /Shared/Animations/Units/InfantryMortar/Walk.kf
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	walk_distance = 2
+	kf = /Shared/Animations/Units/InfantryMortar/Jog.kf
+	
+	;; Paratroopers will apply this animation to AspectFalling instead of AspectNormal - contact Guy if any problems arise
+	[Animation Template=SummonAnimation] 
+	{
+		IDS = summon1
+		kf = /Shared/Animations/Units/InfantryMortar/Landing.kf
+	}
+			
+}
+
+/* 	ENGINEER CHARACTER COMPONENT		*/
+
+[Template AAEngineerCharacterComponent Template=CharacterComponent]
+{
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	key_ratio = 0.1
+	kf = /Shared/Animations/Units/Infantry/Attack1.kf
+
+	[Animation Template=AttackAnimation]
+	{
+		IDS = build1
+		key_ratio = 0.1
+		kf = /Shared/Animations/Units/Infantry/Build1.kf
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = hammer
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = hammer
+		}
+	}		
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/Infantry/Die1.kf
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die3
+		kf = /Shared/Animations/Units/Infantry/Die3.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die4
+		kf = /Shared/Animations/Units/Infantry/Die4.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die5
+		kf = /Shared/Animations/Units/Infantry/Die5.kf
+		damage_threshold = 25
+		length = 5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die6
+		kf = /Shared/Animations/Units/Infantry/Die6.kf
+		damage_threshold = 25
+		length = 3.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die7
+		kf = /Shared/Animations/Units/Infantry/Die7.kf
+		damage_threshold = 25
+		length = 3.3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die8
+		kf = /Shared/Animations/Units/Infantry/Die8.kf
+		damage_threshold = 5
+		length = 1.6
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die9
+		kf = /Shared/Animations/Units/Infantry/Die9.kf
+		damage_threshold = 5
+		length = 2
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die10
+		kf = /Shared/Animations/Units/Infantry/Die10.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die11
+		kf = /Shared/Animations/Units/Infantry/Die11.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die12
+		kf = /Shared/Animations/Units/Infantry/Die12.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die13
+		kf = /Shared/Animations/Units/Infantry/Die13.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die14
+		kf = /Shared/Animations/Units/Infantry/Die14.kf
+		damage_threshold = 25
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die15
+		kf = /Shared/Animations/Units/Infantry/Die15.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die16
+		kf = /Shared/Animations/Units/Infantry/Die16.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die17
+		kf = /Shared/Animations/Units/Infantry/Die17.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/Infantry/Die18.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die19
+		kf = /Shared/Animations/Units/Infantry/Die19.kf
+		damage_threshold = 0
+		length = 5
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die20
+		kf = /Shared/Animations/Units/Infantry/Die20.kf
+		damage_threshold = 0
+		length = 3
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/Infantry/Die1.kf
+		damage_threshold = 80
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die22
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 666
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=FidgetAnimation]
+	IDS = fidget1
+	kf = /Shared/Animations/Units/Infantry/Fidget1.kf
+	weight = 5			
+
+	[Animation Template=FidgetAnimation]
+	IDS = fidget2
+	kf = /Shared/Animations/Units/Infantry/Fidget2.kf
+	weight = 4			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget3
+	kf = /Shared/Animations/Units/Infantry/Fidget3.kf
+	weight = 3			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget4
+	kf = /Shared/Animations/Units/Infantry/Fidget4.kf
+	weight = 2			
+	length = 7			
+			
+	[Animation Template=FidgetAnimation]
+	{
+		IDS = fidget5
+		kf = /Shared/Animations/Units/Infantry/Fidget5.kf
+		weight = 1			
+		length = 10			
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+			
+	[Animation Template=IdleAnimation]
+	IDS = idle
+	kf = /Shared/Animations/Units/Infantry/Idle.kf
+
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/Infantry/IdleAttack.kf
+	
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	walk_distance = 1.5
+	kf = /Shared/Animations/Units/Infantry/Walk.kf
+			
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	walk_distance = 2.0
+	kf = /Shared/Animations/Units/Infantry/Jog.kf
+	
+	[AspectAnimationSet Template = AspectAnimationSetInfantryKneel]
+
+	[AspectAnimationSet Template = AspectAnimationSetInfantryProne]
+
+	;; Paratroopers will apply this animation to AspectFalling instead of AspectNormal - contact Guy if any problems arise
+	[Animation Template=SummonAnimation] 
+	{
+		IDS = summon1
+		kf = /Shared/Animations/Units/InfantryMG/Landing.kf
+	}
+}
+
+;;--------------  ANTI-TANK INFANTRY (BAZOOKA) CHARACTER COMPONENT -----------
+
+[Template AAInfantryATCharacterComponent Template=CharacterComponent]
+{
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	key_ratio = 0.46
+	kf = /Shared/Animations/Units/InfantryAT/KneelAttack1.kf
+	length = 1
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/InfantryAT/Die1.kf
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die3
+		kf = /Shared/Animations/Units/Infantry/Die3.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die4
+		kf = /Shared/Animations/Units/Infantry/Die4.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die5
+		kf = /Shared/Animations/Units/Infantry/Die5.kf
+		damage_threshold = 25
+		length = 5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die6
+		kf = /Shared/Animations/Units/Infantry/Die6.kf
+		damage_threshold = 25
+		length = 3.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die7
+		kf = /Shared/Animations/Units/Infantry/Die7.kf
+		damage_threshold = 25
+		length = 3.3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die8
+		kf = /Shared/Animations/Units/Infantry/Die8.kf
+		damage_threshold = 5
+		length = 1.6
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die9
+		kf = /Shared/Animations/Units/Infantry/Die9.kf
+		damage_threshold = 5
+		length = 2
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die10
+		kf = /Shared/Animations/Units/Infantry/Die10.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die11
+		kf = /Shared/Animations/Units/Infantry/Die11.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die12
+		kf = /Shared/Animations/Units/Infantry/Die12.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die13
+		kf = /Shared/Animations/Units/Infantry/Die13.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die14
+		kf = /Shared/Animations/Units/Infantry/Die14.kf
+		damage_threshold = 25
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die15
+		kf = /Shared/Animations/Units/Infantry/Die15.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die16
+		kf = /Shared/Animations/Units/Infantry/Die16.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die17
+		kf = /Shared/Animations/Units/Infantry/Die17.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/Infantry/Die18.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die19
+		kf = /Shared/Animations/Units/Infantry/Die19.kf
+		damage_threshold = 0
+		length = 5
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die20
+		kf = /Shared/Animations/Units/Infantry/Die20.kf
+		damage_threshold = 0
+		length = 3
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/Infantry/Die1.kf
+		damage_threshold = 80
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die22
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 666
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=FidgetAnimation]
+	IDS = fidget1
+	kf = /Shared/Animations/Units/InfantryAT/Fidget1.kf
+	weight = 5			
+
+	[Animation Template=FidgetAnimation]
+	IDS = fidget2
+	kf = /Shared/Animations/Units/InfantryAT/Fidget2.kf
+	weight = 4			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget3
+	kf = /Shared/Animations/Units/InfantryAT/Fidget3.kf
+	weight = 3			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget4
+	kf = /Shared/Animations/Units/InfantryAT/Fidget4.kf
+	weight = 2			
+	length = 7			
+			
+	[Animation Template=FidgetAnimation]
+	{
+		IDS = fidget5
+		kf = /Shared/Animations/Units/InfantryAT/Fidget5.kf
+		weight = 1			
+		length = 10			
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+			
+	[Animation Template=IdleAnimation]
+	IDS = idle
+	kf = /Shared/Animations/Units/InfantryAT/Idle.kf
+
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/InfantryAT/KneelIdleAttack.kf
+	
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	walk_distance = 1.5
+	kf = /Shared/Animations/Units/InfantryAT/Walk.kf
+			
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	walk_distance = 2.5
+	kf = /Shared/Animations/Units/InfantryAT/Jog.kf
+
+	[AspectAnimationSet Template = AspectAnimationSetInfantryATKneel]
+
+	;; Paratroopers will apply this animation to AspectFalling instead of AspectNormal - contact Guy if any problems arise
+	[Animation Template=SummonAnimation] 
+	{
+		IDS = summon1
+		kf = /Shared/Animations/Units/InfantryMG/Landing.kf
+	}
+}
+
+;;-------------------  ANTI-TANK INFANTRY (RPG) CHARACTER COMPONENT ---------------
+
+[Template AAInfantryRPGCharacterComponent Template=CharacterComponent]
+{
+	[Animation Template=AttackAnimation]
+	{
+		IDS = attack1
+		key_ratio = 0.15
+		kf = /Shared/Animations/Units/InfantryRPG/KneelAttack1.kf
+		length = 3
+	
+		[WhenDoAtTime Template= FXC_Equipment]
+		action = HIDE
+		time = 0.15
+		location = rhand
+		equipment_type_ids = rpg
+		
+		[WhenDoAtTime Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			time = 1.0
+			location = lhand
+			equipment_type_ids = rpgload
+		}
+		
+		[WhenDoAtTime Template=FXC_Equipment]
+		{
+			action = HIDE
+			time = 2.5
+			location = lhand
+			equipment_type_ids = rpgload
+		}
+				
+		[WhenDoAtTime Template=FXC_Equipment]
+		action = UNHIDE
+		time = 2.5
+		location = rhand
+		equipment_type_ids = rpg
+		
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+		
+		[WhenEnd Template=FXC_Equipment]
+		action = HIDE
+		location = lhand
+		equipment_type_ids = rpgload
+		
+	}
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/InfantryRPG/Die1.kf
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die3
+		kf = /Shared/Animations/Units/Infantry/Die3.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die4
+		kf = /Shared/Animations/Units/Infantry/Die4.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die5
+		kf = /Shared/Animations/Units/Infantry/Die5.kf
+		damage_threshold = 25
+		length = 5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die6
+		kf = /Shared/Animations/Units/Infantry/Die6.kf
+		damage_threshold = 25
+		length = 3.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die7
+		kf = /Shared/Animations/Units/Infantry/Die7.kf
+		damage_threshold = 25
+		length = 3.3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die8
+		kf = /Shared/Animations/Units/Infantry/Die8.kf
+		damage_threshold = 5
+		length = 1.6
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die9
+		kf = /Shared/Animations/Units/Infantry/Die9.kf
+		damage_threshold = 5
+		length = 2
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die10
+		kf = /Shared/Animations/Units/Infantry/Die10.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die11
+		kf = /Shared/Animations/Units/Infantry/Die11.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die12
+		kf = /Shared/Animations/Units/Infantry/Die12.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die13
+		kf = /Shared/Animations/Units/Infantry/Die13.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die14
+		kf = /Shared/Animations/Units/Infantry/Die14.kf
+		damage_threshold = 25
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die15
+		kf = /Shared/Animations/Units/Infantry/Die15.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die16
+		kf = /Shared/Animations/Units/Infantry/Die16.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die17
+		kf = /Shared/Animations/Units/Infantry/Die17.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/Infantry/Die18.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+	}	
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die19
+		kf = /Shared/Animations/Units/Infantry/Die19.kf
+		damage_threshold = 0
+		length = 5
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die20
+		kf = /Shared/Animations/Units/Infantry/Die20.kf
+		damage_threshold = 0
+		length = 3
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/Infantry/Die1.kf
+		damage_threshold = 80
+		length = 1.5 
+		damage_filter = 0
+		
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die22
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 666
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=FidgetAnimation]
+	IDS = fidget1
+	kf = /Shared/Animations/Units/InfantryRPG/Fidget1.kf
+	weight = 5			
+
+	[Animation Template=FidgetAnimation]
+	IDS = fidget2
+	kf = /Shared/Animations/Units/InfantryRPG/Fidget2.kf
+	weight = 4			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget3
+	kf = /Shared/Animations/Units/InfantryRPG/Fidget3.kf
+	weight = 3			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget4
+	kf = /Shared/Animations/Units/InfantryRPG/Fidget4.kf
+	weight = 2			
+	length = 7			
+			
+	[Animation Template=FidgetAnimation]
+	{
+		IDS = fidget5
+		kf = /Shared/Animations/Units/InfantryRPG/Fidget5.kf
+		weight = 1			
+		length = 10			
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+			
+	[Animation Template=IdleAnimation]
+	IDS = idle
+	kf = /Shared/Animations/Units/InfantryRPG/Idle.kf
+
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/InfantryRPG/KneelIdleAttack.kf
+	
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	walk_distance = 1.5
+	kf = /Shared/Animations/Units/InfantryRPG/Walk.kf
+			
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	walk_distance = 2
+	kf = /Shared/Animations/Units/InfantryRPG/Jog.kf
+
+	[AspectAnimationSet Template = AspectAnimationSetInfantryRPGKneel]
+}
+
+;;--------------  HEAVY MACHINE-GUN INFANTRY CHARACTER COMPONENT -----------
+
+[Template AAInfantryMGCharacterComponent Template=CharacterComponent]
+{
+	[Animation Template=AttackAnimation]
+	{
+		IDS = attack1
+		key_ratio = 0.0
+		kf = /Shared/Animations/Units/InfantryMG/KneelAttack1.kf
+		length = 1.5
+	
+		[WhenStart Template=FXC_Equipment]
+		action = UNHIDE
+		location = base
+		equipment_type_ids = tripoddown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = HIDE
+		location = base
+		equipment_type_ids = tripoddown
+	}
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/InfantryMG/Die1.kf
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die3
+		kf = /Shared/Animations/Units/Infantry/Die3.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die4
+		kf = /Shared/Animations/Units/Infantry/Die4.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die5
+		kf = /Shared/Animations/Units/Infantry/Die5.kf
+		damage_threshold = 25
+		length = 5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die6
+		kf = /Shared/Animations/Units/Infantry/Die6.kf
+		damage_threshold = 25
+		length = 3.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die7
+		kf = /Shared/Animations/Units/Infantry/Die7.kf
+		damage_threshold = 25
+		length = 3.3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die8
+		kf = /Shared/Animations/Units/Infantry/Die8.kf
+		damage_threshold = 5
+		length = 1.6
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die9
+		kf = /Shared/Animations/Units/Infantry/Die9.kf
+		damage_threshold = 5
+		length = 2
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die10
+		kf = /Shared/Animations/Units/Infantry/Die10.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die11
+		kf = /Shared/Animations/Units/Infantry/Die11.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die12
+		kf = /Shared/Animations/Units/Infantry/Die12.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die13
+		kf = /Shared/Animations/Units/Infantry/Die13.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die14
+		kf = /Shared/Animations/Units/Infantry/Die14.kf
+		damage_threshold = 25
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die15
+		kf = /Shared/Animations/Units/Infantry/Die15.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die16
+		kf = /Shared/Animations/Units/Infantry/Die16.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die17
+		kf = /Shared/Animations/Units/Infantry/Die17.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/Infantry/Die18.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die19
+		kf = /Shared/Animations/Units/Infantry/Die19.kf
+		damage_threshold = 0
+		length = 5
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die20
+		kf = /Shared/Animations/Units/Infantry/Die20.kf
+		damage_threshold = 0
+		length = 3
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/Infantry/Die1.kf
+		damage_threshold = 80
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die22
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 666
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=FidgetAnimation]
+	IDS = fidget1
+	kf = /Shared/Animations/Units/InfantryMG/Fidget1.kf
+	weight = 5			
+
+	[Animation Template=FidgetAnimation]
+	IDS = fidget2
+	kf = /Shared/Animations/Units/InfantryMG/Fidget2.kf
+	weight = 4			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget3
+	kf = /Shared/Animations/Units/InfantryMG/Fidget3.kf
+	weight = 3			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget4
+	kf = /Shared/Animations/Units/InfantryMG/Fidget4.kf
+	weight = 2
+	length = 7			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget5
+	kf = /Shared/Animations/Units/InfantryMG/Fidget5.kf
+	weight = 1			
+	length = 10			
+			
+	[Animation Template=IdleAnimation]
+	IDS = idle
+	kf = /Shared/Animations/Units/InfantryMG/Idle.kf
+
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleattack
+		kf = /Shared/Animations/Units/InfantryMG/KneelIdleAttack.kf
+		
+		[WhenStart Template=FXC_Equipment]
+		action = UNHIDE
+		location = base
+		equipment_type_ids = tripoddown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = HIDE
+		location = base
+		equipment_type_ids = tripoddown
+	}
+	
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	walk_distance = 1.5
+	kf = /Shared/Animations/Units/InfantryMG/Walk.kf
+			
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	walk_distance = 2
+	kf = /Shared/Animations/Units/InfantryMG/Jog.kf
+
+	;; Paratroopers will apply this animation to AspectFalling instead of AspectNormal - contact Guy if any problems arise
+	[Animation Template=SummonAnimation] 
+	{
+		IDS = summon1
+		kf = /Shared/Animations/Units/InfantryMG/Landing.kf
+	}
+			
+	[AspectAnimationSet Template = AspectAnimationSetInfantryMGKneel]
+}
+
+;; --------------------- SMG INFANTRY CHARACTER COMPONENT ------------------------
+
+[Template AAInfantrySMGCharacterComponent Template=CharacterComponent]
+{
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	key_ratio = 0.0
+	kf = /Shared/Animations/Units/InfantrySMG/Attack1.kf
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/InfantrySMG/Die1.kf
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die3
+		kf = /Shared/Animations/Units/Infantry/Die3.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die4
+		kf = /Shared/Animations/Units/Infantry/Die4.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die5
+		kf = /Shared/Animations/Units/Infantry/Die5.kf
+		damage_threshold = 25
+		length = 5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die6
+		kf = /Shared/Animations/Units/Infantry/Die6.kf
+		damage_threshold = 25
+		length = 3.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die7
+		kf = /Shared/Animations/Units/Infantry/Die7.kf
+		damage_threshold = 25
+		length = 3.3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die8
+		kf = /Shared/Animations/Units/Infantry/Die8.kf
+		damage_threshold = 5
+		length = 1.6
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die9
+		kf = /Shared/Animations/Units/Infantry/Die9.kf
+		damage_threshold = 5
+		length = 2
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die10
+		kf = /Shared/Animations/Units/Infantry/Die10.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die11
+		kf = /Shared/Animations/Units/Infantry/Die11.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die12
+		kf = /Shared/Animations/Units/Infantry/Die12.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die13
+		kf = /Shared/Animations/Units/Infantry/Die13.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die14
+		kf = /Shared/Animations/Units/Infantry/Die14.kf
+		damage_threshold = 25
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die15
+		kf = /Shared/Animations/Units/Infantry/Die15.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die16
+		kf = /Shared/Animations/Units/Infantry/Die16.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die17
+		kf = /Shared/Animations/Units/Infantry/Die17.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/Infantry/Die18.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die19
+		kf = /Shared/Animations/Units/Infantry/Die19.kf
+		damage_threshold = 0
+		length = 5
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die20
+		kf = /Shared/Animations/Units/Infantry/Die20.kf
+		damage_threshold = 0
+		length = 3
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/Infantry/Die1.kf
+		damage_threshold = 80
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die22
+		kf = /Shared/Animations/Units/Infantry/Die2.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 666
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=FidgetAnimation]
+	IDS = fidget1
+	kf = /Shared/Animations/Units/InfantrySMG/Fidget1.kf
+	weight = 5			
+
+	[Animation Template=FidgetAnimation]
+	IDS = fidget2
+	kf = /Shared/Animations/Units/InfantrySMG/Fidget2.kf
+	weight = 4			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget3
+	kf = /Shared/Animations/Units/InfantrySMG/Fidget3.kf
+	weight = 3			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget4
+	kf = /Shared/Animations/Units/InfantrySMG/Fidget4.kf
+	weight = 2			
+	length = 7			
+			
+	[Animation Template=FidgetAnimation]
+	{
+		IDS = fidget5
+		kf = /Shared/Animations/Units/InfantrySMG/Fidget5.kf
+		weight = 1			
+		length = 10			
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+			
+	[Animation Template=IdleAnimation]
+	IDS = idle
+	kf = /Shared/Animations/Units/InfantrySMG/Idle.kf
+
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/InfantrySMG/IdleAttack.kf
+	
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleprojectileattack
+		kf = /Shared/Animations/Units/InfantrySMG/IdleProjectileAttack.kf
+		
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+	
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	walk_distance = 1.5
+	kf = /Shared/Animations/Units/InfantrySMG/Walk.kf
+	
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	walk_distance = 2
+	kf = /Shared/Animations/Units/InfantrySMG/Jog.kf
+	
+	[Animation Template=AttackAnimation]
+	{
+		IDS = projectileattack1
+		key_ratio = 0.5
+		kf = /Shared/Animations/Units/InfantrySMG/ProjectileAttack1.kf
+		
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+	;; Paratroopers will apply this animation to AspectFalling instead of AspectNormal - contact Guy if any problems arise
+	[Animation Template=SummonAnimation] 
+	{
+		IDS = summon1
+		kf = /Shared/Animations/Units/InfantrySMG/Landing.kf
+	}
+			
+	[AspectAnimationSet Template = AspectAnimationSetInfantrySMGKneel]
+
+	[AspectAnimationSet Template = AspectAnimationSetInfantrySMGProne]
+}
+
+[Template AAHorseCharacterComponent Template=CharacterComponent]
+{
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	key_ratio = 0.0
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseIdle.kf
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die3
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die4
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die5
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 25
+		length = 5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die6
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 25
+		length = 3.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die7
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 25
+		length = 3.3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die8
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 5
+		length = 1.6
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die9
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 5
+		length = 2
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die10
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die11
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die12
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 5
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die13
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 25
+		length = 4
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die14
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 25
+		length = 3
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die15
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die16
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 5
+		length = 1.5
+		damage_filter = 2
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die17
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 20
+		length = 2
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die19
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 0
+		length = 5
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+			
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die20
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 0
+		length = 3
+		damage_filter = 1
+		
+		[WhenStart template=FXC_CreateVFX]
+  		VFX_IDS = body_flame
+  		at = self
+		location = spine
+		attached = true
+  		delay = 0.0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 80
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die22
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 0
+		length = 3 
+		damage_filter = 666
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=FidgetAnimation]
+	IDS = fidget1
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseFidget1.kf
+	weight = 5			
+
+	[Animation Template=FidgetAnimation]
+	IDS = fidget2
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseFidget2.kf
+	weight = 4			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget3
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseFidget1.kf
+	weight = 3			
+			
+	[Animation Template=FidgetAnimation]
+	IDS = fidget4
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseFidget2.kf
+	weight = 2			
+	length = 7			
+			
+	[Animation Template=FidgetAnimation]
+	{
+		IDS = fidget5
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseFidget1.kf
+		weight = 1			
+		length = 10			
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+			
+	[Animation Template=IdleAnimation]
+	IDS = idle
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseIdle.kf
+
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseMeleeAttack1.kf
+	
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleprojectileattack
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseMeleeAttack1.kf
+		
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+	
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	walk_distance = 1.5
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseWalk.kf
+	
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	walk_distance = 2
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseWalk.kf
+	
+	[Animation Template=AttackAnimation]
+	{
+		IDS = projectileattack1
+		key_ratio = 0.5
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseMeleeAttack1.kf
+		
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+	;; Paratroopers will apply this animation to AspectFalling instead of AspectNormal - contact Guy if any problems arise
+	[Animation Template=SummonAnimation] 
+	{
+		IDS = summon1
+		kf = /Shared/Animations/Units/InfantrySMG/Landing.kf
+	}
+			
+	[AspectAnimationSet Template = AspectAnimationSet]
+{
+	aspect_ids = kneel
+		
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseMeleeAttack1.kf
+	key_ratio = 0.1
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die1
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 0
+		length = 1 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseMeleeAttack1.kf
+		
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleprojectileattack
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseMeleeAttack1.kf
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+		
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseWalk.kf
+	walk_distance = 1
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseWalk.kf
+	walk_distance = 1
+
+	[Animation Template=AttackAnimation]
+	{
+		IDS = projectileattack1
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseMeleeAttack1.kf
+		key_ratio = 0.3
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+}
+			
+	[AspectAnimationSet Template = AspectAnimationSet]
+{
+	aspect_ids = prone
+		
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseMeleeAttack1.kf
+	key_ratio = 0.1
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	IDS = die2
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	IDS = die17
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseDie1.kf
+		damage_threshold = 80
+		length = 1 
+		damage_filter = 0		
+	}
+		
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseMeleeAttack1.kf
+
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleprojectileattack
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseMeleeAttack1.kf
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseWalk.kf
+	walk_distance = 0.6		
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/InfantrySMG1/HorseWalk.kf
+	walk_distance = 0.6		
+
+	[Animation Template=AttackAnimation]
+	{
+		IDS = projectileattack1
+		kf = /Shared/Animations/Units/InfantrySMG1/HorseMeleeAttack1.kf
+		key_ratio = 0.3
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+}
+}

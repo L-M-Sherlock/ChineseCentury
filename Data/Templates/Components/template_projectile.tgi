@@ -1,0 +1,18 @@
+[template ProjectileComponent]
+{
+	;; am070803 - Added speed_max to make projectiles not dependent on the mover component
+	fixed	projectile_speed
+	
+	;; a0m040504 - change antigrav flag to enum
+	;; valid values: ANTIGRAV, LOB, BOMB
+	string	projectile_type = ANTIGRAV
+
+	;; smm042304 - radius of area around actual sim projectile hit point where view side
+	;; projectile will hit
+	fixed	projectile_spread = 0
+
+	;; mad062004 - (see bug3485)
+	;; ability applied at exactly after the specified lifetime
+	;; 0 means ignore and use default behavior
+	fixed	projectile_life = 0
+}

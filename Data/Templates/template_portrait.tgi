@@ -1,0 +1,40 @@
+/**************************************************************************
+
+template_unit.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+REVISION HISTORY:
+smm031103 - created
+
+USAGE:
+  You should use resource_prefix appropriately:
+  
+  [View]
+  {
+	resource_prefix = Captain/CaptainPortrait
+  }
+
+**************************************************************************/
+
+[Template Portrait Inherit=Object]
+{
+	category = PORTRAIT
+
+	[Size]
+	{
+		height = 2
+	}
+
+	[View]
+	{
+		;; portrait model file
+		;; drp060203 - changed unique to 'false' because the group display uses portraits so it is
+		;;  possible to have multiple instances.
+		unique = false
+
+		shadow_texture	= NULL
+		skin		= NULL
+		icon		= NULL
+	}
+
+} ; end [Template Portrait]

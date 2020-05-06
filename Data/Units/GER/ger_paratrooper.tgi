@@ -1,0 +1,92 @@
+[Thing Template=AAUnitGERProne]
+{
+	IDS = ger_paratrooper
+	name = "#ger_paratrooper_name"
+	editor_name = "#ger_paratrooper_editor_name"
+	
+	[Stance template = StanceFalling]
+	
+	[View]
+	{
+		resource_prefix = GERParatrooper/GERParatrooper
+		
+		[Aspect Template=AspectFalling]
+
+		[TextureSearchPath]
+		{
+			path = /effects/parachute/GER
+		}
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+	
+	[BodyComponent]
+	health = 200
+	defense = 2
+	
+	[ElementComponent]
+	{
+		required_properties = airhq
+	}
+		
+	[CharacterComponent Template=AAInfantrySMGCharacterComponent]
+	
+	[MoverComponent]
+	speed_max = 2.5
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{	
+			[AbilityDefinition Template=AAInfantrySMG]
+			{
+				name = "#ger_paratrooper_AbilityDefinition_name"
+				recharge_time = 2
+				range = 10
+			
+				[Effect Template=PierceDamageEffect]
+				amount = 12
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ger_mg_light
+			}
+		}
+
+		[Ability Template=AAGrenadeLocal]
+		{		
+			[AbilityDefinition Template=AAThrownGrenade]
+			{
+				name = "#ger_infantry_AbilityDefinition_name_2"
+				projectile_ids = grenade02
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 25
+			}
+		}
+	}
+
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		vfx_ids = parachute_close_ger
+		actor_state = falling
+		location = neck
+	}
+}

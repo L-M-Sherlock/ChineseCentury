@@ -1,0 +1,72 @@
+[Thing Template=AAUSAOrganizationInfantry]
+{
+	IDS = regiment_usa_infantry_recon
+	name = "#regiment_usa_infantry_recon_name"
+	editor_name = "#regiment_usa_infantry_recon_editor_name"
+
+	[DetectionComponent]
+	{
+		detection_range = 27
+	}
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 20
+		
+		[Upkeep]
+		ammo = 3
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = recon
+        
+		[Property]
+		property_IDS = infantry_company
+		
+		[Property]
+		property_IDS = trailblazing		
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/USA/USAInfantry/USAInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantryRecon.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = usa_recon_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = usa_recon_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = usa_recon_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+        recruit_time = 10
+		recruit_full = true
+		
+		[Slot]	;; front
+		element_IDS = usa_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = null
+
+		[Slot]	;; rear guard 2
+		element_IDS = null
+		
+		[Slot]	;; rear guard 3
+		element_IDS = usa_infantry
+	
+		[Slot]	;; flank
+		element_IDS = null
+		
+		[Slot]	;; captain
+		element_IDS = usa_infantry_co
+	}
+}

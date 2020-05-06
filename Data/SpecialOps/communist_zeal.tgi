@@ -1,0 +1,70 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = communist_zeal
+	name = "#communist_zeal_name"
+	description = "#communist_zeal_description"
+	targets = +FRIEND +INFANTRY
+	ability_type = NULL
+	recharge_time = 300
+	area = 20
+	range = 10
+	target_location_vfx = friendly_target_decal_vfx
+
+	icon = /UI/%s/Game/SpecialOps/IconCommunistZeal.png
+	
+	[Effect Template=EnchantmentEffect]
+	{
+		[EnchantmentProperty]
+		{
+			IDS = property_communist_zeal
+			name = "#communist_zeal_Effect_EnchantmentProperty_name"
+			enchantment_type = ench_type_courage
+			duration = 120				
+			required_properties = infantry
+			icon = /Properties/PropertyIcons/IconPropertyCombat.png
+		
+			[Modifier Template=AbilityEffectModifier]
+			{
+				ability_type = attack
+										
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = armor_piercing
+				amount = +3
+			}
+			
+			[Modifier Template=MultiplyModifier]
+			attribute = HEALTH
+			amount = +0.4
+			
+			[Modifier Template=MultiplyModifier]
+			attribute = SPEED_MAX
+			amount = 0.2
+	
+			[Modifier Template=EnchantmentImmunityModifier]
+			enchantment_type = ench_type_fear
+			
+			[WhenAdded Template=FXC_CreateVFX]
+			VFX_IDS = blitzkrieg_tank_glow
+		
+			[WhenAdded Template=FXC_CreateVFX]
+			VFX_IDS = speed_decal_small
+			location = position
+		}
+	}
+
+	[Flags]
+	enchantment = true
+	
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = communist_zeal_sfx
+	at= TARGET_GROUND
+
+	[WhenDo Template=FXC_CreateVFX]
+	VFX_IDS = communist_zeal_sickle
+	at= TARGET_GROUND
+
+
+}

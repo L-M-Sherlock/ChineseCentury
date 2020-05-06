@@ -1,0 +1,24 @@
+/**************************************************************************
+
+template_equipment_type.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: equipment types used by the game.  The FX system uses this to
+			classify types of equipment for replacing/flipping/hiding equipment on a character.
+			This is purely for the view (the art) and not the game.
+
+REVISION HISTORY:
+drp090602 - created
+
+USAGE:
+
+	[EquipmentType template=EquipmentType]
+	This node goes at the root level to define an equipment type available for use in the game.
+
+**************************************************************************/
+
+[template EquipmentType]
+{
+	string IDS
+	localized name = null
+}

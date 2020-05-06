@@ -1,0 +1,120 @@
+[Thing Template=AAUnititaProne]
+{
+	IDS = ita_Paratrooper_engineer
+	name = "#Paratrooper_Engineer"
+	editor_name = "#ita_Paratrooper_Engineer"
+	
+	[Stance Template=StanceFalling]
+
+	[View]
+	{
+		resource_prefix = itaEngineer/itaEngineer
+
+		[Aspect Template=AspectFalling]
+		{
+			IDS = falling
+			model = itaParatrooper/itaParatrooperFalling.nif
+			disable_animations = true
+		}
+
+		[TextureSearchPath]
+		{
+			path = /effects/parachute/ita
+		}
+	
+		[WhenCreated Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = hammer
+		
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+		
+	}
+
+	[BodyComponent]
+	health = 200
+	defense = 1
+	
+	[BuilderComponent]
+	{
+		[BuildActor]
+		actor_ids = ita_bunker
+		
+		[BuildActor]
+		actor_ids = ita_bunker_aa
+		
+		[BuildActor]
+		actor_ids = ita_bunker_artillery
+	}
+
+	[ElementComponent]
+	required_structures = ita_brigade_engineer
+
+	[MoverComponent]
+	speed_max = 3
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+
+		[Property]
+		property_IDS = garand_semi_automatic_rifle
+		
+		[Property]
+		property_IDS = engineer		
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				name = "#ita_engineer_AbilityDefinition_name"
+				recharge_time = 3
+				range = 10
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = ita_rifle
+			}
+		}
+
+		[Ability Template=AARepairLocal]
+		{			
+			animation1 = build1
+			
+			[AbilityDefinition Template=AARepairAction]
+			{
+				[Effect Template=RepairEffect]
+				amount = 8
+			}
+		}
+		
+		[Ability Template=AAConstructLocal]
+		{
+			animation1 = build1
+			
+			[AbilityDefinition Template=AAConstructAction]
+			{
+				[Effect Template=RepairEffect]
+				amount = 8
+			}
+		}
+	}
+	
+	[CharacterComponent Template=AAEngineerCharacterComponent]
+
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		vfx_ids = parachute_close_ita
+		actor_state = falling
+		location = neck
+	}
+}

@@ -1,0 +1,139 @@
+[Thing Template=AATropicalDynamicDoodad]
+{
+	IDS = tropical_treespalm
+	name = "#tropical_treespalm_name"
+	
+	[Component Template=TreeDynamicDoodadComponent]
+	
+	[Placement]
+	{
+		[Biome]
+		IDS = tropical_savannah
+		weight = -1.00		
+
+		[Biome]
+		{
+			ids = tropical_forest
+			weight = 0.00
+			
+			[Terrain]
+			IDS = tropical_beach
+			weight = 0.01
+			
+			[Terrain]
+			IDS = tropical_jungle
+			weight = 0.10
+			primary_doodad = true
+
+			[Terrain]
+			IDS = tropical_jungledense
+			weight = 0.10
+			primary_doodad = true
+
+			[Terrain]
+			IDS = tropical_swamp
+			weight = 0.01
+		}
+	}
+
+	[View]
+	{
+		aspects_as_variations = true
+		resource_prefix = TropicalTreesPalm/TropicalTreesPalm
+		shadow_type = STENCIL
+		shadow_texture = /effects/shadows/TreePalmShadow.dds
+		align_with_wind = false
+		
+		[TextureSearchPath]
+		path = /Doodads/Tropical/TropicalBambooReeds		
+
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm01
+		model = %s01.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm02
+		model = %s02.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm03
+		model = %s03.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm04
+		model = %s04.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm05
+		model = %s05.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm06
+		model = %s06.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm07
+		model = %s07.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm08
+		model = %s08.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm09
+		model = %s09.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm10
+		model = %s10.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm11
+		model = %s11.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm12
+		model = %s12.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm13
+		model = %s13.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm14
+		model = %s14.nif
+		ground_size = 0.5,0.5
+		
+		[Aspect Template=Aspect]
+		IDS = tropical_treespalm15
+		model = %s15.nif
+		ground_size = 0.5,0.5
+		
+		[Swivel]
+		{
+			swivel_node_ids = base
+			swivel_inertia = 2.0
+			spring_constant = 0.1
+			swivel_mass = 1000
+			wind_sway = true
+			recoil = false
+			impact_sway = true
+			movement_inertia = false
+			sway_speed = 1.25
+			sway_strength = 12
+		}
+	}
+}

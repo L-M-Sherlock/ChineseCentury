@@ -1,0 +1,24 @@
+;; ConstructionComponent: allows the actor to be "under construction" until fully created.
+[template ConstructionComponent]
+{
+	;; Prefix of NetImmerse node names during stages of construction.  The node names should
+	;; be followed by consecutive natural numbers (1, 2, 3, ...).
+	string	construction_node_name_prefix
+
+	;; NetImmerse node to show when fully constructed.  All other construction nodes are hidden.
+	;; Case-sensitive.
+	string	finished_node_name
+
+	;; required object on which actor must be placed to be constructed
+	string	required_object_ids = NULL
+
+	localized	cannot_upgrade_description = ""
+
+	bool	can_sell = true
+
+	;; only used if "can_sell = false"
+	bool	can_raze = true
+
+	[List Upgrade]
+	string	ids
+}

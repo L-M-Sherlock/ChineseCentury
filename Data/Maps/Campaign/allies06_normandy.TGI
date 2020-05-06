@@ -1,0 +1,29 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Operation Overlord: D-Day"
+
+	name_37775 = "Bayeux"
+	kingdom_9 = "fra"
+	kingdom_7 = "Beachhead Defenders"
+	name_37796 = "Valognes"
+	independent_2 = "Civilian"
+	kingdom_6 = "Crocker's Force"
+	restriction_group_0002 = "AXIS"
+	kingdom_5 = "Bucknail's Force"
+	kingdom_4 = "Collins' Force"
+	restriction_group_0001 = "ALLIES"
+	kingdom_3 = "Rommel's Force"
+	map_name = "Operation Overlord: D-Day"
+	name_37768 = "Douvres"
+	objective_7 = "3. Capture and hold Carentan."
+	kingdom_1 = "Rundstedt's Force"
+	objective_6 = "2. Capture and hold Bayeux."
+	kingdom_0 = "Gerow's Force"
+	objective_5 = "1. Capture and hold Douvres."
+	objective_18 = "5. Destroy Rommel's Forces."
+	name_37782 = "Carentan"
+	objective_17 = "4. Destroy Rundstedt's Forces."
+	map_description = "Despite the victories in southern Italy, the march northward remains slow, and the bulk of the German forces have been able to continue the fight against Russia.  At Stalin's urging, the time has come to open a new front. On June 6th, 1944, this front will be opened with an amphibious invasion in Normandy that will mark the final days of Germany's conquest.  Despite substantial misinformation fed to the Germans about the time and location of the landing, coastal defenses remain enormous.  D-Day is about to begin. "
+	independent_8 = "Disabled"
+}

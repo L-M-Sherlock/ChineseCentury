@@ -1,0 +1,1141 @@
+/*
+------------ TECHNOLOGY TEMPLATES ------------------
+*/
+
+[Template AATechnology Template=SharedProperty]
+{
+	is_technology = true
+}
+
+[Template AATechnologyAirplane Template=AATechnology]
+{
+	required_properties = aircraft
+}
+
+[Template AATechnologyBuilding Template=AATechnology]
+{
+	required_properties = building
+}
+
+[Template AATechnologyInfantry Template=AATechnology]
+{
+	required_properties = infantry
+}
+
+[Template AATechnologyTank Template=AATechnology]
+{
+	required_properties = tank
+}
+
+[Template AATechnologyVehicle Template=AATechnology]
+{
+	required_properties = vehicle
+}
+
+
+/*
+------------ AIRFIELD TECHNOLOGIES ------------------
+*/
+
+[Property Template=AATechnologyAirplane]
+{
+	IDS = tech_self_sealing_fuel_tanks
+	name = "#properties_technologies_AATechnologySelfSealingFuelTanks_name"
+	icon = PropertyIcons/IconPropertyMorale.png
+	action_button_icon = TechIcons/IconSelfSealingFuelTanks.png
+
+	[Modifier Template=AddModifier]
+	attribute = DV
+	amount = 20
+}
+
+[Property Template=AATechnologyAirplane]
+{
+	IDS = tech_superchargers	
+	name = "#properties_technologies_AATechnologySuperchargers_name"
+	icon = PropertyIcons/IconPropertyMovement.png
+	action_button_icon = TechIcons/IconSuperchargers.png
+	
+	[Modifier template=MultiplyModifier]
+	attribute = SPEED_MAX
+	amount = +0.25
+}
+
+[Property Template=AATechnologyAirplane]
+{
+	IDS = tech_improved_recon	
+	name = "#properties_technologies_tech_improved_recon_name"
+	icon = PropertyIcons/IconPropertyMovement.png
+	action_button_icon = TechIcons/IconImprovedRecon.png
+	
+	[Modifier Template=AddModifier]
+	attribute = DETECTION_RANGE
+	amount = 5
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_air_superiority	
+	name = "#properties_technologies_tech_air_superiority_name"
+	icon = PropertyIcons/IconPropertyAttack.png
+	action_button_icon = TechIcons/IconAirSuperiority.png
+
+	required_properties = fighter
+
+	[Modifier Template=AddModifier]
+	attribute = AV
+	amount = 10
+
+	[Modifier Template=AddModifier]
+	attribute = DV
+	amount = 5
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_increased_payload	
+	name = "#properties_technologies_AATechnologyIncreasedPayload_name"
+	icon = PropertyIcons/IconPropertyAttack.png
+	action_button_icon = TechIcons/IconIncreasedPayload.png
+
+	required_properties = bomber
+
+	[Modifier Template=AddModifier]
+	attribute = AV
+	amount = 15
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_sas_commandos
+	name = "#properties_technologies_tech_gbr_sas_commandos_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/IconSASParatroopers.png
+	
+	required_properties = airhq
+
+	description = "#properties_technologies_tech_gbr_sas_commandos_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_paratrooper_MP
+	name = "#properties_technologies_tech_chn_paratrooper_MP_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/IconParatrooperMP.png
+	
+	required_properties = airhq
+
+	description = "#properties_technologies_tech_chn_paratrooper_MP_description"
+
+	[Modifier Template=MultiplyModifier]
+	attribute = RECRUIT_COST
+	amount = 0.1
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_napalm
+	name = "#properties_technologies_tech_usa_napalm_name"
+	icon = PropertyIcons/IconPropertyAttack.png
+	action_button_icon = TechIcons/IconNapalm.png
+	
+	required_properties = bomber
+	
+	description = "#properties_technologies_tech_usa_napalm_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_nuclear_weapons
+	name = "#properties_technologies_tech_nuclear_weapons_name"
+	icon = PropertyIcons/IconPropertyAttack.png
+	action_button_icon = /UI/Game/SpecialOps/IconAtomicBomb.png
+	
+	required_properties = bomber
+	
+	description = "#properties_technologies_tech_nuclear_weapons_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_increased_height	
+	name = "#properties_technologies_AATechnologyIncreasedHeight_name"
+	icon = PropertyIcons/IconPropertyMorale.png
+	action_button_icon = TechIcons/IconSelfSealingFuelTanks.png
+
+	required_properties = airplane
+
+	[Modifier Template=ResistDamageModifier]
+	damage_type = explosive
+	amount = 0.99
+
+	[Modifier Template=ResistDamageModifier]
+	damage_type = flame
+	amount = 0.99
+}
+
+/*
+------------ ARTILLERY BRIGADE TECHNOLOGIES ------------------
+*/
+
+[Property Template=AATechnology]
+{
+	IDS = tech_ammo_production
+	name = "#properties_technologies_AATechnologyResourceProductionModifierAmmo_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	action_button_icon = TechIcons/IconAmmunitionProduction.png
+
+	required_properties = ammo
+	
+	[Modifier Template=ResourceProductionModifier]
+	{
+		[Production Template=ProductionList]
+        	ammo = 5
+	}
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_improved_fire_control
+	name = "#properties_technologies_AATechnologyImprovedFireControl_name"
+	icon = PropertyIcons/IconPropertyCombat.png
+	action_button_icon = TechIcons/IconImprovedFireControl.png
+
+	required_properties = artillery
+
+	[Modifier Template=MultiplyModifier]
+	attribute = RECHARGE_TIME
+	amount = 0.25
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_improved_mortars
+	name = "#properties_technologies_tech_improved_mortars_name"
+	icon = PropertyIcons/IconPropertyCombat.png
+	action_button_icon = TechIcons/IconImprovedMortars.png
+
+	required_properties = mortar
+
+	[Modifier Template=AddModifier]
+	attribute = AV
+	amount = 5
+
+	[Modifier Template=MultiplyModifier]
+	attribute = RECHARGE_TIME
+	amount = 0.2
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_long_range_artillery
+	name = "#properties_technologies_AATechnologyLongRangeArtillery_name"
+	icon = PropertyIcons/IconPropertyAttack.png
+	action_button_icon = TechIcons/IconLongRangeArtillery.png
+
+	required_properties = artillery
+
+	[Modifier Template=AddModifier]
+	attribute = PROJECTILE_ABILITY_RANGE
+	amount = 6
+	
+	[Modifier Template=AddModifier]
+	attribute = BOMBARD_ABILITY_RANGE
+	amount = 6
+}
+
+[Property Template=AATechnologyTank]
+{
+	IDS = tech_gyrostabilized_cannons
+	name = "#properties_technologies_tech_gbr_gyrostabilizers_name"
+	icon = PropertyIcons/IconPropertyCombat.png
+	action_button_icon = TechIcons/IconGyrostabilizers.png
+
+	[Modifier Template=AddModifier]
+	attribute = AV
+	amount = 10
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_infantry_banzai
+	name = "#properties_technologies_tech_jpn_infantry_banzai_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/IconBanzai.png
+	
+	required_properties = infhq
+
+	description = "#properties_technologies_tech_jpn_infantry_banzai_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_rocket_truck
+	name = "#properties_technologies_tech_rus_rocket_truck_name"
+	icon = PropertyIcons/IconPropertyEngineering.png
+	action_button_icon = TechIcons/IconRocketTrucks.png
+	
+	required_properties = hq
+	
+	description = "#properties_technologies_tech_rus_rocket_truck_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_plentiful_ammunition
+	name = "#properties_technologies_tech_usa_plentiful_ammunition_name"
+	icon = PropertyIcons/IconPropertySupply.png
+	action_button_icon = TechIcons/IconPlentifulAmmunition.png
+	
+	required_properties = org_unit
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = RESUPPLY_RATE
+	amount = 0.15
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_rifle_grenade
+	name = "#properties_technologies_tech_usa_rifle_grenade_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/IconRifleGrenades.png
+	
+	required_properties = infhq
+	
+	description = "#properties_technologies_tech_usa_rifle_grenade_description"
+}
+
+/*
+------------ ENGINEER BRIGADE TECHNOLOGIES ------------------
+*/
+
+[Property Template=AATechnology]
+{
+	IDS = tech_proximity_fuses
+	name = "#properties_technologies_AATechnologyProxFuse_name"
+	icon = PropertyIcons/IconPropertyAttack.png
+	action_button_icon = TechIcons/IconProximityFuses.png
+
+	required_properties = property_aa
+
+	[Modifier Template=AddModifier]
+	attribute = AV
+	amount = 15
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_construction_battalions
+	name = "#properties_technologies_AATechnologyConstructionBattalions_name"
+	icon = PropertyIcons/IconPropertyEngineering.png
+	action_button_icon = TechIcons/IconConstructionBattalions.png
+
+	required_properties = engineer
+	
+	[Modifier Template=AddModifier]
+	attribute = ABILITY_HEAL
+	amount = 5
+	repair = true
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_improved_fortifications
+	name = "#properties_technologies_tech_jpn_improved_fortifications_name"
+	icon = PropertyIcons/IconPropertyCombat.png
+	action_button_icon = TechIcons/IconImprovedFortifications.png
+	
+	description = "#properties_technologies_tech_jpn_improved_fortifications_description"
+
+	required_properties = bunker
+	
+	[Modifier Template=ResistDamageModifier]
+	damage_type = armor_piercing
+	amount = 0.25
+	
+	[Modifier Template=ResistDamageModifier]
+	damage_type = explosive
+	amount = 0.25
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_entrenchment
+	name = "#properties_technologies_tech_rus_entrenchment_name"
+	icon = PropertyIcons/IconPropertyDefense.png
+	action_button_icon = TechIcons/IconEntrenchment.png
+	
+	required_properties = org_unit
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = ENTRENCHMENT_RATE
+	amount = 0.25
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_mannerheimline
+	name = "#properties_technologies_tech_mannerheim_line_name"
+	icon = PropertyIcons/IconPropertyDefense.png
+	action_button_icon = TechIcons/IconFinMannerheimLine.png
+	
+	required_properties = org_unit
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = ENTRENCHMENT_RATE
+	amount = 0.20
+
+	[Modifier Template=MultiplyModifier]
+	attribute = RESUPPLY_RATE
+	amount = 0.1
+}
+
+/*
+------------ MOTOR POOL TECHNOLOGIES ------------------
+*/
+
+[Property Template=AATechnology]
+{
+	IDS = tech_improved_light_antitank
+	name = "#properties_technologies_AATechnologyImprovedLightAntiTank_name"
+	icon = PropertyIcons/IconPropertyCombat.png
+	action_button_icon = TechIcons/IconImprovedLATW.png
+
+	required_properties = at_infantry
+
+	[Modifier Template=AddModifier]
+	{
+		attribute = AV
+		amount = 10
+	}
+}
+
+[Property Template=AATechnologyTank]
+{
+	IDS = tech_diesel_engines
+	name = "#properties_technologies_AATechnologyDieselEngines_name"
+	icon = PropertyIcons/IconPropertyMovement.png
+	action_button_icon = TechIcons/IconDieselEngines.png
+	
+	[Modifier template=MultiplyModifier]
+	attribute = SPEED_MAX
+	amount = +0.15
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_oil_production
+	name = "#properties_technologies_AATechnologyResourceProductionModifierOil_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	action_button_icon = TechIcons/IconOilProduction.png
+
+	required_properties = oil
+	
+	[Modifier Template=ResourceProductionModifier]
+	{
+		[Production Template=ProductionList]
+        	oil = 5
+	}
+}
+
+[Property Template=AATechnologyVehicle]
+{
+	IDS = tech_mechanical_reliability
+	name = "#properties_technologies_AATechnologyMechanicalReliability_name"
+	icon = PropertyIcons/IconPropertyHealth.png
+	action_button_icon = TechIcons/IconImprovedMechanicalReliability.png
+	
+	[Modifier template=MultiplyModifier]
+	attribute = health
+	amount = +0.10
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_heavy_tank
+	name = "#properties_technologies_AATechnologyHeavytank_name"
+	icon = PropertyIcons/IconPropertyEngineering.png
+	action_button_icon = TechIcons/IconHeavyTank.png
+	
+	required_properties = armorhq
+	
+	description = "#properties_technologies_AATechnologyHeavytank_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_infantry_flame
+	name = "#properties_technologies_tech_usa_infantry_flame_name"
+	description = "#properties_technologies_tech_usa_infantry_flame_description"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/IconFlamethrowers.png	
+	
+	required_properties = infhq
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_tank_flame
+	name = "#properties_technologies_tech_gbr_tank_flame_name"
+	icon = PropertyIcons/IconPropertyEngineering.png
+	action_button_icon = TechIcons/IconFlameTanks.png
+	
+	required_properties = armorhq
+
+	description = "#properties_technologies_tech_gbr_tank_flame_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_panzerfaust
+	name = "#properties_technologies_tech_ger_panzerfausts_name"
+	icon = PropertyIcons/IconPropertyAttack.png
+	action_button_icon = TechIcons/IconPanzerfausts.png
+	
+	required_properties = at_infantry
+
+	[Modifier Template=AddModifier]
+	attribute = AV
+	amount = 15
+}
+
+[Property Template=AATechnologyTank]
+{
+	IDS = tech_schurzen
+	name = "#properties_technologies_tech_ger_schurzen_name"
+	icon = PropertyIcons/IconPropertyDefense.png
+	action_button_icon = TechIcons/IconSchurzen.png
+	
+	[Modifier Template=ResistDamageModifier]
+	damage_type = armor_piercing
+	amount = 0.15
+
+	[Modifier Template=ResistDamageModifier]
+	damage_type = explosive
+	amount = 0.30
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_goliath
+	name = "#properties_technologies_tech_ger_goliath_name"
+	icon = PropertyIcons/IconPropertyEngineering.png
+	action_button_icon = TechIcons/IconGoliathRemoteBombs.png
+	
+	description = "#properties_technologies_tech_ger_goliath_description"
+	
+	required_properties = infhq
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_tank_king_tiger
+	name = "#properties_technologies_tech_ger_tank_king_tiger_name"
+	icon = PropertyIcons/IconPropertyEngineering.png
+	action_button_icon = TechIcons/IconKingTigers.png
+	
+	required_properties = armorhq
+
+	description = "#properties_technologies_tech_ger_tank_king_tiger_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_tankette
+	name = "#properties_technologies_tech_jpn_tankette_name"
+	icon = PropertyIcons/IconPropertyEngineering.png
+	action_button_icon = TechIcons/IconTankettes.png
+
+	required_properties = hq
+
+	description = "#properties_technologies_tech_jpn_tankette_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_mechanized_production
+	name = "#properties_technologies_tech_mechanized_production_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	action_button_icon = TechIcons/IconMechanizedProduction.png
+	
+	required_properties = mechhq
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = RECRUIT_COST
+	amount = 0.15
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_tank_production
+	name = "#properties_technologies_tech_rus_tankproduction_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	action_button_icon = TechIcons/IconTankProduction.png
+	
+	required_properties = armorhq
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = RECRUIT_COST
+	amount = 0.1
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_east_indies
+	name = "#properties_technologies_east_indies_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	action_button_icon = TechIcons/IconNEDEastIndies.png
+
+	required_properties = oil
+	
+	[Modifier Template=ResourceProductionModifier]
+	{
+		[Production Template=ProductionList]
+        	oil = 7
+	}
+	
+	[Modifier Template=AddModifier]
+	attribute = DETECTION_RANGE
+	amount = 6
+
+	[Modifier Template=AddModifier]
+	attribute = SUPPLY_RANGE
+	amount = 6
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_ballistic_missile
+	name = "#properties_technologies_tech_ballistic_missile_name"
+	icon = PropertyIcons/IconPropertyEngineering.png
+	action_button_icon = /UI/Game/SpecialOps/IconVWeapons.png
+	
+	required_properties = armorhq
+
+	description = "#properties_technologies_tech_ballistic_missile_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_tank_constructs
+	name = "#properties_technologies_tech_tank_constructs_name"
+	icon = PropertyIcons/IconPropertyEngineering.png
+	action_button_icon = TechIcons/IconKingTigers.png
+	
+	required_properties = armorhq
+
+	description = "#properties_technologies_tech_tank_constructs_description"
+
+}
+
+/*
+------------ CORP HQ TECHNOLOGIES ------------------
+*/
+
+[Property Template=AATechnology]
+{
+	IDS = tech_conscription
+	name = "#properties_technologies_tech_ger_conscript_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	action_button_icon = TechIcons/IconConscription.png
+	
+	required_properties = infhq,airhq
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = RECRUIT_COST
+	amount = 0.2
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_improved_machineguns
+	name = "#properties_technologies_AATechnologyImprovedMachineGuns_name"
+	icon = PropertyIcons/IconPropertyAttack.png
+	action_button_icon = TechIcons/IconImprovedMachineGuns.png
+
+	required_properties = mg
+
+	[Modifier Template=AddModifier]
+	attribute = AV
+	amount = 8
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_Schutzstaffel
+	name = "#properties_technologies_AATechnologySchutzstaffel_name"
+	icon = PropertyIcons/IconPropertyCombat.png
+	action_button_icon = /UI/Game/SpecialOps/IconUSADiplomacy.png
+	
+	[Modifier Template=AddModifier]
+	attribute = MORALE
+	amount = +3
+}
+
+[Property Template=AATechnologyInfantry]
+{
+	IDS = tech_advanced_infantry_training
+	name = "#properties_technologies_AATechnologyInfantryTraining_name"
+	icon = PropertyIcons/IconPropertyMorale.png
+	action_button_icon = TechIcons/IconAdvancedInfantryTraining.png
+	
+	[Modifier Template=AddModifier]
+	attribute = MORALE
+	amount = +1	
+}
+
+[Property Template=AATechnologyInfantry]
+{
+	IDS = tech_facism
+	name = "#properties_technologies_facism_name"
+	icon = PropertyIcons/IconPropertyMorale.png
+	action_button_icon = TechIcons/Iconfacism.png
+	
+	[Modifier Template=AddModifier]
+	attribute = MORALE
+	amount = +2	
+}
+
+[Property Template=AATechnologyVehicle]
+{
+	IDS = tech_advanced_armor_training
+	name = "#properties_technologies_AATechnologyAdvancedArmoredTraining_name"
+	icon = PropertyIcons/IconPropertyMorale.png
+	action_button_icon = TechIcons/IconAdvancedArmorTraining.png
+	
+	[Modifier Template=AddModifier]
+	attribute = MORALE
+	amount = +3	
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_military_surplus
+	name = "#properties_technologies_tech_military_surplus_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	action_button_icon = TechIcons/IconGearUp.png
+
+	required_properties = money
+	
+	[Modifier Template=ResourceProductionModifier]
+	{
+		[Production Template=ProductionList]
+        	money = 5
+	}
+}
+
+[Property Template=AATechnologyInfantry]
+{
+	IDS = tech_special_forces
+	name = "#properties_technologies_AATechnologySpecialForces_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/IconSpecialForces.png
+	
+	[Modifier Template=AddModifier]
+	attribute = AV
+	amount = 2
+
+	[Modifier Template=AddModifier]
+	attribute = DV
+	amount = 2
+
+	[Modifier template=MultiplyModifier]
+	attribute = health
+	amount = +0.15
+}
+
+[Property Template=AATechnologyInfantry]
+{
+	IDS = tech_marksmanship
+	name = "#properties_technologies_AATechnologyMarksmanship_name"
+	icon = PropertyIcons/IconPropertyAttack.png
+	action_button_icon = TechIcons/IconMarksmanship.png
+
+	[Modifier Template=AddModifier]
+	attribute = AV
+	amount = 3
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_improved_logistics
+	name = "#properties_technologies_AATechnologySupplyZone_name"
+	icon = PropertyIcons/IconPropertySupply.png
+	action_button_icon = TechIcons/IconImprovedLogisitics.png
+
+	[Modifier Template=AddModifier]
+	attribute = DETECTION_RANGE
+	amount = 5
+
+	[Modifier Template=AddModifier]
+	attribute = SUPPLY_RANGE
+	amount = 5
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_sniper_rifle
+	name = "#properties_technologies_tech_jpn_sniper_rifle_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/IconSniperRifles.png
+	
+	required_properties = infhq
+
+	description = "#properties_technologies_tech_jpn_sniper_rifle_description"
+}
+
+[Property Template=AATechnologyInfantry]
+{
+	IDS = tech_foraging
+	name = "#properties_technologies_tech_jpn_foraging_name"
+	icon = PropertyIcons/IconPropertySupply.png
+	action_button_icon = TechIcons/IconForaging.png
+	
+	required_properties = org_unit
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = RESUPPLY_RATE
+	amount = 0.20
+}
+
+[Property Template=AATechnologyInfantry]
+{
+	IDS = tech_G43_semi_auto
+	name = "#properties_technologies_tech_ger_G43_name"
+	icon = PropertyIcons/IconPropertyAttack.png
+	action_button_icon = TechIcons/IconGarand.png
+
+	[Modifier Template=MultiplyModifier]
+	attribute = RECHARGE_TIME
+	amount = 0.34
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_garand_semi_auto
+	name = "#properties_technologies_tech_usa_garand_name"
+	icon = PropertyIcons/IconPropertyAttack.png
+	action_button_icon = TechIcons/IconGarand.png
+	
+	required_properties = garand_semi_automatic_rifle
+
+	[Modifier Template=MultiplyModifier]
+	attribute = RECHARGE_TIME
+	amount = 0.2
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_g
+	name = "#properties_technologies_tech_g_name"
+	icon = PropertyIcons/IconPropertyAttack.png
+	action_button_icon = TechIcons/IconGarand.png
+
+	[Modifier Template=MultiplyModifier]
+	attribute = RECHARGE_TIME
+	amount = 2.5
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_ski
+	name = "#properties_technologies_tech_ski_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/IconFINSki.png
+	
+	required_properties = infhq
+
+	description = "#properties_technologies_tech_ski_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_bersaglieri
+	name = "#properties_technologies_tech_bersaglieri_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/IconBersaglieri.png
+	
+	required_properties = infhq
+
+	description = "#properties_technologies_tech_bersaglieri_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_guard_grenadiers
+	name = "#properties_technologies_guard_grenadiers_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/IconNEDInfantryMarine.png
+	
+	required_properties = infhq
+
+	description = "#properties_technologies_tech_guard_grenadiers_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_marine_commando
+	name = "#properties_technologies_tech_marine_commando_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/IconNEDInfantryCommando.png
+	
+	required_properties = infhq
+
+	description = "#properties_technologies_tech_marine_commando_description"
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_detection
+	name = "#properties_technologies_tech_detection_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	action_button_icon = TechIcons/IconDecection.png
+
+	required_properties = org_unit
+	
+	[Modifier Template=AddModifier]
+	attribute = DETECTION_RANGE
+	amount = 15
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_rus_assistance
+	name = "#properties_technologies_tech_rus_assistance_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/RUSAS.png
+	required_properties = hq
+
+	description = "#properties_technologies_tech_rus_assistance_description"
+
+	[Modifier Template=MultiplyModifier]
+	attribute = HEALTH
+	amount = 0.3
+    
+    [Modifier Template=MultiplyModifier]
+	attribute = RECRUIT_COST
+	amount = 0.1
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_usa_assistance
+	name = "#properties_technologies_tech_usa_assistance_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/USAAS.png
+	required_properties = hq
+	description = "#properties_technologies_tech_usa_assistance_description"
+
+	[Modifier Template=AddModifier]
+	attribute = DV
+	amount = 20
+	[Modifier Template=ResourceProductionModifier]
+	{
+		[Production Template=ProductionList]
+        	money = 5
+	}
+}
+[Property Template=AATechnology]
+{
+	IDS = tech_ussr_assistance
+	name = "#properties_technologies_tech_ussr_assistance_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	action_button_icon = TechIcons/RUSAS.png
+	required_properties = hq
+
+	description = "#properties_technologies_tech_rus_assistance_description"
+}
+
+/*
+------------ DYNAMIC CAMPAIGN TECHNOLOGIES ------------------
+*/
+
+[Property Template=AATechnology]
+{
+	IDS = tech_noupkeep
+	name = "#properties_technologies_tech_noupkeep_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	is_technology = true
+	action_button_icon = /UI/Game/ActionButtons/IconUpgrade.png
+	
+	
+	[Modifier template=FlagModifier]
+	{
+		modifier_flag = NO_UPKEEP
+	}
+
+}
+
+[Property Template=AATechnologyInfantry]
+{
+	IDS = tech_nosupply
+	name = "#properties_technologies_tech_nosupply_name"
+	icon = PropertyIcons/IconPropertyHealth.png
+	is_technology = true
+	action_button_icon = /UI/Game/ActionButtons/IconAttack.png
+	
+	
+	[Modifier template=FlagModifier]
+	
+		modifier_flag = SUPPLIED
+        
+    [Modifier Template=MultiplyModifier]
+	attribute = RESUPPLY_RATE
+	amount = 0.25
+
+	[Modifier Template=AddModifier]
+	attribute = DETECTION_RANGE
+	amount = 15
+
+	[Modifier Template=AddModifier]
+	attribute = SUPPLY_RANGE
+	amount = 10
+	       
+	
+
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_invisible
+	name = "#properties_technologies_tech_invisible_name"
+	icon = PropertyIcons/IconPropertySpecialForces.png
+	is_technology = true
+	action_button_icon = TechIcons/IconLendLease.png
+	required_properties = supplydepot
+	
+	
+	[Modifier template=FlagModifier]
+	{
+		modifier_flag = INVISIBLE_TO_ENEMY
+	}
+
+}
+
+/*
+------------ MISC TECHNOLOGIES ------------------
+*/
+
+[Property Template=AATechnology]
+{
+	IDS = tech_usa_infantry_dummy
+	name = "#properties_technologies_tech_usa_infantry_dummy_name"
+	icon = null
+	action_button_icon = null
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_battleship
+	name = "#properties_technologies_tech_battleship_name"
+	icon = null
+	action_button_icon = null
+	
+	enabled_target_flags = provides_corps
+}
+
+
+/*
+------------ SPECIAL OPERATIONS ------------------
+*/
+
+[Property Template=AATechnology]
+{
+	IDS = assembly_line_tech
+	name = "#properties_technologies_assembly_line_tech_name"
+	icon = PropertyIcons/IconPropertyHealth.png
+	action_button_icon = /UI/Game/SpecialOps/IconGBRDiplomacy.png
+	
+	required_properties = vehicle
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = HEALTH
+	amount = 0.15
+}
+
+[Property Template=AATechnology]
+{
+	IDS = military_gearup_tech
+	name = "#properties_technologies_tech_military_gearup_name"
+	icon = PropertyIcons/IconPropertyHealth.png
+	action_button_icon = /UI/Game/SpecialOps/IconHomeGuard.png
+	
+	required_properties = infantry
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = HEALTH
+	amount = 0.20
+}
+
+[Property Template=AATechnology]
+{
+	IDS = rapid_deployment_tech
+	name = "#properties_technologies_rapid_deployment_tech_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	action_button_icon = /UI/Game/SpecialOps/IconCorps.png
+	
+	required_properties = hq	
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = RECRUIT_COST
+	amount = 0.10
+}
+
+[Property Template=AATechnology]
+{
+	IDS = knil_conscript_tech
+	name = "#properties_technologies_knil_conscript_tech_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	
+	required_properties = infhq	
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = RECRUIT_COST
+	amount = 0.15
+}
+
+;; -------- CAMPAIGN ONLY ------------- ;;
+
+[Property Template=AATechnology]
+{
+	IDS = tech_supply_reduction
+	name = "#properties_technologies_tech_supply_reduction_name"
+	icon = PropertyIcons/IconPropertySupply.png
+	
+	[Modifier Template=AddModifier]
+	{
+		attribute = SUPPLY_RANGE
+		amount = -30
+	}
+}
+
+[Property Template=AATechnology]
+{
+	IDS = tech_unbreakable	
+	name = "#properties_technologies_tech_unbreakable_name"
+	icon = PropertyIcons/IconPropertyMorale.png
+	action_button_icon = /UI/Game/SpecialOps/IconTreason.png
+	
+	[Modifier template=FlagModifier]
+	{
+		modifier_flag = BERSERK
+	}
+}
+
+;; -------- HR DLC ------------- ;;
+
+[Property Template=AATechnology]
+{
+	IDS = HR_TankFactory_Technology
+	name = "#properties_technologies_tech_rus_tankproduction_name"
+	icon = PropertyIcons/IconPropertyEconomic.png
+	action_button_icon = TechIcons/IconTankProduction.png
+	
+	required_properties = armorhq
+	
+	[Modifier Template=MultiplyModifier]
+	attribute = RECRUIT_COST
+	amount = 0.25
+}

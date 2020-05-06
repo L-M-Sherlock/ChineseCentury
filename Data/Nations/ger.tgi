@@ -1,0 +1,104 @@
+[Nation template=Nation]
+{
+	ids = nation_ger
+	name = "#ger_name"
+	game_music = ger_ambient
+	placement_group_IDS = group_nation_ger
+
+	string loading_texture_left = GER/GERSplashScreenLeft.png
+	string loading_texture_right = GER/GERSplashScreenRight.png
+
+	;; srp060104 - Added WAD to depot list.
+    depot_name = Skins/GER.rwd,Skins/GER/
+	;; depot_name = Skins/GER/
+	
+	factions = rommel, manstein, kesselring, kesselring_crete, rundstedt
+	resource_prefix = GER/GER
+	stats_icon = GER/GER.tga
+	
+	flag_icon = /UI/%s/Default/Staging/FlagGER.png
+
+	[Placeholder]
+	placeholder_IDS = placeholder_corpsunpacked
+	thing_ids = ger_corps
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_airfield
+	thing_IDS = ger_airfield
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_bunker
+	thing_IDS = ger_bunker
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_bunker_antiaircraft
+	thing_IDS = ger_bunker_aa
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_bunker_artillery
+	thing_IDS = ger_bunker_artillery
+
+	[Placeholder]
+	placeholder_IDS = placeholder_depot_supply
+	thing_IDS = ger_truck_supply
+
+	[Badge]
+	badge_texture = GER/GERBadge01.png
+	
+	[Badge]
+	badge_texture = GER/GERBadge02.png
+	
+	[Badge]
+	badge_texture = GER/GERBadge03.png
+	
+	[Badge]
+	badge_texture = GER/GERBadge04.png
+	
+	[Badge]
+	badge_texture = GER/GERBadge05.png
+
+	[Badge]
+	badge_texture = GER/GERBadge06.png
+	
+	[Badge]
+	badge_texture = GER/GERBadge07.png
+
+	[Badge]
+	badge_texture = GER/GERBadge08.png
+
+	[Badge]
+	badge_texture = GER/GERBadge09.png
+	
+	[Badge]
+	badge_texture = GER/GERBadge10.png
+	
+	[Badge]
+	badge_texture = GER/GERBadge11.png
+
+	[Badge]
+	badge_texture = GER/GERBadge12.png
+
+	[Badge]
+	badge_texture = GER/GERBadge13.png
+
+	[Badge]
+	badge_texture = GER/GERBadge14.png
+
+	[Badge]
+	badge_texture = GER/GERBadge15.png
+
+	[Badge]
+	badge_texture = GER/GERBadge16.png
+
+	[Badge]
+	badge_texture = GER/GERBadge17.png
+
+	[Badge]
+	badge_texture = GER/GERBadge18.png
+
+	[Badge]
+	badge_texture = GER/GERBadge19.png
+
+	[Badge]
+	badge_texture = GER/GERBadge20.png
+}

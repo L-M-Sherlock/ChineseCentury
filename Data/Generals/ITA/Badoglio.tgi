@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = Badoglio_portrait
+	name = "#Badoglio_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Badoglio/BadoglioPortrait
+
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = ita_Badoglio_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = Badoglio
+	name = "#Badoglio_name"
+	description = "#Badoglio_description"
+	staging_name = "#Badoglio_staging_name"
+	icon_texture_ids = Badoglio/BadoglioPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/ITA/Badoglio.bik
+	portrait_ids = Badoglio_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpInfantryAdvance]
+	
+	[Ability Template=AASpecialOpIndustrialSabotage]
+	
+	[Ability Template=AASpecialOpCourage]
+		
+	[Ability Template=AASpecialOpCorpsITA]
+}

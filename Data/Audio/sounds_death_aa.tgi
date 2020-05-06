@@ -1,0 +1,773 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;------------------------ DEATH SOUNDS ---------------- ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;---------------------------- GENERAL ------------------------;;
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_infantry
+	name = "#sounds_death_aa_death_infantry_name"
+
+	files = Sounds/General/Death/Death01.wav, Sounds/General/Death/Death02.wav, Sounds/General/Death/Death03.wav, Sounds/General/Death/Death04.wav, Sounds/General/Death/Death05.wav, Sounds/General/Death/Death06.wav, Sounds/General/Death/Death07.wav, Sounds/General/Death/Death08.wav, Sounds/General/Death/Death09.wav, Sounds/General/Death/Death10.wav, Sounds/General/Death/Death11.wav, Sounds/General/Death/Death12.wav, Sounds/General/Death/Death13.wav, Sounds/General/Death/Death14.wav
+}
+
+;;---------------------------- GBR ------------------------;;
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_gbr_car
+	name = "#sounds_death_aa_death_gbr_car_name"
+
+	files = Sounds/GBR/Death/GBRCarDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_gbr_fighter
+	name = "#sounds_death_aa_death_gbr_fighter_name"
+
+	files = Sounds/GBR/Death/GBRFighterDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_gbr_bomber
+	name = "#sounds_death_aa_crash_gbr_bomber_name"
+
+	files = Sounds/GBR/Death/GBRBomberCrash.wav
+}
+
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_gbr_fighter
+	name = "#sounds_death_aa_crash_gbr_fighter_name"
+
+	files = Sounds/GBR/Death/GBRFighterCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_gbr_bomber
+	name = "#sounds_death_aa_death_gbr_bomber_name"
+
+	files = Sounds/GBR/Death/GBRBomberDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_gbr_halftrack
+	name = "#sounds_death_aa_death_gbr_halftrack_name"
+
+	files = Sounds/GBR/Death/GBRHalftrackDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_gbr_ship
+	name = "#sounds_death_aa_death_gbr_ship_name"
+
+	files = Sounds/GBR/Death/GBRShipDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_gbr_tank
+	name = "#sounds_death_aa_death_gbr_tank_name"
+
+	files = Sounds/GBR/Death/GBRTankDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_gbr_truck
+	name = "#sounds_death_aa_death_gbr_truck_name"
+
+	files = Sounds/GBR/Death/GBRTruckDeath.wav
+}
+
+;;---------------------------- GER ------------------------;;
+
+[Audio Template=AudioAttack]
+{
+	IDS = death_ger_car
+	name = "#sounds_death_aa_death_ger_car_name"
+
+	files = Sounds/GER/Death/GERCarDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_ger_fighter
+	name = "#sounds_death_aa_death_ger_fighter_name"
+
+	files = Sounds/GER/Death/GERFighterDeath.wav
+}
+
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_ger_bomber
+	name = "#sounds_death_aa_death_ger_bomber_name"
+
+	files = Sounds/GER/Death/GERBomberDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_ger_bomber
+	name = "#sounds_death_aa_crash_ger_bomber_name"
+
+	files = Sounds/GER/Death/GERBomberCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_ger_fighter
+	name = "#sounds_death_aa_crash_ger_fighter_name"
+
+	files = Sounds/GER/Death/GERFighterCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_ger_halftrack
+	name = "#sounds_death_aa_death_ger_halftrack_name"
+
+	files = Sounds/GER/Death/GERHalftrackDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_ger_ship
+	name = "#sounds_death_aa_death_ger_ship_name"
+
+	files = Sounds/GER/Death/GERShipDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_ger_tank
+	name = "#sounds_death_aa_death_ger_tank_name"
+
+	files = Sounds/GER/Death/GERTankDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_ger_truck
+	name = "#sounds_death_aa_death_ger_truck_name"
+
+	files = Sounds/GER/Death/GERTruckDeath.wav
+}
+
+;;---------------------------- JPN ------------------------;;
+
+[Audio Template=AudioAttack]
+{
+	IDS = death_jpn_car
+	name = "#sounds_death_aa_death_jpn_car_name"
+
+	files = Sounds/JPN/Death/JPNCarDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_jpn_fighter
+	name = "#sounds_death_aa_death_jpn_fighter_name"
+
+	files = Sounds/JPN/Death/JPNFighterDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_jpn_bomber
+	name = "#sounds_death_aa_death_jpn_bomber_name"
+
+	files = Sounds/JPN/Death/JPNBomberDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_jpn_bomber
+	name = "#sounds_death_aa_crash_jpn_bomber_name"
+
+	files = Sounds/JPN/Death/JPNBomberCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_jpn_fighter
+	name = "#sounds_death_aa_crash_jpn_fighter_name"
+
+	files = Sounds/JPN/Death/JPNFighterCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_jpn_halftrack
+	name = "#sounds_death_aa_death_jpn_halftrack_name"
+
+	files = Sounds/JPN/Death/JPNHalftrackDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_jpn_ship
+	name = "#sounds_death_aa_death_jpn_ship_name"
+
+	files = Sounds/JPN/Death/JPNShipDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_jpn_tank
+	name = "#sounds_death_aa_death_jpn_tank_name"
+
+	files = Sounds/JPN/Death/JPNTankDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_jpn_truck
+	name = "#sounds_death_aa_death_jpn_truck_name"
+
+	files = Sounds/JPN/Death/JPNTruckDeath.wav
+}
+
+
+;;---------------------------- RUS ------------------------;;
+
+[Audio Template=AudioAttack]
+{
+	IDS = death_rus_car
+	name = "#sounds_death_aa_death_rus_car_name"
+
+	files = Sounds/RUS/Death/RUSCarDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_rus_fighter
+	name = "#sounds_death_aa_death_rus_fighter_name"
+
+	files = Sounds/RUS/Death/RUSFighterDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_rus_bomber
+	name = "#sounds_death_aa_death_rus_bomber_name"
+
+	files = Sounds/RUS/Death/RUSBomberDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_rus_fighter
+	name = "#sounds_death_aa_crash_rus_fighter_name"
+
+	files = Sounds/RUS/Death/RUSFighterCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_rus_bomber
+	name = "#sounds_death_aa_crash_rus_bomber_name"
+
+	files = Sounds/RUS/Death/RUSBomberCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_rus_halftrack
+	name = "#sounds_death_aa_death_rus_halftrack_name"
+
+	files = Sounds/RUS/Death/RUSHalftrackDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_rus_ship
+	name = "#sounds_death_aa_death_rus_ship_name"
+
+	files = Sounds/RUS/Death/RUSShipDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_rus_tank
+	name = "#sounds_death_aa_death_rus_tank_name"
+
+	files = Sounds/RUS/Death/RUSTankDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_rus_truck
+	name = "#sounds_death_aa_death_rus_truck_name"
+
+	files = Sounds/RUS/Death/RUSTruckDeath.wav
+}
+
+
+;;---------------------------- USA ------------------------;;
+
+[Audio Template=AudioAttack]
+{
+	IDS = death_usa_car
+	name = "#sounds_death_aa_death_usa_car_name"
+
+	files = Sounds/usa/Death/usaCarDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_usa_fighter
+	name = "#sounds_death_aa_death_usa_fighter_name"
+
+	files = Sounds/usa/Death/usaFighterDeath.wav
+}
+
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_usa_bomber
+	name = "#sounds_death_aa_death_usa_bomber_name"
+
+	files = Sounds/usa/Death/usaBomberDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_usa_bomber
+	name = "#sounds_death_aa_crash_usa_bomber_name"
+
+	files = Sounds/usa/Death/usaBomberCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_usa_fighter
+	name = "#sounds_death_aa_crash_usa_fighter_name"
+
+	files = Sounds/usa/Death/usaFighterCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_usa_halftrack
+	name = "#sounds_death_aa_death_usa_halftrack_name"
+
+	files = Sounds/usa/Death/usaHalftrackDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_usa_ship
+	name = "#sounds_death_aa_death_usa_ship_name"
+
+	files = Sounds/usa/Death/usaShipDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_usa_tank
+	name = "#sounds_death_aa_death_usa_tank_name"
+
+	files = Sounds/usa/Death/usaTankDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_usa_truck
+	name = "#sounds_death_aa_death_usa_truck_name"
+
+	files = Sounds/usa/Death/usaTruckDeath.wav
+}
+
+;; METAGAME PIECES
+
+[Audio Template=AudioDeath]
+{
+	IDS = mg_death_army
+	name = "#sounds_death_aa_mg_death_army_name"
+
+	files = Sounds/Metagame/ArmyDestroyed.wav
+}
+
+
+;;---------------------------- FIN ------------------------;;
+
+[Audio Template=AudioAttack]
+{
+	IDS = death_FIN_car
+	name = "#sounds_death_aa_death_FIN_car_name"
+
+	files = Sounds/FIN/Death/FINCarDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_FIN_fighter
+	name = "#sounds_death_aa_death_FIN_fighter_name"
+
+	files = Sounds/FIN/Death/FINFighterDeath.wav
+}
+
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_FIN_bomber
+	name = "#sounds_death_aa_death_FIN_bomber_name"
+
+	files = Sounds/FIN/Death/FINBomberDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_FIN_bomber
+	name = "#sounds_death_aa_crash_FIN_bomber_name"
+
+	files = Sounds/FIN/Death/FINBomberCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_FIN_fighter
+	name = "#sounds_death_aa_crash_FIN_fighter_name"
+
+	files = Sounds/FIN/Death/FINFighterCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_FIN_halftrack
+	name = "#sounds_death_aa_death_FIN_halftrack_name"
+
+	files = Sounds/FIN/Death/FINHalftrackDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_FIN_ship
+	name = "#sounds_death_aa_death_FIN_ship_name"
+
+	files = Sounds/FIN/Death/FINShipDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_FIN_tank
+	name = "#sounds_death_aa_death_FIN_tank_name"
+
+	files = Sounds/FIN/Death/FINTankDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_FIN_truck
+	name = "#sounds_death_aa_death_FIN_truck_name"
+
+	files = Sounds/FIN/Death/FINTruckDeath.wav
+}
+
+;;---------------------------- NED ------------------------;;
+
+[Audio Template=AudioAttack]
+{
+	IDS = death_NED_car
+	name = "#sounds_death_aa_death_NED_car_name"
+
+	files = Sounds/NED/Death/NEDCarDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_NED_fighter
+	name = "#sounds_death_aa_death_NED_fighter_name"
+
+	files = Sounds/NED/Death/NEDFighterDeath.wav
+}
+
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_NED_bomber
+	name = "#sounds_death_aa_death_NED_bomber_name"
+
+	files = Sounds/NED/Death/NEDBomberDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_NED_bomber
+	name = "#sounds_death_aa_crash_NED_bomber_name"
+
+	files = Sounds/NED/Death/NEDBomberCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_NED_fighter
+	name = "#sounds_death_aa_crash_NED_fighter_name"
+
+	files = Sounds/NED/Death/NEDFighterCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_NED_halftrack
+	name = "#sounds_death_aa_death_NED_halftrack_name"
+
+	files = Sounds/NED/Death/NEDHalftrackDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_NED_ship
+	name = "#sounds_death_aa_death_NED_ship_name"
+
+	files = Sounds/NED/Death/NEDShipDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_NED_tank
+	name = "#sounds_death_aa_death_NED_tank_name"
+
+	files = Sounds/NED/Death/NEDTankDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_NED_truck
+	name = "#sounds_death_aa_death_NED_truck_name"
+
+	files = Sounds/NED/Death/NEDTruckDeath.wav
+}
+
+;;---------------------------- CHN ------------------------;;
+
+[Audio Template=AudioAttack]
+{
+	IDS = death_chn_car
+	name = "#sounds_death_aa_death_chn_car_name"
+
+	files = Sounds/chn/Death/chnCarDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_chn_fighter
+	name = "#sounds_death_aa_death_chn_fighter_name"
+
+	files = Sounds/chn/Death/chnFighterDeath.wav
+}
+
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_chn_bomber
+	name = "#sounds_death_aa_death_chn_bomber_name"
+
+	files = Sounds/chn/Death/chnBomberDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_chn_bomber
+	name = "#sounds_death_aa_crash_chn_bomber_name"
+
+	files = Sounds/chn/Death/chnBomberCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_chn_fighter
+	name = "#sounds_death_aa_crash_chn_fighter_name"
+
+	files = Sounds/chn/Death/chnFighterCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_chn_halftrack
+	name = "#sounds_death_aa_death_chn_halftrack_name"
+
+	files = Sounds/chn/Death/chnHalftrackDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_chn_ship
+	name = "#sounds_death_aa_death_chn_ship_name"
+
+	files = Sounds/chn/Death/chnShipDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_chn_tank
+	name = "#sounds_death_aa_death_chn_tank_name"
+
+	files = Sounds/chn/Death/chnTankDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_chn_truck
+	name = "#sounds_death_aa_death_chn_truck_name"
+
+	files = Sounds/chn/Death/chnTruckDeath.wav
+}
+
+;;---------------------------- CPC ------------------------;;
+
+[Audio Template=AudioAttack]
+{
+	IDS = death_cpc_car
+	name = "#sounds_death_aa_death_cpc_car_name"
+
+	files = Sounds/CPC/Death/CPCCarDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_cpc_fighter
+	name = "#sounds_death_aa_death_cpc_fighter_name"
+
+	files = Sounds/CPC/Death/CPCFighterDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_cpc_bomber
+	name = "#sounds_death_aa_death_cpc_bomber_name"
+
+	files = Sounds/CPC/Death/CPCBomberDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_cpc_fighter
+	name = "#sounds_death_aa_crash_cpc_fighter_name"
+
+	files = Sounds/CPC/Death/CPCFighterCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_cpc_bomber
+	name = "#sounds_death_aa_crash_cpc_bomber_name"
+
+	files = Sounds/CPC/Death/CPCBomberCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_cpc_halftrack
+	name = "#sounds_death_aa_death_cpc_halftrack_name"
+
+	files = Sounds/CPC/Death/CPCHalftrackDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_cpc_ship
+	name = "#sounds_death_aa_death_cpc_ship_name"
+
+	files = Sounds/CPC/Death/CPCShipDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_cpc_tank
+	name = "#sounds_death_aa_death_cpc_tank_name"
+
+	files = Sounds/CPC/Death/CPCTankDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_cpc_truck
+	name = "#sounds_death_aa_death_cpc_truck_name"
+
+	files = Sounds/CPC/Death/CPCTruckDeath.wav
+}
+
+;;---------------------------- ita ------------------------;;
+
+[Audio Template=AudioAttack]
+{
+	IDS = death_ita_car
+	name = "#sounds_death_aa_death_ita_car_name"
+
+	files = Sounds/ita/Death/itaCarDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_ita_fighter
+	name = "#sounds_death_aa_death_ita_fighter_name"
+
+	files = Sounds/ita/Death/itaFighterDeath.wav
+}
+
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_ita_bomber
+	name = "#sounds_death_aa_death_ita_bomber_name"
+
+	files = Sounds/ita/Death/itaBomberDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_ita_bomber
+	name = "#sounds_death_aa_crash_ita_bomber_name"
+
+	files = Sounds/ita/Death/itaBomberCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = crash_ita_fighter
+	name = "#sounds_death_aa_crash_ita_fighter_name"
+
+	files = Sounds/ita/Death/itaFighterCrash.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_ita_halftrack
+	name = "#sounds_death_aa_death_ita_halftrack_name"
+
+	files = Sounds/ita/Death/itaHalftrackDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_ita_ship
+	name = "#sounds_death_aa_death_ita_ship_name"
+
+	files = Sounds/ita/Death/itaShipDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_ita_tank
+	name = "#sounds_death_aa_death_ita_tank_name"
+
+	files = Sounds/ita/Death/itaTankDeath.wav
+}
+
+[Audio Template=AudioDeath]
+{
+	IDS = death_ita_truck
+	name = "#sounds_death_aa_death_ita_truck_name"
+
+	files = Sounds/ita/Death/itaTruckDeath.wav
+}

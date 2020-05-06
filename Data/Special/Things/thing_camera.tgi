@@ -1,0 +1,11 @@
+[Thing Template=Camera]
+{
+	IDS = camera
+	name = "#thing_camera_name"
+
+	camera_vfx_ids = camera_vfx
+	camera_distance = 3
+	
+	[View]
+	resource_prefix = ThingCamera/ThingCamera
+}

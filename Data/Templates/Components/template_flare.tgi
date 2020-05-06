@@ -1,0 +1,11 @@
+[template FlareComponent]
+{
+	string	command
+	fixed	default_duration	= 180
+	point3	actor_offset		= 0,0,7		;; if attached to another actor, this is the offset at which the flare should be displayed.
+	point3	all_ally_color		= 1,1,1		;; this is the color the flare will display if it is for all allies, rather than a single one.	
+	
+	flag	target_actor		= false		;; one and only one of these must be true
+	flag	target_location		= false
+}
+

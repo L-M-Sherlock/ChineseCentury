@@ -1,0 +1,34 @@
+/**************************************************************************
+
+template_resolution.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: Resolution declarations
+
+REVISION HISTORY:
+jkm061004 - created
+
+USAGE:
+
+	[Resolution]	;; Used to define filtering behavior for a resolution
+		
+**************************************************************************/
+
+[Template Resolution]
+{
+	;;;;;; required fields
+	
+	;; Must be in the form 'WWWxHHH' for instance, IDS = 800x600 or IDS = 1024x768
+	string	IDS
+	localized name
+	
+	;; Can be one of the following:
+	;; NEAREST - No filtering is performed, closest to the art, but most unforgiving in terms of 
+	;; artifacts
+	;; BILINEAR - Filters linearly. Will cause the UI to become slightly dilluted, but also will 
+	;; have smooth, anti-aliased looking edges.
+	;; TRILINEAR - Should be roughly equivalent to BILINEAR.
+	;; ANISOTROPIC - Should be roughly equivalent to BILINEAR.
+	string	filtering_type
+
+} ; end [Template Resolution]

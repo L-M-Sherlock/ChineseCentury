@@ -1,0 +1,236 @@
+
+/********************    CITY CENTER    ********************/
+
+[Template FarEastVillageCenter Template=AACityCenterFarEast]
+{
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 12
+
+	[View]
+	{
+		resource_prefix = FarEastCityCenter01/FarEastCityCenter01
+
+		[AspectNormal]
+	    visual_radius_estimate = 8
+		
+		[TextureSearchPath]
+		path = /Shared/SharedTextures/Buildings/FarEast
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = city_name_vfx
+		location = base
+	}
+}
+
+/********************    RANDOM MAP CENTERS    ********************/
+
+[Thing Template=FarEastVillageCenter]
+{
+	IDS = japan_village01
+	name_list_ids = namelist_japan
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_japan
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCFarEastVillage01]
+
+		[Layout Template=LayoutRMCFarEastVillage02]
+
+		[Layout Template=LayoutRMCFarEastVillage03]
+
+		[Layout Template=LayoutRMCFarEastVillage04]
+
+		[Layout Template=LayoutRMCFarEastVillage05]
+
+		[Layout Template=LayoutRMCFarEastVillage06]
+		
+		[Layout Template=LayoutRMCFarEastVillage07]
+
+		[Layout Template=LayoutRMCFarEastVillage08]
+
+		[Layout Template=LayoutRMCFarEastVillage09]
+	}
+}
+
+[Thing Template=FarEastVillageCenter]
+{
+	IDS = manchuria_village01
+	name_list_ids = namelist_manchuria
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_manchuria
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCFarEastVillage01]
+
+		[Layout Template=LayoutRMCFarEastVillage02]
+
+		[Layout Template=LayoutRMCFarEastVillage03]
+
+		[Layout Template=LayoutRMCFarEastVillage04]
+
+		[Layout Template=LayoutRMCFarEastVillage05]
+
+		[Layout Template=LayoutRMCFarEastVillage06]
+		
+		[Layout Template=LayoutRMCFarEastVillage07]
+
+		[Layout Template=LayoutRMCFarEastVillage08]
+
+		[Layout Template=LayoutRMCFarEastVillage09]
+	}
+}
+
+[Thing Template=FarEastVillageCenter]
+{
+	IDS = easternchina_village01
+	name_list_ids = namelist_easternchina
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_easternchina
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCFarEastVillage01]
+
+		[Layout Template=LayoutRMCFarEastVillage02]
+
+		[Layout Template=LayoutRMCFarEastVillage03]
+
+		[Layout Template=LayoutRMCFarEastVillage04]
+
+		[Layout Template=LayoutRMCFarEastVillage05]
+
+		[Layout Template=LayoutRMCFarEastVillage06]
+		
+		[Layout Template=LayoutRMCFarEastVillage07]
+
+		[Layout Template=LayoutRMCFarEastVillage08]
+
+		[Layout Template=LayoutRMCFarEastVillage09]
+	}
+}
+
+[Thing Template=FarEastVillageCenter]
+{
+	IDS = centralchina_village01
+	name_list_ids = namelist_centralchina
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_centralchina
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCFarEastVillage01]
+
+		[Layout Template=LayoutRMCFarEastVillage02]
+
+		[Layout Template=LayoutRMCFarEastVillage03]
+
+		[Layout Template=LayoutRMCFarEastVillage04]
+
+		[Layout Template=LayoutRMCFarEastVillage05]
+
+		[Layout Template=LayoutRMCFarEastVillage06]
+		
+		[Layout Template=LayoutRMCFarEastVillage07]
+
+		[Layout Template=LayoutRMCFarEastVillage08]
+
+		[Layout Template=LayoutRMCFarEastVillage09]
+	}
+}
+
+[Thing Template=FarEastVillageCenter]
+{
+	IDS = westernchina_village01
+	name_list_ids = namelist_westernchina
+	
+	[Placement]
+	placement_group_ids = null
+
+	[RandomActor]
+	random_actor_ids = random_village_westernchina
+	fixed weight = 1.0
+	
+	[CityComponent]
+	{
+		[Layout Template=LayoutRMCFarEastVillage01]
+
+		[Layout Template=LayoutRMCFarEastVillage02]
+
+		[Layout Template=LayoutRMCFarEastVillage03]
+
+		[Layout Template=LayoutRMCFarEastVillage04]
+
+		[Layout Template=LayoutRMCFarEastVillage05]
+
+		[Layout Template=LayoutRMCFarEastVillage06]
+		
+		[Layout Template=LayoutRMCFarEastVillage07]
+
+		[Layout Template=LayoutRMCFarEastVillage08]
+
+		[Layout Template=LayoutRMCFarEastVillage09]
+	}
+}
+
+/********************    CAMPAIGN MAP CENTERS    ********************/
+
+[Thing Template=FarEastVillageCenter]
+{
+	IDS = far_east_city_center01_large
+	editor_name = "#far_east_city_center01_large_editor_name"
+
+	[EconomyComponent Template=EconomyComponentCityLarge]
+
+	[CityComponent]
+	{
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = tropical_treespalm
+			offset = -7, -7
+			orientation = 0, 1
+		}
+	}
+}
+
+[Thing Template=FarEastVillageCenter]
+{
+	IDS = far_east_city_center01_small
+	editor_name = "#far_east_city_center01_small_editor_name"
+
+	[EconomyComponent Template=EconomyComponentCitySmall]
+
+	[CityComponent]
+	{
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = tropical_treespalm
+			offset = -7, -7
+			orientation = 0, 1
+		}
+	}
+}

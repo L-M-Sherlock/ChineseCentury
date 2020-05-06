@@ -1,0 +1,96 @@
+/*************************************************************************
+							Menus
+*************************************************************************/
+
+[Template SharedMenuWidget Template=MenuWidget]
+{
+	item_height = 24
+	item_width = 235
+	vertical_item_offset = 15
+
+	[View Template=GroupVE]
+	{
+		R = +100
+		B = +33
+
+		[Child Template=GroupVE]
+		{
+			L = 12
+			T = 2
+			B = 0b
+
+			[Child Template=DecalVETiledHorizontal]	
+			when = CLOSED + FOCUSED
+			alpha_blending = true
+			ends_texture = /UI/%s/Editor/EditorPanel/EditorTopBarSelectEndsFocused.png
+			center_texture = /UI/%s/Editor/EditorPanel/EditorTopBarSelectCenterFocused.png
+
+			[Child Template=DecalVETiledHorizontal]
+			when = OPEN
+			alpha_blending = true
+			ends_texture = /UI/%s/Editor/EditorPanel/EditorTopBarSelectEndsUnfocused.png
+			center_texture = /UI/%s/Editor/EditorPanel/EditorTopBarSelectCenterUnfocused.png
+		}
+	}
+	
+	[Label]
+	{
+		L = 22
+		T = 7
+		font = medium
+		justify = left
+		color = .8,.8,.8
+	}
+
+	[ItemPanel]
+	{
+		[View Template=DecalVETiled]
+		{
+			alpha_blending = true
+			corners_texture = /UI/%s/Editor/EditorPanel/EditorDropDownCorners.png
+			left_border_texture = /UI/%s/Editor/EditorPanel/EditorDropDownLeft.png
+			right_border_texture = /UI/%s/Editor/EditorPanel/EditorDropDownRight.png
+			top_border_texture = /UI/%s/Editor/EditorPanel/EditorDropDownTop.png
+			bottom_border_texture = /UI/%s/Editor/EditorPanel/EditorDropDownBottom.png
+			center_texture = /UI/%s/Editor/EditorPanel/EditorDropDownCenter.png
+		}
+	}
+
+	[ItemLook Template=LabelWidget]
+	{
+		[View Template=GroupVE]
+		{
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 8
+				T = 6
+				R = 8r
+				B = +18
+
+				when = ENABLED + FOCUSED
+				alpha_blending = true
+				center_texture = /UI/%s/Editor/EditorListBox/EditorListSelectedCenter.png
+				ends_texture = /UI/%s/Editor/EditorListBox/EditorListSelectedEnds.png			
+				
+			}
+		}
+
+		[Label]
+		{
+			L = 16
+			T = 7
+			
+
+			font = medium
+			color = 1,1,1
+
+			[Override]
+			{
+				when = DISABLED
+				attributes = COLOR
+
+				color = .5,.5,.5
+			}
+		}
+	}
+}

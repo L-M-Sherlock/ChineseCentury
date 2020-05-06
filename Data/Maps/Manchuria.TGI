@@ -1,0 +1,30 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Battle of Manchuria"
+
+	objective_8 = "1. Guard for 30 minutes"
+	trigger_41_element_12 = "Update : Rokossovski's troops arrived!"
+	independent_4 = "Ambient"
+	independent_2 = "Neutral"
+	kingdom_5 = "RUS"
+	team_0 = "Team 0"
+	kingdom_3 = "Rokossovski's army"
+	map_name = "<color=0.5,0.8,1.0>Defense map:Battle of Manchuria"
+	restriction_group_0000 = "Kwantung Army"
+	name_5450 = "Tonghua City"
+	objective_7 = "1. Guard Wuchang."
+	kingdom_1 = "Zhukov's army"
+	name_1538 = "Changchun"
+	objective_6 = "2. Destroy all RUS forces."
+	kingdom_0 = "Japanese"
+	objective_5 = "1. Occupy Harbin before Zhukov."
+	objective_4 = "2. Guard Changchun."
+	objective_3 = "3. Guard Siping."
+	objective_2 = "4. Guard Tonghua City."
+	objective_0 = "1. Guard at least two cities."
+	name_1506 = "Harbin"
+	trigger_32_element_3 = "Update : Zhukov's troops arrived. Occupy Harbin before Zhukov arrives!"
+	map_description = "Battle of Manchuria BY:AA+H3"
+	name_1504 = "Siping"
+}

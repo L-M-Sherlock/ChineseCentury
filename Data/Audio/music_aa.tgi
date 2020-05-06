@@ -1,0 +1,181 @@
+
+/*	INTERFACE MUSIC		*/
+
+[Template AAMusic Template=AudioMusic]
+volume = 100%
+
+[Audio Template=AAMusic]
+{
+	IDS = main_title_music
+	files = Music/MainTheme.mp3,Music/Epic.mp3,Music/MenuAmbient01.mp3,Music/MenuAmbient02.mp3
+	name = "#music_aa_main_title_music_name"
+	leadin = Music/MainTheme.mp3
+	fade_time_s = 4, 2
+	volume = 133%
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = menu_background_music
+	files = Music/GeneralAmbient01.mp3,Music/GeneralAmbient02.mp3,Music/GeneralAmbient03.mp3,Music/GeneralAmbient04.mp3,Music/GeneralAmbient05.mp3,Music/GeneralAmbient06.mp3
+	name = "#music_aa_menu_background_music_name"
+	fade_time_s = 4, 2
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = win_interface_music
+	files = Music/WinInterface.mp3
+	name = "#music_aa_win_interface_music_name"
+	leadin = Music/WinInterface.mp3
+	fade_time_s = 4, 2
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = loss_interface_music
+	files = Music/LossInterface.mp3
+	name = "#music_aa_loss_interface_music_name"
+	leadin = Music/LossInterface.mp3
+	fade_time_s = 4, 2
+}
+
+/*	AMBIENT MUSIC		*/
+
+[Audio Template=AAMusic]
+{
+	IDS = gbr_ambient
+	files = Music/NationGBR01.mp3,Music/NationGBR02.mp3,Music/NationGBR03.mp3,Music/NationGBR01.mp3,Music/NationGBR02.mp3,Music/NationGBR03.mp3,Music/GeneralAmbient01.mp3,Music/GeneralAmbient02.mp3,Music/GeneralAmbient03.mp3,Music/GeneralAmbient04.mp3,Music/GeneralAmbient05.mp3,Music/GeneralAmbient06.mp3,Music/CinematicAlliesIntro.mp3,Music/CinematicAlliesBerlin.mp3,Music/CinematicAlliesDDay.mp3,Music/CinematicAlliesVictory.mp3,Music/CinematicAlliesIntro.mp3,Music/CinematicAlliesBerlin.mp3,Music/CinematicAlliesDDay.mp3,Music/CinematicAlliesVictory.mp3
+	name = "#music_aa_gbr_ambient_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = ger_ambient
+	files = Music/NationGER01.mp3,Music/NationGER02.mp3,Music/NationGER03.mp3,Music/NationGER04.mp3,Music/NationGER05.mp3,Music/NationGER06.mp3,Music/NationGER07.mp3,Music/NationGER01.mp3,Music/NationGER02.mp3,Music/NationGER03.mp3,Music/NationGER04.mp3,Music/NationGER05.mp3,Music/NationGER06.mp3,Music/NationGER07.mp3,Music/GeneralAmbient01.mp3,Music/GeneralAmbient02.mp3,Music/GeneralAmbient03.mp3,Music/GeneralAmbient04.mp3,Music/GeneralAmbient05.mp3,Music/GeneralAmbient06.mp3,Music/CinematicAxisIntro.mp3,Music/CinematicAxisMoscowFall.mp3,Music/CinematicAxisLondonFall.mp3,Music/CinematicAxisVictory.mp3,Music/CinematicAxisIntro.mp3,Music/CinematicAxisMoscowFall.mp3,Music/CinematicAxisLondonFall.mp3,Music/CinematicAxisVictory.mp3
+	name = "#music_aa_ger_ambient_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = jpn_ambient
+	files = Music/NationJPN01.mp3,Music/NationJPN02.mp3,Music/NationJPN03.mp3,Music/NationJPN01.mp3,Music/NationJPN02.mp3,Music/NationJPN03.mp3,Music/GeneralAmbient01.mp3,Music/GeneralAmbient02.mp3,Music/GeneralAmbient03.mp3,Music/GeneralAmbient04.mp3,Music/GeneralAmbient05.mp3,Music/GeneralAmbient06.mp3,Music/CinematicAxisIntro.mp3,Music/CinematicAxisMoscowFall.mp3,Music/CinematicAxisLondonFall.mp3,Music/CinematicAxisVictory.mp3,Music/CinematicAxisIntro.mp3,Music/CinematicAxisMoscowFall.mp3,Music/CinematicAxisLondonFall.mp3,Music/CinematicAxisVictory.mp3
+	name = "#music_aa_jpn_ambient_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = rus_ambient
+	files = Music/NationRUS01.mp3,Music/NationRUS02.mp3,Music/NationRUS03.mp3,Music/NationRUS04.mp3,Music/NationRUS05.mp3,Music/NationRUS06.mp3,Music/NationRUS01.mp3,Music/NationRUS02.mp3,Music/NationRUS03.mp3,Music/NationRUS04.mp3,Music/NationRUS05.mp3,Music/NationRUS06.mp3,Music/GeneralAmbient01.mp3,Music/GeneralAmbient02.mp3,Music/GeneralAmbient03.mp3,Music/GeneralAmbient04.mp3,Music/GeneralAmbient05.mp3,Music/GeneralAmbient06.mp3,Music/CinematicAlliesIntro.mp3,Music/CinematicAlliesBerlin.mp3,Music/CinematicAlliesDDay.mp3,Music/CinematicAlliesVictory.mp3,Music/CinematicAlliesIntro.mp3,Music/CinematicAlliesBerlin.mp3,Music/CinematicAlliesDDay.mp3,Music/CinematicAlliesVictory.mp3
+	name = "#music_aa_rus_ambient_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = usa_ambient
+	files = Music/NationUSA01.mp3,Music/NationUSA02.mp3,Music/NationUSA03.mp3,Music/NationUSA01.mp3,Music/NationUSA02.mp3,Music/NationUSA03.mp3,Music/GeneralAmbient01.mp3,Music/GeneralAmbient02.mp3,Music/GeneralAmbient03.mp3,Music/GeneralAmbient04.mp3,Music/GeneralAmbient05.mp3,Music/GeneralAmbient06.mp3,Music/CinematicAlliesIntro.mp3,Music/CinematicAlliesBerlin.mp3,Music/CinematicAlliesDDay.mp3,Music/CinematicAlliesVictory.mp3,Music/CinematicAlliesIntro.mp3,Music/CinematicAlliesBerlin.mp3,Music/CinematicAlliesDDay.mp3,Music/CinematicAlliesVictory.mp3
+	name = "#music_aa_usa_ambient_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = usb_ambient
+	files = Music/TerranSC2-01.mp3,Music/TerranSC2-02.mp3,Music/Music_Inspriational2_Full.mp3,Music/TerranSC2-01.mp3,Music/TerranSC2-02.mp3,Music/Music_Inspriational2_Full.mp3,Music/GeneralAmbient01.mp3,Music/GeneralAmbient02.mp3,Music/GeneralAmbient03.mp3,Music/GeneralAmbient04.mp3,Music/GeneralAmbient05.mp3,Music/GeneralAmbient06.mp3,Music/CinematicAlliesIntro.mp3,Music/CinematicAlliesBerlin.mp3,Music/CinematicAlliesDDay.mp3,Music/CinematicAlliesVictory.mp3,Music/CinematicAlliesIntro.mp3,Music/CinematicAlliesBerlin.mp3,Music/CinematicAlliesDDay.mp3,Music/CinematicAlliesVictory.mp3
+	name = "#music_aa_usa_ambient_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = fin_ambient
+	files = Music/NationFIN01.mp3,Music/NationFIN02.mp3,Music/NationFIN03.mp3,Music/NationFIN01.mp3,Music/NationFIN02.mp3,Music/NationFIN03.mp3,Music/GeneralAmbient01.mp3,Music/GeneralAmbient02.mp3,Music/GeneralAmbient03.mp3,Music/GeneralAmbient04.mp3,Music/GeneralAmbient05.mp3,Music/GeneralAmbient06.mp3,Music/CinematicAxisIntro.mp3,Music/CinematicAxisMoscowFall.mp3,Music/CinematicAxisLondonFall.mp3,Music/CinematicAxisVictory.mp3,Music/CinematicAxisIntro.mp3,Music/CinematicAxisMoscowFall.mp3,Music/CinematicAxisLondonFall.mp3,Music/CinematicAxisVictory.mp3
+	name = "#music_aa_fin_ambient_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = ned_ambient
+	files = Music/NationNED01.mp3,Music/NationNED02.mp3,Music/NationNED03.mp3,Music/NationNED01.mp3,Music/NationNED02.mp3,Music/NationNED03.mp3,Music/GeneralAmbient01.mp3,Music/GeneralAmbient02.mp3,Music/GeneralAmbient03.mp3,Music/GeneralAmbient04.mp3,Music/GeneralAmbient05.mp3,Music/GeneralAmbient06.mp3,Music/CinematicAlliesIntro.mp3,Music/CinematicAlliesBerlin.mp3,Music/CinematicAlliesDDay.mp3,Music/CinematicAlliesVictory.mp3,Music/CinematicAlliesIntro.mp3,Music/CinematicAlliesBerlin.mp3,Music/CinematicAlliesDDay.mp3,Music/CinematicAlliesVictory.mp3
+	name = "#music_aa_ned_ambient_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = chn_ambient
+	files = Music/NationCHN01.mp3,Music/NationCHN02.mp3,Music/NationCHN03.mp3,Music/NationCHN01.mp3,Music/NationCHN02.mp3,Music/NationCHN03.mp3,Music/GeneralAmbient01.mp3,Music/GeneralAmbient02.mp3,Music/GeneralAmbient03.mp3,Music/GeneralAmbient04.mp3,Music/GeneralAmbient05.mp3,Music/GeneralAmbient06.mp3,Music/CinematicAxisIntro.mp3,Music/CinematicAxisMoscowFall.mp3,Music/CinematicAxisLondonFall.mp3,Music/CinematicAxisVictory.mp3,Music/CinematicAxisIntro.mp3,Music/CinematicAxisMoscowFall.mp3,Music/CinematicAxisLondonFall.mp3,Music/CinematicAxisVictory.mp3
+	name = "#music_aa_jpn_ambient_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = cpc_ambient
+	files = Music/NationCPC01.mp3,Music/NationCPC02.mp3,Music/NationCPC03.mp3,Music/NationCPC04.mp3,Music/NationCPC05.mp3,Music/NationCPC01.mp3,Music/NationCPC02.mp3,Music/NationCPC03.mp3,Music/NationCPC04.mp3,Music/NationCPC05.mp3,Music/GeneralAmbient01.mp3,Music/GeneralAmbient02.mp3,Music/GeneralAmbient03.mp3,Music/GeneralAmbient04.mp3,Music/GeneralAmbient05.mp3,Music/GeneralAmbient06.mp3,Music/CinematicAlliesIntro.mp3,Music/CinematicAlliesBerlin.mp3,Music/CinematicAlliesDDay.mp3,Music/CinematicAlliesVictory.mp3,Music/CinematicAlliesIntro.mp3,Music/CinematicAlliesBerlin.mp3,Music/CinematicAlliesDDay.mp3,Music/CinematicAlliesVictory.mp3
+	name = "#music_aa_rus_ambient_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = ita_ambient
+	files = Music/NationITA01.mp3,Music/NationITA02.mp3,Music/NationITA03.mp3,Music/NationITA01.mp3,Music/NationITA02.mp3,Music/NationITA03.mp3,Music/GeneralAmbient01.mp3,Music/GeneralAmbient02.mp3,Music/GeneralAmbient03.mp3,Music/GeneralAmbient04.mp3,Music/GeneralAmbient05.mp3,Music/GeneralAmbient06.mp3,Music/CinematicAxisIntro.mp3,Music/CinematicAxisMoscowFall.mp3,Music/CinematicAxisLondonFall.mp3,Music/CinematicAxisVictory.mp3,Music/CinematicAxisIntro.mp3,Music/CinematicAxisMoscowFall.mp3,Music/CinematicAxisLondonFall.mp3,Music/CinematicAxisVictory.mp3
+	name = "#music_aa_ITA_ambient_name"
+	fade_time_s = 3, 1
+}
+
+/* 	CUTSCENE MUSIC		*/
+
+[Audio Template=AAMusic]
+{
+	IDS = cutscene_general01
+	files = Music/GeneralAmbient01.mp3
+	name = "#music_aa_cutscene_general01_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = cutscene_general02
+	files = Music/GeneralAmbient02.mp3
+	name = "#music_aa_cutscene_general02_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = cutscene_general03
+	files = Music/GeneralAmbient03.mp3
+	name = "#music_aa_cutscene_general03_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = cutscene_general04
+	files = Music/GeneralAmbient04.mp3
+	name = "#music_aa_cutscene_general04_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = cutscene_general05
+	files = Music/GeneralAmbient05.mp3
+	name = "#music_aa_cutscene_general05_name"
+	fade_time_s = 3, 1
+}
+
+[Audio Template=AAMusic]
+{
+	IDS = cutscene_general06
+	files = Music/GeneralAmbient06.mp3
+	name = "#music_aa_cutscene_general06_name"
+	fade_time_s = 3, 1
+}

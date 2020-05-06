@@ -1,0 +1,123 @@
+[Template AACHNAirplaneAttackBomb Template=AAAirplaneAttackBomb]
+{
+	mana_cost = 5
+	range = 15
+	area = 9
+	recharge_time = 5
+
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = bomb_heavy
+	at = TARGET_GROUND
+}
+
+[Thing Template=AAUnitCHNAirplaneBomber]
+{
+	IDS = chn_bomber
+	name = "#chn_bomber_name"
+	editor_name = "#chn_bomber_editor_name"
+	
+	[View]
+	resource_prefix = CHNBomber/CHNBomber
+
+	[PerformerComponent]
+	{
+		[Ability Template=AAProjectileLocal]
+		{
+			;spawn_position = -0.3,-3.0,-0.4
+			
+			[AbilityDefinition Template=AACHNAirplaneAttackBomb]
+			{
+				IDS = chn_bomb1
+				name = "#chn_bomber_AbilityDefinition_name"
+			
+				[Effect Template=BlastDamageEffect]
+				amount = 66
+		
+				[Effect Template=MoraleLossEffect]
+				amount = 2
+			}
+		}
+
+		[Ability Template=AAProjectileLocal]
+		{
+			;spawn_position = 0.3,-3.0,-0.3
+			
+			[AbilityDefinition Template=AACHNAirplaneAttackBomb]
+			{
+				IDS = chn_bomb2
+				name = "#chn_bomber_AbilityDefinition_name_2"
+			
+				[Effect Template=BlastDamageEffect]
+				amount = 66
+		
+				[Effect Template=MoraleLossEffect]
+				amount = 2
+			}
+		}
+
+		[Ability Template=AAProjectileLocal]
+		{
+			;spawn_position = -0.3,-3.5,-0.2
+			
+			[AbilityDefinition Template=AACHNAirplaneAttackBomb]
+			{
+				IDS = chn_bomb3
+				name = "#chn_bomber_AbilityDefinition_name_3"
+					
+				[Effect Template=BlastDamageEffect]
+				amount = 66
+		
+				[Effect Template=MoraleLossEffect]
+				amount = 2
+			}
+		}
+
+		[Ability Template=AAProjectileLocal]
+		{
+			;spawn_position = 0.3,-3.5,-0.1
+			
+			[AbilityDefinition Template=AACHNAirplaneAttackBomb]
+			{
+				IDS = chn_bomb4
+				name = "#chn_bomber_AbilityDefinition_name_4"
+				
+				[Effect Template=BlastDamageEffect]
+				amount = 66
+		
+				[Effect Template=MoraleLossEffect]
+				amount = 2
+			}
+		}
+				
+		[Ability Template=AAProjectileLocal]
+		{
+			;spawn_position = 0.3,-3.5,-0.1
+			required_properties = tech_napalm
+			
+			[AbilityDefinition Template=AACHNAirplaneAttackBomb]
+			{
+				IDS = chn_bomb5
+				mana_cost = 0		
+				name = "#chn_bomber_AbilityDefinition_name_5"
+				area = 6
+				projectile_ids = napalm_bomb
+				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
+			
+				[Effect Template=FireDamageEffect]
+				amount = 66
+				
+				[Effect Template=MoraleLossEffect]
+				amount = 2
+			}
+		}	
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = bomber
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+}

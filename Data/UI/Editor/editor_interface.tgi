@@ -1,0 +1,7 @@
+
+;; --------------------------- Editor Interface ---------------------------
+
+[Editor Template=SilentInterface]
+{
+	[View Template=NoVE]
+}

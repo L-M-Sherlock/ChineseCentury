@@ -1,0 +1,435 @@
+/*************************************************************************
+							Buttons
+*************************************************************************/
+
+[Template SharedPushButtonGroupVE Template=GroupVE]
+{
+	[Child Template=DecalVE]
+	when = ENABLED + UNFOCUSED + UNPRESSED
+	texture = /UI/%s/Default/Chat/ChatSendButton.TGA
+	
+	[Child Template=DecalVE]
+	when = ENABLED + FOCUSED + UNPRESSED
+	texture = /UI/%s/Default/Chat/ChatSendButtonFocused.TGA
+	
+	[Child Template=DecalVE]
+	when = ENABLED + PRESSED
+	texture = /UI/%s/Default/Chat/ChatSendButtonPressed.TGA
+	
+	[Child Template=DecalVE]
+	when = DISABLED
+	texture = /UI/%s/Default/Chat/ChatSendButtonDisabled.TGA
+}
+
+[template SharedPushButtonWidgetNoArt template=PushButtonWidget]
+{
+	pressed_client_L = 4
+	pressed_client_T = 4
+	pressed_client_R = 2r
+	pressed_client_B = 2b
+
+	[Client Template=Widget]	
+
+	[View Template=GroupVE]
+	{
+		R = +125
+		B = +25
+		
+	}
+
+}
+
+[template SharedPushButtonWidgetBase template=SharedPushButtonWidgetNoArt]
+{
+	[View Template=SharedPushButtonGroupVE]
+}
+
+;; StaticLabelWidget version
+[Template SharedPushButtonWidget Template=SharedPushButtonWidgetBase]
+{
+	[Client Template=StaticLabelWidget]	
+	{
+		[View Template=SharedMediumCenteredLabelVE]
+		{
+			L = 13
+			T = 3
+			R = 13r
+			B = 3b
+
+			[Override]
+			{
+				when = DISABLED
+				attributes = COLOR
+
+				color = .6,.6,.6
+			}
+		}
+	}
+}
+
+
+;; StaticLabelWidget version
+[Template SharedPushButtonWidgetGeneric Template=SharedPushButtonWidgetNoArt]
+{
+	[Client Template=StaticLabelWidget]	
+	{
+		[View Template=SharedMediumCenteredLabelVE]
+		{
+			L = 13
+			T = 3
+			R = 13r
+			B = 3b
+
+			[Override]
+			{
+				when = DISABLED
+				attributes = COLOR
+
+				color = .6,.6,.6
+			}
+		}
+	}
+}
+
+
+;; non-StaticLabelWidget version
+[Template SharedPushButtonWidgetMutable Template=SharedPushButtonWidgetBase]
+{
+	[Client Template=LabelWidget]	
+	{
+		[View Template=SharedMediumCenteredLabelVE]
+		{
+			L = 13
+			T = 3
+			R = 13r
+			B = 3b
+
+			[Override]
+			{
+				when = DISABLED
+				attributes = COLOR
+
+				color = .6,.6,.6
+			}
+		}
+
+		[Label Template=LabelVE]
+		{
+			L = 0
+			T = 0
+			R = 100%
+			B = 100%
+
+			text = ""
+			justify = left
+			font = medium
+			color = 1,1,1
+		}
+	}
+}
+
+[Template SharedToggleButtonWidget Template=ToggleButtonWidget]
+{
+	[View Template=GroupVE]
+}
+
+[Template SharedLockedToggleButtonWidget Template = ToggleButtonWidget]
+{
+	[View Template = SharedLockedToggleButtonGroupVE]
+}
+
+;; NOTE: cannot inherit from SharedPushButtonGroupVE since it would also inherit it's [Child] nodes
+;; which contain different textures
+[Template MenuPushButtonGroupVE Template=GroupVE]
+{
+	R = +182
+	B = +46
+	
+	[Child Template=DecalVE]
+	when = ENABLED + UNFOCUSED
+	alpha_blending = true
+	texture = /UI/%s/Default/Pushbutton/menubuttonunfocused.tga
+
+	[Child Template=DecalVE]
+	when = ENABLED + FOCUSED + UNPRESSED
+	alpha_blending = true
+	texture = /UI/%s/Default/Pushbutton/menubuttonfocused.tga
+
+	[Child Template=DecalVE]
+	when = ENABLED + FOCUSED + PRESSED
+	alpha_blending = true
+	texture = /UI/%s/Default/Pushbutton/menubuttonpressed.tga
+
+	[Child Template=DecalVE]
+	when = DISABLED
+	alpha_blending = true
+	texture = /UI/%s/Default/Pushbutton/menubuttonunfocusedunpressed.tga
+}
+
+[Template SecondaryCloseButtonGroupVE Template=GroupVE]
+{
+	R = +166
+	B = +45
+	
+	[Child Template=DecalVE]
+	when = ENABLED + UNFOCUSED
+	alpha_blending = true
+	texture = /UI/%s/Game/Panel/GameSecondaryButtonClose.PNG
+
+	[Child Template=DecalVE]
+	when = ENABLED + FOCUSED + UNPRESSED
+	alpha_blending = true
+	texture = /UI/%s/Game/Panel/GameSecondaryButtonCloseFocused.PNG
+
+	[Child Template=DecalVE]
+	when = ENABLED + FOCUSED + PRESSED
+	alpha_blending = true
+	texture = /UI/%s/Game/Panel/GameSecondaryButtonClosePressed.PNG
+
+	[Child Template=DecalVE]
+	when = DISABLED
+	alpha_blending = true
+	texture = /UI/%s/Game/Panel/GameSecondaryButtonClose.PNG
+}
+
+
+[Template SmallPushButtonGroupVE Template=GroupVE]
+{
+	R = +60
+	B = +45
+	
+	[Child Template=DecalVE]
+	when = ENABLED + UNFOCUSED
+	alpha_blending = true
+	texture = /UI/%s/Default/Pushbutton/smallmenubuttonunfocusedunpressed.tga
+
+	[Child Template=DecalVE]
+	when = ENABLED + FOCUSED + UNPRESSED
+	alpha_blending = true
+	texture = /UI/%s/Default/Pushbutton/smallmenubuttonfocused.tga
+
+	[Child Template=DecalVE]
+	when = ENABLED + FOCUSED + PRESSED
+	alpha_blending = true
+	texture = /UI/%s/Default/Pushbutton/smallmenubuttonpressed.tga
+
+	[Child Template=DecalVE]
+	when = DISABLED
+	alpha_blending = true
+	texture = /UI/%s/Default/Pushbutton/smallmenubuttonunfocusedunpressed.tga
+}
+
+
+
+;; NOTE: cannot inherit from SharedPushButtonWidget since view must be MenuPushButtonGroupVE and
+;; that doesn't inherit from SharedPushButtonGroupVE
+[Template MenuPushButtonWidget Template=PushButtonWidget]
+{
+	pressed_client_L = 17
+	pressed_client_T = 14
+	pressed_client_R = 13r
+	pressed_client_B = 6b
+	
+	[View Template=MenuPushButtonGroupVE]
+
+	[Client Template=StaticLabelWidget]	
+	{
+		[View Template=SharedLargeCenteredLabelVE]
+		{
+			L = 13
+			T = 12
+			R = 13r
+			B = 8b
+
+			[Override]
+			{
+				when = DISABLED
+				attributes = COLOR
+
+				color = .6,.6,.6
+			}
+		}
+	}
+}
+
+
+[Template SecondaryCloseButtonWidget Template=PushButtonWidget]
+{
+	pressed_client_L = 17
+	pressed_client_T = 14
+	pressed_client_R = 13r
+	pressed_client_B = 6b
+	
+	[View Template=SecondaryCloseButtonGroupVE]
+
+	[Client Template=StaticLabelWidget]	
+	{
+		[View Template=SharedLargeCenteredLabelVE]
+		{
+			L = 18
+			T = 12
+			R = 8r
+			B = 8b
+
+			[Override]
+			{
+				when = DISABLED
+				attributes = COLOR
+
+				color = .6,.6,.6
+			}
+		}
+	}
+}
+
+;; NOTE: cannot inherit from SharedPushButtonWidget since view must be MenuPushButtonGroupVE and
+;; that doesn't inherit from SharedPushButtonGroupVE
+[Template MenuPushButtonWidgetMutable Template=PushButtonWidget]
+{
+	pressed_client_L = 17
+	pressed_client_T = 14
+	pressed_client_R = 13r
+	pressed_client_B = 6b
+	
+	[View Template=MenuPushButtonGroupVE]
+
+	[Client Template=LabelWidget]	
+	{
+		[View Template=SharedLargeCenteredLabelVE]
+		{
+			L = 13
+			T = 12
+			R = 13r
+			B = 8b
+
+			[Override]
+			{
+				when = DISABLED
+				attributes = COLOR
+
+				color = .6,.6,.6
+			}
+		}
+
+		[Label Template=SharedLargeCenteredLabelVE]
+		{
+			L = 0
+			T = 0
+			R = 100%
+			B = 100%
+		}
+
+	}
+}
+
+[Template MenuPushButtonWidgetMutableNoArt Template=PushButtonWidget]
+{
+	pressed_client_L = 17
+	pressed_client_T = 14
+	pressed_client_R = 13r
+	pressed_client_B = 6b
+	
+	[View Template=GroupVE]
+
+	[Client Template=LabelWidget]	
+	{
+		[View Template=LabelVE]
+		{
+			L = 13
+			T = 12
+			R = 13r
+			B = 8b
+
+			text = ""
+			font = Large
+			justify = center
+
+			[Override]
+			{
+				when = DISABLED
+				attributes = COLOR
+
+				color = .6,.6,.6
+			}
+		}
+
+		[Label Template=LabelVE]
+		{
+			L = 0
+			T = 0
+			R = 100%
+			B = 100%
+			
+			text = ""
+			font = Large
+			justify = center
+		}
+
+	}
+}
+
+[Template MenuPushButtonWidgetBase Template=PushButtonWidget]
+{
+	pressed_client_L = 17
+	pressed_client_T = 14
+	pressed_client_R = 13r
+	pressed_client_B = 6b
+
+	[View Template = MenuPushButtonGroupVE]
+	
+	/*
+	[View Template = SharedPushButtonGroupVE]
+	{
+		[Child Template=DecalVETiledHorizontal]
+		when = ENABLED + UNFOCUSED	
+		ends_texture = /UI/%s/Default/PushButton/UnfocusedTileEnds.png
+		center_texture = /UI/%s/Default/PushButton/UnfocusedTileCenter.png
+
+		[Child Template=DecalVETiledHorizontal]
+		when = ENABLED + FOCUSED + UNPRESSED
+		ends_texture = /UI/%s/Default/PushButton/FocusedTileEnds.png
+		center_texture = /UI/%s/Default/PushButton/FocusedTileCenter.png
+
+		[Child Template=DecalVETiledHorizontal]
+		when = ENABLED + FOCUSED + PRESSED
+		ends_texture = /UI/%s/Default/PushButton/PressedTileEnds.png
+		center_texture = /UI/%s/Default/PushButton/PressedTileCenter.png
+
+		[Child Template=DecalVETiledHorizontal]
+		when = DISABLED
+		ends_texture = /UI/%s/Default/PushButton/UnfocusedTileEnds.png
+		center_texture = /UI/%s/Default/PushButton/UnfocusedTileCenter.png
+	}
+	*/
+}
+
+;; NOTE: cannot inherit from SharedPushButtonWidget since view must be MenuPushButtonGroupVE and
+;; that doesn't inherit from SharedPushButtonGroupVE
+[Template MenuPushButtonWidgetNoArt Template=PushButtonWidget]
+{
+	pressed_client_L = 17
+	pressed_client_T = 14
+	pressed_client_R = 13r
+	pressed_client_B = 6b
+	
+	[View]
+
+	[Client Template=StaticLabelWidget]	
+	{
+		[View Template=SharedLargeCenteredLabelVE]
+		{
+			L = 13
+			T = 12
+			R = 13r
+			B = 8b
+
+			[Override]
+			{
+				when = DISABLED
+				attributes = COLOR
+
+				color = .6,.6,.6
+			}
+		}
+	}
+}

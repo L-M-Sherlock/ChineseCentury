@@ -1,0 +1,9 @@
+[template AircraftComponent]
+{
+	fixed	taxi_scale		;; scale applied to plane while taxiing
+	fixed	taxi_height		;; height above the runway to taxi (used for airfields and carriers)
+	fixed	taxi_speed		;; speed of plane while taxiing
+	fixed	operational_height	;; operational altitude
+	fixed	bank_factor		;; larger value for larger planes (3.0 for fighters, 4.0 for bombers)
+}
+

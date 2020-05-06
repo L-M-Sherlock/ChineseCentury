@@ -1,0 +1,5310 @@
+/*	TRANSLATE TGI		*/
+
+;;
+;;	Please ensure that you have the DATE ADDED field so that we know
+;;	when specific additions have been added.  If the translation is
+;;	supposed to be permanent, then mark the field PERMANENT
+;;
+
+/*
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = german_captain
+	ids_new = ger_captain
+}	;;  DATE ADDED - 02.08.04 
+*/
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_shoredirttrans01
+	ids_new = tropical_shore01
+}	;;  DATE ADDED - 09.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_shorejungledensetrans01
+	ids_new = tropical_shore01
+}	;;  DATE ADDED - 09.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_shorejungletrans01
+	ids_new = tropical_shore01
+}	;;  DATE ADDED - 09.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city_center01
+	ids_new = western_europe_city_center01_large
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_village08
+	ids_new = weurope_villageblock8x16_01
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_village05
+	ids_new = weurope_villageblock8x10_01
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_village04
+	ids_new = weurope_villageblock8x8_02
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_village03
+	ids_new = weurope_villageblock8x8_01
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_village06
+	ids_new = weurope_villageblock6x12_01
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_village02
+	ids_new = weurope_villageblock6x6_02
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_village01
+	ids_new = weurope_villageblock6x6_01
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_village07
+	ids_new = weurope_villageblock10x10_01
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_village10
+	ids_new = weurope_villageblock8x20_01
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_village09
+	ids_new = weurope_villageblock8x16_02
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city08
+	ids_new = weurope_cityblock8x12_01
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city16
+	ids_new = weurope_cityblock10x32_02
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city15
+	ids_new = weurope_cityblock10x32_01
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city13
+	ids_new = weurope_cityblock10x22_02
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city10
+	ids_new = weurope_cityblock12x18_02
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city09
+	ids_new = weurope_cityblock12x18_01
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city12
+	ids_new = weurope_cityblock10x22_01
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city14
+	ids_new = weurope_cityblock10x20_02
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city11
+	ids_new = weurope_cityblock10x20_01
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city06
+	ids_new = weurope_cityblock10x10_06
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city07
+	ids_new = weurope_cityblock10x10_05
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city05
+	ids_new = weurope_cityblock10x10_04
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city04
+	ids_new = weurope_cityblock10x10_03
+}	;;  DATE ADDED - 09.19.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city03
+	ids_new = weurope_cityblock10x10_02
+}	;;  DATE ADDED - 09.17.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city01
+	ids_new = weurope_cityblock10x10_01
+}	;;  DATE ADDED - 09.17.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_farm01
+	ids_new = weurope_farm6x8_01
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_farm02
+	ids_new = weurope_farm6x6_01
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_Windmill
+	ids_new = weurope_windmill
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_america_city12
+	ids_new = samerica_villageblock12x24_03
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_america_city09
+	ids_new = samerica_villageblock12x24_02
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_america_city08
+	ids_new = samerica_villageblock12x24_01
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_america_city11
+	ids_new = samerica_villageblock12x18_03
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_america_city10
+	ids_new = samerica_villageblock12x18_02
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_america_city04
+	ids_new = samerica_villageblock12x18_01
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_america_city07
+	ids_new = samerica_villageblock12x12_06
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_america_city06
+	ids_new = samerica_villageblock12x12_05
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_america_city05
+	ids_new = samerica_villageblock12x12_04
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_america_city03
+	ids_new = samerica_villageblock12x12_03
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_america_city02
+	ids_new = samerica_villageblock12x12_02
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_america_city01
+	ids_new = samerica_villageblock12x12_01
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = boreal_crops03
+	ids_new = boreal_crops01
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = boreal_crops04
+	ids_new = boreal_crops02
+}	;;  DATE ADDED - 09.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forestdeciduous02
+	ids_new = temperate_forestdeciduous01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirtdark03
+	ids_new = temperate_dirtdark01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirtdark02
+	ids_new = temperate_dirtdark01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirt03
+	ids_new = temperate_dirt01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirt02
+	ids_new = temperate_dirt01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_city03
+	ids_new = temperate_city01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_city02
+	ids_new = temperate_city01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_crops03
+	ids_new = temperate_crops02
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_crops04
+	ids_new = temperate_crops01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_crops05
+	ids_new = temperate_crops02
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_crops06
+	ids_new = temperate_crops01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_city_center01
+	ids_new = far_east_city_center01_small
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_jungletrans01
+	ids_new = tropical_jungle01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_jungledense02
+	ids_new = tropical_jungledense01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_jungledense03
+	ids_new = tropical_jungledense01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_jungledense04
+	ids_new = tropical_jungledense01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_dirt04
+	ids_new = tropical_dirt01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_dirt03
+	ids_new = tropical_dirt02
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_city02
+	ids_new = tropical_city01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_city03
+	ids_new = tropical_city01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_river02
+	ids_new = tropical_river01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_city03
+	ids_new = desert_city01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_city02
+	ids_new = desert_city01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_scrub05
+	ids_new = desert_scrub02
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_scrub04
+	ids_new = desert_scrub03
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = boreal_forest05
+	ids_new = boreal_forest03
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = boreal_forest04
+	ids_new = boreal_forest02
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = boreal_dirt03
+	ids_new = boreal_dirt01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = boreal_dirt02
+	ids_new = boreal_dirt01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = boreal_city03
+	ids_new = boreal_city01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_crops03
+	ids_new = arctic_crops01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_crops04
+	ids_new = arctic_crops01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_crops05
+	ids_new = arctic_crops02
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_crops06
+	ids_new = arctic_crops02
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village02
+	ids_new = fareast_villageblock9x9_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village01
+	ids_new = fareast_villageblock7x10_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village03
+	ids_new = fareast_villageblock4x6_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village08
+	ids_new = fareast_villageblock12x18_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village07
+	ids_new = fareast_villageblock12x16_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village06
+	ids_new = fareast_villageblock12x12_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village12
+	ids_new = fareast_villageblock11x31_02
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village11
+	ids_new = fareast_villageblock11x31_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village09
+	ids_new = fareast_villageblock11x22_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village04
+	ids_new = fareast_villageblock11x14_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village05
+	ids_new = fareast_villageblock10x12_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village10
+	ids_new = fareast_villageblock10x22_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_village03
+	ids_new = spacific_villageblock8x8_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_village09
+	ids_new = spacific_villageblock8x12_02
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_village08
+	ids_new = spacific_villageblock8x12_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_village02
+	ids_new = spacific_villageblock6x6_02
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_village01
+	ids_new = spacific_villageblock6x6_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_village11
+	ids_new = spacific_villageblock10x18_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_village10
+	ids_new = spacific_villageblock10x16_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_village12
+	ids_new = spacific_villageblock10x14_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_village07
+	ids_new = spacific_villageblock10x10_04
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_village06
+	ids_new = spacific_villageblock10x10_03
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_village05
+	ids_new = spacific_villageblock10x10_02
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_village04
+	ids_new = spacific_villageblock10x10_01
+}	;;  DATE ADDED - 09.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_america_city_center01
+	ids_new = north_america_city_center01_large
+}	;;  DATE ADDED - 09.14.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = temperate_sea_rocks
+	ids_new = temperate_rocks
+}	;;  DATE ADDED - 09.12.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_city03
+	ids_new = arctic_city02
+}	;;  DATE ADDED - 09.12.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_america_city04
+	ids_new = namerica_villageblock8x10_03
+}	;;  DATE ADDED - 09.12.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_america_city03
+	ids_new = namerica_villageblock8x10_02
+}	;;  DATE ADDED - 09.12.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_america_city02
+	ids_new = namerica_villageblock8x10_01
+}	;;  DATE ADDED - 09.12.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_america_city08
+	ids_new = namerica_villageblock10x24_02
+}	;;  DATE ADDED - 09.12.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_america_city07
+	ids_new = namerica_villageblock10x24_01
+}	;;  DATE ADDED - 09.12.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_america_city06
+	ids_new = namerica_villageblock10x12_03
+}	;;  DATE ADDED - 09.12.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_america_city05
+	ids_new = namerica_villageblock10x12_02
+}	;;  DATE ADDED - 09.12.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_america_city01
+	ids_new = namerica_villageblock10x12_01
+}	;;  DATE ADDED - 09.12.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_shoregrassdrytrans01
+	ids_new = tropical_shore01
+}	;;  DATE ADDED - 09.12.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_shoregrasstrans01
+	ids_new = tropical_shore01
+}	;;  DATE ADDED - 09.12.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_river04
+	ids_new = tropical_river01
+}	;;  DATE ADDED - 09.10.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_river03
+	ids_new = tropical_river02
+}	;;  DATE ADDED - 09.10.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = chaparral_wall
+	ids_new = temperate_walls
+}	;;  DATE ADDED - 09.09.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_mountainswamptrans01
+	ids_new = tropical_swamp01
+}	;;  DATE ADDED - 09.09.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grassswamptrans01
+	ids_new = tropical_swamp01
+}	;;  DATE ADDED - 09.09.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = savannah_grassland04
+	ids_new = savannah_grassland03
+}	;;  DATE ADDED - 09.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_village08
+	ids_new = eeurope_villageblock8x16_02
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_village06
+	ids_new = eeurope_villageblock8x16_01
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_village10
+	ids_new = eeurope_villageblock8x24_01
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_village09
+	ids_new = eeurope_villageblock12x20_01
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_village07
+	ids_new = eeurope_villageblock10x16_01
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_village02
+	ids_new = eeurope_villageblock12x12_01
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_village04
+	ids_new = eeurope_villageblock10x10_01
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_village01
+	ids_new = eeurope_villageblock8x8_01
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_village03
+	ids_new = eeurope_villageblock8x8_02
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_village05
+	ids_new = eeurope_villageblock8x8_03
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city01
+	ids_new = eeurope_cityblock12x12_01
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city02
+	ids_new = eeurope_cityblock12x12_02
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city03
+	ids_new = eeurope_cityblock12x12_03
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city04
+	ids_new = eeurope_cityblock12x12_04
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city05
+	ids_new = eeurope_cityblock12x12_05
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city06
+	ids_new = eeurope_cityblock12x20_01
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city07
+	ids_new = eeurope_cityblock12x20_02
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city08
+	ids_new = eeurope_cityblock12x20_03
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city09
+	ids_new = eeurope_cityblock12x20_04
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city10
+	ids_new = eeurope_cityblock12x32_01
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city11
+	ids_new = eeurope_cityblock12x32_02
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city12
+	ids_new = eeurope_cityblock12x32_03
+}	;;  DATE ADDED - 09.07.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village12
+	ids_new = nafrica_villageblock14x35_02
+}	;;  DATE ADDED - 09.06.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village11
+	ids_new = nafrica_villageblock14x35_01
+}	;;  DATE ADDED - 09.06.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village10
+	ids_new = nafrica_villageblock14x30_01
+}	;;  DATE ADDED - 09.06.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village09
+	ids_new = nafrica_villageblock14x28_01
+}	;;  DATE ADDED - 09.06.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village05
+	ids_new = nafrica_villageblock14x14_04
+}	;;  DATE ADDED - 09.06.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village04
+	ids_new = nafrica_villageblock14x14_03
+}	;;  DATE ADDED - 09.06.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village02
+	ids_new = nafrica_villageblock14x14_02
+}	;;  DATE ADDED - 09.06.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village01
+	ids_new = nafrica_villageblock14x14_01
+}	;;  DATE ADDED - 09.06.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village08
+	ids_new = nafrica_villageblock12x24_01
+}	;;  DATE ADDED - 09.06.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village07
+	ids_new = nafrica_villageblock12x22_01
+}	;;  DATE ADDED - 09.06.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village03
+	ids_new = nafrica_villageblock12x12_01
+}	;;  DATE ADDED - 09.06.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village06
+	ids_new = nafrica_villageblock10x12_01
+}	;;  DATE ADDED - 09.06.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = resource_ammo
+	ids_new = ammo_bunker
+}	;;  DATE ADDED - 09.01.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = resource_oil
+	ids_new = oil_refinery
+}	;;  DATE ADDED - 09.01.04
+
+[Translate template=Translate]
+{
+	node = Biome
+	ids_old = arctic_forest
+	ids_new = boreal_forest
+}	;;  DATE ADDED - 08.30.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_waterfordable01
+	ids_new = arctic_riverfordable01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_shoreriver01
+	ids_new = arctic_shore01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_grasslush02
+	ids_new = arctic_grassdry03
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_grasslush03
+	ids_new = arctic_grassdry02
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_mountaingrasstrans01
+	ids_new = arctic_mountaingrassdrytrans01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_forestboreal01
+	ids_new = arctic_forest01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_forestboreal02
+	ids_new = arctic_forest02
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_forestboreal03
+	ids_new = arctic_forest03
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_packicetrans01
+	ids_new = arctic_packicegrassdrytrans01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_grass04
+	ids_new = arctic_grassdry04
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_grasslush01
+	ids_new = arctic_grassdry01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_dirt_trans01
+	ids_new = arctic_dirtgrassdrytrans01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_mountaintrans01
+	ids_new = arctic_mountaintundratrans01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_waterocean01
+	ids_new = arctic_ocean01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_waterriver01
+	ids_new = arctic_river01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_grass01
+	ids_new = arctic_grassdry01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_shoretrans01
+	ids_new = arctic_shoregrassdrytrans01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_shoretrans02
+	ids_new = arctic_shoregrassdrytrans01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_grass03
+	ids_new = arctic_grassdry03
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_grasstrans01
+	ids_new = arctic_tundragrassdrytrans01
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_grass02
+	ids_new = arctic_grassdry02
+}	;;  DATE ADDED - 08.29.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = tropical_tall_grass
+	ids_new = tropical_grasstall
+}	;;  DATE ADDED - 08.28.04
+
+/*
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rice_border
+	ids_new = tropical_riceborder
+}	;;  DATE ADDED - 08.27.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirtgrasstrans01
+	ids_new = temperate_grassdirttrans01
+}	;;  DATE ADDED - 08.27.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_grassdry04
+	ids_new = temperate_grassdry02
+}	;;  DATE ADDED - 08.27.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirt04
+	ids_new = temperate_dirt03
+}	;;  DATE ADDED - 08.27.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_waterdeep01
+	ids_new = tropical_ocean01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_watershallow01
+	ids_new = tropical_shallows01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_waterfordable01
+	ids_new = tropical_riverfordable01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_waterblackshallow01
+	ids_new = tropical_shallowsblack01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_watercoral01
+	ids_new = tropical_coralreef01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_watercoral02
+	ids_new = tropical_coralreef02
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_watercoral03
+	ids_new = tropical_coralreef03
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_beachriver01
+	ids_new = tropical_shore01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_rivertrans01
+	ids_new = tropical_river04
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_sandblacktrans01
+	ids_new = tropical_beachblack01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_sandblack01
+	ids_new = tropical_beachblack01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_sandblack02
+	ids_new = tropical_beachblack02
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_sandblack03
+	ids_new = tropical_beachblack03
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_sandtrans01
+	ids_new = tropical_beach01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_sand05
+	ids_new = tropical_beach01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_sand04
+	ids_new = tropical_beach01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_sand03
+	ids_new = tropical_beach01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_sand02
+	ids_new = tropical_beach01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_sand01
+	ids_new = tropical_beach01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grasshoney01
+	ids_new = tropical_grass01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grasshoney02
+	ids_new = tropical_grass02
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grasshoney03
+	ids_new = tropical_grass03
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grasshoney04
+	ids_new = tropical_grass04
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grassyellow01
+	ids_new = tropical_grassdry01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grassyellow02
+	ids_new = tropical_grassdry02
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grassyellow03
+	ids_new = tropical_grassdry03
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grassyellow04
+	ids_new = tropical_grassdry03
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grassyellow05
+	ids_new = tropical_grassdry03
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grassdry05
+	ids_new = tropical_grassdry03
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grassdry04
+	ids_new = tropical_grassdry02
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_dirttrans01
+	ids_new = tropical_dirt01
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grass05
+	ids_new = tropical_grass02
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = tropical_grass06
+	ids_new = tropical_grass03
+}	;;  DATE ADDED - 08.26.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirtdark04
+	ids_new = temperate_dirtdark02
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Weather
+	ids_old = snow
+	ids_new = snow_light
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_grassdrytrans01
+	ids_new = temperate_grassgrassdrytrans01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_mountaintrans01
+	ids_new = temperate_mountaingrasstrans01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirttrans01
+	ids_new = temperate_dirtgrasstrans01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_watershallow01
+	ids_new = temperate_shallows01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_waterriver01
+	ids_new = temperate_river01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_waterdeep01
+	ids_new = temperate_ocean01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forestconiferous03
+	ids_new = temperate_forestconiferous01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_waterfordable01
+	ids_new = temperate_riverfordable01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_whitecliffs
+	ids_new = temperate_cliffwhite01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_citytrans01
+	ids_new = temperate_citygrasstrans01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_shore05
+	ids_new = temperate_shore01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_shore04
+	ids_new = temperate_shore02
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_shore03
+	ids_new = temperate_shore01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_shoremuddy01
+	ids_new = temperate_shore01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_mountainsnowcap01
+	ids_new = temperate_mountainpeak01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_mountainbald01
+	ids_new = temperate_mountain01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_mountainbaldtrans01
+	ids_new = temperate_mountaingrasstrans01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_grasshoney05
+	ids_new = temperate_grassdry01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_grasshoney04
+	ids_new = temperate_grassdry02
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_grasshoney03
+	ids_new = temperate_grassdry03
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_grasshoney02
+	ids_new = temperate_grassdry02
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_grasshoney01
+	ids_new = temperate_grassdry01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forestconiferousdense01
+	ids_new = temperate_forestdeciduous01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forestconiferousdense02
+	ids_new = temperate_forestdeciduous02
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forestdeciduousdense01
+	ids_new = temperate_forestdeciduous01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forestdeciduousdense02
+	ids_new = temperate_forestdeciduous02
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forestdeciduousdense03
+	ids_new = temperate_forestdeciduous01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_citypaved01
+	ids_new = temperate_city01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_citypavedtrans01
+	ids_new = temperate_citygrasstrans01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_cropswet01
+	ids_new = temperate_crops04
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_cropswet02
+	ids_new = temperate_crops03
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_cropswettrans01
+	ids_new = temperate_crops01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_cropstrans01
+	ids_new = temperate_crops04
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_cropsdrytrans01
+	ids_new = temperate_crops03
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_cropsdry01
+	ids_new = temperate_crops01
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_cropsdry02
+	ids_new = temperate_crops02
+}	;;  DATE ADDED - 08.24.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = desert_sandstorm_large
+	ids_new = sandstorm_large
+	;;  DATE ADDED - 08.23.04
+}
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = desert_sandstorm_large_single
+	ids_new = sandstorm_large_single
+	;;  DATE ADDED - 08.23.04
+}
+
+[Translate template=Translate]
+{
+	node = Weather
+	ids_old = rain
+	ids_new = rain_light
+}	;;  DATE ADDED - 08.23.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_city_center01
+	ids_new = mediterranean_city_center01_large
+}	;;  DATE ADDED - 08.22.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = desert_palmtrees
+	ids_new = desert_treespalm
+}	;;  DATE ADDED - 08.22.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_village01
+	ids_new = med_villageblock12x12_01
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_village02
+	ids_new = med_villageblock12x12_02
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_village03
+	ids_new = med_villageblock12x12_03
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_village04
+	ids_new = med_villageblock12x12_04
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_village05
+	ids_new = med_villageblock12x12_01
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_village06
+	ids_new = med_villageblock12x24_01
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_village07
+	ids_new = med_villageblock12x24_02
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_village08
+	ids_new = med_villageblock12x24_03
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_village09
+	ids_new = med_villageblock12x24_04
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_village10
+	ids_new = med_villageblock12x36_01
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_village11
+	ids_new = med_villageblock12x36_02
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_village12
+	ids_new = med_villageblock12x12_01
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_farm01
+	ids_new = med_farm6x6_01
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = mediterranean_farm02
+	ids_new = med_farm5x5_01
+}	;;  DATE ADDED - 08.21.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_water_river01
+	ids_new = desert_river01
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_water_shallow02
+	ids_new = desert_shallows02
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_water_shallow01
+	ids_new = desert_shallows01
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_water_deep01
+	ids_new = desert_ocean01
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_scrub_dense_transition03
+	ids_new = desert_scrub02
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_scrub_dense_transition01
+	ids_new = desert_scrub03
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_scrub_dense01
+	ids_new = desert_scrub04
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_scrub_transition01
+	ids_new = desert_scrub05
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_savannah05
+	ids_new = desert_savannah02
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_sand_transition01
+	ids_new = desert_sand05
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_mountain_transition01
+	ids_new = desert_mountain03
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_grassland04
+	ids_new = desert_grassland02
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_grassland05
+	ids_new = desert_grassland03
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_dirt03
+	ids_new = desert_dirt02
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_dirt_transition01
+	ids_new = desert_dirt01
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_city_transition01
+	ids_new = desert_city03
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = desert_beach_transition01
+	ids_new = desert_beach01
+}	;;  DATE ADDED - 08.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city02
+	ids_new = western_europe_city01
+}	;;  DATE ADDED - 08.19.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_grasslush01
+	ids_new = chaparral_grassdry03
+}	;;  DATE ADDED - 08.18.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_grasslush02
+	ids_new = chaparral_grassdry02
+}	;;  DATE ADDED - 08.18.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_grasslush03
+	ids_new = chaparral_grassdry01
+}	;;  DATE ADDED - 08.18.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_grasshoney01
+	ids_new = chaparral_grassdry01
+}	;;  DATE ADDED - 08.18.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_grasshoney02
+	ids_new = chaparral_grassdry02
+}	;;  DATE ADDED - 08.18.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_grasshoney03
+	ids_new = chaparral_grassdry03
+}	;;  DATE ADDED - 08.18.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_grasshoney04
+	ids_new = chaparral_grassdry02
+}	;;  DATE ADDED - 08.18.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_grasshoney05
+	ids_new = chaparral_grassdry01
+}	;;  DATE ADDED - 08.18.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_water_deep01
+	ids_new = chaparral_ocean01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_water_river01
+	ids_new = chaparral_river01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_water_shallow01
+	ids_new = chaparral_shallows01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_mountain_transition01
+	ids_new = chaparral_mountain01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_mountain_transition02
+	ids_new = chaparral_mountain01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_lush_grass_04
+	ids_new = chaparral_grassdry01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_lush_grass_05
+	ids_new = chaparral_grassdry02
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_lush_grass01
+	ids_new = chaparral_grassdry01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_lush_grass02
+	ids_new = chaparral_grassdry02
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_lush_grass03
+	ids_new = chaparral_grassdry03
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_honey_grass_04
+	ids_new = chaparral_grassdry01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_honey_grass_05
+	ids_new = chaparral_grassdry02
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_honey_grass01
+	ids_new = chaparral_grassdry03
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_honey_grass02
+	ids_new = chaparral_grassdry02
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_honey_grass03
+	ids_new = chaparral_grassdry01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_grassdry04
+	ids_new = chaparral_grassdry01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_grassdry05
+	ids_new = chaparral_grassdry01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_grassdrytrans01
+	ids_new = chaparral_grassdry01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_grass05
+	ids_new = chaparral_grass01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_dirt_transition01
+	ids_new = chaparral_dirt03
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_crops_transition01
+	ids_new = chaparral_crops02
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_crops_dry01
+	ids_new = chaparral_cropsdry01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_crops_dry_transition01
+	ids_new = chaparral_cropsdry02
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_crops_wet01
+	ids_new = chaparral_cropswet01
+}	;;  DATE ADDED - 08.02.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_crops_wet_transition01
+	ids_new = chaparral_cropswet02
+}	;;  DATE ADDED - 08.02.04 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city_center01_nosupply
+	ids_new = eastern_europe_city_center01
+}	;;  DATE ADDED - 07.22.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city_center02_nosupply
+	ids_new = eastern_europe_city_center02
+}	;;  DATE ADDED - 07.22.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_city02
+	ids_new = far_east_village02
+}	;;  DATE ADDED - 07.27.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_city01
+	ids_new = far_east_village01
+}	;;  DATE ADDED - 07.27.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_city02
+	ids_new = south_pacific_village02
+}	;;  DATE ADDED - 07.27.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_city01
+	ids_new = south_pacific_village01
+}	;;  DATE ADDED - 07.27.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_village11
+	ids_new = western_europe_village01
+}	;;  DATE ADDED - 07.27.04
+
+
+
+
+;;;;;;;;;;;;;;; OLD TRANSLATIONS  ;;;;;;;;;;;;;;;;;;;
+/*
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = temperate_wall
+	ids_new = temperate_walls
+}	;;  DATE ADDED - 07.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village_01
+	ids_new = far_east_village01
+}	;;  DATE ADDED - 07.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village_02
+	ids_new = far_east_village02
+}	;;  DATE ADDED - 07.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village_03
+	ids_new = far_east_village03
+}	;;  DATE ADDED - 07.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_village_04
+	ids_new = far_east_village04
+}	;;  DATE ADDED - 07.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_city_01
+	ids_new = far_east_village01
+}	;;  DATE ADDED - 07.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_city_02
+	ids_new = far_east_village02
+}	;;  DATE ADDED - 07.16.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_city01
+	ids_new = far_east_village01
+}	;;  DATE ADDED - 07.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_city02
+	ids_new = far_east_village02
+}	;;  DATE ADDED - 07.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = far_east_center
+	ids_new = far_east_city_center01
+}	;;  DATE ADDED - 07.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city_center
+	ids_new = eastern_europe_city_center02
+}	;;  DATE ADDED - 07.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_city_center_nosupply
+	ids_new = eastern_europe_city_center02
+}	;;  DATE ADDED - 07.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_church
+	ids_new = eastern_europe_city_center01
+}	;;  DATE ADDED - 07.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = eastern_europe_church_nosupply
+	ids_new = eastern_europe_city_center01
+}	;;  DATE ADDED - 07.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_city02
+	ids_new = south_pacific_village02
+}	;;  DATE ADDED - 07.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = south_pacific_temple
+	ids_new = south_pacific_city_center01
+}	;;  DATE ADDED - 07.15.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_church
+	ids_new = western_europe_city_center01
+}	;;  DATE ADDED - 07.15.04
+
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = desert_village01
+	ids_new = north_africa_village01
+}	;;  DATE ADDED - 06.29.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = desert_village02
+	ids_new = north_africa_village02
+}	;;  DATE ADDED - 06.29.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = desert_village03
+	ids_new = north_africa_village03
+}	;;  DATE ADDED - 06.29.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = desert_village04
+	ids_new = north_africa_village04
+}	;;  DATE ADDED - 06.29.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = desert_village05
+	ids_new = north_africa_village05
+}	;;  DATE ADDED - 06.29.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = desert_village06
+	ids_new = north_africa_village06
+}	;;  DATE ADDED - 06.29.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = desert_village_town_center
+	ids_new = north_africa_city_center01
+}	;;  DATE ADDED - 06.29.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = north_africa_village_center01
+	ids_new = north_africa_city_center01
+}	;;  DATE ADDED - 06.29.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = chaparral_village01
+	ids_new = mediterranean_village01
+}	;;  DATE ADDED - 07.10.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = chaparral_village02
+	ids_new = mediterranean_village02
+}	;;  DATE ADDED - 07.10.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = chaparral_village03
+	ids_new = mediterranean_village03
+}	;;  DATE ADDED - 07.10.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = chaparral_village04
+	ids_new = mediterranean_village04
+}	;;  DATE ADDED - 07.10.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = chaparral_village05
+	ids_new = mediterranean_village05
+}	;;  DATE ADDED - 07.10.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = chaparral_village06
+	ids_new = mediterranean_village06
+}	;;  DATE ADDED - 07.10.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = chaparral_village_town_center
+	ids_new = mediterranean_city_center01
+}	;;  DATE ADDED - 07.10.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = chaparral_farm01
+	ids_new = mediterranean_farm01
+}	;;  DATE ADDED - 07.10.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = chaparral_farm02
+	ids_new = mediterranean_farm02
+}	;;  DATE ADDED - 07.10.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = arctic_treespinedynamic
+	ids_new = arctic_treespine
+}	;;  DATE ADDED - 06.01.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = temperate_trees_dynamic
+	ids_new = temperate_trees
+}	;;  DATE ADDED - 06.10.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = temperate_trees_pine_dynamic
+	ids_new = temperate_pine_trees
+}	;;  DATE ADDED - 06.10.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = temperate_dynamic_hedge
+	ids_new = temperate_hedges
+}	;;  DATE ADDED - 06.10.04
+
+
+
+;; ---------------------- GBR ----------------- ;;
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_infantry_light
+	ids_new = regiment_gbr_infantry
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_infantry_light_at
+	ids_new = regiment_gbr_infantry_at
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_infantry_light_aa
+	ids_new = regiment_gbr_infantry_aa
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_armor_heavy
+	ids_new = regiment_gbr_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_armor_light
+	ids_new = regiment_gbr_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_armor_medium
+	ids_new = regiment_gbr_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_armor_recon
+	ids_new = regiment_gbr_infantry_recon
+}	;;  DATE ADDED - 05.20.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_tank_destroyer_mobile
+	ids_new = regiment_gbr_halftrack_at
+}	;;  DATE ADDED - 05.20.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_infantry_flametank
+	ids_new = regiment_gbr_tank_flame
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_spa
+	ids_new = regiment_gbr_tank_artillery
+}	;;  DATE ADDED - 05.20.04
+
+
+;; ---------------------- GER ----------------- ;;
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_infantry_light
+	ids_new = regiment_ger_infantry
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_infantry_light_at
+	ids_new = regiment_ger_infantry_at
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_infantry_light_aa
+	ids_new = regiment_ger_infantry_aa
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_armor_heavy
+	ids_new = regiment_ger_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_armor_light
+	ids_new = regiment_ger_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_armor_medium
+	ids_new = regiment_ger_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_armor_recon
+	ids_new = regiment_ger_infantry_recon
+}	;;  DATE ADDED - 05.20.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_tank_destroyer_mobile
+	ids_new = regiment_ger_halftrack_at
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_spa
+	ids_new = regiment_ger_tank_artillery
+}	;;  DATE ADDED - 05.20.04
+
+
+;; ---------------------- JPN ----------------- ;;
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_infantry_light
+	ids_new = regiment_jpn_infantry
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_infantry_light_at
+	ids_new = regiment_jpn_infantry_at
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_infantry_light_aa
+	ids_new = regiment_jpn_infantry_aa
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_armor_heavy
+	ids_new = regiment_jpn_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_armor_light
+	ids_new = regiment_jpn_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_armor_medium
+	ids_new = regiment_jpn_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_armor_recon
+	ids_new = regiment_jpn_infantry_recon
+}	;;  DATE ADDED - 05.20.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_tank_destroyer_mobile
+	ids_new = regiment_jpn_halftrack_at
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_spa
+	ids_new = regiment_jpn_tank_artillery
+}	;;  DATE ADDED - 05.20.04
+
+;; ---------------------- RUS ----------------- ;;
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_infantry_light
+	ids_new = regiment_rus_infantry
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_infantry_light_at
+	ids_new = regiment_rus_infantry_at
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_infantry_light_aa
+	ids_new = regiment_rus_infantry_aa
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_armor_heavy
+	ids_new = regiment_rus_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_armor_light
+	ids_new = regiment_rus_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_armor_medium
+	ids_new = regiment_rus_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_armor_recon
+	ids_new = regiment_rus_infantry_recon
+}	;;  DATE ADDED - 05.20.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_tank_destroyer_mobile
+	ids_new = regiment_rus_halftrack_at
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_spa
+	ids_new = regiment_rus_tank_artillery
+}	;;  DATE ADDED - 05.20.04
+
+
+;; ---------------------- USA ----------------- ;;
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_infantry_light
+	ids_new = regiment_usa_infantry
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_infantry_light_at
+	ids_new = regiment_usa_infantry_at
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_infantry_light_aa
+	ids_new = regiment_usa_infantry_aa
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_armor_heavy
+	ids_new = regiment_usa_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_armor_light
+	ids_new = regiment_usa_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_armor_medium
+	ids_new = regiment_usa_tank_mechanized
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_armor_recon
+	ids_new = regiment_usa_infantry_recon
+}	;;  DATE ADDED - 05.20.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_tank_destroyer_mobile
+	ids_new = regiment_usa_halftrack_at
+}	;;  DATE ADDED - 05.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_spa
+	ids_new = regiment_usa_tank_artillery
+}	;;  DATE ADDED - 05.20.04
+
+
+[Translate template=Translate]
+{
+	node = Biome
+	ids_old = arctic_borealforest
+	ids_new = arctic_forest
+}	;;  DATE ADDED - 06.06.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_dry_grass_03
+	ids_new = chaparral_grassdry03
+}	;;  DATE ADDED - 04.30.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_dry_grass_05
+	ids_new = chaparral_grassdry05
+}	;;  DATE ADDED - 04.30.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_dry_grass_02
+	ids_new = chaparral_grassdry02
+}	;;  DATE ADDED - 04.30.04 
+
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = chaparral_dry_grass_transition01
+	ids_new = chaparral_grassdrytrans01
+}	;;  DATE ADDED - 04.30.04
+
+
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = temperate_dynamic_wall
+	ids_new = temperate_walls
+}	;;  DATE ADDED - 04.25.04 
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = barbed_wire_hedgehogs
+	ids_new = beach_hedgehog
+}	;;  DATE ADDED - 04.25.04 
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = tropical_bamboo
+	ids_new = tropical_bamboothicket
+}	;;  DATE ADDED - 04.25.04 
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = tropical_jungle
+	ids_new = tropical_bamboostand
+}	;;  DATE ADDED - 04.25.04 
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = tropical_standingbamboo
+	ids_new = tropical_bambooreeds
+}	;;  DATE ADDED - 04.25.04 
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = tropical_trees_palm
+	ids_new = tropical_treespalm
+}	;;  DATE ADDED - 04.25.04 
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = tropical_rocks_large
+	ids_new = tropical_rockslarge
+}	;;  DATE ADDED - 04.25.04 
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = arctic_trees
+	ids_new = arctic_treesbare
+}	;;  DATE ADDED - 04.25.04 
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = arctic_pine_trees
+	ids_new = arctic_treespine
+}	;;  DATE ADDED - 04.25.04 
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_infantry_corpses
+	ids_new = usa_infantry_corpse
+}	;;  DATE ADDED - 04.25.04 
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_infantry_drown_corpse
+	ids_new = usa_infantry_corpse_drowned
+}	;;  DATE ADDED - 04.25.04 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ------------------------- TERRAIN VARIATIONS --------------------------- ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_mountaingrassytrans01
+	ids_new = arctic_mountaingrasstrans01
+}	;;  DATE ADDED - 04.24.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_forestsnowy01
+	ids_new = arctic_forestboreal01
+}	;;  DATE ADDED - 04.24.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_forestsnowy02
+	ids_new = arctic_forestboreal02
+}	;;  DATE ADDED - 04.24.04 
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = arctic_forestsnowy03
+	ids_new = arctic_forestboreal03
+}	;;  DATE ADDED - 04.24.04 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ---------------------------------- BIOMES ------------------------------ ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[Translate template=Translate]
+{
+	node = Biome
+	ids_old = temperate
+	ids_new = temperate_grassland
+}	;;  DATE ADDED - 02.27.04
+
+[Translate template=Translate]
+{
+	node = Biome
+	ids_old = arctic
+	ids_new = arctic_tundra
+}	;;  DATE ADDED - 02.17.04
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ---------------------------------- BUILDINGS --------------------------- ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = desert_village_oil06
+	ids_new = desert_village06
+}	;;  DATE ADDED - 03.10.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = western_europe_city04
+	ids_new = western_europe_city03
+}	;;  DATE ADDED - 03.10.04
+
+;; ---------------------- GBR ----------------- ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_artillery_bunker
+	ids_new = gbr_bunker_artillery
+}	;;  DATE ADDED - 03.14.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_artillery_brigade
+	ids_new = gbr_brigade_artillery
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_engineer_brigade
+	ids_new = gbr_brigade_engineer
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_aa_bunker
+	ids_new = gbr_bunker_aa
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_corp_hq
+	ids_new = gbr_corps
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_ammo_depot
+	ids_new = gbr_depot_ammo
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_oil_depot
+	ids_new = gbr_depot_oil
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_supply_depot
+	ids_new = gbr_depot_supply
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_armor_division_hq
+	ids_new = gbr_hq_armor
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_infantry_division_hq
+	ids_new = gbr_hq_infantry
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_mobile_division_hq
+	ids_new = gbr_hq_mechanized
+}	;;  DATE ADDED - 04.08.04
+
+;; ---------------------- GER ----------------- ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_artillery_brigade
+	ids_new = ger_brigade_artillery
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_engineer_brigade
+	ids_new = ger_brigade_engineer
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_aa_bunker
+	ids_new = ger_bunker_aa
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_corp_hq
+	ids_new = ger_corps
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_ammo_depot
+	ids_new = ger_depot_ammo
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_oil_depot
+	ids_new = ger_depot_oil
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_supply_depot
+	ids_new = ger_depot_supply
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_armor_division_hq
+	ids_new = ger_hq_armor
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_infantry_division_hq
+	ids_new = ger_hq_infantry
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_mobile_division_hq
+	ids_new = ger_hq_mechanized
+}	;;  DATE ADDED - 04.08.04
+
+;; ---------------------- JPN ----------------- ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_corps
+	ids_new = jpn_corps
+}	;;  DATE ADDED - 02.17.04
+
+;; ---------------------- RUS ----------------- ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_artillery_brigade
+	ids_new = rus_brigade_artillery
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_engineer_brigade
+	ids_new = rus_brigade_engineer
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_aa_bunker
+	ids_new = rus_bunker_aa
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_artillery_bunker
+	ids_new = rus_bunker_artillery
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_corp_hq
+	ids_new = rus_corps
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_ammo_depot
+	ids_new = rus_depot_ammo
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_oil_depot
+	ids_new = rus_depot_oil
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_supply_depot
+	ids_new = rus_depot_supply
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_armor_division_hq
+	ids_new = rus_hq_armor
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_infantry_division_hq
+	ids_new = rus_hq_infantry
+}	;;  DATE ADDED - 03.13.04
+  
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_mobile_division_hq
+	ids_new = rus_hq_mechanized 
+}	;;  DATE ADDED - 03.13.04           
+
+
+;; ---------------------- USA ----------------- ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_artillery_bunker
+	ids_new = usa_bunker_artillery
+}	;;  DATE ADDED - 03.16.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_artillery_brigade
+	ids_new = usa_brigade_artillery
+}	;;  DATE ADDED - 04.14.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_engineer_brigade
+	ids_new = usa_brigade_engineer
+}	;;  DATE ADDED - 04.14.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_aa_bunker
+	ids_new = usa_bunker_aa
+}	;;  DATE ADDED - 04.14.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_corp_hq
+	ids_new = usa_corps
+}	;;  DATE ADDED - 04.14.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_ammo_depot
+	ids_new = usa_depot_ammo
+}	;;  DATE ADDED - 04.14.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_oil_depot
+	ids_new = usa_depot_oil
+}	;;  DATE ADDED - 04.14.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_supply_depot
+	ids_new = usa_depot_supply
+}	;;  DATE ADDED - 04.14.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_armor_division_hq
+	ids_new = usa_hq_armor
+}	;;  DATE ADDED - 04.14.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_infantry_division_hq
+	ids_new = usa_hq_infantry
+}	;;  DATE ADDED - 04.14.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_mobile_division_hq
+	ids_new = usa_hq_mechanized
+}	;;  DATE ADDED - 04.14.04
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ---------------------------------- UNITS ------------------------------- ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;; ---------------------- GER ----------------- ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_truck_ammo
+	ids_new = ger_truck_ammo
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_truck_armor
+	ids_new = ger_truck_armor
+}	;;  DATE ADDED - 04.09.04
+  
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_truck_artillery
+	ids_new = ger_truck_artillery
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_truck_corp
+	ids_new = ger_truck_corps
+}	;;  DATE ADDED - 04.09.04
+  
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_truck_engineer
+	ids_new = ger_truck_engineer
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_truck_mobile
+	ids_new = ger_truck_mechanized
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_truck_infantry
+	ids_new = ger_truck_infantry
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_truck_motor
+	ids_new = ger_truck_motor
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_truck_oil
+	ids_new = ger_truck_oil
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_truck_supply
+	ids_new = ger_truck_supply
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_trailer_ammo
+	ids_new = ger_trailer_ammo
+}
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_trailer_armor
+	ids_new = ger_trailer_armor
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_trailer_artillery
+	ids_new = ger_trailer_artillery
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_trailer_corp
+	ids_new = ger_trailer_corps
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_trailer_engineer
+	ids_new = ger_trailer_engineer
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_trailer_infantry
+	ids_new = ger_trailer_infantry
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_trailer_mobile
+	ids_new = ger_trailer_mechanized
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_trailer_motor
+	ids_new = ger_trailer_motor
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_trailer_oil
+	ids_new = ger_trailer_oil
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_trailer_supply
+	ids_new = ger_trailer_supply
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_armored_car
+	ids_new = ger_car_armored_co
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_aa_halftrack
+	ids_new = ger_halftrack_aa
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_artillery_halftrack
+	ids_new = ger_halftrack_artillery
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_at_infantry
+	ids_new = ger_infantry_at
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_artillery_infantry
+	ids_new = ger_infantry_mortar
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_artillery_tank
+	ids_new = ger_tank_spa
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_command_tank
+	ids_new = ger_tank_co
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_at_tank
+	ids_new = ger_tank_destroyer
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_heavy_tank
+	ids_new = ger_tank_heavy
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_light_tank
+	ids_new = ger_tank_light
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_air_transport
+	ids_new = ger_transport_air
+}	;;  DATE ADDED - 04.09.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_water_transport
+	ids_new = ger_transport_water
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_medium_tank
+	ids_new = ger_tank_medium
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = ger_hq_spa
+	ids_new = ger_hq_tank_spa
+}	;;  DATE ADDED - 04.28.04
+
+;; ---------------------- RUS ----------------- ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_hq_truck_ammo
+	ids_new = rus_truck_ammo
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_hq_truck_armor
+	ids_new = rus_truck_armor
+}	;;  DATE ADDED - 03.13.04
+  
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_hq_truck_artillery
+	ids_new = rus_truck_artillery
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_hq_truck_corp
+	ids_new = rus_truck_corps
+}	;;  DATE ADDED - 03.13.04
+  
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_hq_truck_engineer
+	ids_new = rus_truck_engineer
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_hq_truck_mobile
+	ids_new = rus_truck_mechanized
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_hq_truck_infantry
+	ids_new = rus_truck_infantry
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_hq_truck_motor
+	ids_new = rus_truck_motor
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_hq_truck_oil
+	ids_new = rus_truck_oil
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = rus_hq_Struck_supply
+	ids_new = rus_truck_supply
+}	;;  DATE ADDED - 03.13.04
+
+;; ---------------------- GBR ----------------- ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_truck_ammo
+	ids_new = gbr_truck_ammo
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_truck_armor
+	ids_new = gbr_truck_armor
+}	;;  DATE ADDED - 04.08.04
+  
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_truck_artillery
+	ids_new = gbr_truck_artillery
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_truck_corp
+	ids_new = gbr_truck_corps
+}	;;  DATE ADDED - 04.08.04
+  
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_truck_engineer
+	ids_new = gbr_truck_engineer
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_truck_mobile
+	ids_new = gbr_truck_mechanized
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_truck_infantry
+	ids_new = gbr_truck_infantry
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_truck_motor
+	ids_new = gbr_truck_motor
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_truck_oil
+	ids_new = gbr_truck_oil
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_truck_supply
+	ids_new = gbr_truck_supply
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_trailer_ammo
+	ids_new = gbr_trailer_ammo
+}
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_trailer_armor
+	ids_new = gbr_trailer_armor
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_trailer_artillery
+	ids_new = gbr_trailer_artillery
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_trailer_corp
+	ids_new = gbr_trailer_corps
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_trailer_engineer
+	ids_new = gbr_trailer_engineer
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_trailer_infantry
+	ids_new = gbr_trailer_infantry
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_trailer_mobile
+	ids_new = gbr_trailer_mechanized
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_trailer_motor
+	ids_new = gbr_trailer_motor
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_trailer_oil
+	ids_new = gbr_trailer_oil
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_hq_trailer_supply
+	ids_new = gbr_trailer_supply
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_armored_car
+	ids_new = gbr_car_armored_co
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_aa_halftrack
+	ids_new = gbr_halftrack_aa
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_artillery_halftrack
+	ids_new = gbr_halftrack_artillery
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_at_infantry
+	ids_new = gbr_infantry_at
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_artillery_infantry
+	ids_new = gbr_infantry_mortar
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_artillery_tank
+	ids_new = gbr_tank_spa
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_command_tank
+	ids_new = gbr_tank_co
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_at_tank
+	ids_new = gbr_tank_destroyer
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_heavy_tank
+	ids_new = gbr_tank_heavy
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_light_tank
+	ids_new = gbr_tank_light
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_air_transport
+	ids_new = gbr_transport_air
+}	;;  DATE ADDED - 04.08.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_water_transport
+	ids_new = gbr_transport_water
+}	;;  DATE ADDED - 04.08.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = gbr_medium_tank
+	ids_new = gbr_tank_medium
+}	;;  DATE ADDED - 04.08.04
+
+;;--------------------------- JPN ---------------- ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_truck_ammo
+	ids_new = jpn_truck_ammo
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_truck_armor
+	ids_new = jpn_truck_armor
+}	;;  DATE ADDED - 04.20.04
+  
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_truck_artillery
+	ids_new = jpn_truck_artillery
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_truck_corp
+	ids_new = jpn_truck_corps
+}	;;  DATE ADDED - 04.20.04
+  
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_truck_engineer
+	ids_new = jpn_truck_engineer
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_truck_mobile
+	ids_new = jpn_truck_mechanized
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_truck_infantry
+	ids_new = jpn_truck_infantry
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_truck_motor
+	ids_new = jpn_truck_motor
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_truck_oil
+	ids_new = jpn_truck_oil
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_truck_supply
+	ids_new = jpn_truck_supply
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_trailer_ammo
+	ids_new = jpn_trailer_ammo
+}
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_trailer_armor
+	ids_new = jpn_trailer_armor
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_trailer_artillery
+	ids_new = jpn_trailer_artillery
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_trailer_corp
+	ids_new = jpn_trailer_corps
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_trailer_engineer
+	ids_new = jpn_trailer_engineer
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_trailer_infantry
+	ids_new = jpn_trailer_infantry
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_trailer_mobile
+	ids_new = jpn_trailer_mechanized
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_trailer_motor
+	ids_new = jpn_trailer_motor
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_trailer_oil
+	ids_new = jpn_trailer_oil
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_hq_trailer_supply
+	ids_new = jpn_trailer_supply
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_armored_car
+	ids_new = jpn_car_armored_co
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_aa_halftrack
+	ids_new = jpn_halftrack_aa
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_artillery_halftrack
+	ids_new = jpn_halftrack_artillery
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_at_infantry
+	ids_new = jpn_infantry_at
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_artillery_infantry
+	ids_new = jpn_infantry_mortar
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_artillery_tank
+	ids_new = jpn_tank_spa
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_command_tank
+	ids_new = jpn_tank_co
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_at_tank
+	ids_new = jpn_tank_destroyer
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_light_tank
+	ids_new = jpn_tank_light
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_air_transport
+	ids_new = jpn_transport_air
+}	;;  DATE ADDED - 04.20.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_water_transport
+	ids_new = jpn_transport_water
+}	;;  DATE ADDED - 04.20.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = jpn_medium_tank
+	ids_new = jpn_tank_medium
+}	;;  DATE ADDED - 04.20.04
+
+;;----------------------------------- USA ---------------------- ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_truck_ammo
+	ids_new = usa_truck_ammo
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_truck_armor
+	ids_new = usa_truck_armor
+}	;;  DATE ADDED - 04.09.04
+  
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_truck_artillery
+	ids_new = usa_truck_artillery
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_truck_corp
+	ids_new = usa_truck_corps
+}	;;  DATE ADDED - 04.09.04
+  
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_truck_engineer
+	ids_new = usa_truck_engineer
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_truck_mobile
+	ids_new = usa_truck_mechanized
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_truck_infantry
+	ids_new = usa_truck_infantry
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_truck_motor
+	ids_new = usa_truck_motor
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_truck_oil
+	ids_new = usa_truck_oil
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_truck_supply
+	ids_new = usa_truck_supply
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_trailer_ammo
+	ids_new = usa_trailer_ammo
+}
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_trailer_armor
+	ids_new = usa_trailer_armor
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_trailer_artillery
+	ids_new = usa_trailer_artillery
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_trailer_corp
+	ids_new = usa_trailer_corps
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_trailer_engineer
+	ids_new = usa_trailer_engineer
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_trailer_infantry
+	ids_new = usa_trailer_infantry
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_trailer_mobile
+	ids_new = usa_trailer_mechanized
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_trailer_motor
+	ids_new = usa_trailer_motor
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_trailer_oil
+	ids_new = usa_trailer_oil
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_hq_trailer_supply
+	ids_new = usa_trailer_supply
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_armored_car
+	ids_new = usa_car_armored_co
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_aa_halftrack
+	ids_new = usa_halftrack_aa
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_artillery_halftrack
+	ids_new = usa_halftrack_artillery
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_at_infantry
+	ids_new = usa_infantry_at
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_artillery_infantry
+	ids_new = usa_infantry_mortar
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_artillery_tank
+	ids_new = usa_tank_spa
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_command_tank
+	ids_new = usa_tank_co
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_at_tank
+	ids_new = usa_tank_destroyer
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_heavy_tank
+	ids_new = usa_tank_heavy
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_light_tank
+	ids_new = usa_tank_light
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_air_transport
+	ids_new = usa_transport_air
+}	;;  DATE ADDED - 04.09.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_water_transport
+	ids_new = usa_transport_water
+}	;;  DATE ADDED - 04.09.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = usa_medium_tank
+	ids_new = usa_tank_medium
+}	;;  DATE ADDED - 04.09.04
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ---------------------------------- REGIMENTS --------------------------- ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; ---------------------- uSA ----------------- ;;
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_armored_car
+	ids_new = regiment_usa_armor_recon
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_aa_halftrack
+	ids_new = regiment_usa_halftrack_aa
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_artillery_halftrack
+	ids_new = regiment_usa_halftrack_artillery
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_artillery_tank
+	ids_new = regiment_usa_tank_spa
+}	;;  DATE ADDED - 03.13.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_at_infantry
+	ids_new = regiment_usa_infantry_at
+}	;;  DATE ADDED - 03.13.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_heavy_tank
+	ids_new = regiment_usa_tank_heavy
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_at_infantry_amphibious
+	ids_new = regiment_usa_infantry_at_amphibious
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_at_tank
+	ids_new = regiment_usa_tank_destroyer_mobile
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_infantry_and_tanks
+	ids_new = regiment_usa_infantry_mechanized
+}	;;  DATE ADDED - 03.13.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_light_tank
+	ids_new = regiment_usa_tank_light
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_usa_medium_tank
+	ids_new = regiment_usa_tank_medium
+}	;;  DATE ADDED - 03.13.04
+
+
+;; -------------------------- GER ------------------ ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_armored_car
+	ids_new = regiment_ger_armor_recon
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_aa_halftrack
+	ids_new = regiment_ger_halftrack_aa
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_artillery_halftrack
+	ids_new = regiment_ger_halftrack_artillery
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_artillery_tank
+	ids_new = regiment_ger_tank_spa
+}	;;  DATE ADDED - 03.11.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_at_infantry
+	ids_new = regiment_ger_infantry_at
+}	;;  DATE ADDED - 03.11.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_heavy_tank
+	ids_new = regiment_ger_tank_heavy
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_at_infantry_amphibious
+	ids_new = regiment_ger_infantry_at_amphibious
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_at_tank
+	ids_new = regiment_ger_tank_destroyer_mobile
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_infantry_and_tanks
+	ids_new = regiment_ger_infantry_mechanized
+}	;;  DATE ADDED - 03.11.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_light_tank
+	ids_new = regiment_ger_tank_light
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_medium_tank
+	ids_new = regiment_ger_tank_medium
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_ger_spa
+	ids_new = regiment_ger_tank_spa
+}	;;  DATE ADDED - 04.16.04
+
+;; -------------------------- GBR ------------------ ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_armored_car
+	ids_new = regiment_gbr_armor_recon
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_aa_halftrack
+	ids_new = regiment_gbr_halftrack_aa
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_artillery_halftrack
+	ids_new = regiment_gbr_halftrack_artillery
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_artillery_tank
+	ids_new = regiment_gbr_tank_spa
+}	;;  DATE ADDED - 03.11.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_at_infantry
+	ids_new = regiment_gbr_infantry_at
+}	;;  DATE ADDED - 03.11.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_heavy_tank
+	ids_new = regiment_gbr_tank_heavy
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_at_infantry_amphibious
+	ids_new = regiment_gbr_infantry_at_amphibious
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_at_tank
+	ids_new = regiment_gbr_tank_destroyer_mobile
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_infantry_and_tanks
+	ids_new = regiment_gbr_infantry_mechanized
+}	;;  DATE ADDED - 03.11.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_light_tank
+	ids_new = regiment_gbr_tank_light
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_gbr_medium_tank
+	ids_new = regiment_gbr_tank_medium
+}	;;  DATE ADDED - 03.11.04
+
+;; -------------------------- RUS ------------------ ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_armored_car
+	ids_new = regiment_rus_armor_recon
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_aa_halftrack
+	ids_new = regiment_rus_halftrack_aa
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_artillery_halftrack
+	ids_new = regiment_rus_halftrack_artillery
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_artillery_tank
+	ids_new = regiment_rus_spa
+}	;;  DATE ADDED - 03.11.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_at_infantry
+	ids_new = regiment_rus_infantry_at
+}	;;  DATE ADDED - 03.11.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_heavy_tank
+	ids_new = regiment_rus_tank_heavy
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_at_infantry_amphibious
+	ids_new = regiment_rus_infantry_at_amphibious
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_at_tank
+	ids_new = regiment_rus_tank_destroyer_mobile
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_infantry_and_tanks
+	ids_new = regiment_rus_infantry_mechanized
+}	;;  DATE ADDED - 03.11.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_light_tank
+	ids_new = regiment_rus_tank_light
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_rus_medium_tank
+	ids_new = regiment_rus_tank_medium
+}	;;  DATE ADDED - 03.11.04
+
+;; -------------------------- JPN ------------------ ;;
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_armored_car
+	ids_new = regiment_jpn_armor_recon
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_aa_halftrack
+	ids_new = regiment_jpn_halftrack_aa
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_artillery_halftrack
+	ids_new = regiment_jpn_halftrack_artillery
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_artillery_tank
+	ids_new = regiment_jpn_tank_spa
+}	;;  DATE ADDED - 03.11.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_at_infantry
+	ids_new = regiment_jpn_infantry_at
+}	;;  DATE ADDED - 03.11.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_heavy_tank
+	ids_new = regiment_jpn_tank_medium
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_at_infantry_amphibious
+	ids_new = regiment_jpn_infantry_at_amphibious
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_at_tank
+	ids_new = regiment_jpn_tank_destroyer_mobile
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_infantry_and_tanks
+	ids_new = regiment_jpn_infantry_mechanized
+}	;;  DATE ADDED - 03.11.04
+
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_light_tank
+	ids_new = regiment_jpn_tank_light
+}	;;  DATE ADDED - 03.11.04
+
+[Translate template=Translate]
+{
+	node = Thing
+	ids_old = regiment_jpn_medium_tank
+	ids_new = regiment_jpn_tank_medium
+}	;;  DATE ADDED - 03.11.04
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ---------------------------------- GENERALS --------------------------- ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; ---------------------- uSA ----------------- ;;
+[Translate template=Translate]
+{
+	node = Faction
+	ids_old = george_patton
+	ids_new = patton
+}	;;  DATE ADDED - 03.13.04
+
+[Translate template=Translate]
+{
+	node = Faction
+	ids_old = erwin_rommel
+	ids_new = rommel
+}	;;  DATE ADDED - 03.13.04
+
+;; brw031304 -- all the temperate terrain should be changed for all maps.
+;; commenting out, but saving in case this is not true.
+/*
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_mountain02
+	ids_new = temperate_mountain01
+}	;;  DATE ADDED - 02.27.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_mountain03
+	ids_new = temperate_mountain01
+}	;;  DATE ADDED - 02.27.04
+
+[Translate template=Translate]
+{	
+	node = Thing
+	ids_old = shared_waves
+	ids_new = waves
+}	;;  DATE ADDED - 02.27.04
+
+[Translate template=Translate]
+{	
+	node = Variation
+	ids_old = temperate_shoreriver01
+	ids_new = temperate_shoremuddy01
+}	;;  DATE ADDED - 02.27.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_beach01
+	ids_new = temperate_shore01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_beach02
+	ids_new = temperate_shore02
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_beach03
+	ids_new = temperate_shore03
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_beach04
+	ids_new = temperate_shore04
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_beach05
+	ids_new = temperate_shore05
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_crops_transition01
+	ids_new = temperate_cropstrans01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_crops_dry01
+	ids_new = temperate_cropsdry01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_crops_dry02
+	ids_new = temperate_cropsdry02
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_crops_dry_transition01
+	ids_new = temperate_cropsdrytrans01
+} ;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_crops_wet01
+	ids_new = temperate_cropswet01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_crops_wet02
+	ids_new = temperate_cropswet02
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_crops_wet_transition01
+	ids_new = temperate_cropswettrans01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirt_dark01
+	ids_new = temperate_dirtdark01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirt_dark02
+	ids_new = temperate_dirtdark02
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirt_dark03
+	ids_new = temperate_dirtdark03
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirt_dark04
+	ids_new = temperate_dirtdark04
+}	;;  DATE ADDED - 02.16.04
+
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_dirt_transition01
+	ids_new = temperate_dirttrans01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forest01
+	ids_new = temperate_forestdeciduous01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forest02
+	ids_new = temperate_forestdeciduous02
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forest03
+	ids_new = temperate_forestconiferous01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forest04
+	ids_new = temperate_forestconiferous02
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forest05
+	ids_new = temperate_forestdeciduousdense01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forest_dense01
+	ids_new = temperate_forestconiferous03
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forest_dense02
+	ids_new = temperate_forestdeciduousdense02
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forest_dense03
+	ids_new = temperate_forestdeciduousdense03
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forest_dense04
+	ids_new = temperate_forestconiferousdense01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_forest_dense05
+	ids_new = temperate_forestconiferousdense02
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperatedrygrass01
+	ids_new = temperate_grassdry01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperatedrygrass02
+	ids_new = temperate_grassdry02
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperatedrygrass03
+	ids_new = temperate_grassdry03
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperatedrygrass_04
+	ids_new = temperate_grassdry04
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperatedrygrasstransition01
+	ids_new = temperate_grassdrytrans01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperategrass01
+	ids_new = temperate_grass01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperategrass02
+	ids_new = temperate_grass02
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperategrass03
+	ids_new = temperate_grass03
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperategrass04
+	ids_new = temperate_grass04
+}	;;  DATE ADDED - 02.16.04
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_honey_grass01
+	ids_new = temperate_grasshoney01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_honey_grass02
+	ids_new = temperate_grasshoney02
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_honey_grass03
+	ids_new = temperate_grasshoney03
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_honey_grass_04
+	ids_new = temperate_grasshoney04
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_honey_grass_05
+	ids_new = temperate_grasshoney05
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_lush_grass01
+	ids_new = temperate_grasslush01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_lush_grass02
+	ids_new = temperate_grasslush02
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_lush_grass03
+	ids_new = temperate_grasslush03
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_mountain_transition01
+	ids_new = temperate_mountaintrans01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_mountain_transition02
+	ids_new = temperate_mountaintrans01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_water01
+	ids_new = temperate_waterdeep01
+}	;;  DATE ADDED - 02.16.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_water_river01
+	ids_new = temperate_waterriver01
+}	;;  DATE ADDED - 02.17.04
+
+[Translate template=Translate]
+{
+	node = Variation
+	ids_old = temperate_water_shallow01
+	ids_new = temperate_watershallow01
+}	;;  DATE ADDED - 02.17.04
+*/

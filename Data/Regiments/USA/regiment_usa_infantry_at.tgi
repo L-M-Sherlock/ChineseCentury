@@ -1,0 +1,61 @@
+[Thing Template=AAUSAOrganizationArtillery]
+{
+	IDS = regiment_usa_infantry_at
+	name = "#regiment_usa_infantry_at_name"
+	editor_name = "#regiment_usa_infantry_at_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 48
+		
+		[Upkeep]
+		ammo = 9
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = infantry1_company
+	}
+	
+	[View]
+	{
+		resource_prefix = /Units/USA/USAInfantryMortar/USAInfantryMortar
+		icon = /UI/Game/RegimentButtons/IconInfantryArtillery.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = usa_infantry_artillery_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = usa_infantry_artillery_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = usa_infantry_artillery_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = usa_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = usa_infantry_at
+
+		[Slot]	;; rear guard 2
+		element_IDS = usa_infantry_at
+		
+		[Slot]	;; rear guard 3
+		element_IDS = usa_infantry_mg
+	
+		[Slot]	;; flank
+		element_IDS = usa_infantry_at
+		
+		[Slot]	;; captain
+		element_IDS = usa_infantry_co
+	}
+	
+	[ExperienceComponent template=AAInfantryExperienceComponent]
+}

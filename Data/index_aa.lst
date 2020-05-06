@@ -1,0 +1,289 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; index_aa.lst
+;; Copyright ?2002 TimeGate Studios
+;;
+;; DESCRIPTION: Specifies all TGI files to load and their order for A&A.
+;;
+;; .LST FORMAT:
+;; - each line is a filespec for TGI or LST files to load
+;; - the wildcard character '*' can be used to load multiple files on one line
+;; - they must be specified in the appropriate order, meaning templates first
+;;
+;; .LST LOADING PROCESS:
+;; - the game automatically loads all "index*.lst" files in alphabetical order
+;; - if you specify a LST file, it will be processed immediately at that
+;;   point in the loading prior to the current LST file continuing.
+;; 
+;; REVISION HISTORY:
+;; drp012803 ?created from engine LST
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; smm081503 - special glyphs must be loaded before localization (otherwise special
+; characters do not get translated properly)
+Templates/template_font.tgi
+Fonts/special_glyphs*.tgi
+
+; localization
+Localization/*.tgi
+Localization/SAI/*.tgi
+Localization/RandomMap/*.tgi
+
+; game-specific [template ResourceList]
+Game/resource_list.tgi
+
+; load templates
+templates.lst
+
+; hotkeys
+Localization/Hotkeys/Actions/*.tgi
+
+; load game-specifiec templates
+templates_aa.lst
+
+; load cursors
+Cursors/cursors*.tgi
+
+; load information about fonts, this
+; needs to be loaded before any localizable text
+; is loaded, because special escape codes that might
+; be embedded in DisplayText depend on the font system data
+; being set up.
+Fonts/character_sets*.tgi
+Fonts/font_*.tgi
+
+; Audio
+Audio/*.tgi
+
+; load game data
+Game/SVars*.tgi
+Game/bones*.tgi
+Game/placement_groups*.tgi
+Game/kingdom_colors.tgi
+Game/resources*.tgi
+Game/damage*.tgi
+Game/target*.tgi
+Game/factions*.tgi
+Game/nations*.tgi
+Game/equipment_types*.tgi
+Game/thing_categories*.tgi
+Game/game_type*.tgi
+Game/actor_command*.tgi
+Game/ActorCommands/*.tgi
+Game/team_command*.tgi
+Game/message_type*.tgi
+Game/trigger_elements*.tgi
+Game/ability_types*.tgi
+Game/terrain_groups*.tgi
+Game/difficulty_level*.tgi
+Game/world_rules*.tgi
+Game/connection_types*.tgi
+Game/handicaps*.tgi
+Game/denizen_types*.tgi
+Game/group_formations*.tgi
+Game/descriptions*.tgi
+Game/enchantment_type*.tgi
+
+
+; load graphics presets
+Game/GraphicsPresets/*.tgi
+
+; load properties
+Properties/*.tgi
+
+; load actor states
+Game/actor_states*.tgi
+
+; load terrains
+Terrain/Transitions/transition*.tgi
+
+Terrain/ArcticTundra/*.tgi
+Terrain/BorealForest/*.tgi
+Terrain/Chaparral/*.tgi
+Terrain/Desert/*.tgi
+Terrain/Temperate/*.tgi
+Terrain/Tropical/*.tgi
+Terrain/Savannah/*.tgi
+
+Terrain/*.tgi
+
+; load VFX
+Effects/*.tgi
+
+; load Special Objects
+Special/Placeholders/*.tgi
+Special/Things/*.tgi
+Special/RandomActors/*.tgi
+
+
+; load projectiles
+Projectiles/*.tgi
+
+; load the special operation abilities
+SpecialOps/*.tgi
+
+; load generals (need to load before nations)
+Generals/GER/*.tgi
+Generals/GBR/*.tgi
+Generals/JPN/*.tgi
+Generals/RUS/*.tgi
+Generals/USA/*.tgi
+Generals/FIN/*.tgi
+Generals/NED/*.tgi
+Generals/CHN/*.tgi
+Generals/CPC/*.tgi
+Generals/ITA/*.tgi
+
+; load nations
+Nations/*.tgi
+
+; load special things
+Special/*.tgi
+
+; load abilities
+
+; companies
+Organizations/Groups/*.tgi
+Organizations/Formations/*.tgi
+Organizations/Layouts/*.tgi
+Organizations/Banners/*.tgi
+Organizations/*.tgi
+
+; load trailers
+Trailers/*.tgi
+Trailers/GER/*.tgi
+Trailers/GBR/*.tgi
+Trailers/JPN/*.tgi
+Trailers/RUS/*.tgi
+Trailers/USA/*.tgi
+Trailers/FIN/*.tgi
+Trailers/NED/*.tgi
+Trailers/CHN/*.tgi
+Trailers/CPC/*.tgi
+Trailers/ITA/*.tgi
+
+; load units
+Units/*.tgi
+Units/GER/*.tgi
+Units/GBR/*.tgi
+Units/JPN/*.tgi
+Units/RUS/*.tgi
+Units/USA/*.tgi
+Units/FIN/*.tgi
+Units/NED/*.tgi
+Units/CHN/*.tgi
+Units/CPC/*.tgi
+Units/ITA/*.tgi
+Units/Ambient/*.tgi
+SpecialOps/Units/*.tgi
+
+
+; load namelists
+Namelists/*.tgi
+
+; load regiments
+Regiments/*.tgi
+Regiments/GER/*.tgi
+Regiments/GBR/*.tgi
+Regiments/JPN/*.tgi
+Regiments/RUS/*.tgi
+Regiments/USA/*.tgi
+Regiments/FIN/*.tgi
+Regiments/NED/*.tgi
+Regiments/CHN/*.tgi
+Regiments/CPC/*.tgi
+Regiments/ITA/*.tgi
+SpecialOps/Regiments/*.tgi
+
+; load buildings
+Buildings/*.tgi
+Buildings/GBR/*.tgi
+Buildings/GER/*.tgi
+Buildings/JPN/*.tgi
+Buildings/RUS/*.tgi
+Buildings/USA/*.tgi
+Buildings/FIN/*.tgi
+Buildings/NED/*.tgi
+Buildings/CHN/*.tgi
+Buildings/CPC/*.tgi
+Buildings/ITA/*.tgi
+Buildings/Resources/*.tgi
+Buildings/Campaign/*.tgi
+SpecialOps/Buildings/*.tgi
+Buildings/Villages/NorthAfrica/*.tgi
+Buildings/Villages/Mediterranean/*.tgi
+Buildings/Villages/WesternEurope/*.tgi
+Buildings/Villages/EasternEurope/*.tgi
+Buildings/Villages/SouthPacific/*.tgi
+Buildings/Villages/FarEast/*.tgi
+Buildings/Villages/SouthAmerica/*.tgi
+Buildings/Villages/NorthAmerica/*.tgi
+
+
+; load campaign objects
+
+Campaign/*.tgi
+
+; load roads & bridges
+Roads/*.tgi
+Bridges/*.tgi
+
+; load doodads (a.k.a. features)
+Doodads/*.tgi
+Doodads/Arctic/*.tgi
+Doodads/Boreal/*.tgi
+Doodads/Desert/*.tgi
+Doodads/Temperate/*.tgi
+Doodads/Tropical/*.tgi
+Doodads/Chaparral/*.tgi
+Doodads/Shared/*.tgi
+Doodads/Audio/*.tgi
+Doodads/Savannah/*.tgi
+
+; load random objects/actors
+Special/Random/*.tgi
+
+; load flares
+Flares/*.tgi
+
+; load SAIs
+SAI/*.tgi
+
+; load scoring
+Scoring/*.tgi
+
+; load weather before RMCs
+Weather/*.tgi
+
+; load sun before RMCs
+Sun/*.tgi
+
+; RMCs
+RandomMap/*.tgi
+RandomMap_OLD/*.tgi
+MetaGame/RandomMap/*.tgi
+
+;; load minimap data
+Minimap/minimap.tgi
+
+;; load the game events last, or at least after FXC
+Game/game_events.tgi
+
+; load the metagame stuff
+mg_resources.lst
+
+; load the cutscene stuff
+Cutscene/Scene/*.tgi
+Cutscene/Units/*.tgi
+Cutscene/Buildings/*.tgi
+Cutscene/Effects/*.tgi
+
+;; load the credits
+Credits/*.tgi
+
+;; Load the resolution information
+UI/*.tgi
+
+; load the IDS translator
+translate.tgi

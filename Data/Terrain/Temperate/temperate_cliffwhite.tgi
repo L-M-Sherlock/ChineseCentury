@@ -1,0 +1,27 @@
+[Terrain template=MountainTerrain]
+{
+	IDS = temperate_cliffwhite
+	name = "#temperate_whitecliffs_name"
+
+	base_priority = 14000
+	terrain_group = dirt
+	terrain_color = 0.310, 0.298, 0.282
+
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.00
+
+/********************	MOUNTAIN PARAMETERS		********************/
+
+	noise_min = 	0.01
+	noise_max = 	0.05
+	paint_slope = 	0.1
+	max_slope = 	3.0
+	paint_max_step = 1.0
+	
+	[Variation]
+	IDS = temperate_cliffwhite01
+	name = "#temperate_whitecliffs_Variation_name"
+	texture = TemperateCliffWhite/TemperateCliffWhite01.tga
+	texture_width = 8
+	texture_height = 8
+}

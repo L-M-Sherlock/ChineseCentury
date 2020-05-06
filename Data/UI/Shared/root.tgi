@@ -1,0 +1,8 @@
+
+[Root Inherit=PanelWidget]
+{
+	[RenderThreshold]
+	render_threshold = 25
+
+	[View Template=NoVE]
+}

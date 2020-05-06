@@ -1,0 +1,278 @@
+/**************************************************************************
+ pre-defined thing category types
+**************************************************************************/
+
+/* based on KKE_THING_CATEGORY enum
+*/
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = special
+	name = "#thing_categories_special_name"
+	editor = false
+	list_in_all_placement_groups = true
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = thing
+	name = "#thing_categories_thing_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = object
+	name = "#thing_categories_object_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = actor
+	name = "#thing_categories_actor_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = cutscene
+	name = "#thing_categories_cutscene_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = dynamic_doodad
+	name = "#thing_categories_dynamic_doodad_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxmodel
+	name = "#thing_categories_vfxmodel_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxlight
+	name = "#thing_categories_vfxlight_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxwireframemodifier
+	name = "#thing_categories_vfxwireframemodifier_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxmaterialmodifier
+	name = "#thing_categories_vfxmaterialmodifier_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxconstructionmodifier
+	name = "#thing_categories_vfxconstructionmodifier_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxconstructionraisemodifier
+	name = "#thing_categories_vfxconstructionraisemodifier_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxprojectedtexture
+	name = "#thing_categories_vfxprojectedtexture_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxtext
+	name = "#thing_categories_vfxtext_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxobjectname
+	name = "#thing_categories_vfxobjectname_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxstatusbar
+	name = "#thing_categories_vfxstatusbar_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxtracer
+	name = "#thing_categories_vfxtracer_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxnationbanner
+	name = "#thing_categories_vfxnationbanner_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxarrow
+	name = "#thing_categories_vfxarrow_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxlightning
+	name = "#thing_categories_vfxlightning_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = vfxextrusion
+	name = "#thing_categories_vfxextrusion_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = unit
+	name = "#thing_categories_unit_name"	;; pcb040904 - used to be "Unit"
+	editor = true
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = building
+	name = "#thing_categories_building_name"
+	editor = true
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = wall
+	name = "#thing_categories_wall_name"
+	editor = false
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = projectile
+	name = "#thing_categories_projectile_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = organization
+	name = "#thing_categories_organization_name"
+	editor = true
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = kingdom
+	name = "#thing_categories_kingdom_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = team
+	name = "#thing_categories_team_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = portrait
+	name = "#thing_categories_portrait_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = area
+	name = "#thing_categories_area_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = camera
+	name = "#thing_categories_camera_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = start_loc
+	name = "#thing_categories_start_loc_name"
+	list_in_all_placement_groups = true
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = placeholder
+	name = "#thing_categories_placeholder_name"
+	editor = false
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = marker
+	name = "#thing_categories_marker_name"
+	editor = false
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = random_object
+	name = "#thing_categories_random_object_name"
+	editor = true
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = random_actor
+	name = "#thing_categories_random_actor_name"
+	editor = true
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = group
+	name = "#thing_categories_group_name"
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = trailer
+	name = "#thing_categories_trailer_name"
+	editor = false
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = metagame_actor
+	name = "#thing_categories_metagame_actor_name"
+	editor = false
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = metagame_territory
+	name = "#thing_categories_metagame_territory_name"
+	editor = false
+}
+
+/* CATEGORIES THAT MUST BE DEFINED IN A GAME-SPECIFIC TGI
+[ThingCategory template=ThingCategory]
+{
+	IDS = settlement
+	name = "Settlement"
+	editor = true
+}
+
+[ThingCategory template=ThingCategory]
+{
+	IDS = structure
+	name = "Structure"
+	editor = true
+}
+*/
+
+

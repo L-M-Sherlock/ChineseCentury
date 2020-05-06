@@ -1,0 +1,6 @@
+[GameType template=GameType]
+{
+	ids = NORMAL
+	name = "#game_types_name"
+	description = "#game_types_description"
+}

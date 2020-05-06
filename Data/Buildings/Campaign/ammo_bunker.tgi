@@ -1,0 +1,85 @@
+;;------------------- Projection Map VFX --------------------
+[Thing Template=VFXProjectedTextureLit]
+{
+	ids = ammo_resource_ground_dirt_vfx
+	name = "#resource_ammo_ammo_resource_ground_dirt_vfx_name"
+	texture = AmmoBunker/ResourceAmmoGroundDirt.DDS
+	attached_scale = 0
+	texture_size = 10
+	decal_type = scorch
+}
+
+[Thing Template=VFXProjectedTextureLit]
+{
+	ids = ammo_resource_ground_desert_vfx
+	name = "#resource_ammo_ammo_resource_ground_desert_vfx_name"
+	texture = AmmoBunker/ResourceAmmoGroundDesert.DDS
+	attached_scale = 0
+	texture_size = 10
+	decal_type = scorch
+}
+
+[Thing Template=VFXProjectedTextureLit]
+{
+	ids = ammo_resource_ground_snow_vfx
+	name = "#ammo_bunker_ammo_resource_ground_snow_vfx_name"
+	texture = AmmoBunker/ResourceAmmoGroundSnow.DDS
+	attached_scale = 0
+	texture_size = 10
+	decal_type = scorch
+}
+
+;;-----------------------------------------------------------
+
+[Thing Template=AAResource]
+{
+	IDS = ammo_bunker
+	name = "#ammo_bunker_Thing_name"
+		
+	[Flags]
+	invulnerable = true
+	
+	[Placement]
+	placement_group_IDS = group_campaign
+	
+	[Size]
+	blocking_shape = SQUARE
+	square_size = 8
+
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconResourceAmmo.tga
+		resource_prefix = AmmoBunker/AmmoBunker
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = ammo_resource_ground_dirt_vfx
+		terrain_group_filter = dirt
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = ammo_resource_ground_desert_vfx
+		terrain_group_filter = desert
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		vfx_ids = ammo_resource_ground_snow_vfx
+		terrain_group_filter = snow
+	}
+
+	[CityComponent]
+	{
+		zone_radius = 20
+				
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = barbed_wire
+			offset = -6, -6
+			orientation = 0, -1
+		}
+	}
+
+	[EconomyComponent]
+	{
+		[Production]
+		ammo = 60		
+	}
+}

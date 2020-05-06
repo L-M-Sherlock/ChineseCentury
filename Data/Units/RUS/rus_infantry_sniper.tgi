@@ -1,0 +1,76 @@
+[Thing Template=AAUnitRUSProne]
+{
+	IDS = rus_infantry_sniper
+	name = "#rus_infantry_sniper_name"
+	editor_name = "#rus_infantry_sniper_editor_name"
+
+	hide_if_missing_properties = false
+		
+	[View]
+	{
+		resource_prefix = RUSInfantrySniper/RUSInfantrySniper
+	
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+
+	[BodyComponent]
+	health = 150
+	defense = 1
+
+	[CharacterComponent Template=AAInfantryCharacterComponent]
+
+	[MoverComponent]
+	speed_max = 2.5
+
+	[ElementComponent]
+	{
+		required_properties = tech_sniper_rifle
+	}
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				name = "#rus_infantry_sniper_AbilityDefinition_name"
+				recharge_time = 10
+				range = 20
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = infantry
+				amount = 250
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_rifle
+			}
+		}
+	}
+	
+	
+	
+	
+}

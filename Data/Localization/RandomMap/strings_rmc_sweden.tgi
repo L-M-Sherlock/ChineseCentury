@@ -1,0 +1,13 @@
+﻿[Text language = default]
+{
+	ids = Localization/RandomMap/strings_rmc_sweden.tgi
+	name = "@Localization/RandomMap/strings_rmc_sweden.tgi"
+
+	rmc_sweden_name = "Sweden"
+	rmc_sweden_description = "Since 1905, Sweden has been at peace, adopting a non-aligned foreign policy in peacetime and neutrality in wartime."
+
+
+;; Strings below added in ldf.txt
+
+	rmc_sweden_village_sweden_name = "Villages"
+}

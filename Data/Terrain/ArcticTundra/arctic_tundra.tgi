@@ -1,0 +1,35 @@
+[Terrain template=Terrain]
+{
+	IDS = arctic_tundra
+	name = "#arctic_tundra_name"
+	
+	base_priority = 1000
+	terrain_group = snow	
+
+	doodad_frequency = 0.001
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = arctic_tundra01
+	name = "#arctic_tundra_01_name"
+	texture = ArcticTundra/ArcticTundra01.tga
+	texture_width = 16
+	texture_height = 16
+	terrain_color = 0.694, 0.745, 0.694
+
+	[Variation]
+	IDS = arctic_tundra02
+	name = "#arctic_tundra_02_name"
+	texture = ArcticTundra/ArcticTundra02.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.674, 0.725, 0.684
+
+	[Variation]
+	IDS = arctic_tundra03
+	name = "#arctic_tundra_03_name"
+	texture = ArcticTundra/ArcticTundra03.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.714, 0.765, 0.674
+}

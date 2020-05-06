@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = mountbatten_portrait
+	name = "#mountbatten_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Mountbatten/MountbattenPortrait
+  		
+  		[AspectNormal]
+  		{
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = gbr_mountbatten_select
+			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = mountbatten
+	name = "#mountbatten_name"
+	description = "#mountbatten_description"
+	staging_name = "#mountbatten_staging_name"
+	icon_texture_ids = Mountbatten/MountbattenPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/GBR/Montbatten.bik
+	portrait_ids = mountbatten_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpSabotageGBR]
+	
+	[Ability Template=AASpecialOpSmokeBarrage]
+
+	[Ability Template=AASpecialOpRadarScan]
+	
+	[Ability Template=AASpecialOpCorpsGBR]
+}

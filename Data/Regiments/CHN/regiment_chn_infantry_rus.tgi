@@ -1,0 +1,63 @@
+[Template AACHNRegimentInfantry Template=AACHNOrganizationInfantry]
+{
+	name = "#regiment_chn_infantry_AACHNRegimentInfantry_name_rus"
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 40
+		
+		[Upkeep]
+		ammo = 4
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CHN/CHNInfantry/CHNInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantry.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = chn_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = chn_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = chn_infantry_attack
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = infantry_company
+	}
+}
+
+[Thing Template=AACHNRegimentInfantry]
+{
+	IDS = regiment_chn_infantry_rus
+	editor_name = "#regiment_chn_infantry_Thing_editor_name"
+
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = chn_infantry_rus
+		
+		[Slot]	;; rear guard 1
+		element_IDS = chn_infantry_rus
+
+		[Slot]	;; rear guard 2
+		element_IDS = chn_infantry_rus
+		
+		[Slot]	;; rear guard 3
+		element_IDS = chn_infantry_rus
+	
+		[Slot]	;; flank
+		element_IDS = chn_infantry_mg_rus
+		
+		[Slot]	;; captain
+		element_IDS = chn_infantry_co_er
+	}
+}

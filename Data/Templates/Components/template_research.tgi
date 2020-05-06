@@ -1,0 +1,33 @@
+[Template ResearchItem]
+{
+	;; IDS of property to be researched
+	string	property_IDS
+
+	;; type of property:
+	;;	LOCAL: given to actor
+	;;	SUPPORT: given to settlement
+	;; 	GLOBAL: given to kingdom
+	string 	type
+
+	;; comma-delimited list of IDS values of structures and properties required to be able to
+	;; research this property (required_x_any flag is set to true, list will be ORed)
+	string	required_structures = NULL
+	flag	required_structures_any = false
+
+	string	required_properties = NULL
+	bool	required_properties_any = false
+
+	;; time needed to research the property
+	float	research_time
+
+	;; cost of researching the property (positive numbers)
+	[ResearchCost Template=CostList]
+}
+
+;; Allows the research of properties
+[Template ResearchComponent]
+{
+	;; list of properties actor can research
+	[list ResearchItem Template=ResearchItem]
+}
+

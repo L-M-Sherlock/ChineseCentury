@@ -1,0 +1,69 @@
+/**************************************************************************
+
+template_unit_AA.tgi
+Copyright © 2003 TimeGate Studios
+
+DESCRIPTION:  templates for AA units.
+
+REVISION HISTORY:
+ban092403 - created
+
+USAGE:
+
+	[Aspect template=AAAspect]
+	This node goes at the root level and defines an aspect that objects
+	can use in their view node.
+
+**************************************************************************/
+
+[Template AspectProne template = Aspect]
+IDS = prone
+
+[Template AspectKneel template = Aspect]
+IDS = kneel
+	
+[Template AspectFalling template = Aspect]
+IDS = falling
+model = %sFalling.nif
+disable_animations = true
+
+[Template AAAspectPacking Template=Aspect]
+IDS = aspect_packing
+model = %sPack.nif
+
+[Template AAAspectUnpacking Template=Aspect]
+IDS = aspect_unpacking
+model = %sUnpack.nif
+
+[Template AAAspectDeath Template=Aspect]
+IDS = aspect_death
+model = %sDeath.nif
+
+;; Texture Swap at 40% of of Health
+[Template AAAspectDisabled Template=Aspect]
+IDS = aspect_disabled
+;; brw060104 - We do not want to load a nif, there have not been any nifs created
+;; for those textures at this point.  We just want to swap the texture.
+skin = %sDisabledBase.dds
+/*
+{
+	;; a0m052804 - this was a test to try to load the same NIF as AspectNormal
+	;;             with different replacement textures.  This does not work
+	;;             properly at this time.  [bug 3434]
+	IDS = aspect_disabled
+
+	skin = %sDisabledBase.dds
+
+	[TextureRename]
+	substring_from = Ground
+	substring_to = DisabledGround
+}
+*/
+
+;; Construction NIF swap
+[Template AAAspectConstruction Template=Aspect]
+IDS = aspect_construction
+model = %sConstruction.nif
+
+[Template AAAspectEntrenchmentInfantry Template=Aspect]
+IDS = aspect_entrenchment

@@ -1,0 +1,45 @@
+/**************************************************************************
+
+terrain_properties.tgi
+Copyright © 2003 TimeGate Studios
+
+DESCRIPTION: 
+
+REVISION HISTORY:
+brw092303 - created
+ick101703 - fixing the type of modifier for defensive_bonus_forest
+
+USAGE:
+
+**************************************************************************/
+[Property Template=SharedProperty]
+{
+	IDS = airborne
+	name = "#properties_stance_airborne_name"
+	icon = null
+	
+	;; brw091504 - Removed the target flag for airborne infantry.
+	;; enabled_target_flags = air
+}
+
+[Property Template=SharedProperty]
+{
+	IDS = infantry_kneel
+	name = "#properties_stance_infantry_kneel_name"
+	icon = PropertyIcons/IconPropertyMovement.png
+
+	[Modifier Template=MultiplyModifier]
+	attribute = SPEED_MAX
+	amount = -0.2
+}
+
+[Property Template=SharedProperty]
+{
+	IDS = infantry_prone
+	name = "#properties_stance_infantry_prone_name"
+	icon = PropertyIcons/IconPropertyMovement.png
+
+	[Modifier Template=MultiplyModifier]
+	attribute = SPEED_MAX
+	amount = -0.6
+}

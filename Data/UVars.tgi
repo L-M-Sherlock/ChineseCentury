@@ -1,0 +1,512 @@
+[Vars]
+{
+		;;;;;; camera
+		
+		float	CameraScrollSpeed = 2
+		float	CameraScrollAcceleration = 4
+		float	CameraScrollSpeedMax = 10
+		int		CameraScrollEdgePadding = 10
+		flag	CameraLocked = false
+		float	CameraScalePan = 10
+		float	CameraScalePitch = 10
+		float	CameraScaleYaw = 10
+		float	CameraScaleZoom = 0.5
+		float	CameraRotateSpeed = 0.50	;; degrees/pixel (positive is clockwise)
+		float	SunScaleDimmer = 0.25
+		flag	CameraInformation = false
+		flag	CameraRotate = false
+		int	CameraEditorPreviewTime = 2	;; in seconds
+		
+		
+		;;;;;; PERFORMANCE SETTINGS
+		
+		;; to maximize:
+		;; - no screenshots
+		;; - not multi-threaded
+		;; - precache textures shouldn't matter
+		;; - remove normals
+		;; - disable blending
+		;; - disable interpolation
+		;; - disable terrain specular
+		;; - minimize resolution
+		;; - enable windowed mode
+		;; - TODO: increase BoneLOD
+		;; - TODO: increase mip-map skip level
+		
+		flag RenderDebugEnable = false		;; Enable if you are planning on debugging the device
+		
+		;; Should be true for better performance on gf3 and newer
+		flag RendererUseHWSkinningShader = true
+		
+		;; Can potentially set this to true if you are running on a gf3 or gf4 and are 
+		;; having low framerate.
+		flag RendererDisableCompatabilityCheck = false	
+		
+		flag RendererEnableScreenshots = true
+		;; this is a folder within the work depot that screenshots get saved to
+		string RendererScreenshotFolder = Screenshots
+		flag RendererMultithreaded = false	;; [don't mess with this!]
+		flag RendererPrecacheTextures = true	;; false doesn't work yet
+		flag RendererRemoveNormals = false
+		flag RendererUse32BitDepthBuffer = true
+		int  FontPreferredTextureSize = 256
+		flag FontWriteTextures = false
+		flag TextBoundsVisible = false
+		flag UITextBoundsVisible = false
+		float ViewPrecacheMultiplier = 0	
+		flag TerrainSpecularEnabled = false
+		;; flag ResolutionWindowed is defaulted by the code (false)
+		int ResolutionX = 1024
+		int ResolutionY = 768
+		;; if ResolutionCoopFullscreenMode is true, the game runs in a borderless window exactly
+		;; the size of the screen in the resolution Windows is in. The game will not change the
+		;; resolution of the screen if ResolutionCoopFullscreenMode is true, and ResolutionX and Y
+		;; are ignored.
+		flag ResolutionCoopFullscreenMode= false
+
+		int MessageLogMaximumLines = 50
+		flag ResourceCaching = true
+		int MemoryUsageBestGuess = 4096000000	;; Guess that we will use about 200 megs
+		float MemoryUsageRefreshTimeS = 6000	;; time between updating the cache.
+		
+		flag PerformanceDisableDoodads = false
+		flag PerformanceDisableDecals = true
+		
+		;; Resource Caching weights: these weights are normalized to percentages of total memory. 
+		;;  E.g. if the weights add up to 200, a weight of 20 would mean use 10% of the total cache.
+		int ResourceCacheTextureRAMWeight = 25
+		int ResourceCacheAudioRAMWeight = 10
+		int ResourceCacheNiAVObjRAMWeight = 30
+		int ResourceCacheNiSeqRAMWeight = 20
+		int ResourceCacheDirectoryRAMWeight = 0
+		int ResourceCacheDataFileRAMWeight = 10
+		int ResourceCacheTextFileRAMWeight = 2
+		int ResourceCacheCursorRAMWeight = 2
+		int ResourceCacheMapRAMWeight = 4
+		int ResourceCacheFilmRAMWeight = 3
+		int ResourceCacheIndexFileRAMWeight = 2
+		int ResourceCacheTextGeometryRAMWeight = 0
+		int ResourceCacheRawFileRAMWeight = 3
+		int ResourceCacheVideoRAMWeight = 0
+		int ResourceCacheTrueTypeRAMWeight = 1
+		int ResourceCachePercentOfTotalRAM = 25
+		
+		int ResourceCacheTextureVRAMWeight = 40
+		int ResourceCacheAudioVRAMWeight = 0
+		int ResourceCacheNiAVObjVRAMWeight = 30
+		int ResourceCacheNiSeqVRAMWeight = 20
+		int ResourceCacheDirectoryVRAMWeight = 0
+		int ResourceCacheDataFileVRAMWeight = 0
+		int ResourceCacheTextFileVRAMWeight = 0
+		int ResourceCacheCursorVRAMWeight = 0
+		int ResourceCacheMapVRAMWeight = 0
+		int ResourceCacheFilmVRAMWeight = 0
+		int ResourceCacheIndexFileVRAMWeight = 0
+		int ResourceCacheTextGeometryVRAMWeight = 0
+		int ResourceCacheRawFileVRAMWeight = 0
+		int ResourceCacheVideoVRAMWeight = 0
+		int ResourceCacheTrueTypeVRAMWeight = 0
+		int ResourceCachePercentOfTotalVRAM = 25
+
+		flag ResourceNoNiObjects = false
+		flag ResourceNoNiTextures = false
+
+		;; note the leak report show various memory related issues
+		;; like pool extension, the existence of leaks (with no detail of
+		;; the origin of the leak) at very low runtime cost even when
+		;; the stack trace is not being saved.
+		flag MemoryShowLeakReport = true
+
+		;; NOTE: enable this to track memory problems
+		flag MemorySaveStackTrace = false
+
+		;;;;;; terrain
+
+		;; TerrainQuadSize = 2 is more appropriate.  Going to 1 quadruples
+		;;  memory usage by the terrain geometry
+		int TerrainQuadSize = 1
+		
+		flag	TerrainTrilinearFilter = true
+	
+		;; drp120903 - disabled TerrainExtraQuality because the art for the macro texture is not there
+		flag	TerrainExtraQuality = true
+
+		
+		;;;;;; performance: view-related quality settings
+		
+		flag ViewInterpolation = true
+		flag ViewShadows = true
+		flag AnimationBlending = true
+		flag RenderDrawShadows = true
+		int RenderLODShadows = 3		;; 0 - none, 1 - texture, 2 - projected, 3 - stencil
+		float ParticleGeneratePCG = 1		;; 1 = 100%
+		flag RenderDrawFootsteps = true
+		flag UnitFogSimplified = false		;; true to turn off unit fog
+
+		;; RendererUseRenderLists: better sorting than the standard scene graph for the main camera
+		flag RendererUseRenderLists = true
+	
+		;; Prerequest all vthings: Should the game pre-request all items in the map?
+		flag RendererPreRequestAllVThings = true
+
+		;; Subtitles
+		flag ViewShowSubtitles = true
+	
+		;; ViewQualityExtreme: 
+		;; - forces all objects from shadow type TEXTURE to PROJECTED 
+		;; - increases shadow texture pool
+		flag ViewQualityExtreme = false
+		float ViewQualityExtremeShadowTextureFactor = 10
+		
+		;; performance: extra whiz bangs
+		flag HitAnimations = false
+				
+		;; RendererBoneLOD: animation performance setting. Using BoneLODs increases memory 
+		;; requirements but allows disabling certain bones at high LODs. [unimplemented]
+		int	RendererBoneLOD = 0
+
+		;;;;;; warnings and errors		
+			
+		flag LogAutoFlush = false
+		flag DataCompatibilityMode = true
+		flag DataMissingResourceWarning = true
+		flag LogsEchoArtToGame = false
+		;;flag WarningsReportArtInGame defaulted in game (false)
+		flag WarningsDisplayedImmediately = false
+		flag WarningsDisplayedAtEnd = true
+		flag WarningsCheckPartitions = false		;; NIF checking, disable in release
+		flag DataReportInvalidIDSWarnings = true			;; Report warning on invalid IDS lookups
+		flag ResourceReportUnused = false		;; enable this to track unused resources		
+
+		;; DataCheckingStrict: if you disable this, then the loading code will forgive some
+		;;  specific TGI errors. Dangerous to disable because design bugs will be missed.
+		flag DataCheckingStrict = true
+
+		;;;;;; application initialization tests
+		
+		flag VerifyMath = false
+		flag VerifyTiming = false
+		
+		;;;;;; editor
+		
+		float TerrainHeightStepRate = 0.25
+		int MapDefaultWidth = 192
+		int MapDefaultHeight = 192
+		;; this needs be set to false for non-dev builds, so maps get saved as
+		;; one file that contains the map .rmp and the strings .tgi.
+		flag EditorMapStringsSeparate = true
+		flag EditorNewMapAutoDoodify = true
+		float EditorRotateRadians = .2618 ;; 15 degrees
+
+		;; Editor preferences (show up in preferences dialog)
+
+		flag	EditorAutoVerifyOnSave = true
+		flag	EditorSAIActiveInTest = true
+		flag	EditorCameraUnlocked = false
+		flag 	MapSaveCompressed = true
+
+		;; Terrain Layer
+
+		;; Brush Size (in meters)
+		float TerrainBrushSize = 4
+		float TerrainBrushSizeMin = 2
+		float TerrainBrushSizeMax = 16
+		float TerrainBrushSizeStep = 2		;; how much the slider steps
+
+		;; Brush Strength - the strength multiplies the heightmap affect
+		float TerrainBrushStrength = 0.5
+		float TerrainBrushStrengthMin = 0.25
+		float TerrainBrushStrengthMax = 1.0
+		float TerrainBrushStrengthStep = 0.25	;; how much the slider steps
+
+		;;;;;; user interface
+		
+		flag UIMessageBoxConfirmation	= true
+		
+		;; if true, notifies the player if he/she has not completed a dependent campaign
+		;; gets turned off automatically when user continues with the play
+		flag UICampaignConfirmDependentCampaign = true
+
+		;; drp071904 - increased 500 to 1000
+		int UICenterGroupTimeMS = 1000
+		
+		;; Floater Status
+		flag UIRecruitFloaterIsOpen = true
+		flag UIGroupFloaterIsOpen = true
+		flag UIAbilityFloaterIsOpen = true
+
+			;; colors
+		point3	UIColorHighlight = 1,1,0 ;; color of text denoting an accelerator key
+		point3	UIColorOptionValid = 0,1,0 ;; color of text denoting a valid option
+		point3	UIColorOptionInvalid = 1,0,0 ;; color of text denoting an invalid option
+		point3	UIColorPropertyTechnology = 1,1,0
+		point3	UIColorPropertyTemporaryFriendly = 0,1,0
+		point3	UIColorPropertyTemporaryEnemy = 1,0,0
+		point3	UIColorPropertySupport = 0,0,1
+		point3	UIColorPropertyIntrinsic = 1,1,1
+		point3	UIColorPropertyStateAndFormation = 1,1,1
+		point3	UIColorPropertyTerrain = 1,1,1
+		point3	UIColorPropertyExperience = 1,1,1
+		point3	UIColorPropertyDefault = 1,1,1
+		point3	UIColorModifierPositive = 0,1,0
+		point3	UIColorModifierNegative = 1,0,0
+		point3	UIColorModifierNeutral = 1,1,1
+		point3  UIColorDefeatedKingdom = 0.5,0.5,0.5
+		point3	UIColorCampaignCutscene = 0,1,0	;; color of cutscenes on "Choose Campaign" screen
+ 
+			;; tooltips
+		flag  UIToolTipsShow = true
+		float UIToolTipsDelay = .5 ;; how long cursor must hover over widget before tooltip shows in seconds
+		float UiTooltipsMaxWidth = .5 ;; a number from zero to 1, the fraction of the screen that a tooltip
+							;; can cover before it is split across multiple rows.
+
+			;; message log settings
+		int UIMessageLogMaximumLines	= 5
+		int UIMessageLogFadeTime	= 10000		;; in milliseconds
+		float UIMessageLogCycleTimeout	= 1.0	;; in seconds
+	
+			;; message log filters
+			
+		;; available in options
+		flag UIEventFilterSiege = true
+		flag UIEventFilterEngagement = false
+		flag UIEventFilterChatSound = true
+		flag UIEventFilterBuddySound   = true
+		flag UIEventFilterProduction = true
+		flag UIMessageFilterChat	= true
+		flag UIMessageFilterBuddy	= true
+		flag UIMessageFilterPlayerJoinLeave = true
+
+		;; should be hidden in options
+		flag UIMessageFilterCompany	= true
+		flag UIMessageFilterCombat	= true		
+		flag UIMessageFilterBuilding = true
+		flag UIMessageFilterRegiment	= true
+		flag UIMessageFilterGeneric	= true
+		flag UIMessageFilterHero	= true
+		flag UIMessageFilterTutorial 	= true
+				
+			;; metagame filters
+		flag UIMessageFilterMetaGameGeneric		= true
+		flag UIMessageFilterMetaGameBattles		= true
+		flag UIMessageFilterMetaGameMovement	= false
+		flag UIMessageFilterMetaGamePurchases	= true
+		
+			;; portraits
+		flag UIPortraitAnimate		= true
+
+			;; city management
+		flag UIStructureAutoPlacement = true
+		
+			;; zones
+		flag ViewShowZoneFriendlySupply = true
+		flag ViewShowZoneSettlement = true		;; show settlement bounds in editor
+		
+			;; game event
+		float DenizenDisplayGameEventTime = 5
+
+			;; options menu
+		int OptionsAcceptNewResolutionTimeout = 10
+
+		;;;;;; diagnostics
+		;; display UI logging (toggleable via hotkey)
+		flag UIDisplayLogging = false
+		int UIWarningMemory = 3000000
+		float UITextureSwapsRatio = 2
+		flag DebugModelVEs = false
+		
+		;; display framerate statistics at end
+		flag TimingDisplaySummary = false
+		;; if this is non-zero, this is the maximum number of frames per second
+		;; to render, used for testing low-frame rate problems.
+		float RenderMaxFramesPerSecond = 0.0f
+		flag ViewShowDamage = false
+		
+		;; variables for usage with the on-screen framerate graph
+		float FramerateBarTop = 0.97
+		float FramerateBarBottom = 1.0
+		float FramerateBarLeft = 0.0
+		float FramerateBarUpdateMS = 16 ;; 16 for 60 fps, 33 for 30 fps, etc.
+		float FramerateBarWeightedSize = 0.5 ;; percentage of the other bar's size.
+
+		flag RenderDrawTerrainGrid = false
+		flag RenderDrawRegionLines = false
+		flag ViewShowTriggerAreas = true
+		flag ViewShowElapsedGameTime = false
+
+		point3 ViewShowBlockingColor = 1,0,0
+		point3 ViewShowSettlementDebugColor = 0,0.85,0	;; pcb032504 - changed from "Supply"
+		point3 ViewShowGuardDebugColor = 0,0,0.85
+		point3 ViewShowControlDebugColor = 0.85,0.85,0
+		point3 ViewShowFogDebugColorGray = 0.5,0.5,0.5
+		point3 ViewShowFogDebugColorBlack = 0.2,0.2,0.2
+		
+		flag  UISAIDebugShow = false
+
+		;; tile debugging
+		flag ViewShowBlocking = false
+		flag ViewShowSettlementDebug = false	;; pcb032504 - changed from "Supply"
+		flag ViewShowGuardDebug = false
+		flag ViewShowControlDebug = false
+		;; flag ViewShowFogDebug = false	;; hard-coded
+		flag DebugIslands = false
+		flag DebugWaterAreas = false
+		flag DebugObjectBlocking = false
+		flag DebugWaterBlocking = false
+		
+		;; Sync logs
+		int SyncHistorySize = 10000
+
+		;;;;;; sim debugging
+		flag RenderDrawCVText = false
+		
+		;; If this string exists, only Audio with this IDS will actually play. Useful
+		;; for debugging audio problems with one particular sound
+		;; string AudioDebugIDS = bowman_fire
+
+
+		;; Audio Settings
+		;; --------------
+		int		MilesFrequency = 44100		;; 22050, 44100, etc
+		int		MilesBits = 16				;; 8 or 16
+		int		MilesHWChannels = 2			;; 1 for mono, 2 for stereo
+		int		Miles2DChannels = 8			;; how many simultaneous 2-D sounds can play?
+		int		Miles3DChannels = 21		;; how many simultaneous 3-D sounds can play?
+		int		MilesStreamingChannels = 3	;; how many simultaneous streams can play?
+		int		AudioLatencyNormalMS = 64	;; how much latency in the general case
+		int		AudioLatencyHighMS = 200	;; how much latency in the "we're being screwed" case.
+		
+		float		AudioMainVolume = 80%
+		float		Audio2DVolume = 80%
+		float		Audio3DVolume = 80%
+		float		AudioSpeechVolume = 95%
+		float		AudioMusicVolume = 70%
+		flag		UnitAcknowledgement = true
+		float		AudioMicrophoneHeight = 5
+		float		AudioConsiderCenteredRadius = 12
+
+
+		;; Network Settings
+		;; ----------------
+		;;string 		NetworkConnectionType 		= Modem
+		;;string		NetworkLanNickname 		= Íæ¼Ò
+		flag		NetworkAutoRefresh 		= false		;; true if server browser refreshes periodically
+		int		NetworkRefreshTime 		= 30		;; periodic refresh of server list (in seconds)
+		flag		NetworkReportGameInProgress	= true		;; true if server is listed while game in progress
+		flag		NetworkFilterSameVersion	= false		;; only show servers with same version
+		flag		NetworkFilterSameGroupRoom	= true		;; only show games in current group room
+		flag		NetworkFilterFullGames		= false		;; only show non-full games
+		flag		NetworkFilterPlayingGames	= false		;; only show games that are not playing
+
+		;; SAI Settings:
+		;; ------------
+		float	SAITimeBetweenThinks = 0.125
+		float	SAIMaxAccumulateThinkTime = 0.5		;; Can accumulate 4 thinks
+		float	SAITimePerThink = 0.0025		;; 10 ms 8 times a second is the default, mem061904 - now this value is per SAI player
+		float	SAITimeMaxPenalty = 0.5			;; when SAI overthinks only penalize this many seconds
+
+
+		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+		;; GameSpy Stuff
+		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+		;; flag	GameSpyIsLANGame 		= false
+		int	GameSpyIdlePeriod			= 40	;; GameSpy thread idle time (ms)
+		int GameSpyBackendRecheckPeriod	= 15000	;; wait time to recheck backend availability after it is available
+		int	GameSpyQR2ThinkPeriod		= 50	;; wait before calling QR2 think (ms)
+		int	GameSpyPeerThinkPeriod		= 10	;; wait before calling Peer think (ms) (GameSpy TRC requires 10ms)
+		int	GameSpyNATThinkPeriod		= 50	;; wait before calling NAT think (ms)
+		int	GameSpyNATListenPeriod		= 5000	;; how long to listen on game socket after NAT finishes (ms)
+		int	GameSpyGPThinkPeriod		= 100	;; wait before calling GP process (ms)
+		int 	GameSpyPersistThinkPeriod	= 100	;; wait before calling Persist think (ms)
+		int 	GameSpyGCDKeyThinkPeriod	= 100	;; wait before calling GCD Key think (ms)
+		int 	GameSpySBThinkPeriod		= 50	;; wait before calling SB think (ms)
+		int		GameSpyGHTTPThinkPeriod		= 50	;; wait before calling GHTTP think (ms)
+		
+		;; set to 0 for no retry
+		int		AFKTime = 90
+		int		GameSpyGStatsRetryPeriod	= 120	;; wait before retrying stats/persist connect (seconds)
+		
+		int		GameSpyLANLobbyRefreshTime		= 15	;; wait time in seconds for LAN Lobby Refresh
+		
+		int		GameSpyRoomReListTime			= 2		;; wait time in seconds after failure to re-request room list
+
+		;; set this flag to true to always do NAT negotiation for internet games (for testing)
+		flag	ForceNATNegotiation		= false
+		
+		;; The map checksum is used with gamespy to verify the correct map (displayed in staging menu)
+		flag	DisplayMapChecksum		= false
+
+		;; timeout for joining servers
+		int	JoinTimeout						= 60
+		
+		;; Chat
+		int UIChatLogMaximumLines		= 50
+		int UILobbyChatLogMaximumLines		= 50
+		point3 UIChatPlayerColorNormal		= 1,1,1			;; white
+		point3 UIChatPlayerColorBuddy		= 0,1,0			;; green
+		point3 UIChatPlayerColorIgnore		= 1,0,0			;; red
+		point3 UIChatPlayerColorAFK			= 0.8,0,1		;; purple (matches buddy away)
+		
+		point3 	UIBuddyColorPending			= 0.9,0.65,0.04		;; dark gold
+		point3	UIBuddyColorOnline			= 1,1,1			;; white
+		point3 	UIBuddyColorOffline			= 0.5,0.5,0.5	;; grey
+		point3	UIBuddyColorStaging			= 0,1,0			;; green
+		point3	UIBuddyColorPlaying			= 0.1,0.6,0.1	;; dark green
+		point3	UIBuddyColorAway			= 0.8,0,1		;; purple (matches chat AFK)
+		point3	UIBuddyColorDifferentGame	= 1,0,0			;; red 
+		
+		point3  ChatPublicColor				= 1,1,0			;; yellow
+		point3	ChatWhisperColor			= 0,0.9,0.9		;; aqua
+		point3	ChatTeamColor				= 0,1,0			;; green
+		point3	ChatBuddyColor				= 0.9,0.65,0.04	;; dark gold
+		point3	ChatSystemColor				= 1,1,1			;; white
+
+		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+		;; Texture pools
+		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+		
+		flag	RenderDrawTerrainTexPoolWarning = true
+		float	RenderTerrainTexPoolWarningSize = 0.08
+
+		int 	TerrainTexturePoolDesiredNumEntries = 120			;; Approximately 20% more than on-screen for max-zoom
+		int		TerrainTexturePoolDesiredTextureResolution = 128
+		int		TerrainTexturePoolMinTextureResolution = 64
+		flag	TerrainTexturePoolRequiresAlpha = false
+		flag	TerrainTexturePoolGenerateMipMaps = true
+	
+		int		GeneralTexturePoolDesiredNumEntries = 10		;; hq attachment may use 6 + 2
+		int		GeneralTexturePoolDesiredTextureResolution = 256
+		int		GeneralTexturePoolMinTextureResolution = 128
+		flag    GeneralTexturePoolRequiresAlpha = false
+		flag	GeneralTexturePoolGenerateMipMaps = false
+		
+		;; TODO: Reduce this number
+		int     ShadowTexturePoolDesiredNumEntries = 100
+		int		ShadowTexturePoolDesiredTextureResolution = 64
+		int		ShadowTexturePoolMinTextureResolution = 32
+		flag	ShadowTexturePoolRequiresAlpha = true
+		flag	ShadowTexturePoolGenerateMipMaps = false
+
+		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+		;; User Control
+		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+		
+		string HotkeyConfiguration = classic_hotkey_config
+		string HotkeyAltRightClickCommand = retreat
+		bool SwapRightClickWithAltRightClick = false
+
+		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+		;; Special debugging
+		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+		string GoalPriorityCSV = null
+		string CombatValueCSV = null
+		flag SinglePlayerAutoPause = true	;; if true we automatically pause when focus is lost in a single player game
+		flag SAIDebug = false				;; enables CV display (CTRL+C) and the goal priority CSV file
+
+		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+		;; misc
+		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+		flag FilmForcePlayback = false
+}

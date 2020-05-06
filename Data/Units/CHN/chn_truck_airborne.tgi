@@ -1,0 +1,68 @@
+[Thing Template=AAUnitCHNVehicleHQTruck]
+{
+	IDS = chn_truck_airborne
+	name = "#chn_truck_airborne_name"
+	editor_name = "#chn_truck_airborne_editor_name"
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 300
+
+		[Production]
+		money = 20
+		ammo = 8
+		oil = 2
+		unit_limit_provided = 4
+	}
+
+	[ElementComponent]
+	{
+		required_properties = air_support, tech_paratrooper_MP
+	}
+	
+	[MobileDeploymentComponent]
+	{
+		unpack_to_actor_ids = chn_hq_airborne
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+		acceleration = 2
+		trailer_actor = chn_trailer_airborne
+
+		[TrailerHitch]
+		{
+			node_ids = hitch
+			node_offset = 0, -2.2, 0.5
+		}
+	}
+
+	[Placement]
+	placement_group_ids = null
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = captain	
+		
+		[Property]
+		property_ids = airhq			
+	}
+	
+	[View]
+	{
+		resource_prefix = CHNTruck/CHNTruck
+		icon = /UI/Game/BuildingButtons/IconHQAirborne.png
+	}
+}

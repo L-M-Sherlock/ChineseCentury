@@ -1,0 +1,184 @@
+;; cursors.tgi
+;; DESCRIPTION: this is a list of cursors that RTSE defines. 
+;; GAME-SPECIFIC INSTRUCTIONS: create a "cursors_xx.tgi" and define each cursor
+
+/*
+[Cursor template=Cursor]
+{
+	ids = primary
+	name = "Primary"
+	cursor = Cursors/primary.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = scroll_up
+	name = "Scroll Up"
+	cursor = Cursors/scrolln.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = scroll_down
+	name = "Scroll Down"
+	cursor = Cursors/scrolls.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = scroll_left
+	name = "Scroll Left"
+	cursor = Cursors/scrollw.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = scroll_right
+	name = "Scroll Right"
+	cursor = Cursors/scrolle.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = scroll_upleft
+	name = "Scroll Up-Left"
+	cursor = Cursors/scrollnw.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = scroll_upright
+	name = "Scroll Up-Right"
+	cursor = Cursors/scrollne.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = scroll_downleft
+	name = "Scroll Down-Left"
+	cursor = Cursors/scrollsw.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = scroll_downright
+	name = "Scroll Down-Right"
+	cursor = Cursors/scrollse.cur
+}
+
+;; TODO: get good cursor
+[Cursor template=Cursor]
+{
+	ids = terrain_paint
+	name = "Terrain Paint"
+	cursor = Cursors/attack.cur
+}
+
+;; TODO: get good cursor
+[Cursor template=Cursor]
+{
+	ids = heightmap_paint
+	name = "Heightmap Paint"
+	cursor = Cursors/guard.cur
+}
+
+;; TODO: get good cursor
+[Cursor template=Cursor]
+{
+	ids = multiple_select
+	name = "Multiple Select"
+	cursor = Cursors/move.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = pass_thing
+	name = "Pass Thing"
+	cursor = Cursors/attack.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = pass_location
+	name = "Pass Location"
+	cursor = Cursors/move.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = attack
+	name = "Attack"
+	cursor = Cursors/attack.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = move
+	name = "Move"
+	cursor = Cursors/move.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = guard
+	name = "Guard"
+	cursor = Cursors/guard.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = repair
+	name = "Repair"
+	cursor = Cursors/repair.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = place_box_area
+	name = "Place Box Area"
+	cursor = Cursors/attack.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = place_circle_area
+	name = "Place Circle Area"
+	cursor = Cursors/move.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = size_area
+	name = "Size Area"
+	cursor = Cursors/attack.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = place_camera
+	name = "Place Camera"
+	cursor = Cursors/move.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = save_to_favorite
+	name = "Save To Favorite"
+	cursor = Cursors/SaveToFavorite.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = faction_ability_target
+	name = "Select faction ability target"
+	cursor = Cursors/FactionAbilityTarget.cur
+}
+
+[Cursor template=Cursor]
+{
+	ids = faction_ability_target_valid
+	name = "Select faction ability target valid"
+	cursor = Cursors/FactionAbilityTargetValid.cur
+}
+
+*/

@@ -1,0 +1,36 @@
+[Terrain template=WaterTerrain]
+{
+	IDS = boreal_ocean
+	name = "#boreal_ocean_name"
+	
+	base_priority = 9000
+	terrain_group = water
+	terrain_color = 0.196, 0.404, 0.494
+	
+	doodad_frequency = 0.00
+	primary_doodad_frequency = 0.10
+
+/********************	WATER PARAMETERS		********************/
+
+	paint_slope = .23
+  	max_slope = .2
+  	paint_max_step = 1.0
+  	max_depth = 5.5
+	anim_textures_path_prefix= BorealWater/WaterFrames%04d.dds
+	anim_fps = 10
+
+ 	water_doodad_IDS = waves
+ 	water_doodad_offset_perpendicular = 0.25
+ 	water_doodad_offset_parallel = 2.0
+
+/********************	WATER VARIATIONS		********************/
+
+	[Variation]
+	IDS = boreal_ocean01
+	name = "#boreal_ocean_01_name"
+	texture = BorealWater/BorealWater01.tga
+	texture_width = 8
+	texture_height = 8
+
+	
+}

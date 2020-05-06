@@ -1,0 +1,22 @@
+/**************************************************************************
+
+template_placement_group.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: damage types used by the game
+
+REVISION HISTORY:
+drp121702 - created
+
+USAGE:
+
+	[PlacementGroup template=PlacementGroup]
+	This node goes at the root level to define a placement group used by the editor.
+
+**************************************************************************/
+
+[Template PlacementGroup]
+{
+	string	IDS
+	localized	name
+}

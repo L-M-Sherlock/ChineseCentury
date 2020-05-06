@@ -1,0 +1,17 @@
+[Thing Template=AAFarmMediterranean]
+{
+	IDS = mediterranean_windmill
+	name = "#med_windmill_name"
+	editor_name = "#med_windmill_editor_name"
+	
+	[Flags]
+	targetable = false
+	
+	[Size]
+	height = 2
+	blocking_shape = SQUARE
+	square_size = 4
+
+	[View]
+	resource_prefix = MediterraneanWindmill/ChaparralWindmill
+}

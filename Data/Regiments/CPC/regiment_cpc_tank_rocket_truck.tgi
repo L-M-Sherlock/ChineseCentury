@@ -1,0 +1,61 @@
+[Thing Template=AACPCOrganizationMobile]
+{
+	IDS = regiment_cpc_tank_rocket_truck
+	name = "#regiment_cpc_tank_rocket_truck_name"
+	editor_name = "#regiment_cpc_tank_rocket_truck_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 150
+		
+		[Upkeep]
+		ammo = 20
+		oil = 15
+	}
+
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = tank_company
+        
+		[Property]
+		property_ids = artillery_company
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CPC/CPCRocketTruck/CPCRocketTruck
+		icon = /UI/Game/RegimentButtons/IconCPCRocketTank.png
+		banner_icon = /Organizations/Banners/Icons/IconArtillery.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = rus_vehicle_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_rocket_truck_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_rocket_truck_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_rocket_truck_attack
+	}		
+	
+
+	[OrganizationComponent Template=AAArmorOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		control_range = 50
+		
+		[Slot]	;; front
+		element_IDS = cpc_tank_light
+		
+		[Slot]	;; flank
+		element_IDS = cpc_rocket_truck
+		
+		[Slot]	;; captain
+		element_IDS = cpc_tank_co
+	}
+
+}

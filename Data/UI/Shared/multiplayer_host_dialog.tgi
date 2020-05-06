@@ -1,0 +1,98 @@
+
+/*************************************************************************
+						MultiplayerHostDialog
+*************************************************************************/
+
+[MultiplayerHostDialog Inherit=SharedPanelWidget]
+{
+	[View]
+	{
+		L = 30%
+		T = 30%
+		R = 70%
+		B = 70%
+		
+		;; cwp040804 - Children are no longer defined in templates, so must be defined here
+		[Child Template = SharedChildLargePanelVE]
+	}
+	
+	[TitleLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		T = 10
+		B = 50
+		
+		[Label Template=SharedSmallCenteredLabelVE]
+		text = "#multiplayer_host_dialog_TitleLabel_Label_text"
+	}
+	
+	[OptionsPanel Template=MultiplayerHostOptionsPanel]
+	{
+		[View]
+		{
+			L = 5%
+			R = 95%
+			T = 5%
+			B = 50%
+		}
+	}
+	
+	[PortLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		{
+			L = 50%
+			R = 60%
+			T = 55%
+			B = 65%
+		}
+		
+		[Label Template=SharedSmallCenteredLabelVE]
+		text = "#multiplayer_host_dialog_PortLabel_Label_text"
+	}
+	
+	[PortEditbox Template=SharedNumericEditboxWidgetNoButtons]
+	{
+		[View Inherit=SharedEditBoxPanelGroupVE] 
+		{
+			L = 65%
+			R = 95%
+			T = 55%
+			B = 65%
+		}
+	}
+	
+	[HostButton Template=SharedPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#multiplayer_host_dialog_HostButton_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 50%
+			R = 70%
+			T = 70%
+			B = +30
+		}
+	}
+	
+	[CancelButton Template=SharedPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#multiplayer_host_dialog_CancelButton_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 75%
+			R = 95%
+			T = 70%
+			B = +30
+		}
+	}
+}

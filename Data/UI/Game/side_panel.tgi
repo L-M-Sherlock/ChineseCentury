@@ -1,0 +1,42 @@
+[SidePanel Inherit=PanelWidget]
+{
+	[View Template=GroupVE]
+	{
+		L = 67%
+		T = 0%
+		R = 100%
+		B = 70%
+	}
+
+	[SidePanelMessageLog Inherit=SharedMessageLog]
+	{
+		[View Template=SharedPanelGroupVE]
+		B = 95%
+
+		[Scrollbar Template=SharedScrollbarWidget]
+	}
+
+	[SidePanelInfo Inherit=SidePanelWidget]
+	{
+		[View]
+		{
+			;; cwp040804 - Children are no longer defined in templates, so must be defined here
+			[Child Template = SharedChildLargePanelVE]
+		}
+		
+		[Name Template=LabelWidget]
+		{
+			[View Template=NoVE]
+
+			[Label]
+			{
+				T = 50%
+
+				;; the text will be filled in by the code
+				text = ""
+				font = small
+				justify = CENTER
+			}
+		}
+	}
+}

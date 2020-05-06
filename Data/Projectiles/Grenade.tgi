@@ -1,0 +1,357 @@
+[VFX template=VFXExtrusion]
+{
+	ids = grenade_streak
+	name = "#Grenade_streak_name"
+	
+	permanent = true
+
+	;; How long, once this extrusion begins, should it continue extruding for?
+	;;duration = 0.3
+	
+	[Extrusion]
+	{
+		start_delay = 0.01
+		segment_lifetime = .05
+		segment_fadetime = .08
+		two_sided = true
+		
+		;; This is point 0 for purposes of connectivity
+		[ExtrusionPoint]
+		{
+			extrusion_root = wing0
+			node_color = 0.25, 0.30, 0.25
+			node_alpha = 55%
+		}
+
+		;; This is point 1 for purposes of connectivity
+		[ExtrusionPoint]
+		{
+			extrusion_root = wing1
+			node_color = 0.25, 0.30, 0.25
+			node_alpha = 55%
+		}
+	
+		[Connectivity]
+		{
+			point_a = wing0
+			point_b = wing1
+		}
+	}
+}
+
+[Thing Template=Projectile]
+{
+	IDS = grenade01
+	name = "#Grenade_01_name"
+
+	[View]
+	{
+		resource_prefix = Grenade/Grenade01
+
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = temperate_small_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = dirt
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = desert_small_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = desert
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = arctic_small_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = snow
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = water_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = water
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = scorch_mark_small_vfx
+			terrain_group_filter = dirt
+			at = SELF
+			attached = false
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = scorch_mark_small_vfx
+			terrain_group_filter = desert
+			at = SELF
+			attached = false
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = scorch_mark_small_vfx
+			terrain_group_filter = snow
+			at = SELF
+			attached = false
+		}	
+		
+		[WhenCreated template=FXC_CreateVFX]
+		vfx_ids = grenade_streak
+	
+		[WhenDestroyed template=FXC_PlaySFX]
+		{
+			audio_ids = explosion_grenade
+		}	
+	}
+
+	[ProjectileComponent]
+	projectile_type = LOB
+	projectile_speed = 10
+	projectile_spread = 5
+}
+
+[Thing Template=Projectile]
+{
+	IDS = grenade02
+	name = "#Grenade_02_name"
+
+	[View]
+	{
+		resource_prefix = Grenade/Grenade02
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = temperate_small_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = dirt
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = desert_small_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = desert
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = arctic_small_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = snow
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = water_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = water
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = scorch_mark_small_vfx
+			terrain_group_filter = dirt
+			at = SELF
+			attached = false
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = scorch_mark_small_vfx
+			terrain_group_filter = desert
+			at = SELF
+			attached = false
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = scorch_mark_small_vfx
+			terrain_group_filter = snow
+			at = SELF
+			attached = false
+		}	
+		
+		[WhenCreated template=FXC_CreateVFX]
+		vfx_ids = grenade_streak
+		
+		[WhenDestroyed template=FXC_PlaySFX]
+		{
+			audio_ids = explosion_grenade
+		}
+	}
+
+	[ProjectileComponent]
+	projectile_type = LOB
+	projectile_speed = 10
+	projectile_spread = 5
+}
+
+[Thing Template=Projectile]
+{
+	IDS = molotov
+	name = "#Grenade_molotov_name"
+
+	[View]
+	{
+		resource_prefix = Grenade/Molotov
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = temperate_small_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = dirt
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = desert_small_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = desert
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = arctic_small_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = snow
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = water_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = water
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = scorch_mark_small_vfx
+			terrain_group_filter = dirt
+			at = SELF
+			attached = false
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = scorch_mark_small_vfx
+			terrain_group_filter = desert
+			at = SELF
+			attached = false
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = scorch_mark_small_vfx
+			terrain_group_filter = snow
+			at = SELF
+			attached = false
+		}	
+		
+		[WhenDestroyed template=FXC_PlaySFX]
+		{
+			audio_ids = explosion_grenade
+		}
+	}
+
+	[ProjectileComponent]
+	projectile_type = LOB
+	projectile_speed = 10
+	projectile_spread = 5
+}
+
+[Thing Template=Projectile]
+{
+	IDS = mortar01
+	name = "#Grenade_mortar01_name"
+
+	[View]
+	{
+		resource_prefix = Grenade/Grenade01
+
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = temperate_small_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = dirt
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = desert_small_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = desert
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = arctic_small_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = snow
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = water_explosion_1
+			at = TARGET_GROUND
+			attached = false
+			terrain_group_filter = water
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = scorch_mark_small_vfx
+			terrain_group_filter = dirt
+			at = SELF
+			attached = false
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = scorch_mark_small_vfx
+			terrain_group_filter = desert
+			at = SELF
+			attached = false
+		}
+		
+		[WhenDestroyed template=FXC_CreateVFX]
+		{
+			VFX_IDS = scorch_mark_small_vfx
+			terrain_group_filter = snow
+			at = SELF
+			attached = false
+		}	
+		
+		[WhenCreated template=FXC_CreateVFX]
+		vfx_ids = grenade_streak
+		
+		[WhenDestroyed template=FXC_PlaySFX]
+		{
+			audio_ids = explosion_artillery_light
+		}	
+	}
+
+	[ProjectileComponent]
+	projectile_type = LOB
+	projectile_speed = 15
+	projectile_spread = 5
+}

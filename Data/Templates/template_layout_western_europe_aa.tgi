@@ -1,0 +1,1039 @@
+
+;; This layout is a large layout for the city capitals, London & Berlin.
+
+[Template LayoutWesternEuropeSpecial01 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = western_europe_city14
+	offset = 35, 31
+	orientation = 1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city16
+	offset = 39, 4
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city03
+	offset = 39, -21
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city07
+	offset = 25, 15
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city11
+	offset = 25, -4
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city04
+	offset = 13, 31
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city15
+	offset = -2, 17
+	orientation = 1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city10
+	offset = 19, -24
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city13
+	offset = -7, 31
+	orientation = 1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city08
+	offset = -28, 32
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city05
+	offset = -29, 16
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city09
+	offset = -21, -2
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city01
+	offset = -1, -19
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city06
+	offset = -1, -33
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city12
+	offset = -17, -25
+	orientation = 0, 1
+}
+
+[Template LayoutWesternEuropeSpecial02 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = western_europe_city14
+	offset = -35, -31
+	orientation = -1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city16
+	offset = -39, -4
+	orientation = 0, -1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city03
+	offset = -39, 21
+	orientation = 0,-1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city07
+	offset = -25, -15
+	orientation = 0, -1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city11
+	offset = -25, 4
+	orientation = 0, -1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city04
+	offset = -13, -31
+	orientation = 0, -1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city15
+	offset = 2, -17
+	orientation = -1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city10
+	offset = -19, 24
+	orientation = 0, -1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city13
+	offset = 7, -31
+	orientation = -1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city08
+	offset = 28, -32
+	orientation = 0, -1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city05
+	offset = 29, -16
+	orientation = 0, -1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city09
+	offset = 21, 2
+	orientation = 0, -1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city01
+	offset = 1, 19
+	orientation = 0, -1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city06
+	offset = 1, 33
+	orientation = 0, -1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city12
+	offset = 17, 25
+	orientation = 0, -1
+}
+
+[Template LayoutWesternEuropeSpecial03 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = western_europe_city14
+	offset = -31, -35
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city16
+	offset = -4, -39
+	orientation = 1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city03
+	offset = 21, -39
+	orientation = 1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city07
+	offset = -15, -25
+	orientation = 1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city11
+	offset = 4, -25
+	orientation = 1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city04
+	offset = -31, -13
+	orientation = 1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city15
+	offset = -17, 2
+	orientation = 0, 1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city10
+	offset = 24, -19
+	orientation = 1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city13
+	offset = -31, 7
+	orientation = 0, 1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city08
+	offset = -32, 28
+	orientation = 1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city05
+	offset = -16, 29
+	orientation = 1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city09
+	offset = 2, 21
+	orientation = 1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city01
+	offset = 19, 1
+	orientation = 1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city06
+	offset = 33, 1
+	orientation = 1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city12
+	offset = 25, 17
+	orientation = 1, 0
+}
+
+
+[Template LayoutWesternEuropeSpecial04 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = western_europe_city14
+	offset = 31, 35
+	orientation = 0, -1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city16
+	offset = 4, 39
+	orientation = -1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city03
+	offset = -21, 39
+	orientation = -1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city07
+	offset = 15, 25
+	orientation = -1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city11
+	offset = -4, 25
+	orientation = -1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city04
+	offset = 31, 13
+	orientation = -1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city15
+	offset = 17, -2
+	orientation = 0, -1
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city10
+	offset = -24, 19
+	orientation = -1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city13
+	offset = 31, -7
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city08
+	offset = 32, -28
+	orientation = -1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city05
+	offset = 16, -29
+	orientation = -1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city09
+	offset = -2, -21
+	orientation = -1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city01
+	offset = -19, -1
+	orientation = -1, 0
+
+	[Object Template=CityObject]
+	object_ids = western_europe_city06
+	offset = -33, -1
+	orientation = -1, 0
+	
+	[Object Template=CityObject]
+	object_ids = western_europe_city12
+	offset = -25, -17
+	orientation = -1, 0
+}
+
+
+
+/********************    WESTERN EUROPE VILLAGE LAYOUTS    ********************/
+
+[Template LayoutRMCWesternEuropeVillage01 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock10x10_01
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock6x12_01
+	offset = 16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = bank_european
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x10_01
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_01
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_02
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x20_01
+	offset = -16,10
+	orientation = -1,0
+}
+
+[Template LayoutRMCWesternEuropeVillage02 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x10_01
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_02
+	offset = 16,0
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock10x10_01
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = bank_european
+	offset = -16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock10x10_01
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock6x12_01
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x10_01
+	offset = -16,16
+	orientation = 0,+1
+}
+
+[Template LayoutRMCWesternEuropeVillage03 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock10x10_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = bank_european
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_01
+	offset = -16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock6x12_01
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock6x12_01
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_02
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x20_01
+	offset = 16,-10
+	orientation = -1,0
+}
+
+
+[Template LayoutRMCWesternEuropeVillage04 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock10x10_01
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = factory_european
+	offset = 16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x10_01
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock6x12_01
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_02
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x16_02
+	offset = -16,10
+	orientation = 0,-1
+}
+
+[Template LayoutRMCWesternEuropeVillage05 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = factory_european
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock6x12_01
+	offset = 16,0
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_02
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_01
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock10x10_01
+	offset = -16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_02
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock6x12_01
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_01
+	offset = -16,16
+	orientation = 0,+1
+}
+
+[Template LayoutRMCWesternEuropeVillage06 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock10x10_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock6x12_01
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = factory_european
+	offset = -16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_01
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock10x10_01
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_02
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x20_01
+	offset = 16,-10
+	orientation = +1,0
+}
+
+[Template LayoutRMCWesternEuropeVillage07 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_01
+	offset = 16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock10x10_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = refinery_european
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x10_01
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock6x12_01
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_02
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x20_01
+	offset = -16,10
+	orientation = -1,0
+}
+
+[Template LayoutRMCWesternEuropeVillage08 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x10_01
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_02
+	offset = 16,0
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_01
+	offset = -16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock10x10_01
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = refinery_european
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock10x10_01
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock6x12_01
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x10_01
+	offset = -16,16
+	orientation = 0,+1
+}
+
+[Template LayoutRMCWesternEuropeVillage09 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock10x10_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = refinery_european
+	offset = -16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_01
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock6x12_01
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock6x12_01
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x8_02
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_villageblock8x20_01
+	offset = 16,-10
+	orientation = +1,0
+}
+
+
+
+/********************    WESTERN EUROPE CITY LAYOUTS    ********************/
+
+[Template LayoutRMCWesternEuropeCity01 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_01
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_02
+	offset = 16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = bank_european
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_03
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_04
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_05
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x22_01
+	offset = -16,10
+	orientation = 0,-1
+}
+
+[Template LayoutRMCWesternEuropeCity02 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_06
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_05
+	offset = 16,0
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_04
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_01
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = bank_european
+	offset = -16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_01
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_02
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_06
+	offset = -16,16
+	orientation = 0,+1
+}
+
+[Template LayoutRMCWesternEuropeCity03 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = bank_european
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_04
+	offset = -16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_02
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_02
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_05
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x22_01
+	offset = 16,-10
+	orientation = 0,+1
+}
+
+
+[Template LayoutRMCWesternEuropeCity04 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_01
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = factory_european
+	offset = 16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_04
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_06
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_02
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_05
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x22_02
+	offset = -16,10
+	orientation = 0,+1
+}
+
+[Template LayoutRMCWesternEuropeCity05 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = factory_european
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_02
+	offset = 16,0
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_05
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_04
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_01
+	offset = -16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_05
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_02
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_04
+	offset = -16,16
+	orientation = 0,+1
+}
+
+[Template LayoutRMCWesternEuropeCity06 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_02
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = factory_european
+	offset = -16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_04
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_01
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_05
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x22_01
+	offset = 16,-10
+	orientation = 0,+1
+}
+
+[Template LayoutRMCWesternEuropeCity07 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_04
+	offset = 16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = refinery_european
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_06
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_02
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_05
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x22_01
+	offset = -16,10
+	orientation = 0,-1
+}
+
+[Template LayoutRMCWesternEuropeCity08 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_06
+	offset = 16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_05
+	offset = 16,0
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_04
+	offset = -16,-16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_01
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = refinery_european
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_01
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_02
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_06
+	offset = -16,16
+	orientation = 0,+1
+}
+
+[Template LayoutRMCWesternEuropeCity09 Inherit=CityLayout]
+{
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_01
+	offset = 16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = refinery_european
+	offset = -16,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_04
+	offset = 0,16
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_02
+	offset = -16,0
+	orientation = 0,-1
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_02
+	offset = -16,-16
+	orientation = +1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x10_05
+	offset = 0,-16
+	orientation = -1,0
+
+	[Object Template=CityObject]
+	object_ids = weurope_cityblock10x22_01
+	offset = 16,-10
+	orientation = 0,+1
+}

@@ -1,0 +1,74 @@
+[Template AAFlareAttack Inherit=Actor]
+{
+	category = SPECIAL
+	
+	[Flags]
+	{
+		blocking = false
+		flying = false
+		invulnerable = true
+		targetable = true
+	}
+	
+	[Size]
+	{
+		height = 0
+	}
+	
+	[View]
+	{
+		focused_vfx = flare_focus_vfx
+		selected_vfx = flare_selection_vfx
+
+		resource_prefix = FlareAttack/FlareAttack
+		shadow_type = NONE
+
+		[TextureSearchPath]
+		path = /Shared/SharedTextures
+		
+	}	
+}
+
+[Thing Template=AAFlareAttack]
+{
+	IDS = attack_actor_flare
+	name = "#attack_flare_attack_actor_flare_name"
+
+	[Flags]
+	flying = true
+
+	[FlareComponent]
+	{
+		target_actor = true
+		command = kill
+	}
+	
+	[View]
+	{
+		[AspectNormal]
+		{
+			model=%sActor.nif
+		}
+	}
+}
+
+[Thing Template=AAFlareAttack]
+{
+	IDS = attack_location_flare
+	name = "#attack_flare_attack_location_flare_name"
+
+	[FlareComponent]
+	{
+		target_location = true
+		command = kill
+	}
+	
+	[View]
+	{
+		[AspectNormal]
+		{
+			model=%sLocation.nif
+		}
+
+	}
+}

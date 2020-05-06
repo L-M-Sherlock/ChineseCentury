@@ -1,0 +1,130 @@
+[Thing Template=AAUnitCPCProne]
+{
+	IDS = wanggensheng
+	name = "#wanggensheng_name"
+	editor_name = "#wanggensheng_editor_name"
+	
+	[BodyComponent]
+	{
+		health = 250
+		defense = 3
+	}
+
+	[CharacterComponent Template=AAInfantryCharacterComponent]
+	
+	[MoverComponent]
+	{
+		speed_max = 4
+	}
+
+	[ElementComponent]
+	{
+               required_properties = tech_nosupply
+	}
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGrenadeLocal]
+		{
+			[AbilityDefinition Template=AAThrownGrenade]
+			{
+				name = "#rus_conscript_AbilityDefinition_name_2"
+				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
+				projectile_ids = grenade01
+				range = 22
+				area = 3
+				
+				recharge_time = 8
+				
+				[Effect Template=FireDamageEffect]
+				amount = 40
+
+                [Effect Template=AddDamageEffect]
+				damage_type_IDS = flame
+				targets = Vehicle
+				amount = 30
+
+                [Effect Template=AddDamageEffect]
+				damage_type_IDS = flame
+				targets = TANK
+				amount = -10
+
+                [Effect Template=AddDamageEffect]
+				damage_type_IDS = flame
+				targets = BUILDING
+				amount = 10
+
+				[Effect Template=MoraleLossEffect]
+				amount = 2
+
+				[Effect Template=EnchantmentEffect]
+				{
+					[EnchantmentProperty]
+					{
+						IDS = radiation4
+						name = "#Molotov_cocktail_Effect_EnchantmentProperty_name"
+						enchantment_type = ench_type_radiation
+						duration = 15
+						icon = /Properties/PropertyIcons/IconPropertyHealth.png
+				
+						[Modifier template=PeriodicDamageModifier]
+						damage_type = flame
+						amount = 5
+
+						[WhenAdded Template=FXC_CreateVFX]
+						{
+							VFX_IDS = atomic_radiation
+						}
+			
+						[WhenAdded Template=FXC_CreateVFX]
+						{
+							VFX_IDS = atomic_sparks_large
+							target_flags = +tank
+							location = position
+							attached = true
+						}
+			
+						[WhenAdded Template=FXC_CreateVFX]
+						{
+							VFX_IDS = atomic_sparks_large
+							target_flags = +vehicle
+							location = position
+							attached = true
+						}
+			
+						[WhenAdded Template=FXC_CreateVFX]
+						{
+							VFX_IDS = atomic_sparks_small
+							target_flags = +infantry
+							location = position
+							attached = true
+						}
+
+					 }	
+                                 }		
+                        }
+                }
+        }
+
+	[View]
+	{
+		resource_prefix = Wanggensheng/Wanggensheng
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+}

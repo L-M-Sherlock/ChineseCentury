@@ -1,0 +1,1819 @@
+;; 全局变量
+[template TK_AA_PLAY template = AABaseEgo]
+{
+	[GoalEngine]
+	{
+		[ActorPriority]
+		{
+			property_IDS	= corpshq
+			value		= 10000
+			repeat_penalty	= 10000
+		}
+		
+		[ActorPriority]
+		{
+			actor_ids                       = bank_asian1
+			repeat_penalty					= 500
+			value							= 22500
+		}
+	}
+}
+
+;; 第一阶段 (补HQ)
+[template TK_AA_1 template = TK_AA_PLAY]
+{
+	[Filters]
+	{
+		[Item]
+		stat	= money_rate
+		min	= -9999999
+		max	= 120
+
+		[Item]
+		stat	= ammo_rate
+		min	= 5
+		max	= 99999
+
+		[Item]
+		stat	= oil_rate
+		min	= 5
+		max	= 99999
+	}
+
+	[GoalEngine]
+	{
+		build_queue_max_items	= 2
+
+		[GoalPriority]
+		{
+			goal_IDS	= RESEARCH
+			multiplier	= 0.1
+			fuzziness	= 100
+		}
+
+		[Research template = TK1Research]
+
+		[OffensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 5
+			cv_exponent_under_target	= 1
+			min_cv_to_assign		= 50
+		}
+
+		[DefensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 10
+			min_cv_to_assign		= 10
+			count_static_cv			= false
+		}
+
+		[Exploration]
+		{
+			[DeepGoals]
+			{
+				num_goals			= 3
+				base_priority			= 500
+				min_priority			= 500
+				black_fog_priority		= 200
+				grey_fog_priority		= 200
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+
+			[AirReconGoals]
+			{
+				num_goals			= 3
+				base_priority			= 100
+				min_priority			= 100
+				black_fog_priority		= 100
+				grey_fog_priority		= 100
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+		}
+
+		[Unpacking]
+		{
+			base_priority					= 500
+			enemy_static_influence_mult			= 3
+			enemy_dynamic_influence_mult			= 3
+			max_friendly_building_bonus			= 500
+			max_friendly_building_bonus_per_building	= 200
+			travel_distance_mult				= 5
+			fuzzy_factor					= 150
+		}
+
+		[Recruiting]
+		{
+			max_goals_per_think		= 10
+			num_military_goals		= 10
+			insufficient_income_level	= 10
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= corpshq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= infhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= ger_truck_mechanized
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= usa_truck_mechanized
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= gbr_truck_airborne
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= chn_truck_airborne
+				base_priority			= 2500
+				;;number_to_request		= 10
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				recruit_ids			        = cpc_truck_infantry
+				base_priority				= 1500
+			    ;;number_to_request			= 10
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_chn_infantry
+				;;number_to_request			= 6
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_chn_paratrooper_MP_ground
+				;;number_to_request			= 4
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_cpc_infantry_recon
+			    ;;number_to_request			= 6
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_cpc_conscript
+			    ;;number_to_request			= 4
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_cpc_infantry_sniper1
+			    ;;number_to_request			= 3
+			}
+			[SpecificRecruitRequest]
+			{
+				property_ids		= recon
+				;;number_to_request		= 3
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= supplydepot
+			}
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= infhq
+			value			= 7500
+			repeat_penalty		= 300
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= recon
+			value			= 9998
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= infantry_company
+			value			= 8999
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= supplydepot
+			value			= 1250
+			repeat_penalty		= 150
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= property_city
+			value			= 1000
+		}
+		
+		[ActorPriority]
+		{
+			actor_IDS					= chn_truck_airborne
+			value							= 15000
+			repeat_penalty					= 1000
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS			= regiment_chn_infantry
+			value			= 14500
+			repeat_penalty			= 250
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS						= regiment_chn_paratrooper_MP_ground
+			value							= 12000
+            repeat_penalty					= 300
+		}
+        
+        [ActorPriority]
+		{
+			actor_IDS					= cpc_truck_infantry
+			value							= 20000
+			repeat_penalty					= 1000
+		}
+		
+		[ActorPriority]
+		{
+			actor_IDS					= cpc_truck_airborne
+			value							= 15000
+			repeat_penalty					= 3000
+		}
+		
+		[ActorPriority]
+		{
+			actor_IDS						= regiment_cpc_conscript
+			value							= 15000
+            repeat_penalty			        = 300
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS						= regiment_cpc_infantry_sniper1
+			value							= 17500
+            repeat_penalty					= 500
+		}
+	}
+
+	[ReactiveAI]
+	{
+		unit_retreat_max_health		= 0.5
+	}
+}
+
+;; 第二阶段 (补HQ+兵)
+[template TK_AA_2 template = TK_AA_PLAY]
+{
+	[Filters]
+	{
+		[Item]
+		stat	= money_rate
+		min	= 100
+		max	= 200
+
+		[Item]
+		stat	= ammo_rate
+		min	= 5
+		max	= 99999
+
+		[Item]
+		stat	= oil_rate
+		min	= 5
+		max	= 99999
+	}
+
+	[GoalEngine]
+	{
+		[GoalPriority]
+		{
+			goal_IDS	= RESEARCH
+			multiplier	= 1.5
+			fuzziness	= 10
+		}
+
+		[Research template = TK2Research]
+
+		[OffensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 8
+			cv_exponent_under_target	= 1
+			min_cv_to_assign		= 50
+		}
+
+		[DefensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 8
+			min_cv_to_assign		= 10
+			count_static_cv			= false
+		}
+
+		[Exploration]
+		{
+			[DeepGoals]
+			{
+				num_goals			= 3
+				base_priority			= 500
+				min_priority			= 500
+				black_fog_priority		= 200
+				grey_fog_priority		= 200
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+
+			[AirReconGoals]
+			{
+				num_goals			= 3
+				base_priority			= 100
+				min_priority			= 100
+				black_fog_priority		= 100
+				grey_fog_priority		= 100
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+		}
+
+		[Recruiting]
+		{
+			max_goals_per_think		= 10
+			num_military_goals		= 10
+			insufficient_income_level	= 10
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= corpshq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= infhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= mechhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= special_company
+				;;number_to_request		   = 5
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= motor_pool
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= ger_truck_mechanized
+				base_priority				= 800
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids			        = chn_truck_airborne
+				base_priority				= 3500
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= airhq
+				base_priority				= 2500
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_chn_paratrooper_MP_ground
+				;;number_to_request			= 6
+			}
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= infhq
+			value			= 6000
+			repeat_penalty		= 500
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= mechhq
+			value			= 3800
+			repeat_penalty		= 1000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= motor_pool
+			value			= 4500
+			repeat_penalty		= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= special_company
+			value			= 9000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= infantry_company
+			value			= 8000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= property_city
+			value			= 1000
+		}
+		
+		[ActorPriority]
+		{
+			actor_IDS						= regiment_chn_infantry
+			value							= 17500
+			repeat_penalty					= 750
+		}				
+		
+		[ActorPriority]
+		{
+			actor_IDS						= regiment_chn_paratrooper_MP_ground
+			value							= 18000
+			repeat_penalty					= 250	
+		}		
+	}
+
+	[ReactiveAI]
+	{
+		unit_retreat_max_health		= 0.5
+	}
+}
+
+;; 第三阶段 (补机械化HQ+机械化团队)
+[template TK_AA_3 template = TK_AA_PLAY]
+{
+	[Filters]
+	{
+		[Item]
+		stat	= money_rate
+		min	= 181
+		max	= 300
+
+		[Item]
+		stat	= ammo_rate
+		min	= 5
+		max	= 99999
+
+		[Item]
+		stat	= oil_rate
+		min	= 5
+		max	= 99999
+
+		[Item]
+		stat								= building_limit_consumption
+		min									= -15.5
+		max									= 0
+	}
+
+	[GoalEngine]
+	{
+		[GoalPriority]
+		{
+			goal_IDS	= RESEARCH
+			multiplier	= 2.0
+			fuzziness	= 10
+		}
+
+		[Research template = TK3Research]
+
+		[OffensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 12
+			cv_exponent_under_target	= 1
+			min_cv_to_assign		= 50
+		}
+
+		[DefensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 6
+			min_cv_to_assign		= 10
+			count_static_cv			= false
+		}
+
+		[Exploration]
+		{
+			[DeepGoals]
+			{
+				num_goals			= 3
+				base_priority			= 500
+				min_priority			= 500
+				black_fog_priority		= 200
+				grey_fog_priority		= 200
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+
+			[AirReconGoals]
+			{
+				num_goals			= 3
+				base_priority			= 100
+				min_priority			= 100
+				black_fog_priority		= 100
+				grey_fog_priority		= 100
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+		}
+
+		[Recruiting]
+		{
+			max_goals_per_think		= 10
+			num_military_goals		= 10
+			insufficient_income_level	= 10
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= corpshq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= infhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= mechhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= armorhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= special_company
+				;;number_to_request		   = 4
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= motor_pool
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= artillery_brigade
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= engineer_brigade
+			}
+				
+			[SpecificRecruitRequest]
+			{
+				recruit_ids			        = chn_truck_airborne
+				base_priority				= 1500
+			}			
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= airhq
+				base_priority				= 2500
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_chn_paratrooper_MP_ground
+				;;number_to_request			= 6
+			}
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= infhq
+			value			= 1000
+			repeat_penalty		= 400
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= mechhq
+			value			= 8500
+			repeat_penalty		= 800
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= armorhq
+			value			= 5500
+			repeat_penalty		= 1500
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= special_company
+			value			= 8000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= infantry_company
+			value			= 8100
+			repeat_penalty		= 300
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= antitank_company
+			value			= 9000
+			repeat_penalty		= 150
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= motor_pool
+			value			= 9999
+			repeat_penalty		= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= artillery_brigade
+			value			= 8000
+			repeat_penalty		= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= property_city
+			value			= 1000
+			repeat_penalty	= 10000
+		}
+		
+		[ActorPriority]
+		{
+			actor_IDS						= regiment_chn_infantry
+			value							= 17500
+			repeat_penalty					= 750
+		}
+		
+		[ActorPriority]
+		{
+			actor_IDS						= regiment_chn_paratrooper_MP_ground
+			value							= 18000
+			repeat_penalty					= 250	
+		}
+	}
+}
+
+;; 第四阶段 (补坦克HQ+坦克团队)
+[template TK_AA_4 template = TK_AA_PLAY]
+{
+	[Filters]
+	{
+		[Item]
+		stat	= money_rate
+		min	= 301
+		max	= 1000000
+
+		[Item]
+		stat	= ammo_rate
+		min	= 5
+		max	= 99999
+
+		[Item]
+		stat	= oil_rate
+		min	= 5
+		max	= 99999
+
+		[Item]
+		stat								= building_limit_consumption
+		min									= -15.5
+		max									= 0
+	}
+
+	[GoalEngine]
+	{
+		build_queue_max_items	= 2
+
+		[GoalPriority]
+		{
+			goal_IDS	= RESEARCH
+			multiplier	= 4.0
+			fuzziness	= 100
+		}
+
+		[Research template = TK4Research]
+
+		[OffensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 15
+			cv_exponent_under_target	= 1
+			min_cv_to_assign		= 50
+		}
+
+		[DefensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 4
+			min_cv_to_assign		= 10
+			count_static_cv			= false
+		}
+
+		[Exploration]
+		{
+			[DeepGoals]
+			{
+				num_goals			= 3
+				base_priority			= 500
+				min_priority			= 500
+				black_fog_priority		= 200
+				grey_fog_priority		= 200
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+
+			[AirReconGoals]
+			{
+				num_goals			= 3
+				base_priority			= 100
+				min_priority			= 100
+				black_fog_priority		= 100
+				grey_fog_priority		= 100
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+		}
+
+		[Recruiting]
+		{
+			max_goals_per_think		= 10
+			num_military_goals		= 10
+			insufficient_income_level	= 10
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= corpshq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= infhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= mechhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= armorhq
+				;;number_to_request		   = 4
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids		= motor_pool
+				base_priority	   = 1000
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= artillery_brigade
+				base_priority	   = 1000
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= engineer_brigade
+				base_priority	   = 1000
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= airfield
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= supplydepot
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= tank_company
+				;;number_to_request		   = 4
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= artillery_company
+				;;number_to_request		   = 4
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_chn_paratrooper_MP
+				base_priority				= 2000
+				number_to_request			= 6
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_chn_paratrooper_MP_ground
+				base_priority				= 2000
+				;;number_to_request			= 12
+			}	
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= infhq
+			value			= 1200
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= infantry_company
+			value			= 1000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= special_company
+			value			= 1100
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= mechhq
+			value			= 1600
+			repeat_penalty		= 200
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= antitank_company
+			value			= 2000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= mechanized_company
+			value			= 8000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= airfield
+			value			= 12750
+			repeat_penalty		= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= tank_company
+			value			= 9000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= artillery_company
+			value			= 9900
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= armorhq
+			value			= 12500
+			repeat_penalty		= 75
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= motor_pool
+			value			= 9999
+			repeat_penalty		= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= artillery_brigade
+			value			= 9998
+			repeat_penalty		= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= engineer_brigade
+			value			= 9997
+			repeat_penalty		= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= engineer
+			value			= 15000
+			repeat_penalty		= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= property_city
+			value			= 100
+			repeat_penalty	= 10000
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_chn_paratrooper_MP
+			value							= 22500
+			repeat_penalty					= 750
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_chn_paratrooper_MP_ground
+			value							= 27500
+			repeat_penalty					= 1000
+		}
+	}
+}
+
+[template TK_AA_DS template = TK_AA_PLAY]
+{
+	[Filters]
+	{
+		[Item]
+		stat		= money_rate
+		min		= -99999
+		max		= 99999
+
+		[Item]
+		stat		= ammo_rate
+		min		= -99999
+		max		= 4
+	}
+
+	[GoalEngine]
+	{
+		build_queue_max_items	= 12
+
+		[GoalPriority]
+		{
+			goal_IDS = RESEARCH
+			multiplier = 0.01
+			fuzziness = 1
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS = CONSTRUCT
+			multiplier = 1
+		}
+
+		[Research template = TK1Research]
+
+		[OffensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 5
+			cv_exponent_under_target	= 1
+			min_cv_to_assign		= 50
+		}
+
+		[DefensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 10
+			min_cv_to_assign		= 10
+			count_static_cv			= false
+		}
+
+		[Exploration]
+		{
+			[DeepGoals]
+			{
+				num_goals			= 1
+				base_priority			= 500
+				min_priority			= 500
+				black_fog_priority		= 200
+				grey_fog_priority		= 200
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+
+			[AirReconGoals] 
+			{
+				num_goals			= 1
+				base_priority			= 100
+				min_priority			= 100
+				black_fog_priority		= 100
+				grey_fog_priority		= 100
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+		}
+
+		[Unpacking]
+		{
+			base_priority							= 500
+			enemy_static_influence_mult			  = 10
+			enemy_dynamic_influence_mult			 = 10
+			max_friendly_building_bonus			  = 500
+			max_friendly_building_bonus_per_building = 200
+			travel_distance_mult					 = 3
+			fuzzy_factor							 = 150
+		}
+
+		[Recruiting]
+		{
+			max_goals_per_think		= 10
+			num_military_goals		= 10
+			insufficient_income_level	= 10
+
+			[SpecificRecruitRequest] 
+			{
+				property_ids		= corpshq
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= supplydepot
+				number_to_request		   = 6
+				base_priority				= 5000
+			}
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= supplydepot
+			value			= 30000
+			repeat_penalty		= -10
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= special_company
+			value			= 1000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= tank_company
+			value			= 5000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= artillery_company
+			value			= 9900
+			repeat_penalty		= 100
+		}
+	}
+}
+
+[template TK_AA_DS1 template = TK_AA_PLAY]
+{
+	[Filters]
+	{
+		[Item]
+		stat		= money_rate
+		min		= -99999
+		max		= 99999
+
+		[Item]
+		stat		= oil_rate
+		min		= -99999
+		max		= 4
+	}
+
+	[GoalEngine]
+	{
+		build_queue_max_items	= 12
+
+		[GoalPriority]
+		{
+			goal_IDS = RESEARCH
+			multiplier = 0.01
+			fuzziness = 1
+		}
+
+		[GoalPriority]
+		{
+			goal_IDS = CONSTRUCT
+			multiplier = 1
+		}
+
+		[Research template = TK1Research]
+
+		[OffensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 5
+			cv_exponent_under_target	= 1
+			min_cv_to_assign		= 50
+		}
+
+		[DefensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 10
+			min_cv_to_assign		= 10
+			count_static_cv			= false
+		}
+
+		[Exploration]
+		{
+			[DeepGoals]
+			{
+				num_goals			= 1
+				base_priority			= 500
+				min_priority			= 500
+				black_fog_priority		= 200
+				grey_fog_priority		= 200
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+
+			[AirReconGoals] 
+			{
+				num_goals			= 1
+				base_priority			= 100
+				min_priority			= 100
+				black_fog_priority		= 100
+				grey_fog_priority		= 100
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+		}
+
+		[Unpacking]
+		{
+			base_priority							= 500
+			enemy_static_influence_mult			  = 10
+			enemy_dynamic_influence_mult			 = 10
+			max_friendly_building_bonus			  = 500
+			max_friendly_building_bonus_per_building = 200
+			travel_distance_mult					 = 3
+			fuzzy_factor							 = 150
+		}
+
+		[Recruiting]
+		{
+			max_goals_per_think		= 10
+			num_military_goals		= 10
+			insufficient_income_level	= 10
+
+			[SpecificRecruitRequest] 
+			{
+				property_ids		= corpshq
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				property_ids				= supplydepot
+				number_to_request		   = 6
+				base_priority				= 5000
+			}
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= supplydepot
+			value			= 30000
+			repeat_penalty		= -10
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= special_company
+			value			= 1000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= tank_company
+			value			= 5000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= artillery_company
+			value			= 9900
+			repeat_penalty		= 100
+		}
+	}
+}
+
+[template TK_AA_5 template = TK_AA_PLAY]
+{
+	[Filters]
+	{
+		[Item]
+		stat	= money_rate
+		min	= 280
+		max	= 1000000
+
+		[Item]
+		stat	= ammo_rate
+		min	= 5
+		max	= 99999
+
+		[Item]
+		stat	= oil_rate
+		min	= 5
+		max	= 99999
+
+		[Item]
+		stat								= building_limit_consumption
+		min									= -99
+		max									= -15.5
+	}
+
+	[GoalEngine]
+	{
+		build_queue_max_items	= 5
+
+		[GoalPriority]
+		{
+			goal_IDS	= RESEARCH
+			multiplier	= 20.0
+			fuzziness	= 100
+		}
+
+		[Research template = TK4Research]
+
+		[OffensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 20
+			cv_exponent_under_target	= 1
+			min_cv_to_assign		= 50
+		}
+
+		[DefensiveCV]
+		{
+			cv_advantage_target		= 0.1
+			cv_advantage_max		= 1
+			min_cv_to_assign		= 10
+			count_static_cv			= false
+		}
+
+		[Exploration]
+		{
+			[DeepGoals]
+			{
+				num_goals			= 3
+				base_priority			= 500
+				min_priority			= 500
+				black_fog_priority		= 200
+				grey_fog_priority		= 200
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+
+			[AirReconGoals]
+			{
+				num_goals			= 3
+				base_priority			= 100
+				min_priority			= 100
+				black_fog_priority		= 100
+				grey_fog_priority		= 100
+				fog_search_depth		= -1
+				use_time_since_last_scouted	= true
+			}
+		}
+
+		[Unpacking]
+		{
+			base_priority							= 800
+			enemy_static_influence_mult			= -20
+			enemy_dynamic_influence_mult			= -20
+			max_friendly_building_bonus				= -10
+			max_friendly_building_bonus_per_building	= -10
+			fuzzy_factor					= 50
+		}
+		
+		[Recruiting]
+		{
+			max_goals_per_think		= 10
+			num_military_goals		= 10
+			insufficient_income_level	= 10
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= corpshq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= infhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= mechhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= armorhq
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= motor_pool
+				base_priority	   = 1000
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= artillery_brigade
+				base_priority	   = 1000
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= engineer_brigade
+				base_priority	   = 1000
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= airfield
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= supplydepot
+				number_to_request		   = 6
+				base_priority	   = 999
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_rus_tank_artillery
+				;;number_to_request		= 24
+				base_priority	   = 100
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_rus_tank_heavy
+				;;number_to_request		= 24
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_rus_halftrack_at
+				;;number_to_request		= 24
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_ger_tank_artillery
+				;;number_to_request		= 24
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_GER_tank_SuperTiger
+				;;number_to_request		= 24
+				base_priority	   = 100
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_ita_halftrack_at
+				;;number_to_request		= 24
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_ita_tank_artillery
+				;;number_to_request		= 24
+				base_priority	   = 100
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_usa_halftrack_PromotionDelegation
+				;;number_to_request		= 24
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_usa_tank_Mixed
+				;;number_to_request		= 24
+				base_priority	   = 100
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_jpn_tank_artillery
+				;;number_to_request		= 24
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_jpn_tksaodang
+				;;number_to_request		= 24
+				base_priority	   = 100
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids				= regiment_jpn_saodangmotuo
+				;;number_to_request		= 24
+				
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_chn_paratrooper_MP
+				base_priority				= 5000
+				number_to_request			= 12
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_chn_paratrooper_MP_ground
+				base_priority				= 5000
+				;;number_to_request			= 12
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_cpc_infantry_sniper1
+				;;number_to_request			= 3
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_cpc_infantry_mechanized
+				;;number_to_request			= 6
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_rus_airborne_vehicle
+				;;number_to_request			= 3
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_cpc_tank_artillery
+				;;number_to_request			= 6
+			}
+
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_cpc_tank_special
+				base_priority				= 5000
+				;;number_to_request			= 6
+			}
+			
+			[SpecificRecruitRequest]
+			{
+				recruit_ids					= regiment_cpc_rocket_truck
+				base_priority				= 5000
+				;;number_to_request			= 6
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= tank_company
+				;;number_to_request		   = 6
+			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids				= artillery_company
+				;;number_to_request		   = 6
+			}
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= supplydepot
+			value			= 20000
+			repeat_penalty	=	5
+		}
+
+		[ActorPriority]
+		{
+			property_IDS	= property_bunker
+			value		= 5000
+			repeat_penalty	= -50
+		}
+
+		[ActorPriority]
+		{
+			property_IDS	= property_bunker_artillery
+			value		= 5000
+			repeat_penalty	= -50
+		}
+
+		[ActorPriority]
+		{
+			property_IDS	= property_bunker_aa
+			value		= 5000
+			repeat_penalty	= -50
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= infhq
+			value			= 1200
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= infantry_company
+			value			= 1000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= special_company
+			value			= 1100
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= mechhq
+			value			= 2000
+			repeat_penalty		= 200
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= antitank_company
+			value			= 1000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= mechanized_company
+			value			= 7000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= airfield
+			value			= 9200
+			repeat_penalty		= 10000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= tank_company
+			value			= 8000
+			repeat_penalty		= 75
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= artillery_company
+			value			= 9900
+			repeat_penalty		= 75
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= armorhq
+			value			= 9500
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= motor_pool
+			value			= 19999
+			repeat_penalty		= 5000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= artillery_brigade
+			value			= 19998
+			repeat_penalty		= 5000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= engineer_brigade
+			value			= 19997
+			repeat_penalty		= 5000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= engineer
+			value			= 30000
+			repeat_penalty		= 15000
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= property_city
+			value			= 10
+			repeat_penalty	= 10000
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_rus_halftrack_at
+			value							= 12000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_rus_tank_artillery
+			value							= 13000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_rus_tank_heavy
+			value							= 13500
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_GER_tank_SuperTiger
+			value							= 20000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_GBR_tank_Tankkiller
+			value							= 13000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_GBR_tank_Airbornetankgun
+			value							= 13000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_ita_tank_artillery
+			value							= 18000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_ita_halftrack_at
+			value							= 12000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					=  regiment_usa_tank_Mixed
+			value							= 17500
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_usa_halftrack_PromotionDelegation
+			value							= 15500
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_jpn_saodangmotuo
+			value							= 13000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_jpn_tank_artillery
+			value							= 13500
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_jpn_tksaodang
+			value							= 13000
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_chn_paratrooper_MP
+			value							= 25000
+			repeat_penalty					= 300
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_chn_paratrooper_MP_ground
+			value							= 25000
+			repeat_penalty					= 150
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_cpc_tank_special
+			value							= 25000
+			repeat_penalty					= 300
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_rus_airborne_vehicle
+			value							= 24500
+			repeat_penalty					= 250
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_cpc_infantry_mechanized
+			value							= 25000
+			repeat_penalty					= 250
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_cpc_rocket_truck
+			value							= 25000
+			repeat_penalty					= 150
+		}
+	}
+}
+;; 末完持继

@@ -1,0 +1,75 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= Badoglio_low_income_ego
+	name									= "#Italy_Badoglio_SAI_Badoglio_low_income_ego_name"
+} ;; LowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= Badoglio_main_game_ego
+	name									= "#Italy_Badoglio_SAI_Badoglio_main_game_ego_name"
+} ;; MainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= Badoglio_end_game_ego
+	name									= "#Italy_Badoglio_SAI_Badoglio_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= Badoglio_end_game_ego_TK
+	name									= "#Italy_Badoglio_SAI_Badoglio_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= Badoglio_end_game_ego_END
+	name									= "#Italy_Badoglio_SAI_Badoglio_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= Badoglio_end_game_ego_TK_DS
+	name									= "#Italy_Badoglio_SAI_Badoglio_end_game_ego_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= Badoglio_end_game_ego_TK_DS1
+	name									= "#Italy_Badoglio_SAI_Badoglio_end_game_ego_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= Badoglio_sai
+	name									= "#Italy_Badoglio_SAI_Badoglio_sai_name"
+	description								= "#Italy_Badoglio_SAI_Badoglio_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= Badoglio_low_income_ego
+
+	[Ego]
+	IDS										= Badoglio_main_game_ego
+
+	[Ego]
+	IDS										= Badoglio_end_game_ego
+
+	[Ego]
+	IDS										= Badoglio_end_game_ego_TK
+
+	[Ego]
+	IDS										= Badoglio_end_game_ego_END
+
+	[Ego]
+	IDS										= Badoglio_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= Badoglio_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_ita
+	
+	[Faction]
+	ids										= Badoglio
+} ;; Badoglio SAI

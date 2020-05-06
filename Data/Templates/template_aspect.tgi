@@ -1,0 +1,70 @@
+/**************************************************************************
+
+template_aspect.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: object aspects
+
+REVISION HISTORY:
+smm072303 - created
+
+USAGE:
+
+**************************************************************************/
+
+[Template Aspect]
+{
+	;; (required)
+	string	ids = aspect_normal
+
+	;; at the moment CONSTRUCTION or OTHER
+	string	aspect_type = OTHER
+	
+	;; (optional) string that is appended to the resource_prefix when replacing '%s'
+	string	aspect_prefix = NULL
+
+	;; (optional) model and (optional) skin
+	;; - If 'resource_prefix' and/or 'aspect_prefix' are defined then the concatenation (in that order) goes
+	;;   into '%s', so the model is "resource_prefix + aspect_prefix + .nif" and the skin is
+	;;   "resource_prefix + aspect_prefix + Base.dds"
+	;; - You can override this by pointing directly to a file.
+	;;		model = /units/impaler/impaler.nif
+	;; - If the object should use the skin from the NIF file, then use 
+	;;		skin = NULL
+	string	model = %s.nif
+	string	skin = NULL
+
+	;; (optional) other textures to swap out for this biome
+	[list TextureRename]
+	{
+		string	substring_from
+		string	substring_to
+	}
+	
+	;; (optional) glow map
+	string	glow = NULL
+
+	;; (optional) aspect weight
+	float	weight = 1
+	
+	;; (optional) ground_size
+	;; - this is used for sizing projected VFX (like selection/highlighting) and
+	;;   for sizing the shadow
+	;; - if left at '0' it will compute these values from the NIF, which is usually
+	;;   accurate but has problems in some cases (e.g. trees with low-hanging branches)
+	point2	ground_size = 0,0
+	
+	;; (optional) visual_radius_estimate
+	;; - this is used for determining the initial visual radius for the model.  that value determines
+	;;   when the resource will initially appear on screen.  once the NIF is loaded, this value is
+	;;   then updated to be the actual visual radius.  if this value is inaccurate for your aspect, 
+	;;   it will "pop" onto the screen the very first time the model is loaded, but be fine every 
+	;;   other time.
+	float	visual_radius_estimate = 3
+	
+	;; stops animations from updating in this aspect (used if the nif has all the anim you want)
+	bool disable_animations = false
+	
+	;; (optional) animations
+	[list Animation template=ObjectAnimation]
+}

@@ -1,0 +1,39 @@
+[Thing Template=AACapitalCenter]
+{
+	IDS = london_city_center
+	name = "#london_city_center_name"
+	editor_name = "#london_city_center_editor_name"
+
+	[BodyComponent]
+	{
+		health = 700
+	}
+
+	[CityComponent]
+	{				
+		[Layout Template=LayoutWesternEuropeSpecial01]
+
+		[Layout Template=LayoutWesternEuropeSpecial02]
+
+		[Layout Template=LayoutWesternEuropeSpecial03]
+
+		[Layout Template=LayoutWesternEuropeSpecial04]
+	}	
+	
+	[Placement]
+	{
+		placement_group_IDS = group_campaign	
+	}
+
+	[Size]
+	{
+		blocking_shape = RECT
+  		rect_width = 16
+  		rect_height = 14
+	}
+
+	[View]
+	{
+		resource_prefix = LondonCityCenter/LondonCityCenter		
+	}
+}

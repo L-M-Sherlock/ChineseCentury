@@ -1,0 +1,201 @@
+
+[RMC template=AAMGRMC]
+{
+	IDS = mg_rmc_mexico
+	name = "#mg_rmc_mexico_name"
+	description = "#mg_rmc_mexico_description"
+	biome = desert
+
+/*************************	    MAP SIZE		**************************/
+
+	[MapSize]
+	width = 512
+	height = 512
+	recommended_kingdoms_min = 2
+	recommended_kingdoms_max = 8
+
+/********************    KINGDOMS   ********************/
+
+	[Kingdom Template = KingdomAttacker1]
+	;;	Hawaii
+	starting_pos = 20,160
+	type = water
+	
+	[Kingdom Template = KingdomDefender]
+	;;	Mexico
+	starting_pos = 160,160
+	
+	[Kingdom Template = KingdomAttacker2]
+	;;	Western United States
+	starting_pos = 20,300
+
+	[Kingdom Template = KingdomAttacker3]
+	;;	Samoa
+	starting_pos = 160,20
+	type = water
+	
+	[Kingdom Template = KingdomAttacker4]
+	;;	Caribbean
+	starting_pos = 300,300
+	type = water
+	
+/********************   TERRAIN    ********************/
+
+	[TerrainBlob Template=DesScrubTerrainBlob]
+	
+	[TerrainStreak Template=DesSavannahTerrainStreak]
+
+	[TerrainStreak Template=DesSandTerrainStreak]
+
+	[TerrainBlob Template=DesSavannahTerrainBlob]
+	
+	[TerrainBlob Template=DesSandTerrainBlob]
+	
+	[TerrainBlob Template=DesDirtTerrainBlob]
+	
+	[TerrainBlob Template=DesSandTerrainBlob02]
+	
+	[TerrainBlob Template=DesSavannahTerrainBlob02]
+	
+	[TerrainBlob Template=DesDirtTerrainBlob02]
+	
+	[TerrainBlob Template=DesScrubTerrainBlob02]
+
+/********************   BLOCKING TERRAIN    ********************/
+
+	[TerrainBlob Template=DesMountainTerrainBlob]
+
+	[TerrainBlob Template=DesMountainTerrainBlob02]
+	
+	[TerrainBlob Template=DesMountainTerrainBlob02]
+	
+	[TerrainBlob Template=DesMountainTerrainBlob03]
+	
+	[TerrainBlob Template=DesMountainTerrainBlob02]
+	
+/********************    OCEAN    ********************/
+
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = NORTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHEAST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanLargeTerrainBlob]
+	attachto = SOUTH
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = SOUTHWEST
+	terrain_ids = desert_ocean
+	
+	[TerrainBlob Template=OceanSmallTerrainBlob]
+	attachto = WEST
+	terrain_ids = desert_ocean
+	
+/********************   TERRAIN NOISE    ********************/
+
+	[TerrainNoise Template=DesNoisePhase01]
+	
+	[TerrainNoise Template=DesNoisePhase02]
+	
+	[TerrainNoise Template=DesNoisePhase03]
+	
+	[TerrainNoise Template=DesNoisePhase04]
+
+/*************************    ACTOR GROUPS    **************************/
+
+	[ActorGroup Template=RMCVillageActorGroups]
+	{
+		ids = village_mexico
+		name = "#mg_rmc_mexico_village_mexico_name"
+
+		[Object]
+		object_ids = random_village_mexico
+		weight = 1
+	}
+
+	[ActorGroup Template=HomeBunkers]
+
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_1
+		name = "#mg_rmc_mexico_bunkers_coastline_1_name"
+		search_relative_kingdom_ids = kingdom_attacker_1
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 128		
+		proximity_desired = 384
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_3
+		name = "#mg_rmc_mexico_bunkers_coastline_3_name"
+		search_relative_kingdom_ids = kingdom_attacker_3
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 128		
+		proximity_desired = 384
+	}
+	
+	[ActorGroup Template=CoastlineBunkers]
+	{
+		IDS = bunkers_coastline_4
+		name = "#mg_rmc_mexico_bunkers_coastline_4_name"
+		search_relative_kingdom_ids = kingdom_attacker_4
+			
+		[GroupRestriction]
+		group_ids = defender_bunkershome
+		proximity_min = 128		
+		proximity_desired = 384
+	}
+}

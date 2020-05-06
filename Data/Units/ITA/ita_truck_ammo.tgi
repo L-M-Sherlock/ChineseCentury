@@ -1,0 +1,66 @@
+[Thing Template=AAUnititaVehicleHQTruck]
+{
+	IDS = ita_truck_ammo
+	name = "#ita_truck_ammo_name"
+	editor_name = "#ita_truck_ammo_editor_name"
+
+	[BodyComponent]
+	{
+		health = 500
+		defense = 2
+	}
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = ammo
+	}
+	
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 75
+
+		[Production]
+		ammo = 24
+
+		[Upkeep]
+		building_limit_consumed = 1
+	}
+	
+	[MobileDeploymentComponent]
+	{
+	
+		unpack_to_actor_ids = ita_depot_ammo
+		
+		packed_position_offset = 0,0
+		packed_orientation = 1,0
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 3
+
+		;; ids of the trailer actor
+		trailer_actor = ita_trailer_ammo
+
+		[TrailerHitch]
+		{		
+			;; node name and node offset of the truck's hitch
+			node_ids = hitch
+			node_offset = 0, -1.7, .5
+		}
+	}
+
+	[View]
+	{
+		resource_prefix = itaTruck/itaTruck
+		icon = /UI/Game/BuildingButtons/IconDepotAmmo.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = ita_truck_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = depot_ammo_select
+	}
+}

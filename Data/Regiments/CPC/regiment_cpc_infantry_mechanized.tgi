@@ -1,0 +1,60 @@
+[Thing Template=AACPCOrganizationMobile]
+{
+	IDS = regiment_cpc_infantry_mechanized
+	name = "#regiment_cpc_infantry_mechanized_name"
+	editor_name = "#regiment_cpc_infantry_mechanized_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 150
+		
+		[Upkeep]
+		ammo = 20
+		oil = 15
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CPC/CPCInfantry/CPCInfantry
+		icon = /UI/Game/RegimentButtons/IconInfantryMechanized.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_infantry_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+
+		[Slot]	;; front
+		element_IDS = rus_airborne_vehicle
+		
+		[Slot]	;; rear guard 1
+		element_IDS = rus_airborne_vehicle
+
+		[Slot]	;; rear guard 2
+		element_IDS = rus_airborne_vehicle
+		
+		[Slot]	;; rear guard 3
+		element_IDS = rus_airborne_vehicle
+	
+		[Slot]	;; flank
+		element_IDS = cpc_Antitank_gun
+		
+		[Slot]	;; captain
+		element_IDS = cpc_Antitank_gun
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = mechanized_company
+	}
+}

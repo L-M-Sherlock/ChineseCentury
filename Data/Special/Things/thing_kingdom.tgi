@@ -1,0 +1,31 @@
+; Kingdom thing
+[Thing Template=Actor]
+{
+	IDS = kingdom
+	name = "#thing_kingdom_kingdom_name"
+	category = KINGDOM
+
+	[Flags]
+	blocking = false
+	ethereal = true
+	invisible = true
+	invulnerable = true
+	targetable = true
+
+	[Size]
+	height = 0
+	blocking_shape = POINT
+
+	[View]
+	resource_prefix = NULL
+
+	[PropertiesComponent]
+}
+
+; Team thing
+[Thing template=Thing]
+{
+	IDS = team
+	name = "#thing_kingdom_team_name"
+	category = TEAM
+}

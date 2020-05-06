@@ -1,0 +1,79 @@
+[template OrganizationComponent]
+{
+	;; determines whether organization can resupply its elements
+	;; HACK: default value here until in all the data
+	flag	supply_used = true
+
+	;; priority used to placement element in appropriate group position (0 is lowest).
+	;; NOTE: if non-zero this overrides the group_priority specified by the units.
+	int	company_group_priority = 0
+
+	;; Average loss of health per second due to an upkeep shortage (actually is rate*health_max).
+	;; This applies to all elements simultaneously unlike resupply_rate (which is one at a time).
+	fixed	shortfall_damage_rate = 0.01
+
+	string	layout_IDS
+	fixed	entrenchment_time
+	
+	;; Radius of control zone.
+	fixed	control_range = 8.0
+
+	;; Radius of organization's operational range.
+	fixed	operational_range = 10.0
+
+	;; Organization routs when its current morale reaches this.
+	fixed	morale_breakpoint = 5.0
+	
+	;; drp020503 - obsolete, morale defined by elements
+	;;fixed	morale_max
+
+	;; These Slots are in the same order as the layout. 
+	;; element_IDS = 'null' means by default the slot is empty
+
+	;; does the organization rampage when it has no denizen home
+	flag	rampages = false
+	
+	;; What are the odds that when getting to a waypoint, the company will stop and take a breather
+	;; [0%-100%]
+	fixed	rampage_wait_chance = 25%
+	
+	;; How many points should the rampaging company attempt to score. More points negatively affects
+	;; performance, but increases odds that the resulting answer are actually within the direction
+	;; and distance ranges. 
+	;; [0, inf)
+	int		rampage_points_to_try = 50
+	
+	;; What is the preferred direction of travel, relative to the direction the organization is currently
+	;; traveling. (Min and Max, in degrees). The second number should be larger than the first.
+	;; [-180, N), (N, 180]
+	point2	rampage_direction = -90, 90
+	
+	;; What is the preferred distance of travel? IE, how far should this organization travel before
+	;; potentially resting (and picking a new destination.) Specified as Min, and Max, Max should
+	;; be greater than Min.
+	;; [0, N), (N, inf)
+	point2	rampage_distance = 10, 40
+	
+	;; If more than this percentage of the organization becomes detached, the organization will 
+	;; pause until that unit regroups with his friends; prevents the group from becoming split up
+	;; [0%-100%]
+	fixed	rampage_max_detached_ratio = 50%
+	
+	;; Specifies whether the organization is aggressive during its rampage or not. Examples of a 
+	;; non-aggressive rampage are Elk (for instance), who should not attack units they come in 
+	;; contact with. 
+	;; (false, true)
+	flag	rampage_aggressive = true
+
+	;; recruit time for organization
+	fixed	recruit_time = 0
+
+	;; are all organization elements recruited at the same time
+	bool	recruit_full = false
+
+	;; can the organization be in supply when not attached to an HQ
+	bool	in_supply_detached = true
+
+	[list Slot]
+	string	element_IDS
+}

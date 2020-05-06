@@ -1,0 +1,133 @@
+
+;;------------------------------------------------------
+
+[Thing Template=AAUnitUSAKneel]
+{
+	IDS = usa_infantry_dummy
+	name = "#usa_infantry_flame_name"
+	editor_name = "#usa_infantry_dummy_editor_name"
+
+	[BodyComponent]
+	{
+		health = 100
+		defense = 1
+	}
+	
+	[MoverComponent]
+	{
+		speed_max = 2
+	}
+
+	[ElementComponent]
+	{
+		required_properties = tech_usa_infantry_dummy
+	}
+
+	[Placement]
+	placement_group_ids = null
+	
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+	}
+	
+	[PerformerComponent]
+	{
+		
+		[Ability Template=AAAttackLocal]
+		{
+			idle_animation = idleattack
+			spawn_bone_ids = gun_ae_01
+				
+			[AbilityDefinition Template=AAInfantrySMG]
+			{
+				name = "#rus_paratrooper_AbilityDefinition_name"
+				recharge_time = 2
+				range = 12
+			
+				[Effect Template=PierceDamageEffect]
+				amount = 12
+
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_rifle
+			}
+		}
+	}
+	
+	[View]
+	{
+		resource_prefix = USAInfantryFlame/USAInfantryFlame
+	}
+	
+;;----------------------------- Animation Files -------------------------
+	
+	[CharacterComponent]
+	{
+		[Animation Template=MoveAnimation]
+		IDS = walk
+		kf = USAInfantryFlame/USAInfantryFlameWalk.kf ;re-exported 4/9/04
+		walk_distance = 1.3
+				
+		[Animation Template=MoveAnimation]
+		IDS = jog
+		kf = USAInfantryFlame/USAInfantryFlameJog.kf ;re-exported 4/9/04
+		walk_distance = 2.0
+		
+		[Animation Template=IdleAnimation]
+		IDS = idle
+		kf = USAInfantryFlame/USAInfantryFlameIdle.kf ;re-exported 4/9/04
+
+		[Animation Template=IdleAnimation]
+		IDS = idleattack
+		kf = USAInfantryFlame/USAInfantryFlameIdleAttack.kf ;re-exported 4/9/04
+		
+		[Animation Template=FidgetAnimation]
+		IDS = fidget1
+		kf = USAInfantryFlame/USAInfantryFlameFidget1.kf ;re-exported 4/9/04
+				
+		[Animation Template=FidgetAnimation]
+		IDS = fidget2
+		kf = USAInfantryFlame/USAInfantryFlameFidget2.kf ;re-exported 4/9/04
+				
+		[Animation Template=DieAnimation]
+		{
+			IDS = die1
+			kf = USAInfantryFlame/USAInfantryFlameDie1.kf ;re-exported 4/9/04
+		}
+				
+		[Animation Template=AttackAnimation]
+		IDS = attack1
+		kf = USAInfantryFlame/USAInfantryFlameAttack1.kf ;re-exported 4/9/04
+		key_ratio = 0.0
+		
+		[AspectAnimationSet]
+		{
+			aspect_ids = kneel
+				
+			[Animation Template=MoveAnimation]
+			{
+				IDS = jogkneel
+				kf = USAInfantryFlame/USAInfantryFlameJogKneel.kf ;re-exported 4/9/04
+				walk_distance = 2
+			}
+		
+			[Animation Template=IdleAnimation]
+			{
+				IDS = idleattackkneel
+				kf = USAInfantryFlame/USAInfantryFlameIdleAttackKneel.kf ;re-exported 4/9/04
+			}	
+				
+			[Animation Template=AttackAnimation]
+			{
+				IDS = attack1kneel
+				kf = USAInfantryFlame/USAInfantryFlameAttack1Kneel.kf ;re-exported 4/9/04
+				key_ratio = 0.0
+			}
+		}
+						
+	}
+}

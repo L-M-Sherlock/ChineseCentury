@@ -1,0 +1,33 @@
+
+[Thing Template=AAArcticDoodad]
+{
+	IDS = arctic_riverside
+	name = "#arctic_riverside_name"
+	
+	[Flags]
+	ethereal = true
+	random_orientation = false	
+	water_based = true
+	
+	[Size]
+	scale_min = 1.00
+	scale_max = 1.00
+	
+	[View]
+	{
+		resource_prefix = ArcticRiverside/ArcticRiverside
+		shadow_texture = null
+		
+		[Aspect Template=Aspect]
+		IDS = arctic_riverside01
+		model = %s01.nif
+
+		[Aspect Template=Aspect]
+		IDS = arctic_riverside02
+		model = %s02.nif
+
+		[Aspect Template=Aspect]
+		IDS = arctic_riverside03
+		model = %s03.nif
+	}
+}

@@ -1,0 +1,28 @@
+/**************************************************************************
+
+template_cursor.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: Describes a cursor available for rendering.
+
+REVISION HISTORY:
+drp030203 - created
+
+USAGE:
+
+EXAMPLES:
+	
+**************************************************************************/
+
+[template Cursor]
+{
+	string ids
+	localized name
+	
+	flag	is_looping = false
+	int		loop_length_ms = 100
+	point2	hotspot_offset = 2, 2	
+	
+	;; This filename can contain a %d for where to put the numbers.
+	string	frame_filename
+}

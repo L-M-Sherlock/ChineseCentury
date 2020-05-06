@@ -1,0 +1,50 @@
+/**************************************************************************
+
+template_animation_AA.tgi
+Copyright © 2002 TimeGate Studios
+
+DESCRIPTION: A&A specific animations.
+
+REVISION HISTORY:
+drp090602 - created
+
+USAGE:
+
+	[Animation Template=AttackAnimation]
+	[Animation Template=ProjectileAttackAnimation]
+	[Animation Template=AttackIdleAnimation]		
+	[Animation Template=ProjectileIdleAnimation]		
+	
+FIELDS:
+	
+**************************************************************************/
+
+[Template AttackAnimation Template=AbilityAnimation]
+length = 1
+
+[Template ProjectileAttackAnimation Template=AbilityAnimation]
+length = 1.5	
+
+[Template AttackIdleAnimation Template=IdleAnimation]
+length = 0.5
+animation_blend = true
+sister_anim_type = ABILITY	
+
+[Template ProjectileIdleAnimation Template=IdleAnimation]
+length = 1.5
+animation_blend = true
+sister_anim_type = ABILITY
+
+[Template FallingIdleAnimation Template=IdleAnimation]
+length = 2
+
+[Template AnimationRandomAudio Template=ObjectAnimationRandom]
+{
+	;; brw0090304 - DO NOT CHANGE ANIMATION IDS
+	;; the template_doodad_aa.tgi for the dynamic doodad references this animation of this kf
+	IDS = speaker
+	kf = Speaker/Speaker.kf
+
+	start_min = 20
+	start_max = 60
+}

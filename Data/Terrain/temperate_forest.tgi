@@ -1,0 +1,566 @@
+
+[Biome template=Biome]
+{
+	IDS = temperate_forest
+	name = "#temperate_forest_name"
+	detail_texture = /Textures/Beauty/detail.dds
+	macro_texture = /Textures/Beauty/macro.dds
+	
+	[CloudInfo]
+	{
+		cloud_texture = /Textures/clouds/CloudMapMedium.tga
+		cloud_scale = 128.0, 128.0
+
+		cloud_movement_direction = 1,0.5
+		
+		cloud_max_delta_velocity_per_sec = 0.02
+		cloud_min_velocity = 0.3
+		cloud_max_velocity = 0.6
+	}
+
+/*************************	    TERRAINS		**************************/
+
+	[Terrain]
+	terrain_IDS = temperate_grass
+
+	[Terrain]
+	terrain_IDS = temperate_grasstrans
+
+	[Terrain]
+	terrain_IDS = temperate_city
+
+	[Terrain]
+	terrain_IDS = temperate_citytrans
+
+	[Terrain]
+	terrain_IDS = temperate_cliffwhite
+
+	[Terrain]
+	terrain_IDS = temperate_crops
+
+	[Terrain]
+	terrain_IDS = temperate_dirtdark
+	
+	[Terrain]
+	terrain_IDS = temperate_dirtdarktrans
+
+	[Terrain]
+	terrain_IDS = temperate_forestdeciduous
+	
+	[Terrain]
+	terrain_IDS = temperate_forestconiferous
+	
+	[Terrain]
+	terrain_IDS = temperate_grassdry
+
+	[Terrain]
+	terrain_IDS = temperate_grassdrytrans
+
+	[Terrain]
+	terrain_IDS = temperate_mountain
+
+	[Terrain]
+	terrain_IDS = temperate_mountainpeak
+
+	[Terrain]
+	terrain_IDS = temperate_mountaintrans
+
+	[Terrain]
+	terrain_IDS = temperate_shore
+
+	[Terrain]
+	terrain_IDS = temperate_shoretrans
+
+	[Terrain]
+	terrain_IDS = temperate_ocean
+
+	[Terrain]
+	terrain_IDS = temperate_river
+
+	[Terrain]
+	terrain_IDS = temperate_riverfordable
+
+	[Terrain]
+	terrain_IDS = temperate_shallows
+
+/*************************	    TRANSITION SETS		**************************/
+
+	[TransitionSet]
+	set_IDS = transition_set_global_01
+
+/*************************	    CITY TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = temperate_city
+	terrain2_IDS = temperate_forestconiferous
+	variation_IDS = temperate_cityforestconiferoustrans01
+
+	[Transition]
+	terrain1_IDS = temperate_city
+	terrain2_IDS = temperate_dirtdark
+	variation_IDS = temperate_citydirtdarktrans01
+
+	[Transition]
+	terrain1_IDS = temperate_city
+	terrain2_IDS = temperate_forestdeciduous
+	variation_IDS = temperate_cityforestdeciduoustrans01
+
+	[Transition]
+	terrain1_IDS = temperate_city
+	terrain2_IDS = temperate_grassdry
+	variation_IDS = temperate_citygrassdrytrans01
+
+	[Transition]
+	terrain1_IDS = temperate_city
+	terrain2_IDS = temperate_grass
+	variation_IDS = temperate_citygrasstrans01
+
+/*************************	    DARK DIRT TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = temperate_dirtdark
+	terrain2_IDS = temperate_forestconiferous
+	variation_IDS = temperate_dirtdarkforestconiferoustrans01
+
+	[Transition]
+	terrain1_IDS = temperate_dirtdark
+	terrain2_IDS = temperate_forestdeciduous
+	variation_IDS = temperate_dirtdarkforestdeciduoustrans01
+
+	[Transition]
+	terrain1_IDS = temperate_dirtdark
+	terrain2_IDS = temperate_grassdry
+	variation_IDS = temperate_dirtdarkgrassdrytrans01
+
+	[Transition]
+	terrain1_IDS = temperate_dirtdark
+	terrain2_IDS = temperate_grass
+	variation_IDS = temperate_dirtdarkgrasstrans01
+
+/*************************	    GRASS TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = temperate_grass
+	terrain2_IDS = temperate_cliffwhite
+	variation_IDS = temperate_grasscliffwhitetrans01
+
+	[Transition]
+	terrain1_IDS = temperate_grass
+	terrain2_IDS = temperate_forestconiferous
+	variation_IDS = temperate_grassforestconiferoustrans01
+
+	[Transition]
+	terrain1_IDS = temperate_grass
+	terrain2_IDS = temperate_forestdeciduous
+	variation_IDS = temperate_grassforestdeciduoustrans01
+
+	[Transition]
+	terrain1_IDS = temperate_grass
+	terrain2_IDS = temperate_grassdry
+	variation_IDS = temperate_grassgrassdrytrans01
+
+	[Transition]
+	terrain1_IDS = temperate_grass
+	terrain2_IDS = temperate_shore
+	variation_IDS = temperate_grassshoretrans01
+
+/*************************    DRY GRASS TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = temperate_grassdry
+	terrain2_IDS = temperate_forestconiferous
+	variation_IDS = temperate_grassdryforestconiferoustrans01
+
+	[Transition]
+	terrain1_IDS = temperate_grassdry
+	terrain2_IDS = temperate_forestdeciduous
+	variation_IDS = temperate_grassdryforestdeciduoustrans01
+
+/*************************	    MOUNTAIN TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = temperate_mountain
+	terrain2_IDS = temperate_city
+	variation_IDS = temperate_mountaincitytrans01
+
+	[Transition]
+	terrain1_IDS = temperate_mountain
+	terrain2_IDS = temperate_forestconiferous
+	variation_IDS = temperate_mountainforestconiferoustrans01
+
+	[Transition]
+	terrain1_IDS = temperate_mountain
+	terrain2_IDS = temperate_forestdeciduous
+	variation_IDS = temperate_mountainforestdeciduoustrans01
+
+	[Transition]
+	terrain1_IDS = temperate_mountain
+	terrain2_IDS = temperate_grassdry
+	variation_IDS = temperate_mountaingrassdrytrans01
+
+	[Transition]
+	terrain1_IDS = temperate_mountain
+	terrain2_IDS = temperate_grass
+	variation_IDS = temperate_mountaingrasstrans01
+
+/*************************	    MOUNTAIN PEAK TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_city
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_citytrans
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_crops
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_dirtdark
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_dirtdarktrans
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_forestconiferous
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_forestdeciduous
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_grass
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_grassdry
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_grasstrans
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_mountaintrans
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_shore
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_ocean
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_river
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_riverfordable
+	variation_IDS = temperate_mountain01
+
+	[Transition]
+	terrain1_IDS = temperate_mountainpeak
+	terrain2_IDS = temperate_shallows
+	variation_IDS = temperate_mountain01
+
+/*************************	    SHORE TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = temperate_shore
+	terrain2_IDS = temperate_forestconiferous
+	variation_IDS = temperate_shoreforestconiferoustrans01
+
+	[Transition]
+	terrain1_IDS = temperate_shore
+	terrain2_IDS = temperate_forestdeciduous
+	variation_IDS = temperate_shoreforestdeciduoustrans01
+
+	[Transition]
+	terrain1_IDS = temperate_shore
+	terrain2_IDS = temperate_grassdry
+	variation_IDS = temperate_shoregrassdrytrans01
+
+/*************************	    OCEAN TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = temperate_ocean
+	terrain2_IDS = temperate_city
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_ocean
+	terrain2_IDS = temperate_citytrans
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_ocean
+	terrain2_IDS = temperate_crops
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_ocean
+	terrain2_IDS = temperate_dirtdark
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_ocean
+	terrain2_IDS = temperate_dirtdarktrans
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_ocean
+	terrain2_IDS = temperate_forestdeciduous
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_ocean
+	terrain2_IDS = temperate_forestconiferous
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_ocean
+	terrain2_IDS = temperate_grass
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_ocean
+	terrain2_IDS = temperate_grassdry
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_ocean
+	terrain2_IDS = temperate_grasstrans
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_ocean
+	terrain2_IDS = temperate_mountainpeak
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_ocean
+	terrain2_IDS = temperate_mountaintrans
+	variation_IDS = temperate_shore02
+
+/*************************	    RIVER TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = temperate_river
+	terrain2_IDS = temperate_city
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_river
+	terrain2_IDS = temperate_citytrans
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_river
+	terrain2_IDS = temperate_crops
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_river
+	terrain2_IDS = temperate_dirtdark
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_river
+	terrain2_IDS = temperate_dirtdarktrans
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_river
+	terrain2_IDS = temperate_forestdeciduous
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_river
+	terrain2_IDS = temperate_forestconiferous
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_river
+	terrain2_IDS = temperate_grass
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_river
+	terrain2_IDS = temperate_grassdry
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_river
+	terrain2_IDS = temperate_grasstrans
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_river
+	terrain2_IDS = temperate_mountainpeak
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_river
+	terrain2_IDS = temperate_mountaintrans
+	variation_IDS = temperate_shore02
+
+/*************************	    FORDABLE RIVER TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = temperate_riverfordable
+	terrain2_IDS = temperate_city
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_riverfordable
+	terrain2_IDS = temperate_citytrans
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_riverfordable
+	terrain2_IDS = temperate_crops
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_riverfordable
+	terrain2_IDS = temperate_dirtdark
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_riverfordable
+	terrain2_IDS = temperate_dirtdarktrans
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_riverfordable
+	terrain2_IDS = temperate_forestdeciduous
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_riverfordable
+	terrain2_IDS = temperate_forestconiferous
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_riverfordable
+	terrain2_IDS = temperate_grass
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_riverfordable
+	terrain2_IDS = temperate_grassdry
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_riverfordable
+	terrain2_IDS = temperate_grasstrans
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_riverfordable
+	terrain2_IDS = temperate_mountainpeak
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_riverfordable
+	terrain2_IDS = temperate_mountaintrans
+	variation_IDS = temperate_shore02
+
+/*************************	    SHALLOWS TRANSITIONS    *************************/
+
+	[Transition]
+	terrain1_IDS = temperate_shallows
+	terrain2_IDS = temperate_city
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_shallows
+	terrain2_IDS = temperate_citytrans
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_shallows
+	terrain2_IDS = temperate_crops
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_shallows
+	terrain2_IDS = temperate_dirtdark
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_shallows
+	terrain2_IDS = temperate_dirtdarktrans
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_shallows
+	terrain2_IDS = temperate_forestdeciduous
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_shallows
+	terrain2_IDS = temperate_forestconiferous
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_shallows
+	terrain2_IDS = temperate_grass
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_shallows
+	terrain2_IDS = temperate_grassdry
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_shallows
+	terrain2_IDS = temperate_grasstrans
+	variation_IDS = temperate_shore02
+
+	[Transition]
+	terrain1_IDS = temperate_shallows
+	terrain2_IDS = temperate_mountainpeak
+	variation_IDS = temperate_shore01
+
+	[Transition]
+	terrain1_IDS = temperate_shallows
+	terrain2_IDS = temperate_mountaintrans
+	variation_IDS = temperate_shore02
+
+/*************************	    WATER INFO    *************************/
+
+	[WaterInfo Template=AATemperateWaterInfo]
+	terrain_ids = temperate_ocean
+	
+	[WaterInfo Template=AATemperateWaterInfo]
+	terrain_ids = temperate_shallows
+
+	[WaterInfo Template=AATemperateWaterInfo]
+	terrain_ids = temperate_river
+
+	[WaterInfo Template=AATemperateWaterInfo]
+	terrain_IDS = temperate_riverfordable	
+}

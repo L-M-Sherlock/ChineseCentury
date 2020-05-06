@@ -1,0 +1,42 @@
+[template ElementComponent]
+{
+	;; morale it contributes to its organization
+	fixed	morale_value
+
+	;; priority used to placement element in appropriate group position (0 lowest, increases with
+	;; importance)
+	int		group_priority = 0
+	
+	;; rate at which it resupplies, 0 = never, 1 = 1 second, 0.05 = 20 seconds
+	fixed	resupply_rate = 0
+
+	;; comma-delimited list of IDS values of structures and properties this element requires
+	string required_structures = NULL
+	string required_properties = NULL
+
+	;; icon for the actor display when this is in a DenizenComponent's inventory
+	string denizen_type = NULL
+
+	;; UAI behavior
+	;;  preferred_action = MOVE, WAIT, OK (which means don't care)
+	;; pcb090203 - Replaced with ability priority system.
+	;;string preferred_action = MOVE
+
+	;; (optional) if the primary's health falls below this minimum, it will return to it's
+	;; position (specified as percentage, with 1 being 100%)
+	fixed	primary_minimum_health = 0
+
+	;; (optional) if the primary's time to death falls below this number, it will return to it's
+	;; position (specified in seconds)
+	fixed	primary_time_to_death = 0
+
+	;; determines whether element (if hero) can be randomly assigned by random map generator
+	;; or hero trigger
+	flag	random_hero = true
+
+	;;;;;; SUPPORT PROPERTIES
+	;; TODO: load in code
+
+	;; support properties that are shared
+	[list SupportProperty template=PropertyReference]
+}

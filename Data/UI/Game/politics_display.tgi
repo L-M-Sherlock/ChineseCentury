@@ -1,0 +1,68 @@
+[PoliticsDisplay Inherit=PanelWidget]
+{
+	glyph_ally = ch_ally	
+	glyph_enemy = ch_enemy	
+	glyph_neutral = ch_neutral
+
+	offset_top = 20
+	offset_bottom = 20
+	separation = 3
+
+	offset_relation = 161
+
+	transparency = 0
+
+	[View Template=GroupVE]
+	{
+		;; NOTE: the top will be adjusted by the code based on the number of labels displayed
+		;; cwp062304 - Not True for A&A.  We have an AVar to set the panel to expand down.  Now the bottom
+		;; will be adjusted by the code on the number of labels displayed.
+		L = 800
+		T = 0
+		R = 100%
+	}
+
+	[Background Template=DecalWidget]
+	{
+		[View Template=GroupVE]
+		{
+			[Child Template = SharedTooltipChildPanelVE]
+		}
+
+		[Decal Template=DecalVE]
+		{	
+			;; the backgroup decal is completely click-through
+			client_L = 0%
+			client_T = 0%
+			client_R = 0%
+			client_B = 0%
+			
+			alpha_blending = true
+			
+			color = 0,0,0
+		}
+	}
+
+	[Label Template=LabelWidget]
+	{
+		tooltip = "#politics_display_Label_tooltip"
+
+		[View Template=NoVE]
+		{
+			L = 23
+			R = +188
+			B = +15
+		}
+
+		[Label Template = SharedTinyLeftLabelVE]
+		{
+			;; the label is completely click-through
+			client_L = 0%
+			client_T = 0%
+			client_R = 100%
+			client_B = 100%
+
+			text = ""
+		}
+	}
+}

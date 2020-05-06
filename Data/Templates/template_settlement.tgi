@@ -1,0 +1,47 @@
+/**************************************************************************
+
+template_settlement.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: a partially intangible actor used to group, control, and coordinate
+		a group of actors (expected to be of type structure).
+
+REVISION HISTORY:
+drp102502 - created
+pcb021003 - updated
+
+USAGE:
+
+	[Thing Template=Settlement]
+	This node goes at the root level and defines a settlement that can be instantiated in the game.
+	
+**************************************************************************/
+
+[Template Settlement Inherit=Actor]
+{
+	category = SETTLEMENT
+
+	[Flags]
+	{
+		blocking = false
+		ethereal = true
+	}
+
+	[View]
+	{
+		shadow_texture = null
+		icon = null
+	}
+	
+	[PropertiesComponent]
+	[SettlementComponent]
+	{
+		;; this is used when the organization editor is opened without having
+		;; an organization to work with, like from "Create Custom Company". It
+		;; is what the org editor will use for a blank layout until the user clicks
+		;; on an element to add to the layout, at which point it will change the layout to
+		;; an organization actordata's default layout that can take that element.
+		string default_layout_ids
+	}
+	[RecruitComponent]
+}

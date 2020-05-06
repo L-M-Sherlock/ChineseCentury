@@ -1,0 +1,23 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = rus_sabotage
+	name = "#rus_sabotage_name"
+	description = "#rus_sabotage_description"
+	recharge_time = 240
+	range = 0
+
+	icon = /UI/%s/Game/SpecialOps/IconSabotage.png
+	
+	[Flags]
+	target_location = true
+	summon_multiple = true
+
+	[Effect Template=SummonEffect]
+	object_ids = regiment_rus_saboteur
+}

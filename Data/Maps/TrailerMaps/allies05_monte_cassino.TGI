@@ -1,0 +1,15 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "Road to Rome"
+
+	kingdom_1 = "Germany"
+	kingdom_0 = "Allies"
+	name_8643 = "Rome"
+	name_8651 = "Anzio"
+	map_description = "With Sicily in Allied hands, Italy has been invaded and has dropped out of the war.  The Germans have taken over the defense of Italy and, aided by the rugged Italian terrain, have stalled the Allied advance, allowing the bulk of Hitler's troops to maintain the Eastern front.  The Allies must take the historic monastery of Monte Cassino to break the German defenses.  In an effort to outflank their enemies, the Allies have planned an amphibious landing at Anzio to threaten the heart of Italy: Rome.  Land at Anzio and breakout past Monte Cassino to take Rome."
+	independent_2 = "Civilian"
+	map_name = "Road to Rome"
+	objective_1 = "Capture and hold Rome."
+	objective_0 = "Capture and hold Anzio."
+}

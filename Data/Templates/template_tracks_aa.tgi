@@ -1,0 +1,514 @@
+/**************************************************************************
+
+template_tracks_AA.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: X
+ 
+REVISION HISTORY:
+ick092603 - created
+
+
+**************************************************************************/
+
+;;--------------------------------------------------- Biped ---
+[template AATracksBipedRight template=Tracks]
+{
+	track_type = DISCRETE
+	track_texture = /Effects/Tracks/footstep.tga
+	track_texture_mirrored = true		
+	track_offset = 0.1, -0.1
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 50%	
+}
+
+[template AATracksBipedLeft template=Tracks]
+{
+	track_type = DISCRETE
+	track_texture = /Effects/Tracks/footstep.tga
+	track_texture_mirrored = false		
+	track_offset = -0.1, -0.1
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 100%	
+}
+
+
+;;--------------------------------------------------- Halftrack --
+[template AATracksHalftrackFrontRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.38, 1.0
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 0%
+}
+
+[template AATracksHalftrackFrontLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.38, 1.0
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 0%
+}
+
+[template AATracksHalftrackBackRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.40, -0.4
+	track_size = 0.35, 0.35
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+[template AATracksHalftrackBackLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.40, -0.4
+	track_size = 0.35, 0.35
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+;;--------------------------------------------------- Halftrack 2--
+[template AATracksHalftrack2FrontRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.52, 1.25
+	track_size = 0.30, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 0%
+}
+
+[template AATracksHalftrack2FrontLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.52, 1.25
+	track_size = 0.30, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 0%
+}
+
+[template AATracksHalftrack2BackRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.52, -0.4
+	track_size = 0.35, 0.35
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+[template AATracksHalftrack2BackLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.52, -0.4
+	track_size = 0.35, 0.35
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+;;--------------------------------------------------- Truck (6 Wheels)--
+[template AATracksTruckFrontRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.40, 1.35
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 0%
+}
+
+[template AATracksTruckFrontLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.40, 1.35
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 0%
+}
+
+[template AATracksTruckBackRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.40, -0.45
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+[template AATracksTruckBackLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.40, -0.45
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+[template AATracksTruckBackRight2 template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.40, -0.75
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+[template AATracksTruckBackLeft2 template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.40, -0.75
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+;;--------------------------------------------------- Jeep --
+[template AATracksJeepFrontRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.40, 0.85
+	track_size = 0.17, 0.17
+	float fade_sec = 4
+	track_placement_pcg = 0%
+}
+
+[template AATracksJeepFrontLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.40, 0.85
+	track_size = 0.17, 0.17
+	float fade_sec = 4
+	track_placement_pcg = 0%
+}
+
+[template AATracksJeepBackRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.45, -0.5
+	track_size = 0.17, 0.17
+	float fade_sec = 4
+	track_placement_pcg = 100%
+}
+
+[template AATracksJeepBackLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.45, -0.5
+	track_size = 0.17, 0.17
+	float fade_sec = 4
+	track_placement_pcg = 100%
+}
+
+;;--------------------------------------------------- Jeep 2--
+[template AATracksJeep2FrontRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.35, 0.85
+	track_size = 0.17, 0.17
+	float fade_sec = 4
+	track_placement_pcg = 0%
+}
+
+[template AATracksJeep2FrontLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.35, 0.85
+	track_size = 0.17, 0.17
+	float fade_sec = 4
+	track_placement_pcg = 0%
+}
+
+[template AATracksJeep2BackRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.4, -0.5
+	track_size = 0.17, 0.17
+	float fade_sec = 4
+	track_placement_pcg = 100%
+}
+
+[template AATracksJeep2BackLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.4, -0.5
+	track_size = 0.17, 0.17
+	float fade_sec = 4
+	track_placement_pcg = 100%
+}
+
+;;--------------------------------------------------- Jeep 3--
+[template AATracksJeep3FrontRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.45, 0.85
+	track_size = 0.17, 0.17
+	float fade_sec = 4
+	track_placement_pcg = 0%
+}
+
+[template AATracksJeep3FrontLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.45, 0.85
+	track_size = 0.17, 0.17
+	float fade_sec = 4
+	track_placement_pcg = 0%
+}
+
+[template AATracksJeep3BackRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.5, -0.5
+	track_size = 0.17, 0.17
+	float fade_sec = 4
+	track_placement_pcg = 100%
+}
+
+[template AATracksJeep3BackLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/tiretracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.5, -0.5
+	track_size = 0.17, 0.17
+	float fade_sec = 4
+	track_placement_pcg = 100%
+}
+
+;;--------------------------------------------------- Tiny Tank --
+[template AATracksTinyTankLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.29, -0.25
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+[template AATracksTinyTankRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.29, -0.25
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 83%
+}
+
+;;--------------------------------------------------- Light Tank --
+[template AATracksLightTankLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.52, -0.5
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+[template AATracksLightTankRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.52, -0.5
+	track_size = 0.25, 0.25
+	float fade_sec = 4
+	track_placement_pcg = 83%
+}
+
+;;--------------------------------------------------- Light Tank 2 --
+[template AATracksLightTank2Left template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.59, -0.5
+	track_size = 0.34, 0.34
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+[template AATracksLightTank2Right template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.59, -0.5
+	track_size = 0.34, 0.34
+	float fade_sec = 4
+	track_placement_pcg = 83%
+}
+
+;;--------------------------------------------------- Medium Tank --
+[template AATracksMediumTankLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.6, -0.5
+	track_size = 0.36, 0.36
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+[template AATracksMediumTankRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.6, -0.5
+	track_size = 0.36, 0.36
+	float fade_sec = 4
+	track_placement_pcg = 83%
+}
+
+;;--------------------------------------------------- Medium Tank 2--
+[template AATracksMediumTank2Left template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.65, -0.5
+	track_size = 0.4, 0.4
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+[template AATracksMediumTank2Right template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.65, -0.5
+	track_size = 0.4, 0.4
+	float fade_sec = 4
+	track_placement_pcg = 83%
+}
+
+;;--------------------------------------------------- Medium Tank 3--
+[template AATracksMediumTank3Left template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.68, -0.5
+	track_size = 0.4, 0.4
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+[template AATracksMediumTank3Right template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.68, -0.5
+	track_size = 0.4, 0.4
+	float fade_sec = 4
+	track_placement_pcg = 83%
+}
+
+;;--------------------------------------------------- Medium Tank 4--
+;; This is for the screwed up German Command Tank that has screwed up treads.
+[template AATracksMediumTank4Left template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.79, -0.5
+	track_size = 0.37, 0.37
+	float fade_sec = 4
+	track_placement_pcg = 65%
+}
+
+[template AATracksMediumTank4Right template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.73, -0.5
+	track_size = 0.37, 0.37
+	float fade_sec = 4
+	track_placement_pcg = 83%
+}
+
+;;--------------------------------------------------- Heavy Tank --
+[template AATracksHeavyTankLeft template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = -0.78, -0.5
+	track_size = 0.43, 0.43
+	float fade_sec = 5
+	track_placement_pcg = 65%
+}
+
+[template AATracksHeavyTankRight template=Tracks]
+{
+	track_type = CONTINUOUS
+	track_texture = /Effects/Tracks/treadtracks.tga
+	track_texture_mirrored = false
+	track_offset = 0.78, -0.5
+	track_size = 0.43, 0.43
+	float fade_sec = 5
+	track_placement_pcg = 83%
+}
+

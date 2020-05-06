@@ -1,0 +1,199 @@
+[Nation template=Nation]
+{
+	ids = nation_cpc
+	name = "#cpc_name"
+	game_music = cpc_ambient
+	placement_group_IDS = group_nation_cpc
+
+	string loading_texture_left = CPC/SplashScreenLeft.png
+	string loading_texture_right = CPC/SplashScreenRight.png
+	
+	;; srp060104 - Added WAD to depot list.
+    depot_name = Skins/cpc.rwd,Skins/cpc/
+	;; depot_name = Skins/cpc/
+	
+	factions = zhude, pengdehuai, linbiao, liubocheng
+	resource_prefix = cpc/cpc
+	stats_icon = cpc/cpc.tga
+	flag_icon = /UI/%s/Default/Staging/FlagCPC.png
+
+	[Placeholder]
+	placeholder_IDS = placeholder_corpsunpacked
+	thing_ids = cpc_corps
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_airfield
+	thing_IDS = cpc_airfield
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_bunker
+	thing_IDS = cpc_bunker
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_bunker_antiaircraft
+	thing_IDS = cpc_bunker_aa
+	
+	[Placeholder]
+	placeholder_IDS = placeholder_bunker_artillery
+	thing_IDS = cpc_bunker_artillery
+
+	[Placeholder]
+	placeholder_IDS = placeholder_depot_supply
+	thing_IDS = cpc_truck_supply
+
+	[Badge]
+	badge_texture = CPC/CPCBadge01.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge02.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge03.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge04.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge05.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge06.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge07.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge08.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge09.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge10.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge11.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge12.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge13.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge14.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge15.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge16.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge17.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge18.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge19.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge20.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge21.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge22.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge23.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge24.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge25.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge26.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge27.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge28.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge29.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge30.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge31.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge32.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge33.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge34.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge35.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge36.png
+	
+	[Badge]
+	badge_texture = CPC/CPCBadge37.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge38.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge39.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge40.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge41.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge42.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge43.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge44.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge45.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge46.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge47.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge48.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge49.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge50.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge51.png
+
+	[Badge]
+	badge_texture = CPC/CPCBadge52.png
+}

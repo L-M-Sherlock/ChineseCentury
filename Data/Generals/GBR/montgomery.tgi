@@ -1,0 +1,42 @@
+[Thing Template=AAGeneralPortrait]
+{
+	ids = montgomery_portrait
+	name = "#montgomery_portrait_name"
+
+	[View]
+	{
+		resource_prefix = Montgomery/MontgomeryPortrait
+
+  		[AspectNormal]
+  		{  			
+  			[Animation Template=ObjectAnimationSelected]
+  			{
+  				ids = talk1
+				length = 3
+				
+				[PlaySFX]
+				sfx_ids = gbr_montgomery_select
+  			}
+		}
+	}
+}
+
+[Faction template=AAGeneral]
+{
+	ids = montgomery
+	name = "#montgomery_name"
+	description = "#montgomery_description"
+	staging_name = "#montgomery_staging_name"
+	icon_texture_ids = Montgomery/MontgomeryPortrait.tga
+	video_resource_ids = /Video/MetaGame/Portraits/GBR/Montgomery.bik
+	portrait_ids = montgomery_portrait
+
+	;; ---------------- SPECIAL OPERATIONS ------------------- ;;
+	[Ability Template=AASpecialOpCarpetBombGBR]
+	
+	[Ability Template=AASpecialOpCourage]
+
+	[Ability Template=AASpecialOpCodeBreaker]
+	
+	[Ability Template=AASpecialOpCorpsGBR]
+}

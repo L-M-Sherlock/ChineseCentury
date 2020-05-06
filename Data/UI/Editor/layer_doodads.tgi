@@ -1,0 +1,128 @@
+;; --------------------------- Editor Layer - Doodads -----------------------
+
+[EditorLayerDoodads Inherit=EditorPanel]
+{
+
+	[View]
+	{
+
+		[Child Template=GameListboxEditorArtworkGroupVE]
+		{
+			L = 38
+			T = 44
+			R = +146
+			B = +144			
+		}
+	}
+
+	[LayerCloseButton]
+	{
+		[View Template = EditorLayerCloseButtonVE]
+	}
+	
+	[PreviewWindow Template=EditorPreviewWindow]
+
+	[DoodadBiomeDropDown Template=EditorSilverDropDownWidget]
+	{
+		[View]
+		{
+			L = 13
+			T = 187
+			R = +194
+			B = +35
+		}
+		
+		
+	}
+
+	[DoodadAspect Template=LabelWidget]
+	{
+		[View Template=DecalVETiledHorizontal]
+		{
+			L = 13
+			T = 219
+			R = +196
+			B = +36
+
+			alpha_blending = true
+			ends_texture = /UI/%s/Editor/EditorEditBox/EditorEditBoxEnds.tga
+			center_texture = /UI/%s/Editor/EditorEditBox/EditorEditBoxCenter.tga		
+
+		}
+
+		[Label]
+		{
+			L = 20
+			T = 9
+		
+			text = ""
+			font = small
+			justify = LEFT
+		}
+	}
+
+	[DoodadAspectPrev Template=PushButtonWidget]
+	{
+		ToolTip = "#layer_doodads_DoodadAspectPrev_ToolTip"
+	
+		[View Template=GroupVE]
+		{
+			L = 160
+			T = 227
+			R = +20
+			B = +20
+		
+			[Child Template=DecalVE]
+			when = ENABLED + PRESSED
+			texture = /UI/%s/Default/Arrows/LeftPressed.png
+		
+			[Child Template=DecalVE]
+			when = ENABLED + UNPRESSED
+			texture = /UI/%s/Default/Arrows/LeftUnpressed.png
+		
+			[Child Template=DecalVE]
+			when = DISABLED
+			texture = /UI/%s/Default/Arrows/LeftDisabled.png
+		}
+	}
+
+	[DoodadAspectNext Template=PushButtonWidget]
+	{
+		ToolTip = "#layer_doodads_DoodadAspectNext_ToolTip"
+	
+		[View Template=GroupVE]
+		{
+			L = 180
+			T = 227
+			R = +20
+			B = +20
+		
+			[Child Template=DecalVE]
+			when = ENABLED + PRESSED
+			texture = /UI/%s/Default/Arrows/RightPressed.png
+		
+			[Child Template=DecalVE]
+			when = ENABLED + UNPRESSED
+			texture = /UI/%s/Default/Arrows/RightUnpressed.png
+		
+			[Child Template=DecalVE]
+			when = DISABLED
+			texture = /UI/%s/Default/Arrows/RightDisabled.png
+		}
+	}
+	
+	[DoodadListbox Template=EditorSharedListBoxWidget]
+	{	
+		num_visible_items = 25
+		resize_to_fit = false
+		
+
+		[View Template=GameListboxEditorArtworkGroupVE]
+		{
+			L = 13
+			T = 252
+			R = +196
+			B = +477
+		}
+	}
+}

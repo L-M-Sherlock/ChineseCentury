@@ -1,0 +1,93 @@
+[Template AAUnitCHNInfantry Template=AAUnitCHNProne]
+{
+	name = "#rus_infantry_name"
+
+	[View]
+	{	
+		resource_prefix = RUSInfantry/RUSInfantry
+
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+	
+	[BodyComponent]
+	health = 190
+	defense = 1
+
+	[ElementComponent]
+	{
+		required_properties = tech_rus_assistance
+	}
+
+	[CharacterComponent Template=AAInfantryCharacterComponent]
+
+	[MoverComponent]
+	speed_max = 2.5
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				name = "#rus_infantry_AbilityDefinition_name"
+				recharge_time = 3
+				range = 12
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 10
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_rifle
+			}
+		}
+		
+		[Ability Template=AAGrenadeLocal]
+		{
+			[AbilityDefinition Template=AAThrownGrenade]
+			{
+				name = "#rus_conscript_AbilityDefinition_name_2"
+				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
+				projectile_ids = molotov
+				
+				[Effect Template=FireDamageEffect]
+				amount = 20
+			}
+		}
+	}	
+}
+	
+[Thing Template=AAUnitCHNInfantry]
+{
+	IDS = chn_infantry_rus_amphib
+	editor_name = "#chn_infantry_rus_amphib_editor_name"
+
+	[Placement]
+	placement_group_ids = null
+
+	[ElementComponent]
+	required_properties = tech_battleship
+}
+
+[Thing Template=AAUnitCHNInfantry]
+{
+	IDS = chn_infantry_rus
+	editor_name = "#rus_infantry_editor_name"
+}

@@ -1,0 +1,98 @@
+[Thing Template=AAUnitCPCProne]
+{
+	IDS = cpc_infantry_sniper
+	name = "#cpc_infantry_sniper_name"
+	editor_name = "#cpc_infantry_sniper_editor_name"
+
+	hide_if_missing_properties = false
+		
+	[View]
+	{
+		resource_prefix = CPCInfantrySniper/CPCInfantrySniper
+
+		[Aspect Template=AspectFalling]
+		
+		[TextureSearchPath]
+		{
+			path = /effects/parachute/CPC
+		}
+	
+		[WhenCreated Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+	}
+	[WhenLeave Template=FXC_CreateVFX]
+	{
+		vfx_ids = parachute_close_cpc
+		actor_state = falling
+		location = neck
+	}
+	[BodyComponent]
+	health = 150
+	defense = 1
+
+	[CharacterComponent Template=AAInfantryCharacterComponent]
+
+	[MoverComponent]
+	speed_max = 4
+    acceleration = 2
+
+	[ElementComponent]
+	{
+           required_properties = tech_sniper_rifle
+	       morale_value = 2
+	}
+		
+	[PropertiesComponent]
+	{
+		[Property]
+		property_IDS = front
+		
+		[Property]
+		property_IDS = support
+
+		[Property]
+		property_IDS = property_infantry_unit
+		
+		[Property]
+		property_IDS = combat_unit
+ 
+        [Property]
+		property_IDS = captain
+	}
+	
+	[PerformerComponent]
+	{
+		[Ability Template=AAGunLocal]
+		{
+			[AbilityDefinition Template=AAInfantryRifle]
+			{				
+				name = "#cpc_infantry_sniper_AbilityDefinition_name"
+				recharge_time = 3
+				range = 24
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 5
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = infantry
+				amount = 75
+				
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = vehicle
+				amount = 25		
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = rus_rifle
+			}
+		}
+	}
+	
+	
+	
+	
+}

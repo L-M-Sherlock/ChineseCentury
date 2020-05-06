@@ -1,0 +1,41 @@
+[Terrain template=WaterTerrain]
+{
+	IDS = arctic_river
+	name = "#arctic_waterriver_name"
+	
+	base_priority = 10000
+	terrain_group = water	
+	terrain_color = 0.196, 0.404, 0.494
+
+	doodad_frequency = 0.001
+	primary_doodad_frequency = 0.10
+
+/********************	WATER PARAMETERS		********************/
+
+	paint_slope = 0.1
+	max_slope = 0.9
+	paint_max_step = 2.0
+	max_depth = 3.5
+	anim_textures_path_prefix= ArcticWater/WaterFrames%04d.dds
+	anim_fps = 10
+
+ 	water_doodad_IDS = arctic_riverside
+ 	water_doodad_offset_perpendicular = 0.25
+ 	water_doodad_offset_parallel = 2.0
+
+/********************	WATER VARIATIONS		********************/
+
+	[Variation]
+	IDS = arctic_river01
+	name = "#arctic_waterriver_01_name"
+	texture = ArcticWater/ArcticWater01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = arctic_river02
+	name = "#arctic_river_02_name"
+	texture = ArcticWater/ArcticWater02.tga
+	texture_width = 8
+	texture_height = 8
+}

@@ -1,0 +1,8008 @@
+[template BalancedEndGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 0
+	;; access to some sort of commando infantry
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 1
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_facism
+		priority					= 2
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_bersaglieri
+		priority					= 2
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_nosupply
+		priority					= 9
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ussr_assistance
+		priority					= 5
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ballistic_missile
+		priority					= 0
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_tank_constructs
+		priority					= 5
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_nuclear_weapons
+		priority					= 3
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_increased_height
+		priority					= 1
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_detection
+		priority					= 5
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_east_indies
+		priority					= 5
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_mannerheimline
+		priority					= 5
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 2
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 1
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 2
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 2
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 2
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 7
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 5
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 7
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 0
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 9
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 1
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 8
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 1
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 8
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 7
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 9
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 999
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 999
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 1000
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 10
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 6
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 1
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 6
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 1
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 1
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 1
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 1
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 1
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 1
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 5
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 1
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 1
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 1
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 1
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 1
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 2
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 2
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 2
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 1
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 1
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 1
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 1
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 1
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 1
+	}
+} ;; EndGameEgoResearch
+
+[template BalancedLowIncomeEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	
+	[TechPriority]
+	{
+		tech						= tech_facism
+		priority					= 20
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_bersaglieri
+		priority					= 75
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_nosupply
+		priority					= 1500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ussr_assistance
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ballistic_missile
+		priority					= 0
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_tank_constructs
+		priority					= 75
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_nuclear_weapons
+		priority					= 75
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_increased_height
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_paratrooper_MP
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_detection
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_rus_assistance
+		priority					= 100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_usa_assistance
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_g
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ski
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_guard_grenadiers
+		priority					= 450
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_marine_commando
+		priority					= 1100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_east_indies
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_mannerheimline
+		priority					= 50
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 1250
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 20
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 200
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 50
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 50
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 50
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 1800
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 20
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 10
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 20
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 50
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 20
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 800
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 700
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 1200
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 20
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 600
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 50
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 500
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 70
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 100
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 70
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 70
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 70
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 10
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 50
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 50
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 70
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 70
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 70
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 20
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 20
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 20
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 20
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 20
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 20
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 20
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 20
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 20
+	}
+} ;; LowIncomeEgoResearch
+
+[template BalancedMainGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 100
+	;; access to some sort of commando infantry
+
+	[TechPriority]
+	{
+		tech						= tech_facism
+		priority					= 20
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_bersaglieri
+		priority					= 20
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 20
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_nosupply
+		priority					= 9999
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ussr_assistance
+		priority					= 20
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ballistic_missile
+		priority					= 0
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_tank_constructs
+		priority					= 1000
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_nuclear_weapons
+		priority					= 5000
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_increased_height
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_paratrooper_MP
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_detection
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_rus_assistance
+		priority					= 100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_usa_assistance
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_g
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ski
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_guard_grenadiers
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_marine_commando
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_east_indies
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_mannerheimline
+		priority					= 50
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 8000
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 20
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 1000
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 500
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 400
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 20
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 6000
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 20
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 1000
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 20
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 50
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 700
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 500
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 8888
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 7777
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 9999
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 450
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 500
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 100
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 3200
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 120
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 100
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 120
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 120
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 120
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 900
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 700
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 100
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 120
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 120
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 120
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 20
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 700
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 50
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 150
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 100
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 50
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 20
+	}
+} ;; MainGameEgoResearch
+
+[template CampaignLowIncomeEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 50
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 160
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 50
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 50
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 50
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 20
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 20
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 50
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 20
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 20
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 50
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 0
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 0
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 50
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 20
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 0
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 0
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 0
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 0
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 0
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 0
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 0
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 0
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 0
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 0
+	}
+} ;; LowIncomeEgoResearch
+
+[template CampaignMainGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 100
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 240
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 50
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 100
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 100
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 50
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 50
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 50
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 20
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 20
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 50
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 50
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 50
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 50
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 50
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 20
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 50
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 50
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 50
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 100
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 50
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 50
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 20
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 20
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 0
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 0
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 0
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 0
+	}
+} ;; MainGameEgoResearch
+
+[template CampaignEndGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 100
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 20
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 20
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 20
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 50
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 10
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 20
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 20
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 0
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 20
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 20
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 20
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 50
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 50
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 20
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 20
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 50
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 100
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 100
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 100
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 100
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 100
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 100
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 100
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 100
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 100
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 50
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 100
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 50
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 50
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 100
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 50
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 50
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 50
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 100
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 50
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 20
+	}
+} ;; EndGameEgoResearch
+
+[template InfantryLowIncomeEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 70
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 70
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 70
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 70
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 70
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 70
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 100
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 0
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 30
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 30
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 150
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 30
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 30
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 70
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 0
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 0
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 50
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 20
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 0
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 0
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 0
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 0
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 0
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 0
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 0
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 0
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 0
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 0
+	}
+
+    [TechPriority]
+	{
+		tech						= tech_rus_assistance
+		priority					= 50
+	}
+
+    [TechPriority]
+	{
+		tech						= tech_usa_assistance
+		priority					= 50
+	}
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 0
+	}
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_paratrooper_MP
+		priority					= 200
+	}
+} ;; LowIncomeEgoResearch
+
+[template InfantryMainGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 10
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 100
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 100
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 100
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 100
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 100
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 100
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 120
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 120
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 70
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 70
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 150
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 50
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 50
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 100
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 50
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 50
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 50
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 50
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 20
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 50
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 50
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 50
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 50
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_usa_assistance
+		priority					= 50
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 20
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 20
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 20
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 0
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 0
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 0
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_rus_assistance
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 0
+	}
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_paratrooper_MP
+		priority					= 250
+	}
+} ;; MainGameEgoResearch
+
+[template InfantryEndGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 50
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_paratrooper_MP
+		priority					= 1000
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 50
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 100
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 100
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 50
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 800
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 600
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 70
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 70
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 1000
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 70
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 50
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 100
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 100
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 100
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 500
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 500
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 50
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 100
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 50
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 50
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 50
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 20
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 20
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 20
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 20
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 20
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 20
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 20
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 20
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 20
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 50
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 20
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 50
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 50
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 100
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 50
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_usa_assistance
+		priority					= 1500
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_rus_assistance
+		priority					= 1500
+	}
+} ;; EndGameEgoResearch
+
+[template ArmorLowIncomeEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 600
+	}
+
+
+	[TechPriority]
+	{
+		tech						= tech_bersaglieri
+		priority					= 400
+	}		
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 600
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 100
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 50
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 150
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 50
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 50
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 50
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 20
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 50
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 50
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 20
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 50
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 135
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 150
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 20
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 50
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 50
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 20
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 100
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 100
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 70
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 70
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 200
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 150
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 50
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 50
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 70
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 70
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 250
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 150
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 70
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 20
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 0
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 0
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 0
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 0
+	}
+} ;; LowIncomeEgoResearch
+
+[template ArmorMainGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+
+	
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 0
+	}
+
+		
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 0
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 0
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 0
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 0
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 0
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 0
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 0
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 0
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 0
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 0
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 0
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 0
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 0
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 0
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 0
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 0
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 150
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 150
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 0
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 0
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 0
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 0
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 0
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 0
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 0
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 0
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 0
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 0
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 0
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 0
+	}
+} ;; MainGameEgoResearch
+
+[template ArmorEndGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 250
+
+	;; access to some sort of commando infantry
+
+	
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 200
+	}
+
+		
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 20
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 20
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 200
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 500
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 20
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 200
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 0
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 200
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 200
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 20
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 500
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 200
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 500
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 1500
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 1500
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 1000
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 500
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 200
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 1000
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 720
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 200
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 500
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 500
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 720
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 120
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 1000
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 1000
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 100
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 1000
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 1200
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 1200
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 1200
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 1200
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 1200
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 500
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 500
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 1000
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 500
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 500
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 500
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 200
+	}
+} ;; EndGameEgoResearch
+
+[template ArtilleryLowIncomeEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_marine_commando
+		priority					= 500
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 20
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_guard_grenadiers
+		priority					= 300
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 20
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 20
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 20
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 50
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 50
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 20
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 50
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 50
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 50
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 50
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 20
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 0
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 50
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 50
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 20
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 0
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 0
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 0
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 0
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 0
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 0
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 0
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 0
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 0
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 0
+	}
+} ;; LowIncomeEgoResearch
+
+[template ArtilleryMainGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 50
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 50
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 50
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 50
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 50
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 20
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 50
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 50
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 50
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 50
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 20
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 20
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 70
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 50
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 50
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 20
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 50
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 70
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 50
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 100
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 50
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 70
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 50
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 20
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 0
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 0
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 0
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 0
+	}
+} ;; MainGameEgoResearch
+
+[template ArtilleryEndGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 50
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 50
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 50
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 100
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 100
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 20
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 20
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 0
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 50
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 50
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 20
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 20
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 120
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 20
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 20
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 50
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 100
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 120
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 100
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 100
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 100
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 100
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 100
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 100
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 100
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 50
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 100
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 50
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 50
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 120
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 100
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 50
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 50
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 100
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 50
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 20
+	}
+} ;; EndGameEgoResearch
+
+[template PlanesLowIncomeEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 50
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 50
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 50
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 50
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 50
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 20
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 20
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 50
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 20
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 20
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 50
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 0
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 0
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 50
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 20
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 0
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 0
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 0
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 0
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 0
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 0
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 0
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 0
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 0
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 0
+	}
+} ;; LowIncomeEgoResearch
+
+[template PlanesMainGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 100
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 50
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 50
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 100
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 100
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 50
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 50
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 50
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 20
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 20
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 50
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 50
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 50
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 50
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 50
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 20
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 50
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 50
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 50
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 100
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 50
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 50
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 20
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 20
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 50
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 70
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 50
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 20
+	}
+} ;; MainGameEgoResearch
+
+[template PlanesEndGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 100
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 20
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 20
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 20
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 50
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 50
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 20
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 20
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 0
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 20
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 20
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 20
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 50
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 50
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 20
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 20
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 50
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 100
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 100
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 100
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 100
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 100
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 100
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 100
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 100
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 100
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 50
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 100
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 50
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 50
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 100
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 50
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 50
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 100
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 120
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 100
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 100
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 100
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 50
+	}
+} ;; EndGameEgoResearch
+
+[template MechanizedLowIncomeEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 20
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 20
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 20
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 20
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 20
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 20
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 50
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 70
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 20
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 20
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 0
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 20
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 20
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 50
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 0
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 0
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 50
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 20
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 0
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 0
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 0
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 0
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 0
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 0
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 0
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 0
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 0
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 0
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_bersaglieri
+		priority					= 150
+	}
+
+} ;; LowIncomeEgoResearch
+
+[template MechanizedMainGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 50
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 50
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 50
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 70
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 100
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 50
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 50
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 0
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 20
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 20
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 50
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 50
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 50
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 50
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 50
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 20
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 50
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 70
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 70
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 120
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 120
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 50
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 20
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 20
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 0
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 0
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 0
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 0
+	}
+} ;; MainGameEgoResearch
+
+[template MechanizedEndGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 50
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 50
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 50
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 100
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 120
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 70
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 70
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 0
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 20
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 20
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 70
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 100
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 100
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 20
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 20
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 50
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 100
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 120
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 120
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 120
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 120
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 100
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 100
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 100
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 100
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 100
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 50
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 100
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 50
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 50
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 100
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 50
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 50
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 50
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 100
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 50
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 20
+	}
+} ;; EndGameEgoResearch
+
+[template InfantryPlanesLowIncomeEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 70
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 70
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 70
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 70
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 70
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 70
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 70
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 70
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 30
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 30
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 70
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 30
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 30
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 70
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 0
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 0
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 50
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 20
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 0
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 0
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 0
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 0
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 0
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 0
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 0
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 0
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 0
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 0
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 0
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 0
+	}
+} ;; LowIncomeEgoResearch
+
+[template InfantryPlanesMainGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 120
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 100
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 100
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 100
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 100
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 100
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 120
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 120
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 700
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 70
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 70
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 50
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 50
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 100
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 50
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 50
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 50
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 50
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 20
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 50
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 50
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 50
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 50
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 0
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 0
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 0
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 0
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 0
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 0
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 0
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 0
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 20
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 20
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 20
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 50
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 70
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 50
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 50
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 20
+	}
+} ;; MainGameEgoResearch
+
+[template InfantryPlanesEndGameEgoResearch template = SAIResearchTemplate]
+{
+	base_priority					= 20
+
+	;; access to some sort of commando infantry
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 120
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 50
+	}
+
+	;; access to some sort of sniper infantry
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 50
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 100
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 100
+	}
+
+	;; access to banzai infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_banzai
+		priority					= 50
+	}
+
+	;; infantry buff
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 120
+	}
+
+	;; +5 AV to machine gun units
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 120
+	}
+
+	;; +2 AV to infantry
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 70
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 70
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 20
+	}
+
+	;; +20% entrenchment rate
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 70
+	}
+
+	;; +25% resupply rate for infantry
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 50
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 100
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 100
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 100
+	}
+
+	;; +15% supply rate
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 50
+	}
+
+	;; +5 ammo rate
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 20
+	}
+
+	;; +5 oil rate
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 20
+	}
+
+	;; +5 money rate
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 100
+	}
+
+	;; +5 repair ability to engineers
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 50
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 20
+	}
+
+	;; +1 DV, +20% health for buildings
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 100
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 50
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 50
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 50
+	}
+
+	;; +10% health to vehicles
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 20
+	}
+
+	;; access to flame tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 20
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 20
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 20
+	}
+
+	;; access to king tiger tanks
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 20
+	}
+
+	;; +15% speed to tanks
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 20
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 20
+	}
+
+	;; +1 DV, +5 AV to tanks
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 20
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 20
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 20
+	}
+
+	;; +20% attack speed to artillery
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 50
+	}
+
+	;; +5 projectile & bombard range to artillery
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 20
+	}
+
+	;; +20 AV to AA 
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 50
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 100
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 120
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 100
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 100
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 100
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 50
+	}
+} ;; EndGameEgoResearch

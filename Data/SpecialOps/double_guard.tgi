@@ -1,0 +1,49 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[AbilityDefinition Template=AASpecialOp]
+{
+	IDS = double_guard
+	name = "#double_guard_name"
+	description = "#double_guard_description"
+	targets = +FRIEND +BUILDING
+	recharge_time = 300
+	range = 10
+	area = 30
+	target_location_vfx = friendly_target_decal_vfx
+
+	icon = /UI/%s/Game/SpecialOps/IconDoubleGuard.png
+	
+	[Effect Template=EnchantmentEffect]
+	{
+		[EnchantmentProperty]
+		{
+			IDS = property_double_guard
+			name = "#double_guard_Effect_EnchantmentProperty_name"
+			enchantment_type = ench_type_generic
+			duration = 180
+			icon = /Properties/PropertyIcons/IconPropertyDefense.png
+			
+			[Modifier Template=AddModifier]
+			attribute = AV
+			amount = +15
+		
+			[WhenAdded Template=FXC_CreateVFX]
+			VFX_IDS = sand_bagging_glow	
+		}
+	}
+		
+	[Flags]
+	enchantment = true
+	target_location = true
+	
+	[WhenDo Template=FXC_CreateVFX]
+	vfx_ids = double_guard
+	attached = false
+	at = TARGET_GROUND
+	
+	[WhenDo Template=FXC_PlaySFX]
+	audio_ids = double_guard_sfx
+	at = TARGET_GROUND
+}
+

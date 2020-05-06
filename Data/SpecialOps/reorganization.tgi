@@ -1,0 +1,130 @@
+;; brw04042004 - NOTE: To change the *COST* of a special operation
+;; 	you must look in the template_ability_special_op_aa.tgi
+
+[Template AASpecialOpReorg Template=AASpecialOp]
+{
+	name = "#reorganization__name"
+	description = "#reorganization__description"
+	targets = NULL
+	recharge_time = 240
+	range = 0
+	area = 0
+
+	icon = /UI/%s/Game/SpecialOps/IconReorganizeHQ.png
+	
+	[Flags]
+	target_location = true
+	summon_multiple = false
+	summon_unique = true
+	primary_island_only = true
+}
+
+[AbilityDefinition Template=AASpecialOpReorg]
+{
+	IDS = gbr_reorganization
+
+	[Effect Template=SummonEffect]
+	object_ids = gbr_truck_corps
+	dynamic_campaign_object_ids = gbr_truck_corps_dynamic
+	controllable = true
+	unique_target_flags = provides_corps
+}
+
+[AbilityDefinition Template=AASpecialOpReorg]
+{
+	IDS = ger_reorganization
+
+	[Effect Template=SummonEffect]
+	object_ids = ger_truck_corps
+	dynamic_campaign_object_ids = ger_truck_corps_dynamic
+	controllable = true
+	unique_target_flags = provides_corps
+}
+
+[AbilityDefinition Template=AASpecialOpReorg]
+{
+	IDS = jpn_reorganization
+
+	[Effect Template=SummonEffect]
+	object_ids = jpn_truck_corps
+	dynamic_campaign_object_ids = jpn_truck_corps_dynamic
+	controllable = true
+	unique_target_flags = provides_corps
+}
+
+[AbilityDefinition Template=AASpecialOpReorg]
+{
+	IDS = rus_reorganization
+
+	[Effect Template=SummonEffect]
+	object_ids = rus_truck_corps
+	dynamic_campaign_object_ids = rus_truck_corps_dynamic
+	controllable = true
+	unique_target_flags = provides_corps
+}
+
+[AbilityDefinition Template=AASpecialOpReorg]
+{
+	IDS = usa_reorganization
+
+	[Effect Template=SummonEffect]
+	object_ids = usa_truck_corps
+	dynamic_campaign_object_ids = usa_truck_corps_dynamic
+	controllable = true
+	unique_target_flags = provides_corps
+}
+
+[AbilityDefinition Template=AASpecialOpReorg]
+{
+	IDS = fin_reorganization
+
+	[Effect Template=SummonEffect]
+	object_ids = fin_truck_corps
+	dynamic_campaign_object_ids = fin_truck_corps_dynamic
+	controllable = true
+	unique_target_flags = provides_corps
+}
+
+[AbilityDefinition Template=AASpecialOpReorg]
+{
+	IDS = ned_reorganization
+
+	[Effect Template=SummonEffect]
+	object_ids = ned_truck_corps
+	dynamic_campaign_object_ids = ned_truck_corps_dynamic
+	controllable = true
+	unique_target_flags = provides_corps
+}
+
+[AbilityDefinition Template=AASpecialOpReorg]
+{
+	IDS = chn_reorganization
+
+	[Effect Template=SummonEffect]
+	object_ids = chn_truck_corps
+	dynamic_campaign_object_ids = chn_truck_corps_dynamic
+	controllable = true
+	unique_target_flags = provides_corps
+}
+
+[AbilityDefinition Template=AASpecialOpReorg]
+{
+	IDS = cpc_reorganization
+
+	[Effect Template=SummonEffect]
+	object_ids = cpc_truck_corps
+	dynamic_campaign_object_ids = cpc_truck_corps_dynamic
+	controllable = true
+	unique_target_flags = provides_corps
+}
+
+[AbilityDefinition Template=AASpecialOpReorg]
+{
+	IDS = ita_reorganization
+
+	[Effect Template=SummonEffect]
+	object_ids = ita_truck_corps
+	dynamic_campaign_object_ids = ita_truck_corps_dynamic
+	controllable = true
+	unique_target_flags = provides_corps
+}

@@ -1,0 +1,37 @@
+/**************************************************************************
+
+template_ability_effect.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: effects that ability definitions may have.
+
+REVISION HISTORY:
+ick062603 - created
+
+USAGE:
+
+FIELDS:
+
+EXAMPLES:
+
+**************************************************************************/
+
+[Template BlastDamageEffect Inherit=MainDamageEffect]
+{
+	damage_type_IDS = explosive
+}
+
+[Template PierceDamageEffect Inherit=MainDamageEffect]
+{
+	damage_type_IDS = gunfire
+}
+
+[Template FireDamageEffect Inherit=MainDamageEffect]
+{
+	damage_type_IDS = flame
+}
+
+[Template APDamageEffect Inherit=MainDamageEffect]
+{
+	damage_type_IDS = armor_piercing
+}

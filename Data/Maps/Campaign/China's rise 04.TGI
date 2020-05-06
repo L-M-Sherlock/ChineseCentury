@@ -1,0 +1,13 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "China's rise 04"
+
+	independent_3 = " 3"
+	kingdom_1 = " 1"
+	independent_2 = " 2"
+	kingdom_0 = " 0"
+	map_name = "China's rise 04"
+	kingdom_4 = " 4"
+	map_description = ""
+}

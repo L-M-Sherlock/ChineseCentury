@@ -1,0 +1,66 @@
+[Ego template = BalancedLowIncomeEgo]
+{
+	IDS										= zhude_low_income_ego
+	name									= "#cpc_zhude_SAI_zhude_low_income_ego_name"
+} ;; BalancedLowIncomeEgo
+
+[Ego template = BalancedMainGameEgo]
+{
+	IDS										= zhude_main_game_ego
+	name									= "#cpc_zhude_SAI_zhude_main_game_ego_name"
+} ;; BalancedMainGameEgo
+
+[Ego template = BalancedAmmoEndGameEgo]
+{
+	IDS										= zhude_ammo_end_game_ego
+	name									= "#cpc_zhude_SAI_zhude_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = BalancedOilEndGameEgo]
+{
+	IDS										= zhude_oil_end_game_ego
+	name									= "#cpc_zhude_SAI_zhude_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = BalancedWarGameEgo]
+{
+	IDS										= zhude_war_game_ego
+	name									= "#cpc_zhude_SAI_zhude_end_game_ego_name"
+} ;; BalancedWarGameEgo
+
+[Ego template = BalancedFightGameEgo]
+{
+	IDS										= zhude_fight_game_ego
+	name									= "#cpc_zhude_SAI_zhude_end_game_ego_name"
+} ;; BalancedWarGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= zhude_sai
+	name									= "#cpc_zhude_SAI_zhude_sai_name"
+	description								= "#cpc_zhude_SAI_zhude_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= zhude_low_income_ego
+	
+	[Ego]
+	IDS										= zhude_main_game_ego
+
+	[Ego]
+	IDS										= zhude_ammo_end_game_ego
+
+	[Ego]
+	IDS										= zhude_oil_end_game_ego
+
+	[Ego]
+	IDS										= zhude_war_game_ego
+
+	[Ego]
+	IDS										= zhude_fight_game_ego
+
+	[Nation]
+	IDS										= nation_cpc
+	
+	[Faction]
+	ids										= zhude
+} ;; von_manstein SAI

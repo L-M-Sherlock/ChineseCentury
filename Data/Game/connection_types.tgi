@@ -1,0 +1,16 @@
+[ConnectionType template=ConnectionType]
+{
+	ids = Modem
+	name = "#connection_types_Modem_name"
+	bandwidth = 4000
+	maxplayers = 4
+}
+
+
+[ConnectionType template=ConnectionType]
+{
+	ids = Broadband
+	name = "#connection_types_Broadband_name"
+	bandwidth = 100000
+	maxplayers = 12
+}

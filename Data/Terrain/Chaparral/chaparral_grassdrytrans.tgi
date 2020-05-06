@@ -1,0 +1,33 @@
+[Terrain template=Terrain]
+{
+	IDS = chaparral_grassdrytrans
+	name = "#chaparral_grassdrytrans_name"
+	
+	base_priority = 250
+	terrain_group = dirt
+	terrain_color = 0.461, 0.583, 0.276
+	
+	doodad_frequency = 0.025
+	primary_doodad_frequency = 0.20
+
+	[Variation]
+	IDS = chaparral_grassdrydirttrans01
+	name = "#chaparral_grassdrytrans_chaparral_grassdrydirttrans01_name"
+	texture = ChaparralGrassDryTrans/ChaparralGrassDryDirtTrans01.tga
+	texture_width = 8
+	texture_height = 8
+
+	[Variation]
+	IDS = chaparral_grassdryforesttrans01
+	name = "#chaparral_grassdrytrans_chaparral_grassdryforesttrans01_name"
+	texture = ChaparralGrassDryTrans/ChaparralGrassDryForestTrans01.tga
+	texture_width = 8
+	texture_height = 8
+	
+	[Variation]
+	IDS = chaparral_grassdrymountaintrans01
+	name = "#chaparral_grassdrytrans_chaparral_grassdrymountaintrans01_name"
+	texture = ChaparralGrassDryTrans/ChaparralGrassDryMountainTrans01.tga
+	texture_width = 8
+	texture_height = 8
+}

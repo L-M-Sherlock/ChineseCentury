@@ -1,0 +1,174 @@
+[Thing Inherit=VFXProjectedTextureLit]
+{
+	name = "#island_airfield_axis_ground_name"
+	texture = IslandAirfieldAxis/IslandAirfieldAxisGround.DDS	
+	IDS = island_airfield_axis_ground
+	attached_scale = 0
+	texture_size = 20
+	decal_type = scorch
+}
+
+[Thing Template=AABuilding]
+{
+	IDS = island_airfield_axis
+	name = "#island_airfield_axis_Thing_name"
+	editor_name = "#island_airfield_axis_Thing_editor_name"
+
+	[BodyComponent]
+	{
+		captureable = false
+		health = 2000
+		defense = 0
+	}
+
+	[CityComponent]
+	{
+		zone_radius = 26
+				
+		[Layout Template=CityLayout]
+		{
+			[Object Template=CityObject]
+			object_ids = barbed_wire
+			offset = -6, -6
+			orientation = 0, -1
+		}
+	}
+	
+	[ConstructionComponent]
+	{
+		can_sell = false
+		can_raze = false
+	}
+
+	[DetectionComponent]
+	{
+		detection_range = 60
+		remote_detection_range = 20
+	}
+
+	[Flags]
+	{
+		invulnerable = true
+	}
+
+	[Placement]
+	placement_group_IDS = group_campaign
+	
+	[Size]
+	{
+		blocking_shape = SQUARE
+		square_size = 18
+	}
+
+	[SupplyComponent]
+	{
+		supply_range = 45
+		is_relay = false	
+	}
+
+	[View]
+	{
+		resource_prefix = IslandAirfieldAxis/IslandAirfieldAxis
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = island_airfield_axis_ground
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_01
+			attached = true
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_02
+			attached = true
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_03
+			attached = true
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small_dim
+			location = window_04
+			attached = true
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_05
+			attached = true
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_06
+			attached = true
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small_dim
+			location = window_07
+			attached = true
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = window_small
+			location = window_08
+			attached = true
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = runway_light
+			location = spotlight_ae_01
+			attached = true
+			delay = 0.0
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = runway_light
+			location = spotlight_ae_02
+			attached = true
+			delay = 0.5
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = runway_light
+			location = spotlight_ae_03
+			attached = true
+			delay = 1.0
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = runway_light
+			location = spotlight_ae_04
+			attached = true
+			delay = 1.5
+		}
+		
+		[WhenCreated Template=FXC_CreateVFX]
+		{
+			vfx_ids = runway_light
+			location = spotlight_ae_05
+			attached = true
+			delay = 2.0
+		}
+	}
+}

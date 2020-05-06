@@ -1,0 +1,23 @@
+[ActorCommand Template=ActorCommand]
+{
+	;; general info
+	IDS = air_attack
+	name = "#actor_commands_air_attack_name"
+	tooltip = "#actor_commands_air_attack_tooltip"
+	description_disabled = "#air_attack_description_disabled"
+
+	
+	icon = /UI/%s/Game/ActionButtons/IconAirAttack.png
+	cursor_ids = bombard
+	command_vfx_ids_actor = waypoint_bombard_actor
+	command_vfx_ids_location = waypoint_bombard_location
+
+	apply_group_offset = false
+
+	non_group_command = true
+
+	high_importance = false
+	preferred_position = 4
+}
+
+

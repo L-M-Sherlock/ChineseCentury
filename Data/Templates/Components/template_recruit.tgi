@@ -1,0 +1,8 @@
+;; RecruitComponent: allows the actor to recruit other actors
+[template RecruitComponent]
+{
+	;; list of actors the actor can recruit
+	[list RecruitActor]
+	string actor_ids
+}
+

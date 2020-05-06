@@ -1,0 +1,312 @@
+/**************************************************************************
+
+template_object.tgi
+Copyright © 2002-2003 TimeGate Studios
+
+DESCRIPTION: an object is a thing (see template_thing.tgi) that can both
+			be instantiated in the world and has a physical presence (can block).
+			However, it cannot interact with the world nor move; see "template_actor.tgi"
+			for something more complex.
+ 
+REVISION HISTORY:
+drp091002 - created
+
+USAGE:
+
+	[Thing Template=Object]
+	A thing with a physical presence, but only for blocking - cannot interact with the world.
+	
+FIELDS:
+
+	PATH NAMES (such as "resource_prefix"):  these can either be relative or absolute. 
+	
+	- relative means relative to where the TGI file is.  For example, when reading "units/berserker.tgi"
+		resource_prefix = Drauga/Berserker/Berserker
+	  means "units/drauga/berserker/berserker"
+		
+	- absolute means relative to the game root, and is prefixed with a "/."  For example, 
+	  when reading "units/berserker.tgi" the following two lines are equivalent:
+		resource_prefix = Drauga/Berserker/Berserker
+		resource_prefix = /units/Drauga/Berserker/Berserker
+	
+**************************************************************************/
+
+[template Object inherit=Thing]
+{
+	;; identifying information
+	
+	category = OBJECT
+
+	localized	description = ""
+
+	;; needs_space_for_settlement_zone: true settlement will be placed here
+	flag	needs_space_for_settlement_zone = false
+
+	[Flags]
+	{
+		blocking = true
+		ethereal = false
+	} 
+	
+	;; object data
+	
+	[Size]
+	{
+		fixed scale_min = 1
+		fixed scale_max = 1
+		
+		;; TODO: get rid of 'height'. Only projectiles use it and it is too much of a hassle to
+		;;  upkeep. Only VIEW dependent things should be using height, and they should be based on
+		;;  the height of the model.		
+		fixed height
+		
+		;; blocking_shape = CIRCLE, SQUARE, RECT.  
+		string blocking_shape = CIRCLE
+		
+		;; blocking_radius: if blocking_shape == CIRCLE
+		fixed blocking_radius = 0.2
+
+		;; soft_shape = CIRCLE, SQUARE, RECT, null. "null" means copy the blocking shape
+		string soft_shape = null
+	
+		;; soft_radius: if soft_shape == CIRCLE, used for range checks such as abilities. 
+		fixed soft_radius = 0.5	
+		
+		;; square_size: if either shape == SQUARE
+		fixed square_size = 4
+		
+		;; rect_width/rect_height: if either shape == RECT
+		fixed rect_width = 4
+		fixed rect_height = 4
+		
+		;; target_shape = POINT, CIRCLE, SQUARE, RECT, null. "null" means copy the soft shape
+		string target_shape = null
+		
+		;; target_radius: if target_shape == CIRCLE
+		fixed target_radius = 0.5
+		
+		;; target_square_size: if target_shape == SQUARE
+		fixed target_square_size = 4
+		
+		;; target_rect_width/target_rect_heigh: if target_shape == RECT
+		fixed target_rect_width = 4
+		fixed target_rect_height = 4
+	}
+	
+	[View]
+	{
+		;; resource_prefix is a string that is replaced wherever animations, model, skin, shadow, icon use "%s"
+		string	resource_prefix
+	
+		;; alternative paths to load textures from.
+		;; Paths that start with "/" are relative to the Data folder
+		;; Paths that start with "../" are relative to the resource path
+		;; Multiple paths should be seperated by a ","
+		[list TextureSearchPath]
+		{
+			string	path
+		}
+					
+		;; you can use "%s" in the minimap_icon name to point to resource_prefix
+		string	minimap_icon = null
+	
+		;; you can use "%s" in the shadow_texture name to point to resource_prefix
+		string	shadow_texture = null
+		
+		;; Valid types are STENCIL, PROJECTED, TEXTURE, and NONE
+		string	shadow_type = NONE
+
+		;; TODO: drp032303 - disabled this warning since nothing has icons yet.
+		;;  Once we start putting icons in, reenable the default.
+		string	icon = null ;; %sIcon.tga
+
+		;; disable the unit fog, by default this is true. It is turned on for buildings and 
+		;; structures.
+		flag	disable_unit_fog = true
+		
+		;; unique: use if can guarantee only one instance of model will be needed at any time
+		flag	unique = false
+
+		;; optional
+		string	portrait_ids = null
+
+		;; banners (optional)
+		string	banner_ids = NULL
+		string	banner_icon = NULL
+		
+			;; set to true if object should use faction's banner if one is available
+		flag	use_faction_banner = false
+
+		;; z offset for object
+		float	z_offset = 0
+		
+		;; how much bonus to multiple into the final radar value. Should almost always be 1.
+		int		radar_factor = 1
+		
+		;; vfx_attached_scale_size: if non-zero, sets the scale of vfx attached to this object;
+		;; overrides using the object radius.
+		;; - this value is relative to AVar "VFXReferenceSize"
+		float vfx_attached_scale_size = 0
+
+		;; selection vfx
+		
+		string	selected_vfx = selected_circle_vfx
+		string	focused_vfx = focused_circle_vfx
+
+		;; animations (used in both portrait and character animations)
+		int		idle_loops_min = 1
+		int		idle_loops_max = 3
+		
+		;; indicates whether aspects are used as view variations for the object (ex: if we want to have 10 kinds of
+		;; trees, there would be 10 aspects and this flag would be true)
+		flag	aspects_as_variations = false
+		
+		;; Aspects
+		[AspectNormal Template=Aspect]
+		
+		[list Aspect Template=Aspect]
+
+		;; FX system events
+		
+		;; TODO: [WhenDestroyed template=FXC_CreateVFX] currently only works at SOURCE_GROUND
+		
+		[list WhenCreated Template=FXC]
+		
+		;; [WhenDestroyed] 
+		;; - only works at SOURCE_GROUND
+		;; - for projectiles works at SOURCE_GROUND, TARGET_GROUND, TARGET_THING (not guaranteed)
+		
+		[list WhenDestroyed Template=FXC]
+
+		;; [WhenSelected]
+		[list WhenSelected Template=FXC]
+		
+		;; [WhenCommanded]
+		[list WhenCommanded Template=FXC]
+		
+		;; [WhenCommandedAggressive]
+		[list WhenCommandedAggressive Template=FXC]
+
+		[list WhenConstructed Template=FXC]
+
+		;; Swivel stuff - for trees and tank chassis reacting to explosions,
+		;; tank chassis reacting to movement, hits, etc.
+		[optional Swivel]
+		{
+			;; the node which swivels
+			string	swivel_node_ids
+			
+			; the inertia should be between 0 and 1
+			; this controls the rate at which energy is conserved.
+			; a lower value means the node will rock longer
+			; a higher value means the node will quit rocking sooner
+			float	swivel_inertia
+			
+			; spring constant - should be between 0 and 1
+			; this describes how hard the spring of the swivel is
+			; a larger value mean it takes more force/impulse to displace
+			; the swivel			
+			float	spring_constant
+			
+			; this is the mass of the chassis or swivel and should be in kg
+			; 1 ton is approximately 1000 kg
+			float	swivel_mass
+			
+			flag	wind_sway = false
+			flag	recoil = true
+			flag	impact_sway = true
+			
+			;  for vehicle chassis physics
+			flag	movement_inertia = false
+			
+			; for wind sway, sway_speed can make the object sway faster or slower
+			; and sway_strength can make the object sway more or less
+			float	sway_speed = 1.0
+			float	sway_strength = 0.5
+		}
+
+		;; align with wind
+		flag align_with_wind = false
+		
+	} ; end [View]
+	
+	[Placement]
+	{
+		;; placement_group_IDS = what group it belongs to for placement purposes (editor).
+		;; Used by actors. 'null' means it will try to determine it automatically.
+		string placement_group_IDS = null
+	
+		;; (Optional) If set this will appear in the given thing category for placement in the editor.
+		;;            Specifying 'none' will not list it for placement.
+		;;            If left as 'null' it will appear under its true thing category.
+		string	placement_category = null
+
+		;; default weight of this object on all terrains; zero means it won't be
+		;; placed randomly for that terrain; if -1 is specified for ALL terrains
+		;; in a biome, this object will not show up on the object list for that biome
+		fixed	weight = -1
+	
+		;; Biomes the object can appear on. 
+		;; - used for "Doodad" placement in the terrain system (editor and random map)
+		;; - used for random map seeding of actors
+		
+		;; TODO: this may be a pain for templatizing, and maybe we need a "template K2Object"
+		;;		 that defines one node per game-specific biome
+		
+		[list Biome]
+		{
+			string IDS
+			fixed	weight					;; if defined overrides [Placement/weight]
+			
+			[list Terrain]
+			string IDS
+			fixed	weight					;; if defined overrides [Placement/Biome/weight]
+			bool	primary_doodad = false	;; "primary" doodads are weighted against each other
+		}
+	} ; end [Placement]
+
+	;; cwk082104 - renabled
+	[BaseTerrain]
+	{
+		;; this is the default base terrain for each building
+		;; - STRUCTURE IN SETTLEMENT: these values are ignored if the settlement defines them
+		;; - SETTLEMENT: these values override all structures placed in the settlement
+		string default_variation_IDS = null
+		
+		;; Connecting Variation: 
+		;; - only works for SETTLEMENT
+		string default_connecting_variation_IDS = null
+		fixed padding = 1
+
+		;; biome-specific base terrains
+		[list BiomeBaseTerrain]
+		{
+			string biome_IDS
+			string variation_IDS
+			string connecting_variation_IDS = null	;; if null, uses variation_IDS
+		}
+		
+	}; end [BaseTerrain]
+	
+	;; specify the random object that this object can appear in
+	[list RandomObject]
+	string random_object_ids
+	fixed weight = 1
+
+} ; end [Template Object]
+
+[Template RandomObject inherit=Object]
+{
+	category = RANDOM_OBJECT
+
+	[Size]
+	{
+		height = 2
+	}
+	
+	[Placement]
+	{
+		placement_group_IDS = group_special
+		placement_category = special
+	}
+}

@@ -1,0 +1,54 @@
+[Thing Template=AAGBROrganizationArmor]
+{	
+	IDS = regiment_fra_tank_Bat_155
+	name = "Bat_155"
+	editor_name = "Bat_155"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 225
+		
+		[Upkeep]
+		ammo = 15
+		oil = 20
+	}
+
+	[View]
+	{
+		resource_prefix = /Organizations/Banners/Icons/IconArmorLight.png
+		icon = /UI/Game/RegimentButtons/France-Bat_Chatillon155.png
+
+		[WhenCreated Template=FXC_PlaySFX]
+		audio_ids = gbr_vehicle_deployed
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = gbr_halftrack_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = gbr_halftrack_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = gbr_halftrack_attack
+	}		
+	
+	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	{	
+		layout_IDS = regiment_vehicle_light
+		
+		[Slot]	;; front
+		element_IDS = FRA_tank_FT17
+	
+		[Slot]	;; support
+		element_IDS = FRA_tank_Bat_155
+		
+		[Slot]	;; captain
+		element_IDS = fra_tank_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = mechanized_company
+	}
+}

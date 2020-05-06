@@ -1,0 +1,24 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "axis02_el_alamein"
+
+	kingdom_1 = ""
+	objective_8 = "1.         . (3/3   )"
+	kingdom_0 = ""
+	objective_7 = "1.         . (1/3   )"
+	objective_6 = "1.         . (2/3   )"
+	objective_4 = "2.           ."
+	name_9230 = ""
+	independent_5 = "Ambient"
+	trigger_113_element_2 = " :              .            ."
+	restriction_group_0006 = "GER Restrictions"
+	team_0 = ""
+	map_description = ",                  .         ,        ,               ,                 ."
+	objective_2 = "1.         . (0/3   )"
+	restriction_group_0005 = "GBR Restrictions"
+	kingdom_4 = ""
+	independent_2 = ""
+	map_name = "axis02_el_alamein"
+	kingdom_3 = ""
+}

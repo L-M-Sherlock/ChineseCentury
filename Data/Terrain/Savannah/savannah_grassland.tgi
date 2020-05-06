@@ -1,0 +1,35 @@
+[Terrain template=Terrain]
+{
+	IDS = savannah_grassland
+	name = "#savannah_grassland_name"
+	
+	base_priority = 1000	
+	terrain_group = dirt
+	
+	doodad_frequency = 0.025
+	primary_doodad_frequency = 0.20
+
+	[Variation]
+	IDS = savannah_grassland01
+	name = "#savannah_grassland_01_name"
+	texture = SavannahGrassland/SavannahGrassland01.tga
+	texture_width = 16
+	texture_height = 16
+	terrain_color = 0.753, 0.647, 0.361
+
+	[Variation]
+	IDS = savannah_grassland02
+	name = "#savannah_grassland_02_name"
+	texture = SavannahGrassland/SavannahGrassland02.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.763, 0.657, 0.351
+
+	[Variation]
+	IDS = savannah_grassland03
+	name = "#savannah_grassland_03_name"
+	texture = SavannahGrassland/SavannahGrassland03.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.743, 0.637, 0.371
+}

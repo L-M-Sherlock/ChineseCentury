@@ -1,0 +1,417 @@
+/*************************************************************************
+							Sliders
+*************************************************************************/
+
+[Template SharedSliderWidget Template=SliderWidget]
+{
+	grip_display_size = 16
+
+	[View Template=NoVE]
+	{
+		R = +100
+		B = +16
+	}
+
+	;; TODO: should be a ButtonWidget
+	[Grip inherit=Widget]
+	{
+	
+		[DisableDecal Template=DecalWidget]
+		{
+			visible = true
+			[View Template=NoVE]
+			
+			[Decal Template=DecalVE]
+			when = DISABLED
+			texture = /UI/%s/Default/SliderBar/GripDisabled.png
+		}
+		
+		[View Template=GroupVE]
+		{
+			[Child Template=DecalVE]
+			when = ENABLED + UNPRESSED
+			texture = /UI/%s/Default/SliderBar/GripUnpressed.png
+
+			[Child Template=DecalVE]
+			when = ENABLED + PRESSED
+			texture = /UI/%s/Default/SliderBar/GripPressed.png
+
+			;[Child Template=DecalVE]
+			;when = DISABLED
+			;texture = /UI/%s/Default/SliderBar/GripDisabled.png
+		}
+	}
+	
+	[Background Template=DecalVETiledHorizontal]
+	{
+		ends_texture = /UI/%s/Default/SliderBar/TileEnds.png
+		center_texture = /UI/%s/Default/sliderBar/TileCenter.png
+	}
+}
+
+[Template SharedSliderAdvancedWidgetNoArt Template=SliderAdvancedWidget]
+{
+	grip_display_size = 16
+
+	usage_area_absolute = 55, -110
+
+	[View Template=NoVE]
+	{
+		R = +100
+		B = +16
+	}
+
+	;; TODO: should be a ButtonWidget
+	[Grip inherit=Widget]
+	{
+		[DisableDecal Template=DecalWidget]
+		{
+			visible = true
+		
+			[View Template=NoVE]
+			
+			[Decal Template=DecalVE]
+			when = DISABLED
+			texture = /UI/%s/Default/SliderBar/GripDisabled.png
+		}
+	
+		[View Template=GroupVE]
+		{
+		}
+	}
+	
+	[Background Template=DecalVETiledHorizontal]
+	{
+		ends_texture = /UI/%s/Default/SliderBar/TileEnds.png
+		center_texture = /UI/%s/Default/sliderBar/TileCenter.png
+	}
+	
+	;; Minimum bounds label
+	[MinBoundLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label Template=SharedTinyRightLabelVE]
+		{
+			L = 0
+			T = 3
+			R = +50
+
+			text = ""
+		}
+	}
+	
+	;; Maximum bounds label
+	[MaxBoundLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label Template=SharedTinyLeftLabelVE]
+		{
+			L = 105r
+			T = 3
+			R = +50
+
+			text = ""
+		}
+	}
+
+	;; Current value label
+	[CurrentValueLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label Template=SharedTinyLeftLabelVE]
+		{
+			L = 50r
+			T = 3
+			R = +50
+
+			text = ""
+		}
+	}
+}
+
+[Template SharedSliderAdvancedWidget Template=SliderAdvancedWidget]
+{
+	grip_display_size = 16
+
+	usage_area_absolute = 55, -110
+
+	[View Template=NoVE]
+	{
+		R = +100
+		B = +16
+	}
+
+	;; TODO: should be a ButtonWidget
+	[Grip inherit=Widget]
+	{
+		[DisableDecal Template=DecalWidget]
+		{
+			visible = true
+		
+			[View Template=NoVE]
+			
+			[Decal Template=DecalVE]
+			when = DISABLED
+			texture = /UI/%s/Default/SliderBar/GripDisabled.png
+		}
+	
+		[View Template=GroupVE]
+		{
+			[Child Template=DecalVE]
+			when = ENABLED + UNPRESSED
+			texture = /UI/%s/Default/SliderBar/GripUnpressed.png
+
+			[Child Template=DecalVE]
+			when = ENABLED + PRESSED
+			texture = /UI/%s/Default/SliderBar/GripPressed.png
+			
+			;[Child Template=DecalVE]
+			;when = DISABLED
+			;texture = /UI/%s/Default/SliderBar/GripDisabled.png
+		}
+	}
+	
+	[Background Template=DecalVETiledHorizontal]
+	{
+		ends_texture = /UI/%s/Default/SliderBar/TileEnds.png
+		center_texture = /UI/%s/Default/sliderBar/TileCenter.png
+	}
+	
+	;; Minimum bounds label
+	[MinBoundLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label Template=SharedTinyRightLabelVE]
+		{
+			L = 0
+			T = 3
+			R = +50
+
+			text = ""
+		}
+	}
+	
+	;; Maximum bounds label
+	[MaxBoundLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label Template=SharedTinyLeftLabelVE]
+		{
+			L = 105r
+			T = 3
+			R = +50
+
+			text = ""
+		}
+	}
+
+	;; Current value label
+	[CurrentValueLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label Template=SharedTinyLeftLabelVE]
+		{
+			L = 50r
+			T = 3
+			R = +50
+
+			text = ""
+		}
+	}
+}
+/*
+[Template SharedSliderAdvancedWidgetMapProperties Template=SliderAdvancedWidget]
+{
+	grip_display_size = 16
+
+	[View Template=NoVE]
+	{
+		R = +100
+		B = +25
+	}
+
+	;; TODO: should be a ButtonWidget
+	[Grip inherit=Widget]
+	{
+		[DisableDecal Template=DecalWidget]
+		{
+			visible = true
+		
+			[View Template=NoVE]
+			
+			[Decal Template=DecalVE]
+			alpha_blending = true
+			when = DISABLED
+			texture = /UI/%s/Menus/Options/SliderOff.png
+		}
+	
+		[View Template=GroupVE]
+		{
+			[Child Template=DecalVE]
+			alpha_blending = true
+			when = ENABLED + UNPRESSED
+			texture = /UI/%s/Menus/Options/Slider.png
+
+			[Child Template=DecalVE]
+			alpha_blending = true
+			when = ENABLED + PRESSED
+			texture = /UI/%s/Menus/Options/Slider.png
+			
+			;[Child Template=DecalVE]
+			;when = DISABLED
+			;texture = /UI/%s/Default/SliderBar/GripDisabled.png
+		}
+	}
+	
+	[Background Template=DecalVETiledHorizontal]
+	{
+		ends_texture = /UI/%s/Default/SliderBar/TileEnds.png
+		center_texture = /UI/%s/Default/sliderBar/TileCenter.png
+	}
+	
+	;; Minimum bounds label
+	[MinBoundLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label Template=SharedTinyRightLabelVE]
+		{
+			L = 0
+			T = 3
+			R = +50
+
+			text = ""
+		}
+	}
+	
+	;; Maximum bounds label
+	[MaxBoundLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label Template=SharedTinyLeftLabelVE]
+		{
+			L = 105r
+			T = 3
+			R = +50
+
+			text = ""
+		}
+	}
+
+	;; Current value label
+	[CurrentValueLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label Template=SharedTinyLeftLabelVE]
+		{
+			L = 50r
+			T = 3
+			R = +50
+
+			text = ""
+		}
+	}
+}
+*/
+[Template OptionsMenuSliderAdvancedWidget Template=SliderAdvancedWidget]
+{
+	grip_display_size = 16
+
+	usage_area_absolute = 55, -110
+
+	[View Template=NoVE]
+	{
+		R = +100
+		B = +16
+	}
+
+	;; TODO: should be a ButtonWidget
+	;;
+	;;	TODO:  Need art for disabled sliders
+	[Grip inherit=Widget]
+	{
+		[DisableDecal Template=DecalWidget]
+		{
+			visible = true
+		
+			[View Template=NoVE]
+			
+			[Decal Template=DecalVE]
+			alpha_blending = true
+			when = DISABLED
+			texture = /UI/%s/Menus/Options/SliderOff.png
+		}
+	
+		[View Template=GroupVE]
+		{
+			[Child Template=DecalVE]
+			alpha_blending = true
+			when = ENABLED + UNPRESSED
+			texture = /UI/%s/Menus/Options/Slider.png
+
+			[Child Template=DecalVE]
+			alpha_blending = true
+			when = ENABLED + PRESSED
+			texture = /UI/%s/Menus/Options/Slider.png
+		}
+	}
+	
+	[Background Template=GroupVE]
+	{
+;;		ends_texture = /UI/%s/Default/SliderBar/TileEnds.png
+;;		center_texture = /UI/%s/Default/sliderBar/TileCenter.png
+	}
+	
+	;; Minimum bounds label
+	[MinBoundLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label Template=SharedTinyRightLabelVE]
+		{
+			L = 0
+			T = 3
+			R = +50
+
+			text = ""
+		}
+	}
+	
+	;; Maximum bounds label
+	[MaxBoundLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label Template=SharedTinyLeftLabelVE]
+		{
+			L = 105r
+			T = 3
+			R = +50
+
+			text = ""
+		}
+	}
+
+	;; Current value label
+	[CurrentValueLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+
+		[Label Template=SharedTinyLeftLabelVE]
+		{
+			L = 50r
+			T = 3
+			R = +50
+
+			text = ""
+		}
+	}
+}

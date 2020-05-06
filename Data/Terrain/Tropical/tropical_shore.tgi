@@ -1,0 +1,19 @@
+[Terrain template=Terrain]
+{
+	IDS = tropical_shore
+	name = "#tropical_shore_name"
+
+	base_priority = 75
+	terrain_group = dirt
+	terrain_color = 0.835, 0.757, 0.604
+	
+	doodad_frequency = 0.01
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = tropical_shore01
+	name = "#tropical_beachriver_01_name"
+	texture = TropicalShore/TropicalShore01.tga
+	texture_width = 8
+	texture_height = 8
+}

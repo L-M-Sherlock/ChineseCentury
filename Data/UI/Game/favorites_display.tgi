@@ -1,0 +1,181 @@
+
+[FavoritesDisplay Inherit=PanelWidget]
+{
+	[View Template=GroupVE]
+	{
+		L = 290
+		T = 110
+		R = +508
+		B = 15b
+	}
+	
+	[FavoriteButton Inherit=PushButtonWidget]
+	{
+		pressed_client_L = 4
+		pressed_client_T = 4
+		pressed_client_R = 4r
+		pressed_client_B = 4b
+		
+		string empty_role_texture = UI/Game/Favorites/Empty.png
+		int lines = 2
+		
+		;; topped at 4.
+		int max_roles = 4
+
+		tooltip = "@This must be set by code."
+	
+		;; Note that buttons are placed by the code, so all this
+		;; is specifying is the size.
+		[View Template=GroupVE]
+		{
+			L = 0
+			R = 45
+			T = 0
+			B = 45
+
+			/* cwp042704 - No Longer used.
+			[Child Template=DecalVE]
+			when = ENABLED + UNFOCUSED
+			texture = /UI/%s/game/SharedTextures/ButtonUnfocused.tga
+
+			[Child Template=DecalVE]
+			when = ENABLED + FOCUSED
+			texture = /UI/%s/game/SharedTextures/ButtonFocused.tga
+			*/
+		}
+
+		[DecalPanel Inherit = SharedPanelWidget]
+		{
+			[View]
+			{
+				L = 0
+				T = 0
+				R = +37
+				B = +38
+				
+				[Child Template=DecalVE]
+ 				when = ENABLED + UNFOCUSED
+ 				texture = /UI/%s/game/SharedTextures/FavoritesButtonUnfocused.png
+ 
+ 				[Child Template=DecalVE]
+ 				when = ENABLED + FOCUSED
+ 				texture = /UI/%s/game/SharedTextures/FavoritesButtonFocused.png
+			}
+			
+			[FavoriteDecal Template=DecalWidget]
+			{
+				[View Template=NoVE]
+				L=3
+				T=3
+				R=3r
+				B=3b
+			
+				[Decal Template=DecalVE]
+				;; texture will be set based on actor type
+				texture = /UI/%s/test/action_buttons/IconCancel.tga
+			}
+		}
+ 		[RolePanel Inherit = SharedPanelWidget]
+ 		{
+ 			[View]
+ 			{
+ 				L = 0
+ 				T = 43
+ 				R = +37
+ 				B = +29
+ 				
+ 				/*
+ 				[Child Template = DecalVE]
+ 				when = ENABLED + UNFOCUSED
+ 				texture = /UI/%s/game/SharedTextures/ButtonUnfocused.png		
+ 				
+ 				[Child Template = DecalVE]
+ 				when = ENABLED + FOCUSED
+ 				texture = /UI/%s/game/SharedTextures/ButtonFocused.png		
+ 				*/
+ 			}
+ 			
+ 			string role_property = flank,flank,support,support
+			string flank_ids = flank
+ 			
+ 			[RoleDecal Template = DecalWidget]
+ 			{
+ 				[View Template = GroupVE]
+ 				{
+ 					L = 0
+ 					T = 0
+ 					R = +15
+ 					B = +13
+ 					
+ 					/*
+ 					[Child Template = DecalVE]
+ 					texture = /UI/%s/game/SharedTextures/ButtonUnfocused.png
+ 					*/
+ 				}
+ 				
+ 				[Decal Inherit = DecalVE]
+ 				{
+ 					[View]
+ 					{
+ 						/*
+ 						L = 3
+ 						T = 3
+ 						R = 3r
+ 						B = 3b
+ 						*/
+ 					}
+ 					
+ 					texture = NULL
+ 				}	
+ 			}
+ 			
+ 			/* cwp042704 - no longer used.
+ 			[RoleDecal_1 Template = DecalWidget]
+ 			{
+ 				[View Template = NoVE]
+ 				{
+ 					;; set by code.  only defines size
+ 					L = 16r
+ 					T = 0
+ 					R = +15
+ 					B = +13
+ 				}
+ 				
+ 				[Decal Template = DecalVE]
+ 				texture = /UI/game/Favorites/Empty.png
+ 			}
+ 			
+ 			[RoleDecal_2 Template = DecalWidget]
+ 			{
+ 				[View Template = NoVE]
+ 				{
+ 					;; set by code.  only defines size
+ 					L = 0
+ 					T = 16
+ 					R = +15
+ 					B = +13
+ 				}
+ 				
+ 				[Decal Template = DecalVE]
+ 				texture = /UI/game/Favorites/Empty.png
+ 			}
+ 			
+ 			[RoleDecal_3 Template = DecalWidget]
+ 			{
+ 				[View Template = NoVE]
+ 				{
+ 					;; set by code.  only defines size
+ 					L = 16r
+ 					T = 16
+ 					R = +15
+ 					B = +13
+ 				}
+ 				
+ 				[Decal Template = DecalVE]
+ 				texture = /UI/game/Favorites/Empty.png
+ 			}	
+ 			*/
+		}		
+	}
+}
+

@@ -1,0 +1,66 @@
+[Ego template = BalancedLowIncomeEgo]
+{
+	IDS										= liubocheng_low_income_ego
+	name									= "#cpc_liubocheng_SAI_liubocheng_low_income_ego_name"
+} ;; BalancedLowIncomeEgo
+
+[Ego template = BalancedMainGameEgo]
+{
+	IDS										= liubocheng_main_game_ego
+	name									= "#cpc_liubocheng_SAI_liubocheng_main_game_ego_name"
+} ;; BalancedMainGameEgo
+
+[Ego template = BalancedAmmoEndGameEgo]
+{
+	IDS										= liubocheng_ammo_end_game_ego
+	name									= "#cpc_liubocheng_SAI_liubocheng_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = BalancedOilEndGameEgo]
+{
+	IDS										= liubocheng_oil_end_game_ego
+	name									= "#cpc_liubocheng_SAI_liubocheng_end_game_ego_name"
+} ;; BalancedEndGameEgo
+
+[Ego template = BalancedWarGameEgo]
+{
+	IDS										= liubocheng_war_game_ego
+	name									= "#cpc_liubocheng_SAI_liubocheng_end_game_ego_name"
+} ;; BalancedWarGameEgo
+
+[Ego template = BalancedFightGameEgo]
+{
+	IDS										= liubocheng_fight_game_ego
+	name									= "#cpc_liubocheng_SAI_liubocheng_end_game_ego_name"
+} ;; BalancedWarGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= liubocheng_sai
+	name									= "#cpc_liubocheng_SAI_liubocheng_sai_name"
+	description								= "#cpc_liubocheng_SAI_liubocheng_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+
+	initial_ego								= liubocheng_low_income_ego
+
+	[Ego]
+	IDS										= liubocheng_main_game_ego
+
+	[Ego]
+	IDS										= liubocheng_ammo_end_game_ego
+
+	[Ego]
+	IDS										= liubocheng_oil_end_game_ego
+
+	[Ego]
+	IDS										= liubocheng_war_game_ego
+
+	[Ego]
+	IDS										= liubocheng_fight_game_ego
+
+	[Nation]
+	IDS										= nation_cpc
+	
+	[Faction]
+	ids										= liubocheng
+} ;; von_manstein SAI

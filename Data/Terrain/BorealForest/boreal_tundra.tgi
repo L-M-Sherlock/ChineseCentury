@@ -1,0 +1,45 @@
+[Terrain template=Terrain]
+{
+	IDS = boreal_tundra
+	name = "#boreal_tundra_name"
+	
+	base_priority = 1000
+	terrain_group = snow	
+
+	doodad_frequency = 0.001
+	primary_doodad_frequency = 0.10
+
+	[Variation]
+	IDS = boreal_tundra01
+	name = "#boreal_tundra_01_name"
+	texture = BorealTundra/BorealTundra01.tga
+	texture_width = 16
+	texture_height = 16
+	terrain_color = 0.694, 0.745, 0.694
+
+	[Variation]
+	IDS = boreal_tundra02
+	name = "#boreal_tundra_02_name"
+	texture = BorealTundra/BorealTundra02.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.674, 0.725, 0.684
+
+	[Variation]
+	IDS = boreal_tundra03
+	name = "#boreal_tundra_03_name"
+	texture = BorealTundra/BorealTundra03.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.714, 0.765, 0.674
+	
+	[Variation]
+	IDS = boreal_tundra04
+	name = "#boreal_tundra_04_name"
+	texture = BorealTundra/BorealTundra04.tga
+	texture_width = 8
+	texture_height = 8
+	terrain_color = 0.714, 0.765, 0.674
+	
+	
+}

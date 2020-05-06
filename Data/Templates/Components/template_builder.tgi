@@ -1,0 +1,8 @@
+;; BuilderComponent: allows the actor to create new actors. Note if the new actor has a 
+;;  ConstructionComponent then this actor should have a PerformerComponent with a repair ability.
+[template BuilderComponent]
+{
+	[list BuildActor]
+	string actor_ids
+}
+

@@ -1,0 +1,86 @@
+[Ego template = TK_AA_1]
+{
+	IDS										= fin_low_income_ego
+	name									= "#finland_sai_fin_low_income_ego_unit_limit_max_needed_name"
+} ;; LowIncomeEgo
+
+[Ego template = TK_AA_2]
+{
+	IDS										= fin_main_game_ego
+	name									= "#finland_sai_fin_main_game_ego_unit_limit_max_needed_name"
+} ;; MainGameEgo
+
+[Ego template = TK_AA_3]
+{
+	IDS										= fin_end_game_ego
+	name									= "#finland_sai_fin_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_4]
+{
+	IDS										= fin_end_game_ego_TK
+	name									= "#finland_sai_fin_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_5]
+{
+	IDS										= fin_end_game_ego_END
+	name									= "#finland_sai_fin_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS]
+{
+	IDS										= fin_end_game_ego_TK_DS
+	name									= "#finland_sai_fin_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[Ego template = TK_AA_DS1]
+{
+	IDS										= fin_end_game_ego_TK_DS1
+	name									= "#finland_sai_fin_end_game_ego_unit_limit_max_needed_name"
+} ;; EndGameEgo
+
+[SAI template = SAI]
+{
+	IDS										= fin_sai
+	name									= "#finland_sai_fin_sai_name_2"
+	description								= "#finland_sai_fin_sai_description"
+	difficulty_level						= sai_difficulty_level_HARD
+	public									= false
+
+	initial_ego								= fin_low_income_ego
+
+	[Ego]
+	IDS										= fin_main_game_ego
+
+	[Ego]
+	IDS										= fin_end_game_ego
+
+	[Ego]
+	IDS										= fin_end_game_ego_TK
+
+	[Ego]
+	IDS										= fin_end_game_ego_END
+
+	[Ego]
+	IDS										= fin_end_game_ego_TK_DS
+
+	[Ego]
+	IDS										= fin_end_game_ego_TK_DS1
+
+	[Nation]
+	IDS										= nation_fin
+	
+	[Faction]
+	ids										= hannuksela
+	
+	[Faction]
+	ids										= mannerheim
+	
+	[Faction]
+	ids										= pajari
+	
+	[Faction]
+	ids										= talvela
+	
+} ;; fin SAI

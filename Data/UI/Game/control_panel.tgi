@@ -1,0 +1,405 @@
+i; ---------------------------- Control Panel ------------------------------
+
+[ControlPanel Inherit=PanelWidget]
+{
+	[View Template=GroupVE]
+	{
+		L = 0%
+		T = 257b
+		R = 100%
+		B = 100%
+
+		client_L = 0%
+		client_T = 210b
+		client_R = 100%
+		client_B = 100%
+
+		transparent = true
+		
+		[Child Template=DecalVE]
+		{
+			texture = /UI/%s/Game/ControlPanel/Background.tga
+
+			client_L = 0%
+			client_T = 170b
+			client_R = 100%
+			client_B = 100%
+		}
+	}
+
+	;; ---------------------- Push Button Widgets ----------------------
+
+	[ButtonMenu Template=PushButtonWidget]
+	{
+		ToolTip_name = "#control_panel_ButtonMenu_ToolTip"
+		tooltip = "#control_panel_ButtonMenu_tooltip_2"
+	
+		[View Template=GroupVE]
+		{
+			L = 9
+			T = 203
+			R = +54
+			B = +54
+		
+			[Child Template=DecalVE]
+			when = PRESSED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonOptionsPressed.tga
+		
+			[Child Template=DecalVE]
+			when = UNPRESSED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonOptionsUnpressed.tga
+		
+			[Child Template=DecalVE]
+			when = PRESSED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonOptionsPressedFocused.tga
+		
+			[Child Template=DecalVE]
+			when = UNPRESSED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonOptionsUnpressedFocused.tga
+		}
+	}
+
+	[ButtonObjectives Template=PushButtonWidget]
+	{
+		tooltip_name = "#control_panel_ButtonObjectives_ToolTip"
+		tooltip = "#control_panel_ButtonObjectives_tooltip_2"
+	
+		[View Template=GroupVE]
+		{
+			L = 838
+			T = 40
+			R = +45
+			B = +52
+		
+			[Child Template=DecalVE]
+			when = PRESSED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabObjectivesSelected.tga
+		
+			[Child Template=DecalVE]
+			when = UNPRESSED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabObjectivesUnselected.tga
+		
+			[Child Template=DecalVE]
+			when = PRESSED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabObjectivesSelectedFocused.tga
+		
+			[Child Template=DecalVE]
+			when = UNPRESSED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabObjectivesUnselectedFocused.tga
+		}
+	}
+
+	[ButtonTechnology Template=PushButtonWidget]
+	{
+		ToolTip_name = "#control_panel_ButtonTechnology_ToolTip"
+		tooltip = "#control_panel_ButtonTechnology_tooltip_2"
+
+		[View Template=GroupVE]
+		{
+			L = 883
+			T = 40
+			R = +45
+			B = +52
+		
+			[Child Template=DecalVE]
+			when = PRESSED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabTechnologySelected.tga
+		
+			[Child Template=DecalVE]
+			when = UNPRESSED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabTechnologyUnselected.tga
+		
+			[Child Template=DecalVE]
+			when = PRESSED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabTechnologySelectedFocused.tga
+		
+			[Child Template=DecalVE]
+			when = UNPRESSED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabTechnologyUnselectedFocused.tga
+		}
+	}
+
+	[ButtonPolitics Template=ToggleButtonWidget]
+	{
+		ToolTip_name = "#control_panel_ButtonPolitics_ToolTip"
+		tooltip = "#control_panel_ButtonPolitics_tooltip_2"
+	
+		[View Template=GroupVE]
+		{
+			L = 973
+			T = 40
+			R = +45
+			B = +52
+		
+			[Child Template=DecalVE]
+			when = SELECTED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabPoliticsSelected.tga
+		
+			[Child Template=DecalVE]
+			when = UNSELECTED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabPoliticsUnselected.tga
+		
+			[Child Template=DecalVE]
+			when = SELECTED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabPoliticsSelectedFocused.tga
+		
+			[Child Template=DecalVE]
+			when = UNSELECTED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabPoliticsUnselectedFocused.tga
+		}
+	}
+	
+	[ButtonMessageLog Template=PushButtonWidget]
+	{
+		ToolTip_name = "#control_panel_ButtonMessageLog_ToolTip"
+		tooltip = "#control_panel_ButtonMessageLog_tooltip_2"
+	
+		[View Template=GroupVE]
+		{
+			L = 928
+			T = 40
+			R = +45
+			B = +52
+		
+			[Child Template=DecalVE]
+			when = PRESSED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabLogSelected.tga
+		
+			[Child Template=DecalVE]
+			when = UNPRESSED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabLogUnselected.tga
+		
+			[Child Template=DecalVE]
+			when = PRESSED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabLogSelectedFocused.tga
+		
+			[Child Template=DecalVE]
+			when = UNPRESSED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabLogUnselectedFocused.tga
+
+			[Child Template = DecalVE]
+			alpha_blending = true
+			when = TARGETED
+			texture = /UI/%s/Game/SharedTextures/MessageLogTargeted.tga
+		}
+	}
+
+	[ButtonSupplyBorder Template=ToggleButtonWidget]
+	{
+		ToolTip_name = "#control_panel_ButtonSupplyBorder_ToolTip"
+		tooltip = "#control_panel_ButtonSupplyBorder_tooltip_2"
+	
+		[View Template=GroupVE]
+		{
+			L = 9
+			T = 30
+			R = +54
+			B = +54
+		
+			[Child Template=DecalVE]
+			when = SELECTED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonSupplyBorderPressedUnfocused.tga
+		
+			[Child Template=DecalVE]
+			when = UNSELECTED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonSupplyBorderUnpressed.tga
+		
+			[Child Template=DecalVE]
+			when = SELECTED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonSupplyBorderPressedFocused.tga
+		
+			[Child Template=DecalVE]
+			when = UNSELECTED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonSupplyBorderUnpressedFocused.tga
+		}
+	}
+
+	[ButtonSpeedDown Template=PushButtonWidget]
+	{
+		ToolTip = "#control_panel_ButtonSpeedDown_ToolTip"
+		
+		[View Template=GroupVE]
+		{
+			L = 265
+			T = 194
+			R = +0
+			B = +0
+		
+			[Child Template=DecalVE]
+			when = PRESSED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonSpeedDownPressed.tga
+		
+			[Child Template=DecalVE]
+			when = UNPRESSED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonSpeedDownUnpressed.tga
+		
+			[Child Template=DecalVE]
+			when = PRESSED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonSpeedDownPressedFocused.tga
+		
+			[Child Template=DecalVE]
+			when = UNPRESSED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonSpeedDownUnpressedFocused.tga
+		}
+	}
+
+	;; cwp051704 - pause button not used in A&A
+	;; cwp061304 - it is now.
+	[ButtonPause Template=ToggleButtonWidget]
+	{
+		ToolTip_name = "#control_panel_ButtonPause_ToolTip"
+		tooltip = "#control_panel_ButtonPause_tooltip_2"
+	
+		[View Template=GroupVE]
+		{
+			L = 245
+			T = 203
+			R = +54
+			B = +54
+		
+			[Child Template=DecalVE]
+			when = SELECTED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonPausePressed.tga
+		
+			[Child Template=DecalVE]
+			when = UNSELECTED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonPauseUnpressed.tga
+		
+			[Child Template=DecalVE]
+			when = SELECTED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonPausePressedFocused.tga
+		
+			[Child Template=DecalVE]
+			when = UNSELECTED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonPauseUnpressedFocused.tga
+		}
+	}
+	
+	[ButtonChat Template=ToggleButtonWidget]
+	{
+		[View Template=GroupVE]
+		{
+			L = 245
+			T = 30
+			R = +54
+			B = +54
+			
+			[Child Template=DecalVE]
+			when = UNSELECTED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabChatUnselected.tga
+			
+			[Child Template=DecalVE]
+			when = SELECTED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabChatSelected.tga
+
+			[Child Template=DecalVE]
+			when = UNSELECTED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabChatUnselectedFocused.tga
+
+			[Child Template=DecalVE]
+			when = SELECTED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/SidePanelTabChatSelectedFocused.tga
+		}
+		ToolTip_name = "#control_panel_ButtonChat_ToolTip"
+		tooltip = "#control_panel_ButtonChat_tooltip_2"
+	}
+
+	[ButtonSpeedUp Template=PushButtonWidget]
+	{
+		ToolTip_name = "#control_panel_ButtonSpeedUp_ToolTip"
+	
+		[View Template=GroupVE]
+		{
+			L = 328
+			T = 194
+			R = +0
+			B = +0
+		
+			[Child Template=DecalVE]
+			when = PRESSED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonSpeedUpPressed.tga
+		
+			[Child Template=DecalVE]
+			when = UNPRESSED + UNFOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonSpeedUpUnpressed.tga
+		
+			[Child Template=DecalVE]
+			when = PRESSED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonSpeedUpPressedFocused.tga
+		
+			[Child Template=DecalVE]
+			when = UNPRESSED + FOCUSED
+			texture = /UI/%s/Game/ControlPanel/ButtonSpeedUpUnpressedFocused.tga
+		}
+	}
+
+	;; ---------------------- Side Panel Widgets ----------------------
+
+	[SidePanelTabs Inherit=PanelWidget]
+	{
+		[View Template=GroupVE]
+		{
+			L = 0
+			T = 0
+			R = 0
+			B = 0
+		}
+
+		[ButtonMessageLog Template=ToggleButtonWidget]
+		{
+			[View Template=GroupVE]
+			{
+				L = 0
+				T = 0
+				R = +30
+				B = 100%
+			}
+			
+			ToolTip_name = "#control_panel_SidePanelTabs_ButtonMessageLog_ToolTip"
+
+		}
+
+		[ButtonCityManagement Template=ToggleButtonWidget]
+		{
+			[View Template=GroupVE]
+			{
+				L = 38
+				T = 0
+				R = +30
+				B = 100%
+			}
+
+			ToolTip_name = "#control_panel_SidePanelTabs_ButtonCityManagement_ToolTip"
+
+		}
+
+		[ButtonPolitics Template=ToggleButtonWidget]
+		{
+			[View Template=GroupVE]
+			{
+				L = 74
+				T = 0
+				R = +30
+				B = 100%
+			}
+
+			ToolTip_name = "#control_panel_SidePanelTabs_ButtonPolitics_ToolTip"
+
+		}
+
+		[ButtonObjectives Template=ToggleButtonWidget]
+		{
+			[View Template=GroupVE]
+			{
+				L = 112
+				T = 0
+				R = +30
+				B = 100%
+			}
+
+			ToolTip_name = "#control_panel_SidePanelTabs_ButtonObjectives_ToolTip"
+
+		}
+
+	}
+}

@@ -1,0 +1,655 @@
+[template TK1Research template = SAIResearchTemplate]
+{
+	base_priority	= 20
+
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 150
+	}
+
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 100
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_bersaglieri
+		priority					= 500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ski
+		priority					= 500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_marine_commando
+		priority					= 500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_guard_grenadiers
+		priority					= 500
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_paratrooper_MP
+		priority					= 1000
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 25
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 25
+	}
+}
+
+[template TK2Research template = SAIResearchTemplate]
+{
+	base_priority	= 20
+
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 2000
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 1800
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_bersaglieri
+		priority					= 1800
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ski
+		priority					= 1800
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_guard_grenadiers
+		priority					= 1800
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_marine_commando
+		priority					= 1800
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 100
+	}
+    
+	;; -20% recruit cost to infantry
+	[TechPriority]
+	{
+		tech						= tech_conscription
+		priority					= 300
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_paratrooper_MP
+		priority					= 2000
+	}
+    
+    [TechPriority]
+	{
+		tech						= tech_rus_assistance
+		priority					= 50
+	}
+
+    [TechPriority]
+	{
+		tech						= tech_usa_assistance
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_detection
+		priority					= 50
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_nosupply
+		priority					= 1500
+	}
+
+	;; ITA MORALE+1 HEALTH+15%
+	[TechPriority]
+	{
+		tech						= tech_facism
+		priority					= 100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_Schutzstaffel
+		priority					= 100
+	}
+}
+
+[template TK3Research template = SAIResearchTemplate]
+{
+	base_priority	= 20
+
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 150
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 1550
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 1500
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 500
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 300
+	}
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_usa_assistance
+		priority					= 1500
+	}
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_rus_assistance
+		priority					= 1500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_detection
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_nosupply
+		priority					= 2500
+	}
+
+	;; ITA MORALE+1 HEALTH+15%
+	[TechPriority]
+	{
+		tech						= tech_facism
+		priority					= 100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_Schutzstaffel
+		priority					= 100
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 100
+	}
+}
+
+[template TK4Research template = SAIResearchTemplate]
+{
+	base_priority	= 50
+
+	[TechPriority]
+	{
+		tech						= tech_military_surplus
+		priority					= 1600
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_sas_commandos
+		priority					= 600
+	}
+    
+	[TechPriority]
+	{
+		tech						= tech_sniper_rifle
+		priority					= 550
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_special_forces
+		priority					= 200
+	}
+
+	;; +2 AV to american riflemen
+	[TechPriority]
+	{
+		tech						= tech_garand_semi_auto
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_marksmanship
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_improved_machineguns
+		priority					= 250
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_mechanical_reliability
+		priority					= 250
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_diesel_engines
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_plentiful_ammunition
+		priority					= 300
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_foraging
+		priority					= 300
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_improved_fire_control
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_long_range_artillery
+		priority					= 300
+	}
+
+	;; -10% recruit cost to armor HQ
+	[TechPriority]
+	{
+		tech						= tech_tank_production
+		priority					= 500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_heavy_tank
+		priority					= 1500
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_tank_flame
+		priority					= 1200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_tank_king_tiger
+		priority					= 1200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_tank_constructs
+		priority					= 1200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_mannerheimline
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_gyrostabilized_cannons
+		priority					= 150
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_construction_battalions
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_proximity_fuses
+		priority					= 100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ammo_production
+		priority					= 400
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_oil_production
+		priority					= 300
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_east_indies
+		priority					= 400
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_improved_fortifications
+		priority					= 100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_entrenchment
+		priority					= 100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_mechanized_production
+		priority					= 500
+	}
+
+	;; +1 DV to tanks
+	[TechPriority]
+	{
+		tech						= tech_schurzen
+		priority					= 1200
+	}
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_usa_assistance
+		priority					= 1500
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_rus_assistance
+		priority					= 1500
+	}
+
+    ;; CHN HEALTH+10% RECHARGE_TIME+10% RESUPPLY_RATE-20%
+	[TechPriority]
+	{
+		tech						= tech_detection
+		priority					= 250
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_nosupply
+		priority					= 1000
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_nuclear_weapons
+		priority					= 5000
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_ballistic_missile
+		priority					= 5000
+	}
+
+	;; access to rocket trucks
+	[TechPriority]
+	{
+		tech						= tech_rocket_truck
+		priority					= 500
+	}
+
+	;; ITA MORALE+1 HEALTH+15%
+	[TechPriority]
+	{
+		tech						= tech_facism
+		priority					= 100
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_Schutzstaffel
+		priority					= 100
+	}
+
+	;; +9 DV to aircraft
+	[TechPriority]
+	{
+		tech						= tech_self_sealing_fuel_tanks
+		priority					= 100
+	}
+
+	;; +20% speed to aircraft
+	[TechPriority]
+	{
+		tech						= tech_superchargers
+		priority					= 100
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_improved_recon
+		priority					= 200
+	}
+
+	;; 
+	[TechPriority]
+	{
+		tech						= tech_air_superiority
+		priority					= 100
+	}
+
+	;; +20 AV to bombers
+	[TechPriority]
+	{
+		tech						= tech_increased_payload
+		priority					= 100
+	}
+
+	;; access to napalm
+	[TechPriority]
+	{
+		tech						= tech_napalm
+		priority					= 200
+	}
+
+	[TechPriority]
+	{
+		tech						= tech_increased_height
+		priority					= 50
+	}
+
+	;; +20% attack speed to mortars
+	[TechPriority]
+	{
+		tech						= tech_improved_mortars
+		priority					= 50
+	}
+
+	;; access to some sort of rifle grenade infantry
+	[TechPriority]
+	{
+		tech						= tech_rifle_grenade
+		priority					= 50
+	}
+
+	;; +5 AV to AT infantry
+	[TechPriority]
+	{
+		tech						= tech_improved_light_antitank
+		priority					= 50
+	}
+
+	;; access to flamethrower infantry
+	[TechPriority]
+	{
+		tech						= tech_infantry_flame
+		priority					= 50
+	}
+
+	;; acess to panzer fausts
+	[TechPriority]
+	{
+		tech						= tech_panzerfaust
+		priority					= 50
+	}
+
+	;; access to some sort of goliath infantry
+	[TechPriority]
+	{
+		tech						= tech_goliath
+		priority					= 20
+	}
+
+	;; access to tankettes
+	[TechPriority]
+	{
+		tech						= tech_tankette
+		priority					= 50
+	}
+
+	;; +1 morale to infantry
+	[TechPriority]
+	{
+		tech						= tech_advanced_infantry_training
+		priority					= 50
+	}
+
+	;; +5 morale breakpoint to tanks
+	[TechPriority]
+	{
+		tech						= tech_advanced_armor_training
+		priority					= 100
+	}
+
+	;; +4 detection & supply range
+	[TechPriority]
+	{
+		tech						= tech_improved_logistics
+		priority					= 100
+	}
+}

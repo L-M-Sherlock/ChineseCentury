@@ -1,0 +1,2861 @@
+
+;; ---------------------------- Options Menu ----------------------------
+
+[Template OptionsCheckboxGroupVE  Template=GroupVE]
+{
+   	L = 10
+   	;; Clients should specify the T field, all others are the same
+ 	R = 10r
+   	B = +20
+}
+
+[Template OptionsCheckboxSharedMediumLeftLabelVE Template=SharedMediumLeftLabelVE]
+{
+	L = 26
+	T = 2
+   	R = 4r
+}
+
+[Template OptionsBoundsSliderAdvancedWidget Template=OptionsMenuSliderAdvancedWidget]
+{
+	show_current_val = false
+	usage_area_absolute = 55, -55
+	
+	[View]
+	{
+		L = 40
+		R = 26r
+		B = +30
+	}
+
+	[MaxBoundLabel]
+	{
+		[Label]
+		L = 50r
+	}
+	
+	[Background Template=GroupVE]
+	{
+		[Child Template=DecalVE]
+		{
+			T = 5
+			B = 15b
+			alpha_blending = true
+			when = ENABLED
+			texture = /UI/%s/Menus/Options/SliderBarBackground.TGA	
+		}
+		
+		[Child Template = DecalVE]
+		{
+			T = 2
+			B = +27
+			alpha_blending = true
+			when = DISABLED
+			texture = /UI/%s/Menus/Options/SliderBarOff.png
+		}	
+	}
+}
+
+[Template OptionsCurrentSliderAdvancedWidget Template=OptionsMenuSliderAdvancedWidget]
+{
+	show_minmax = false
+	show_current_val = false
+	usage_area_absolute = 55, -55
+	
+	[View]
+	{
+		L = 40
+		R = 26r
+		B = +30
+	}	
+	
+	[Background Template=GroupVE]
+	{
+		[Child Template=DecalVE]
+		{
+			T = 5
+			B = 15b
+			alpha_blending = true
+			when = ENABLED
+			texture = /UI/%s/Menus/Options/SliderBarBackground.TGA	
+		}
+		
+		[Child Template = DecalVE]
+		{
+			T = 2
+			B = +27
+			alpha_blending = true
+			when = DISABLED
+			texture = /UI/%s/Menus/Options/SliderBarOff.png
+		}	
+	}
+}
+
+[Template OptionsPsuedoTabLabelWidgetNoArt Template=LabelWidget]
+{
+	[View Template=NoVE]
+	{
+		R = +175
+		B = +31
+	}
+			
+	[Label Template=SharedLargeCenteredLabelVE]
+	{
+		L = 13
+		T = 8
+	}
+}
+
+[Template OptionsLeftPsuedoTabLabelWidgetNoArt Template=OptionsPsuedoTabLabelWidgetNoArt]
+{
+	[View]
+	L = 15
+}
+
+[Template OptionsPsuedoTabLabelWidget Template=LabelWidget]
+{
+	[View Template=DecalVETiledHorizontal]
+	{
+		R = +175
+		B = +31
+		
+		center_texture = /UI/%s/Default/Tabs/paneltabcenter.png
+		ends_texture = /UI/%s/Default/Tabs/paneltabends.png				
+	}
+			
+	[Label Template=SharedMediumLeftLabelVE]
+	{
+		L = 13
+		T = 8
+	}
+}
+
+[Template OptionsLeftPsuedoTabLabelWidget Template=OptionsPsuedoTabLabelWidget]
+{
+	[View]
+	L = 15
+}
+
+[Template OptionsRightPsuedoTabLabelWidget Template=OptionsPsuedoTabLabelWidget]
+{
+	[View]
+	L = 347
+}
+
+[Template OptionsColumnPanel Template=SharedSmallPanelWidget]
+{
+	[View]
+	{
+
+	}
+}
+
+[Template OptionsLeftColumnPanel Template=OptionsColumnPanel]
+{
+	[View]
+	{
+		L = 14
+		R = +317
+	}
+}
+
+[Template OptionsRightColumnPanel Template=OptionsColumnPanel]
+{
+   	[View]
+   	{
+   		L = 346
+   		R = 15r
+   	}
+}
+
+[OptionsDialog Inherit=PanelWidget]
+{
+	
+	[RenderThreshold]
+	render_threshold = 20
+	
+	[View Template=GroupVE]
+	{
+		L = 0
+		T = 0
+		R = 100%
+		B = 100%
+		
+		validate_decal_children = false
+		
+		[Child Template = SharedChildLargePanelVE]
+		
+		[Child Template = DecalVE]
+		L = 0
+		T = 0
+		R = +121
+		B = 100%
+		texture = /UI/%s/Menus/Options/ControlPanel.png
+		
+		;;  Options Screen background
+		[Child Template = DecalVE]
+		{
+			L = 121
+			T = 0
+			R = +908
+			B = 100%
+			texture = /UI/%s/Menus/Options/Background.png
+		}
+
+	}
+
+	
+	[OptionsButtonDefaults Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#options_dialog_OptionsButtonDefaults_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 441
+			T = 689
+		}
+	}
+	
+	[OptionsButtonOK Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#options_dialog_OptionsButtonOK_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 630
+			T = 689
+		}
+	}
+
+	[OptionsButtonCancel Template=MenuPushButtonWidget]
+	{
+		[Client]
+		{
+			[View]
+			text = "#options_dialog_OptionsButtonCancel_Client_View_text"
+		}
+
+		[View]
+		{
+			L = 821
+			T = 689
+		}
+	}
+	
+	[ShowGameplayButton Template=ToggleButtonWidget]
+	{
+		[View Template = GroupVE]
+		{
+			L = 32
+			T = 131
+			R = +75
+			B = +73
+
+			[Child Template=DecalVE]
+			{
+				when = ENABLED + UNSELECTED
+				texture = /UI/%s/Menus/Options/GameplayOff.png
+			}	
+			
+			[Child Template=DecalVE]
+			{	
+				when = ENABLED + UNSELECTED + FOCUSED
+				texture = /UI/%s/Menus/Options/GameplayOver.png
+			}
+				
+			[Child Template=DecalVE]
+			{	
+				when = ENABLED + SELECTED
+				texture = /UI/%s/Menus/Options/GameplayOn.png
+			}
+			
+		}
+		
+		Tooltip = "#options_dialog_ShowGameplayButton_Tooltip"
+	}
+	
+	[ShowVideoButton Template=ToggleButtonWidget]
+	{
+		[View Template = GroupVE]
+		{
+			L = 33
+			T = 215
+			R = +75
+			B = +73
+	
+			[Child Template=DecalVE]
+			{
+				when = ENABLED + UNSELECTED
+				texture = /UI/%s/Menus/Options/VideoOff.png
+			}	
+			
+			[Child Template=DecalVE]
+			{	
+				when = ENABLED + UNSELECTED + FOCUSED
+				texture = /UI/%s/Menus/Options/VideoOver.png
+			}
+				
+			[Child Template=DecalVE]
+			{	
+				when = ENABLED + SELECTED
+				texture = /UI/%s/Menus/Options/VideoOn.png
+			}
+			
+		}
+		
+		Tooltip = "#options_dialog_ShowVideoButton_Tooltip"
+	}
+	
+	[ShowAudioButton Template=ToggleButtonWidget]
+	{
+		[View Template = GroupVE]
+		{
+			L = 34
+			T = 301
+			R = +75
+			B = +73
+			
+			[Child Template=DecalVE]
+			{
+				when = ENABLED + UNSELECTED
+				texture = /UI/%s/Menus/Options/AudioOff.png
+			}	
+			
+			[Child Template=DecalVE]
+			{	
+				when = ENABLED + UNSELECTED + FOCUSED
+				texture = /UI/%s/Menus/Options/AudioOver.png
+			}
+				
+			[Child Template=DecalVE]
+			{	
+				when = ENABLED + SELECTED
+				texture = /UI/%s/Menus/Options/AudioOn.png
+			}
+			
+		}
+
+		Tooltip = "#options_dialog_ShowAudioButton_Tooltip"
+	}
+
+	[ShowNetworkButton Template=ToggleButtonWidget]
+	{
+		[View Template = GroupVE]
+		{
+			L = 33
+			T = 387
+			R = +75
+			B = +73
+			
+			[Child Template=DecalVE]
+			{
+				when = ENABLED + UNSELECTED
+				texture = /UI/%s/Menus/Options/NetworkOff.png
+			}	
+			
+			[Child Template=DecalVE]
+			{	
+				when = ENABLED + UNSELECTED + FOCUSED
+				texture = /UI/%s/Menus/Options/NetworkOver.png
+			}
+				
+			[Child Template=DecalVE]
+			{	
+				when = ENABLED + SELECTED
+				texture = /UI/%s/Menus/Options/NetworkOn.png
+			}
+		}
+		
+		Tooltip = "#options_dialog_ShowNetworkButton_Tooltip"
+	}
+	
+	[ShowMetaGameButton Template=ToggleButtonWidget]
+	{
+		[View Template = GroupVE]
+		{
+			L = 33
+			T = 472
+			R = +75
+			B = +73
+			
+			[Child Template=DecalVE]
+			{
+				when = ENABLED + UNSELECTED
+				texture = /UI/%s/Menus/Options/WorldWarOff.png
+			}	
+			
+			[Child Template=DecalVE]
+			{	
+				when = ENABLED + UNSELECTED + FOCUSED
+				texture = /UI/%s/Menus/Options/WorldWarOver.png
+			}
+				
+			[Child Template=DecalVE]
+			{	
+				when = ENABLED + SELECTED
+				texture = /UI/%s/Menus/Options/WorldWarOn.png
+			}			
+
+			[Child Template=DecalVE]
+			{
+				when = DISABLED
+				texture = /UI/%s/Menus/Options/WorldWarOff.png ;; TODO: change art
+			}
+		}
+		
+		Tooltip = "#options_dialog_ShowMetaGameButton_Tooltip"		
+	}
+	
+	[GamePlayPage Inherit=PanelWidget]
+	{
+		[View Template=GroupVE]
+		{
+			L = 121
+			T = 0
+			R = 100%
+			B = 100%
+
+			validate_decal_children = false
+			
+			;;  Silver label art
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 60
+				T = 112
+				R = +183
+				B = +27
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}
+			
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 60
+				T = 179
+				R = +183
+				B = +27
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}
+
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 348
+				T = 112
+				R = +183
+				B = +27
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}
+
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 348
+				T = 179
+				R = +183
+				B = +27
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}
+
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 629
+				T = 112
+				R = +205
+				B = +30
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}
+
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 593
+				T = 218
+				R = +266
+				B = +31	
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}
+		}
+
+		;;  Top Left
+		[MessageLogOptionsPanel Inherit = OptionsLeftColumnPanel]
+		{
+			[View]
+			{	
+				L = 0
+				T = 0
+				R = +291
+				B = +294
+				
+				;;  "Message Log Fade" label
+				[Child Template=SharedMediumCenteredLabelVE]
+				{
+					L = 60
+					T = 117
+					R = +183
+					B = +27
+
+					text = "#options_dialog_Child_text"
+				}
+				
+				[Child Template=SharedMediumCenteredLabelVE]
+				{
+					L = 60
+					T = 184
+					R = +183
+					B = +27
+
+					text = "#options_dialog_Child_text_2"
+				}
+				
+				;;  Labels for all the sliders
+				[Child Template=SharedTinyRightLabelVE]
+				{
+					L = 0
+					T = 150
+					R = +90
+					B = +22
+
+					text = "#options_dialog_Child_text_48"
+				}
+
+				;;  Labels for all the sliders
+				[Child Template=SharedTinyLeftLabelVE]
+				{
+					L = 216
+					T = 150
+					R = +74
+					B = +22
+
+					text = "#options_dialog_Child_text_49"
+				}
+			}	
+			
+			[MessageLogFadeTimeSlider Template=OptionsCurrentSliderAdvancedWidget]
+			{				
+				[View]
+				{
+					T = 146
+				}
+				
+				step_size = 1
+				page_size = 8
+			}
+			
+			[MessageLogMaximumLinesSlider Template=OptionsCurrentSliderAdvancedWidget]
+			{					
+				[View]
+				{
+					T = 210
+				}
+
+				;; Maximum bounds label
+				[MaxBoundLabel Template=LabelWidget]
+				{
+					[View Template=NoVE]
+
+					[Label Template=SharedTinyLeftLabelVE]
+					{
+						L = 50r
+						T = 3
+						R = +50
+
+						text = ""
+					}
+				}
+
+				show_minmax = true
+				step_size = 1
+				page_size = 8
+			}
+		} ;; end message log options panel
+		
+		;;  Top middle
+		[CameraOptionsPanel Inherit = OptionsLeftColumnPanel]
+		{
+			[View]
+			{
+				L = 291
+				T = 0
+				R = +292
+				B = +294
+				
+				[Child Template=SharedMediumCenteredLabelVE]
+				{
+					L = 59
+					T = 117
+					R = +183
+					B = +27
+
+					text = "#options_dialog_Child_text_3"
+				}
+
+				[Child Template=SharedMediumCenteredLabelVE]
+				{
+					L = 59
+					T = 184
+					R = +183
+					B = +27
+
+					text = "#options_dialog_Child_text_4"
+				}
+				
+				[Child Template=SharedTinyRightLabelVE]
+				{
+					L = 0
+					T = 150
+					R = +80
+					B = +22
+
+					text = "#options_dialog_Child_text_50"
+				}
+
+				;;  Labels for all the sliders
+				[Child Template=SharedTinyLeftLabelVE]
+				{
+					L = 225
+					T = 150
+					R = +74
+					B = +22
+
+					text = "#options_dialog_Child_text_51"
+				}
+				
+				[Child Template=SharedTinyRightLabelVE]
+				{
+					L = 0
+					T = 212
+					R = +80
+					B = +22
+
+					text = "#options_dialog_Child_text_52"
+				}
+
+				;;  Labels for all the sliders
+				[Child Template=SharedTinyLeftLabelVE]
+				{
+					L = 225
+					T = 212
+					R = +74
+					B = +22
+
+					text = "#options_dialog_Child_text_53"
+				}															
+			}
+			
+			[CameraScrollSlider Template=OptionsCurrentSliderAdvancedWidget]
+			{				
+				[View]
+				{
+					L = 36
+					T = 147
+					R = 18r
+				}
+
+				;; Maximum bounds label
+				[MaxBoundLabel Template=LabelWidget]
+				{
+					[View Template=NoVE]
+
+					[Label Template=SharedTinyLeftLabelVE]
+					{
+						L = 30r
+						T = 3
+						R = +50
+
+						text = ""
+					}
+				}
+
+				step_size = 0.1
+				page_size = 8
+			}
+			
+			[CameraZoomSlider Template=OptionsCurrentSliderAdvancedWidget]
+			{
+				[View]
+				{
+					L = 36
+					T = 209
+					R = 18r
+				}
+
+				step_size = 0.01
+				page_size = 8
+			}
+		} ;; end CameraOptionsPanel
+		
+		;;  Top Right
+		[GameSpeedOptionsPanel Inherit = OptionsLeftColumnPanel]
+		{
+			[View]
+			{
+				L = 582
+				T = 0
+				R = 100%
+				B = +294
+
+
+				[Child Template=SharedMediumCenteredLabelVE]
+				{
+					L = 68
+					T = 117
+					R = +172
+					B = +30
+
+					text = "#options_dialog_Child_text_5"
+				}
+
+				[Child Template = OptionsCheckboxSharedMediumLeftLabelVE]
+				{
+					L = 27
+					T = 225
+					R = +109
+					B = +26			
+					text = "#options_dialog_Child_text_6"
+				}
+				
+				;;  Current Values background art for the game speed slider
+				[Child Template=DecalVE]
+				{
+					L = 234
+					T = 149
+					R = +46
+					B = +21		
+
+					texture = /UI/%s/Default/DropDown/TileEnds.tga
+				}
+			}
+			
+			[GameSpeedSlider Template=OptionsCurrentSliderAdvancedWidget]
+			{
+				usage_area_absolute = 55, -137
+				
+				show_minmax = true
+				show_current_val = true
+				step_size = 0.5
+				page_size = 16
+				float min_value = -4
+				float max_value = 4
+				
+				[View]
+				{
+					L = 0
+					T = 148
+					R = 100%
+				}
+
+				;; Minimum bounds label
+				[MinBoundLabel Template=LabelWidget]
+				{
+					[View Template=NoVE]
+
+					[Label Template=SharedTinyRightLabelVE]
+					{
+						L = 0
+						T = 3
+						R = +43
+					}
+				}
+				
+				;; Maximum bounds label
+				[MaxBoundLabel Template=LabelWidget]
+				{
+					[View Template=NoVE]
+
+					[Label Template=SharedTinyLeftLabelVE]
+					{
+						L = 129r
+						T = 3
+						R = +50
+					}
+				}
+				
+				;; Current value label
+				[CurrentValueLabel Template=LabelWidget]
+				{
+					[View Template=NoVE]
+
+					[Label Template=SharedTinyLeftLabelVE]
+					{
+						L = 82r
+						T = 3
+						R = +50
+
+						text = ""
+					}
+				}
+			}
+
+			[DropDownHotkeySelect Template=SharedDropDownWidget]
+			{
+				[View] 		
+   				{
+  					L = 125
+  					T = 222
+  					R = +144
+   				}
+   			}
+		} ;; end GameSpeedOptionsPanel
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; END COLUMN
+   		
+   		;;  Bottom Left
+   		[UIOptionsPanel Inherit = OptionsRightColumnPanel]
+   		{
+   			[View]
+   			{
+   				L = 0
+   				T = 294
+   				R = +291
+   				B = 100%
+   			}
+   			
+			[ToggleCameraRotate Template=ToggleButtonWidget]
+			{			
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 74
+					R = +260	;;+330
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 1
+						R = +47
+						B = +27
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_7"
+					}
+				}
+
+				Tooltip = "#options_dialog_GamePlayPage_UIOptionsPanel_ToggleCameraRotate_Tooltip"
+			}	   			
+			
+			[ToggleToolTips Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 119
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+   				
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_8"
+					}									
+   				}
+			}			
+			
+			[ToggleConfirmationDialog Template = ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 163
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_9"
+					}
+				}
+			}
+			
+			;;  Not used in A&A
+			[ToggleStructureAutoPlace Template = ToggleButtonWidget]
+			{
+				visible = false
+				
+				[View Template=OptionsCheckboxGroupVE]
+				{
+				}					
+			}
+
+			[ToggleShowVFXObjectName Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 207
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_17"
+					}														
+				}
+			}
+   		} ;; end UIOptionsPanel
+			
+		;;  Bottom Middle
+   		[MessageOptionsPanel Inherit = OptionsRightColumnPanel]
+   		{
+   			[View]
+   			{
+   				L = 291
+   				T = 294
+   				R = +292
+   				B = +377
+   			}
+			
+   			[ToggleEventFilterEngagement Template=ToggleButtonWidget]
+   			{
+				[View Template=GroupVE]
+				{
+					L = 18
+					T = 74
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_11"
+					}
+				}
+   			}
+   			
+   			[ToggleEventFilterEngagementAudioOnly Template=ToggleButtonWidget]
+   			{   					
+				[View Template=GroupVE]
+				{
+					L = 67
+					T = 119
+					R = +244
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					R = +211
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_12"
+					}
+   				}
+   			}
+
+			[ToggleEventFilterSiege Template=ToggleButtonWidget]
+   			{
+				;; No siege events in A&A
+				visible = false
+
+   				[View Template=OptionsCheckboxGroupVE]
+   				{
+   				}
+   			}
+
+			[ToggleEventFilterProduction Template=ToggleButtonWidget]
+   			{			
+				[View Template=GroupVE]
+				{
+					L = 18
+					T = 163
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_47"
+					}
+				}
+   			}
+	
+   		} ;; end MessagesOptionsPanel
+
+		;;  Bottom Right
+		[MapOptionsPanel Inherit = OptionsRightColumnPanel]
+		{
+			[View]
+			{
+				L = 582
+				T = 294
+				R = 100%
+				B = +377		
+			}
+			
+			[ToggleDamageNumbers Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 16
+					T = 74
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_14"
+					}
+				}
+			}			
+						
+			[ToggleZoneSupply Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 16
+					T = 119
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_15"
+					}
+				}
+			}
+			
+			[ToggleElapsedGameTime Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 16
+					T = 163
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_16"
+					}
+				}
+			}			
+		} ;; end MapOptionsPanel
+		
+		;;  Labels for each box
+		[MessageLogTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{			
+			[View]
+			{
+				L = 79
+				T = 51
+				R = +153
+				B = +31
+			}
+			
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_GamePlayPage_MessageLogTitle_Label_Text"
+			}
+		}
+		
+		[CameraTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{		
+			[View]
+			{
+				L = 354
+				T = 51
+				R = +153
+				B = +31
+			}
+
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_GamePlayPage_CameraTitle_Label_Text"
+			}	
+		}
+	
+		[GameTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{
+			[View]
+			{
+				L = 645
+				T = 51
+				R = +153
+				B = +31
+			}
+
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_GamePlayPage_GameTitle_Label_Text"
+			}	
+		}
+
+		[UITitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{
+			[View]
+			{
+				L = 79
+				T = 316
+				R = +153
+				B = +31
+			}
+
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_GamePlayPage_UITitle_Label_Text"
+			}
+		}
+
+		[MessagesTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{
+			[View]
+			{
+				L = 354
+				T = 316
+				R = +153
+				B = +31
+			}
+			
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_GamePlayPage_MessagesTitle_Label_Text"
+			}
+		}
+
+		[MapTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{
+			[View]
+			{
+				L = 645
+				T = 316
+				R = +153
+				B = +31
+			}
+
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_GamePlayPage_MapTitle_Label_Text"
+			}
+		}
+	}
+
+	[VideoPage Inherit=PanelWidget]
+	{
+		localized custom_preset_string = "#options_dialog_VideoPage_custom_preset_string"
+	
+		[View Template=GroupVE]
+		{
+			L = 121
+			T = 0
+			R = 100%
+			B = 100%
+					
+			validate_decal_children = false
+			
+			[Child Template=SharedLargeCenteredLabelVE]
+			L = 78
+			T = 323
+			R = +153
+			B = +31
+			color = 0,0,0
+			text = "#options_dialog_VideoPage_AdvancedTitle_Label_Text"
+			
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 30
+				T = 110
+				R = +264
+				B = +31			
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}
+			
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 30
+				T = 176
+				R = +264
+				B = +31			
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}			
+
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 346
+				T = 110
+				R = +198
+				B = +31
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}			
+			
+			;; art for particles slider label.
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 346
+				T = 176
+				R = +198
+				B = +31
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}
+
+		}
+		
+		[ResolutionOptionsPanel Inherit = OptionsColumnPanel]
+		{
+			[View]
+			{
+				[Child Template=SharedMediumLeftLabelVE]
+				{
+					L = 40
+					T = 116
+					R = +180
+					B = +27
+
+					text = "#options_dialog_Child_text_18"
+				}
+				
+				[Child Template=SharedMediumLeftLabelVE]
+				{
+					L = 40
+					T = 183
+					R = +180
+					B = +27
+
+					text = "#options_dialog_Child_text_19"
+				}
+			}
+						
+			[DropDownResolution Template=SharedDropDownWidget]
+			{
+				[Listbox]
+				sorted = false
+				
+				[View]
+				{
+  					L = 135
+  					T = 114
+  					R = +139
+				}
+			}
+			
+			[DropDownGraphicsPreset Template=SharedDropDownWidget]
+			{
+				[Listbox]
+				sorted = false
+
+				[View]
+				{
+					L = 135
+					T = 180
+					R = +139
+				}
+			}
+		}
+		
+		[GraphicsOptionsPanel Inherit = OptionsColumnPanel]
+		{
+			[View]
+			{
+				;;  "Shadow Detail" label
+				[Child Template=SharedMediumCenteredLabelVE]
+				{
+					L = 361
+					T = 117
+					R = +153
+					B = +25
+
+					text = "#options_dialog_Child_text_20"
+				}
+				
+				;;  "Particles" label
+				[Child Template=SharedMediumCenteredLabelVE]
+				{
+					L = 361
+					T = 183
+					R = +153
+					B = +25
+
+					text = "#options_dialog_Child_text_58"
+				}			
+			}
+
+			[ToggleRenderFootsteps Template=ToggleButtonWidget]
+			{
+				tooltip = "#options_dialog_VideoPage_GraphicsOptionsPanel_ToggleRenderFootsteps_tooltip"
+				
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 368
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_21"
+					}
+				}			
+			}
+
+			[ToggleTerrainHighQuality Template=ToggleButtonWidget]
+			{
+				tooltip = "#options_dialog_VideoPage_GraphicsOptionsPanel_ToggleTerrainHighQuality_tooltip"
+				
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 402
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_22"
+					}
+   				}
+			}			
+			
+			[ToggleTerrainTrilinearFiltering Template = ToggleButtonWidget]
+			{
+				tooltip = "#options_dialog_VideoPage_GraphicsOptionsPanel_ToggleTerrainTrilinearFiltering_tooltip"
+				
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 436
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_23"
+					}
+				}
+			}
+
+			[ToggleTerrainDoubleDensity Template=ToggleButtonWidget]
+			{
+				tooltip = "#options_dialog_VideoPage_GraphicsOptionsPanel_ToggleTerrainDoubleDensity_tooltip"
+				
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 471
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_24"
+					}
+				}
+			}
+			
+			[ToggleRenderUnitFog Template=ToggleButtonWidget]
+			{
+				tooltip = "#options_dialog_VideoPage_GraphicsOptionsPanel_ToggleRenderUnitFog_tooltip"
+
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 504
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 6
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_25"
+					}
+				}
+			}
+			
+			[ToggleRenderHighQualityTextures Template=ToggleButtonWidget]
+			{
+				tooltip = "#options_dialog_VideoPage_GraphicsOptionsPanel_ToggleRenderHighQualityTextures_tooltip"
+				
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 536
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_26"
+					}
+				}
+			}
+
+			[ToggleRenderDecals Template=ToggleButtonWidget]
+			{
+				tooltip = "#options_dialog_VideoPage_GraphicsOptionsPanel_ToggleRenderDecals_tooltip"
+
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 570
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}  
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_56"
+					}
+				}
+			}
+			
+			[RenderLODShadowsSlider Template=OptionsCurrentSliderAdvancedWidget]
+			{
+				show_minmax = true
+				tooltip = "#options_dialog_VideoPage_GraphicsOptionsPanel_RenderLODShadowsSlider_tooltip"
+
+				[View]
+				{
+					L = 325
+					T = 147
+					R = 335r
+				}
+				
+				[MaxBoundLabel]
+				{
+					[Label]
+					L = 50r
+				}
+
+				step_size = .5
+				page_size = 4
+			}
+			
+			[ParticlesSlider Template=OptionsBoundsSliderAdvancedWidget]
+			{
+				tooltip = "#options_dialog_VideoPage_GraphicsOptionsPanel_ParticlesSlider_tooltip"
+
+				[View]
+				{
+					L = 325
+					T = 213
+					R = 335r
+				}
+
+				float min_value = 0
+				float max_value = 1
+				page_size = 4
+			}
+			
+		} ;; end of graphicsoptionspanel
+
+		[BasicTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{
+			[View]
+			{
+				L = 79
+				T = 51
+				R = +153
+				B = +31				
+			}
+			
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_VideoPage_BasicTitle_Label_Text"
+			}
+		}
+		
+		[AdvancedTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{
+			[View]
+			{
+				L = 354
+				T = 51
+				R = +153
+				B = +31
+			}
+
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_VideoPage_AdvancedTitle_Label_Text"
+			}						
+		}
+	} ;; end of video page
+
+	[AudioPage Inherit=PanelWidget]
+	{
+		string fx_test = test_volume
+		string speech_test = test_speech
+
+		[View Template=GroupVE]
+		{
+			L = 121
+			T = 0
+			R = 100%
+			B = 100%
+			
+			validate_decal_children = false
+			
+			;;  Current Values background art for the sliders
+			[Child Template=DecalVE]
+			{
+				L = 230
+				T = 400
+				R = +40
+				B = +21		
+
+				texture = /UI/%s/Default/DropDown/TileEnds.tga
+			}
+
+			[Child Template=DecalVE]
+			{
+				L = 230
+				T = 465
+				R = +40
+				B = +21		
+
+				texture = /UI/%s/Default/DropDown/TileEnds.tga
+			}
+
+			[Child Template=DecalVE]
+			{
+				L = 230
+				T = 530
+				R = +40
+				B = +21		
+
+				texture = /UI/%s/Default/DropDown/TileEnds.tga
+			}
+
+			[Child Template=DecalVE]
+			{
+				L = 230
+				T = 600
+				R = +40
+				B = +21		
+
+				texture = /UI/%s/Default/DropDown/TileEnds.tga
+			}
+
+			;;  Silver background art for labels
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 60
+				T = 370
+				R = +203
+				B = +26			
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}
+			
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 60
+				T = 429
+				R = +203
+				B = +26			
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}
+
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 60
+				T = 493
+				R = +203
+				B = +26			
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}
+
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 60
+				T = 561
+				R = +203
+				B = +26			
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}			
+		}
+		
+		[VolumeOptionsPanel Inherit = OptionsLeftColumnPanel]
+		{
+			[View]
+			{				
+				[Child Template=SharedMediumLeftLabelVE]
+				{
+					L = 62
+					T = 372
+					R = 4r
+					B = +20
+
+					text = "#options_dialog_Child_text_27"
+				}
+				
+				[Child Template=SharedMediumLeftLabelVE]
+				{
+					L = 62
+					T = 433
+					R = 4r
+					B = +20
+
+					text = "#options_dialog_Child_text_28"
+				}
+				
+				[Child Template=SharedMediumLeftLabelVE]
+				{
+					L = 62
+					T = 497
+					R = 4r
+					B = +20
+
+					text = "#options_dialog_Child_text_29"
+				}
+				
+				[Child Template=SharedMediumLeftLabelVE]
+				{
+					L = 62
+					T = 564
+					R = 4r
+					B = +20
+
+					text = "#options_dialog_Child_text_30"
+				}												
+			}
+			
+			[AudioMainVolumeSlider Template=OptionsCurrentSliderAdvancedWidget]
+			{
+				sound_clicked = null
+				show_current_val = true
+				
+				[View]
+				{
+					L = 25
+					T = 397
+					R = 55r
+				}
+
+				step_size = 0
+				page_size = 8
+				
+				;; Current value label
+				[CurrentValueLabel Template=LabelWidget]
+				{
+					[View Template=NoVE]
+
+					[Label Template=SharedTinyLeftLabelVE]
+					{
+						L = 42r
+						T = 8
+						R = +30
+					}
+				}
+			}
+			
+			[AudioFXVolumeSlider Template=OptionsCurrentSliderAdvancedWidget]
+			{
+				sound_clicked = null
+				show_current_val = true
+				
+				[View]
+				{
+					L = 25
+					T = 463
+					R = 55r
+				}
+
+				step_size = 0
+				page_size = 8
+
+				;; Current value label
+				[CurrentValueLabel Template=LabelWidget]
+				{
+					[View Template=NoVE]
+
+					[Label Template=SharedTinyLeftLabelVE]
+					{
+						L = 42r
+						T = 8
+						R = +30
+					}
+				}
+			}
+			
+			[AudioSpeechVolumeSlider Template=OptionsCurrentSliderAdvancedWidget]
+			{
+				sound_clicked = null
+				show_current_val = true
+				
+				[View]
+				{
+					L = 25
+					T = 527
+					R = 55r
+				}
+
+				step_size = 0
+				page_size = 8
+
+				;; Current value label
+				[CurrentValueLabel Template=LabelWidget]
+				{
+					[View Template=NoVE]
+
+					[Label Template=SharedTinyLeftLabelVE]
+					{
+						L = 42r
+						T = 8
+						R = +30
+					}
+				}
+			}
+			
+			[AudioMusicVolumeSlider Template=OptionsCurrentSliderAdvancedWidget]
+			{
+				sound_clicked = null
+				show_current_val = true
+				
+				[View]
+				{
+					L = 25
+					T = 601
+					R = 55r
+				}
+
+				step_size = 0
+				page_size = 8
+
+				;; Current value label
+				[CurrentValueLabel Template=LabelWidget]
+				{
+					[View Template=NoVE]
+
+					[Label Template=SharedTinyLeftLabelVE]
+					{
+						L = 42r
+						T = 4
+						R = +30
+					}
+				}
+			}
+		} ;; end of volume options panel
+		
+		[SoundsFilterOptionsPanel Inherit = OptionsRightColumnPanel]
+		{
+   			[View]
+   			{
+   				L = 292
+   				T = 299
+   				R = 100%
+   				B = 100%   				
+   			}
+
+			[ToggleChatSounds Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{				
+					L = 18
+					T = 69
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_31"
+					}
+				}
+			}	
+			
+			[ToggleUnitAcknowledgement Template=ToggleButtonWidget]
+			{
+				[View Template = GroupVE]
+				{
+					L = 18
+					T = 114
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 8
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_32"
+					}
+				}
+			}
+		} ;; end sound filter options panel
+		
+		;;  Volume Label
+		[VolumeTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{
+			[View]
+			{
+				L = 84
+				T = 316
+				R = +145
+				B = +31
+			}
+			
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_AudioPage_VolumeTitle_Label_Text"
+			}
+		}
+		
+		;;  Sounds Label
+		[SoundsTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{
+			[View]
+			{
+				L = 368
+				T = 316
+				R = +145
+				B = +31
+			}
+			
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_AudioPage_SoundsTitle_Label_Text"
+			}
+		}
+	} ;; end audio page
+	
+	[NetworkPage Inherit=PanelWidget]
+	{
+		[View Template=GroupVE]
+		{
+			L = 121
+			T = 0
+			R = 100%
+			B = 100%	
+			
+			validate_decal_children = false
+			
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 27
+				T = 146
+				R = +260
+				B = +31			
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}			
+								
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 305
+				T = 107
+				R = +270
+				B = +32
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}			
+			
+			[Child Template=DecalVETiledHorizontal]
+			{
+				L = 345
+				T = 551
+				R = +195
+				B = +31			
+
+				alpha_blending = true
+				center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+				ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+			}
+
+		}
+
+		;;  Internet (Top Left)
+		[InternetOptionsPanel Inherit=OptionsLeftColumnPanel]
+		{
+			[View]
+			{
+				L = 0
+				T = 0
+				R = +290
+				B = +291
+				
+				;;  "Connection" Label
+				[Child Template=SharedMediumLeftLabelVE]
+				{
+					L = 40
+					T = 151
+					R = +100
+					B = +24
+				
+					text = "#options_dialog_Child_text_33"
+				}				
+			}
+
+			[NetworkConnectionDropdown Template=SharedDropdownWidget]
+			{
+				[View]
+				{
+					L = 135
+					T = 150
+					R = 10r
+					B = +20
+				}
+			}
+
+			[NetworkReportGameInProgressToggle Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 106
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+					
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+					
+					;;  "Report Game in Progress" Label
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_34"
+					}
+				}
+				
+				Tooltip = "#options_dialog_NetworkPage_InternetOptionsPanel_NetworkReportGameInProgressToggle_Tooltip"
+			}
+		}
+
+		;;  LAN (Top Right)
+		[LANOptionsPanel Inherit=OptionsRightColumnPanel]
+		{
+			[View]
+			{
+				L = 290
+				T = 0
+				
+				[Child Template=SharedMediumLeftLabelVE]
+				{
+					L = 30
+					T = 112
+					R = +96
+					B = +20
+
+					text = "#options_dialog_Child_text_40"
+				}
+			}
+
+			[NetworkLanNicknameEditbox Template=SharedEditboxWidget]
+			{
+				[View]
+				{
+					L = 135
+					T = 111
+					R = +138
+					B = +21
+				}
+				
+				[Cursor]
+				{
+					[View Template=GroupVE]
+					{
+						L = 2
+						T = 2
+					}
+				}
+				
+				[Label Template=LabelWidget]
+				{
+					[Label Template=SharedMediumLeftLabelVE]
+					{
+						L = 4
+					}
+				}						
+			}
+		}
+
+		;;  Game Browser (Bottom Left)
+		[InternetGameBrowserOptionsPanel Inherit = OptionsRightColumnPanel]
+		{
+			[View]
+			{
+				L = 0
+				T = 291
+				R = +264
+				B = 100%
+			}
+
+			[NetworkGamesDifferentVersionToggle Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 77
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 6
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_42"
+					}
+				}			
+			}
+
+			[NetworkGamesDifferentGroupRoomToggle Template=ToggleButtonWidget]
+			{
+				;;Tooltip = "Show all games that are not hosted in the same room as you"
+				
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 122
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 6
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_43"
+					}
+   				}
+			}			
+
+			[NetworkGamesDifferentLanguageToggle Template=ToggleButtonWidget]
+			{
+				;;Tooltip = "Show all games that are not the same language"
+				visible = true
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 254
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 6
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_57"
+					}
+   				}
+			}			
+
+			[NetworkGamesFullGamesToggle Template = ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 166
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 6
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_44"
+					}
+				}
+			}
+
+			[NetworkGamesInProgressToggle Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 210
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 6
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_45"
+					}
+				}
+			}
+
+			[NetworkAutoRefreshToggle Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 27
+					T = 342
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 8
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_46"
+					}
+				}
+			}
+
+			[NetworkRefreshTimeSlider Template=OptionsCurrentSliderAdvancedWidget]
+			{
+				[View]
+				{
+					L = 39
+					T = 386
+					R = 100%
+				}
+
+				;; Maximum bounds label
+				[MaxBoundLabel Template=LabelWidget]
+				{
+					[View Template=NoVE]
+
+					[Label Template=SharedTinyLeftLabelVE]
+					{
+						L = 33r
+						T = 3
+						R = +50
+					}
+				}
+
+				show_minmax = true
+				step_size = 0.1
+				page_size = 8
+			}
+		}
+
+		;;  Chat options (Bottom Right)
+		[ChatOptionsPanel Inherit=OptionsLeftColumnPanel]
+		{
+			[View]
+			{
+				L = 290
+				T = 291
+				R = 100%
+				B = +380
+				
+				[Child Template=SharedMediumLeftLabelVE]
+				{
+					L = 72
+					T = 265
+					R = +220
+					B = +30
+
+					text = "#options_dialog_Child_text_35"
+				}
+			}
+
+			[NetworkAFKTimeSlider Template=OptionsCurrentSliderAdvancedWidget]
+			{
+				[View]
+				{
+					T = 308
+					R = +235
+				}
+
+				;; Maximum bounds label
+				[MaxBoundLabel Template=LabelWidget]
+				{
+					[View Template=NoVE]
+
+					[Label Template=SharedTinyLeftLabelVE]
+					{
+						L = 50r
+						T = 3
+						R = +50
+					}
+				}
+
+				show_minmax = true
+				step_size = 0.1
+				page_size = 8
+			}
+	
+			;;  Switches
+			[ToggleMessageFilterChat Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 20
+					T = 77
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 6
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_36"
+					}
+				}			
+			}
+
+			[ToggleMessageFilterBuddy Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 20
+					T = 122
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 6
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_37"
+					}
+   				}
+			}			
+
+			[ToggleMessageFilterAFK Template = ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 20
+					T = 166
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 6
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_38"
+					}
+				}
+			}
+
+			[ToggleMessageFilterPlayerJoinLeave Template=ToggleButtonWidget]
+			{
+				[View Template=GroupVE]
+				{
+					L = 20
+					T = 210
+					R = +260
+					B = +30
+
+					[Child Template=DecalVETiledHorizontal]
+					T = 3
+					alpha_blending = true
+					center_texture = /UI/%s/Menus/Options/SilverBlackLabelCenter.PNG
+					ends_texture = /UI/%s/Menus/Options/SilverBlackLabelEnds.PNG
+
+					[Child Template = SwitchSharedToggleButtonGroupVE]
+					{
+						L = 0
+						T = 2
+						R = +47
+						B = +26
+					}
+
+					[Child Template=OptionsCheckboxSharedMediumLeftLabelVE]
+					{
+						L = 50
+						T = 7
+						R = +220
+						B = +30
+						text = "#options_dialog_Child_text_39"
+					}
+				}
+			}		
+		}
+	
+		[InternetTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{
+			[View]
+			{
+				L = 79
+				T = 51
+				R = +153
+				B = +31				
+			}
+			
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_NetworkPage_InternetTitle_Label_Text"
+			}
+		}
+		
+		[LANTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{
+			[View]
+			{
+				L = 354
+				T = 51
+				R = +153
+				B = +31
+			}
+
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_NetworkPage_LANTitle_Label_Text"
+			}						
+		}
+					
+		;;  Game Browser Label
+		[GameBrowserTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{
+			[View]
+			{
+				L = 84
+				T = 316
+				R = +145
+				B = +31
+			}
+			
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_NetworkPage_GameBrowserTitle_Label_Text"
+			}
+		}
+		
+		;;  Browser Chat Label
+		[ChatTitle Template=OptionsPsuedoTabLabelWidgetNoArt]
+		{
+			[View]
+			{
+				L = 368
+				T = 316
+				R = +145
+				B = +31
+			}
+			
+			[Label]
+			{
+				color = 0,0,0
+				Text = "#options_dialog_NetworkPage_ChatTitle_Label_Text"
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,62 @@
+[Thing Template=AACPCOrganizationArtillery]
+{
+	IDS = regiment_cpc_infantry_artillery
+	name = "#regiment_cpc_infantry_artillery_name"
+	editor_name = "#regiment_cpc_infantry_artillery_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 52
+		
+		[Upkeep]
+		ammo = 9
+	}
+
+	[PropertiesComponent]
+	{
+		[Property]
+		property_ids = artillery_company
+	}
+	
+	[View]
+	{
+		resource_prefix = /Units/CPC/CPCInfantryMortar/CPCInfantryMortar
+		icon = /UI/Game/RegimentButtons/IconInfantryArtillery.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_infantry_artillery_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_infantry_artillery_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_infantry_artillery_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		recruit_full = true
+		
+		[Slot]	;; front
+		element_IDS = cpc_infantry
+		
+		[Slot]	;; rear guard 1
+		element_IDS = cpc_infantry
+
+		[Slot]	;; rear guard 2
+		element_IDS = cpc_infantry
+		
+		[Slot]	;; rear guard 3
+		element_IDS = cpc_infantry_mg
+	
+		[Slot]	;; flank
+		element_IDS = cpc_infantry_mortar
+		
+		[Slot]	;; captain
+		element_IDS = cpc_paratrooper_co
+	}
+	
+	[ExperienceComponent template=AAInfantryExperienceComponent]
+}

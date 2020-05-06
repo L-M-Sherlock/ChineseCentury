@@ -1,0 +1,417 @@
+
+;; ---------------------------- Debriefing Interface ----------------------------
+
+[DebriefingInterface Inherit=MenuInterface]
+{
+	string	victory_music = null
+	string	defeat_music = null
+	
+	decal_top_left_won = /UI/%s/Game/Briefing/BackgroundSuccessTileTopLeft.png
+	decal_top_right_won = /UI/%s/Game/Briefing/BackgroundSuccessTileTopRight.png
+	decal_bottom_left_won = /UI/%s/Game/Briefing/BackgroundSuccessTileBottomLeft.png
+	decal_bottom_right_won = /UI/%s/Game/Briefing/BackgroundSuccessTileBottomRight.png
+	
+	decal_top_left_lost = /UI/%s/Game/Briefing/BackgroundFailedTileTopLeft.png
+	decal_top_right_lost = /UI/%s/Game/Briefing/BackgroundFailedTileTopRight.png
+	decal_bottom_left_lost = /UI/%s/Game/Briefing/BackgroundFailedTileBottomLeft.png
+	decal_bottom_right_lost = /UI/%s/Game/Briefing/BackgroundFailedTileBottomRight.png
+	
+	
+	[View]
+	{
+		L = 0
+		T = 0
+		R = 100%
+		B = 100%
+		
+		;;cwp040804 - children are not longer defined in template, but be added explicitly.
+		;;[Child Template=SharedChildLargePanelVE]
+	}
+}
+
+[MissionNameLabel Template=LabelWidget]
+{
+	[View Template=NoVE]
+	{
+		L = 43
+		T = 46
+		R = +943
+		B = +22
+	}
+
+	[Label Template = SharedSmallLeftLabelVE]
+	{
+		text = "#debriefing_Label_text"
+		multiline = true
+	}
+}
+
+[MissionStatusPanel Inherit=SharedSmallPanelWidget]
+{
+	[View]
+	{
+		L = 21
+		T = 140
+		R = +481
+		B = +494
+		
+		;; cwp040804 - children no longer being defined in template, so must be defined here
+		[Child Template = SharedBriefingChildPanelVE]
+	}
+	
+	[MissionStatusViewport Inherit = SharedViewportBriefingScrollWidget]
+	{
+		[View]
+		{
+			L = 11
+			T = 10
+			R = +462
+			B = +475
+		}
+				
+		[ItemPanel]
+		{
+			[View]
+			{
+				L = 8
+			}
+			
+			[MissionStatusLabel Template=LabelWidget]
+			{
+				[View Template = NoVE]
+				
+				[Label Template = SharedSmallLeftLabelVE]
+				{
+					text = "#debriefing_MissionStatusViewport_ItemPanel_MissionStatusLabel_Label_text"
+					multiline = true
+				}	
+			}
+		}
+	}	
+	
+	/* cwp042204 - no longer being used. commented out just in case.
+	[MissionDescriptionLabel Template=LabelWidget]
+	{
+		[View Template=NoVE]
+		{
+			L = 12
+			T = 41
+			R = +318
+			B = +100
+		}
+
+		[Label Template = SharedSmallLeftLabelVE]
+		{
+			text = "Mission Description Goes Here"
+			multiline = true
+		}
+	}	
+	*/
+}
+
+[PrimaryObjectivesLabel Template = LabelWidget]
+{
+	[View Template=NoVE]
+	{
+		L = 533
+		T = 153
+		R = +466
+		B = +20
+	}
+
+	[Label Template = SharedSmallLeftLabelVE]
+	{
+		text = "#debriefing_Label_text_2"
+	}	
+}
+
+[PrimaryObjectivesPanel inherit=SharedSmallPanelWidget]
+{
+	icon_completed = /UI/%s/Default/ToggleButton/Selected.png
+	icon_failed = /UI/%s/Default/ToggleButton/Failed.png
+	icon_required = /UI/%s/Game/ObjectivesDisplay/IconObjectiveRequired.tga
+	icon_optional = /UI/%s/Game/ObjectivesDisplay/IconObjectiveOptional.tga
+
+	[View]
+	{
+		L = 524
+		T = 171
+		R = +481
+		B = +210
+		
+		;; cwp040804 - children no longer being defined in template, so must be defined here
+		[Child Template = SharedBriefingChildPanelVE]
+	}
+
+	[SlotViewport inherit=SharedViewportBriefingScrollWidget]
+	{
+		[View]
+		{
+			L = 6
+			T = 8
+			R = +467
+			B = +194
+		}
+		
+		[ItemPanel]
+		{
+			[View]
+			T = 5
+			B = 9b
+		}
+	}
+	
+	[Slot inherit=PanelWidget]
+	{
+		[View Template = NoVE]
+		{
+			B = +20
+		}	
+		
+		[NameLabel template=LabelWidget]
+		{
+			[View Template=NoVE]
+			{
+				L = 35
+				R = +395
+			}
+
+			[Label Template = SharedSmallLeftLabelVE]
+			{
+				text = "#debriefing_Slot_NameLabel_Label_text"
+				multiline = true
+			}
+		}
+
+		[StatusIcon Template=DecalWidget]
+		{
+			[View Template=NoVE]
+			{
+				L = 10
+				R = +20
+				B = +20
+			}
+		
+			[Decal Template=DecalVE]
+			;; texture will be set based on formation
+			texture = NULL;
+		}
+	}
+}
+
+[SecondaryObjectivesLabel Template = LabelWidget]
+{
+	[View Template=NoVE]
+	{
+		L = 533
+		T = 398
+		R = +466
+		B = +20
+	}
+
+	[Label Template = SharedSmallLeftLabelVE]
+	{
+		text = "#debriefing_Label_text_3"
+	}	
+}
+
+[SecondaryObjectivesPanel inherit=SharedSmallPanelWidget]
+{
+	icon_completed = /UI/%s/Default/ToggleButton/Selected.png
+	icon_failed = /UI/%s/Default/ToggleButton/Failed.png
+	icon_required = /UI/%s/Game/ObjectivesDisplay/IconObjectiveRequired.tga
+	icon_optional = /UI/%s/Game/ObjectivesDisplay/IconObjectiveOptional.tga
+
+	[View]
+	{
+		L = 524
+		T = 417
+		R = +480
+		B = +217
+		
+		;; cwp040804 - children no longer being defined in template, so must be defined here
+		[Child Template = SharedBriefingChildPanelVE]
+	}
+
+	[SlotViewport inherit=SharedViewportBriefingScrollWidget]
+	{
+		[View]
+		{
+			L = 6
+			T = 8
+			R = +467
+			B = +194
+		}
+		
+		[ItemPanel]
+		{
+			[View]
+			T = 5
+			B = 9b
+		}
+	}
+	
+	[Slot inherit=PanelWidget]
+	{
+		[View Template = NoVE]
+		
+		[NameLabel template=LabelWidget]
+		{
+			[View Template=NoVE]
+			{	
+				L = 35
+				R = +409
+			}
+
+			[Label Template = SharedSmallLeftLabelVE]
+			{
+				text = "#debriefing_Slot_NameLabel_Label_text_2"
+				multiline = true
+			}
+		}
+
+		[StatusIcon Template=DecalWidget]
+		{
+			[View Template=NoVE]
+			{
+				L = 10
+				R = +20
+				B = +20
+				
+			}
+		
+			[Decal Template=DecalVE]
+			;; texture will be set based on formation
+			texture = NULL;
+		}
+	}
+}
+
+[SaveFilmButton Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#debriefing_Client_View_text"
+	}
+
+	[View]
+	{
+		L = 23
+		T = 681
+	}
+}
+
+[ScoringButton Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#debriefing_Client_View_text_2"
+	}
+
+	[View]
+	{
+		L = 214
+		T = 681
+	}
+}
+
+[ReplayButton Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#debriefing_Client_View_text_3"
+	}
+
+	[View]
+	{
+		L = 436
+		T = 681
+	}
+}
+
+[PlayNextButton Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#debriefing_Client_View_text_4"
+	}
+
+	[View]
+	{
+		L = 627
+		T = 681	
+	}
+}
+
+[ExitButton Template=MenuPushButtonWidget]
+{
+	[Client]
+	{
+		[View]
+		text = "#debriefing_Client_View_text_5"
+	}
+
+	[View]
+	{
+		L = 819
+		T = 681
+	}
+}
+
+[TopLeftMissionStatusDecal Template = DecalWidget]
+{
+	[View Template = NoVE]
+	{
+		L = 0
+		T = 54
+		R = +512
+		B = +512
+	}
+	
+	[Decal Template = DecalVE]
+	texture = /UI/%s/Game/Briefing/BackgroundFailedTopLeft.png
+}
+
+[TopRightMissionStatusDecal Template = DecalWidget]
+{
+	[View Template = NoVE]
+	{
+		L = 512
+		T = 54
+		R = +512
+		B = +512
+	}
+	
+	[Decal Template = DecalVE]
+	texture = /UI/%s/Game/Briefing/BackgroundFailedTopRight.png
+}
+[BottomLeftMissionStatusDecal Template = DecalWidget]
+{
+	[View Template = NoVE]
+	{
+		L = 0
+		T = 566
+		R = +512
+		B = +128
+	}
+	
+	[Decal Template = DecalVE]
+	texture = /UI/%s/Game/Briefing/BackgroundFailedBottomLeft.png
+}
+[BottomRightMissionStatusDecal Template = DecalWidget]
+{
+	[View Template = NoVE]
+	{
+		L = 512
+		T = 566
+		R = +512
+		B = +128
+	}
+	
+	[Decal Template = DecalVE]
+	texture = /UI/%s/Game/Briefing/BackgroundFailedBottomRight.png
+}

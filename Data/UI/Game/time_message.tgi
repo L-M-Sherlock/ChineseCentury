@@ -1,0 +1,31 @@
+;; ---------------------------- Message Log ----------------------------
+
+[TimeMessage Template=LabelWidget]
+{
+	[View Template=NoVE]
+
+	[Label Template = SharedSmallLeftLabelVE]
+	{
+		L = 748
+		T = 11
+		R = +60
+		B = +20
+
+		text = "#time_message_Label_text"
+	}
+}
+
+[Counter Template=LabelWidget]
+{
+	[View Template=NoVE]
+
+	[Label Template=SharedLargeLeftLabelVE]
+	{
+		text = "#time_message_Label_text_2"
+
+		L = 736
+		T = 35
+		R = +60
+		B = +20
+	}
+}

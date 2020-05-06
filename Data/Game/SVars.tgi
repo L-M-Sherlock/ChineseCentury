@@ -1,0 +1,364 @@
+[SVars]
+{
+	;; fast vars
+	int HeightmapResolutionBits = 1
+	int MapGTileResolutionBits = 1
+	flag MapDoodadAutoPlacement = true
+	fixed ElevationMin = -10
+	fixed ElevationMax = 14
+	fixed ElevationDefault = 2
+	fixed ElevationSlopeMax = 0.5		;; height meters per XY distance meter
+	fixed GameTicksPerGameSecond = 16	;; TODO: try 16
+
+	fixed Gravity = -49.05			;; -9.81 * 5 since game approximately uses vertical scale of 1/5
+	fixed DefaultRadius = 0.5
+	fixed ProjectileTargetHeightRatio = 0.65
+	fixed ProjectileArcingTargetHeightRatio = 0.35
+
+	fixed GameSpeedMin = -2		;; 25% (100% * 1/4)
+	fixed GameSpeedMax = +2		;; 400% (100% * 4)
+	fixed GameSpeedFilmMin = -4		;; 6% (100% * 1/16)
+	fixed GameSpeedFilmMax = +4		;; 1600% (100% * 16)
+	
+	fixed BuildingPaddingMeters = 2		;; meters to extend soft shape beyond blocking shape
+	fixed MarkerRevealPadding = 4		;; when revealing settlement markers, how much extra
+
+	int TickCountPerTrackPlacement = 10
+	;; for Map Analysis
+
+	;; parameters to control rectangle & region size, measured in tiles
+	;; kad012904 - minor update.  The actual rectangle width will be the StaticMapMaxRectangleWidth 
+	;;	times the map width (in tiles) divided by StaticMapBaseMapWidth, raised to the power of
+	;;	StaticMapMaxRectangleWidthExp.  Again:
+	;;		max_width * ( (map_width / base_width) ^ exp )
+	;;	The map width is actually the average of the tiles per row and the tiles per column.
+	int StaticMapMaxRectangleWidth			= 12	;; along one edge
+	int StaticMapBaseMapWidth				= 64	;; see above
+	fixed StaticMapMaxRectangleWidthExp		= .3333	;;  "    "
+	int StaticMapMinRegionSize				= 9		;; total tile count
+	int StaticMapMinRegionWidth				= 3		;; along one edge
+	int StaticMapMaxRegionSizeForExpansion	= 1000	;; the biggest a rectangle can be - I recommend not using this
+	
+	;;  parameters to control the performance of the static map analysis function
+	int StaticMapStartingSquareSize			= 10
+	flag StaticMapUseFastSquareReduction	= true
+	int StaticMapFastSquareReductionMult	= 3
+	int StaticMapFastSquareReductionDiv		= 4
+	int StaticMapBottleneckDetectionDepth	= 5
+	
+	;; parameters to control dynamic map analysis
+	fixed dynamic_map_analysis_think_frequency	= 60	;; seconds
+	fixed DynamicMapAnalysisSpeedCap			= 60	;; meters / second
+	fixed min_cv_propogation_factor				= 0.2
+	fixed settlement_cv_range_fudge_factor		= 1.7
+
+	;; for TAI exploration
+	
+			;; number of candidates to generate
+	int		ExploreNumActorLocations	= 20		;; the number of locations to generate around the actor
+	int		ExploreNumWaypointLocations	= 20		;; the number of locations to generate around the original waypoint where we were told to explore
+	
+			;; where to generate them
+	fixed	ExploreActorRadiusMin		= 30.0		;; the minimum radius to use when generating around the actor
+	fixed	ExploreActorRadiusMax		= 40.0		;; the maximum radius to use when generating around the actor
+	int		ExploreWaypointTilesIntoFog	= 16			;; the number of tiles into the fog to place a candidate that is generated around the waypoint
+	
+			;; how to evaluate them
+	fixed	ExploreActorBaseValue		= 50		;; base value for a candidate generated around the actor
+	fixed	ExploreWaypointBaseValue	= 0			;; base value for a candidate generated around the waypoint
+	fixed	ExploreDistanceMultiplier	= -1		;; distance is multiplied by this and added to the value.  Recommend negative value.
+	fixed	ExploreDotProductMultiplier	= 20		;; used to keep us heading in the same general direction - factor can vary from -1 * this to this.
+	fixed	ExploreFinishAreaBonus		= 20		;; the bonus for finishing out an area of the map
+	fixed	ExploreFuzzyFactor			= 20
+
+			;; when to stop travelling to them
+	fixed	ExploreInertiaCloseEnough	= 3			;; when we get within this distance of destination we have inertia for, no longer count the inertia.	
+
+	;; for movement
+	fixed	MoverCatchupSpeed = 1.75	;; was 1.5
+	fixed	MoverDetachedSecondsUntilReattach = 2	;; if detached this long while moving, will reattach
+	fixed	MoverDetachedSecondsUntilTeleport = 10.0	;; if detached this long will teleport
+	fixed	BannerMinCatchupSpeed = 0.5	;; min speed when banner moves to catch up with company
+	fixed	CAIMoveMinSecondsBeforeFail = 5.0	;; min seconds before giving up movement
+
+	;; pathing / TAI
+	fixed	PathingCloseEnoughAngle = 0.2618	;; PI / 12
+	fixed	TAIReachedDestinationThreshold = 0.1
+	fixed	PathingWallCost = 20.0			;; TODO: find good value
+	flag	TAIUseRegionPathPlanner = true
+	fixed	PathingTerrainChangePenalty = 0.71
+	
+	fixed	PathingExploreWhiteFog		= 9		;; these are multiplied on when we're doing TAI 
+	fixed	PathingExploreGreyFog		= 3		;;	exploration.  The idea is fog should be 
+	fixed	PathingExploreBlackFog		= 1		;;	cheaper so we will prefer to path through it.
+
+	fixed	LowPathingWaitMinimum		= 2		;; minimum seconds between extra calls to the low patcher	
+	int	LowPathingExaminedMax			= 512			;; give up after examining this many nodes
+	int	LowPathingIgnoreMovingDepth		= 3		;; ignore moving actors after this depth
+	int	LowPathingAccuracyDepth			= 5			;; use trace checks only until this depth
+
+	;; zones
+	flag	ZoneBuilderFastDetectionZones = true		;; use fast circle building for ZODs
+
+	;; for combat
+	fixed	CombatDamageMinimum			= 1		;; minimum damage for the game
+	fixed 	KillCreditTimeout			= 2		;; seconds after which last attacker will still get credit
+	fixed	GuardOldTargetBias			= 3		;; bias in meters for continuing to attack old target
+	
+	;; for reform/regroup
+	fixed	RegroupStealHealthRatio		= 0.1	;; ratio of HP to steal from elements to regroup
+
+	;; for settlements and sieging
+	fixed	SiegeMinimumDistanceForBehavior = 40	;; simply does a "move" until this far away from the wall
+							;; for efficiency.  When within this range it will
+							;; track what walls are in the way and update that path
+							;; when a wall gets created/destroyed. 
+	fixed	SiegeMinimumListRefreshSeconds = 2
+	
+	fixed	GateZoneRadius = 5			;; size of gate zone
+
+	;; UAI for engagement
+	fixed	PrimarySampleTime = 5
+	fixed	RetreatingTime = 15
+	fixed	RoutingTime = 15
+	fixed	ReformTime = 15
+	fixed	StalemateTime = 15
+	fixed	RegroupTime = 10
+	fixed	EngageReactionTimeRange = 0.3
+	fixed	UAIBadTargetExpirationSeconds = 3
+	
+	;; HQ component
+	fixed	HQAttachCostPercentage = 0.0	;; percentage of actor's cost charged when actor is attached to an HQ
+	
+	;; OrganizationComponent supports caching the list of actors in its OR. Set 0.0 to disable list caching
+	fixed	UAICachedORActorListTimeout = 1.0		
+
+	;; for morale
+	fixed	MoraleEngagementLoss = 0.5
+	fixed	MoraleEngagementLossFactorMax = 3.0
+	fixed	MoraleDeathFactor = 1.0
+	fixed	MoraleRetreatPenalty = 5
+	fixed	MoraleSlayerBase = 2.0
+	fixed	MoraleSlayerFactorMin = 0.5
+	fixed	MoraleSlayerFactorMax = 2.0
+	fixed	MoraleBreakerBase = 5.0
+	fixed	MoraleBreakerFactorMin = 0.5
+	fixed	MoraleBreakerFactorMax = 2.0
+	fixed	MoraleReplenish = 1.0
+	fixed	MoraleSupplyBonus = 0.5
+
+	;; for supply
+	flag	SupplyProvideUnderSiege = false
+	fixed	SupplyStockpileRechargeRate = 1.0
+
+	;; combat value
+	;; drp042504 - increase RangePower from 0.1 to 0.15
+	fixed	CombatValueRangePower = 0.15		;; power for range score
+	fixed	CombatValueAreaPower = 1			;; power for the area-of-effect score
+	fixed	CombatValueOffenseWeight = 0.5		;; (0-1) importance of the offense score in CV calculations
+	fixed	CombatValueDefenseWeight = 0.5		;; (0-1) importance of the defense score in CV calculations
+	fixed	CombatValueDefenseWeightRanged = 0.25	;; (0-1) for ranged actors (if below mean)
+	fixed	CombatValueRangedMinimum = 12		;; what range defines CombatValueDefenseWeightRanged
+	fixed	CombatValueMovementWeight = 0.2		;; importance of the movement score in CV calculations
+	fixed	CombatValueMovementDefault = 1		;; value used if actor has no mover component (which would result in a CV of zero)
+	fixed	CombatValueMeanValuesDiscardPercent = 0.2		;; percentage of weakest and strongest units to ignore in mean calculations
+
+	;; experience
+	fixed	ExperienceGainMinimum = 0	;; minimum amount of experience gained
+	fixed	ExperienceGainMaximum = 10	;; maximum amount of experience gained
+	fixed	ExperienceKillMultiplier = 1	;; base experience value is multiplied by this
+	fixed	ExperienceCaptureMultiplier = 1	;; base experience value is multiplied by this
+	fixed	ExperienceRoutMultiplier = 1	;; base experience value is multiplied by this
+	fixed	ExperienceEngageMultiplier = 1	;; base experience value is multiplied by this
+	fixed	ExperienceDefaultValue = 1	;; value used when victim has no CV and no specified fake CV value
+
+	fixed	ExperienceFactionGainMultiplier = 1.0f	;; multiplier applied to amount of experience kingdom gains through its actors
+	fixed	ExperienceFactionGainPeriodic = 1.0f	;; amount of experience kingdom gains per second
+
+	;; modifiers
+	fixed	ModifierAttributeClampAdd = 1
+	fixed	ModifierAttributeClampMultiply = 0.05
+
+	;; attack efficiency
+	fixed	AttackEfficiencyPointsPerSecondClimbing = 0.01
+	fixed	AttackEfficiencyPointsPerSecondFalling = 0.02
+
+	;; economy
+	int		EconomyLimitedResourceMax = 150
+	fixed	EconomyStockpileResourceMax = 99999
+
+	;; lairs
+	int		LairSpawnChildRetries = 10	;; number of child lair spawn attemptes 
+
+	;; body
+	fixed	BodyRestoreDisabledHealthRatio = 0.1	;; health ratio at which non-destructable return from disabled state
+	bool	UnitSupplyEnabled = false				;; can units bleed if not part of organization?
+		
+	;; groups
+	fixed		GroupZoneRangeMin = 15	;; minimum range of group zone
+	fixed		GroupSpeedMinimum = 1	;; speed below which an actor will not drop it's speed when slowing down to allow another to catch up
+	fixed		GroupSupplyZoneBuffer = 5 ;; when coordinating arrival outside a supply zone, coordinate this far outside
+	fixed		GroupDefendVFXScale = 0.5
+
+	;; rampaging
+	fixed	RampagingWaitChance = 0.25
+	int		RampagingRetries = 10
+	fixed	RampagingDirection = 90	;; in degrees, centered around current direction (ex: if 90 deg, the 45 to left and 45 to right)
+	fixed	RampagingDistance = 20		;; from current location
+	fixed	RampagingDetachedRatioMax = 0.5	;; if a greater percentage of elements are detached, the organization will wait and issue reattach orders
+
+	;; rules of engagement
+	fixed	ROEPrimaryDamageHistoryLength = 3	;; how many seconds worth of damage history is kept for an organization primary and used for determining time to death
+	fixed	ROEPrimaryEngageDelay = 1	;; how many seconds after the organization engaged will the primary engage
+	fixed	ROEPrimaryEngageReturnTimeout = 5	;; how many seconds after returning to it's position (due to failing a threshold check) will the primary fight again
+
+	;; bombard
+	fixed	BombardTargetTimeout = 1	;; added to bombard ability recharge, if not bombarded again with that number of seconds, a bombard target will be removed from an actors bombard targets list
+
+	;; sai
+	fixed	SellFactor							= 0.5	;; kad081903 - multiplied by actual building cost to get value to sell
+	fixed	ResetWhiteFogTimerPecent			= 10%	;; kad022304 - when white fog in a region falls below this percent we start the timer for when to scout again.
+	flag	UseAirAttacks						= true	;; kad030804 - so we can turn them off in K2
+	fixed	GoalEngineThinkFrequencyMinOffset	= 2		;; kad031204 - the minimum number of seconds between any 2 goal engine thinks, regardless of player
+	fixed	RAIThinkFrequencyMinOffset			= 0.2	;; kad031204 - the minimum number of seconds between any 2 goal engine thinks, regardless of player
+	flag	DisableSAIWhenGameLost				= true	;; kad091204 - For K2 we need this (so it doesn't break the outtake) but for A&A we need it to be false.
+	
+	;; building placement
+	fixed	MinAutoConstructDistanceFromSettlementCenter	= 2	;; kad040204 - Multiply the actual minimum distance between the settlement center and any building by this when auto placing.
+	
+	;; team commands
+	int		TeamCommandTransferResourceIncrementValue	= 25
+	fixed	SAITriggerTeamCommandPriority				= 20000
+	int		MaxFlaresPerKingdom							= 5
+
+	;; world rules - NOTE: these defaults are overridden by "world_rules.tgi"
+	fixed	ResourceStockpileDefault 	= 2000		;; Starting resources (gold,etc.) for new maps and random maps
+	int		FogOfWar					= 2		;; 2 == full fog
+	int		DifficultyLevel				= 0
+	fixed	GameSpeed 					= 0		;; 0 == 100%
+	bool	Rated						= false		;; If the game counts towards stats
+	
+	;; drp040904 - no longer world rules (streamlined)
+	flag	TeamsAllowed				= true			;; pcb111903 - deleted world rule so no longer used
+	flag	AllowCheats				= true
+	flag	TeamVictory				= true	
+	fixed	CaptureHealthFactor			= 0.3
+	bool	AllowSellUnderSiege			= true
+	int		CityVictoryRatio			= 0
+	
+	;; kingdom vars
+	int		DefaultKingdomsIndependent = 1
+	int		KingdomsMax = 18
+
+	;;;;;; routing
+	int		RoutRandomCandidates = 20			;; The number of completely random candidates.
+	fixed	RoutMaxDistanceDelta = 24			;; Added to minimum distance.
+	int		RoutSupplyZoneCandidates = 2		;; The number of candidates to generate for each supply zone.
+	fixed	RoutSupplyZoneMaxAngleDelta = 50	;; The max amount to vary the direction toward the supply zone.  We will vary by +/- this amount.
+	
+	;; SAI recover destinations
+	int		RecoverSupplyZoneCandidates = 5		;; The number of candidates to generate for each supply zone.
+	
+	;; scoring factors - the comments are the expected range: pre- (post-normalization by the factor)
+	fixed	RoutBaseValue = 0				;; priority starts with this value
+	fixed	RoutFactorEnemyDist = 10		;; 0-20  (x10 = 0-200)
+	fixed	RoutFactorEnemyDistCap = 2000	;; if enemy distance is over this, treat it as being this
+	fixed	RoutFactorEnemyAngle = .25		;; 0-180 (x.25 = 0-45)
+	fixed	RoutFactorMovedDist = 8			;; 10-30 (x8 = 80-240) subtracted
+	fixed	RoutFactorMovedDistCap = 2000	;; if moved distance is over this, treat it as being this
+	fixed	RoutFactorSupplyDist = 1		;; 0-40, (x1 = 0-40) subtracted
+	fixed	RoutFactorSupplyDistCap = 2000	;; if supply distance is over this, treat it as being this
+	fixed	RoutPenaltyEnemyZOC = 50
+	fixed	RoutPenaltyEnemyZOG = 75
+	fixed	RoutBonusFriendlyZOS = 50
+	fixed	RoutBonusSupplyInRange = 50		;; for each supply actor in ZOS range
+	fixed	RoutFuzziness = 20				;; 0-20
+	
+	;; keep a second set for the recover goal
+	fixed	RecoverBaseValue = 201			;; priority starts with this value
+	fixed	RecoverFactorEnemyDist = 0		;; 0 (0)
+	fixed	RecoverFactorEnemyDistCap = 0	;; if enemy distance is over this, treat it as being this
+	fixed	RecoverFactorEnemyAngle = 1		;; 0-180 (0-180)
+	fixed	RecoverFactorMovedDist = 1		;; 10-200 (10-200) subtracted
+	fixed	RecoverFactorMovedDistCap = 200	;; if moved distance is over this, treat it as being this
+	fixed	RecoverFactorSupplyDist = 0		;; 0 (0) subtracted, NOTE: if we have a target region this is measured from the region center, not the actor
+	fixed	RecoverFactorSupplyDistCap = 0	;; if supply distance is over this, treat it as being this
+	fixed	RecoverPenaltyEnemyZOC = 500
+	fixed	RecoverPenaltyEnemyZOG = 500
+	fixed	RecoverBonusFriendlyZOS = 0
+	fixed	RecoverBonusSupplyInRange = 0	;; for each supply actor in ZOS range
+	fixed	RecoverFuzziness = 40			;; 0-40
+	
+	;; ability scoring
+	fixed	AbilityScoreAttackerBonus = 0.5	;; bonus added if target is attacking us
+	fixed 	AbilityScoreHealBonus = 0.9 	;; linear bonus added to favor most wounded unit
+
+	;; engagement
+	bool	EngagementShowReverseRZOD = false	;; if set, reverse engage targets will reveal RZOD
+
+	;; supplying
+	DenizenResupplyRateUnderSiege = 0.25	;; denizen resupply rate when under siege, multiplied into equation
+	
+	;; damage numbers - if you get multiple damage effects from the same actor, offset to the right
+	;;	by this amount.
+	fixed	SimultaneousDamageNumberOffset = 0.8
+
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; GAME-SPECIFIC VALUES EXPECTED
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	;; string	MapDefaultBiome = temperate
+
+	;; Active Construction Timeout - how long to wait before
+	;; an actor goes out of the ActiveConstruction state when
+	;; it is not fully healed during construction (in seconds)
+
+	fixed ActiveConstructionTimeout = 0.1
+
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; SUN VALUES
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	point3	SunDirection = 1,1,-2
+	
+	;; sun brightness (0-1)
+	fixed	SunDimmer = 1
+
+	;; colors in RGB (0-1 for each channel)
+	point3	SunDiffuse = 1.0, 1.0, 1.0
+	point3	SunAmbient = 0.8, 0.8, 0.8
+	point3	SunSpecular = 0.0, 0.0, 0.0
+
+	;; when the sun's diffuse RGB sum (R+G+B) is less than this threshold
+	;; it is considered nighttime. any VFX that are nightonly will only
+	;; play when the sun is below this threshold
+	fixed	SunNightThreshold = 1.0
+
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; RANDOM MAP SETTINGS
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	
+	int		RMGNumRetries					= 3	;; num retries before random map fails
+	int		RMGNumPlacementRetries			= 3	;; num retries for the placement step
+	
+	fixed 	RMCMaxPercentMountain			= 0.15 ;; percent (0-1)
+	fixed 	RMCMaxPercentWater				= 0.15 ;; percent (0-1)
+
+	int		RMGBalanceMaxNumIterations		= 120 ;; cap on num balancing iterations
+	int		RMGBalanceMaxNumWorseScores		= 8	;; max number of consecutive worse scores before giving up
+	fixed	RMGBalanceMarkerNudgeStep		= 2	;; how far to nudge markers when balancing (in meters)
+	fixed	RMGBalanceMarkerNudgeStepDelta	= 2	;; how much to add/subtract from the nudge step for better/worse scores respectively (meters)
+
+	fixed	RMGBalanceNumObjectsInSmallGroup= 10
+	fixed	RMGBalanceSerachMapPercent		= 0.20
+	
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;; MetaGame values
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	fixed	MetaGameQuickBattleTechnologyBonus	=	0.05		;; This is the bonus for something that costs 100, other techs are scaled appropriately according to cost
+	fixed	MetaGameQuickBattleAttackWinProbability = 	0.47
+
+	;; For the CAI, when movign to a target we stop when we are within the ZOC.  In order to have
+	;;	us move closer in A&A we multiply ZOC radius by this value.
+	fixed CAITargetInRangeZOCMultiplier = 1
+} ; end [Vars]

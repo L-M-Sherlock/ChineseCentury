@@ -1,0 +1,88 @@
+[Thing Template=AACPCOrganizationParatrooper]
+{
+	IDS = regiment_cpc_conscript
+	name = "#regiment_cpc_conscript_name"
+	editor_name = "#regiment_cpc_conscript_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+
+		money = 15
+		
+		[Upkeep]
+	    ammo = 1
+        unit_limit_consumed = 0.5
+
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/CPC/CPCConscript/CPCConscript
+		icon = /UI/Game/RegimentButtons/IconRUSConscript.png
+		banner_icon = /Organizations/Banners/Icons/IconFlame.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = cpc_conscript_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = cpc_conscript_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = cpc_conscript_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+
+		layout_IDS = regiment_saodang
+
+        recruit_time = 5
+
+		recruit_full = true
+		
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; front
+		element_IDS = cpc_conscript
+
+		[Slot]	;; captain
+
+		element_IDS = cpc_conscript
+
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = infantry_company
+
+		[Property]
+		property_ids = infantry1_company
+
+		[Property]
+		property_IDS = trailblazing	
+	}
+}

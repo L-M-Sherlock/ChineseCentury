@@ -1,0 +1,1109 @@
+/*
+template_aspect_animation_set_aa.tgi
+Copyright © 2003 TimeGate Studios
+
+DESCRIPTION: 
+
+REVISION HISTORY:
+ick100303 - created
+*/
+
+[Template AspectAnimationSetInfantryKneel Template=AspectAnimationSet]
+{
+	aspect_ids = kneel
+		
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	kf = /Shared/Animations/Units/Infantry/KneelAttack1.kf
+	key_ratio = 0.1
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die1
+		kf = /Shared/Animations/Units/Infantry/KneelDie1.kf
+		damage_threshold = 0
+		length = 1 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/KneelDie2.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/Infantry/KneelIdleAttack.kf
+		
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleprojectileattack
+		kf = /Shared/Animations/Units/Infantry/KneelIdleProjectileAttack.kf
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+		
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/Infantry/KneelJog.kf
+	walk_distance = 2
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/Infantry/KneelJog.kf
+	walk_distance = 2
+
+	[Animation Template=AttackAnimation]
+	{
+		IDS = projectileattack1
+		kf = /Shared/Animations/Units/Infantry/KneelProjectileAttack1.kf
+		key_ratio = 0.6
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+}
+
+[Template AspectAnimationSetInfantryProne Template=AspectAnimationSet]
+{
+	aspect_ids = prone
+		
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	IDS = die2
+	kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	IDS = die17
+	kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/Infantry/ProneDie2.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+		damage_threshold = 80
+		length = 1 
+		damage_filter = 0		
+	}
+		
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	kf = /Shared/Animations/Units/Infantry/ProneAttack1.kf
+	key_ratio = 0.1
+
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/Infantry/ProneIdleAttack.kf
+
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleprojectileattack
+		kf = /Shared/Animations/Units/Infantry/ProneIdleProjectileAttack.kf
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/Infantry/ProneJog.kf
+	walk_distance = 0.6		
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/Infantry/ProneJog.kf
+	walk_distance = 0.6		
+
+	[Animation Template=AttackAnimation]
+	{
+		IDS = projectileattack1
+		kf = /Shared/Animations/Units/Infantry/ProneProjectileAttack1.kf
+		key_ratio = 0.6
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+}
+
+/*  Paratroopers  now use the InfantrySMG Template
+;;----------------------------- Paratroopers -------------------------------
+
+[Template AspectAnimationSetParatrooperKneel Template=AspectAnimationSet]
+{
+	aspect_ids = kneel
+		
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	kf = /Shared/Animations/Units/Paratrooper/KneelAttack1.kf
+	key_ratio = 0.1
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die1
+		kf = /Shared/Animations/Units/Infantry/KneelDie1.kf
+		damage_threshold = 0
+		length = 1 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/KneelDie2.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/Paratrooper/KneelIdleAttack.kf
+		
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleprojectileattack
+		kf = /Shared/Animations/Units/Paratrooper/KneelIdleProjectileAttack.kf
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+		
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/Paratrooper/KneelJog.kf
+	walk_distance = 1
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/Paratrooper/KneelJog.kf
+	walk_distance = 1
+
+	[Animation Template=AttackAnimation]
+	{
+		IDS = projectileattack1
+		kf = /Shared/Animations/Units/Paratrooper/KneelProjectileAttack1.kf
+		key_ratio = 0.3
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+}
+
+[Template AspectAnimationSetParatrooperProne Template=AspectAnimationSet]
+{
+	aspect_ids = prone
+		
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	kf = /Shared/Animations/Units/Paratrooper/ProneAttack1.kf
+	key_ratio = 0.1
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	IDS = die2
+	kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	IDS = die17
+	kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/Infantry/ProneDie2.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+		damage_threshold = 80
+		length = 1 
+		damage_filter = 0		
+	}
+		
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/Paratrooper/ProneIdleAttack.kf
+
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleprojectileattack
+		kf = /Shared/Animations/Units/Paratrooper/ProneIdleProjectileAttack.kf
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/Paratrooper/ProneJog.kf
+	walk_distance = 0.6		
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/Paratrooper/ProneJog.kf
+	walk_distance = 0.6		
+
+	[Animation Template=AttackAnimation]
+	{
+		IDS = projectileattack1
+		kf = /Shared/Animations/Units/Paratrooper/ProneProjectileAttack1.kf
+		key_ratio = 0.3
+
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+}
+
+[Template AspectAnimationSetParatrooperFalling Template=AspectAnimationSet]
+{
+	aspect_ids = falling
+
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	key_ratio = 0.1
+	kf = /Shared/Animations/Units/Paratrooper/FallingIdle.kf
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/Paratrooper/FallingDie1.kf
+	
+	[Animation Template=DieAnimation]
+	IDS = die2
+	kf = /Shared/Animations/Units/Paratrooper/FallingDie1.kf
+	
+	[Animation Template=FidgetAnimation]
+	IDS = fidget1
+	kf = /Shared/Animations/Units/Paratrooper/FallingFidget1.kf
+	
+	[Animation Template=FidgetAnimation]
+	IDS = fidget2
+	kf = /Shared/Animations/Units/Paratrooper/FallingFidget1.kf
+	
+	[Animation Template=FidgetAnimation]
+	IDS = fidget3
+	kf = /Shared/Animations/Units/Paratrooper/FallingFidget1.kf
+	
+	[Animation Template=IdleAnimation]
+	IDS = idle
+	kf = /Shared/Animations/Units/Paratrooper/FallingIdle.kf
+			
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/Paratrooper/IdleAttack.kf
+	
+	[Animation Template=IdleAnimation]
+	IDS = idleprojectileattack
+	kf = /Shared/Animations/Units/Paratrooper/IdleAttack.kf
+	
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	walk_distance = 1.5
+	kf = /Shared/Animations/Units/Paratrooper/FallingIdle.kf
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	walk_distance = 2.5
+	kf = /Shared/Animations/Units/Paratrooper/FallingIdle.kf
+	
+	[Animation Template=AttackAnimation]
+	IDS = projectileattack1
+	key_ratio = 0.3
+	kf = /Shared/Animations/Units/Paratrooper/FallingIdle.kf
+
+}*/
+
+;;----------------------------- Engineer -------------------------------
+			
+[Template AspectAnimationSetEngineerKneel Template=AspectAnimationSet]
+{
+	aspect_ids = kneel
+		
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	kf = /Shared/Animations/Units/Engineer/KneelAttack1.kf
+	key_ratio = 0.1
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die1
+		kf = /Shared/Animations/Units/Infantry/KneelDie1.kf
+		damage_threshold = 0
+		length = 1 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/KneelDie2.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/Engineer/KneelIdleAttack.kf
+		
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/Engineer/KneelJog.kf
+	walk_distance = 1
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/Engineer/KneelJog.kf
+	walk_distance = 1
+
+}
+
+[Template AspectAnimationSetEngineerProne Template=AspectAnimationSet]
+{
+	aspect_ids = prone
+		
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	kf = /Shared/Animations/Units/Engineer/ProneAttack1.kf
+	key_ratio = 0.1
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	IDS = die2
+	kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	IDS = die17
+	kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/Infantry/ProneDie2.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+		damage_threshold = 80
+		length = 1 
+		damage_filter = 0		
+	}
+		
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/Engineer/ProneIdleAttack.kf		
+
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/Engineer/ProneJog.kf
+	walk_distance = 0.6
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/Engineer/ProneJog.kf
+	walk_distance = 0.6
+
+}
+
+
+;;----------------------------- Anti-Tank Infantry -------------------------------
+			
+[Template AspectAnimationSetInfantryATKneel Template=AspectAnimationSet]
+{
+	aspect_ids = kneel
+		
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	kf = /Shared/Animations/Units/InfantryAT/KneelAttack1.kf
+	key_ratio = 0.46
+	length = 1	
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die1
+		kf = /Shared/Animations/Units/Infantry/KneelDie1.kf
+		damage_threshold = 0
+		length = 1 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/KneelDie2.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/InfantryAT/KneelIdleAttack.kf
+		
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/InfantryAT/KneelJog.kf
+	walk_distance = 1
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/InfantryAT/KneelJog.kf
+	walk_distance = 1
+
+}
+
+;;------------------------ RPG INFANTRY ----------------------------------
+			
+[Template AspectAnimationSetInfantryRPGKneel Template=AspectAnimationSet]
+{
+	aspect_ids = kneel
+		
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	kf = /Shared/Animations/Units/InfantryRPG/KneelAttack1.kf
+	key_ratio = 0.15
+	length = 3	
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die1
+		kf = /Shared/Animations/Units/Infantry/KneelDie1.kf
+		damage_threshold = 0
+		length = 1 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/KneelDie2.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rpg
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/InfantryRPG/KneelIdleAttack.kf
+		
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/InfantryRPG/KneelJog.kf
+	walk_distance = 1
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/InfantryRPG/KneelJog.kf
+	walk_distance = 1
+}
+
+;;------------------------ HEAVY MACHINE-GUN INFANTRY --------------------------
+			
+[Template AspectAnimationSetInfantryMGKneel Template=AspectAnimationSet]
+{
+	aspect_ids = kneel
+		
+	[Animation Template=AttackAnimation]
+	{
+		IDS = attack1
+		key_ratio = 0.0
+		kf = /Shared/Animations/Units/InfantryMG/KneelAttack1.kf
+		length = 1.5
+	
+		[WhenStart Template=FXC_Equipment]
+		action = UNHIDE
+		location = base
+		equipment_type_ids = tripoddown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = HIDE
+		location = base
+		equipment_type_ids = tripoddown
+	}	
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die1
+		kf = /Shared/Animations/Units/Infantry/KneelDie1.kf
+		damage_threshold = 0
+		length = 1 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/KneelDie2.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleattack
+		kf = /Shared/Animations/Units/InfantryMG/KneelIdleAttack.kf
+		
+		[WhenStart Template=FXC_Equipment]
+		action = UNHIDE
+		location = base
+		equipment_type_ids = tripoddown
+
+		[WhenEnd Template=FXC_Equipment]
+		action = HIDE
+		location = base
+		equipment_type_ids = tripoddown
+	}
+		
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/InfantryMG/KneelJog.kf
+	walk_distance = 1
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/InfantryMG/KneelJog.kf
+	walk_distance = 1
+}
+
+;;------------------------ SUBMACHINE-GUN INFANTRY --------------------------
+
+[Template AspectAnimationSetInfantrySMGKneel Template=AspectAnimationSet]
+{
+	aspect_ids = kneel
+		
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	kf = /Shared/Animations/Units/InfantrySMG/KneelAttack1.kf
+	key_ratio = 0.0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die1
+		kf = /Shared/Animations/Units/Infantry/KneelDie1.kf
+		damage_threshold = 0
+		length = 1 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die2
+		kf = /Shared/Animations/Units/Infantry/KneelDie2.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/InfantrySMG/KneelIdleAttack.kf
+		
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleprojectileattack
+		kf = /Shared/Animations/Units/InfantrySMG/KneelProjectileIdleAttack.kf
+	
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+		
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/InfantrySMG/KneelJog.kf
+	walk_distance = 1
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/InfantrySMG/KneelJog.kf
+	walk_distance = 1
+
+	[Animation Template=AttackAnimation]
+	{
+		IDS = projectileattack1
+		kf = /Shared/Animations/Units/InfantrySMG/KneelProjectileAttack1.kf
+		key_ratio = 0.6
+	
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+}
+
+[Template AspectAnimationSetInfantrySMGProne Template=AspectAnimationSet]
+{
+	aspect_ids = prone
+		
+	[Animation Template=AttackAnimation]
+	IDS = attack1
+	kf = /Shared/Animations/Units/InfantrySMG/ProneAttack1.kf
+	key_ratio = 0.0
+
+	[Animation Template=DieAnimation]
+	IDS = die1
+	kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	IDS = die2
+	kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	IDS = die17
+	kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+	length = 1
+	damage_threshold = 0
+	damage_filter = 0
+
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die18
+		kf = /Shared/Animations/Units/Infantry/ProneDie2.kf
+		damage_threshold = 0
+		length = 1.5 
+		damage_filter = 0
+		
+		[WhenStart Template=FXC_Equipment]
+		action = HIDE
+		location = rhand
+		equipment_type_ids = rifle
+
+		[WhenEnd Template=FXC_Equipment]
+		action = UNHIDE
+		location = rhand
+		equipment_type_ids = rifle
+	}
+		
+	[Animation Template=DieAnimation]
+	{	
+		IDS = die21
+		kf = /Shared/Animations/Units/Infantry/ProneDie1.kf
+		damage_threshold = 80
+		length = 1 
+		damage_filter = 0		
+	}
+		
+	[Animation Template=IdleAnimation]
+	IDS = idleattack
+	kf = /Shared/Animations/Units/InfantrySMG/ProneIdleAttack.kf
+
+	[Animation Template=IdleAnimation]
+	{
+		IDS = idleprojectileattack
+		kf = /Shared/Animations/Units/InfantrySMG/ProneProjectileIdleAttack.kf
+	
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+
+	[Animation Template=MoveAnimation]
+	IDS = walk
+	kf = /Shared/Animations/Units/InfantrySMG/ProneJog.kf
+	walk_distance = 0.6		
+
+	[Animation Template=MoveAnimation]
+	IDS = jog
+	kf = /Shared/Animations/Units/InfantrySMG/ProneJog.kf
+	walk_distance = 0.6		
+
+	[Animation Template=AttackAnimation]
+	{
+		IDS = projectileattack1
+		kf = /Shared/Animations/Units/InfantrySMG/ProneProjectileAttack1.kf
+		key_ratio = 0.6
+	
+		[WhenStart Template=FXC_Equipment]
+		{
+			action = HIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+
+		[WhenEnd Template=FXC_Equipment]
+		{
+			action = UNHIDE
+			location = rhand
+			equipment_type_ids = rifle
+		}
+	}
+}

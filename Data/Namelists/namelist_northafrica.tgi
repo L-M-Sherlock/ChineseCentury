@@ -1,0 +1,304 @@
+
+[NameList]
+{
+	IDS = namelist_northafrica
+	name = "#namelist_northafrica_name"
+
+	[Name] ;; 01
+	name = "#namelist_northafrica_Name_name"
+	
+	[Name] ;; 02
+	name = "#namelist_northafrica_Name_name_2"
+	
+	[Name] ;; 03
+	name = "#namelist_northafrica_Name_name_3"
+	
+	[Name] ;; 04
+	name = "#namelist_northafrica_Name_name_4"
+	
+	[Name] ;; 05
+	name = "#namelist_northafrica_Name_name_5"
+	
+	[Name] ;; 06
+	name = "#namelist_northafrica_Name_name_6"
+	
+	[Name] ;; 07
+	name = "#namelist_northafrica_Name_name_7"
+	
+	[Name] ;; 08
+	name = "#namelist_northafrica_Name_name_8"
+	
+	[Name] ;; 09
+	name = "#namelist_northafrica_Name_name_9"
+	
+	[Name] ;; 10
+	name = "#namelist_northafrica_Name_name_10"
+	
+	[Name] ;; 11
+	name = "#namelist_northafrica_Name_name_11"
+	
+	[Name] ;; 12
+	name = "#namelist_northafrica_Name_name_12"
+	
+	[Name] ;; 13
+	name = "#namelist_northafrica_Name_name_13"
+	
+	[Name] ;; 14
+	name = "#namelist_northafrica_Name_name_14"
+	
+	[Name] ;; 15
+	name = "#namelist_northafrica_Name_name_15"
+	
+	[Name] ;; 16
+	name = "#namelist_northafrica_Name_name_16"
+	
+	[Name] ;; 17
+	name = "#namelist_northafrica_Name_name_17"
+	
+	[Name] ;; 18
+	name = "#namelist_northafrica_Name_name_18"
+	
+	[Name] ;; 19
+	name = "#namelist_northafrica_Name_name_19"
+	
+	[Name] ;; 20
+	name = "#namelist_northafrica_Name_name_20"
+	
+	[Name] ;; 21
+	name = "#namelist_northafrica_Name_name_21"
+	
+	[Name] ;; 22
+	name = "#namelist_northafrica_Name_name_22"
+	
+	[Name] ;; 23
+	name = "#namelist_northafrica_Name_name_23"
+	
+	[Name] ;; 24
+	name = "#namelist_northafrica_Name_name_24"
+	
+	[Name] ;; 25
+	name = "#namelist_northafrica_Name_name_25"
+	
+	[Name] ;; 26
+	name = "#namelist_northafrica_Name_name_26"
+	
+	[Name] ;; 27
+	name = "#namelist_northafrica_Name_name_27"
+	
+	[Name] ;; 28
+	name = "#namelist_northafrica_Name_name_28"
+	
+	[Name] ;; 29
+	name = "#namelist_northafrica_Name_name_29"
+	
+	[Name] ;; 30
+	name = "#namelist_northafrica_Name_name_30"
+	
+	[Name] ;; 31
+	name = "#namelist_northafrica_Name_name_31"
+	
+	[Name] ;; 32
+	name = "#namelist_northafrica_Name_name_32"
+	
+	[Name] ;; 33
+	name = "#namelist_northafrica_Name_name_33"
+	
+	[Name] ;; 34
+	name = "#namelist_northafrica_Name_name_34"
+	
+	[Name] ;; 35
+	name = "#namelist_northafrica_Name_name_35"
+	
+	[Name] ;; 36
+	name = "#namelist_northafrica_Name_name_36"
+
+	[Name] ;; 37
+	name = "#namelist_northafrica_Name_name_37"
+	
+	[Name] ;; 38
+	name = "#namelist_northafrica_Name_name_38"
+	
+	[Name] ;; 39
+	name = "#namelist_northafrica_Name_name_39"
+	
+	[Name] ;; 40
+	name = "#namelist_northafrica_Name_name_40"
+	
+	[Name] ;; 41
+	name = "#namelist_northafrica_Name_name_41"
+	
+	[Name] ;; 42
+	name = "#namelist_northafrica_Name_name_42"
+	
+	[Name] ;; 43
+	name = "#namelist_northafrica_Name_name_43"
+	
+	[Name] ;; 44
+	name = "#namelist_northafrica_Name_name_44"
+	
+	[Name] ;; 45
+	name = "#namelist_northafrica_Name_name_45"
+	
+	[Name] ;; 46
+	name = "#namelist_northafrica_Name_name_46"
+	
+	[Name] ;; 47
+	name = "#namelist_northafrica_Name_name_47"
+	
+	[Name] ;; 48
+	name = "#namelist_northafrica_Name_name_48"
+	
+	[Name] ;; 49
+	name = "#namelist_northafrica_Name_name_49"
+	
+	[Name] ;; 50
+	name = "#namelist_northafrica_Name_name_50"
+	
+	[Name] ;; 51
+	name = "#namelist_northafrica_Name_name_51"
+	
+	[Name] ;; 52
+	name = "#namelist_northafrica_Name_name_52"
+	
+	[Name] ;; 53
+	name = "#namelist_northafrica_Name_name_53"
+	
+	[Name] ;; 54
+	name = "#namelist_northafrica_Name_name_54"
+	
+	[Name] ;; 55
+	name = "#namelist_northafrica_Name_name_55"
+	
+	[Name] ;; 56
+	name = "#namelist_northafrica_Name_name_56"
+	
+	[Name] ;; 57
+	name = "#namelist_northafrica_Name_name_57"
+	
+	[Name] ;; 58
+	name = "#namelist_northafrica_Name_name_58"
+	
+	[Name] ;; 59
+	name = "#namelist_northafrica_Name_name_59"
+	
+	[Name] ;; 60
+	name = "#namelist_northafrica_Name_name_60"
+	
+	[Name] ;; 61
+	name = "#namelist_northafrica_Name_name_61"
+	
+	[Name] ;; 62
+	name = "#namelist_northafrica_Name_name_62"
+	
+	[Name] ;; 63
+	name = "#namelist_northafrica_Name_name_63"
+	
+	[Name] ;; 64
+	name = "#namelist_northafrica_Name_name_64"
+	
+	[Name] ;; 65
+	name = "#namelist_northafrica_Name_name_65"
+
+	[Name] ;; 66
+	name = "#namelist_northafrica_Name_name_66"
+	
+	[Name] ;; 67
+	name = "#namelist_northafrica_Name_name_67"
+	
+	[Name] ;; 68
+	name = "#namelist_northafrica_Name_name_68"
+	
+	[Name] ;; 69
+	name = "#namelist_northafrica_Name_name_69"
+	
+	[Name] ;; 70
+	name = "#namelist_northafrica_Name_name_70"
+	
+	[Name] ;; 71
+	name = "#namelist_northafrica_Name_name_71"
+	
+	[Name] ;; 72
+	name = "#namelist_northafrica_Name_name_72"
+	
+	[Name] ;; 73
+	name = "#namelist_northafrica_Name_name_73"
+	
+	[Name] ;; 74
+	name = "#namelist_northafrica_Name_name_74"
+	
+	[Name] ;; 75
+	name = "#namelist_northafrica_Name_name_75"
+	
+	[Name] ;; 76
+	name = "#namelist_northafrica_Name_name_76"
+	
+	[Name] ;; 77
+	name = "#namelist_northafrica_Name_name_77"
+	
+	[Name] ;; 78
+	name = "#namelist_northafrica_Name_name_78"
+	
+	[Name] ;; 79
+	name = "#namelist_northafrica_Name_name_79"
+	
+	[Name] ;; 80
+	name = "#namelist_northafrica_Name_name_80"
+	
+	[Name] ;; 81
+	name = "#namelist_northafrica_Name_name_81"
+	
+	[Name] ;; 82
+	name = "#namelist_northafrica_Name_name_82"
+	
+	[Name] ;; 83
+	name = "#namelist_northafrica_Name_name_83"
+	
+	[Name] ;; 84
+	name = "#namelist_northafrica_Name_name_84"
+	
+	[Name] ;; 85
+	name = "#namelist_northafrica_Name_name_85"
+	
+	[Name] ;; 86
+	name = "#namelist_northafrica_Name_name_86"
+	
+	[Name] ;; 87
+	name = "#namelist_northafrica_Name_name_87"
+	
+	[Name] ;; 88
+	name = "#namelist_northafrica_Name_name_88"
+	
+	[Name] ;; 89
+	name = "#namelist_northafrica_Name_name_89"
+	
+	[Name] ;; 90
+	name = "#namelist_northafrica_Name_name_90"
+	
+	[Name] ;; 91
+	name = "#namelist_northafrica_Name_name_91"
+	
+	[Name] ;; 92
+	name = "#namelist_northafrica_Name_name_92"
+	
+	[Name] ;; 93
+	name = "#namelist_northafrica_Name_name_93"
+	
+	[Name] ;; 94
+	name = "#namelist_northafrica_Name_name_94"
+	
+	[Name] ;; 95
+	name = "#namelist_northafrica_Name_name_95"
+	
+	[Name] ;; 96
+	name = "#namelist_northafrica_Name_name_96"
+	
+	[Name] ;; 97
+	name = "#namelist_northafrica_Name_name_97"
+	
+	[Name] ;; 98
+	name = "#namelist_northafrica_Name_name_98"
+	
+	[Name] ;; 99
+	name = "#namelist_northafrica_Name_name_99"
+}
+

@@ -1,0 +1,62 @@
+[Thing Template=AAnedOrganizationInfantry]
+{
+	IDS = regiment_ned_infantry_grenadier
+	name = "#regiment_ned_infantry_grenadier_name"
+	editor_name = "#regiment_ned_infantry_grenadier_editor_name"
+
+	[EconomyComponent]
+	{
+		[Cost]
+		money = 52
+		
+		[Upkeep]
+		ammo = 6
+	}
+
+	[View]
+	{
+		resource_prefix = /Units/ned/nedInfantrygrenadier/nedInfantrygrenadier
+		icon = /UI/Game/RegimentButtons/IconNEDInfantrymarine.png
+
+		[WhenSelected Template=FXC_PlaySFX]
+		audio_ids = ned_infantry_select
+
+		[WhenCommanded Template=FXC_PlaySFX]
+		audio_ids = ned_infantry_move
+
+		[WhenCommandedAggressive Template=FXC_PlaySFX]
+		audio_ids = ned_infantry_attack
+	}		
+	
+	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	{	
+		layout_IDS = regiment_infantry
+		
+		[Slot]	;; front
+		element_IDS = ned_infantry_grenadier
+		
+		[Slot]	;; rear guard 1
+		element_IDS = ned_infantry_grenadier
+
+		[Slot]	;; rear guard 2
+		element_IDS = ned_infantry_grenadier
+		
+		[Slot]	;; rear guard 3
+		element_IDS = ned_infantry_grenadier
+	
+		[Slot]	;; flank
+		element_IDS = ned_infantry_grenadier
+		
+		[Slot]	;; captain
+		element_IDS = ned_infantry_co
+	}
+	
+	[PropertiesComponent]
+	{	
+		[Property]
+		property_ids = infantry_company
+        
+		[Property]
+		property_ids = special_company
+	}
+}

@@ -1,0 +1,61 @@
+[Thing Template=AAChaparralDoodad]
+{
+	IDS = chaparral_bushes_dry
+	name = "#chaparral_bushes_dry_name"
+	
+	[Flags]
+	blocking = false
+	
+	[Placement]
+	{
+		[Biome]
+		{
+			ids = chaparral
+			weight = 0.0
+
+			[Terrain]
+			IDS = chaparral_forest
+			weight = 0.0
+			
+			[Terrain]
+			IDS = chaparral_grass
+			weight = 0.001
+
+			[Terrain]
+			IDS = chaparral_grassdry
+			weight = 5.0
+		}
+	}
+	
+	[Size]
+	scale_min = 0.9
+	scale_max = 1.25
+	
+	[View]
+	{
+		resource_prefix = ChaparralBushesDry/ChaparralBushDry
+		shadow_type = STENCIL		
+		shadow_texture = /effects/shadows/TreePalmShadow.dds
+		align_with_wind = false
+
+		[Aspect Template=Aspect]
+		IDS = chaparral_bush_dry01
+		model = %s01.nif
+		ground_size = 0.5,0.5
+
+		[Aspect Template=Aspect]
+		IDS = chaparral_bush_dry02
+		model = %s02.nif
+		ground_size = 0.5,0.5
+
+		[Aspect Template=Aspect]
+		IDS = chaparral_bush_dry03
+		model = %s03.nif
+		ground_size = 0.5,0.5
+
+		[Aspect Template=Aspect]
+		IDS = chaparral_bush_dry04
+		model = %s04.nif
+		ground_size = 0.5,0.5
+	}
+}

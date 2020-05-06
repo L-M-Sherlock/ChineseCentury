@@ -1,0 +1,947 @@
+[Template ObjectiveObject Inherit=Actor]
+{
+	category = UNIT
+	
+	[Flags]
+	invulnerable = true
+	invisible = false
+	blocking = false
+	targetable = false
+	ethereal = true
+	radar = true
+	ownable = false
+
+	[Placement]
+	placement_group_IDS = null
+
+	[View]
+	resource_prefix = /Special/Empty
+	shadow_type = none
+	shadow_texture = null
+	radar_factor = 10
+
+
+}
+
+;; ----------------  PRIMARY OBJECTIVES --------------- ;;
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_primary01
+	name = "#thing_objectives_thing_objective_primary01_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconPrimaryObjective01.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar01.png
+			
+			src_color = 0, 0.6, 1
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_primary02
+	name = "#thing_objectives_thing_objective_primary02_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconPrimaryObjective02.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar02.png
+			
+			src_color = 0, 0.6, 1
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_primary03
+	name = "#thing_objectives_thing_objective_primary03_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconPrimaryObjective03.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar03.png
+			
+			src_color = 0, 0.6, 1
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_primary04
+	name = "#thing_objectives_thing_objective_primary04_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconPrimaryObjective04.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar04.png
+			
+			src_color = 0, 0.6, 1
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_primary05
+	name = "#thing_objectives_thing_objective_primary05_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconPrimaryObjective05.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar05.png
+			
+			src_color = 0, 0.6, 1
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_primary06
+	name = "#thing_objectives_thing_objective_primary06_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconPrimaryObjective06.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar06.png
+			
+			src_color = 0, 0.6, 1
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_primary07
+	name = "#thing_objectives_thing_objective_primary07_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconPrimaryObjective07.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar07.png
+			
+			src_color = 0, 0.6, 1
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_primary08
+	name = "#thing_objectives_thing_objective_primary08_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconPrimaryObjective08.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar08.png
+			
+			src_color = 0, 0.6, 1
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_primary09
+	name = "#thing_objectives_thing_objective_primary09_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconPrimaryObjective09.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar09.png
+			
+			src_color = 0, 0.6, 1
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+;; ----------------  SECONDARY OBJECTIVES --------------- ;;
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_secondary01
+	name = "#thing_objectives_thing_objective_secondary01_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconSecondaryObjective01.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar01.png
+			
+			src_color = 1, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_secondary02
+	name = "#thing_objectives_thing_objective_secondary02_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconSecondaryObjective02.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar02.png
+			
+			src_color = 1, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_secondary03
+	name = "#thing_objectives_thing_objective_secondary03_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconSecondaryObjective03.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar03.png
+			
+			src_color = 1, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_secondary04
+	name = "#thing_objectives_thing_objective_secondary04_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconSecondaryObjective04.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar04.png
+			
+			src_color = 1, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_secondary05
+	name = "#thing_objectives_thing_objective_secondary05_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconSecondaryObjective05.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar05.PNG
+			
+			src_color = 1, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_secondary06
+	name = "#thing_objectives_thing_objective_secondary06_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconSecondaryObjective06.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar06.png
+			
+			src_color = 1, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_secondary07
+	name = "#thing_objectives_thing_objective_secondary07_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconSecondaryObjective07.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar07.png
+			
+			src_color = 1, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_secondary08
+	name = "#thing_objectives_thing_objective_secondary08_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconSecondaryObjective08.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar08.png
+			
+			src_color = 1, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_secondary09
+	name = "#thing_objectives_thing_objective_secondary09_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconSecondaryObjective09.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar09.png
+			
+			src_color = 1, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+;; ----------------  COMPLETE FADE OBJECTIVES --------------- ;;
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_fade_01
+	name = "#thing_objectives_thing_objective_complete01_name"
+	
+	[View]
+	{
+		;minimap_icon = /Minimap/Icons/IconCompleteObjective01.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar01.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_fade_02
+	name = "#thing_objectives_thing_objective_complete02_name"
+	
+	[View]
+	{
+		;minimap_icon = /Minimap/Icons/IconCompleteObjective02.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar02.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_fade_03
+	name = "#thing_objectives_thing_objective_complete03_name"
+	
+	[View]
+	{
+		;minimap_icon = /Minimap/Icons/IconCompleteObjective03.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar03.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_fade_04
+	name = "#thing_objectives_thing_objective_complete04_name"
+	
+	[View]
+	{
+		;minimap_icon = /Minimap/Icons/IconCompleteObjective04.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar04.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_fade_05
+	name = "#thing_objectives_thing_objective_complete05_name"
+	
+	[View]
+	{
+		;minimap_icon = /Minimap/Icons/IconCompleteObjective05.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar05.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_fade_06
+	name = "#thing_objectives_thing_objective_complete06_name"
+	
+	[View]
+	{
+		;minimap_icon = /Minimap/Icons/IconCompleteObjective06.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar06.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_fade_07
+	name = "#thing_objectives_thing_objective_complete07_name"
+	
+	[View]
+	{
+		;minimap_icon = /Minimap/Icons/IconCompleteObjective07.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar07.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_fade_08
+	name = "#thing_objectives_thing_objective_complete08_name"
+	
+	[View]
+	{
+		;minimap_icon = /Minimap/Icons/IconCompleteObjective08.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar08.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_fade_09
+	name = "#thing_objectives_thing_objective_complete09_name"
+	
+	[View]
+	{
+		;minimap_icon = /Minimap/Icons/IconCompleteObjective09.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar09.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+;; ----------------  FAILED OBJECTIVES --------------- ;;
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_failed01
+	name = "#thing_objectives_thing_objective_failed01_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconFailedObjective01.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar01.png
+			
+			src_color = 1, 0, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_failed02
+	name = "#thing_objectives_thing_objective_failed02_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconFailedObjective02.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar02.png
+			
+			src_color = 1, 0, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_failed03
+	name = "#thing_objectives_thing_objective_failed03_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconFailedObjective03.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar03.png
+			
+			src_color = 1, 0, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_failed04
+	name = "#thing_objectives_thing_objective_failed04_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconFailedObjective04.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar04.png
+			
+			src_color = 1, 0, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_failed05
+	name = "#thing_objectives_thing_objective_failed05_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconFailedObjective05.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar05.png
+			
+			src_color = 1, 0, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_failed06
+	name = "#thing_objectives_thing_objective_failed06_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconFailedObjective06.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar06.png
+			
+			src_color = 1, 0, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_failed07
+	name = "#thing_objectives_thing_objective_failed07_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconFailedObjective07.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar07.png
+			
+			src_color = 1, 0, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_failed08
+	name = "#thing_objectives_thing_objective_failed08_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconFailedObjective08.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar08.png
+			
+			src_color = 1, 0, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_failed09
+	name = "#thing_objectives_thing_objective_failed09_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconFailedObjective09.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar09.png
+			
+			src_color = 1, 0, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+;; ----------------  COMPLETE NO FADE OBJECTIVES --------------- ;;
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_nofade_01
+	name = "#thing_objectives_thing_objective_complete_nofade_01_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconCompleteObjective01.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar01.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_nofade_02
+	name = "#thing_objectives_thing_objective_complete_nofade_02_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconCompleteObjective02.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar02.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_nofade_03
+	name = "#thing_objectives_thing_objective_complete_nofade_03_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconCompleteObjective03.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar03.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_nofade_04
+	name = "#thing_objectives_thing_objective_complete_nofade_04_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconCompleteObjective04.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar04.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_nofade_05
+	name = "#thing_objectives_thing_objective_complete_nofade_05_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconCompleteObjective05.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar05.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_nofade_06
+	name = "#thing_objectives_thing_objective_complete_nofade_06_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconCompleteObjective06.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar06.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_nofade_07
+	name = "#thing_objectives_thing_objective_complete_nofade_07_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconCompleteObjective07.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar07.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_nofade_08
+	name = "#thing_objectives_thing_objective_complete_nofade_08_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconCompleteObjective08.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar08.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}
+
+
+[Thing template=ObjectiveObject]
+{
+	IDS = thing_objective_complete_nofade_09
+	name = "#thing_objectives_thing_objective_complete_nofade_09_name"
+	
+	[View]
+	{
+		minimap_icon = /Minimap/Icons/IconCompleteObjective09.png
+	
+		[WhenCreated Template=FXC_CreateRFX]
+		{		
+			radar_icon = /Minimap/Icons/IconRadar09.png
+			
+			src_color = 0, 1, 0
+			dst_color = 0, 0, 0
+			blink_count = 8
+		}
+	}
+}

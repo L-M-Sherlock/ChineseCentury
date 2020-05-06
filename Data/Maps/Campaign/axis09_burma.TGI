@@ -1,0 +1,18 @@
+[Text language=Default]
+{
+	ids = map_strings_table
+	name = "axis09_burma"
+
+	kingdom_1 = ""
+	name_1845 = ""
+	kingdom_0 = ""
+	name_1903 = ""
+	objective_5 = "1.       ."
+	map_description = ".           .         ,         .                            ."
+	independent_3 = ""
+	independent_2 = "Ambient"
+	restriction_group_0004 = "Restrictions"
+	map_name = "axis09_burma"
+	name_1896 = ""
+	name_1836 = ""
+}

@@ -1,0 +1,401 @@
+
+;;;;;;;;;;;;;  vfx required for the game
+
+[VFX Template=VFXProjectedTextureOval]
+{
+	IDS = selected_circle_vfx
+	name = "#game_vfx_selected_circle_vfx_name_2"
+	texture = Selection/SelectedCircle.dds
+	decal_type = ui
+}
+
+[VFX Template=VFXProjectedTextureOval]
+{
+	IDS = selected_square_vfx
+	name = "#game_vfx_selected_square_vfx_name_2"
+	texture = Selection/SelectedSquare.dds
+	decal_type = ui
+}
+
+[VFX Template=VFXProjectedTextureOval]
+{
+	IDS = focused_circle_vfx
+	name = "#game_vfx_focused_circle_vfx_name_2"
+	texture = Selection/FocusedCircle.dds
+	decal_type = ui
+}
+
+[VFX Template=VFXProjectedTextureOval]
+{
+	IDS = focused_square_vfx
+	name = "#game_vfx_focused_square_vfx_name_2"
+	texture = Selection/FocusedSquare.dds
+	decal_type = ui
+}
+
+;; drp090804 - added: this was missing in AA
+[VFX Template=VFXModelTemporary]
+{
+	IDS = move_vfx
+	name = "#game_vfx_move_vfx_name"
+	model = MoveEffect/MoveEffect.NIF
+}
+
+
+[VFX Template=VFXProjectedTexture]
+{
+	IDS = low_pathing_vfx
+	name = "#game_vfx_low_pathing_vfx_name_2"
+
+	attached_shape = false
+	attached_scale = 0
+	texture_size = 1
+	color = 1,1,1
+	texture = ProjectedTexture/Pathing.tga
+	decal_type = ui
+}
+
+[VFX Template=VFXProjectedTexture]
+{
+	IDS = medium_pathing_vfx
+	name = "#game_vfx_medium_pathing_vfx_name_2"
+
+	attached_shape = false
+	attached_scale = 0
+	texture_size = 2
+	color = 1,0,0
+	texture = ProjectedTexture/Pathing.tga
+	decal_type = ui
+}
+
+[VFX Template=VFXProjectedTexture]
+{
+	IDS = high_pathing_vfx
+	name = "#game_vfx_high_pathing_vfx_name_2"
+
+	attached_shape = false
+	attached_scale = 0
+	texture_size = 4
+	color = 0.5,0.5,1
+	texture = ProjectedTexture/Pathing.tga
+	decal_type = ui
+}
+
+[VFX template=VFXProjectedTexture]
+{
+	IDS = facing_arrow_vfx
+	name = "#game_vfx_facing_arrow_vfx_name_2"
+
+	attached_shape = false
+	attached_scale = 0
+	texture_size = 2
+	texture = FacingArrow/FacingArrow.tga
+	decal_type = ui
+}
+
+[VFX template=VFXText]
+{
+	IDS = floater_text
+	name = "#game_vfx_floater_text_name_2"
+	permanent = false
+	duration = 1
+	text = ""	
+	color = 1,1,1
+	font_IDS = tiny_outline
+	rise_to_height = 2
+}
+
+[VFX template=VFXText]
+{
+	IDS = heal_floater_text
+	name = "#game_vfx_heal_floater_text_name_2"
+	permanent = false
+	duration = 1
+	text = ""	
+	color = .2,1,.2
+	font_IDS = tiny_outline
+	rise_to_height = 2
+}
+
+[VFX template=VFXText]
+{
+	IDS = text_vfx
+	name = "#game_vfx_text_vfx_name_2"
+	permanent = true
+	color = 1,1,1
+	text = ""
+	font_IDS = tiny_outline
+}
+
+[VFX template=VFXText]
+{
+	IDS = text_vfx_unscaled
+	name = "#game_vfx_text_vfx_unscaled_name"
+	permanent = true
+	color = 1,1,1
+	text = ""
+	font_IDS = tiny_outline
+	constant_screen_size = false
+}
+
+[VFX template=VFXObjectName]
+{
+	IDS = object_name_vfx
+	name = "#game_vfx_object_name_vfx_name_2"
+	permanent = true
+	color = 1,1,1
+	text = ""
+	font_IDS = large
+	rise_to_height = 4
+}
+
+[VFX template=VFXStatusBar]
+{
+	IDS = health_bar_vfx
+	name = "#game_vfx_health_bar_vfx_name_2"
+	model = HealthBar/HealthBar.nif
+
+	display_value = HEALTH
+	floating_ui_vfx = true
+}
+
+[VFX template=VFXStatusBar]
+{
+	IDS = health_bar_medium_vfx
+	name = "#game_vfx_health_bar_medium_vfx_name"
+	model = HealthBar/HealthBarMedium.nif
+
+	display_value = HEALTH
+	floating_ui_vfx = true
+}
+
+[VFX template=VFXStatusBar]
+{
+	IDS = health_bar_large_vfx
+	name = "#game_vfx_health_bar_large_vfx_name"
+	model = HealthBar/HealthBarLarge.nif
+
+	display_value = HEALTH
+	floating_ui_vfx = true
+}
+
+[VFX template=VFXStatusBar]
+{
+	IDS = morale_bar_vfx
+	name = "#game_vfx_morale_bar_vfx_name_2"
+	model = MoraleBar/MoraleBar.nif
+
+	display_value = MORALE
+	floating_ui_vfx = true
+}
+
+[VFX template=VFXStatusBar]
+{
+	IDS = supply_stockpile_bar_vfx
+	name = "#game_vfx_supply_stockpile_bar_vfx_name"
+	model = SupplyStockpileBar/SupplyStockpileBar.nif
+
+	display_value = SUPPLY_STOCKPILE
+	floating_ui_vfx = true
+}
+
+[VFX template=VFXAlphaModifier]
+{
+	IDS = ghost_vfx
+	name = "#game_vfx_ghost_vfx_name_2"
+	alpha = 0.5
+}
+
+[VFX template=VFXTintModifier]
+{
+	IDS = illegal_placement_vfx
+	name = "#game_vfx_illegal_placement_vfx_name_2"
+
+	color = 1,0,0
+	enhance_duration = 0	;; Instantaneous
+	fade_duration = 0	;; Instantaneous
+}
+
+[VFX Template=VFXProjectedTextureOval]
+{
+	IDS = circle_brush_vfx
+	name = "#game_vfx_circle_brush_vfx_name_2"
+	texture = Brushes/circle_brush.tga
+	decal_type = ui
+}
+
+[VFX Template=VFXProjectedTextureOval]
+{
+	IDS = square_brush_vfx
+	name = "#game_vfx_square_brush_vfx_name_2"
+	texture = Brushes/square_brush.tga
+	decal_type = ui
+}
+
+[VFX template=VFXProjectedTexture]
+{
+	IDS = projected_box_texture_vfx
+	name = "#game_vfx_projected_box_texture_vfx_name_2"
+
+	attached_shape = true
+	attached_scale = 0
+	texture_size = 2	
+	texture = ProjectedTexture/square.tga
+	decal_type = ui
+}
+
+[VFX template=VFXProjectedTexture]
+{
+	IDS = projected_circle_texture_vfx
+	name = "#game_vfx_projected_circle_texture_vfx_name_2"
+
+	attached_shape = true
+	attached_scale = 0
+	texture_size = 2	
+	texture = ProjectedTexture/circle.tga
+	decal_type = ui
+}
+
+[VFX Template=VFXModelPermanent]
+{
+	IDS = location_marker_editor
+	name = "#game_vfx_location_marker_editor_name_2"
+
+	model = Markers/LocationEditor.nif
+}
+
+[VFX Template=VFXModelPermanent]
+{
+	IDS = recruit_marker_rally_point
+	name = "#game_vfx_recruit_marker_rally_point_name_2"
+
+	model = Markers/RecruitRallyPoint.nif
+}
+
+[VFX Template=VFXModelPermanent]
+{
+	IDS = camera_vfx
+	name = "#game_vfx_camera_vfx_name_2"
+
+	model = Camera/Camera.nif
+
+	gyroscope = false
+}
+
+[VFX template=VFXTintModifier]
+{
+	IDS = out_of_supply_vfx
+	name = "#game_vfx_out_of_supply_vfx_name_2"
+
+	force_real_time = true
+
+	color = 0.5, 0.55, 0.5		;; minimap should match this color for out of supply
+	fade_duration = 0.8
+	enhance_duration = 1.0
+	repeating = true
+	flash_period = 0
+	priority = 0
+	lirp = false        ;; go to absolute white
+}
+
+[VFX template=VFXTintModifier]
+{
+	IDS = under_siege_vfx
+	name = "#game_vfx_under_siege_vfx_name_2"
+
+	force_real_time = true
+
+	color = 0.9, 0.5, 0.5		;; minimap should match this color for under siege
+	fade_duration = 0.7
+	enhance_duration = 0.9
+	repeating = true
+	flash_period = 0
+	priority = 1
+	lirp = false
+}
+
+[VFX Template=VFXModelPermanent]
+{
+	IDS = banner_focus_vfx
+	name = "#game_vfx_banner_focus_vfx_name"
+	model = selection/bannerfocus.NIF
+	constant_screen_size = true
+}
+
+[VFX Template=VFXModelPermanent]
+{
+	IDS = flare_focus_vfx
+	name = "#game_vfx_flare_focus_vfx_name"
+	model = selection/FlareFocus.NIF
+	constant_screen_size = false
+}
+
+[VFX Template=VFXModelPermanent]
+{
+	IDS = flare_selection_vfx
+	name = "#game_vfx_flare_selection_vfx_name"
+	model = selection/FlareSelection.NIF
+	constant_screen_size = false
+}
+
+[VFX Template=VFXModelPermanent]
+{
+	IDS = banner_selection_vfx
+	name = "#game_vfx_banner_selection_vfx_name"
+	model = /special/empty.NIF
+}
+
+[VFX Template=VFXConstructionModifier]
+{
+	IDS = construction_modifier_vfx
+	name = "#game_vfx_construction_modifier_vfx_name"
+}
+
+[VFX Template=VFXConstructionRaiseModifier]
+{
+	IDS = construction_raise_vfx
+	name = "#game_vfx_construction_raise_vfx_name"
+	
+	apply_shaking = false
+	shaking_frequency = 8
+	shaking_strength = 0.25
+	
+	apply_swaying = false
+	swaying_frequency = 2
+	swaying_maxangle = 45
+}
+
+[VFX Template=VFXProjectedTexture]
+{
+	IDS = crosshair_decal_vfx
+	name = "#game_vfx_crosshair_decal_vfx_name"
+
+	attached_shape = false
+	attached_scale = 0
+	texture_size = 1
+	color = 1,1,1
+	texture = ProjectedTexture/Crosshair01.dds
+	decal_type = ui
+}
+
+[VFX Template=VFXProjectedTexture]
+{
+	IDS = friendly_target_decal_vfx
+	name = "#game_vfx_crosshair_decal_vfx_name"
+
+	attached_shape = false
+	attached_scale = 0
+	texture_size = 1
+	additive = true
+	color = 1,1,1
+	texture = ProjectedTexture/Crosshair02.dds
+	decal_type = ui
+}
+
+[VFX Template=AAVFXModelTemporary]
+{
+	IDS = AreaEffect_vfx
+	name = "#game_vfx_AreaEffect_vfx_name"
+	model = SpecialOps/AreaEffect/AreaEffect.NIF
+	critical = true
+}
