@@ -2,7 +2,7 @@ CD-key：B2WS-6JGH-PV7G-PBKP
 
 QQ群：567246830
 
-请将此 mod 覆盖至中国崛起 2019/3/29 版，百度云下载地址：链接: https://pan.baidu.com/s/196yZTgFEzHz6u1l3dMH31g 提取码: ud9f 
+请将此 mod 覆盖至中国崛起 2019/3/29 版或更新的版本，百度云下载地址：链接: https://pan.baidu.com/s/196yZTgFEzHz6u1l3dMH31g 提取码: ud9f 
 
 # 更新日志
 
@@ -217,3 +217,9 @@ E100 攻击模式改为单体伤害
 二战模式科技调整
 
 AI 调整
+
+## 2020/5/7
+
+战役修复
+
+翻译改正
