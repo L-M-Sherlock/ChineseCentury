@@ -401,7 +401,7 @@
 	[TechPriority]
 	{
 		tech						= tech_tank_king_tiger
-		priority					= 1200
+		priority					= 2500
 	}
 
 	[TechPriority]
