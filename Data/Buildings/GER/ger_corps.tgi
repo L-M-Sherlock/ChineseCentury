@@ -14,30 +14,6 @@
 	{
 		control_range = 30
 	
-		[Ability Template=AAAttackLocal]
-		{		
-			turret_ids = Turret
-			
-			[AbilityDefinition Template=AABunkerAttackAntiAirMG]
-			{
-				name = "#ger_bunker_aa_DefenderComponent_AbilityDefinition_name"
-				recharge_time = 1
-				range = 30
-				area = 4
-				attenuation_range_min = 1
-				attenuation_factor_max = 0.5
-								
-				[Effect Template=PierceDamageEffect]
-				amount = 40
-
-				[WhenDo template=FXC_PlaySFX]
-				audio_ids = ger_aa
-
-				[WhenDo Template=FXC_PlayObjectAnimation]
-				object_animation_IDS = Recoil1
-			}
-		}
-	
 		[Ability Template=AATurretAttackLocal]
 		{
 			turret_ids = Turret
