@@ -43,7 +43,7 @@
 
 	[BodyComponent]
 	{
-		health = 600
+		health = 650
 		defense = 12
 	}
 
@@ -55,8 +55,8 @@
 
 	[MoverComponent]
 	{
-		speed_max = 3.5
-		acceleration = 2.5
+		speed_max = 4
+		acceleration = 4
 		
 		[WhenStartMoving template=FXC_CreateVFX]
 		{
@@ -80,18 +80,18 @@
 				
 				name = "#gbr_tank_flame_AbilityDefinition_name"
 				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
-				range = 12
-				recharge_time = 3
+				range = 16
+				recharge_time = 4
 				area = 4
 				
 				[Effect Template=FireDamageEffect]
-				amount = 75
+				amount = 100
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = gbr_flame_tank
 				
 				[Effect Template=MoraleLossEffect]
-				amount = 1
+				amount = 2
 				
 			}
 		}
