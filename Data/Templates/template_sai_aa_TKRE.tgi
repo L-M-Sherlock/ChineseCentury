@@ -42,7 +42,7 @@
 	[TechPriority]
 	{
 		tech						= tech_sas_commandos
-		priority					= 500
+		priority					= 750
 	}
 
 	[TechPriority]
@@ -83,7 +83,7 @@
 	[TechPriority]
 	{
 		tech						= tech_sas_commandos
-		priority					= 2000
+		priority					= 2500
 	}
     
 	[TechPriority]

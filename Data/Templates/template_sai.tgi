@@ -864,7 +864,7 @@
 			;;	link the attack and defend goals for regions that are close to each other - 
 			;;	that is, ubits assigned to one count for both.  This parameter tells us how 
 			;;	many regions away two regions can be and still have their combat goals linked.
-			int	linked_region_distance			= 50
+			int	linked_region_distance			= 150
 
 			;; we need a way to determine how many static defenses to build around any economic 
 			;;	structure (settlement, mine, etc.).  The total static defensive cv we will want
@@ -1208,7 +1208,7 @@
 			;;	formula: max_friendly_building_bonus * ((distance / max_distance) ^ distance_exponent)
 			fixed max_friendly_building_bonus				= 500
 			fixed max_friendly_building_bonus_per_building	= 200
-			fixed max_distance								= 20	;; in meters, but we use a very rough estimate of distance based on region centers
+			fixed max_distance								= 25	;; in meters, but we use a very rough estimate of distance based on region centers
 			fixed distance_exponent							= 1
 			
 			;; travel distance - subtracted off value

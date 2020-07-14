@@ -6,15 +6,36 @@
 		[ActorPriority]
 		{
 			property_IDS	= corpshq
-			value		= 10000
-			repeat_penalty	= 10000
+			value		= 30000
+			repeat_penalty	= 30000
 		}
 		
 		[ActorPriority]
 		{
 			actor_ids                       = bank_asian1
-			repeat_penalty					= 500
 			value							= 22500
+			repeat_penalty					= 500
+		}
+		
+		[ActorPriority]
+		{
+			property_IDS	= property_bunker
+			value		= 10000
+			repeat_penalty		= 5
+		}
+
+		[ActorPriority]
+		{
+			property_IDS	= property_bunker_artillery
+			value		= 10001
+			repeat_penalty		= 5
+		}
+
+		[ActorPriority]
+		{
+			property_IDS	= property_bunker_aa
+			value		= 10002
+			repeat_penalty		= 5
 		}
 	}
 }
@@ -313,7 +334,13 @@
 
 		[Research template = TK2Research]
 
-		[OffensiveCV]
+        [GoalPriority]
+        {
+            goal_IDS = CONSTRUCT
+            multiplier = 1
+        }
+
+        [OffensiveCV]
 		{
 			cv_advantage_target		= 0.1
 			cv_advantage_max		= 8
@@ -509,6 +536,12 @@
 		}
 
 		[Research template = TK3Research]
+
+        [GoalPriority]
+        {
+            goal_IDS = CONSTRUCT
+            multiplier = 2
+        }
 
 		[OffensiveCV]
 		{
@@ -735,6 +768,12 @@
 
 		[Research template = TK4Research]
 
+        [GoalPriority]
+        {
+            goal_IDS = CONSTRUCT
+            multiplier = 5
+        }
+
 		[OffensiveCV]
 		{
 			cv_advantage_target		= 0.1
@@ -834,13 +873,13 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= tank_company
-				;;number_to_request		   = 4
+				number_to_request		   = 4
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				property_ids				= artillery_company
-				;;number_to_request		   = 4
+				number_to_request		   = 4
 			}
 
 			[SpecificRecruitRequest]
@@ -854,7 +893,7 @@
 			{
 				recruit_ids					= regiment_chn_paratrooper_MP_ground
 				base_priority				= 2000
-				;;number_to_request			= 12
+				number_to_request			= 12
 			}	
 		}
 
@@ -903,7 +942,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= airfield
-			value			= 12750
+			value			= 13750
 			repeat_penalty		= 10000
 		}
 
@@ -924,8 +963,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= armorhq
-			value			= 12500
-			repeat_penalty		= 75
+			value			= 13250
+			repeat_penalty		= 50
 		}
 
 		[ActorPriority]
@@ -1003,12 +1042,6 @@
 			goal_IDS = RESEARCH
 			multiplier = 0.01
 			fuzziness = 1
-		}
-
-		[GoalPriority]
-		{
-			goal_IDS = CONSTRUCT
-			multiplier = 1
 		}
 
 		[Research template = TK1Research]
@@ -1140,12 +1173,6 @@
 			fuzziness = 1
 		}
 
-		[GoalPriority]
-		{
-			goal_IDS = CONSTRUCT
-			multiplier = 1
-		}
-
 		[Research template = TK1Research]
 
 		[OffensiveCV]
@@ -1191,13 +1218,13 @@
 
 		[Unpacking]
 		{
-			base_priority							= 500
-			enemy_static_influence_mult			  = 10
-			enemy_dynamic_influence_mult			 = 10
-			max_friendly_building_bonus			  = 500
-			max_friendly_building_bonus_per_building = 200
-			travel_distance_mult					 = 3
-			fuzzy_factor							 = 150
+			base_priority							= 800
+			enemy_static_influence_mult			= -20
+			enemy_dynamic_influence_mult			= -20
+			max_friendly_building_bonus				= -10
+			max_friendly_building_bonus_per_building	= -10
+			max_distance	= 30
+			fuzzy_factor					= 50
 		}
 
 		[Recruiting]
@@ -1214,7 +1241,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
-				number_to_request		   = 6
+				number_to_request		   = 12
 				base_priority				= 5000
 			}
 		}
@@ -1222,7 +1249,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
-			value			= 30000
+			value			= 20000
 			repeat_penalty		= -10
 		}
 
@@ -1243,7 +1270,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= artillery_company
-			value			= 9900
+			value			= 4000
 			repeat_penalty		= 100
 		}
 	}
@@ -1286,6 +1313,13 @@
 		}
 
 		[Research template = TK4Research]
+
+        [GoalPriority]
+        {
+            goal_IDS = CONSTRUCT
+            multiplier = 10
+            bonus	   = 10000
+        }
 
 		[OffensiveCV]
 		{
@@ -1331,10 +1365,11 @@
 		[Unpacking]
 		{
 			base_priority							= 800
-			enemy_static_influence_mult			= -20
-			enemy_dynamic_influence_mult			= -20
-			max_friendly_building_bonus				= -10
-			max_friendly_building_bonus_per_building	= -10
+			enemy_static_influence_mult			= -30
+			enemy_dynamic_influence_mult			= -30
+			max_friendly_building_bonus				= -20
+			max_friendly_building_bonus_per_building	= -20
+			max_distance	= 40
 			fuzzy_factor					= 50
 		}
 		
@@ -1367,38 +1402,43 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= motor_pool
-				base_priority	   = 1000
+				base_priority	   = 2000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= artillery_brigade
-				base_priority	   = 1000
+				base_priority	   = 2000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= engineer_brigade
-				base_priority	   = 1000
+				base_priority	   = 2000
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids		= airfield
 			}
-
+			
 			[SpecificRecruitRequest]
+			{
+				property_ids				= supplydepot
+			}
+
+/* 			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
 				number_to_request		   = 6
 				base_priority	   = 999
 				
-			}
+			} */
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_tank_artillery
-				;;number_to_request		= 24
+				number_to_request		= 6
 				base_priority	   = 100
 				
 			}
@@ -1406,28 +1446,28 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_tank_heavy
-				;;number_to_request		= 24
+				number_to_request		= 6
 				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_rus_halftrack_at
-				;;number_to_request		= 24
+				number_to_request		= 6
 				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_ger_tank_artillery
-				;;number_to_request		= 24
+				number_to_request		= 6
 				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_GER_tank_SuperTiger
-				;;number_to_request		= 24
+				number_to_request		= 6
 				base_priority	   = 100
 				
 			}
@@ -1435,14 +1475,14 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_ita_halftrack_at
-				;;number_to_request		= 24
+				number_to_request		= 6
 				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_ita_tank_artillery
-				;;number_to_request		= 24
+				number_to_request		= 6
 				base_priority	   = 100
 				
 			}
@@ -1450,14 +1490,14 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_usa_halftrack_PromotionDelegation
-				;;number_to_request		= 24
+				number_to_request		= 6
 				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_usa_tank_Mixed
-				;;number_to_request		= 24
+				number_to_request		= 6
 				base_priority	   = 100
 				
 			}
@@ -1465,14 +1505,14 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_jpn_tank_artillery
-				;;number_to_request		= 24
+				number_to_request		= 6
 				
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_jpn_tksaodang
-				;;number_to_request		= 24
+				number_to_request		= 6
 				base_priority	   = 100
 				
 			}
@@ -1480,7 +1520,7 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids				= regiment_jpn_saodangmotuo
-				;;number_to_request		= 24
+				number_to_request		= 6
 				
 			}
 
@@ -1495,87 +1535,48 @@
 			{
 				recruit_ids					= regiment_chn_paratrooper_MP_ground
 				base_priority				= 5000
-				;;number_to_request			= 12
+				number_to_request			= 12
 			}
 			
-			[SpecificRecruitRequest]
-			{
-				recruit_ids					= regiment_cpc_infantry_sniper1
-				;;number_to_request			= 3
-			}
-			
-			[SpecificRecruitRequest]
-			{
-				recruit_ids					= regiment_cpc_infantry_mechanized
-				;;number_to_request			= 6
-			}
-
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_rus_airborne_vehicle
-				;;number_to_request			= 3
-			}
-
-			[SpecificRecruitRequest]
-			{
-				recruit_ids					= regiment_cpc_tank_artillery
-				;;number_to_request			= 6
+				number_to_request			= 3
 			}
 
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_tank_special
 				base_priority				= 5000
-				;;number_to_request			= 6
+				number_to_request			= 6
 			}
 			
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_cpc_rocket_truck
 				base_priority				= 5000
-				;;number_to_request			= 6
+				number_to_request			= 6
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids				= tank_company
-				;;number_to_request		   = 6
+				number_to_request		   = 6
 			}
 
 			[SpecificRecruitRequest]
 			{
 				property_ids				= artillery_company
-				;;number_to_request		   = 6
+				number_to_request		   = 6
 			}
 		}
 
-		[ActorPriority]
+/* 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
 			value			= 20000
 			repeat_penalty	=	5
-		}
-
-		[ActorPriority]
-		{
-			property_IDS	= property_bunker
-			value		= 5000
-			repeat_penalty	= -50
-		}
-
-		[ActorPriority]
-		{
-			property_IDS	= property_bunker_artillery
-			value		= 5000
-			repeat_penalty	= -50
-		}
-
-		[ActorPriority]
-		{
-			property_IDS	= property_bunker_aa
-			value		= 5000
-			repeat_penalty	= -50
-		}
+		} */
 
 		[ActorPriority]
 		{
@@ -1629,16 +1630,24 @@
 		[ActorPriority]
 		{
 			property_IDS		= tank_company
-			value			= 8000
+			value			= 9000
 			repeat_penalty		= 75
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= artillery_company
-			value			= 9900
+			value			= 8000
 			repeat_penalty		= 75
 		}
+
+		[ActorPriority]
+		{
+			property_IDS		= supplydepot
+			value			= 9001
+			repeat_penalty		= 25
+		}
+
 
 		[ActorPriority]
 		{
@@ -1671,7 +1680,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= engineer
-			value			= 30000
+			value			= 20000
 			repeat_penalty		= 15000
 		}
 
@@ -1682,25 +1691,25 @@
 			repeat_penalty	= 10000
 		}
 
-		[ActorPriority]
+/* 		[ActorPriority]
 		{
 			actor_IDS					= regiment_rus_halftrack_at
-			value							= 12000
-			repeat_penalty		= 100
+			value							= 13000
+			repeat_penalty		= 200
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_rus_tank_artillery
-			value							= 13000
+			value							= 13001
 			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_rus_tank_heavy
-			value							= 13500
-			repeat_penalty		= 100
+			value							= 13002
+			repeat_penalty		= 150
 		}
 
 		[ActorPriority]
@@ -1771,13 +1780,13 @@
 			actor_IDS					= regiment_jpn_tksaodang
 			value							= 13000
 			repeat_penalty		= 100
-		}
+		} */
 
 		[ActorPriority]
 		{
 			actor_IDS					= regiment_chn_paratrooper_MP
-			value							= 25000
-			repeat_penalty					= 300
+			value							= 25001
+			repeat_penalty					= 200
 		}
 
 		[ActorPriority]
@@ -1787,7 +1796,7 @@
 			repeat_penalty					= 150
 		}
 
-		[ActorPriority]
+/* 		[ActorPriority]
 		{
 			actor_IDS					= regiment_cpc_tank_special
 			value							= 25000
@@ -1813,7 +1822,7 @@
 			actor_IDS					= regiment_cpc_rocket_truck
 			value							= 25000
 			repeat_penalty					= 150
-		}
+		} */
 	}
 }
 ;; Ä©Íê³Ö¼Ì

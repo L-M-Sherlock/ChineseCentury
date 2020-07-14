@@ -618,7 +618,7 @@
 		[GoalPriority]
 		{
 			goal_IDS						= RECRUIT
-			multiplier						= 0.4
+			multiplier						= 0.5
 		}
 
 		[GoalPriority]
