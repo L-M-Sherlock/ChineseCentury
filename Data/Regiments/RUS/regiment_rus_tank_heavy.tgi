@@ -7,11 +7,11 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 200
+		money = 225
 		
 		[Upkeep]
 		ammo = 20
-		oil = 20
+		oil = 25
 	}
 
 	[View]
@@ -41,14 +41,17 @@
 		element_IDS = rus_tank_heavy
 	
 		[Slot]	;; support
-		element_IDS = null
+		element_IDS = rus_tank_heavy
 		
 		[Slot]	;; captain
 		element_IDS = rus_tank_co
 	}
 	
 	[PropertiesComponent]
-	{	
+	{
+        [Property]
+        property_IDS = org_tank
+
 		[Property]
 		property_ids = tank_company
 	}

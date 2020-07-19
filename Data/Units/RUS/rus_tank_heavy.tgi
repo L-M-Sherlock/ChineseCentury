@@ -8,8 +8,8 @@
 
 	[BodyComponent]
 	{
-		health = 792
-		defense = 15
+		health = 880
+		defense = 25
 	}
 
 	[MoverComponent]
@@ -39,6 +39,9 @@
 	{
 		[Property]
 		property_IDS = front
+
+        [Property]
+        property_IDS = support
 		
 		[Property]
 		property_IDS = combat_unit

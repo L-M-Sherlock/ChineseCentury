@@ -705,13 +705,6 @@
 			value			= 8000
 			repeat_penalty		= 10000
 		}
-
-		[ActorPriority]
-		{
-			property_IDS		= property_city
-			value			= 1000
-			repeat_penalty	= 10000
-		}
 		
 		[ActorPriority]
 		{
@@ -949,14 +942,14 @@
 		[ActorPriority]
 		{
 			property_IDS		= tank_company
-			value			= 9000
+			value			= 9500
 			repeat_penalty		= 100
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= artillery_company
-			value			= 9900
+			value			= 9500
 			repeat_penalty		= 100
 		}
 
@@ -993,13 +986,6 @@
 			property_IDS		= engineer
 			value			= 15000
 			repeat_penalty		= 10000
-		}
-
-		[ActorPriority]
-		{
-			property_IDS		= property_city
-			value			= 100
-			repeat_penalty	= 10000
 		}
 
 		[ActorPriority]
@@ -1637,7 +1623,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= artillery_company
-			value			= 8000
+			value			= 8900
 			repeat_penalty		= 75
 		}
 
@@ -1684,12 +1670,6 @@
 			repeat_penalty		= 15000
 		}
 
-		[ActorPriority]
-		{
-			property_IDS		= property_city
-			value			= 10
-			repeat_penalty	= 10000
-		}
 
 /* 		[ActorPriority]
 		{

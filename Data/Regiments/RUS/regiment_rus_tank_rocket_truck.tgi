@@ -7,17 +7,23 @@
 	[EconomyComponent]
 	{
 		[Cost]
-		money = 150
+		money = 275
 		
 		[Upkeep]
-		ammo = 20
-		oil = 15
+		ammo = 25
+		oil = 25
 	}
 
 	[PropertiesComponent]
-	{	
-		[Property]
-		property_ids = tank_company
+	{
+        [Property]
+        property_IDS = org_tank
+
+        [Property]
+        property_ids = tank_company
+
+        [Property]
+        property_ids = artillery_company
 	}
 
 	[View]
@@ -44,7 +50,7 @@
 		layout_IDS = regiment_vehicle_light
 		
 		[Slot]	;; front
-		element_IDS = rus_tank_light
+		element_IDS = rus_tank_heavy
 		
 		[Slot]	;; flank
 		element_IDS = rus_rocket_truck
