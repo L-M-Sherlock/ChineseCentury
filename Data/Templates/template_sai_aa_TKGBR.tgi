@@ -115,7 +115,6 @@
 			enemy_dynamic_influence_mult			= 3
 			max_friendly_building_bonus			= 500
 			max_friendly_building_bonus_per_building	= 200
-			travel_distance_mult				= 5
 			fuzzy_factor					= 150
 		}
 
@@ -848,13 +847,13 @@
 
 		[Unpacking]
 		{
-			base_priority                            = 500
-			enemy_static_influence_mult              = 10
-			enemy_dynamic_influence_mult             = 10
-			max_friendly_building_bonus              = 500
-			max_friendly_building_bonus_per_building = 200
-			travel_distance_mult                     = 3
-			fuzzy_factor                             = 150
+			base_priority							= 1000
+			enemy_static_influence_mult			= -300
+			enemy_dynamic_influence_mult			= -150
+			max_friendly_building_bonus				= -500
+			max_friendly_building_bonus_per_building	= -200
+			travel_distance_mult			= 0
+			fuzzy_factor					= 5
 		}
 
 		[Recruiting] 
@@ -970,13 +969,13 @@
 
 		[Unpacking]
 		{
-			base_priority							= 800
-			enemy_static_influence_mult			= -20
-			enemy_dynamic_influence_mult			= -20
-			max_friendly_building_bonus				= -10
-			max_friendly_building_bonus_per_building	= -10
-			max_distance	= 30
-			fuzzy_factor					= 50
+			base_priority							= 1000
+			enemy_static_influence_mult			= -300
+			enemy_dynamic_influence_mult			= -150
+			max_friendly_building_bonus				= -500
+			max_friendly_building_bonus_per_building	= -200
+			travel_distance_mult			= 0
+			fuzzy_factor					= 5
 		}
 
 		[Recruiting] 
@@ -1109,13 +1108,13 @@
 
 		[Unpacking]
 		{
-			base_priority							= 800
-			enemy_static_influence_mult			= -30
-			enemy_dynamic_influence_mult			= -30
-			max_friendly_building_bonus				= -20
-			max_friendly_building_bonus_per_building	= -20
-			max_distance	= 40
-			fuzzy_factor					= 50
+			base_priority							= 1000
+			enemy_static_influence_mult			= -300
+			enemy_dynamic_influence_mult			= -150
+			max_friendly_building_bonus				= -500
+			max_friendly_building_bonus_per_building	= -200
+			travel_distance_mult			= 0
+			fuzzy_factor					= 5
 		}
 
 		[Recruiting]

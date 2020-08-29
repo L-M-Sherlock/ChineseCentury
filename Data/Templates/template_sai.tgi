@@ -1171,7 +1171,7 @@
 			;;		b) we can defend things that can research
 			;;		c) we can defend things that can recruit
 			;;		d) we can defend things that have city components
-			bool construct_in_supply_only				= false
+			bool construct_in_supply_only				= true
 			bool construct_in_all_regions				= true
 			bool construct_to_defend_research			= true
 			bool construct_to_defend_recruiters			= true
@@ -1208,12 +1208,12 @@
 			;;	formula: max_friendly_building_bonus * ((distance / max_distance) ^ distance_exponent)
 			fixed max_friendly_building_bonus				= 500
 			fixed max_friendly_building_bonus_per_building	= 200
-			fixed max_distance								= 25	;; in meters, but we use a very rough estimate of distance based on region centers
+			fixed max_distance								= 30	;; in meters, but we use a very rough estimate of distance based on region centers
 			fixed distance_exponent							= 1
 			
 			;; travel distance - subtracted off value
 			;;	formula: (distance * travel_distance_mult) ^ travel_distance_exponent
-			fixed travel_distance_mult			= 4
+			fixed travel_distance_mult			= 3
 			fixed travel_distance_exponent		= 1
 			
 			;; fuzzy factor & inertia
