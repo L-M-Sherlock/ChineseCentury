@@ -88,4 +88,8 @@
 	apply_to_all_major_kingdoms = true
 
 	[ActorGroup Template=HRTankFactory]
+
+	[ActorGroup Template=RMCVillageActorGroupsHR001]
+
+	[ActorGroup Template=RMCVillageActorGroupsHR002]
 }
