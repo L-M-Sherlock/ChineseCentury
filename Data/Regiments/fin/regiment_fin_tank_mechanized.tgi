@@ -32,7 +32,7 @@
 		audio_ids = fin_halftrack_attack
 	}		
 	
-	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	[OrganizationComponent Template=AAArmorOrganizationComponent]
 	{	
 		layout_IDS = regiment_vehicle_light
 		

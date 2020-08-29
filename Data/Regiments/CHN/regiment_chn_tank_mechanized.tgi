@@ -33,7 +33,7 @@
 		audio_ids = chn_tank_light_attack
 	}		
 	
-	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	[OrganizationComponent Template=AAArmorOrganizationComponent]
 	{	
 		layout_IDS = regiment_vehicle_heavy
 		

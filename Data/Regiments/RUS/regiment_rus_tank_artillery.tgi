@@ -41,7 +41,7 @@
 		audio_ids = rus_artillery_attack
 	}		
 	
-	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	[OrganizationComponent Template=AAArmorOrganizationComponent]
 	{	
 		layout_IDS = regiment_vehicle_light
 		operational_range = 40

@@ -5,7 +5,7 @@
 
 	control_range = 30
 	operational_range = 30
-	morale_breakpoint = 1
+	morale_breakpoint = 55
 
 	recruit_time = 25
 	recruit_full = true

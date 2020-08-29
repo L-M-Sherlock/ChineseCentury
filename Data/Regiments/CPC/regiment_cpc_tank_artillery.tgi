@@ -38,7 +38,7 @@
 		audio_ids = cpc_artillery_attack
 	}		
 	
-	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	[OrganizationComponent Template=AAArmorOrganizationComponent]
 	{	
 		layout_IDS = regiment_mechanized
 		control_range = 50

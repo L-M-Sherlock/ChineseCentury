@@ -36,7 +36,7 @@
 		audio_ids = ned_tank_heavy_attack
 	}		
 	
-	[OrganizationComponent Template=AAVehicleOrganizationComponent]
+	[OrganizationComponent Template=AAArmorOrganizationComponent]
 	{	
 		layout_IDS = regiment_vehicle_light
 		

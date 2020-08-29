@@ -36,11 +36,11 @@ USAGE:
 [Template AAVehicleOrganizationComponent Inherit=OrganizationComponent]
 {
 	layout_IDS = vehicle_regiment_standard
-	entrenchment_time = 30
+	entrenchment_time = 40
 
 	control_range = 40
 	operational_range = 40
-	morale_breakpoint = 30
+	morale_breakpoint = 40
 
 	recruit_time = 25
 	recruit_full = false
@@ -55,7 +55,7 @@ USAGE:
 
 	control_range = 45
 	operational_range = 45
-	morale_breakpoint = 40
+	morale_breakpoint = 60
 
 	recruit_time = 30
 	recruit_full = false
@@ -1753,7 +1753,7 @@ USAGE:
 
 	control_range = 40
 	operational_range = 34
-	morale_breakpoint = 30
+	morale_breakpoint = 40
 
 	recruit_time = 25
 	recruit_full = false
@@ -1769,7 +1769,7 @@ USAGE:
 
 	control_range = 40
 	operational_range = 34
-	morale_breakpoint = 40
+	morale_breakpoint = 60
 
 	recruit_time = 30
 	recruit_full = false

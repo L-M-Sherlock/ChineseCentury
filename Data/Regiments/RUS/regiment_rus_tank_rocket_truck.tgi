@@ -1,4 +1,4 @@
-[Thing Template=AARUSOrganizationMobile]
+[Thing Template=AARUSOrganizationArtillery]
 {
 	IDS = regiment_rus_tank_rocket_truck
 	name = "#regiment_rus_tank_rocket_truck_name"
@@ -45,7 +45,7 @@
 		audio_ids = rus_rocket_truck_attack
 	}		
 	
-	[OrganizationComponent Template=AAInfantryOrganizationComponent]
+	[OrganizationComponent Template=AAArmorOrganizationComponent]
 	{	
 		layout_IDS = regiment_vehicle_light
 		
