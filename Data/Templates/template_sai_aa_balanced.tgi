@@ -100,7 +100,7 @@
 		{
 			stat								= money_rate
 			min									= -999999
-			max									= 200
+			max									= 201
 		}		
 		
 		[Item]
@@ -331,7 +331,7 @@
 		{
 			stat								= money_rate
 			min									= 200
-			max									= 360
+			max									= 361
 		}		
 		
 		[Item]
@@ -460,6 +460,13 @@
 				base_priority				= 8000
 				repeat_penalty				= 10000
 			}
+		
+			[SpecificRecruitRequest]
+			{
+				property_ids					= artillery_brigade
+				base_priority				    = 6000
+				repeat_penalty					= 10000
+			}	
 			
 			[SpecificRecruitRequest]
 			{
@@ -970,7 +977,7 @@
 		[Item]
 		{
 			stat								= money_rate
-			min									= 361
+			min									= 360
 			max									= 99999
 		}
 
@@ -1223,29 +1230,29 @@
 		[ActorPriority]
 		{
 			property_IDS					= airhq
-			value							= 16000
+			value							= 17000
 			repeat_penalty					= 1000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= mechhq
-			value							= 17000
+			value							= 18000
 			repeat_penalty					= 200
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= armorhq
-			value							= 17500
+			value							= 19500
 			repeat_penalty					= 150
 		}
 
 		[ActorPriority]
 		{
 			property_IDS					= airfield
-			value							= 20000
-			repeat_penalty					= 5000
+			value							= 25000
+			repeat_penalty					= 10000
 		}
 
 
@@ -1299,7 +1306,7 @@
 		[Item]
 		{
 			stat								= money_rate
-			min									= 360
+			min									= 340
 			max									= 99999
 		}
 		

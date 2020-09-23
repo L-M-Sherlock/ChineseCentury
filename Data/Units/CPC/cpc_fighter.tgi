@@ -13,15 +13,125 @@
 	[View]
 	resource_prefix = CPCBomber/CPCBomber
 
+	[DefenderComponent]
+	{
+		control_range = 45
+		[Ability Template=AATurretAttackLocal]
+		{
+			turret_ids = turret  ;; Temporary fix
+						
+			[AbilityDefinition Template=AAInfantryRocket]
+			{        
+				name = "#cpc_fighter_AbilityDefinition_name"
+				mana_cost = 1
+				recharge_time = 5
+				range = 45
+
+				targets = +enemy
+				
+				area = 3
+				attenuation_range_min = 1
+				attenuation_factor_max = 0.5
+
+				[Flags]
+				SPELL = true
+
+				[Effect Template=BlastDamageEffect]
+				amount = 50
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = flame
+				targets = infantry
+				amount = 100
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = armor_piercing
+				targets = vehicle
+				amount = 150
+
+				[Effect Template=MoraleLossEffect]
+				amount = 3
+				
+				[WhenDo template=FXC_PlaySFX]			
+				audio_ids = rus_rocket
+
+			
+			}
+		}
+		
+		[Ability Template=AATurretAttackLocal]
+		{
+			turret_ids = turret2  ;; Temporary fix
+						
+			[AbilityDefinition Template=AAInfantryRocket]
+			{        
+				name = "#cpc_fighter_AbilityDefinition_name"
+				mana_cost = 1
+				recharge_time = 5
+				range = 45
+
+				targets = +enemy
+				
+				area = 3
+				attenuation_range_min = 1
+				attenuation_factor_max = 0.5
+
+				[Flags]
+				SPELL = true
+
+				[Effect Template=BlastDamageEffect]
+				amount = 50
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = flame
+				targets = infantry
+				amount = 100
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = armor_piercing
+				targets = vehicle
+				amount = 150
+
+				[Effect Template=MoraleLossEffect]
+				amount = 3
+				
+				[WhenDo template=FXC_PlaySFX]			
+				audio_ids = rus_rocket
+
+			
+			}
+		}
+		
+	}
+
 	[PerformerComponent]
 	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 360
+			yaw_rotation_range_degrees = 120
+			yaw_start_degrees = 0
+			offset = 0, 0	
+		}
+
+		[Turret]
+		{
+			turret_ids = Turret2
+			yaw_rotation_per_sec_degrees = 360
+			yaw_rotation_range_degrees = 120
+			yaw_start_degrees = 0
+			offset = 0, 0	
+		}
+		
+
 		[Ability Template=AAAttackLocal]
 		{
 			idle_animation = idle  ;; Temporary fix
 						
 			[AbilityDefinition Template=AAInfantryRocket]
 			{        
-				name = "#cpc_fighter_AbilityDefinition_name"
+				name = "#cpc_fighter_Rocket_name"
 				mana_cost = 1
 				recharge_time = 0.5
 				range = 45
@@ -48,8 +158,6 @@
 				
 				[WhenDo template=FXC_PlaySFX]			
 				audio_ids = rus_rocket
-
-			
 			}
 		}
 
@@ -95,7 +203,7 @@
     [MoverComponent]
 	{
 		speed_max = 15
-		turn_radius = 6
+		turn_radius = 5
 	}	
 
 }

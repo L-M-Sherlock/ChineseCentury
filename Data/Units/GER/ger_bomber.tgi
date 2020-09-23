@@ -25,8 +25,196 @@
 	[View]
 	resource_prefix = GERBomber/GERBomber
 
+
+	[DefenderComponent]
+	{
+		control_range = 30
+		[Ability Template=AATurretAttackLocal]
+		{
+			turret_ids = turret
+			[AbilityDefinition Template=AAVehicleMG]
+			{
+				name = "#chn_infantry_mg_AbilityDefinition_name"
+				area = 2
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 1
+				range = 30
+
+				targets = +enemy
+
+				[Flags]
+				SPELL = true
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 50
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = usa_mg_heavy
+				
+		  	[WhenDo template=FXC_CreateVFX]
+		  	{
+		  		VFX_IDS = mg_heavy_shot
+		  		at = SELF
+		  		location = gun_ae_01
+		  	}
+		  	
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = rifle_shot_tracer
+					location = gun_ae_01
+					attached = false
+					frequency = 1
+					delay = 0.02
+				}
+				
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = rifle_shot_tracer
+					location = gun_ae_01
+					attached = false
+					frequency = 1
+					delay = 0.05
+				}
+			}
+		}
+		
+		[Ability Template=AATurretAttackLocal]
+		{
+			turret_ids = turret2
+			[AbilityDefinition Template=AAVehicleMG]
+			{
+				name = "#chn_infantry_mg_AbilityDefinition_name"
+				area = 2
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 1
+				range = 28
+
+				targets = +enemy
+
+				[Flags]
+				SPELL = true
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 50
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = usa_mg_heavy
+				
+		  	[WhenDo template=FXC_CreateVFX]
+		  	{
+		  		VFX_IDS = mg_heavy_shot
+		  		at = SELF
+		  		location = gun_ae_01
+		  	}
+		  	
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = rifle_shot_tracer
+					location = gun_ae_01
+					attached = false
+					frequency = 1
+					delay = 0.02
+				}
+				
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = rifle_shot_tracer
+					location = gun_ae_01
+					attached = false
+					frequency = 1
+					delay = 0.05
+				}
+			}
+		}
+		
+		[Ability Template=AATurretAttackLocal]
+		{
+			turret_ids = turret3
+			[AbilityDefinition Template=AAVehicleMG]
+			{
+				name = "#chn_infantry_mg_AbilityDefinition_name"
+				area = 2
+				attenuation_range_min = 0.5
+				attenuation_factor_max = 0.5
+				max_targets = 4
+				
+				recharge_time = 1
+				range = 26
+
+				targets = +enemy
+
+				[Flags]
+				SPELL = true
+				
+				[Effect Template=PierceDamageEffect]
+				amount = 50
+				
+				[WhenDo template=FXC_PlaySFX]
+				audio_ids = usa_mg_heavy
+				
+		  	[WhenDo template=FXC_CreateVFX]
+		  	{
+		  		VFX_IDS = mg_heavy_shot
+		  		at = SELF
+		  		location = gun_ae_01
+		  	}
+		  	
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = rifle_shot_tracer
+					location = gun_ae_01
+					attached = false
+					frequency = 1
+					delay = 0.02
+				}
+				
+				[WhenDo Template=FXC_CreateVFX]
+				{
+					VFX_IDS = rifle_shot_tracer
+					location = gun_ae_01
+					attached = false
+					frequency = 1
+					delay = 0.05
+				}
+			}
+		}
+	}
+
 	[PerformerComponent]
 	{
+		[Turret]
+		{
+			turret_ids = Turret
+			yaw_rotation_per_sec_degrees = 90
+			yaw_rotation_range_degrees = 360
+			yaw_start_degrees = 0
+			offset = 0, 0	
+		}
+		
+		[Turret]
+		{
+			turret_ids = Turret2
+			yaw_rotation_per_sec_degrees = 90
+			yaw_rotation_range_degrees = 360
+			yaw_start_degrees = 0
+			offset = 0, 0	
+		}
+		
+		[Turret]
+		{
+			turret_ids = Turret3
+			yaw_rotation_per_sec_degrees = 90
+			yaw_rotation_range_degrees = 360
+			yaw_start_degrees = 0
+			offset = 0, 0	
+		}
+		
 		[Ability Template=AAProjectileLocal]
 		{			
 			[AbilityDefinition Template=AAGERAirplaneAttackBomb]

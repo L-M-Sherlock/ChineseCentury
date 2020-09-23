@@ -1630,8 +1630,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
-			value			= 9101
-			repeat_penalty		= 20
+			value			= 9903
+			repeat_penalty		= 25
 		}
 
 
