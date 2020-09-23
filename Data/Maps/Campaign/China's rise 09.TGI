@@ -3,10 +3,13 @@
 	ids = map_strings_table
 	name = "China's rise 09"
 
-	kingdom_3 = " 3"
-	kingdom_2 = " 2"
 	kingdom_1 = " 1"
 	kingdom_0 = " 0"
-	map_name = "China's rise 09"
+	restriction_group_0000 = " 0"
+	team_1 = " 1"
 	map_description = ""
+	team_0 = " 0"
+	map_name = "China's rise 09"
+	kingdom_3 = " 3"
+	kingdom_2 = " 2"
 }
