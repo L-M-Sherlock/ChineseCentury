@@ -20,7 +20,7 @@ FIELDS:
 **************************************************************************/
 
 [Template AttackAnimation Template=AbilityAnimation]
-length = 1
+length = 0.5
 
 [Template ProjectileAttackAnimation Template=AbilityAnimation]
 length = 1.5	

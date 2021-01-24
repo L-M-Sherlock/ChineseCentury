@@ -138,11 +138,6 @@
 			{
 				property_ids		= airhq
 			}
-
-			[SpecificRecruitRequest]
-			{
-				property_ids		= supplydepot
-			}
 		}
 
 		[ActorPriority]
