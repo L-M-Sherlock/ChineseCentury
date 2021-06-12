@@ -14,7 +14,7 @@ drp033104 - created
 {
 	ids = medium
 	name = "#font_medium_name"
-	size = 9 ;; this is the Windows font size, not the actual pixel height of glyphs.
+	size = 6 ;; this is the Windows font size, not the actual pixel height of glyphs.
 
 	[CharacterSet]
 	{
@@ -24,10 +24,10 @@ drp033104 - created
 		shadow = false
 		shadow_opacity = .4
 		
-								;backup_font = Arial
-                backup_font = /fonts/truetype/A&A.TTF
-                backup_font_size = 6
-                use_backup_font_when_smaller_than = 9
+		;backup_font = Arial
+		backup_font = /fonts/truetype/A&A.TTF
+		backup_font_size = 6
+		use_backup_font_when_smaller_than = 9
 	}
 	
 	[CharacterSet]

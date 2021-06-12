@@ -46,9 +46,9 @@
 			[AbilityDefinition Template=AASPAShot]
 			{				
 				name = "#ita_tank_spa_AbilityDefinition_name"
-				recharge_time = 12
-				range = 50
-				area = 6
+				recharge_time = 10
+				range = 55
+				area = 9
 					
 				[Flags] 
 				bombard = true
@@ -57,7 +57,7 @@
 				amount = 250
 
 				[Effect Template=MoraleLossEffect]
-				amount = 5
+				amount = 15
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = ita_artillery_heavy

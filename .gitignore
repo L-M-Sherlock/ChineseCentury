@@ -28,4 +28,5 @@
 *.rar
 *.ttc
 *.ttf
-.idea/ChineseCentury.iml
+.idea/*
+/.sync.ffs_db

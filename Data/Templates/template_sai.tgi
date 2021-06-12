@@ -724,12 +724,12 @@
 		{
 			;; effect of cv
 			fixed cv_advantage_target			= 0.1		;; priority drops exponentially if we're below this, goes up linearly if above (was 2)
-			fixed cv_advantage_max				= 5			;; CV over this is irrelevant
+			fixed cv_advantage_max				= 3			;; CV over this is irrelevant
 			fixed cv_exponent_under_target		= 4			;; the exponent used if under target cv
 			fixed cv_max_mult_over_target		= 24		;; the maximum bonus to priority if over target cv
 
 			;; the minimum cv we should assign to any defense or offense (regardless of enemy strength)
-			fixed min_cv_to_assign				= 50		;; this should NEVER NEVER be zero (or less than zero).
+			fixed min_cv_to_assign				= 5		;; this should NEVER NEVER be zero (or less than zero).
 			
 			;; if our kingdom has no primary supply anyway, all of a sudden attacking even under 
 			;;	strength makes a lot more sense.  In order to make that happen, we apply this bonus 
@@ -763,7 +763,7 @@
 		;; This is applied as a modifier to the value of every goal that involved travel
 		[TravelTime]
 		{
-			fixed max_travel_time				= 600
+			fixed max_travel_time				= 500
 			fixed travel_time_exponent			= 2		;; should be >= 1, if it is 1 it'll be linear
 		} ;; TravelTime
 
@@ -1722,8 +1722,8 @@
 		;;	- max_attack_advantage - if I achieve this advantage, I won't add any more units to a 
 		;;		target.
 		int attack_distance						= 4
-		fixed min_attack_advantage				= 0.75
-		fixed max_attack_advantage				= 2.5
+		fixed min_attack_advantage				= 0.5
+		fixed max_attack_advantage				= 2
 
 		;; data for selecting formations
 		;;	- threatened_region_influence_ratio - if the ratio of enemy influence to our influence

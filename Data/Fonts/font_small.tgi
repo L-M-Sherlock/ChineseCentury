@@ -29,7 +29,7 @@ EXAMPLES:
 {
 	ids = small
 	name = "#font_small_small_name"
-	size = 9 ;; this is the Windows font size, not the actual pixel height of glyphs.
+	size = 5 ;; this is the Windows font size, not the actual pixel height of glyphs.
 
 	[CharacterSet]
 	{
@@ -38,7 +38,7 @@ EXAMPLES:
 		
 		backup_font = /fonts/truetype/A&A.TTF
 		backup_font_size = 6
-		use_backup_font_when_smaller_than = 9
+		use_backup_font_when_smaller_than = 6
 		
 		bold = true
 		shadow = false
@@ -68,7 +68,7 @@ EXAMPLES:
 {
 	ids = small_bold
 	name = "#font_small_small_bold_name"
-	size = 10 ;; this is the Windows font size, not the actual pixel height of glyphs.
+	size = 5 ;; this is the Windows font size, not the actual pixel height of glyphs.
 
 	[CharacterSet]
 	{
