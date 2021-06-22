@@ -599,7 +599,7 @@
 		[GoalPriority]
 		{
 			goal_IDS						= ATTACK_ACTOR
-			bonus							= 750
+			bonus							= 1750
 
 			[ActorPreference]
 			{

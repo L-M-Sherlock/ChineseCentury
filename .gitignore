@@ -30,3 +30,4 @@
 *.ttf
 .idea/*
 /.sync.ffs_db
+.DS_Store

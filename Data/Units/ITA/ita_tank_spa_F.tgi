@@ -47,8 +47,8 @@
 			{				
 				name = "#ita_tank_spa_AbilityDefinition_name"
 				recharge_time = 10
-				range = 55
-				area = 9
+				range = 56
+				area = 8
 					
 				[Flags] 
 				bombard = true
@@ -57,7 +57,7 @@
 				amount = 250
 
 				[Effect Template=MoraleLossEffect]
-				amount = 15
+				amount = 5
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = ita_artillery_heavy

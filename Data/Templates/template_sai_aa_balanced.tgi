@@ -34,8 +34,8 @@
 		[ActorPriority]
 		{
 			actor_ids                       = bank_asian1
-			repeat_penalty					= 500
-			value							= 22500
+			repeat_penalty					= 250
+			value							= 23000
 		}
 
 		[ActorPriority]
@@ -133,8 +133,8 @@
 
 		[OffensiveCV]
 		{
-			cv_advantage_target = 0.1
-			cv_advantage_max = 24
+			cv_advantage_target = 0.5
+			cv_advantage_max = 4
 			cv_exponent_under_target = 1 
 			min_cv_to_assign = 50
 		}
@@ -142,8 +142,8 @@
 		[DefensiveCV]
 		{
 			cv_advantage_target = 0.1
-			cv_advantage_max = 1
-			min_cv_to_assign = 1
+			cv_advantage_max = 3
+			min_cv_to_assign = 10
 			count_static_cv = false
 		}
 
@@ -374,8 +374,8 @@
 
 		[OffensiveCV]
 		{
-			cv_advantage_target = 0.1
-			cv_advantage_max = 24
+			cv_advantage_target = 0.5
+			cv_advantage_max = 5
 			cv_exponent_under_target = 4 
 			min_cv_to_assign = 50
 		}
@@ -383,7 +383,7 @@
 		[DefensiveCV]
 		{
 			cv_advantage_target = 0.1
-			cv_advantage_max = 1
+			cv_advantage_max = 2
 			min_cv_to_assign = 1
 			count_static_cv = false
 		}
@@ -659,8 +659,8 @@
 
 		[OffensiveCV]
 		{
-			cv_advantage_target = 0.1
-			cv_advantage_max = 24
+			cv_advantage_target = 0.5
+			cv_advantage_max = 2
 			cv_exponent_under_target = 1 
 			min_cv_to_assign = 10
 		}
@@ -668,7 +668,7 @@
 		[DefensiveCV]
 		{
 			cv_advantage_target = 0.1
-			cv_advantage_max = 1
+			cv_advantage_max = 5
 			min_cv_to_assign = 1
 			count_static_cv = false
 		}
@@ -702,12 +702,12 @@
 		[Unpacking]
 		{
 			base_priority							= 1000
-			enemy_static_influence_mult			= -300
-			enemy_dynamic_influence_mult			= -150
+			enemy_static_influence_mult			= -3
+			enemy_dynamic_influence_mult			= -3
 			max_friendly_building_bonus				= -500
 			max_friendly_building_bonus_per_building	= -200
-			travel_distance_mult			= 0
-			fuzzy_factor					= 5
+			travel_distance_mult			= 5
+			fuzzy_factor					= 150
 		}
 
 
@@ -829,8 +829,8 @@
 
 		[OffensiveCV]
 		{
-			cv_advantage_target = 0.1
-			cv_advantage_max = 24
+			cv_advantage_target = 0.5
+			cv_advantage_max = 2
 			cv_exponent_under_target = 1 
 			min_cv_to_assign = 10
 		}
@@ -838,7 +838,7 @@
 		[DefensiveCV]
 		{
 			cv_advantage_target = 0.1
-			cv_advantage_max = 1
+			cv_advantage_max = 5
 			min_cv_to_assign = 1
 			count_static_cv = false
 		}
@@ -900,12 +900,12 @@
 		[Unpacking]
 		{
 			base_priority							= 1000
-			enemy_static_influence_mult			= -300
-			enemy_dynamic_influence_mult			= -150
+			enemy_static_influence_mult			= -3
+			enemy_dynamic_influence_mult			= -3
 			max_friendly_building_bonus				= -500
 			max_friendly_building_bonus_per_building	= -200
-			travel_distance_mult			= 0
-			fuzzy_factor					= 5
+			travel_distance_mult			= 5
+			fuzzy_factor					= 150
 		}
 		
 		[ActorPriority]
@@ -1006,8 +1006,8 @@
 
 		[OffensiveCV]
 		{
-			cv_advantage_target = 0.1
-			cv_advantage_max = 24
+			cv_advantage_target = 0.5
+			cv_advantage_max = 5
 			cv_exponent_under_target = 6
 			min_cv_to_assign = 50
 		}
@@ -1015,7 +1015,7 @@
 		[DefensiveCV]
 		{
 			cv_advantage_target = 0.1
-			cv_advantage_max = 1
+			cv_advantage_max = 2
 			min_cv_to_assign = 1
 			count_static_cv = false
 		}
@@ -1342,8 +1342,8 @@
 
 		[OffensiveCV]
 		{
-			cv_advantage_target = 0.1
-			cv_advantage_max = 24
+			cv_advantage_target = 0.5
+			cv_advantage_max = 20
 			cv_exponent_under_target = 8 
 			min_cv_to_assign = 50
 		}
@@ -1352,7 +1352,7 @@
 		{
 			cv_advantage_target = 0.1
 			cv_advantage_max = 1
-			min_cv_to_assign = 1
+			min_cv_to_assign = 10
 			count_static_cv = false
 		}
 
@@ -1385,12 +1385,12 @@
 		[Unpacking]
 		{
 			base_priority							= 1000
-			enemy_static_influence_mult			= -300
-			enemy_dynamic_influence_mult			= -150
+			enemy_static_influence_mult			= -3
+			enemy_dynamic_influence_mult			= -3
 			max_friendly_building_bonus				= -500
 			max_friendly_building_bonus_per_building	= -200
-			travel_distance_mult			= 0
-			fuzzy_factor					= 5
+			travel_distance_mult			= 5
+			fuzzy_factor					= 150
 		}
 
 		[Recruiting]
@@ -1466,7 +1466,7 @@
 			[SpecificRecruitRequest]
 			{
 				recruit_ids					= regiment_rus_airborne_vehicle
-				;;number_to_request			= 3
+				number_to_request			= 3
 			}
 
 			[SpecificRecruitRequest]
@@ -1486,7 +1486,7 @@
 			{
 				recruit_ids					= regiment_cpc_rocket_truck
 				base_priority				= 5000
-				;;number_to_request			= 6
+				number_to_request			= 6
 			}
 			
 
@@ -1495,8 +1495,8 @@
 		[ActorPriority]
 		{
 			property_IDS					= supplydepot
-			value							= 25000
-            repeat_penalty				    = 20
+			value							= 24000
+            repeat_penalty				    = 5
 		}	
 		
 		[ActorPriority]

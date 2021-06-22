@@ -321,6 +321,13 @@
 
 	hide_if_missing_properties = false
 	
+	[SupplyComponent]
+	{
+		is_relay = true
+		supply_range = 64
+		stockpile_max = 120
+	}
+	
 	[EconomyComponent]
 
 }

@@ -50,7 +50,7 @@
 
 	[Modifier Template=AddModifier]
 	attribute = SUPPLY_RANGE
-	amount = 512
+	amount = 20
 
 	[Modifier Template=MultiplyModifier]
 	attribute = RESUPPLY_RATE
@@ -91,7 +91,7 @@
 
 	[Modifier Template=AddModifier]
 	attribute = SUPPLY_RANGE
-	amount = 1024
+	amount = 30
 
 	[Modifier Template=MultiplyModifier]
 	attribute = RESUPPLY_RATE
@@ -126,7 +126,7 @@
 
 	[Modifier Template=AddModifier]
 	attribute = SUPPLY_RANGE
-	amount = 100
+	amount = 10
 
 
 	[Modifier Template=ResourceProductionModifier]

@@ -546,12 +546,12 @@
 		[Unpacking]
 		{
 			base_priority							= 1000
-			enemy_static_influence_mult			= -200
-			enemy_dynamic_influence_mult			= -150
+			enemy_static_influence_mult			= -3
+			enemy_dynamic_influence_mult			= -3
 			max_friendly_building_bonus				= -500
 			max_friendly_building_bonus_per_building	= -200
-			travel_distance_mult			= 0
-			fuzzy_factor					= 5
+			travel_distance_mult			= 5
+			fuzzy_factor					= 150
 		}
 
 		[Recruiting]
@@ -708,12 +708,12 @@
 		[Unpacking]
 		{
 			base_priority							= 1000
-			enemy_static_influence_mult			= -200
-			enemy_dynamic_influence_mult			= -150
+			enemy_static_influence_mult			= -3
+			enemy_dynamic_influence_mult			= -3
 			max_friendly_building_bonus				= -500
 			max_friendly_building_bonus_per_building	= -200
-			travel_distance_mult			= 0
-			fuzzy_factor					= 5
+			travel_distance_mult			= 5
+			fuzzy_factor					= 150
 		}
 
 		[Recruiting]
@@ -1144,15 +1144,16 @@
 			}
 		} ;; Exploration
 
+
 		[Unpacking]
 		{
 			base_priority							= 1000
-			enemy_static_influence_mult			= -200
-			enemy_dynamic_influence_mult			= -150
+			enemy_static_influence_mult			= -3
+			enemy_dynamic_influence_mult			= -3
 			max_friendly_building_bonus				= -500
 			max_friendly_building_bonus_per_building	= -200
-			travel_distance_mult			= 0
-			fuzzy_factor					= 5
+			travel_distance_mult			= 5
+			fuzzy_factor					= 150
 		}
 
 		[Recruiting]

@@ -122,8 +122,8 @@
 			enemy_dynamic_influence_mult			= 3
 			max_friendly_building_bonus			= 500
 			max_friendly_building_bonus_per_building	= 200
-			travel_distance_mult				= 5
-			fuzzy_factor					= 150
+			travel_distance_mult				= 3
+			fuzzy_factor					= 50
 		}
 
 		[Recruiting]
@@ -808,6 +808,16 @@
 			}
 		}
 
+		[Unpacking]
+		{
+			base_priority							= 750
+			enemy_static_influence_mult			= -2
+			enemy_dynamic_influence_mult			= -2
+			max_friendly_building_bonus				= -250
+			max_friendly_building_bonus_per_building	= -100
+			travel_distance_mult			= 4
+			fuzzy_factor					= 150
+		}
 		[Recruiting]
 		{
 			max_goals_per_think		= 10
@@ -1076,12 +1086,12 @@
 		[Unpacking]
 		{
 			base_priority							= 1000
-			enemy_static_influence_mult			= -300
-			enemy_dynamic_influence_mult			= -150
-			max_friendly_building_bonus				= -500
-			max_friendly_building_bonus_per_building	= -200
-			travel_distance_mult			= 0
-			fuzzy_factor					= 5
+			enemy_static_influence_mult			= -1
+			enemy_dynamic_influence_mult			= -1
+			max_friendly_building_bonus				= -50
+			max_friendly_building_bonus_per_building	= -20
+			travel_distance_mult			= 5
+			fuzzy_factor					= 150
 		}
 
 		[Recruiting]
@@ -1205,12 +1215,12 @@
 		[Unpacking]
 		{
 			base_priority							= 1000
-			enemy_static_influence_mult			= -300
-			enemy_dynamic_influence_mult			= -150
-			max_friendly_building_bonus				= -500
-			max_friendly_building_bonus_per_building	= -200
-			travel_distance_mult			= 0
-			fuzzy_factor					= 5
+			enemy_static_influence_mult			= -1
+			enemy_dynamic_influence_mult			= -1
+			max_friendly_building_bonus				= -50
+			max_friendly_building_bonus_per_building	= -20
+			travel_distance_mult			= 5
+			fuzzy_factor					= 150
 		}
 
 		[Recruiting]
@@ -1351,12 +1361,12 @@
 		[Unpacking]
 		{
 			base_priority							= 1000
-			enemy_static_influence_mult			= -300
-			enemy_dynamic_influence_mult			= -150
+			enemy_static_influence_mult			= -3
+			enemy_dynamic_influence_mult			= -3
 			max_friendly_building_bonus				= -500
 			max_friendly_building_bonus_per_building	= -200
-			travel_distance_mult			= 0
-			fuzzy_factor					= 5
+			travel_distance_mult			= 5
+			fuzzy_factor					= 150
 		}
 		
 		[Recruiting]
@@ -1407,19 +1417,14 @@
 			{
 				property_ids		= airfield
 			}
-			
-			[SpecificRecruitRequest]
-			{
-				property_ids				= supplydepot
-			}
 
-/* 			[SpecificRecruitRequest]
+			[SpecificRecruitRequest]
 			{
 				property_ids				= supplydepot
 				number_to_request		   = 6
 				base_priority	   = 999
 				
-			} */
+			}
 
 			[SpecificRecruitRequest]
 			{
@@ -1630,8 +1635,8 @@
 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
-			value			= 9903
-			repeat_penalty		= 25
+			value			= 10000
+			repeat_penalty		= 5
 		}
 
 

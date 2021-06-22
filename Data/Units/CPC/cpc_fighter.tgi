@@ -49,6 +49,11 @@
 				targets = vehicle
 				amount = 150
 
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = flame
+				targets = air
+				amount = 200
+
 				[Effect Template=MoraleLossEffect]
 				amount = 3
 				

@@ -723,7 +723,7 @@
 		[OffensiveCV]
 		{
 			;; effect of cv
-			fixed cv_advantage_target			= 0.1		;; priority drops exponentially if we're below this, goes up linearly if above (was 2)
+			fixed cv_advantage_target			= 0.5		;; priority drops exponentially if we're below this, goes up linearly if above (was 2)
 			fixed cv_advantage_max				= 3			;; CV over this is irrelevant
 			fixed cv_exponent_under_target		= 4			;; the exponent used if under target cv
 			fixed cv_max_mult_over_target		= 24		;; the maximum bonus to priority if over target cv
@@ -763,7 +763,7 @@
 		;; This is applied as a modifier to the value of every goal that involved travel
 		[TravelTime]
 		{
-			fixed max_travel_time				= 500
+			fixed max_travel_time				= 180
 			fixed travel_time_exponent			= 2		;; should be >= 1, if it is 1 it'll be linear
 		} ;; TravelTime
 
