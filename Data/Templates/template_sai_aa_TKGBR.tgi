@@ -30,6 +30,13 @@
             value		= 10002
             repeat_penalty		= 5
         }
+
+		[ActorPriority]
+		{
+			property_IDS					= property_city
+			value							= -1000
+			repeat_penalty					= 5000
+		}
 	}
 }
 
@@ -174,12 +181,6 @@
 			value			= 1500
 			repeat_penalty		= 100
 		}
-
-		[ActorPriority]
-		{
-			property_IDS		= property_city
-			value			= 1000
-		}
 	}
 
 	[ReactiveAI]
@@ -315,12 +316,6 @@
 			property_IDS		= special_company
 			value			= 9999
 			repeat_penalty		= 100
-		}
-
-		[ActorPriority]
-		{
-			property_IDS		= property_city
-			value			= 1000
 		}
 	}
 
@@ -500,12 +495,6 @@
 			property_IDS		= motor_pool
 			value			= 9999
 			repeat_penalty		= 10000
-		}
-
-		[ActorPriority]
-		{
-			property_IDS		= property_city
-			value			= 1000
 		}
 	}
 }
@@ -761,12 +750,6 @@
 			property_IDS		= engineer
 			value			= 15000
 			repeat_penalty		= 10000
-		}
-
-		[ActorPriority]
-		{
-			property_IDS		= property_city
-			value			= 1000
 		}
 	}
 }
@@ -1104,12 +1087,12 @@
 		[Unpacking]
 		{
 			base_priority							= 1000
-			enemy_static_influence_mult			= -3
+			enemy_static_influence_mult			= -5
 			enemy_dynamic_influence_mult			= -3
 			max_friendly_building_bonus				= -500
-			max_friendly_building_bonus_per_building	= -200
+			max_friendly_building_bonus_per_building	= -300
 			travel_distance_mult			= 5
-			fuzzy_factor					= 50
+			fuzzy_factor					= 150
 		}
 
 		[Recruiting]
@@ -1269,13 +1252,6 @@
 			value			= 30000
 			repeat_penalty		= 15000
 		}
-
-		[ActorPriority]
-		{
-			property_IDS		= property_city
-			value			= 1000
-		}
-
 	}
 }
 

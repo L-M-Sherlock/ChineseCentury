@@ -505,7 +505,7 @@
 		{
 			;; How often should the goal engine think?  Use MUCH CAUTION decreasing this, it can
 			;;	cause serious performance issues, especially on large maps with many AIs.
-			fixed think_frequency				= 30
+			fixed think_frequency				= 25
 
 			;; Once the AI thinks, how long should it wait to send out its order.  Generally 0 
 			;;	unless you're trying to dumb down the AI for some reason.
@@ -523,7 +523,7 @@
 			;;		- whenever it finishes recruiting a builder company (settler or engineer)
 			;;		- whenever it finds a settlement spot
 			int immediate_think_on_build_max_settlements	= 8
-			fixed immediate_think_on_build_max_time			= 1200
+			fixed immediate_think_on_build_max_time			= 120
 		}
 
 		;; For balancing - boost and lower the value of specified goals.  For any goal type, you
@@ -853,7 +853,7 @@
 				;; Finally, when defending a region we look for friendly AIs that have a selected 
 				;;	defend goal for the region, and treat the assigned CV the same as we did for
 				;;	attack goals
-				fixed defend_allied_influence_cv_multiplier		= 0.2	;; between 0 and 1 please
+				fixed defend_allied_influence_cv_multiplier		= 0.5	;; between 0 and 1 please
 				flag defend_allied_influence_cv_can_exceed_max	= true
 			}
 
@@ -1225,7 +1225,7 @@
 		;;	supply.  We just have a flat priority for that.
 		[Packing]
 		{
-			fixed pack_out_of_supply_priority	= 20000
+			fixed pack_out_of_supply_priority	= 30000
 		}
 
 		;; used to decide when to recover from damage
@@ -1691,9 +1691,9 @@
 		;;			constraints are met.
 		;;		- unit_retreat_num_cycles_til_reconsider - if we decide not to retreat, we won't 
 		;;			reconsider that decision until the RAI has thought at least this many times.
-		fixed unit_retreat_max_health			= 0.3
-		int unit_retreat_depth					= 1
-		fixed unit_retreat_cv_ratio				= 0.9
+		fixed unit_retreat_max_health			= 0.4
+		int unit_retreat_depth					= 1.5
+		fixed unit_retreat_cv_ratio				= 0.8
 		fixed unit_retreat_probability			= 1
 		int unit_retreat_cycles_til_reconsider	= 4
 
@@ -1721,7 +1721,7 @@
 		;;	- min_attack_advantage - the minimum CV advantage I will try to attain on each target.
 		;;	- max_attack_advantage - if I achieve this advantage, I won't add any more units to a 
 		;;		target.
-		int attack_distance						= 4
+		int attack_distance						= 5
 		fixed min_attack_advantage				= 0.5
 		fixed max_attack_advantage				= 2
 

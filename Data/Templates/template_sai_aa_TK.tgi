@@ -37,6 +37,13 @@
 			value		= 10002
 			repeat_penalty		= 5
 		}
+
+		[ActorPriority]
+		{
+			property_IDS					= property_city
+			value							= -1000
+			repeat_penalty					= 5000
+		}
 	}
 }
 
@@ -238,12 +245,6 @@
 			property_IDS		= supplydepot
 			value			= 1250
 			repeat_penalty		= 150
-		}
-
-		[ActorPriority]
-		{
-			property_IDS		= property_city
-			value			= 1000
 		}
 		
 		[ActorPriority]
@@ -471,12 +472,6 @@
 			property_IDS		= infantry_company
 			value			= 8000
 			repeat_penalty		= 100
-		}
-
-		[ActorPriority]
-		{
-			property_IDS		= property_city
-			value			= 1000
 		}
 		
 		[ActorPriority]
@@ -1361,10 +1356,10 @@
 		[Unpacking]
 		{
 			base_priority							= 1000
-			enemy_static_influence_mult			= -3
+			enemy_static_influence_mult			= -5
 			enemy_dynamic_influence_mult			= -3
 			max_friendly_building_bonus				= -500
-			max_friendly_building_bonus_per_building	= -200
+			max_friendly_building_bonus_per_building	= -300
 			travel_distance_mult			= 5
 			fuzzy_factor					= 150
 		}
@@ -1562,12 +1557,12 @@
 			}
 		}
 
-/* 		[ActorPriority]
+ 		[ActorPriority]
 		{
 			property_IDS		= supplydepot
 			value			= 20000
 			repeat_penalty	=	5
-		} */
+		}
 
 		[ActorPriority]
 		{
@@ -1614,7 +1609,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= airfield
-			value			= 9200
+			value			= 13750
 			repeat_penalty		= 10000
 		}
 
@@ -1631,14 +1626,6 @@
 			value			= 8900
 			repeat_penalty		= 75
 		}
-
-		[ActorPriority]
-		{
-			property_IDS		= supplydepot
-			value			= 10000
-			repeat_penalty		= 5
-		}
-
 
 		[ActorPriority]
 		{

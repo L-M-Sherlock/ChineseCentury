@@ -522,6 +522,12 @@
 
 			[ActorPreference]
 			{
+				property_IDS				= airfield
+				value						= -9999
+			}
+
+			[ActorPreference]
+			{
 				property_IDS				= economic_truck
 				value						= -99999
 			}
@@ -536,7 +542,7 @@
 		[GoalPriority]
 		{
 			goal_IDS						= DEFEND_REGION
-			bonus		                    = 500
+			bonus		                    = 300
             
 			[ActorPreference]
 			{
@@ -580,7 +586,7 @@
 		[GoalPriority]
 		{
 			goal_IDS						= ATTACK_REGION
-			bonus							= 750
+			bonus							= 1000
 
 			[ActorPreference]
 			{

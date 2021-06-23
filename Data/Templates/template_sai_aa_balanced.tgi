@@ -41,8 +41,8 @@
 		[ActorPriority]
 		{
 			property_IDS					= property_city
-			value							= 10
-			repeat_penalty					= 500
+			value							= -1000
+			repeat_penalty					= 5000
 		}
 
 		[ActorPriority]
@@ -1385,10 +1385,10 @@
 		[Unpacking]
 		{
 			base_priority							= 1000
-			enemy_static_influence_mult			= -3
+			enemy_static_influence_mult			= -5
 			enemy_dynamic_influence_mult			= -3
 			max_friendly_building_bonus				= -500
-			max_friendly_building_bonus_per_building	= -200
+			max_friendly_building_bonus_per_building	= -300
 			travel_distance_mult			= 5
 			fuzzy_factor					= 150
 		}
