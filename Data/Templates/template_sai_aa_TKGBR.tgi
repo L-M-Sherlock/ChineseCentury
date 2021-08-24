@@ -151,7 +151,7 @@
 		{
 			property_IDS		= airhq
 			value			= 8999
-			repeat_penalty		= 100
+			repeat_penalty		= 400
 		}
 
 		[ActorPriority]
@@ -293,15 +293,15 @@
 		[ActorPriority]
 		{
 			property_IDS		= infhq
-			value			= 8000
+			value			= 7000
 			repeat_penalty		= 10000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= airhq
-			value			= 8001
-			repeat_penalty		= 150
+			value			= 7001
+			repeat_penalty		= 250
 		}
 
 		[ActorPriority]
@@ -333,7 +333,7 @@
 		[Item]
 		stat	= money_rate
 		min	= 241
-		max	= 350
+		max	= 320
 
 		[Item]
 		stat	= ammo_rate
@@ -451,22 +451,22 @@
 		[ActorPriority]
 		{
 			property_IDS		= airhq
-			value			= 5000
-			repeat_penalty		= 200
+			value			= 1000
+			repeat_penalty		= 500
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= infantry_company
-			value			= 7000
-			repeat_penalty		= 100
+			value			= 1000
+			repeat_penalty		= 1000
 		}
 
 		[ActorPriority]
 		{
 			property_IDS		= mechhq
 			value			= 8000
-			repeat_penalty		= 500
+			repeat_penalty		= 300
 		}
 
 		[ActorPriority]
@@ -506,7 +506,7 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 351
+		min	= 321
 		max	= 1000000
 
 		[Item]
@@ -603,11 +603,6 @@
 
 			[SpecificRecruitRequest]
 			{
-				property_ids		= airhq
-			}
-
-			[SpecificRecruitRequest]
-			{
 				property_ids		= mechhq
 			}
 
@@ -686,13 +681,6 @@
 		{
 			property_IDS		= special_company
 			value			= 2999
-			repeat_penalty		= 100
-		}
-
-		[ActorPriority]
-		{
-			property_IDS		= airhq
-			value			= 5000
 			repeat_penalty		= 100
 		}
 
@@ -1046,7 +1034,7 @@
 		[OffensiveCV]
 		{
 			cv_advantage_target		= 0.1
-			cv_advantage_max		= 24
+			cv_advantage_max		= 20
 			cv_exponent_under_target	= 1
 			min_cv_to_assign		= 50
 		}
@@ -1054,7 +1042,7 @@
 		[DefensiveCV]
 		{
 			cv_advantage_target		= 0.1
-			cv_advantage_max		= 3
+			cv_advantage_max		= 1
 			min_cv_to_assign		= 10
 			count_static_cv			= false
 		}
@@ -1251,6 +1239,20 @@
 			property_IDS		= engineer
 			value			= 30000
 			repeat_penalty		= 15000
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_GBR_tank_Tankkiller
+			value							= 15500
+			repeat_penalty		= 100
+		}
+
+		[ActorPriority]
+		{
+			actor_IDS					= regiment_GBR_tank_Airbornetankgun
+			value							= 15500
+			repeat_penalty		= 100
 		}
 	}
 }

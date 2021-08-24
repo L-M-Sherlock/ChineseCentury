@@ -571,7 +571,7 @@
 	[TechPriority]
 	{
 		tech						= tech_conscription
-		priority					= 1800
+		priority					= 2000
 	}
 
 	;; +20% entrenchment rate
@@ -662,7 +662,7 @@
 	[TechPriority]
 	{
 		tech						= tech_rocket_truck
-		priority					= 500
+		priority					= 1200
 	}
 
 	;; access to tankettes

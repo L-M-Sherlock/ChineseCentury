@@ -511,7 +511,7 @@
 			[ActorPreference]
 			{
 				property_IDS				= recon
-				value						= 500
+				value						= 1000
 			}
 
 			[ActorPreference]
@@ -586,12 +586,26 @@
 		[GoalPriority]
 		{
 			goal_IDS						= ATTACK_REGION
-			bonus							= 1000
+			bonus							= 2500
 
 			[ActorPreference]
 			{
 				property_IDS				= property_infantry_unit
 				value						= 1000
+				count_value_once_per_company = false
+			}
+
+			[ActorPreference]
+			{
+				property_IDS				= vehicle
+				value						= 2000
+				count_value_once_per_company = false
+			}
+
+			[ActorPreference]
+			{
+				property_IDS				= tank
+				value						= 3000
 				count_value_once_per_company = false
 			}
 
@@ -605,11 +619,25 @@
 		[GoalPriority]
 		{
 			goal_IDS						= ATTACK_ACTOR
-			bonus							= 1750
+			bonus							= 2000
 
 			[ActorPreference]
 			{
 				property_IDS				= property_infantry_unit
+				value						= 3000
+				count_value_once_per_company = false
+			}
+
+			[ActorPreference]
+			{
+				property_IDS				= vehicle
+				value						= 2000
+				count_value_once_per_company = false
+			}
+
+			[ActorPreference]
+			{
+				property_IDS				= tank
 				value						= 1000
 				count_value_once_per_company = false
 			}

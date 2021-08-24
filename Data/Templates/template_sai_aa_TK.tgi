@@ -503,7 +503,7 @@
 		[Item]
 		stat	= money_rate
 		min	= 181
-		max	= 300
+		max	= 320
 
 		[Item]
 		stat	= ammo_rate
@@ -625,6 +625,11 @@
 			{
 				property_ids		= engineer_brigade
 			}
+
+			[SpecificRecruitRequest]
+			{
+				property_ids		= airfield
+			}
 				
 			[SpecificRecruitRequest]
 			{
@@ -664,6 +669,13 @@
 			property_IDS		= armorhq
 			value			= 5500
 			repeat_penalty		= 1500
+		}
+
+		[ActorPriority]
+		{
+			property_IDS		= airfield
+			value			= 3000
+			repeat_penalty		= 10000
 		}
 
 		[ActorPriority]
@@ -724,7 +736,7 @@
 	{
 		[Item]
 		stat	= money_rate
-		min	= 301
+		min	= 321
 		max	= 1000000
 
 		[Item]
@@ -861,6 +873,7 @@
 			[SpecificRecruitRequest]
 			{
 				property_ids		= airfield
+				base_priority	   = 1500
 			}
 			
 			[SpecificRecruitRequest]
@@ -919,7 +932,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= mechhq
-			value			= 1600
+			value			= 1800
 			repeat_penalty		= 200
 		}
 
@@ -940,7 +953,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= airfield
-			value			= 13750
+			value			= 20000
 			repeat_penalty		= 10000
 		}
 
@@ -961,7 +974,7 @@
 		[ActorPriority]
 		{
 			property_IDS		= armorhq
-			value			= 13250
+			value			= 14000
 			repeat_penalty		= 50
 		}
 
@@ -1410,11 +1423,6 @@
 
 			[SpecificRecruitRequest]
 			{
-				property_ids		= airfield
-			}
-
-			[SpecificRecruitRequest]
-			{
 				property_ids				= supplydepot
 				number_to_request		   = 6
 				base_priority	   = 999
@@ -1604,13 +1612,6 @@
 			property_IDS		= mechanized_company
 			value			= 7000
 			repeat_penalty		= 100
-		}
-
-		[ActorPriority]
-		{
-			property_IDS		= airfield
-			value			= 13750
-			repeat_penalty		= 10000
 		}
 
 		[ActorPriority]

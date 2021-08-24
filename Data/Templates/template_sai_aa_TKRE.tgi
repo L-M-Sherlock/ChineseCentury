@@ -77,7 +77,7 @@
 	[TechPriority]
 	{
 		tech						= tech_military_surplus
-		priority					= 200
+		priority					= 500
 	}
 
 	[TechPriority]
@@ -186,7 +186,7 @@
 	[TechPriority]
 	{
 		tech						= tech_military_surplus
-		priority					= 500
+		priority					= 1000
 	}
 
 	[TechPriority]

@@ -882,7 +882,7 @@
 			;; Actors need to be able to commit to and lock on to attack goals.  However, this 
 			;;	is only appropriate when we are reasonably close to the target.  So we commit
 			;;	to an attack goal if we are no more than this many regions away
-			int attack_commit_distance			= 30 ;; regions
+			int attack_commit_distance			= 60 ;; regions
 
 			;; For offensive goals, we give a penalty to the goal's priority based on the congruency
 			;;	of the assigned actors.  First we compute the avg dot product between the vector 
@@ -1721,7 +1721,7 @@
 		;;	- min_attack_advantage - the minimum CV advantage I will try to attain on each target.
 		;;	- max_attack_advantage - if I achieve this advantage, I won't add any more units to a 
 		;;		target.
-		int attack_distance						= 5
+		int attack_distance						= 10
 		fixed min_attack_advantage				= 0.5
 		fixed max_attack_advantage				= 2
 
