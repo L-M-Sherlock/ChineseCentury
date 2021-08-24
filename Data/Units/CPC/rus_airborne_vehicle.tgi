@@ -41,7 +41,7 @@
 
 	}
 
-/*    [DenizenComponent]
+    [DenizenComponent]
 	{
 		guard_range = 30
 		guard_operational_range = 45
@@ -64,7 +64,7 @@
 
 
 	}
-*/	
+
 	[PerformerComponent]
 	{
 		[Turret]
