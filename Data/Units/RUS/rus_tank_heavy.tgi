@@ -8,8 +8,8 @@
 
 	[BodyComponent]
 	{
-		health = 880
-		defense = 25
+		health = 960
+		defense = 35
 	}
 
 	[MoverComponent]
@@ -57,12 +57,12 @@
 			[AbilityDefinition Template=AAMediumTankGun]
 			{				
 				name = "#rus_tank_heavy_AbilityDefinition_name"
-				recharge_time = 6
-				range = 20
+				recharge_time = 8
+				range = 28
 				area = 1
 
 				[Effect Template=APDamageEffect]
-				amount = 80
+				amount = 120
 				
 				[WhenDo Template=FXC_PlayObjectAnimation]
 				object_animation_IDS = Recoil1

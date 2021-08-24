@@ -55,7 +55,7 @@
 
 	[MoverComponent]
 	{
-		speed_max = 4
+		speed_max = 5
 		acceleration = 4
 		
 		[WhenStartMoving template=FXC_CreateVFX]
@@ -81,18 +81,62 @@
 				name = "#gbr_tank_flame_AbilityDefinition_name"
 				icon = /Properties/AbilityIcons/IconAbilityDamageFire.png
 				range = 16
-				recharge_time = 4
-				area = 4
+				recharge_time = 10
+				area = 5
 				
 				[Effect Template=FireDamageEffect]
-				amount = 100
+				amount = 80
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = gbr_flame_tank
 				
 				[Effect Template=MoraleLossEffect]
 				amount = 2
-				
+
+				[Effect Template=EnchantmentEffect]
+                {
+                    [EnchantmentProperty]
+                    {
+                        IDS = radiation5
+                        name = "#Molotov_cocktail_Effect_EnchantmentProperty_name"
+                        enchantment_type = ench_type_radiation
+                        duration = 10
+                        icon = /Properties/PropertyIcons/IconPropertyHealth.png
+
+                        [Modifier template=PeriodicDamageModifier]
+                        damage_type = flame
+                        amount = 20
+
+                        [WhenAdded Template=FXC_CreateVFX]
+                        {
+                            VFX_IDS = atomic_radiation
+                        }
+
+                        [WhenAdded Template=FXC_CreateVFX]
+                        {
+                            VFX_IDS = atomic_sparks_large
+                            target_flags = +tank
+                            location = position
+                            attached = true
+                        }
+
+                        [WhenAdded Template=FXC_CreateVFX]
+                        {
+                            VFX_IDS = atomic_sparks_large
+                            target_flags = +vehicle
+                            location = position
+                            attached = true
+                        }
+
+                        [WhenAdded Template=FXC_CreateVFX]
+                        {
+                            VFX_IDS = atomic_sparks_small
+                            target_flags = +infantry
+                            location = position
+                            attached = true
+                        }
+                    }
+                }
 			}
 		}
 		[Ability Template=AATurretAttackLocal]
