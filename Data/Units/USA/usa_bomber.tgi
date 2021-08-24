@@ -43,7 +43,17 @@
 				SPELL = true
 				
 				[Effect Template=PierceDamageEffect]
-				amount = 50
+				amount = 10
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = infantry
+				amount = 60
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = vehicle
+				amount = 40
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = usa_mg_heavy
@@ -95,7 +105,17 @@
 				SPELL = true
 				
 				[Effect Template=PierceDamageEffect]
-				amount = 50
+				amount = 10
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = infantry
+				amount = 60
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = vehicle
+				amount = 40
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = usa_mg_heavy
@@ -147,7 +167,17 @@
 				SPELL = true
 				
 				[Effect Template=PierceDamageEffect]
-				amount = 50
+				amount = 10
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = infantry
+				amount = 60
+
+				[Effect Template=AddDamageEffect]
+				damage_type_IDS = gunfire
+				targets = vehicle
+				amount = 40
 				
 				[WhenDo template=FXC_PlaySFX]
 				audio_ids = usa_mg_heavy
